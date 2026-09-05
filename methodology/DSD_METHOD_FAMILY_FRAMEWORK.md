@@ -3,124 +3,112 @@
 Status: working framework
 Framework date: 2026-09-06
 
-This document extends the existing DSD Analysis and DSD Audit repository into a broader **DSD Method Family** without relocating or rewriting established historical paths.
+This document organizes the DSD Method Family derived from the Formation Axiom System, General Property Axiom System, Channel-Indexed Static Aggregation, Structural Reorganization Dynamics, and explicit optional specializations.
 
-이 문서는 기존 DSD 분석론과 DSD 감사의 경로·기록을 보존하면서, Formation Axiom System, General Property Axiom System, Channel-Indexed Static Aggregation, Structural Reorganization Dynamics 및 선택적 특수화에서 파생되는 여러 사용 방식을 하나의 **DSD 방법군**으로 정리하기 위한 공통 프레임입니다.
+이 문서는 형성공리계, 속성공리계, 채널별 정적 집계, 구조 재구성 동역학 및 명시적 선택 특수화에서 파생되는 DSD 사용 방식을 공통 방법군으로 정리합니다.
 
 ## 1. Preservation rule / 기존 구조 보존 원칙
 
+- Existing DSD Analysis and DSD Audit records remain valid historical and operational records.
 - Existing `DSD_Audit/`, `audits/`, `challenges/`, `methodology/`, `protocols/`, and `templates/` paths are preserved.
-- Existing DSD Analysis records remain valid historical and operational records.
-- New method-family material is added under `methods/`.
-- `methods/01_analysis/` and `methods/02_audit/` are registry wrappers pointing to the established locations rather than migrations of the existing corpora.
-- Historical paths are not silently rewritten when a method is later generalized.
-- The initial 01–16 numbering is frozen for compatibility; refinements are added as atomic submethods or appended registry groups.
+- New classification material is additive under `methods/fields/`.
+- Historical paths are not silently rewritten when a method is refined or reclassified.
+- Earlier compound 09/10/12/15 paths are retained only for compatibility and are not counted as current methods.
 
 ## 2. Shared DSD source layers / 공통 DSD 기반 층위
 
-A method may use only the layers actually required by its task.
+A method uses only the layers required by its task.
 
 1. **Formation** — admission, restriction, realization, partial assignment, operational-channel formation, finite composition interface.
 2. **General Property** — typed profiles, applicability, contextual prerequisites, partial property assignments, status distinctions.
 3. **Static Aggregation** — channel-indexed analytic realization, finite aggregation, optional typed-property aggregation, information-loss and reconstruction conditions.
 4. **Dynamics** — component-resolved trajectories, regular epochs, transition classes, lineage, dynamic bridges.
-5. **Optional specializations** — realized-axis geometry or any domain-specific structure supplied explicitly.
+5. **Optional specializations** — realized-axis geometry or any additional domain-specific structure supplied explicitly.
 
 The current paper-facing interface lock remains in `DSD_INTERFACE_PROFILE.md`.
 
-## 3. Registry groups and atomic methods / 레지스트리 그룹과 원자적 방법
+## 3. Current method architecture / 현재 방법 구조
 
-The initial registry incorrectly compressed several distinct roles. To preserve compatibility without erasing that history, the framework now distinguishes **18 registry groups** and **22 atomic methods**.
+The current conceptual architecture is:
 
 ```text
-01  Analysis / 분석
-02  Audit / 감사
-03  Specification / 명세
-04  Design / 설계
-05  Synthesis / 합성
-06  Comparison / 비교
-07  Classification / 분류
-08  Transformation / 변환
-09A Provenance / 출처·유래 추적
-09B Lineage / 계보
-10A Aggregation / 집계
-10B Compression / 압축
-11  Measurement / 측정
-12A Computation / 계산
-12B Optimization / 최적화
-13  Simulation / 시뮬레이션
-14  Control / 제어
-15A Diagnosis / 진단
-15B Reconstruction / 복원
-16  Interpretation / 해석
-17  Operation / 운영
-18  Prediction / 예측
+DSD foundational layers
+-> 8 higher-level method fields
+-> 22 independent methods
+-> explicit cross-method application cases
 ```
 
-Compatibility umbrellas remain at:
+The higher-level fields are organizational categories only.
+They do not merge member methods, inherit results across methods, or create a new method merely by grouping names together.
 
-- `09_provenance_lineage/` → 09A Provenance + 09B Lineage
-- `10_aggregation_compression/` → 10A Aggregation + 10B Compression
-- `12_computation_optimization/` → 12A Computation + 12B Optimization
-- `15_diagnosis_reconstruction/` → 15A Diagnosis + 15B Reconstruction
+현재 개념적 정본은 **8개 상위 분야 / 22개 독립 방법**입니다.
+상위 분야는 분류·탐색·연구관리용이며, 소속 방법의 입력·연산·산출물·실패 조건·검증기준을 합치지 않습니다.
 
-`17_operation/` restores the lifecycle/operation method omitted by the initial count.
-`18_prediction/` is separate from Simulation because generating model-consistent trajectories is not the same as asserting a future-target prediction.
+## 4. Eight higher-level fields / 8개 상위 분야
 
-## 4. Functional families / 기능별 상위 분류
+### I. Structural Description & Understanding / 구조 기술·이해
+- Analysis / DSD 분석론
+- Comparison / DSD 비교론
+- Classification / DSD 분류론
+- Interpretation / DSD 해석론
 
-The atomic methods may also be grouped by role. These groups are organizational aids, not mandatory pipelines.
+### II. Criteria & Validation / 기준·검증
+- Specification / DSD 명세론
+- Audit / DSD 감사
 
-### A. Descriptive and evaluative / 기술·평가
-- Analysis
-- Audit
-- Specification
-- Comparison
-- Classification
-- Interpretation
+### III. Construction & Transformation / 구성·변환
+- Design / DSD 설계론
+- Synthesis / DSD 합성론
+- Transformation / DSD 변환론
 
-### B. Constructive and transformative / 구성·변환
-- Design
-- Synthesis
-- Transformation
+### IV. Evidence & Lineage / 증거·계보
+- Measurement / DSD 측정론
+- Provenance / DSD 출처·유래 추적론
+- Lineage / DSD 계보론
 
-### C. Evidence, trace, and inverse / 증거·추적·역문제
-- Provenance
-- Lineage
-- Measurement
-- Diagnosis
-- Reconstruction
+### V. Reduction & Representation / 축약·표현
+- Aggregation / DSD 집계론
+- Compression / DSD 압축론
 
-### D. Reduction and computation / 축약·계산
-- Aggregation
-- Compression
-- Computation
-- Optimization
+### VI. Inverse Inference & Reconstruction / 역추론·복원
+- Diagnosis / DSD 진단론
+- Reconstruction / DSD 복원론
 
-### E. Dynamic and operational / 동역학·운영
-- Simulation
-- Prediction
-- Control
-- Operation
+### VII. Computation & Selection / 계산·선택
+- Computation / DSD 계산론
+- Optimization / DSD 최적화론
 
-## 5. Distinction rules for the newly split methods / 세분화 방법의 구분 규칙
+### VIII. Dynamics & Action / 동역학·행동
+- Simulation / DSD 시뮬레이션론
+- Prediction / DSD 예측론
+- Control / DSD 제어론
+- Operation / DSD 운영론
 
-- **Provenance ≠ Lineage**: provenance records origin/derivation; lineage records predecessor–successor identity across change.
-- **Aggregation ≠ Compression**: aggregation constructs a summary/readout; compression intentionally reduces representation subject to retained-distinction requirements.
-- **Computation ≠ Optimization**: computation determines what and how to evaluate; optimization selects among admissible alternatives under an explicit objective and constraints.
-- **Diagnosis ≠ Reconstruction**: diagnosis infers present hidden states/causes; reconstruction infers prior, omitted, damaged, or compressed structure/history.
-- **Simulation ≠ Prediction**: simulation evolves states under a model; prediction adds a claim about a future target and therefore requires empirical/domain validation.
-- **Control ≠ Operation**: control chooses interventions toward target states; operation coordinates a live/repeated lifecycle, resources, handoffs, monitoring, and method composition.
+Total: **22 independent methods**.
 
-These distinctions are preserved even when one application uses several methods together.
+## 5. Independence rule / 방법 독립성 규칙
+
+Two methods remain distinct when their task interfaces differ materially in inputs, operation, outputs, failure modes, or validation criteria.
+
+Important distinctions include:
+
+- **Provenance ≠ Lineage**: provenance records origin/derivation; lineage records predecessor-successor identity across change.
+- **Aggregation ≠ Compression**: aggregation constructs a readout or representative value; compression intentionally removes representation subject to retained-distinction requirements.
+- **Computation ≠ Optimization**: computation determines required evaluation; optimization selects among admissible alternatives under explicit objectives and constraints.
+- **Diagnosis ≠ Reconstruction**: diagnosis infers present hidden states or causes; reconstruction infers prior, omitted, damaged, or compressed structures or histories.
+- **Simulation ≠ Prediction**: simulation evolves model-consistent states; prediction makes a claim about a future target and requires appropriate empirical/domain validation.
+- **Control ≠ Operation**: control chooses interventions; operation manages repeated lifecycle, resources, monitoring, execution, and handoff.
+- **Specification ≠ Audit**: specification declares requirements or criteria; audit evaluates compliance, evidence, procedure, and structural consistency against relevant standards.
+
+A field classification never licenses inference from one method result to another without an explicit bridge.
 
 ## 6. Common method record / 공통 방법 기록 형식
 
 Every method definition should state at least:
 
 ```text
-METHOD_ID:
 METHOD_NAME:
+HIGHER_FIELD:
 STATUS: established / developing / proposed / experimental
 TASK:
 INPUTS:
@@ -129,26 +117,30 @@ DOMAIN_BRIDGE:
 EXTERNAL_STANDARD:
 OPERATION:
 OUTPUTS:
+FAILURE_OR_NO_GAIN_CRITERIA:
 INFORMATION_LOSS_CHECK:
 LINEAGE_OR_TRANSITION_CHECK:
 LIMITS:
 REPRODUCIBILITY_RECORD:
 ```
 
+Numeric or A/B labels may be retained in paths for historical compatibility, but the method name and field are the conceptual identifiers.
+
 ## 7. Domain-bridge rule / 분야별 브리지 원칙
 
 DSD does not replace a field's own proof, validation, interpretation, professional, empirical, ethical, or safety standards.
 
-A domain application therefore has the form
+A domain application therefore has the form:
 
 ```text
 DSD structural layer
++ selected independent method(s)
 + explicit domain bridge
 + domain-specific standard
--> method result
+-> method-specific result(s)
 ```
 
-A mathematical proof remains mathematical proof; a medical judgment remains subject to medical evidence and clinical standards; a historical interpretation remains subject to source criticism; an artistic interpretation is not reduced to a scalar aggregate merely because DSD can encode selected features.
+A mathematical proof remains mathematical proof; a medical judgment remains subject to medical evidence and clinical standards; a historical interpretation remains subject to source criticism; an artistic interpretation is not reduced to a scalar aggregate merely because selected features can be encoded.
 
 ## 8. Status and bridge discipline / 상태·브리지 규율
 
@@ -159,29 +151,42 @@ Across the method family:
 - do not infer structural identity from aggregate equality without reconstruction conditions;
 - preserve failed mappings, alternative mappings, and `NO_GAIN` results;
 - when dynamics is used, distinguish value evolution from status/domain and formation-level transitions;
-- use explicit lineage when successor identity is not inherited automatically.
+- use explicit lineage when successor identity is not inherited automatically;
+- do not treat membership in the same higher-level field as evidence of method equivalence.
 
-## 9. Relationship among the methods / 방법 간 관계
+## 9. Method composition / 방법 조합
 
-The methods are not a mandatory pipeline. Typical combinations include:
+The methods are composable but not a mandatory pipeline.
+Typical combinations include:
 
 ```text
 Specification -> Design -> Synthesis -> Audit
 Analysis -> Comparison -> Classification
-Provenance -> Interpretation -> Comparison
-Lineage -> Diagnosis -> Reconstruction
-Aggregation -> Compression -> Computation -> Optimization
-Measurement -> Analysis -> Audit
-Simulation -> Prediction -> Control -> Operation -> Audit
+Measurement -> Provenance -> Lineage
+Aggregation -> Compression
+Diagnosis -> Reconstruction
+Computation -> Optimization
+Simulation -> Prediction -> Control -> Operation
 Interpretation -> Comparison -> Audit
 ```
 
-A case may use one method alone or compose several methods, but each method result should remain separately identifiable.
+A case may combine methods from several fields, but each intermediate and final result should remain attributable to the method that produced it.
 
-## 10. Development policy / 개발 정책
+## 10. Legacy compatibility / 기존 복합 경로 호환성
 
-- Analysis and Audit are the two most mature current methods and retain their established locations.
-- Comparison, Provenance, Lineage, and Aggregation have comparatively direct support in the current DSD formal layers but still require dedicated method-level protocols.
-- The remaining methods begin as explicit proposed frameworks and should be promoted only after concrete protocols, counterexamples, no-gain cases, and cross-domain tests are accumulated.
-- Similarity to an existing external methodology is not treated as novelty by itself.
-- The intended contribution is a shared DSD structural layer and interoperability among method roles, not a claim to replace all existing disciplinary methods.
+The following directories remain as historical navigation wrappers only:
+
+- `09_provenance_lineage/` → Provenance + Lineage
+- `10_aggregation_compression/` → Aggregation + Compression
+- `12_computation_optimization/` → Computation + Optimization
+- `15_diagnosis_reconstruction/` → Diagnosis + Reconstruction
+
+These wrapper names are not current method names and are not included in the count of 22 methods.
+
+## 11. Development policy / 개발 정책
+
+- Analysis and Audit are the two most mature current methods and retain their established corpora.
+- Comparison, Provenance, Lineage, and Aggregation have comparatively direct support in current DSD formal structures but still require dedicated method-level protocols.
+- Proposed methods should be promoted only after concrete protocols, counterexamples, boundary cases, `NO_GAIN` cases, reproducibility records, and cross-domain tests accumulate.
+- Similarity to an existing external methodology is not novelty by itself.
+- The intended contribution is a shared DSD structural layer plus explicitly separable method roles and cross-method interoperability, not a claim to replace all disciplinary methods.
