@@ -1,6 +1,8 @@
-# 10B. DSD Compression / DSD 압축론
+# DSD Compression / DSD 압축론
 
 Status: **proposed/developing**
+Legacy path ID: `10B`
+Higher field: **V. Reduction & Representation / 축약·표현**
 
 Task: reduce representation size or resolution while preserving the distinctions required by a declared downstream purpose.
 
