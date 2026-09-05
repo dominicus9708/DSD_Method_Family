@@ -38,11 +38,9 @@ DSD foundational layers
 -> explicit cross-method application cases
 ```
 
-The higher-level fields are organizational categories only.
-They do not merge member methods, inherit results across methods, or create a new method merely by grouping names together.
+The higher-level fields are organizational categories only. They do not merge member methods, inherit results across methods, or create a new method merely by grouping names together.
 
-현재 개념적 정본은 **8개 상위 분야 / 22개 독립 방법**입니다.
-상위 분야는 분류·탐색·연구관리용이며, 소속 방법의 입력·연산·산출물·실패 조건·검증기준을 합치지 않습니다.
+현재 개념적 정본은 **8개 상위 분야 / 22개 독립 방법**입니다. 상위 분야는 분류·탐색·연구관리용이며, 소속 방법의 입력·연산·산출물·실패 조건·검증기준을 합치지 않습니다.
 
 ## 4. Eight higher-level fields / 8개 상위 분야
 
@@ -88,10 +86,28 @@ Total: **22 independent methods**.
 
 ## 5. Independence rule / 방법 독립성 규칙
 
-Two methods remain distinct when their task interfaces differ materially in inputs, operation, outputs, failure modes, or validation criteria.
+Two methods remain distinct when their task interfaces differ materially in any of the following:
+
+```text
+INPUTS
+OPERATION
+OUTPUTS
+FAILURE_OR_NO_GAIN_CRITERIA
+VALIDATION_STANDARD
+```
+
+The current full boundary audit is maintained at [`../methods/METHOD_BOUNDARY_MATRIX.md`](../methods/METHOD_BOUNDARY_MATRIX.md).
+
+Current result:
+
+```text
+EXACT_DUPLICATE_METHODS_FOUND: 0
+METHOD_COUNT: 22
+```
 
 Important distinctions include:
 
+- **Analysis ≠ Comparison ≠ Classification ≠ Interpretation**: Analysis decomposes and structurally re-expresses one declared target; Comparison judges cross-target preserved/differing structure; Classification assigns classes under explicit criteria; Interpretation separates source, context, interpretive assumptions, and bridge-supported readings.
 - **Provenance ≠ Lineage**: provenance records origin/derivation; lineage records predecessor-successor identity across change.
 - **Aggregation ≠ Compression**: aggregation constructs a readout or representative value; compression intentionally removes representation subject to retained-distinction requirements.
 - **Computation ≠ Optimization**: computation determines required evaluation; optimization selects among admissible alternatives under explicit objectives and constraints.
@@ -100,7 +116,9 @@ Important distinctions include:
 - **Control ≠ Operation**: control chooses interventions; operation manages repeated lifecycle, resources, monitoring, execution, and handoff.
 - **Specification ≠ Audit**: specification declares requirements or criteria; audit evaluates compliance, evidence, procedure, and structural consistency against relevant standards.
 
-A field classification never licenses inference from one method result to another without an explicit bridge.
+A field classification or a shared operator never licenses inference from one method result to another without an explicit bridge.
+
+Historical DSD Analysis records may contain comparison, classification, or interpretation operations together with analysis. Those records are preserved; new method-family records identify method-specific outputs separately.
 
 ## 6. Common method record / 공통 방법 기록 형식
 
@@ -152,12 +170,11 @@ Across the method family:
 - preserve failed mappings, alternative mappings, and `NO_GAIN` results;
 - when dynamics is used, distinguish value evolution from status/domain and formation-level transitions;
 - use explicit lineage when successor identity is not inherited automatically;
-- do not treat membership in the same higher-level field as evidence of method equivalence.
+- do not treat membership in the same higher-level field or reuse of the same DSD operator as evidence of method equivalence.
 
 ## 9. Method composition / 방법 조합
 
-The methods are composable but not a mandatory pipeline.
-Typical combinations include:
+The methods are composable but not a mandatory pipeline. Typical combinations include:
 
 ```text
 Specification -> Design -> Synthesis -> Audit
@@ -254,3 +271,24 @@ A real-world case is application evidence first. It contributes to method valida
 `EVIDENCE_SCOPE_CLASS` and `CASE_ORIGIN` must not be collapsed into one field. For example, one judicial case may be `method_specific` evidence for Audit while also supporting shared evidence-status or bridge disciplines.
 
 The current registry and migration matrix are maintained under [`../evidence/`](../evidence/).
+
+## 13. Shared-core extraction / 공통 구조 추출
+
+The next development stage begins with reusable structures that can be shared across methods without erasing method identity.
+
+The controlling rule is [`SHARED_CORE_EXTRACTION_RULE.md`](SHARED_CORE_EXTRACTION_RULE.md).
+
+Each candidate shared element must preserve the following separation:
+
+```text
+SHARED_CORE:
+METHOD_SPECIFIC_INPUT:
+METHOD_SPECIFIC_OPERATION:
+METHOD_SPECIFIC_OUTPUT:
+METHOD_SPECIFIC_FAILURE_CRITERIA:
+METHOD_SPECIFIC_VALIDATION:
+```
+
+Likely first candidates are status discipline, source/interface/version locks, explicit bridges, minimum-layer selection, aggregate/reconstruction restraint, transition/lineage discipline, evidence-scope separation, strongest-baseline/no-gain rules, and anti-post-hoc recording discipline.
+
+Shared-core support is not method validation. A receiving method must still test the shared rule within its own task interface.
