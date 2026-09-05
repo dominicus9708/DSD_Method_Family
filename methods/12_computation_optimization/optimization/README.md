@@ -1,6 +1,8 @@
-# 12B. DSD Optimization / DSD 최적화론
+# DSD Optimization / DSD 최적화론
 
 Status: **proposed**
+Legacy path ID: `12B`
+Higher field: **VII. Computation & Selection / 계산·선택**
 
 Task: choose among admissible computational, structural, scheduling, or resource-allocation alternatives under explicit objectives and constraints.
 
