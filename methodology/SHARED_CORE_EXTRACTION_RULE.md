@@ -1,9 +1,9 @@
 # DSD Shared-Core Extraction Rule / DSD 공통 구조 추출 규칙
 
-Status: preparation rule
+Status: working promotion rule
 Date: 2026-09-06
 
-This document governs the next stage of the DSD Method Family: extracting structures that are genuinely reusable across methods **without merging the methods themselves**.
+This document governs the DSD Method Family stage that extracts structures genuinely reusable across methods **without merging the methods themselves**.
 
 ## 1. Core principle / 핵심 원칙
 
@@ -41,9 +41,9 @@ EVIDENCE_STATUS:
 
 ## 3. Initial shared-core candidates / 초기 후보
 
-The following are candidates because they have already appeared across the DSD formal interfaces or Analysis/Audit practice. They are **not yet automatically promoted** merely by appearing in this list.
+The following are candidates because they have already appeared across the DSD formal interfaces or Analysis/Audit practice. They are **not automatically promoted** merely by appearing in this list.
 
-- status discipline: absence / undefinedness / inapplicability / prerequisite failure / defined zero;
+- **SC-01 status and typed-domain discipline** — promoted with conditions; see `../evidence/shared/SC-01_status-typed-domain-discipline.md`;
 - explicit bridge discipline;
 - minimum-layer and optional-interface restraint;
 - aggregate/reconstruction restraint;
@@ -88,9 +88,9 @@ If shared-core extraction makes two methods appear indistinguishable across all 
 
 ## 7. Planned order / 예정 순서
 
-The next development stage should begin with the most stable cross-method structures before attempting method-specific new protocols:
+The development order begins with the most stable cross-method structures before method-specific new protocols:
 
-1. status and typed-domain discipline;
+1. **SC-01 status and typed-domain discipline — completed: promoted_with_conditions**;
 2. source/interface/version locks;
 3. bridge declarations;
 4. minimum-layer/optional-interface selection;
@@ -99,4 +99,36 @@ The next development stage should begin with the most stable cross-method struct
 7. evidence scope and case-origin separation;
 8. baseline, failure/no-gain, and anti-post-hoc recording rules.
 
-Each item should be promoted only after its transfer conditions and non-transfer cases are recorded.
+Each item is promoted only after its transfer conditions and non-transfer cases are recorded.
+
+## 8. Promotion registry / 승격 기록
+
+### SC-01 — Status and Typed-Domain Discipline
+
+```text
+DATE: 2026-09-06
+SOURCE_SUPPORT: pass
+CROSS_FIELD_REPRESENTATIVE_METHODS: 8
+STATUS_COLLAPSE_CHECKS: 8/8 detected
+TYPED_DOMAIN_PROJECTION_CHECKS: 8/8 detected
+NEGATIVE_CONTROL: pass
+RESULT: promoted_with_conditions
+DIRECT_METHOD_VALIDATION: not claimed
+```
+
+Invariant meaning:
+
+> Do not silently collapse claim-relevant status or complete typed-domain distinctions merely because they can be mapped to the same numerical or reduced representation.
+
+Transfer conditions:
+
+- the selected interface actually distinguishes the relevant status or typed coordinates;
+- the claimed result depends, or may depend, on those distinctions;
+- an intentional quotient/coarsening uses an explicit map and records its loss boundary.
+
+Non-transfer case:
+
+- a method does not use the relevant status-bearing interface; or
+- an explicit quotient is part of the declared task, the claim is restricted to the quotient, and no recovery of discarded distinctions is asserted.
+
+Evidence record: [`../evidence/shared/SC-01_status-typed-domain-discipline.md`](../evidence/shared/SC-01_status-typed-domain-discipline.md).
