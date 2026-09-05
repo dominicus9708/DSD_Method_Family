@@ -24,6 +24,7 @@ DSD foundational layers
 - Independent-method registry: [`methods/README.md`](methods/README.md)
 - Common framework: [`methodology/DSD_METHOD_FAMILY_FRAMEWORK.md`](methodology/DSD_METHOD_FAMILY_FRAMEWORK.md)
 - Current DSD interface profile: [`methodology/DSD_INTERFACE_PROFILE.md`](methodology/DSD_INTERFACE_PROFILE.md)
+- Evidence applicability registry: [`evidence/`](evidence/)
 
 ## Eight higher-level fields / 8개 상위 분야
 
@@ -109,6 +110,12 @@ DSD_Method_Family/
 │  ├─ 16_interpretation/
 │  ├─ 17_operation/
 │  └─ 18_prediction/
+├─ evidence/
+│  ├─ README.md
+│  ├─ CURRENT_EVIDENCE_APPLICABILITY_MATRIX.md
+│  ├─ shared/
+│  ├─ method_specific/
+│  └─ real_world_cases/
 ├─ challenges/
 ├─ DSD_Audit/
 ├─ audits/                            # legacy/historical audit records
@@ -153,14 +160,28 @@ Current common layers are:
 Adversarial and repeatability-oriented tests for DSD Analysis remain under [`challenges/`](challenges/).
 Their discipline is also a template for later methods: every method should eventually acquire negative, boundary, no-gain, and reproducibility cases rather than inheriting validity from another method.
 
+## Evidence applicability / 증거 적용성
+
+Validation evidence is separated by **scope** and **case origin**.
+
+- [`evidence/shared/`](evidence/shared/) records support for reusable method-family disciplines. Shared support does not directly validate all 22 methods.
+- [`evidence/method_specific/`](evidence/method_specific/) defines direct evidence requirements for each independent method.
+- [`evidence/real_world_cases/`](evidence/real_world_cases/) is reserved for actual events, judicial cases, historical incidents, personal cases, empirical datasets, and documented organizational or technical incidents.
+- [`evidence/CURRENT_EVIDENCE_APPLICABILITY_MATRIX.md`](evidence/CURRENT_EVIDENCE_APPLICABILITY_MATRIX.md) maps the existing Analysis/Audit corpus into the current method-family scope without retroactive rewriting.
+
+`EVIDENCE_SCOPE_CLASS` and `CASE_ORIGIN` are separate fields. A real-world judicial case, for example, may directly test DSD Audit while only conditionally supporting shared bridge or evidence-status rules.
+
+Existing `ANL-CH-*` records remain direct Analysis evidence. Existing `DSD_Audit/` records remain direct Audit evidence. Lessons extracted from either corpus may support shared rules, but they do not automatically validate another independent method.
+
 ## Where to start / 활용 순서
 
 1. Read [`methods/fields/README.md`](methods/fields/README.md) to select a higher-level field.
 2. Read [`methods/README.md`](methods/README.md) and select the independent method or explicit method combination.
 3. Lock the DSD source layers and versions actually used.
 4. Supply the domain bridge and external standard separately.
-5. Record method-specific results, information loss, unresolved alternatives, transition/lineage obligations, and reproducibility information.
-6. Audit the result separately when an audit claim is needed.
+5. Classify the evidence scope and case origin using [`evidence/`](evidence/).
+6. Record method-specific results, information loss, unresolved alternatives, transition/lineage obligations, and reproducibility information.
+7. Audit the result separately when an audit claim is needed.
 
 ## Historical record policy / 과거 기록 보존 원칙
 
