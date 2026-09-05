@@ -1,6 +1,8 @@
-# 12A. DSD Computation / DSD 계산론
+# DSD Computation / DSD 계산론
 
 Status: **proposed**
+Legacy path ID: `12A`
+Higher field: **VII. Computation & Selection / 계산·선택**
 
 Task: determine which structural branches, channels, dependencies, resolutions, and reusable common parts must actually be evaluated for a declared computational target.
 
