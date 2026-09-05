@@ -44,13 +44,13 @@ EVIDENCE_STATUS:
 The following are candidates because they have already appeared across the DSD formal interfaces or Analysis/Audit practice. They are **not automatically promoted** merely by appearing in this list.
 
 - **SC-01 status and typed-domain discipline** — promoted with conditions; see `../evidence/shared/SC-01_status-typed-domain-discipline.md`;
+- **SC-02 source / interface / version lock** — promoted with conditions; see `../evidence/shared/SC-02_source-interface-version-lock.md`;
 - explicit bridge discipline;
 - minimum-layer and optional-interface restraint;
 - aggregate/reconstruction restraint;
 - support and information-loss recording;
 - transition versus regular evolution distinction;
 - explicit lineage when identity is not inherited;
-- source/version/interface lock;
 - evidence-status versus DSD-object-status separation;
 - strongest reasonable baseline and `NO_GAIN` preservation where applicable;
 - precommit / anti-post-hoc recording discipline;
@@ -91,8 +91,8 @@ If shared-core extraction makes two methods appear indistinguishable across all 
 The development order begins with the most stable cross-method structures before method-specific new protocols:
 
 1. **SC-01 status and typed-domain discipline — completed: promoted_with_conditions**;
-2. source/interface/version locks;
-3. bridge declarations;
+2. **SC-02 source / interface / version lock — completed: promoted_with_conditions**;
+3. explicit bridge discipline;
 4. minimum-layer/optional-interface selection;
 5. aggregate, information-loss, and reconstruction restraint;
 6. transition/lineage discipline;
@@ -132,3 +132,41 @@ Non-transfer case:
 - an explicit quotient is part of the declared task, the claim is restricted to the quotient, and no recovery of discarded distinctions is asserted.
 
 Evidence record: [`../evidence/shared/SC-01_status-typed-domain-discipline.md`](../evidence/shared/SC-01_status-typed-domain-discipline.md).
+
+### SC-02 — Source / Interface / Version Lock
+
+```text
+DATE: 2026-09-06
+SOURCE_SUPPORT: pass
+CROSS_FIELD_REPRESENTATIVE_METHODS: 8
+SOURCE_SUBSTITUTION_CHECKS: 8/8 detected
+SEMANTIC_VERSION_DRIFT_CHECKS: 8/8 detected
+INTERFACE_OMISSION_CHECKS: 8/8 detected
+NEGATIVE_CONTROL: pass
+RESULT: promoted_with_conditions
+DIRECT_METHOD_VALIDATION: not claimed
+```
+
+Invariant meaning:
+
+> Lock every source, interface branch, and revision whose semantics can affect the claimed result. If exact revisions are replaced by a range or equivalence class, equivalence over the actually used interface must be established explicitly.
+
+Transfer conditions:
+
+- source-defined semantics, optional interfaces, or revisions can affect the method result;
+- reproducibility, auditability, comparison, or historical traceability is claimed;
+- downstream work inherits upstream definitions whose revision can change the interpretation.
+
+Non-transfer/minimal-lock cases:
+
+- unused downstream layers are explicitly recorded as `not used` and do not need to become dependencies;
+- an exact revision may be replaced by a documented equivalence class only after equivalence on the used interface is shown.
+
+Evidence record: [`../evidence/shared/SC-02_source-interface-version-lock.md`](../evidence/shared/SC-02_source-interface-version-lock.md).
+
+Relation to SC-01:
+
+```text
+SC-01 = preserve claim-relevant distinctions
+SC-02 = lock the semantics that determine which distinctions and rules are active
+```
