@@ -1,6 +1,8 @@
-# 09A. DSD Provenance / DSD 출처·유래 추적론
+# DSD Provenance / DSD 출처·유래 추적론
 
 Status: **developing**
+Legacy path ID: `09A`
+Higher field: **IV. Evidence & Lineage / 증거·계보**
 
 Task: record where a datum, document, model, interpretation, component, or result came from, through which transformations it passed, and which evidence supports that origin chain.
 
