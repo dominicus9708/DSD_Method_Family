@@ -1,6 +1,8 @@
-# 09B. DSD Lineage / DSD 계보론
+# DSD Lineage / DSD 계보론
 
 Status: **developing**
+Legacy path ID: `09B`
+Higher field: **IV. Evidence & Lineage / 증거·계보**
 
 Task: determine and record successor relations across dynamic or formation-level changes when identity is not inherited automatically.
 
