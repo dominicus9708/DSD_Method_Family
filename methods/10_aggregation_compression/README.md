@@ -1,14 +1,14 @@
-# 10. DSD Aggregation-Compression / DSD 집계·압축론
+# Legacy Compatibility Wrapper: Aggregation-Compression / 호환성 묶음: 집계·압축
 
-Status: **developing umbrella**
+Status: **legacy compatibility wrapper — not counted as a method**
 
-This historical registry group is preserved for path compatibility but is now subdivided into two atomic methods:
+This path is preserved for earlier links and records. It does not define one combined DSD method.
 
-- [`aggregation/`](aggregation/) — **10A. DSD Aggregation / DSD 집계론**: construct declared readouts or representative values from admitted data.
-- [`compression/`](compression/) — **10B. DSD Compression / DSD 압축론**: reduce representation size or resolution while preserving purpose-required distinctions.
+Independent methods:
 
-The distinction is deliberate: aggregation asks how a summary is formed; compression asks how much representation can be removed without violating a declared downstream requirement.
+- [`aggregation/`](aggregation/) — **DSD Aggregation / DSD 집계론**: construct declared readouts or representative values from admitted data.
+- [`compression/`](compression/) — **DSD Compression / DSD 압축론**: reduce representation size or resolution while preserving purpose-required distinctions.
 
-Primary DSD sources: Channel-Indexed Static Aggregation, support-retaining records, collision/kernel/injectivity criteria, required resolution.
+Both are classified under **Field V. Reduction & Representation / 분야 V. 축약·표현**, but remain independent.
 
-Boundary: neither an aggregate nor a compressed representation is assumed to preserve the original structure without explicit reconstruction conditions.
+Aggregation asks how a summary is formed; Compression asks what representation may be removed without violating a declared downstream requirement. Neither is assumed to preserve original structure without explicit reconstruction conditions.
