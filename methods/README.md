@@ -99,3 +99,10 @@ This directory preserves the initial 01–16 registry while refining compound en
 - Proposed methods are definitions and roadmaps, not claims of mature standalone disciplines.
 - The shared framework is [`../methodology/DSD_METHOD_FAMILY_FRAMEWORK.md`](../methodology/DSD_METHOD_FAMILY_FRAMEWORK.md).
 - The current paper-facing layer lock remains [`../methodology/DSD_INTERFACE_PROFILE.md`](../methodology/DSD_INTERFACE_PROFILE.md).
+
+## Representative navigation policy / 대표 바로가기 정책
+
+- **DSD Analysis** and **DSD Audit** are retained as the two representative entry points because they are the most mature and historically established methods.
+- Their compatibility/navigation wrappers remain explicit under `01_analysis/` and `02_audit/`.
+- No equivalent shortcut or duplicate compatibility entry is added for methods 03–18 merely for symmetry.
+- Newer methods are discovered through this registry and their canonical method directories, avoiding unnecessary duplicate navigation paths.
