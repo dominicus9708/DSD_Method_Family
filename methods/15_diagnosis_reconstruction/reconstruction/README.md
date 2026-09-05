@@ -1,6 +1,8 @@
-# 15B. DSD Reconstruction / DSD 복원론
+# DSD Reconstruction / DSD 복원론
 
 Status: **proposed**
+Legacy path ID: `15B`
+Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
 Task: infer which prior, omitted, damaged, compressed, or otherwise hidden structures and histories remain compatible with available evidence.
 
