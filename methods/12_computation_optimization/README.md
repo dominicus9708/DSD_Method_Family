@@ -1,16 +1,14 @@
 # 12. DSD Computation-Optimization / DSD 계산·최적화론
 
-Status: **proposed**
+Status: **proposed umbrella**
 
-Task: reduce unnecessary computation and allocate computational resources according to structural admissibility, applicability, distinguishability, dependency, and required resolution.
+This historical registry group is preserved for path compatibility but is now subdivided into two atomic methods:
 
-Primary DSD sources: Formation/Property pruning, first branching and reusable common structure, aggregation-loss criteria, dynamic resource lifecycle when needed.
+- [`computation/`](computation/) — **12A. DSD Computation / DSD 계산론**: determine which branches, channels, dependencies, resolutions, and reusable common parts must actually be evaluated.
+- [`optimization/`](optimization/) — **12B. DSD Optimization / DSD 최적화론**: choose among admissible computational, structural, scheduling, or resource-allocation alternatives under explicit objectives and constraints.
 
-Candidate operations:
-- reject structurally impossible or inapplicable branches before expensive evaluation;
-- reuse common prefixes before first branching;
-- allocate precision by required distinguishability;
-- avoid computing channels that cannot affect the declared output;
-- optimize active lifetime, reuse, reset, or transition costs in stateful resources.
+The distinction is deliberate: computation asks what must be calculated and how; optimization asks which admissible strategy is preferable under a declared objective.
 
-Boundary: every pruning rule requires a soundness argument. DSD terminology alone does not prove a lower computational complexity.
+Primary DSD sources: Formation/Property pruning, first branching, aggregation-loss criteria, required resolution, optional dynamic resource lifecycle.
+
+Boundary: every pruning rule requires a soundness argument, and every optimization requires an explicit objective/constraint model. DSD terminology alone proves neither reduced complexity nor optimality.
