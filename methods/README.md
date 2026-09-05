@@ -1,108 +1,83 @@
 # DSD Method Family Registry / DSD 방법군 레지스트리
 
-This directory preserves the initial 01–16 registry while refining compound entries into atomic methods and restoring method roles that were omitted by the initial count.
+The current conceptual registry contains **22 independent methods classified into eight higher-level fields**.
+The fields are organizational categories only and do not merge their member methods.
 
-현재 구조는 **18개 registry group / 22개 atomic method**로 관리합니다.
-기존 01–16 경로는 호환성을 위해 유지하고, 복합 항목은 하위 방법으로 세분화합니다.
+현재 개념적 정본은 **8개 상위 분야 / 22개 독립 방법**입니다.
+상위 분야는 분류·탐색·연구관리용이며, 소속 방법의 입력·연산·출력·검증 기준을 합치지 않습니다.
 
-## Registry groups / 레지스트리 그룹
+See [`fields/`](fields/) for the field indexes.
 
-| ID | Registry group | Korean | Status | Atomic structure |
-|---|---|---|---|---|
-| 01 | Analysis | DSD 분석론 | established | 01 Analysis |
-| 02 | Audit | DSD 감사 | established | 02 Audit |
-| 03 | Specification | DSD 명세론 | proposed | 03 Specification |
-| 04 | Design | DSD 설계론 | proposed | 04 Design |
-| 05 | Synthesis | DSD 합성론 | proposed | 05 Synthesis |
-| 06 | Comparison | DSD 비교론 | developing | 06 Comparison |
-| 07 | Classification | DSD 분류론 | proposed | 07 Classification |
-| 08 | Transformation | DSD 변환론 | proposed | 08 Transformation |
-| 09 | Provenance-Lineage | DSD 추적·계보론 | developing umbrella | 09A Provenance + 09B Lineage |
-| 10 | Aggregation-Compression | DSD 집계·압축론 | developing umbrella | 10A Aggregation + 10B Compression |
-| 11 | Measurement | DSD 측정론 | proposed | 11 Measurement |
-| 12 | Computation-Optimization | DSD 계산·최적화론 | proposed umbrella | 12A Computation + 12B Optimization |
-| 13 | Simulation | DSD 시뮬레이션론 | proposed | 13 Simulation |
-| 14 | Control | DSD 제어론 | proposed | 14 Control |
-| 15 | Diagnosis-Reconstruction | DSD 진단·복원론 | proposed umbrella | 15A Diagnosis + 15B Reconstruction |
-| 16 | Interpretation | DSD 해석론 | proposed | 16 Interpretation |
-| 17 | Operation | DSD 운영론 | proposed | 17 Operation |
-| 18 | Prediction | DSD 예측론 | proposed | 18 Prediction |
+## Eight fields and 22 independent methods / 8개 상위 분야와 22개 독립 방법
 
-## Atomic method count / 원자적 방법 22개
+### I. Structural Description & Understanding / 구조 기술·이해
+- **Analysis / DSD 분석론** — [`01_analysis/`](01_analysis/)
+- **Comparison / DSD 비교론** — [`06_comparison/`](06_comparison/)
+- **Classification / DSD 분류론** — [`07_classification/`](07_classification/)
+- **Interpretation / DSD 해석론** — [`16_interpretation/`](16_interpretation/)
 
-```text
-01  Analysis / 분석
-02  Audit / 감사
-03  Specification / 명세
-04  Design / 설계
-05  Synthesis / 합성
-06  Comparison / 비교
-07  Classification / 분류
-08  Transformation / 변환
-09A Provenance / 출처·유래 추적
-09B Lineage / 계보
-10A Aggregation / 집계
-10B Compression / 압축
-11  Measurement / 측정
-12A Computation / 계산
-12B Optimization / 최적화
-13  Simulation / 시뮬레이션
-14  Control / 제어
-15A Diagnosis / 진단
-15B Reconstruction / 복원
-16  Interpretation / 해석
-17  Operation / 운영
-18  Prediction / 예측
-```
+### II. Criteria & Validation / 기준·검증
+- **Specification / DSD 명세론** — [`03_specification/`](03_specification/)
+- **Audit / DSD 감사** — [`02_audit/`](02_audit/)
 
-## Functional families / 기능별 상위 분류
+### III. Construction & Transformation / 구성·변환
+- **Design / DSD 설계론** — [`04_design/`](04_design/)
+- **Synthesis / DSD 합성론** — [`05_synthesis/`](05_synthesis/)
+- **Transformation / DSD 변환론** — [`08_transformation/`](08_transformation/)
 
-### A. Descriptive and evaluative / 기술·평가
-- Analysis
-- Audit
-- Specification
-- Comparison
-- Classification
-- Interpretation
+### IV. Evidence & Lineage / 증거·계보
+- **Measurement / DSD 측정론** — [`11_measurement/`](11_measurement/)
+- **Provenance / DSD 출처·유래 추적론** — [`09_provenance_lineage/provenance/`](09_provenance_lineage/provenance/)
+- **Lineage / DSD 계보론** — [`09_provenance_lineage/lineage/`](09_provenance_lineage/lineage/)
 
-### B. Constructive and transformative / 구성·변환
-- Design
-- Synthesis
-- Transformation
+### V. Reduction & Representation / 축약·표현
+- **Aggregation / DSD 집계론** — [`10_aggregation_compression/aggregation/`](10_aggregation_compression/aggregation/)
+- **Compression / DSD 압축론** — [`10_aggregation_compression/compression/`](10_aggregation_compression/compression/)
 
-### C. Evidence, trace, and inverse / 증거·추적·역문제
-- Provenance
-- Lineage
-- Measurement
-- Diagnosis
-- Reconstruction
+### VI. Inverse Inference & Reconstruction / 역추론·복원
+- **Diagnosis / DSD 진단론** — [`15_diagnosis_reconstruction/diagnosis/`](15_diagnosis_reconstruction/diagnosis/)
+- **Reconstruction / DSD 복원론** — [`15_diagnosis_reconstruction/reconstruction/`](15_diagnosis_reconstruction/reconstruction/)
 
-### D. Reduction and computation / 축약·계산
-- Aggregation
-- Compression
-- Computation
-- Optimization
+### VII. Computation & Selection / 계산·선택
+- **Computation / DSD 계산론** — [`12_computation_optimization/computation/`](12_computation_optimization/computation/)
+- **Optimization / DSD 최적화론** — [`12_computation_optimization/optimization/`](12_computation_optimization/optimization/)
 
-### E. Dynamic and operational / 동역학·운영
-- Simulation
-- Prediction
-- Control
-- Operation
+### VIII. Dynamics & Action / 동역학·행동
+- **Simulation / DSD 시뮬레이션론** — [`13_simulation/`](13_simulation/)
+- **Prediction / DSD 예측론** — [`18_prediction/`](18_prediction/)
+- **Control / DSD 제어론** — [`14_control/`](14_control/)
+- **Operation / DSD 운영론** — [`17_operation/`](17_operation/)
 
-## Existing-path policy / 기존 경로 보존
+## Classification rule / 분류 원칙
 
-- `01_analysis/` is a registry wrapper; the existing DSD Analysis corpus is not moved.
-- `02_audit/` points to `../DSD_Audit/`; the dedicated audit module remains canonical.
-- Compound paths `09_provenance_lineage/`, `10_aggregation_compression/`, `12_computation_optimization/`, and `15_diagnosis_reconstruction/` remain as compatibility umbrellas and now contain atomic submethods.
-- `17_operation/` restores the operation/lifecycle method that was omitted from the initial count.
-- `18_prediction/` separates prediction from simulation because a model-consistent trajectory is not automatically an empirically relevant forecast.
-- Proposed methods are definitions and roadmaps, not claims of mature standalone disciplines.
-- The shared framework is [`../methodology/DSD_METHOD_FAMILY_FRAMEWORK.md`](../methodology/DSD_METHOD_FAMILY_FRAMEWORK.md).
-- The current paper-facing layer lock remains [`../methodology/DSD_INTERFACE_PROFILE.md`](../methodology/DSD_INTERFACE_PROFILE.md).
+A higher-level field is not a method by itself.
+For example, Aggregation and Compression are both in Reduction & Representation, but an aggregation result is not automatically a compression result.
+Likewise Simulation, Prediction, Control, and Operation remain separate even when one application uses all four.
 
-## Representative navigation policy / 대표 바로가기 정책
+상위 분야는 하나의 합성 방법이 아닙니다.
+세분화·독립성의 기준은 이름이 아니라 **입력, 수행 연산, 산출물, 실패 조건, 검증 기준이 독립적으로 달라지는가**입니다.
 
-- **DSD Analysis** and **DSD Audit** are retained as the two representative entry points because they are the most mature and historically established methods.
-- Their compatibility/navigation wrappers remain explicit under `01_analysis/` and `02_audit/`.
-- No equivalent shortcut or duplicate compatibility entry is added for methods 03–18 merely for symmetry.
-- Newer methods are discovered through this registry and their canonical method directories, avoiding unnecessary duplicate navigation paths.
+A case may combine methods from several fields, but every method result must remain separately identifiable and auditable.
+
+## Legacy path compatibility / 기존 경로 호환성
+
+The earlier 01–18 path layout is preserved so that existing links and records do not break.
+The following compound directories are **legacy compatibility wrappers only and are not counted as methods**:
+
+- `09_provenance_lineage/` → Provenance + Lineage
+- `10_aggregation_compression/` → Aggregation + Compression
+- `12_computation_optimization/` → Computation + Optimization
+- `15_diagnosis_reconstruction/` → Diagnosis + Reconstruction
+
+Their nested method directories are the independent methods.
+The historical numeric/A-B labels remain path identifiers, not a claim that paired methods form one methodology.
+
+## Existing-path policy / 기존 구조 보존
+
+- `01_analysis/` remains a registry wrapper for the historically established DSD Analysis corpus.
+- `02_audit/` remains the registry entry for the dedicated `../DSD_Audit/` module.
+- Existing audit, challenge, methodology, protocol, and template paths are not migrated merely to match the new classification.
+- New field indexes are additive under [`fields/`](fields/).
+- Proposed methods remain proposed until they acquire dedicated protocols, counterexamples, no-gain cases, reproducibility records, and cross-domain tests.
+
+The shared framework is [`../methodology/DSD_METHOD_FAMILY_FRAMEWORK.md`](../methodology/DSD_METHOD_FAMILY_FRAMEWORK.md), and the current paper-facing layer lock remains [`../methodology/DSD_INTERFACE_PROFILE.md`](../methodology/DSD_INTERFACE_PROFILE.md).
