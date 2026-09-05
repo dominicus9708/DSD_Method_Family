@@ -8,10 +8,11 @@ It grew from the existing **DSD Analysis** repository and preserves the establis
 
 ## Method-family extension / 방법군 확장
 
-The sixteen-method registry is maintained under [`methods/`](methods/).
+The registry is maintained under [`methods/`](methods/).
+After refining compound entries and restoring roles omitted by the initial count, the repository now distinguishes **18 registry groups and 22 atomic methods**.
 The common framework is maintained at [`methodology/DSD_METHOD_FAMILY_FRAMEWORK.md`](methodology/DSD_METHOD_FAMILY_FRAMEWORK.md).
 
-Initial core registry:
+Compatibility-preserving registry groups:
 
 1. DSD Analysis / DSD 분석론
 2. DSD Audit / DSD 감사
@@ -21,14 +22,16 @@ Initial core registry:
 6. DSD Comparison / DSD 비교론
 7. DSD Classification / DSD 분류론
 8. DSD Transformation / DSD 변환론
-9. DSD Provenance-Lineage / DSD 추적·계보론
-10. DSD Aggregation-Compression / DSD 집계·압축론
+9. DSD Provenance-Lineage / DSD 추적·계보론 — split into Provenance and Lineage
+10. DSD Aggregation-Compression / DSD 집계·압축론 — split into Aggregation and Compression
 11. DSD Measurement / DSD 측정론
-12. DSD Computation-Optimization / DSD 계산·최적화론
+12. DSD Computation-Optimization / DSD 계산·최적화론 — split into Computation and Optimization
 13. DSD Simulation / DSD 시뮬레이션론
 14. DSD Control / DSD 제어론
-15. DSD Diagnosis-Reconstruction / DSD 진단·복원론
+15. DSD Diagnosis-Reconstruction / DSD 진단·복원론 — split into Diagnosis and Reconstruction
 16. DSD Interpretation / DSD 해석론
+17. DSD Operation / DSD 운영론
+18. DSD Prediction / DSD 예측론
 
 Analysis and Audit are the two most mature current methods.
 The remaining entries begin as proposed/developing frameworks and must earn stronger status through protocols, counterexamples, no-gain cases, reproducibility, and cross-domain tests.
@@ -51,7 +54,7 @@ Analysis and audit remain related but distinct.
 An analysis result is not automatically an audit pass.
 Audit methodology, templates, protocols, future algorithmization, and new audit records remain under [`DSD_Audit/`](DSD_Audit/).
 
-The new registry wrappers [`methods/01_analysis/`](methods/01_analysis/) and [`methods/02_audit/`](methods/02_audit/) point to these established locations; they are not migrations.
+The registry wrappers [`methods/01_analysis/`](methods/01_analysis/) and [`methods/02_audit/`](methods/02_audit/) point to these established locations; they are not migrations.
 
 ## Shared DSD interface / 공유 DSD 인터페이스
 
@@ -84,13 +87,23 @@ DSD_Method_Family/
 │  ├─ 07_classification/
 │  ├─ 08_transformation/
 │  ├─ 09_provenance_lineage/
+│  │  ├─ provenance/
+│  │  └─ lineage/
 │  ├─ 10_aggregation_compression/
+│  │  ├─ aggregation/
+│  │  └─ compression/
 │  ├─ 11_measurement/
 │  ├─ 12_computation_optimization/
+│  │  ├─ computation/
+│  │  └─ optimization/
 │  ├─ 13_simulation/
 │  ├─ 14_control/
 │  ├─ 15_diagnosis_reconstruction/
-│  └─ 16_interpretation/
+│  │  ├─ diagnosis/
+│  │  └─ reconstruction/
+│  ├─ 16_interpretation/
+│  ├─ 17_operation/
+│  └─ 18_prediction/
 ├─ challenges/                        # existing analysis objectivity/consistency challenges
 ├─ DSD_Audit/                         # established separated audit module
 │  ├─ README.md
