@@ -8,8 +8,6 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 
 ## Current architecture / 현재 구조
 
-The current conceptual registry is:
-
 ```text
 DSD foundational layers
 -> 8 higher-level method fields
@@ -22,7 +20,9 @@ DSD foundational layers
 
 - Field index: [`methods/fields/`](methods/fields/)
 - Independent-method registry: [`methods/README.md`](methods/README.md)
+- Method independence/boundary audit: [`methods/METHOD_BOUNDARY_MATRIX.md`](methods/METHOD_BOUNDARY_MATRIX.md)
 - Common framework: [`methodology/DSD_METHOD_FAMILY_FRAMEWORK.md`](methodology/DSD_METHOD_FAMILY_FRAMEWORK.md)
+- Shared-core extraction rule: [`methodology/SHARED_CORE_EXTRACTION_RULE.md`](methodology/SHARED_CORE_EXTRACTION_RULE.md)
 - Current DSD interface profile: [`methodology/DSD_INTERFACE_PROFILE.md`](methodology/DSD_INTERFACE_PROFILE.md)
 - Evidence applicability registry: [`evidence/`](evidence/)
 
@@ -58,11 +58,29 @@ DSD structural layer
 
 Analysis and Audit remain related but distinct and are currently the two most mature methods.
 
-- **DSD Analysis / DSD 분석론**: decomposes, compares, and structurally re-expresses a target.
+- **DSD Analysis / DSD 분석론**: decomposes and structurally re-expresses one declared target.
 - **DSD Audit / DSD 감사**: retraces analysis, calculation, judgment, evidence, procedure, bridge use, and verdict rules under an explicit scope and standard.
+
+Under the current method-family boundary, cross-target structural comparison is recorded under **DSD Comparison**, criterion-based class assignment under **DSD Classification**, and source/context interpretive reading under **DSD Interpretation**. Historical Analysis records that combine these operations are preserved without retroactive rewriting.
 
 An analysis result is not automatically an audit pass.
 The dedicated Audit corpus remains under [`DSD_Audit/`](DSD_Audit/).
+
+## Method independence and shared core / 방법 독립성과 공통 구조
+
+The current duplication audit found **no exact duplicate among the 22 methods** when comparing:
+
+```text
+INPUTS
+OPERATION
+OUTPUTS
+FAILURE_OR_NO_GAIN_CRITERIA
+VALIDATION_STANDARD
+```
+
+Methods may share DSD layers, status rules, bridge machinery, aggregation/reconstruction checks, transition/lineage checks, evidence discipline, baseline rules, or recording procedures without becoming the same method.
+
+The next development stage is therefore to extract those genuinely reusable elements into a **shared core**, while retaining each method's task-specific inputs, operation, outputs, failure criteria, and validation standard.
 
 ## Current repository layout / 현재 저장소 배치
 
@@ -71,9 +89,11 @@ DSD_Method_Family/
 ├─ README.md
 ├─ methodology/
 │  ├─ DSD_INTERFACE_PROFILE.md
-│  └─ DSD_METHOD_FAMILY_FRAMEWORK.md
+│  ├─ DSD_METHOD_FAMILY_FRAMEWORK.md
+│  └─ SHARED_CORE_EXTRACTION_RULE.md
 ├─ methods/
 │  ├─ README.md
+│  ├─ METHOD_BOUNDARY_MATRIX.md
 │  ├─ fields/
 │  │  ├─ README.md
 │  │  ├─ 01_structural_understanding/
@@ -152,7 +172,7 @@ Current common layers are:
 - Do not infer a cross-layer bridge from names alone.
 - Do not infer support, decomposition, cause, or unique reconstruction from aggregate equality without an applicable reconstruction basis.
 - Preserve failed mappings, boundary cases, alternatives, and `NO_GAIN` outcomes.
-- Do not infer method equivalence merely because two methods belong to the same higher-level field.
+- Do not infer method equivalence merely because two methods belong to the same higher-level field or share an operator.
 - Treat proposed methods as proposed until they have dedicated protocols, failure cases, and reproducible applications.
 
 ## Objectivity and consistency challenges / 객관성·일관성 도전
@@ -176,12 +196,14 @@ Existing `ANL-CH-*` records remain direct Analysis evidence. Existing `DSD_Audit
 ## Where to start / 활용 순서
 
 1. Read [`methods/fields/README.md`](methods/fields/README.md) to select a higher-level field.
-2. Read [`methods/README.md`](methods/README.md) and select the independent method or explicit method combination.
+2. Read [`methods/README.md`](methods/README.md) and [`methods/METHOD_BOUNDARY_MATRIX.md`](methods/METHOD_BOUNDARY_MATRIX.md) to select the independent method or explicit method combination.
 3. Lock the DSD source layers and versions actually used.
 4. Supply the domain bridge and external standard separately.
 5. Classify the evidence scope and case origin using [`evidence/`](evidence/).
 6. Record method-specific results, information loss, unresolved alternatives, transition/lineage obligations, and reproducibility information.
 7. Audit the result separately when an audit claim is needed.
+
+For the next common-structure development stage, follow [`methodology/SHARED_CORE_EXTRACTION_RULE.md`](methodology/SHARED_CORE_EXTRACTION_RULE.md).
 
 ## Historical record policy / 과거 기록 보존 원칙
 
