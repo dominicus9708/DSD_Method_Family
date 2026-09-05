@@ -190,3 +190,67 @@ These wrapper names are not current method names and are not included in the cou
 - Proposed methods should be promoted only after concrete protocols, counterexamples, boundary cases, `NO_GAIN` cases, reproducibility records, and cross-domain tests accumulate.
 - Similarity to an existing external methodology is not novelty by itself.
 - The intended contribution is a shared DSD structural layer plus explicitly separable method roles and cross-method interoperability, not a claim to replace all disciplinary methods.
+
+## 12. Evidence applicability and case-origin separation / 증거 적용성·사례 출처 분리
+
+Evidence scope and case origin are separate dimensions.
+
+### 12.1 Shared method-family evidence
+
+Shared evidence supports reusable operating disciplines such as status separation, explicit bridges, minimum-layer selection, aggregate/reconstruction restraint, specialization restraint, `NO_GAIN` preservation, strongest-baseline comparison, and anti-post-hoc procedure.
+
+It does **not** directly validate all 22 methods.
+
+```text
+EVIDENCE_SCOPE_CLASS: shared_method_family
+SHARED_RULES_SUPPORTED:
+SOURCE_RECORDS:
+METHODS_DIRECTLY_TESTED:
+METHODS_NOT_DIRECTLY_VALIDATED:
+TRANSFER_LIMIT:
+```
+
+### 12.2 Method-specific evidence
+
+A method-specific record directly tests one independent method under that method's own task, inputs, operation, outputs, failure conditions, and validation criteria.
+
+```text
+EVIDENCE_SCOPE_CLASS: method_specific
+METHOD_DIRECTLY_TESTED:
+METHOD_VERSION_OR_PROTOCOL:
+RESULT:
+REPRODUCIBILITY_RECORD:
+```
+
+`ANL-CH-*` records remain direct evidence for DSD Analysis. `DSD_Audit/` and new audit records remain direct evidence for DSD Audit. Other methods may reuse shared disciplines but are not directly validated by those corpora.
+
+### 12.3 Real-world application evidence
+
+Actual events, judicial cases, historical incidents, personal cases, empirical datasets, and documented organizational/technical incidents are recorded separately from synthetic toy cases and constructed benchmarks.
+
+```text
+CASE_ORIGIN:
+  real_event
+  judicial_case
+  historical_case
+  personal_case
+  empirical_dataset
+  organizational_or_technical_incident
+
+SOURCE_STATUS:
+PRIMARY_OR_AUTHORITATIVE_SOURCE:
+FACT_INTERPRETATION_BOUNDARY:
+METHODS_APPLIED:
+METHODS_DIRECTLY_TESTED:
+DOMAIN_BRIDGE:
+EXTERNAL_STANDARD:
+PRIVACY_OR_SENSITIVITY_HANDLING:
+```
+
+A real-world case is application evidence first. It contributes to method validation only when the method protocol, failure/scoring criteria, external standard, and baseline are sufficiently locked to make it a genuine test rather than an illustration.
+
+### 12.4 Two-axis rule
+
+`EVIDENCE_SCOPE_CLASS` and `CASE_ORIGIN` must not be collapsed into one field. For example, one judicial case may be `method_specific` evidence for Audit while also supporting shared evidence-status or bridge disciplines.
+
+The current registry and migration matrix are maintained under [`../evidence/`](../evidence/).
