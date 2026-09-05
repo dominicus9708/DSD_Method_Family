@@ -15,4 +15,10 @@ The fields are navigation and research-organization categories only: they do **n
 7. [`07_computation_selection/`](07_computation_selection/) — Computation & Selection / 계산·선택
 8. [`08_dynamics_action/`](08_dynamics_action/) — Dynamics & Action / 동역학·행동
 
-A single case may compose methods from multiple fields, but each method keeps its own inputs, operations, outputs, validation criteria, and audit record.
+## Boundary rule / 방법 경계 규칙
+
+A single case may compose methods from multiple fields, but each method keeps its own inputs, operation, outputs, failure/no-gain criteria, validation standard, and audit record.
+
+The current non-duplication audit is maintained at [`../METHOD_BOUNDARY_MATRIX.md`](../METHOD_BOUNDARY_MATRIX.md). It currently finds **0 exact duplicate methods** among the 22 definitions.
+
+Common status, bridge, layer-selection, evidence, reconstruction, transition/lineage, baseline, and recording rules may later be extracted into shared infrastructure. Shared infrastructure does not merge the methods or validate them automatically. See [`../../methodology/SHARED_CORE_EXTRACTION_RULE.md`](../../methodology/SHARED_CORE_EXTRACTION_RULE.md).
