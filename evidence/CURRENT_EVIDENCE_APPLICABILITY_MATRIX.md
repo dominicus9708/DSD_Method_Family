@@ -1,0 +1,66 @@
+# Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
+
+Status: initial migration map
+Date: 2026-09-06
+
+This file classifies existing Analysis challenge evidence without retroactively turning it into validation of all 22 DSD methods.
+
+## Interpretation key / 해석 키
+
+- **Direct** = the record directly tested the named method.
+- **Shared support** = the record supports a reusable method-family discipline, but does not directly validate another method.
+- **Conditional transfer** = the shared rule applies only when the receiving method exposes the relevant structure or claim type.
+
+## ANL-CH-001 through ANL-CH-009
+
+| Record | Direct method evidence | Shared method-family support | Transfer limit |
+|---|---|---|---|
+| ANL-CH-001 Blind + Twin | Analysis | relabeling invariance, discrimination, status discipline | other methods must re-test these under their own task outputs |
+| ANL-CH-002 Symmetric Case | Analysis | invariance/equivariance separation, symmetry discipline | conditional on an explicitly declared symmetry action |
+| ANL-CH-003 DSD Null / No-Gain | Analysis | baseline sufficiency, `NO_GAIN` preservation | does not establish usefulness or no-gain for another method |
+| ANL-CH-004 Forced Non-Correspondence | Analysis | essential-structure preservation, encoding is not direct correspondence | receiving method must define its own target-preservation criterion |
+| ANL-CH-005 Layer Restraint | Analysis | minimum-layer selection, optional-interface restraint | does not identify the minimum layers for a different method automatically |
+| ANL-CH-006 Specialization Removal | Analysis | specialization-dependent/core partition, unavailable is not false/zero | conditional on an explicitly optional specialization |
+| ANL-CH-007 Competing Explanation | Analysis | strongest reasonable baseline, anti-strawman discipline | each method requires a task-matched competent baseline |
+| ANL-CH-008 Unseen-Problem Transfer | Analysis | rule-lock transfer, post-reveal drift prohibition, holdout-level honesty | same-session pseudo-unseen result is not independent transfer validation |
+| ANL-CH-009 Reverse Prediction | Analysis | prediction-only precommit, no post-reveal rescue, miss preservation | does not directly validate the independent DSD Prediction method |
+
+## Audit corpus / 감사 기록
+
+Existing `DSD_Audit/` and new audit records remain **direct evidence for DSD Audit**.
+They may also support shared disciplines such as source lock, interface lock, evidence-status separation, bridge checks, alternative/witness preservation, contradiction checks, and maximum-supported-claim discipline.
+
+Those shared lessons do not automatically validate Analysis, Specification, Prediction, Reconstruction, or other methods.
+
+## Current overall classification / 현재 총괄 분류
+
+```text
+DIRECTLY_MATURE_METHOD_EVIDENCE:
+  DSD Analysis
+  DSD Audit
+
+SHARED_METHOD_FAMILY_EVIDENCE_AVAILABLE:
+  yes
+
+OTHER_METHODS_DIRECTLY_VALIDATED_BY_ANALYSIS_OR_AUDIT_CORPUS:
+  no
+
+REAL_WORLD_CASE_CORPUS_STATUS:
+  separate registry prepared; must be populated and verified independently
+```
+
+## Migration rule / 이관 규칙
+
+Historical records keep their original path and original verdict.
+New method-family classification is additive:
+
+```text
+original historical record
++ EVIDENCE_SCOPE_CLASS
++ METHOD_DIRECTLY_TESTED
++ SHARED_RULES_SUPPORTED
++ CASE_ORIGIN when applicable
+-> current applicability record
+```
+
+No historical `PASS`, `FAIL`, `NO_GAIN`, or `NON_CORRESPONDENCE` result is rewritten merely to fit the method-family taxonomy.
