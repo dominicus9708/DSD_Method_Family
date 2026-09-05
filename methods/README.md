@@ -6,7 +6,8 @@ The fields are organizational categories only and do not merge their member meth
 현재 개념적 정본은 **8개 상위 분야 / 22개 독립 방법**입니다.
 상위 분야는 분류·탐색·연구관리용이며, 소속 방법의 입력·연산·출력·검증 기준을 합치지 않습니다.
 
-See [`fields/`](fields/) for the field indexes.
+- Field indexes: [`fields/`](fields/)
+- Method independence/boundary audit: [`METHOD_BOUNDARY_MATRIX.md`](METHOD_BOUNDARY_MATRIX.md)
 
 ## Eight fields and 22 independent methods / 8개 상위 분야와 22개 독립 방법
 
@@ -48,16 +49,33 @@ See [`fields/`](fields/) for the field indexes.
 - **Control / DSD 제어론** — [`14_control/`](14_control/)
 - **Operation / DSD 운영론** — [`17_operation/`](17_operation/)
 
-## Classification rule / 분류 원칙
+## Classification and non-duplication rule / 분류·비중복 원칙
 
 A higher-level field is not a method by itself.
-For example, Aggregation and Compression are both in Reduction & Representation, but an aggregation result is not automatically a compression result.
-Likewise Simulation, Prediction, Control, and Operation remain separate even when one application uses all four.
+A method remains independent when its task interface differs materially in **inputs, operation, outputs, failure/no-gain criteria, or validation standard**.
 
-상위 분야는 하나의 합성 방법이 아닙니다.
-세분화·독립성의 기준은 이름이 아니라 **입력, 수행 연산, 산출물, 실패 조건, 검증 기준이 독립적으로 달라지는가**입니다.
+The current boundary audit found **no exact duplicate among the 22 methods**. Sharing DSD layers or operators is not enough to merge methods.
+
+The main wording refinement is DSD Analysis: in new method-family records, Analysis means **single-target structural decomposition and structural re-expression**. Cross-target comparison, criterion-based class assignment, and source/context interpretation are attributed to Comparison, Classification, and Interpretation respectively. Historical Analysis records are not retroactively rewritten.
 
 A case may combine methods from several fields, but every method result must remain separately identifiable and auditable.
+
+## Shared-core extraction rule / 공통 구조 추출 원칙
+
+Common structures are promoted upward only when their meaning survives across methods without changing the method-specific task.
+
+```text
+SHARED_CORE:
+METHOD_SPECIFIC_INPUT:
+METHOD_SPECIFIC_OPERATION:
+METHOD_SPECIFIC_OUTPUT:
+METHOD_SPECIFIC_FAILURE_CRITERIA:
+METHOD_SPECIFIC_VALIDATION:
+```
+
+Examples of likely shared-core material include status discipline, explicit bridge rules, minimum-layer selection, aggregate/reconstruction restraint, transition/lineage discipline, evidence-scope separation, baseline discipline, and anti-post-hoc recording rules.
+
+A shared rule is **not** evidence that all receiving methods are directly validated. Each method still requires its own protocol, negative/boundary/no-gain cases, reproducibility records, and appropriate real-world tests.
 
 ## Legacy path compatibility / 기존 경로 호환성
 
@@ -77,7 +95,7 @@ The historical numeric/A-B labels remain path identifiers, not a claim that pair
 - `01_analysis/` remains a registry wrapper for the historically established DSD Analysis corpus.
 - `02_audit/` remains the registry entry for the dedicated `../DSD_Audit/` module.
 - Existing audit, challenge, methodology, protocol, and template paths are not migrated merely to match the new classification.
-- New field indexes are additive under [`fields/`](fields/).
+- Field indexes remain additive under [`fields/`](fields/).
 - Proposed methods remain proposed until they acquire dedicated protocols, counterexamples, no-gain cases, reproducibility records, and cross-domain tests.
 
 The shared framework is [`../methodology/DSD_METHOD_FAMILY_FRAMEWORK.md`](../methodology/DSD_METHOD_FAMILY_FRAMEWORK.md), and the current paper-facing layer lock remains [`../methodology/DSD_INTERFACE_PROFILE.md`](../methodology/DSD_INTERFACE_PROFILE.md).
