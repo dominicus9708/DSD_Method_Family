@@ -1,16 +1,14 @@
 # 15. DSD Diagnosis-Reconstruction / DSD 진단·복원론
 
-Status: **proposed**
+Status: **proposed umbrella**
 
-Task: infer which hidden, prior, damaged, omitted, or alternative structures remain compatible with the available evidence or reduced readout.
+This historical registry group is preserved for path compatibility but is now subdivided into two atomic methods:
 
-Primary DSD sources: support-retaining descriptors, aggregation kernel/injectivity results, formation traces, property statuses, dynamic lineage and residuals.
+- [`diagnosis/`](diagnosis/) — **15A. DSD Diagnosis / DSD 진단론**: infer current hidden states, failure modes, causes, or structural conditions compatible with present observations.
+- [`reconstruction/`](reconstruction/) — **15B. DSD Reconstruction / DSD 복원론**: infer prior, omitted, damaged, compressed, or otherwise hidden structures and histories compatible with the evidence.
 
-Typical outputs:
-- admissible reconstruction set rather than a forced unique answer;
-- evidence-to-candidate compatibility table;
-- collision and non-identifiability witnesses;
-- missing provenance/lineage requirements;
-- conditions under which unique reconstruction becomes justified.
+The distinction is deliberate: diagnosis is primarily a present-hidden-state inverse problem; reconstruction is primarily a prior/omitted-structure inverse problem.
 
-Boundary: when the forward map is non-injective, the method must preserve multiple admissible reconstructions unless additional evidence eliminates them.
+Primary DSD sources: Formation/Property status distinctions, support-retaining descriptors, aggregation kernel/injectivity, provenance, dynamics and lineage.
+
+Boundary: non-injective forward structure or insufficient evidence requires preserving multiple admissible diagnoses or reconstructions rather than forcing uniqueness.
