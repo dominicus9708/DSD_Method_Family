@@ -82,6 +82,17 @@ It does **not** directly validate the correctness, performance, or usefulness of
   - evidence vocabulary may be domain-richer; the shared rule requires axis separation rather than one universal evidence ontology;
   - does not directly validate all 22 methods.
 
+## Resolved shared-core meta-audits / 공통 구조 메타감사
+
+- [`SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md`](SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md) — **Specialization-Restraint Separation / Duplication Audit / 특수화 절제 분리·중복 감사** — `resolved_as_derived_profile` (2026-09-06)
+  - five candidate obligations decomposed;
+  - existing shared-core coverage: 5/5;
+  - primary coverage: SC-04;
+  - fake-default/status coverage: SC-01 + SC-04;
+  - cross-interface feedback condition: SC-03;
+  - unique invariant/failure/transfer remainder: none;
+  - **no SC-10 created**.
+
 ## Shared rule families / 공통 규율군
 
 - **status / typed-domain discipline**: absence, undefinedness, inapplicability, prerequisite failure, defined zero, and complete typed input remain distinct when the selected interface and claim require those distinctions; intentional coarsening requires an explicit map and loss boundary;
@@ -92,8 +103,16 @@ It does **not** directly validate the correctness, performance, or usefulness of
 - **transition / lineage discipline**: keep identity-preserving regular evolution separate from identity-breaking transitions, and require typed, coherent lineage for successor/history claims whenever literal identity is not retained;
 - **evidence scope / case-origin separation**: record what a record directly validates separately from whether its case is synthetic, constructed, real, judicial, historical, personal, empirical, or organizational/technical; case origin does not by itself broaden validation scope;
 - **baseline / failure-NO_GAIN / anti-post-hoc discipline**: where comparison or confirmatory evaluation is claimed, use the strongest reasonable task-matched baseline available, preserve unfavorable/null/tied/indeterminate outcomes, and never silently rewrite locked criteria after reveal to rescue the same run;
-- **evidence-status / DSD-object-status separation**: keep model/object status separate from evidence/audit status; evidence may assess a proposition about object status, but `unknown/insufficient/out-of-scope` is not an object status and `undefined/inapplicable/zero/absent` is not an evidence grade;
-- specialization restraint: removing optional specialization withdraws specialization-dependent claims without inventing defaults; separate duplication audit still required to decide whether this deserves its own shared-core ID or is already covered by SC-01 and SC-04.
+- **evidence-status / DSD-object-status separation**: keep model/object status separate from evidence/audit status; evidence may assess a proposition about object status, but `unknown/insufficient/out-of-scope` is not an object status and `undefined/inapplicable/zero/absent` is not an evidence grade.
+
+Specialization restraint is retained only as a **derived operational profile**, not an independent tenth rule:
+
+```text
+SPECIALIZATION_RESTRAINT_PROFILE
+  = SC-04 dependency/optionality discipline
+  + SC-01 no-silent-status/default collapse
+  + SC-03 explicit bridge when specialization affects another interface
+```
 
 ## Required record fields
 
