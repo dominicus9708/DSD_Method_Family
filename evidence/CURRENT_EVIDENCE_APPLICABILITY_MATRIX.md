@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + two post-closure Specification direct pilots
+Status: current migration map + three post-closure Specification direct pilots
 Date: 2026-09-06
 
 This file classifies existing Analysis challenge evidence without retroactively turning it into validation of all 22 DSD methods.
@@ -44,13 +44,14 @@ A dedicated method protocol exists at:
 Direct pilots:
 
 - `SPEC-CH-001_well-formed-malformed-discrimination.md` — **Well-Formed / Malformed Specification Discrimination**;
-- `SPEC-CH-002_contradiction-underspecification.md` — **Contradiction / Underspecification Challenge**, with separately committed precommit `SPEC-CH-002_precommit.md`.
+- `SPEC-CH-002_contradiction-underspecification.md` — **Contradiction / Underspecification Challenge**, with separately committed precommit `SPEC-CH-002_precommit.md`;
+- `SPEC-CH-003_optional-layer-bridge-boundary.md` — **Optional-Layer / Bridge Boundary Challenge**, with separately committed precommit `SPEC-CH-003_precommit.md`.
 
 ```text
 METHOD: DSD Specification
 METHOD_STATUS: developing
 DEDICATED_PROTOCOL: yes
-DIRECT_METHOD_EVIDENCE: two_pilots_completed
+DIRECT_METHOD_EVIDENCE: three_pilots_completed
 
 SPEC_CH_001_WELL_FORMED_ACCEPTED: 2/2
 SPEC_CH_001_MALFORMED_DETECTED: 6/6
@@ -66,8 +67,19 @@ SPEC_CH_002_CROSS_CLASS_ERRORS: 0
 SPEC_CH_002_POST_REVEAL_RULE_CHANGE: no
 SPEC_CH_002_RESULT: SPECIFICATION_CONTRADICTION_UNDERSPECIFICATION_PILOT_PASS_WITH_LIMITATIONS
 
+SPEC_CH_003_PRECOMMIT_COMMIT: d2cc07121043546be8e2450d8af288491b837e76
+SPEC_CH_003_WELL_FORMED_CONTROLS_ACCEPTED: 2/2
+SPEC_CH_003_OPTIONAL_OVERCONSTRAINTS_CORRECT: 3/3
+SPEC_CH_003_REQUIRED_BRIDGE_FAILURES_CORRECT: 3/3
+SPEC_CH_003_EXACT_DIAGNOSTIC_MATCHES: 8/8
+SPEC_CH_003_CROSS_CLASS_ERRORS: 0
+SPEC_CH_003_FALSE_BRIDGE_REQUIREMENT_WITHOUT_TRANSFER: 0
+SPEC_CH_003_FALSE_OPTIONAL_LAYER_ACTIVATION: 0
+SPEC_CH_003_POST_REVEAL_RULE_CHANGE: no
+SPEC_CH_003_RESULT: SPECIFICATION_OPTIONAL_LAYER_BRIDGE_BOUNDARY_PILOT_PASS_WITH_LIMITATIONS
+
 MATURE_DIRECT_METHOD_VALIDATION: not_claimed
-NEXT_DIRECT_RECORD: SPEC-CH-003
+NEXT_DIRECT_RECORD: SPEC-CH-004
 ```
 
 These are direct method-specific records because they test Specification's own structural outputs and failure classes under Protocol v0.1. They remain constructed synthetic pilots and do not move Specification into `DIRECTLY_MATURE_METHOD_EVIDENCE`.
@@ -96,7 +108,7 @@ DIRECTLY_MATURE_METHOD_EVIDENCE:
 
 DEVELOPING_WITH_DIRECT_PILOT_EVIDENCE:
   DSD Specification
-    direct_pilot_records: 2
+    direct_pilot_records: 3
 
 SHARED_METHOD_FAMILY_EVIDENCE_AVAILABLE:
   yes
