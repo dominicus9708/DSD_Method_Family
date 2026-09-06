@@ -1,6 +1,6 @@
 # 03. DSD Specification / DSD 명세론
 
-Status: **developing** — dedicated protocol v0.1 established; direct pilots `SPEC-CH-001` and `SPEC-CH-002` completed with limitations.
+Status: **developing** — dedicated protocol v0.1 established; direct pilots `SPEC-CH-001` through `SPEC-CH-003` completed with limitations.
 
 Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve.
 
@@ -61,17 +61,34 @@ POST_REVEAL_RULE_CHANGE: no
 RESULT: SPECIFICATION_CONTRADICTION_UNDERSPECIFICATION_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-The second pilot shows that Protocol v0.1 distinguishes an impossible simultaneous requirement set from a requirement set that is merely missing activation, selector, or threshold information on the locked constructed benchmark.
+### SPEC-CH-003 — completed
 
-Both records are pilot-level direct evidence only. They do not make Specification a mature method.
+`Optional-Layer / Bridge Boundary Challenge`
+
+```text
+PRECOMMIT_COMMIT: d2cc07121043546be8e2450d8af288491b837e76
+WELL_FORMED_CONTROLS_ACCEPTED: 2/2
+OPTIONAL_LAYER_OVERCONSTRAINT_CASES_CORRECT: 3/3
+REQUIRED_BRIDGE_FAILURE_CASES_CORRECT: 3/3
+EXACT_DIAGNOSTIC_FAMILY_MATCHES: 8/8
+OPTIONAL_LAYER_BRIDGE_CROSS_CLASS_ERRORS: 0
+FALSE_BRIDGE_REQUIREMENT_WITHOUT_CROSS_CARRIER_TRANSFER: 0
+FALSE_ACTIVATION_OF_STATIC_DYNAMICS_AXIS_ON_WF_CASES: 0
+POST_REVEAL_RULE_CHANGE: no
+RESULT: SPECIFICATION_OPTIONAL_LAYER_BRIDGE_BOUNDARY_PILOT_PASS_WITH_LIMITATIONS
+```
+
+The third pilot shows that Protocol v0.1 keeps two opposite mistakes distinct on the locked benchmark: unnecessary optional dependencies become `SPEC_OVERCONSTRAINED`, while missing/inferred/wrongly typed required bridges become `SPEC_UNDERSPECIFIED`.
+
+All three records are pilot-level direct evidence only. They do not make Specification a mature method.
 
 ## Evidence sequence / 증거 순서
 
 ```text
 SPEC-CH-001  basic well-formed / malformed specification discrimination — completed
 SPEC-CH-002  contradiction and underspecification challenge — completed
-SPEC-CH-003  optional-layer and bridge boundary challenge — next
-SPEC-CH-004  NO_GAIN specification challenge
+SPEC-CH-003  optional-layer and bridge boundary challenge — completed
+SPEC-CH-004  NO_GAIN specification challenge — next
 SPEC-CH-005  reproducibility / independent retrace challenge
 ```
 
