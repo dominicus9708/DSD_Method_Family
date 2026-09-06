@@ -1,6 +1,6 @@
 # DSD Specification Method-Specific Evidence / DSD 명세론 개별 방법 직접 증거
 
-Status: **two direct pilot records completed / not mature**  
+Status: **three direct pilot records completed / not mature**  
 Date: 2026-09-06  
 Method: **DSD Specification / DSD 명세론**  
 Protocol: [`../../../methods/03_specification/PROTOCOL.md`](../../../methods/03_specification/PROTOCOL.md)
@@ -77,13 +77,37 @@ METHOD_MATURITY: not mature
 
 This second pilot directly tests Specification's own distinction between impossible simultaneous requirements and missing decision information. It remains synthetic same-session evidence and is not independent blind validation.
 
+### SPEC-CH-003 — Optional-Layer / Bridge Boundary Challenge
+
+Precommit: [`SPEC-CH-003_precommit.md`](SPEC-CH-003_precommit.md)  
+Result: [`SPEC-CH-003_optional-layer-bridge-boundary.md`](SPEC-CH-003_optional-layer-bridge-boundary.md)
+
+```text
+DATE: 2026-09-06
+CASE_ORIGIN: constructed_benchmark
+PRECOMMIT_COMMIT: d2cc07121043546be8e2450d8af288491b837e76
+WELL_FORMED_CONTROLS_ACCEPTED: 2/2
+OPTIONAL_LAYER_OVERCONSTRAINT_CASES_CORRECT: 3/3
+REQUIRED_BRIDGE_FAILURE_CASES_CORRECT: 3/3
+EXACT_DIAGNOSTIC_FAMILY_MATCHES: 8/8
+OPTIONAL_LAYER_BRIDGE_CROSS_CLASS_ERRORS: 0
+FALSE_BRIDGE_REQUIREMENT_WITHOUT_CROSS_CARRIER_TRANSFER: 0
+FALSE_ACTIVATION_OF_STATIC_DYNAMICS_AXIS_ON_WF_CASES: 0
+POST_REVEAL_RULE_CHANGE: no
+NEGATIVE_CONTROL: pass
+RESULT: SPECIFICATION_OPTIONAL_LAYER_BRIDGE_BOUNDARY_PILOT_PASS_WITH_LIMITATIONS
+METHOD_MATURITY: not mature
+```
+
+This third pilot directly tests whether Specification distinguishes an unnecessary optional dependency (`SPEC_OVERCONSTRAINED`) from a missing or invalid claim-relevant mapping (`SPEC_UNDERSPECIFIED`). It does not create a new shared-core rule; it is a method-specific application of SC-03 and SC-04 under Specification's own output classes.
+
 ## Direct-evidence sequence
 
 ```text
 SPEC-CH-001  basic well-formed / malformed specification discrimination — completed, pilot pass with limitations
 SPEC-CH-002  contradiction and underspecification challenge — completed, pilot pass with limitations
-SPEC-CH-003  optional-layer and bridge boundary challenge — next
-SPEC-CH-004  NO_GAIN specification challenge
+SPEC-CH-003  optional-layer and bridge boundary challenge — completed, pilot pass with limitations
+SPEC-CH-004  NO_GAIN specification challenge — next
 SPEC-CH-005  reproducibility / independent retrace challenge
 ```
 
@@ -91,11 +115,11 @@ After these internal challenges, add at least one external or independently gene
 
 ## Promotion restraint
 
-Protocol preparation changed the method from `proposed` to `developing`. Completion of two synthetic pilots does not establish mature direct evidence.
+Protocol preparation changed the method from `proposed` to `developing`. Completion of three synthetic pilots does not establish mature direct evidence.
 
 ```text
-CURRENT_DIRECT_METHOD_EVIDENCE: two_pilots_completed
+CURRENT_DIRECT_METHOD_EVIDENCE: three_pilots_completed
 CURRENT_METHOD_STATUS: developing
 MATURE_METHOD_STATUS: not_claimed
-NEXT_DIRECT_TEST: SPEC-CH-003
+NEXT_DIRECT_TEST: SPEC-CH-004
 ```
