@@ -49,8 +49,8 @@ The following are candidates because they have already appeared across the DSD f
 - **SC-04 minimum-layer / optional-interface restraint** — promoted with conditions; see `../evidence/shared/SC-04_minimum-layer-optional-interface-restraint.md`;
 - **SC-05 aggregate / information-loss / reconstruction restraint** — promoted with conditions; see `../evidence/shared/SC-05_aggregate-information-loss-reconstruction-restraint.md`;
 - **SC-06 transition / lineage discipline** — promoted with conditions; see `../evidence/shared/SC-06_transition-lineage-discipline.md`;
+- **SC-07 evidence scope / case-origin separation** — promoted with conditions; see `../evidence/shared/SC-07_evidence-scope-case-origin-separation.md`;
 - evidence-status versus DSD-object-status separation;
-- evidence scope versus case-origin separation;
 - strongest reasonable baseline and `NO_GAIN` preservation where applicable;
 - precommit / anti-post-hoc recording discipline;
 - explicit preservation of failed, boundary, non-correspondence, and indeterminate outcomes.
@@ -95,7 +95,7 @@ The development order begins with the most stable cross-method structures before
 4. **SC-04 minimum-layer / optional-interface restraint — completed: promoted_with_conditions**;
 5. **SC-05 aggregate / information-loss / reconstruction restraint — completed: promoted_with_conditions**;
 6. **SC-06 transition / lineage discipline — completed: promoted_with_conditions**;
-7. evidence scope and case-origin separation;
+7. **SC-07 evidence scope / case-origin separation — completed: promoted_with_conditions**;
 8. baseline, failure/no-gain, and anti-post-hoc recording rules.
 
 Each item is promoted only after its transfer conditions and non-transfer cases are recorded.
@@ -293,7 +293,40 @@ Non-transfer/minimal-lineage cases:
 
 Evidence record: [`../evidence/shared/SC-06_transition-lineage-discipline.md`](../evidence/shared/SC-06_transition-lineage-discipline.md).
 
-Relations among the first six promoted rules:
+### SC-07 — Evidence Scope / Case-Origin Separation
+
+```text
+DATE: 2026-09-06
+SOURCE_SUPPORT: pass
+CROSS_FIELD_REPRESENTATIVE_METHODS: 8
+SCOPE_INFLATION_OR_TARGET_ERASURE_CHECKS: 8/8 detected
+ORIGIN_CLASS_CONFLATION_CHECKS: 8/8 detected
+ORIGIN_TO_VALIDATION_SUBSTITUTION_CHECKS: 8/8 detected
+NEGATIVE_CONTROL: pass
+RESULT: promoted_with_conditions
+DIRECT_METHOD_VALIDATION: not claimed
+```
+
+Invariant meaning:
+
+> Record what an evidence item directly validates separately from what kind of case produced it. Real-world origin does not by itself broaden direct validation scope, and synthetic/constructed origin does not by itself prevent a record from supporting a shared operating rule.
+
+Transfer conditions:
+
+- an evidence record supports a method, shared rule, maturity claim, or real-world application;
+- one record has both case-origin metadata and method-specific/shared applicability;
+- reusable shared lessons are extracted from method-specific evidence without changing which method was directly tested.
+
+Non-transfer/minimal-record cases:
+
+- private scratch work not entered into the evidence corpus does not need the full schema;
+- case origin may change source-verification, privacy, authority, or external-standard obligations without changing applicability scope;
+- evidence scope may legitimately broaden only when the actual protocol and validation basis are broadened to test additional methods;
+- no new judicial, historical, personal, empirical, or organizational case is claimed by the synthetic SC-07 pilot.
+
+Evidence record: [`../evidence/shared/SC-07_evidence-scope-case-origin-separation.md`](../evidence/shared/SC-07_evidence-scope-case-origin-separation.md).
+
+Relations among the first seven promoted rules:
 
 ```text
 SC-01 = preserve claim-relevant distinctions
@@ -302,4 +335,5 @@ SC-03 = explicitly supply claim-relevant mappings between active structures
 SC-04 = keep only claim-relevant layers as dependencies and avoid optional-interface overconstraint
 SC-05 = do not infer beyond the information-preservation/reconstruction capacity of reduced aggregates
 SC-06 = separate identity-preserving evolution from identity-breaking transition and use lineage for succession
+SC-07 = keep evidence applicability separate from case origin/reality status
 ```
