@@ -34,10 +34,13 @@ REPRODUCIBILITY_RECORD:
 - [`specification/`](specification/) — **DSD Specification / DSD 명세론**
   - dedicated protocol v0.1 established;
   - current method status: `developing`;
-  - `SPEC-CH-001` completed: 2/2 well-formed accepted, 6/6 malformed detected, 8/8 exact diagnostic-family matches;
-  - result: `SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS`;
-  - maturity: not claimed;
-  - next direct record: `SPEC-CH-002`.
+  - `SPEC-CH-001` completed: well-formed/malformed discrimination pilot;
+  - `SPEC-CH-002` completed: contradiction/underspecification discrimination pilot with precommit;
+  - `SPEC-CH-003` completed: optional-layer/bridge boundary pilot with precommit;
+  - current direct pilot count: `3`;
+  - all three results are pilot PASS with limitations;
+  - mature method status: not claimed;
+  - next direct record: `SPEC-CH-004`.
 
 ## Promotion expectation / 성숙도 승격 기준
 
@@ -52,4 +55,4 @@ A proposed or developing method should accumulate, at minimum:
 7. at least one external or independently generated application case;
 8. a strongest-reasonable-baseline comparison when applicable.
 
-Shared evidence alone does not satisfy these method-specific requirements, and one synthetic pilot is not enough for maturity promotion.
+Shared evidence alone does not satisfy these method-specific requirements, and several constructed pilots alone are not enough for maturity promotion.
