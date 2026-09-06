@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + five post-closure Specification direct pilots  
+Status: current migration map + five Specification direct pilots + first external Specification application  
 Date: 2026-09-06
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
@@ -12,6 +12,7 @@ This file classifies existing method evidence without retroactively turning one 
 - **Conditional transfer** = the shared rule applies only when the receiving method exposes the relevant structure or claim type.
 - **Protocol prepared** = a dedicated method protocol exists, but protocol existence alone is not direct validation.
 - **Direct pilot** = a method-specific challenge directly tested the method under its own protocol, but maturity is not yet established.
+- **External application** = the method is applied under locked criteria to material authored independently of DSD; this origin class does not imply an independent evaluator.
 
 ## Analysis corpus / 분석론 기록
 
@@ -23,24 +24,24 @@ Existing `DSD_Audit/` and new audit records remain direct evidence for **DSD Aud
 
 ## DSD Specification / DSD 명세론
 
-A dedicated method protocol exists at:
+Protocol:
+- `methods/03_specification/PROTOCOL.md` — **DSD Specification Protocol v0.1**.
 
-- `methods/03_specification/PROTOCOL.md` — **DSD Specification Protocol v0.1**;
-- `evidence/method_specific/specification/` — dedicated direct-evidence lane.
-
-Direct pilots:
-
+Internal direct pilots:
 - `SPEC-CH-001_well-formed-malformed-discrimination.md`;
 - `SPEC-CH-002_contradiction-underspecification.md` with precommit;
 - `SPEC-CH-003_optional-layer-bridge-boundary.md` with precommit;
 - `SPEC-CH-004_no-gain-specification.md` with precommit;
 - `SPEC-CH-005_reproducibility-independent-retrace.md` with precommit and reference-key hash commitment.
 
+External application:
+- `evidence/real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length.md` with separate precommit.
+
 ```text
 METHOD: DSD Specification
 METHOD_STATUS: developing
 DEDICATED_PROTOCOL: yes
-DIRECT_METHOD_EVIDENCE: five_pilots_completed
+DIRECT_INTERNAL_PILOTS: five_completed
 INTERNAL_CONSTRUCTED_CHALLENGE_SEQUENCE: completed
 
 SPEC_CH_001_RESULT: SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
@@ -81,13 +82,27 @@ SPEC_CH_005_ORDER_SENSITIVITY_ERRORS: 0
 SPEC_CH_005_RESULT: SPECIFICATION_RETRACE_REPRODUCIBILITY_PILOT_PASS_WITH_LIMITATIONS
 SPEC_CH_005_INDEPENDENT_EVALUATOR_VALIDATION: not_established
 
+SPEC_APP_001_CASE_ORIGIN: public_normative_standard
+SPEC_APP_001_SOURCE: RFC 9112 §6.3 core precedence algorithm
+SPEC_APP_001_PRECOMMIT_COMMIT: 9b91cecda9516fd7cd65c9eb181e80ab4fa45deb
+SPEC_APP_001_SOURCE_UNIT_COVERAGE: 13/13
+SPEC_APP_001_TRIGGER_OR_ACTOR_SCOPE_PRESERVATION: 13/13
+SPEC_APP_001_PRECEDENCE_PRESERVATION: 13/13
+SPEC_APP_001_BCP14_MUST_OBLIGATIONS_PRESERVED: 8/8
+SPEC_APP_001_INVENTED_SOURCE_FACTS: 0
+SPEC_APP_001_SOURCE_FIDELITY_RESULT: pass
+SPEC_APP_001_FINAL_SPEC_STATUS: no_gain
+SPEC_APP_001_COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
+SPEC_APP_001_PROTOCOL_PRESSURE: ordered_precedence_priority_present_nonfatal
+SPEC_APP_001_INDEPENDENT_EVALUATOR_VALIDATION: not_established
+
 MATURE_DIRECT_METHOD_VALIDATION: not_claimed
-NEXT_REQUIRED_EVIDENCE: external_or_independently_generated_application_case
+NEXT_STEP: specification_maturity_audit
 ```
 
-The fifth record directly tests Specification's own reproducibility/retrace requirement on a frozen constructed packet and two processing orders. It supports procedural retraceability, not independent reviewer validation.
+`SPEC-APP-001` satisfies the repository checklist's **external or independently generated corpus-origin** requirement because RFC 9112 is an external public normative standard authored independently of DSD. It does not satisfy the separate independent-evaluator requirement.
 
-All five records remain constructed pilots. They do not move Specification into mature direct method evidence.
+The external result is intentionally non-favorable to a DSD superiority claim: the RFC baseline was already compact, ordered, and normative, so the precommitted comparative verdict was `SPEC_NO_GAIN` with the baseline preferred for this locked task. This counts as evidence of source fidelity and NO_GAIN preservation, not as evidence of engineering benefit.
 
 ## Shared-core registry status / 공통 코어 상태
 
@@ -100,7 +115,7 @@ SHARED_CORE_CLOSURE_RESULT: closed_for_current_registry_with_conditions
 DIRECT_METHOD_VALIDATION_FROM_SHARED_CORE: not claimed
 ```
 
-`REPRODUCIBILITY_RECORD` remains a method/evidence maturity requirement rather than a separate shared semantic-core ID. `SPEC-CH-005` is therefore a method-specific implementation test of that requirement, not a new shared-core promotion.
+`REPRODUCIBILITY_RECORD` remains a method/evidence maturity requirement rather than a separate shared semantic-core ID.
 
 ## Current overall classification / 현재 총괄 분류
 
@@ -109,14 +124,16 @@ DIRECTLY_MATURE_METHOD_EVIDENCE:
   DSD Analysis
   DSD Audit
 
-DEVELOPING_WITH_DIRECT_PILOT_EVIDENCE:
+DEVELOPING_WITH_DIRECT_AND_EXTERNAL_APPLICATION_EVIDENCE:
   DSD Specification
-    direct_pilot_records: 5
+    direct_internal_pilots: 5
     internal_constructed_sequence: completed
     NO_GAIN_pilot: completed
     procedural_retrace: completed
+    external_or_independent_corpus_application: completed
+    external_application_result: SPEC_NO_GAIN
     independent_evaluator_validation: not_established
-    external_or_independent_application_case: still_required
+    maturity_audit: pending
 
 SHARED_METHOD_FAMILY_EVIDENCE_AVAILABLE:
   yes
@@ -130,10 +147,10 @@ OTHER_METHODS_DIRECTLY_VALIDATED_BY_ANALYSIS_OR_AUDIT_CORPUS:
 OTHER_METHODS_DIRECTLY_VALIDATED_BY_SHARED_CORE_TRANSFER_PILOTS:
   no
 
-REAL_WORLD_CASE_CORPUS_STATUS:
-  separate registry prepared; must be populated and verified independently
+REAL_WORLD_OR_EXTERNAL_CASE_CORPUS_STATUS:
+  first public normative-standard application populated
 ```
 
 ## Migration rule / 이관 규칙
 
-Historical records keep their original path and original verdict. New method-family classification is additive and does not rewrite prior `PASS`, `FAIL`, `NO_GAIN`, or `NON_CORRESPONDENCE` results.
+Historical records keep their original path and original verdict. New method-family classification is additive and does not rewrite prior `PASS`, `FAIL`, `NO_GAIN`, `BASELINE_PREFERRED`, or `NON_CORRESPONDENCE` results.
