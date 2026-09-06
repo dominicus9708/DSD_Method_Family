@@ -47,6 +47,14 @@ It does **not** directly validate the correctness, performance, or usefulness of
   - injectivity/reduced-claim/support-sidecar negative control: pass;
   - does not directly validate all 22 methods.
 
+- [`SC-06_transition-lineage-discipline.md`](SC-06_transition-lineage-discipline.md) — **Transition / Lineage Discipline / 전이·계보 규율** — `promoted_with_conditions` (2026-09-06)
+  - 8 higher-level fields, one representative method per field;
+  - transition-as-regular-evolution: 8/8 detected;
+  - lineage omission/invention: 8/8 detected;
+  - lineage coherence/type violation: 8/8 detected;
+  - fixed-background canonical lineage and coherent branching/merging negative control: pass;
+  - does not directly validate all 22 methods.
+
 ## Shared rule families / 공통 규율군
 
 - **status / typed-domain discipline**: absence, undefinedness, inapplicability, prerequisite failure, defined zero, and complete typed input remain distinct when the selected interface and claim require those distinctions; intentional coarsening requires an explicit map and loss boundary;
@@ -54,6 +62,7 @@ It does **not** directly validate the correctness, performance, or usefulness of
 - **explicit bridge discipline**: cross-layer, cross-representation, cross-carrier, and cross-domain mappings require explicit source/target carriers, mapping rules, assumptions, and preservation/loss obligations unless the locked interface already supplies the relevant map or bridge-invariance has been proved;
 - **minimum-layer / optional-interface restraint**: keep every layer needed by a claim, but do not make claim-irrelevant optional interfaces mandatory or let irrelevant extensions alter the core result merely by being present;
 - **aggregate / information-loss / reconstruction restraint**: equal reduced aggregates do not imply equal support, decomposition, provenance, component state, or history unless the reduction is proved injective on the relevant admissible class or sufficient reconstruction side information is retained;
+- **transition / lineage discipline**: keep identity-preserving regular evolution separate from identity-breaking transitions, and require typed, coherent lineage for successor/history claims whenever literal identity is not retained;
 - specialization restraint: removing optional specialization withdraws specialization-dependent claims without inventing defaults;
 - failure / NO_GAIN preservation: negative, null, non-correspondence, and indeterminate results remain valid records;
 - strongest-baseline discipline: comparison must not rely only on a weak strawman baseline;
