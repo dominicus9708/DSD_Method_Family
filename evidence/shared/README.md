@@ -22,11 +22,19 @@ It does **not** directly validate the correctness, performance, or usefulness of
   - counterfactual `V*` is not asserted to be an actual historical DSD revision;
   - does not directly validate all 22 methods.
 
+- [`SC-03_explicit-bridge-discipline.md`](SC-03_explicit-bridge-discipline.md) — **Explicit Bridge Discipline / 명시적 브리지 규율** — `promoted_with_conditions` (2026-09-06)
+  - 8 higher-level fields, one representative method per field;
+  - bridge-omission perturbation: 8/8 detected;
+  - name/coordinate-inference perturbation: 8/8 detected;
+  - bridge-substitution sensitivity: 8/8 detected;
+  - identity/locked-map/invariance negative control: pass;
+  - does not directly validate all 22 methods.
+
 ## Shared rule families / 공통 규율군
 
 - **status / typed-domain discipline**: absence, undefinedness, inapplicability, prerequisite failure, defined zero, and complete typed input remain distinct when the selected interface and claim require those distinctions; intentional coarsening requires an explicit map and loss boundary;
 - **source / interface / version lock**: lock every source, interface branch, and revision whose semantics can affect the claimed result; unused layers may be recorded as `not used`, and a documented equivalence class may replace an exact revision only after interface-level equivalence is established;
-- bridge discipline: cross-layer and cross-domain mappings require explicit justification;
+- **explicit bridge discipline**: cross-layer, cross-representation, cross-carrier, and cross-domain mappings require explicit source/target carriers, mapping rules, assumptions, and preservation/loss obligations unless the locked interface already supplies the relevant map or bridge-invariance has been proved;
 - minimum-layer discipline: use only the DSD layers required by the task;
 - aggregate/reconstruction discipline: equal aggregate does not imply equal support, decomposition, cause, or history without a reconstruction basis;
 - specialization restraint: removing optional specialization withdraws specialization-dependent claims without inventing defaults;
