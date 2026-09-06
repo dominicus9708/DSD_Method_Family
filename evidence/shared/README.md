@@ -64,6 +64,15 @@ It does **not** directly validate the correctness, performance, or usefulness of
   - no new real-world case is asserted by this synthetic metadata pilot;
   - does not directly validate all 22 methods.
 
+- [`SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md`](SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md) — **Baseline / Failure-NO_GAIN / Anti-Post-Hoc Discipline / 기준선·실패·무이득·사후변경 방지 규율** — `promoted_with_conditions` (2026-09-06)
+  - 8 higher-level fields, one representative method per field;
+  - strawman-baseline substitution: 8/8 detected;
+  - negative-result rescue/erasure: 8/8 detected;
+  - post-reveal criterion/exception editing: 8/8 detected;
+  - descriptive/exploratory/versioned-revision negative controls: pass;
+  - baseline clause is conditional on comparative/gain/performance claims;
+  - does not directly validate all 22 methods.
+
 ## Shared rule families / 공통 규율군
 
 - **status / typed-domain discipline**: absence, undefinedness, inapplicability, prerequisite failure, defined zero, and complete typed input remain distinct when the selected interface and claim require those distinctions; intentional coarsening requires an explicit map and loss boundary;
@@ -73,10 +82,9 @@ It does **not** directly validate the correctness, performance, or usefulness of
 - **aggregate / information-loss / reconstruction restraint**: equal reduced aggregates do not imply equal support, decomposition, provenance, component state, or history unless the reduction is proved injective on the relevant admissible class or sufficient reconstruction side information is retained;
 - **transition / lineage discipline**: keep identity-preserving regular evolution separate from identity-breaking transitions, and require typed, coherent lineage for successor/history claims whenever literal identity is not retained;
 - **evidence scope / case-origin separation**: record what a record directly validates separately from whether its case is synthetic, constructed, real, judicial, historical, personal, empirical, or organizational/technical; case origin does not by itself broaden validation scope;
+- **baseline / failure-NO_GAIN / anti-post-hoc discipline**: where comparison or confirmatory evaluation is claimed, use the strongest reasonable task-matched baseline available, preserve unfavorable/null/tied/indeterminate outcomes, and never silently rewrite locked criteria after reveal to rescue the same run;
 - specialization restraint: removing optional specialization withdraws specialization-dependent claims without inventing defaults;
-- failure / NO_GAIN preservation: negative, null, non-correspondence, and indeterminate results remain valid records;
-- strongest-baseline discipline: comparison must not rely only on a weak strawman baseline;
-- precommit / anti-post-hoc discipline: locked criteria or predictions are not silently rewritten after reveal.
+- evidence-status / DSD-object-status separation: still a candidate requiring separate shared-core testing.
 
 ## Required record fields
 
@@ -89,6 +97,8 @@ TRANSFER_LIMIT:
 CASE_ORIGIN:
 REPRODUCIBILITY_RECORD:
 ```
+
+For comparison/confirmatory records that activate SC-08, also preserve the relevant baseline, failure/no-gain criteria, precommit status, and post-reveal revision fields.
 
 A shared rule should later be re-tested inside each method whose task interface materially changes how that rule operates.
 
