@@ -30,12 +30,21 @@ It does **not** directly validate the correctness, performance, or usefulness of
   - identity/locked-map/invariance negative control: pass;
   - does not directly validate all 22 methods.
 
+- [`SC-04_minimum-layer-optional-interface-restraint.md`](SC-04_minimum-layer-optional-interface-restraint.md) — **Minimum-Layer / Optional-Interface Restraint / 최소 층위·선택 인터페이스 절제** — `promoted_with_conditions` (2026-09-06)
+  - 8 higher-level fields, one representative method per field;
+  - required-layer deletion: 8/8 detected;
+  - optional-layer overconstraint: 8/8 detected;
+  - irrelevant-extension contamination: 8/8 detected;
+  - multi-claim/secondary-output harmless-extension negative control: pass;
+  - minimality is only inclusion-minimal relative to the locked layer inventory;
+  - does not directly validate all 22 methods.
+
 ## Shared rule families / 공통 규율군
 
 - **status / typed-domain discipline**: absence, undefinedness, inapplicability, prerequisite failure, defined zero, and complete typed input remain distinct when the selected interface and claim require those distinctions; intentional coarsening requires an explicit map and loss boundary;
 - **source / interface / version lock**: lock every source, interface branch, and revision whose semantics can affect the claimed result; unused layers may be recorded as `not used`, and a documented equivalence class may replace an exact revision only after interface-level equivalence is established;
 - **explicit bridge discipline**: cross-layer, cross-representation, cross-carrier, and cross-domain mappings require explicit source/target carriers, mapping rules, assumptions, and preservation/loss obligations unless the locked interface already supplies the relevant map or bridge-invariance has been proved;
-- minimum-layer discipline: use only the DSD layers required by the task;
+- **minimum-layer / optional-interface restraint**: keep every layer needed by a claim, but do not make claim-irrelevant optional interfaces mandatory or let irrelevant extensions alter the core result merely by being present;
 - aggregate/reconstruction discipline: equal aggregate does not imply equal support, decomposition, cause, or history without a reconstruction basis;
 - specialization restraint: removing optional specialization withdraws specialization-dependent claims without inventing defaults;
 - failure / NO_GAIN preservation: negative, null, non-correspondence, and indeterminate results remain valid records;
