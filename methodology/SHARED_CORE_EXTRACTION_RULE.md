@@ -46,7 +46,7 @@ The following are candidates because they have already appeared across the DSD f
 - **SC-01 status and typed-domain discipline** — promoted with conditions; see `../evidence/shared/SC-01_status-typed-domain-discipline.md`;
 - **SC-02 source / interface / version lock** — promoted with conditions; see `../evidence/shared/SC-02_source-interface-version-lock.md`;
 - **SC-03 explicit bridge discipline** — promoted with conditions; see `../evidence/shared/SC-03_explicit-bridge-discipline.md`;
-- minimum-layer and optional-interface restraint;
+- **SC-04 minimum-layer / optional-interface restraint** — promoted with conditions; see `../evidence/shared/SC-04_minimum-layer-optional-interface-restraint.md`;
 - aggregate/reconstruction restraint;
 - support and information-loss recording;
 - transition versus regular evolution distinction;
@@ -93,7 +93,7 @@ The development order begins with the most stable cross-method structures before
 1. **SC-01 status and typed-domain discipline — completed: promoted_with_conditions**;
 2. **SC-02 source / interface / version lock — completed: promoted_with_conditions**;
 3. **SC-03 explicit bridge discipline — completed: promoted_with_conditions**;
-4. minimum-layer/optional-interface selection;
+4. **SC-04 minimum-layer / optional-interface restraint — completed: promoted_with_conditions**;
 5. aggregate, information-loss, and reconstruction restraint;
 6. transition/lineage discipline;
 7. evidence scope and case-origin separation;
@@ -196,10 +196,45 @@ Non-transfer/minimal-bridge cases:
 
 Evidence record: [`../evidence/shared/SC-03_explicit-bridge-discipline.md`](../evidence/shared/SC-03_explicit-bridge-discipline.md).
 
-Relations among the first three promoted rules:
+### SC-04 — Minimum-Layer / Optional-Interface Restraint
+
+```text
+DATE: 2026-09-06
+SOURCE_SUPPORT: pass
+CROSS_FIELD_REPRESENTATIVE_METHODS: 8
+REQUIRED_LAYER_DELETION_CHECKS: 8/8 detected
+OPTIONAL_LAYER_OVERCONSTRAINT_CHECKS: 8/8 detected
+IRRELEVANT_EXTENSION_CONTAMINATION_CHECKS: 8/8 detected
+NEGATIVE_CONTROL: pass
+RESULT: promoted_with_conditions
+DIRECT_METHOD_VALIDATION: not claimed
+MINIMALITY_SCOPE: inclusion-minimal_relative_to_locked_layer_inventory
+```
+
+Invariant meaning:
+
+> Keep every DSD layer required to justify a claim, but do not make a claim-irrelevant optional interface or specialization a hidden prerequisite and do not let an irrelevant extension alter the core result merely because it is present.
+
+Transfer conditions:
+
+- the claim depends on one or more DSD source/interface layers;
+- optional interfaces or specializations could be mistaken for mandatory prerequisites;
+- several layers are used and their claim-specific roles need to remain explicit.
+
+Non-transfer/minimal-layer cases:
+
+- a single-interface task with no optional downstream interface does not need a long layer-selection protocol;
+- a multi-claim task may use the union of the layers required by each declared claim;
+- an extra layer may support a declared secondary output or sensitivity analysis while remaining explicitly non-required for the core claim;
+- when the optional specialization itself is the target, it becomes a required dependency rather than an irrelevant extension.
+
+Evidence record: [`../evidence/shared/SC-04_minimum-layer-optional-interface-restraint.md`](../evidence/shared/SC-04_minimum-layer-optional-interface-restraint.md).
+
+Relations among the first four promoted rules:
 
 ```text
 SC-01 = preserve claim-relevant distinctions
 SC-02 = lock the semantics that determine which rules/interfaces are active
 SC-03 = explicitly supply claim-relevant mappings between active structures
+SC-04 = keep only claim-relevant layers as dependencies and avoid optional-interface overconstraint
 ```
