@@ -50,10 +50,9 @@ The following are candidates because they have already appeared across the DSD f
 - **SC-05 aggregate / information-loss / reconstruction restraint** — promoted with conditions; see `../evidence/shared/SC-05_aggregate-information-loss-reconstruction-restraint.md`;
 - **SC-06 transition / lineage discipline** — promoted with conditions; see `../evidence/shared/SC-06_transition-lineage-discipline.md`;
 - **SC-07 evidence scope / case-origin separation** — promoted with conditions; see `../evidence/shared/SC-07_evidence-scope-case-origin-separation.md`;
+- **SC-08 baseline / failure-NO_GAIN / anti-post-hoc discipline** — promoted with conditions; see `../evidence/shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md`;
 - evidence-status versus DSD-object-status separation;
-- strongest reasonable baseline and `NO_GAIN` preservation where applicable;
-- precommit / anti-post-hoc recording discipline;
-- explicit preservation of failed, boundary, non-correspondence, and indeterminate outcomes.
+- specialization restraint as a reusable removal/withdrawal rule, if kept distinct from SC-04 after separate testing.
 
 ## 4. Promotion test / 공통 코어 승격 시험
 
@@ -96,7 +95,9 @@ The development order begins with the most stable cross-method structures before
 5. **SC-05 aggregate / information-loss / reconstruction restraint — completed: promoted_with_conditions**;
 6. **SC-06 transition / lineage discipline — completed: promoted_with_conditions**;
 7. **SC-07 evidence scope / case-origin separation — completed: promoted_with_conditions**;
-8. baseline, failure/no-gain, and anti-post-hoc recording rules.
+8. **SC-08 baseline / failure-NO_GAIN / anti-post-hoc discipline — completed: promoted_with_conditions**;
+9. evidence-status versus DSD-object-status separation;
+10. specialization-restraint separation test, if still needed after SC-04 and SC-01 are considered together.
 
 Each item is promoted only after its transfer conditions and non-transfer cases are recorded.
 
@@ -326,7 +327,49 @@ Non-transfer/minimal-record cases:
 
 Evidence record: [`../evidence/shared/SC-07_evidence-scope-case-origin-separation.md`](../evidence/shared/SC-07_evidence-scope-case-origin-separation.md).
 
-Relations among the first seven promoted rules:
+### SC-08 — Baseline / Failure-NO_GAIN / Anti-Post-Hoc Discipline
+
+```text
+DATE: 2026-09-06
+SOURCE_SUPPORT: pass
+CROSS_FIELD_REPRESENTATIVE_METHODS: 8
+STRAWMAN_BASELINE_SUBSTITUTION_CHECKS: 8/8 detected
+NEGATIVE_RESULT_RESCUE_OR_ERASURE_CHECKS: 8/8 detected
+POST_REVEAL_CRITERION_OR_EXCEPTION_EDIT_CHECKS: 8/8 detected
+NEGATIVE_CONTROL: pass
+RESULT: promoted_with_conditions
+DIRECT_METHOD_VALIDATION: not claimed
+```
+
+Invariant meaning:
+
+> When a method makes a comparative, superiority, gain, performance, or locked success claim, use the strongest reasonable task-matched baseline available within the declared comparison scope, preserve unfavorable/null/tied/indeterminate outcomes, and do not retroactively change locked criteria after reveal to rescue the same run. Revisions must be versioned and applied prospectively or through a separately recorded rerun.
+
+Transfer conditions:
+
+- a superiority, gain, novelty, performance, error-reduction, efficiency, or predictive-quality claim is made;
+- PASS/FAIL/NO_GAIN/TIE/INDETERMINATE-style evaluative outcomes are recorded;
+- criteria, thresholds, exclusions, predictions, or scoring rules can be fixed before reveal for confirmatory evidence;
+- baseline choice could materially change the claimed advantage.
+
+Non-transfer/conditional cases:
+
+- a genuinely descriptive/non-comparative task does not require a competitive baseline merely to be valid;
+- if no competent baseline exists, record that limitation rather than inventing a weak comparator;
+- exploratory criteria may evolve after seeing data, but the exposed run is not retroactively confirmatory under the revised criteria;
+- factual bugs or invalid inputs may justify a corrected protocol/version, while the original record remains preserved;
+- genuine DSD superiority is allowed when a strong task-matched baseline and locked criteria support it.
+
+Source support:
+
+- `ANL-CH-003` — baseline sufficiency and `NO_GAIN` preservation;
+- `ANL-CH-007` — strongest reasonable baseline and anti-strawman discipline;
+- `ANL-CH-008` — rule-lock transfer and no silent post-reveal exception;
+- `ANL-CH-009` — commit-before-reveal and prediction-miss preservation.
+
+Evidence record: [`../evidence/shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md`](../evidence/shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md).
+
+Relations among the first eight promoted rules:
 
 ```text
 SC-01 = preserve claim-relevant distinctions
@@ -336,4 +379,7 @@ SC-04 = keep only claim-relevant layers as dependencies and avoid optional-inter
 SC-05 = do not infer beyond the information-preservation/reconstruction capacity of reduced aggregates
 SC-06 = separate identity-preserving evolution from identity-breaking transition and use lineage for succession
 SC-07 = keep evidence applicability separate from case origin/reality status
+SC-08 = protect evaluation integrity from weak-baseline selection, unfavorable-result erasure, and retroactive criterion changes
 ```
+
+The next shared-core test should address **evidence-status versus DSD-object-status separation** rather than treating it as already covered by SC-01 or SC-07.
