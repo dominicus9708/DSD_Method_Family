@@ -34,7 +34,9 @@ Evaluation integrity across baseline choice, unfavorable/null outcome preservati
 
 The separation between **evidence/audit status** and **DSD object/model status** has been cross-field tested as **SC-09**. See [`shared/SC-09_evidence-status-object-status-separation.md`](shared/SC-09_evidence-status-object-status-separation.md). An object may be `applicable_but_undefined` while that status is fully confirmed by the available evidence, or may be `defined_zero` while evidence for applying the formal model to an external target remains insufficient.
 
-These shared-core pilots support the reusable rules themselves. They do not directly validate all 22 methods.
+The separation between **DSD-internal success** and the **receiving domain's validation standard** has been cross-field tested as **SC-10**. See [`shared/SC-10_external-standard-domain-validation-separation.md`](shared/SC-10_external-standard-domain-validation-separation.md). An explicit domain bridge does not by itself replace mathematical proof, empirical validation, professional/interpretive authority, legal standards, or other task-relevant external validation requirements.
+
+The current shared-core extraction stage has been closed for the present registry with conditions. See [`shared/SHARED_CORE_CLOSURE_AUDIT.md`](shared/SHARED_CORE_CLOSURE_AUDIT.md). This closure covers shared-rule extraction only; it is not direct validation of all 22 methods.
 
 ## Required scope fields / 적용 범위 필드
 
@@ -78,7 +80,21 @@ CLAIM_STATUS_RELATION:
 
 `unknown`, `insufficient`, or `out of scope` on the evidence side must not be silently converted into `undefined`, `inapplicable`, `absent`, or `zero` on the object side, and the reverse conversion is likewise invalid without an explicit rule.
 
+When a DSD result is used for an external-domain claim, preserve the domain-validation boundary:
+
+```text
+DSD_METHOD_OUTPUT:
+DOMAIN_CLAIM:
+DOMAIN_BRIDGE:
+EXTERNAL_DOMAIN:
+EXTERNAL_STANDARD:
+DSD_INTERNAL_VALIDATION_RESULT:
+DOMAIN_VALIDATION_RESULT:
+```
+
 For confirmatory/comparative evidence that activates SC-08, additionally preserve the strongest reasonable baseline when applicable, locked pass/failure/no-gain criteria, unfavorable/null outcomes, precommit status, and any post-reveal revisions as new versions rather than silent rewrites.
+
+`REPRODUCIBILITY_RECORD` remains a method/evidence maturity requirement. The current closure audit does not promote one universal reproducibility semantics because concrete rerun/retrace obligations differ by method.
 
 ## Directory map / 폴더 구조
 
@@ -88,9 +104,9 @@ evidence/
 ├─ CURRENT_EVIDENCE_APPLICABILITY_MATRIX.md
 ├─ shared/
 │  ├─ README.md
-│  ├─ SC-07_evidence-scope-case-origin-separation.md
-│  ├─ SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md
-│  └─ SC-09_evidence-status-object-status-separation.md
+│  ├─ SC-01_...md through SC-10_...md
+│  ├─ SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md
+│  └─ SHARED_CORE_CLOSURE_AUDIT.md
 ├─ method_specific/
 │  └─ README.md
 └─ real_world_cases/
