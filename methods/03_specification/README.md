@@ -1,6 +1,6 @@
 # 03. DSD Specification / DSD 명세론
 
-Status: **developing** — dedicated protocol v0.1 established; method-specific direct evidence accumulation is next.
+Status: **developing** — dedicated protocol v0.1 established; first direct pilot `SPEC-CH-001` completed with limitations.
 
 Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve.
 
@@ -30,16 +30,32 @@ Boundary: DSD Specification organizes structural requirements; it does not repla
   - defines method-specific contradiction, underspecification, overconstraint, wrong-standard, and `SPEC_NO_GAIN` outcomes;
   - makes completeness only relative to the locked requirement inventory unless a stronger external completeness basis is supplied.
 
-## Next evidence stage / 다음 증거 단계
+## Direct method evidence / 개별 방법 직접 증거
 
-The first direct-evidence sequence is planned as:
+Evidence lane: [`../../evidence/method_specific/specification/`](../../evidence/method_specific/specification/)
+
+### SPEC-CH-001 — completed
+
+`Well-Formed / Malformed Specification Discrimination`
 
 ```text
-SPEC-CH-001  basic well-formed / malformed specification discrimination
-SPEC-CH-002  contradiction and underspecification challenge
+WELL_FORMED_CASES_ACCEPTED: 2/2
+MALFORMED_CASES_DETECTED: 6/6
+EXACT_DIAGNOSTIC_FAMILY_MATCHES: 8/8
+FALSE_POSITIVES_ON_INACTIVE_INTERFACES: 0
+RESULT: SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
+```
+
+This is pilot-level direct evidence for the locked synthetic benchmark only. It does not make Specification a mature method.
+
+## Evidence sequence / 증거 순서
+
+```text
+SPEC-CH-001  basic well-formed / malformed specification discrimination — completed
+SPEC-CH-002  contradiction and underspecification challenge — next
 SPEC-CH-003  optional-layer and bridge boundary challenge
 SPEC-CH-004  NO_GAIN specification challenge
 SPEC-CH-005  reproducibility / independent retrace challenge
 ```
 
-Protocol existence alone is not counted as direct validation.
+A real-world or independently generated requirement corpus remains necessary before any later maturity promotion.
