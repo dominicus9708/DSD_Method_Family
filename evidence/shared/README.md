@@ -82,6 +82,14 @@ It does **not** directly validate the correctness, performance, or usefulness of
   - evidence vocabulary may be domain-richer; the shared rule requires axis separation rather than one universal evidence ontology;
   - does not directly validate all 22 methods.
 
+- [`SC-10_external-standard-domain-validation-separation.md`](SC-10_external-standard-domain-validation-separation.md) — **External-Standard / Domain-Validation Separation / 외부 기준·도메인 검증 분리** — `promoted_with_conditions` (2026-09-06)
+  - 8 higher-level fields, one representative method per field;
+  - external-standard omission: 8/8 detected;
+  - DSD-to-domain substitution: 8/8 detected;
+  - wrong-standard substitution: 8/8 detected;
+  - DSD-internal-claim / separately-applied-standard / proved-equivalence negative controls: pass;
+  - does not directly validate all 22 methods.
+
 ## Resolved shared-core meta-audits / 공통 구조 메타감사
 
 - [`SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md`](SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md) — **Specialization-Restraint Separation / Duplication Audit / 특수화 절제 분리·중복 감사** — `resolved_as_derived_profile` (2026-09-06)
@@ -91,7 +99,16 @@ It does **not** directly validate the correctness, performance, or usefulness of
   - fake-default/status coverage: SC-01 + SC-04;
   - cross-interface feedback condition: SC-03;
   - unique invariant/failure/transfer remainder: none;
-  - **no SC-10 created**.
+  - **no independent SC ID created**.
+
+- [`SHARED_CORE_CLOSURE_AUDIT.md`](SHARED_CORE_CLOSURE_AUDIT.md) — **Shared-Core Closure Audit / 공통 코어 종료감사** — `closed_for_current_registry_with_conditions` (2026-09-06)
+  - SC-01 through SC-10 reviewed;
+  - 45 pairwise shared-rule pairs reviewed, exact duplicates: 0;
+  - 8/8 higher-level fields have representative transfer coverage for every SC;
+  - activation and non-transfer conditions: 10/10 explicit;
+  - closure gap found in external-domain validation boundary and resolved by SC-10;
+  - reproducibility retained as method/evidence maturity infrastructure rather than a new semantic SC;
+  - specialization restraint remains a derived operational profile.
 
 ## Shared rule families / 공통 규율군
 
@@ -103,9 +120,10 @@ It does **not** directly validate the correctness, performance, or usefulness of
 - **transition / lineage discipline**: keep identity-preserving regular evolution separate from identity-breaking transitions, and require typed, coherent lineage for successor/history claims whenever literal identity is not retained;
 - **evidence scope / case-origin separation**: record what a record directly validates separately from whether its case is synthetic, constructed, real, judicial, historical, personal, empirical, or organizational/technical; case origin does not by itself broaden validation scope;
 - **baseline / failure-NO_GAIN / anti-post-hoc discipline**: where comparison or confirmatory evaluation is claimed, use the strongest reasonable task-matched baseline available, preserve unfavorable/null/tied/indeterminate outcomes, and never silently rewrite locked criteria after reveal to rescue the same run;
-- **evidence-status / DSD-object-status separation**: keep model/object status separate from evidence/audit status; evidence may assess a proposition about object status, but `unknown/insufficient/out-of-scope` is not an object status and `undefined/inapplicable/zero/absent` is not an evidence grade.
+- **evidence-status / DSD-object-status separation**: keep model/object status separate from evidence/audit status; evidence may assess a proposition about object status, but `unknown/insufficient/out-of-scope` is not an object status and `undefined/inapplicable/zero/absent` is not an evidence grade;
+- **external-standard / domain-validation separation**: DSD-internal structural success does not by itself replace the receiving domain's proof, empirical, professional, interpretive, legal, ethical, or safety validation standard.
 
-Specialization restraint is retained only as a **derived operational profile**, not an independent tenth rule:
+Specialization restraint is retained only as a **derived operational profile**, not an independent shared-core rule:
 
 ```text
 SPECIALIZATION_RESTRAINT_PROFILE
@@ -128,12 +146,16 @@ REPRODUCIBILITY_RECORD:
 
 When SC-09 is active, preserve separate `DSD_OBJECT_STATUS` and `EVIDENCE_STATUS` fields plus the claim/evidence relation between them.
 
+When SC-10 is active, preserve `DOMAIN_CLAIM`, `DOMAIN_BRIDGE`, `EXTERNAL_STANDARD`, and distinct DSD-internal versus domain-validation results.
+
 For comparison/confirmatory records that activate SC-08, also preserve the relevant baseline, failure/no-gain criteria, precommit status, and post-reveal revision fields.
 
 A shared rule should later be re-tested inside each method whose task interface materially changes how that rule operates.
 
-## Promotion rule / 승격 규칙
+## Promotion and closure rule / 승격·종료 규칙
 
 A shared candidate is promoted only when its semantic obligation remains stable across independent method tasks, a collapse/removal test shows why the distinction matters, and explicit non-transfer conditions prevent overgeneralization.
 
 Promotion of a shared rule is evidence for the **rule**, not automatic validation of every method that may later receive it.
+
+The current shared-core extraction stage is **closed for the present registry with conditions**. Reopen it only when source semantics, method boundaries, new methods, or a new stable cross-method obligation materially changes the closure basis.
