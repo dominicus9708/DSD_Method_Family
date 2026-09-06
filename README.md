@@ -12,10 +12,11 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 DSD foundational layers
 -> 8 higher-level method fields
 -> 22 independent methods
+-> 10-rule shared core
 -> explicit cross-method application cases
 ```
 
-현재 개념적 정본은 **8개 상위 분야 / 22개 독립 방법**입니다.
+현재 개념적 정본은 **8개 상위 분야 / 22개 독립 방법 / SC-01~SC-10 공통 코어**입니다.
 상위 분야는 분류와 탐색을 위한 조직 단위일 뿐, 소속 방법들을 하나의 방법으로 합치지 않습니다.
 
 - Field index: [`methods/fields/`](methods/fields/)
@@ -23,6 +24,7 @@ DSD foundational layers
 - Method independence/boundary audit: [`methods/METHOD_BOUNDARY_MATRIX.md`](methods/METHOD_BOUNDARY_MATRIX.md)
 - Common framework: [`methodology/DSD_METHOD_FAMILY_FRAMEWORK.md`](methodology/DSD_METHOD_FAMILY_FRAMEWORK.md)
 - Shared-core extraction rule: [`methodology/SHARED_CORE_EXTRACTION_RULE.md`](methodology/SHARED_CORE_EXTRACTION_RULE.md)
+- Shared-core closure audit: [`evidence/shared/SHARED_CORE_CLOSURE_AUDIT.md`](evidence/shared/SHARED_CORE_CLOSURE_AUDIT.md)
 - Current DSD interface profile: [`methodology/DSD_INTERFACE_PROFILE.md`](methodology/DSD_INTERFACE_PROFILE.md)
 - Evidence applicability registry: [`evidence/`](evidence/)
 
@@ -54,6 +56,8 @@ DSD structural layer
 -> method-specific result(s)
 ```
 
+The separation between DSD-internal success and the receiving domain's validation standard is now explicitly tested as **SC-10**.
+
 ## Existing Analysis and Audit / 기존 분석론·감사
 
 Analysis and Audit remain related but distinct and are currently the two most mature methods.
@@ -78,9 +82,11 @@ FAILURE_OR_NO_GAIN_CRITERIA
 VALIDATION_STANDARD
 ```
 
-Methods may share DSD layers, status rules, bridge machinery, aggregation/reconstruction checks, transition/lineage checks, evidence discipline, baseline rules, or recording procedures without becoming the same method.
+Methods may share DSD layers, status rules, bridge machinery, aggregation/reconstruction checks, transition/lineage checks, evidence discipline, baseline rules, domain-validation boundaries, or recording procedures without becoming the same method.
 
-The next development stage is therefore to extract those genuinely reusable elements into a **shared core**, while retaining each method's task-specific inputs, operation, outputs, failure criteria, and validation standard.
+The shared-core extraction stage is now **closed for the current registry with conditions**. The current core contains SC-01 through SC-10. The closure audit reviewed all 45 unordered shared-rule pairs, found no exact duplicate shared rules, confirmed representative transfer coverage across all eight higher-level fields for every SC, and preserved the separation between shared-rule support and direct method validation.
+
+The specialization-restraint pattern is retained as a derived profile of SC-01/03/04 rather than a duplicate independent shared rule. `REPRODUCIBILITY_RECORD` remains a method/evidence maturity requirement because concrete rerun/retrace obligations differ by method.
 
 ## Current repository layout / 현재 저장소 배치
 
@@ -134,6 +140,9 @@ DSD_Method_Family/
 │  ├─ README.md
 │  ├─ CURRENT_EVIDENCE_APPLICABILITY_MATRIX.md
 │  ├─ shared/
+│  │  ├─ SC-01_...md through SC-10_...md
+│  │  ├─ SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md
+│  │  └─ SHARED_CORE_CLOSURE_AUDIT.md
 │  ├─ method_specific/
 │  └─ real_world_cases/
 ├─ challenges/
@@ -166,14 +175,22 @@ Current common layers are:
 
 ## Method-family operating rules / 방법군 운영 규칙
 
-- Preserve the external field's original terminology and validation standards.
-- Do not infer structural identity from terminological similarity.
-- Distinguish undefinedness, absence, inapplicability, prerequisite failure, and defined zero when the selected interface requires it.
-- Do not infer a cross-layer bridge from names alone.
-- Do not infer support, decomposition, cause, or unique reconstruction from aggregate equality without an applicable reconstruction basis.
-- Preserve failed mappings, boundary cases, alternatives, and `NO_GAIN` outcomes.
-- Do not infer method equivalence merely because two methods belong to the same higher-level field or share an operator.
-- Treat proposed methods as proposed until they have dedicated protocols, failure cases, and reproducible applications.
+The current shared-core registry is:
+
+```text
+SC-01  preserve claim-relevant DSD status/type distinctions
+SC-02  lock claim-relevant source/interface/version semantics
+SC-03  make claim-relevant cross-structure mappings explicit
+SC-04  use sufficient dependencies without optional-interface overconstraint
+SC-05  respect information-loss and reconstruction limits
+SC-06  separate regular evolution, transition, and lineage
+SC-07  separate evidence applicability from case origin
+SC-08  preserve evaluation integrity, failures, NO_GAIN, and precommit boundaries
+SC-09  separate evidence/audit status from DSD object/model status
+SC-10  keep external-domain validation standards distinct from DSD-internal success
+```
+
+These rules are conditionally activated by the task/interface. They do not force unused layers, external standards for purely DSD-internal claims, competitive baselines for purely descriptive work, or lineage for static records.
 
 ## Objectivity and consistency challenges / 객관성·일관성 도전
 
@@ -198,12 +215,13 @@ Existing `ANL-CH-*` records remain direct Analysis evidence. Existing `DSD_Audit
 1. Read [`methods/fields/README.md`](methods/fields/README.md) to select a higher-level field.
 2. Read [`methods/README.md`](methods/README.md) and [`methods/METHOD_BOUNDARY_MATRIX.md`](methods/METHOD_BOUNDARY_MATRIX.md) to select the independent method or explicit method combination.
 3. Lock the DSD source layers and versions actually used.
-4. Supply the domain bridge and external standard separately.
-5. Classify the evidence scope and case origin using [`evidence/`](evidence/).
-6. Record method-specific results, information loss, unresolved alternatives, transition/lineage obligations, and reproducibility information.
-7. Audit the result separately when an audit claim is needed.
+4. Apply the relevant SC-01 through SC-10 rules only when their activation conditions are present.
+5. Supply the domain bridge and external standard separately when an external-domain claim is made.
+6. Classify the evidence scope and case origin using [`evidence/`](evidence/).
+7. Record method-specific results, information loss, unresolved alternatives, transition/lineage obligations, and reproducibility information.
+8. Audit the result separately when an audit claim is needed.
 
-For the next common-structure development stage, follow [`methodology/SHARED_CORE_EXTRACTION_RULE.md`](methodology/SHARED_CORE_EXTRACTION_RULE.md).
+The shared-core extraction stage should be reopened only under the conditions listed in [`evidence/shared/SHARED_CORE_CLOSURE_AUDIT.md`](evidence/shared/SHARED_CORE_CLOSURE_AUDIT.md). Otherwise development should proceed to method-specific protocols, evidence, and real-world cases.
 
 ## Historical record policy / 과거 기록 보존 원칙
 
