@@ -1,6 +1,6 @@
 # 03. DSD Specification / DSD 명세론
 
-Status: **developing** — dedicated protocol v0.1 established; direct pilots `SPEC-CH-001` through `SPEC-CH-005` completed with limitations; initial internal constructed challenge sequence complete.
+Status: **developing** — dedicated protocol v0.1 established; direct pilots `SPEC-CH-001` through `SPEC-CH-005` completed with limitations; first external/independently generated corpus application `SPEC-APP-001` completed; maturity audit pending.
 
 Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve.
 
@@ -48,16 +48,11 @@ SPEC-CH-003  optional-layer / bridge boundary
 
 SPEC-CH-004  NO_GAIN specification
   PRECOMMIT: 4d55d00af7fa376d370415a48b82de6883ba6fc8
-  NO_GAIN: 3/3
-  OPERATIONAL_GAIN: 3/3
-  UNDERSPECIFIED: 2/2
   RESULT: SPECIFICATION_NO_GAIN_PILOT_PASS_WITH_LIMITATIONS
 
 SPEC-CH-005  reproducibility / independent retrace
   PRECOMMIT: dda33b2028c9e5fb0f7b3bef938a8b834219f787
-  REFERENCE_KEY_HASH_MATCH: yes
-  TRACE_A_FINAL_STATUS_MATCHES: 8/8
-  TRACE_B_FINAL_STATUS_MATCHES: 8/8
+  TRACE_A_B_FINAL_STATUS_AGREEMENT: 8/8
   TRACE_A_B_DIAGNOSTIC_AGREEMENT: 8/8
   TRACE_A_B_ATOMIZATION_BOUNDARY_MATCHES: 32/32
   ORDER_SENSITIVITY_ERRORS: 0
@@ -65,11 +60,34 @@ SPEC-CH-005  reproducibility / independent retrace
   INDEPENDENT_EVALUATOR_VALIDATION: not established
 ```
 
-`SPEC-CH-005` supports procedural retraceability and order stability on the locked finite packet only. Both traces were performed in the same project session by the same assistant/model family, so the word `independent` in the challenge title does not imply that an independent reviewer or separately initialized evaluator has validated the method.
+The five internal records are pilot-level direct evidence. `SPEC-CH-005` establishes procedural retraceability on a locked finite packet, not independent reviewer validation.
 
-All five records are pilot-level direct evidence only. They do not make Specification a mature method.
+## First external application / 첫 외부 적용
 
-## Evidence sequence / 증거 순서
+External evidence lane:
+[`../../evidence/real_world_cases/specification/`](../../evidence/real_world_cases/specification/)
+
+### SPEC-APP-001 — RFC 9112 §6.3 Message Body Length
+
+```text
+CASE_ORIGIN: public_normative_standard
+SOURCE: RFC 9112 §6.3 core precedence algorithm
+PRECOMMIT: 9b91cecda9516fd7cd65c9eb181e80ab4fa45deb
+SOURCE_UNIT_COVERAGE: 13/13
+PRECEDENCE_PRESERVATION: 13/13
+BCP14_MUST_OBLIGATIONS_PRESERVED: 8/8
+INVENTED_SOURCE_FACTS: 0
+SOURCE_FIDELITY_RESULT: pass
+FINAL_SPEC_STATUS: no_gain
+COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
+PROTOCOL_PRESSURE: ordered precedence / priority, present_nonfatal
+```
+
+RFC 9112 already presents the selected requirements as a compact ordered normative procedure. Under the precommitted gain criteria, DSD atomization added no demonstrated distinction, traceability, ambiguity-reduction, or downstream-checkability gain, so `SPEC_NO_GAIN` was preserved rather than manufacturing a benefit claim.
+
+Protocol v0.1 could preserve the RFC precedence using explicit predecessor exclusions in `ACTIVATION_CONDITION` / `DEPENDENCIES`, but this was repetitive. An optional explicit precedence/priority field is therefore a **future refinement candidate**, not a retroactive change to this run.
+
+## Evidence state / 증거 상태
 
 ```text
 SPEC-CH-001  completed
@@ -77,9 +95,14 @@ SPEC-CH-002  completed
 SPEC-CH-003  completed
 SPEC-CH-004  completed
 SPEC-CH-005  completed with independence limitation
+SPEC-APP-001 external/independently generated corpus application  completed
 
 INTERNAL_CONSTRUCTED_CHALLENGE_SEQUENCE: completed
-NEXT_REQUIRED_EVIDENCE: external_or_independently_generated_application_case
+EXTERNAL_OR_INDEPENDENTLY_GENERATED_APPLICATION_CASE: completed
+INDEPENDENT_EVALUATOR_VALIDATION: not_established
+METHOD_STATUS: developing
+MATURE_METHOD_STATUS: not_claimed
+NEXT_STEP: specification_maturity_audit
 ```
 
-A real-world or independently generated requirement corpus remains necessary before any later maturity promotion. A genuinely independent retrace/review and a competent external baseline comparison should be added where feasible.
+The project checklist now has both the internal challenge sequence and one external-origin application. Maturity is **not** promoted automatically: a dedicated audit must still weigh evidence breadth, the independent-evaluator gap, the baseline-preferred external result, protocol pressure, and absence of measured real-world engineering benefit.
