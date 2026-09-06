@@ -28,7 +28,11 @@ without a method-specific test.
 
 Likewise, a real event, judicial case, historical case, personal case, or empirical dataset is not automatically validation of the whole method family merely because DSD can be applied to it.
 
-The separation between evidence applicability and case origin has now been cross-field tested as shared-core rule **SC-07**. See [`shared/SC-07_evidence-scope-case-origin-separation.md`](shared/SC-07_evidence-scope-case-origin-separation.md). That pilot supports the classification rule itself; it does not directly validate all 22 methods and does not claim that any new real-world case was externally verified.
+The separation between evidence applicability and case origin has been cross-field tested as shared-core rule **SC-07**. See [`shared/SC-07_evidence-scope-case-origin-separation.md`](shared/SC-07_evidence-scope-case-origin-separation.md).
+
+Evaluation integrity across baseline choice, unfavorable/null outcome preservation, and post-reveal criterion changes has also been cross-field tested as **SC-08**. See [`shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md`](shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md). The baseline clause is conditional on a comparative/gain/performance claim; purely descriptive tasks do not require a competitor merely to be valid.
+
+These shared-core pilots support the reusable rules themselves. They do not directly validate all 22 methods.
 
 ## Required scope fields / 적용 범위 필드
 
@@ -59,6 +63,8 @@ CASE_ORIGIN:
 
 `CASE_ORIGIN` may change source-verification, authority, privacy, provenance, or external-standard obligations. It does **not** by itself change `METHOD_DIRECTLY_TESTED` or expand a record from method-specific evidence to whole-family validation.
 
+For confirmatory/comparative evidence that activates SC-08, additionally preserve the strongest reasonable baseline when applicable, locked pass/failure/no-gain criteria, unfavorable/null outcomes, precommit status, and any post-reveal revisions as new versions rather than silent rewrites.
+
 ## Directory map / 폴더 구조
 
 ```text
@@ -67,11 +73,12 @@ evidence/
 ├─ CURRENT_EVIDENCE_APPLICABILITY_MATRIX.md
 ├─ shared/
 │  ├─ README.md
-│  └─ SC-07_evidence-scope-case-origin-separation.md
+│  ├─ SC-07_evidence-scope-case-origin-separation.md
+│  └─ SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md
 ├─ method_specific/
 │  └─ README.md
 └─ real_world_cases/
    └─ README.md
 ```
 
-Historical Analysis and Audit records remain in their established paths. This directory cross-references them; it does not retroactively rename or move them.
+Historical Analysis and Audit records remain in their established paths. This directory cross-references them; it does not retroactively rename, move, or rewrite their verdicts.
