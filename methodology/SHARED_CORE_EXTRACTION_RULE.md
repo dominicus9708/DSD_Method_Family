@@ -51,8 +51,10 @@ The following are candidates because they have already appeared across the DSD f
 - **SC-06 transition / lineage discipline** — promoted with conditions; see `../evidence/shared/SC-06_transition-lineage-discipline.md`;
 - **SC-07 evidence scope / case-origin separation** — promoted with conditions; see `../evidence/shared/SC-07_evidence-scope-case-origin-separation.md`;
 - **SC-08 baseline / failure-NO_GAIN / anti-post-hoc discipline** — promoted with conditions; see `../evidence/shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md`;
-- evidence-status versus DSD-object-status separation;
-- specialization restraint as a reusable removal/withdrawal rule, if kept distinct from SC-04 after separate testing.
+- **SC-09 evidence-status / DSD-object-status separation** — promoted with conditions; see `../evidence/shared/SC-09_evidence-status-object-status-separation.md`;
+- specialization restraint as a reusable removal/withdrawal rule, pending a separation/duplication audit against SC-01 and SC-04.
+
+Do not assign a new shared-core ID to specialization restraint unless that independence audit finds a stable obligation not already covered by the promoted rules.
 
 ## 4. Promotion test / 공통 코어 승격 시험
 
@@ -96,8 +98,9 @@ The development order begins with the most stable cross-method structures before
 6. **SC-06 transition / lineage discipline — completed: promoted_with_conditions**;
 7. **SC-07 evidence scope / case-origin separation — completed: promoted_with_conditions**;
 8. **SC-08 baseline / failure-NO_GAIN / anti-post-hoc discipline — completed: promoted_with_conditions**;
-9. evidence-status versus DSD-object-status separation;
-10. specialization-restraint separation test, if still needed after SC-04 and SC-01 are considered together.
+9. **SC-09 evidence-status / DSD-object-status separation — completed: promoted_with_conditions**;
+10. **specialization-restraint separation/duplication audit — next; create SC-10 only if independent shared meaning remains**;
+11. **shared-core closure audit — after the specialization decision**.
 
 Each item is promoted only after its transfer conditions and non-transfer cases are recorded.
 
@@ -369,10 +372,49 @@ Source support:
 
 Evidence record: [`../evidence/shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md`](../evidence/shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md).
 
-Relations among the first eight promoted rules:
+### SC-09 — Evidence-Status / DSD-Object-Status Separation
 
 ```text
-SC-01 = preserve claim-relevant distinctions
+DATE: 2026-09-06
+SOURCE_SUPPORT: pass
+CROSS_FIELD_REPRESENTATIVE_METHODS: 8
+EVIDENCE_TO_OBJECT_COERCION_CHECKS: 8/8 detected
+OBJECT_TO_EVIDENCE_COERCION_CHECKS: 8/8 detected
+COUPLED_UPDATE_CONTAMINATION_CHECKS: 8/8 detected
+NEGATIVE_CONTROL: pass
+RESULT: promoted_with_conditions
+DIRECT_METHOD_VALIDATION: not claimed
+```
+
+Invariant meaning:
+
+> Keep the DSD object/model status separate from the evidence/audit status of a claim about that object or its external application. Evidence may assess a proposition about object status, but evidence-status values and object-status values are not interchangeable categories.
+
+Transfer conditions:
+
+- a record contains a DSD Formation, Property, or Dynamics object/status distinction and an evidential/audit judgment about a claim involving that object;
+- terms such as `undefined`, `inapplicable`, `absent`, or `zero` could be confused with `unknown`, `insufficient`, `unverified`, or `out of scope`;
+- evidence changes may trigger reassessment or a new model revision, but the old object status must not be silently rewritten.
+
+Non-transfer/minimal-record cases:
+
+- purely formal object work with no evidential claim need not invent an evidence status;
+- pure evidence/provenance work without a DSD object model need not invent a DSD object status;
+- receiving domains may use richer evidence vocabularies; the shared obligation is axis separation, not one universal evidence ontology;
+- an explicit new model revision may be triggered by new evidence, but the revision/update must be recorded rather than represented as automatic cross-axis coercion.
+
+Source support:
+
+- Property Axiom System — explicit object-side status ladder;
+- Formation / Static / Dynamics — compatible preservation of undefined/zero/absence/status distinctions;
+- DSD General Audit and Audit Automation Roadmap — evidence-status and object-status ledgers are explicitly separate.
+
+Evidence record: [`../evidence/shared/SC-09_evidence-status-object-status-separation.md`](../evidence/shared/SC-09_evidence-status-object-status-separation.md).
+
+Relations among the first nine promoted rules:
+
+```text
+SC-01 = preserve claim-relevant distinctions inside the selected DSD status/type space
 SC-02 = lock the semantics that determine which rules/interfaces are active
 SC-03 = explicitly supply claim-relevant mappings between active structures
 SC-04 = keep only claim-relevant layers as dependencies and avoid optional-interface overconstraint
@@ -380,6 +422,7 @@ SC-05 = do not infer beyond the information-preservation/reconstruction capacity
 SC-06 = separate identity-preserving evolution from identity-breaking transition and use lineage for succession
 SC-07 = keep evidence applicability separate from case origin/reality status
 SC-08 = protect evaluation integrity from weak-baseline selection, unfavorable-result erasure, and retroactive criterion changes
+SC-09 = keep evidence/audit status separate from DSD object/model status
 ```
 
-The next shared-core test should address **evidence-status versus DSD-object-status separation** rather than treating it as already covered by SC-01 or SC-07.
+The next task is the **specialization-restraint separation/duplication audit**. It must first test whether any independent semantic obligation remains beyond SC-01 and SC-04. Only then may a separate `SC-10` be created.
