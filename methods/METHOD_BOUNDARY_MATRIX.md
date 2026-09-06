@@ -94,7 +94,7 @@ Their nested independent methods remain separately counted.
 
 ## 6. Shared-core extraction rule / 공통 구조 추출 규칙
 
-Common DSD structure should be extracted upward without erasing method boundaries.
+Common DSD structure is extracted upward without erasing method boundaries.
 
 ```text
 SHARED_CORE:
@@ -105,8 +105,27 @@ METHOD_SPECIFIC_FAILURE_CRITERIA:
 METHOD_SPECIFIC_VALIDATION:
 ```
 
-A rule belongs in `SHARED_CORE` only when multiple methods can reuse it without changing its meaning. The method-specific fields remain local even when they use the same Formation, Property, Static, Dynamics, bridge, status, or evidence machinery.
+A rule belongs in `SHARED_CORE` only when multiple methods can reuse it without changing its meaning. The method-specific fields remain local even when they use the same Formation, Property, Static, Dynamics, bridge, status, evidence, or domain-validation machinery.
+
+The current shared-core registry contains **SC-01 through SC-10** and is closed for the present registry with conditions. The closure audit reviewed all 45 unordered rule pairs and found no exact duplicate shared rules. This does not alter the current method verdict:
+
+```text
+METHOD_COUNT: 22
+EXACT_DUPLICATE_METHODS_FOUND: 0
+SHARED_CORE_RULE_COUNT: 10
+SHARED_CORE_CLOSURE: closed_for_current_registry_with_conditions
+```
+
+Shared-rule transfer support is not direct validation of the methods that receive the rule.
 
 ## 7. Next stage / 다음 단계
 
-The repository is ready to proceed from **shared/common structure first**. Common status, bridge, layer-selection, evidence-scope, reconstruction-restraint, transition/lineage, baseline, and anti-post-hoc rules can be extracted next, while each method retains its own task and validation interface.
+The shared/common extraction stage is complete for the current registry. New development should now prioritize:
+
+1. method-specific protocols for the less mature methods;
+2. positive, negative/failure, boundary, and `NO_GAIN` cases;
+3. method-appropriate reproducibility/retraceability records;
+4. external/domain standards and real-world application evidence where applicable;
+5. periodic boundary re-audits if a method definition changes.
+
+Reopen shared-core extraction only if a source revision, new independent method, or new stable cross-method obligation cannot be represented by the current SC-01 through SC-10 registry.
