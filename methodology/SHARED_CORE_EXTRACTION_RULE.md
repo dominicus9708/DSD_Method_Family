@@ -51,10 +51,18 @@ The following are candidates because they have already appeared across the DSD f
 - **SC-06 transition / lineage discipline** — promoted with conditions; see `../evidence/shared/SC-06_transition-lineage-discipline.md`;
 - **SC-07 evidence scope / case-origin separation** — promoted with conditions; see `../evidence/shared/SC-07_evidence-scope-case-origin-separation.md`;
 - **SC-08 baseline / failure-NO_GAIN / anti-post-hoc discipline** — promoted with conditions; see `../evidence/shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md`;
-- **SC-09 evidence-status / DSD-object-status separation** — promoted with conditions; see `../evidence/shared/SC-09_evidence-status-object-status-separation.md`;
-- specialization restraint as a reusable removal/withdrawal rule, pending a separation/duplication audit against SC-01 and SC-04.
+- **SC-09 evidence-status / DSD-object-status separation** — promoted with conditions; see `../evidence/shared/SC-09_evidence-status-object-status-separation.md`.
 
-Do not assign a new shared-core ID to specialization restraint unless that independence audit finds a stable obligation not already covered by the promoted rules.
+The former specialization-restraint candidate has been resolved by a separation/duplication audit as a **derived operational profile**, not a new independent shared-core rule. See `../evidence/shared/SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md`.
+
+```text
+SPECIALIZATION_RESTRAINT_PROFILE
+  = SC-04 dependency/optionality discipline
+  + SC-01 no-silent-status/default collapse
+  + SC-03 explicit bridge when specialization affects another interface
+```
+
+No `SC-10` is assigned to this profile under the current registry.
 
 ## 4. Promotion test / 공통 코어 승격 시험
 
@@ -99,10 +107,10 @@ The development order begins with the most stable cross-method structures before
 7. **SC-07 evidence scope / case-origin separation — completed: promoted_with_conditions**;
 8. **SC-08 baseline / failure-NO_GAIN / anti-post-hoc discipline — completed: promoted_with_conditions**;
 9. **SC-09 evidence-status / DSD-object-status separation — completed: promoted_with_conditions**;
-10. **specialization-restraint separation/duplication audit — next; create SC-10 only if independent shared meaning remains**;
-11. **shared-core closure audit — after the specialization decision**.
+10. **specialization-restraint separation/duplication audit — completed: resolved_as_derived_profile; no SC-10 created**;
+11. **shared-core closure audit — next**.
 
-Each item is promoted only after its transfer conditions and non-transfer cases are recorded.
+Each numbered SC item is promoted only after its transfer conditions and non-transfer cases are recorded. Meta-audits do not receive an SC number unless they leave an independent reusable obligation.
 
 ## 8. Promotion registry / 승격 기록
 
@@ -411,7 +419,30 @@ Source support:
 
 Evidence record: [`../evidence/shared/SC-09_evidence-status-object-status-separation.md`](../evidence/shared/SC-09_evidence-status-object-status-separation.md).
 
-Relations among the first nine promoted rules:
+## 9. Specialization-restraint separation / duplication audit / 특수화 절제 분리·중복 감사
+
+The former specialization-restraint candidate was decomposed into five obligations: optionality, core survival, dependent-claim withdrawal, no fake default, and no undeclared feedback.
+
+```text
+CANDIDATE_OBLIGATIONS: 5
+OBLIGATIONS_COVERED_BY_EXISTING_SHARED_CORE: 5/5
+PRIMARY_COVERAGE: SC-04
+STATUS_DEFAULT_COVERAGE: SC-01 + SC-04
+CROSS_INTERFACE_FEEDBACK_COVERAGE: SC-03
+UNIQUE_INVARIANT_REMAINDER: none
+UNIQUE_FAILURE_CRITERION_REMAINDER: none
+UNIQUE_TRANSFER_CONDITION_REMAINDER: none
+NEW_SC10_CREATED: no
+RESULT: resolved_as_derived_profile
+```
+
+Four optional structures were checked against the same coverage logic: realized-axis geometry, Property optional representation, Static countable extension, and the one-channel local-scaling / `D_w` specialization. In each case, predecessor/core survival and dependent-claim withdrawal are already SC-04 obligations; fake-default prohibition is jointly covered by SC-01 and SC-04; any claimed cross-interface feedback requires SC-03.
+
+The existing `ANL-CH-006` challenge remains valid Analysis-specific evidence and is not rewritten. Its reusable lessons are cross-referenced into the existing shared core rather than promoted as a duplicate tenth rule.
+
+Meta-audit record: [`../evidence/shared/SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md`](../evidence/shared/SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md).
+
+## 10. Relations among the promoted rules / 승격 규율 관계
 
 ```text
 SC-01 = preserve claim-relevant distinctions inside the selected DSD status/type space
@@ -425,4 +456,4 @@ SC-08 = protect evaluation integrity from weak-baseline selection, unfavorable-r
 SC-09 = keep evidence/audit status separate from DSD object/model status
 ```
 
-The next task is the **specialization-restraint separation/duplication audit**. It must first test whether any independent semantic obligation remains beyond SC-01 and SC-04. Only then may a separate `SC-10` be created.
+The next task is the **shared-core closure audit**. It should test SC-01 through SC-09 for mutual duplication, coverage gaps across the eight higher-level fields, clarity of conditional activation, and continued separation between shared-rule evidence and direct method validation.
