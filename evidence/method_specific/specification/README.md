@@ -1,6 +1,6 @@
 # DSD Specification Method-Specific Evidence / DSD 명세론 개별 방법 직접 증거
 
-Status: **four direct pilot records completed / not mature**  
+Status: **five direct pilot records completed / internal constructed sequence complete / not mature**  
 Date: 2026-09-06  
 Method: **DSD Specification / DSD 명세론**  
 Protocol: [`../../../methods/03_specification/PROTOCOL.md`](../../../methods/03_specification/PROTOCOL.md)
@@ -91,11 +91,29 @@ EXACT_EXPECTED_FINAL_STATUS_FAMILY: 8/8
 FALSE_NO_GAIN_ON_INCOMPLETE_SOURCE: 0
 FALSE_GAIN_FROM_COSMETIC_RELABELING_OR_REORDERING: 0
 INVENTED_SOURCE_FACTS: 0
-POST_REVEAL_RULE_CHANGE: no
 RESULT: SPECIFICATION_NO_GAIN_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-This fourth pilot directly tests whether Specification preserves `SPEC_NO_GAIN` against a competent complete baseline rather than claiming benefit merely because DSD was applied. It also keeps genuine operational gain and genuine underspecification distinct from NO_GAIN.
+### SPEC-CH-005 — Reproducibility / Independent Retrace Challenge
+
+Precommit: [`SPEC-CH-005_precommit.md`](SPEC-CH-005_precommit.md)  
+Result: [`SPEC-CH-005_reproducibility-independent-retrace.md`](SPEC-CH-005_reproducibility-independent-retrace.md)
+
+```text
+PRECOMMIT_COMMIT: dda33b2028c9e5fb0f7b3bef938a8b834219f787
+REFERENCE_KEY_HASH_MATCH: yes
+TRACE_A_FINAL_STATUS_MATCHES: 8/8
+TRACE_B_FINAL_STATUS_MATCHES: 8/8
+TRACE_A_B_FINAL_STATUS_AGREEMENT: 8/8
+TRACE_A_B_DIAGNOSTIC_AGREEMENT: 8/8
+TRACE_A_B_ATOMIZATION_BOUNDARY_MATCHES: 32/32
+SOURCE_FACT_INVENTION: 0
+ORDER_SENSITIVITY_ERRORS: 0
+RESULT: SPECIFICATION_RETRACE_REPRODUCIBILITY_PILOT_PASS_WITH_LIMITATIONS
+INDEPENDENT_EVALUATOR_VALIDATION: not established
+```
+
+This fifth pilot supports procedural retraceability and order stability on a frozen constructed packet. It does **not** count as an independent external review because both retraces were performed in the same project session by the same assistant/model family.
 
 ## Direct-evidence sequence
 
@@ -104,18 +122,19 @@ SPEC-CH-001  basic well-formed / malformed specification discrimination — comp
 SPEC-CH-002  contradiction and underspecification challenge — completed
 SPEC-CH-003  optional-layer and bridge boundary challenge — completed
 SPEC-CH-004  NO_GAIN specification challenge — completed
-SPEC-CH-005  reproducibility / independent retrace challenge — next
+SPEC-CH-005  reproducibility / independent retrace challenge — completed with independence limitation
 ```
 
-After these internal challenges, add at least one external or independently generated application case before considering a maturity increase.
+The initial internal constructed challenge sequence is now complete.
 
-## Promotion restraint
-
-Protocol preparation changed the method from `proposed` to `developing`. Completion of four constructed pilots does not establish mature direct evidence.
+## Promotion restraint / 승격 절제
 
 ```text
-CURRENT_DIRECT_METHOD_EVIDENCE: four_pilots_completed
+CURRENT_DIRECT_METHOD_EVIDENCE: five_pilots_completed
+INTERNAL_CONSTRUCTED_CHALLENGE_SEQUENCE: completed
 CURRENT_METHOD_STATUS: developing
 MATURE_METHOD_STATUS: not_claimed
-NEXT_DIRECT_TEST: SPEC-CH-005
+NEXT_REQUIRED_EVIDENCE: external_or_independently_generated_application_case
 ```
+
+Completion of five constructed pilots does not establish mature direct validity. Before maturity promotion, add at least one external or independently generated requirement corpus, preserve the applicable external baseline/standard, and preferably obtain genuinely independent retrace or review evidence.
