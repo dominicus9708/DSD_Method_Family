@@ -55,6 +55,15 @@ It does **not** directly validate the correctness, performance, or usefulness of
   - fixed-background canonical lineage and coherent branching/merging negative control: pass;
   - does not directly validate all 22 methods.
 
+- [`SC-07_evidence-scope-case-origin-separation.md`](SC-07_evidence-scope-case-origin-separation.md) — **Evidence Scope / Case-Origin Separation / 증거 적용범위·사례 출처 분리** — `promoted_with_conditions` (2026-09-06)
+  - 8 higher-level fields, one representative method per field;
+  - scope inflation/direct-target erasure: 8/8 detected;
+  - origin-class conflation: 8/8 detected;
+  - origin-to-validation substitution: 8/8 detected;
+  - method-specific real-world and shared constructed-case negative controls: pass;
+  - no new real-world case is asserted by this synthetic metadata pilot;
+  - does not directly validate all 22 methods.
+
 ## Shared rule families / 공통 규율군
 
 - **status / typed-domain discipline**: absence, undefinedness, inapplicability, prerequisite failure, defined zero, and complete typed input remain distinct when the selected interface and claim require those distinctions; intentional coarsening requires an explicit map and loss boundary;
@@ -63,6 +72,7 @@ It does **not** directly validate the correctness, performance, or usefulness of
 - **minimum-layer / optional-interface restraint**: keep every layer needed by a claim, but do not make claim-irrelevant optional interfaces mandatory or let irrelevant extensions alter the core result merely by being present;
 - **aggregate / information-loss / reconstruction restraint**: equal reduced aggregates do not imply equal support, decomposition, provenance, component state, or history unless the reduction is proved injective on the relevant admissible class or sufficient reconstruction side information is retained;
 - **transition / lineage discipline**: keep identity-preserving regular evolution separate from identity-breaking transitions, and require typed, coherent lineage for successor/history claims whenever literal identity is not retained;
+- **evidence scope / case-origin separation**: record what a record directly validates separately from whether its case is synthetic, constructed, real, judicial, historical, personal, empirical, or organizational/technical; case origin does not by itself broaden validation scope;
 - specialization restraint: removing optional specialization withdraws specialization-dependent claims without inventing defaults;
 - failure / NO_GAIN preservation: negative, null, non-correspondence, and indeterminate results remain valid records;
 - strongest-baseline discipline: comparison must not rely only on a weak strawman baseline;
@@ -71,12 +81,12 @@ It does **not** directly validate the correctness, performance, or usefulness of
 ## Required record fields
 
 ```text
-EVIDENCE_SCOPE_CLASS: shared_method_family
+EVIDENCE_SCOPE_CLASS: shared_method_family / method_specific
+METHOD_DIRECTLY_TESTED:
 SHARED_RULES_SUPPORTED:
-SOURCE_RECORDS:
-METHODS_DIRECTLY_TESTED:
 METHODS_NOT_DIRECTLY_VALIDATED:
 TRANSFER_LIMIT:
+CASE_ORIGIN:
 REPRODUCIBILITY_RECORD:
 ```
 
