@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + four post-closure Specification direct pilots
+Status: current migration map + five post-closure Specification direct pilots  
 Date: 2026-09-06
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
@@ -33,17 +33,16 @@ Direct pilots:
 - `SPEC-CH-001_well-formed-malformed-discrimination.md`;
 - `SPEC-CH-002_contradiction-underspecification.md` with precommit;
 - `SPEC-CH-003_optional-layer-bridge-boundary.md` with precommit;
-- `SPEC-CH-004_no-gain-specification.md` with precommit.
+- `SPEC-CH-004_no-gain-specification.md` with precommit;
+- `SPEC-CH-005_reproducibility-independent-retrace.md` with precommit and reference-key hash commitment.
 
 ```text
 METHOD: DSD Specification
 METHOD_STATUS: developing
 DEDICATED_PROTOCOL: yes
-DIRECT_METHOD_EVIDENCE: four_pilots_completed
+DIRECT_METHOD_EVIDENCE: five_pilots_completed
+INTERNAL_CONSTRUCTED_CHALLENGE_SEQUENCE: completed
 
-SPEC_CH_001_WELL_FORMED_ACCEPTED: 2/2
-SPEC_CH_001_MALFORMED_DETECTED: 6/6
-SPEC_CH_001_EXACT_DIAGNOSTIC_MATCHES: 8/8
 SPEC_CH_001_RESULT: SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
 
 SPEC_CH_002_PRECOMMIT_COMMIT: 848a01b160ecfe4fcbdb8e69d6501e40555d782d
@@ -70,13 +69,25 @@ SPEC_CH_004_FALSE_COSMETIC_GAIN: 0
 SPEC_CH_004_INVENTED_SOURCE_FACTS: 0
 SPEC_CH_004_RESULT: SPECIFICATION_NO_GAIN_PILOT_PASS_WITH_LIMITATIONS
 
+SPEC_CH_005_PRECOMMIT_COMMIT: dda33b2028c9e5fb0f7b3bef938a8b834219f787
+SPEC_CH_005_REFERENCE_KEY_HASH_MATCH: yes
+SPEC_CH_005_TRACE_A_FINAL_STATUS_MATCHES: 8/8
+SPEC_CH_005_TRACE_B_FINAL_STATUS_MATCHES: 8/8
+SPEC_CH_005_TRACE_A_B_FINAL_STATUS_AGREEMENT: 8/8
+SPEC_CH_005_TRACE_A_B_DIAGNOSTIC_AGREEMENT: 8/8
+SPEC_CH_005_TRACE_A_B_ATOMIZATION_BOUNDARY_MATCHES: 32/32
+SPEC_CH_005_SOURCE_FACT_INVENTION: 0
+SPEC_CH_005_ORDER_SENSITIVITY_ERRORS: 0
+SPEC_CH_005_RESULT: SPECIFICATION_RETRACE_REPRODUCIBILITY_PILOT_PASS_WITH_LIMITATIONS
+SPEC_CH_005_INDEPENDENT_EVALUATOR_VALIDATION: not_established
+
 MATURE_DIRECT_METHOD_VALIDATION: not_claimed
-NEXT_DIRECT_RECORD: SPEC-CH-005
+NEXT_REQUIRED_EVIDENCE: external_or_independently_generated_application_case
 ```
 
-`SPEC-CH-004` is method-specific evidence because it tests Specification's own `SPEC_NO_GAIN` output and its boundary against usable-with-gain and `SPEC_UNDERSPECIFIED`. It uses a competent already-complete non-DSD structured specification as the strongest constructed baseline and does not claim DSD advantage when the operational content is equivalent.
+The fifth record directly tests Specification's own reproducibility/retrace requirement on a frozen constructed packet and two processing orders. It supports procedural retraceability, not independent reviewer validation.
 
-All four records remain constructed pilots. They do not move Specification into mature direct method evidence.
+All five records remain constructed pilots. They do not move Specification into mature direct method evidence.
 
 ## Shared-core registry status / 공통 코어 상태
 
@@ -89,7 +100,7 @@ SHARED_CORE_CLOSURE_RESULT: closed_for_current_registry_with_conditions
 DIRECT_METHOD_VALIDATION_FROM_SHARED_CORE: not claimed
 ```
 
-`REPRODUCIBILITY_RECORD` remains a method/evidence maturity requirement rather than a separate shared semantic-core ID.
+`REPRODUCIBILITY_RECORD` remains a method/evidence maturity requirement rather than a separate shared semantic-core ID. `SPEC-CH-005` is therefore a method-specific implementation test of that requirement, not a new shared-core promotion.
 
 ## Current overall classification / 현재 총괄 분류
 
@@ -100,9 +111,12 @@ DIRECTLY_MATURE_METHOD_EVIDENCE:
 
 DEVELOPING_WITH_DIRECT_PILOT_EVIDENCE:
   DSD Specification
-    direct_pilot_records: 4
+    direct_pilot_records: 5
+    internal_constructed_sequence: completed
     NO_GAIN_pilot: completed
-    independent_retrace: not_yet_completed
+    procedural_retrace: completed
+    independent_evaluator_validation: not_established
+    external_or_independent_application_case: still_required
 
 SHARED_METHOD_FAMILY_EVIDENCE_AVAILABLE:
   yes
