@@ -45,7 +45,7 @@ The following are candidates because they have already appeared across the DSD f
 
 - **SC-01 status and typed-domain discipline** — promoted with conditions; see `../evidence/shared/SC-01_status-typed-domain-discipline.md`;
 - **SC-02 source / interface / version lock** — promoted with conditions; see `../evidence/shared/SC-02_source-interface-version-lock.md`;
-- explicit bridge discipline;
+- **SC-03 explicit bridge discipline** — promoted with conditions; see `../evidence/shared/SC-03_explicit-bridge-discipline.md`;
 - minimum-layer and optional-interface restraint;
 - aggregate/reconstruction restraint;
 - support and information-loss recording;
@@ -92,7 +92,7 @@ The development order begins with the most stable cross-method structures before
 
 1. **SC-01 status and typed-domain discipline — completed: promoted_with_conditions**;
 2. **SC-02 source / interface / version lock — completed: promoted_with_conditions**;
-3. explicit bridge discipline;
+3. **SC-03 explicit bridge discipline — completed: promoted_with_conditions**;
 4. minimum-layer/optional-interface selection;
 5. aggregate, information-loss, and reconstruction restraint;
 6. transition/lineage discipline;
@@ -164,9 +164,42 @@ Non-transfer/minimal-lock cases:
 
 Evidence record: [`../evidence/shared/SC-02_source-interface-version-lock.md`](../evidence/shared/SC-02_source-interface-version-lock.md).
 
-Relation to SC-01:
+### SC-03 — Explicit Bridge Discipline
+
+```text
+DATE: 2026-09-06
+SOURCE_SUPPORT: pass
+CROSS_FIELD_REPRESENTATIVE_METHODS: 8
+BRIDGE_OMISSION_CHECKS: 8/8 detected
+NAME_OR_COORDINATE_INFERENCE_CHECKS: 8/8 detected
+BRIDGE_SUBSTITUTION_SENSITIVITY_CHECKS: 8/8 detected
+NEGATIVE_CONTROL: pass
+RESULT: promoted_with_conditions
+DIRECT_METHOD_VALIDATION: not claimed
+```
+
+Invariant meaning:
+
+> Do not infer a claim-relevant cross-layer, cross-representation, cross-carrier, or cross-domain correspondence from labels, raw values, or coordinate occurrence alone. Supply the map/relation and its assumptions explicitly unless the locked interface already does so or invariance across the admissible bridge class has been established.
+
+Transfer conditions:
+
+- the claim connects distinct DSD layers, representations, typed carriers, external domains, or method outputs;
+- alternative admissible mappings could change ownership, support, coefficient, classification, ranking, diagnosis, or intervention;
+- external-domain meaning is being supported from DSD structure.
+
+Non-transfer/minimal-bridge cases:
+
+- the operation remains inside the same typed carrier and uses a declared identity map;
+- the locked interface already supplies the required structure-preserving map and the claim remains inside its stated preservation range;
+- a separate invariance theorem proves the same result for every admissible bridge in the declared class.
+
+Evidence record: [`../evidence/shared/SC-03_explicit-bridge-discipline.md`](../evidence/shared/SC-03_explicit-bridge-discipline.md).
+
+Relations among the first three promoted rules:
 
 ```text
 SC-01 = preserve claim-relevant distinctions
-SC-02 = lock the semantics that determine which distinctions and rules are active
+SC-02 = lock the semantics that determine which rules/interfaces are active
+SC-03 = explicitly supply claim-relevant mappings between active structures
 ```
