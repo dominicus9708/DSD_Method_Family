@@ -47,8 +47,7 @@ The following are candidates because they have already appeared across the DSD f
 - **SC-02 source / interface / version lock** — promoted with conditions; see `../evidence/shared/SC-02_source-interface-version-lock.md`;
 - **SC-03 explicit bridge discipline** — promoted with conditions; see `../evidence/shared/SC-03_explicit-bridge-discipline.md`;
 - **SC-04 minimum-layer / optional-interface restraint** — promoted with conditions; see `../evidence/shared/SC-04_minimum-layer-optional-interface-restraint.md`;
-- aggregate/reconstruction restraint;
-- support and information-loss recording;
+- **SC-05 aggregate / information-loss / reconstruction restraint** — promoted with conditions; see `../evidence/shared/SC-05_aggregate-information-loss-reconstruction-restraint.md`;
 - transition versus regular evolution distinction;
 - explicit lineage when identity is not inherited;
 - evidence-status versus DSD-object-status separation;
@@ -94,7 +93,7 @@ The development order begins with the most stable cross-method structures before
 2. **SC-02 source / interface / version lock — completed: promoted_with_conditions**;
 3. **SC-03 explicit bridge discipline — completed: promoted_with_conditions**;
 4. **SC-04 minimum-layer / optional-interface restraint — completed: promoted_with_conditions**;
-5. aggregate, information-loss, and reconstruction restraint;
+5. **SC-05 aggregate / information-loss / reconstruction restraint — completed: promoted_with_conditions**;
 6. transition/lineage discipline;
 7. evidence scope and case-origin separation;
 8. baseline, failure/no-gain, and anti-post-hoc recording rules.
@@ -230,11 +229,44 @@ Non-transfer/minimal-layer cases:
 
 Evidence record: [`../evidence/shared/SC-04_minimum-layer-optional-interface-restraint.md`](../evidence/shared/SC-04_minimum-layer-optional-interface-restraint.md).
 
-Relations among the first four promoted rules:
+### SC-05 — Aggregate / Information-Loss / Reconstruction Restraint
+
+```text
+DATE: 2026-09-06
+SOURCE_SUPPORT: pass
+CROSS_FIELD_REPRESENTATIVE_METHODS: 8
+AGGREGATE_EQUALITY_INFLATION_CHECKS: 8/8 detected
+RECONSTRUCTION_WITHOUT_INJECTIVITY_CHECKS: 8/8 detected
+LOSS_BOUNDARY_ERASURE_CHECKS: 8/8 detected
+NEGATIVE_CONTROL: pass
+RESULT: promoted_with_conditions
+DIRECT_METHOD_VALIDATION: not claimed
+```
+
+Invariant meaning:
+
+> Equality of a reduced aggregate supports only distinctions proved to be preserved by the reduction. Reconstruction of support, decomposition, typed input, provenance, component state, or history requires injectivity/inverse data or sufficient support-retaining side information on the declared admissible class.
+
+Transfer conditions:
+
+- a method uses an aggregate, summary, compressed descriptor, reduced readout, or another potentially many-to-one representation;
+- downstream claims attempt to recover structure that may have been discarded;
+- a reduced result is reused as a cache key, identity criterion, provenance token, or reconstruction input.
+
+Non-transfer/reconstruction cases:
+
+- the rule is inactive when no reduced/aggregate representation is used;
+- claims confined to the aggregate itself need not retain unrelated support data;
+- unique or partial reconstruction is allowed within the range covered by an explicit injectivity/inverse result and any required side information.
+
+Evidence record: [`../evidence/shared/SC-05_aggregate-information-loss-reconstruction-restraint.md`](../evidence/shared/SC-05_aggregate-information-loss-reconstruction-restraint.md).
+
+Relations among the first five promoted rules:
 
 ```text
 SC-01 = preserve claim-relevant distinctions
 SC-02 = lock the semantics that determine which rules/interfaces are active
 SC-03 = explicitly supply claim-relevant mappings between active structures
 SC-04 = keep only claim-relevant layers as dependencies and avoid optional-interface overconstraint
+SC-05 = do not infer beyond the information-preservation/reconstruction capacity of reduced aggregates
 ```
