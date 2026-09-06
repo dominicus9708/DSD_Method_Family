@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: initial migration map
+Status: current migration map
 Date: 2026-09-06
 
 This file classifies existing Analysis challenge evidence without retroactively turning it into validation of all 22 DSD methods.
@@ -20,7 +20,7 @@ This file classifies existing Analysis challenge evidence without retroactively 
 | ANL-CH-003 DSD Null / No-Gain | Analysis | baseline sufficiency, `NO_GAIN` preservation | does not establish usefulness or no-gain for another method |
 | ANL-CH-004 Forced Non-Correspondence | Analysis | essential-structure preservation, encoding is not direct correspondence | receiving method must define its own target-preservation criterion |
 | ANL-CH-005 Layer Restraint | Analysis | minimum-layer selection, optional-interface restraint | does not identify the minimum layers for a different method automatically |
-| ANL-CH-006 Specialization Removal | Analysis | specialization-dependent/core partition, unavailable is not false/zero | conditional on an explicitly optional specialization |
+| ANL-CH-006 Specialization Removal | Analysis | specialization-dependent/core partition, unavailable is not false/zero | reusable portion is now classified as the derived specialization profile over SC-01/03/04 |
 | ANL-CH-007 Competing Explanation | Analysis | strongest reasonable baseline, anti-strawman discipline | each method requires a task-matched competent baseline |
 | ANL-CH-008 Unseen-Problem Transfer | Analysis | rule-lock transfer, post-reveal drift prohibition, holdout-level honesty | same-session pseudo-unseen result is not independent transfer validation |
 | ANL-CH-009 Reverse Prediction | Analysis | prediction-only precommit, no post-reveal rescue, miss preservation | does not directly validate the independent DSD Prediction method |
@@ -32,6 +32,21 @@ They may also support shared disciplines such as source lock, interface lock, ev
 
 Those shared lessons do not automatically validate Analysis, Specification, Prediction, Reconstruction, or other methods.
 
+## Shared-core registry status / 공통 코어 상태
+
+The current shared-core registry contains **SC-01 through SC-10** and is closed for the present registry with conditions.
+
+```text
+SHARED_CORE_RULES_PROMOTED: 10
+SPECIALIZATION_RESTRAINT: derived_profile
+SHARED_CORE_CLOSURE_RESULT: closed_for_current_registry_with_conditions
+DIRECT_METHOD_VALIDATION_FROM_SHARED_CORE: not claimed
+```
+
+The closure audit found one additional framework-level semantic gap after SC-01 through SC-09: external-domain validation standards were not yet independently protected from DSD-internal success. This gap was tested across all eight higher-level fields and promoted as **SC-10 External-Standard / Domain-Validation Separation**.
+
+`REPRODUCIBILITY_RECORD` remains a method/evidence maturity requirement rather than a new shared semantic-core ID in the current closure version.
+
 ## Current overall classification / 현재 총괄 분류
 
 ```text
@@ -42,7 +57,13 @@ DIRECTLY_MATURE_METHOD_EVIDENCE:
 SHARED_METHOD_FAMILY_EVIDENCE_AVAILABLE:
   yes
 
+SHARED_CORE_REGISTRY_STATUS:
+  closed_for_current_registry_with_conditions
+
 OTHER_METHODS_DIRECTLY_VALIDATED_BY_ANALYSIS_OR_AUDIT_CORPUS:
+  no
+
+OTHER_METHODS_DIRECTLY_VALIDATED_BY_SHARED_CORE_TRANSFER_PILOTS:
   no
 
 REAL_WORLD_CASE_CORPUS_STATUS:
