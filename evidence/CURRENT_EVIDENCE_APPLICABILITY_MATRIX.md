@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map
+Status: current migration map + first post-closure method-protocol preparation
 Date: 2026-09-06
 
 This file classifies existing Analysis challenge evidence without retroactively turning it into validation of all 22 DSD methods.
@@ -10,6 +10,7 @@ This file classifies existing Analysis challenge evidence without retroactively 
 - **Direct** = the record directly tested the named method.
 - **Shared support** = the record supports a reusable method-family discipline, but does not directly validate another method.
 - **Conditional transfer** = the shared rule applies only when the receiving method exposes the relevant structure or claim type.
+- **Protocol prepared** = a dedicated method protocol exists, but direct method evidence has not yet been accumulated.
 
 ## ANL-CH-001 through ANL-CH-009
 
@@ -32,6 +33,26 @@ They may also support shared disciplines such as source lock, interface lock, ev
 
 Those shared lessons do not automatically validate Analysis, Specification, Prediction, Reconstruction, or other methods.
 
+## DSD Specification / DSD 명세론
+
+A dedicated method protocol now exists at:
+
+- `methods/03_specification/PROTOCOL.md` — **DSD Specification Protocol v0.1**;
+- `evidence/method_specific/specification/` — dedicated direct-evidence lane.
+
+Current classification:
+
+```text
+METHOD: DSD Specification
+METHOD_STATUS: developing
+DEDICATED_PROTOCOL: yes
+DIRECT_METHOD_CHALLENGE_CORPUS: not_yet_accumulated
+DIRECT_METHOD_VALIDATION: not_claimed
+NEXT_DIRECT_RECORD: SPEC-CH-001
+```
+
+Protocol preparation is a maturity step, not a PASS result. Specification remains outside `DIRECTLY_MATURE_METHOD_EVIDENCE` until method-specific challenge and application evidence accumulate.
+
 ## Shared-core registry status / 공통 코어 상태
 
 The current shared-core registry contains **SC-01 through SC-10** and is closed for the present registry with conditions.
@@ -53,6 +74,9 @@ The closure audit found one additional framework-level semantic gap after SC-01 
 DIRECTLY_MATURE_METHOD_EVIDENCE:
   DSD Analysis
   DSD Audit
+
+DEVELOPING_WITH_DEDICATED_PROTOCOL_BUT_NOT_DIRECTLY_VALIDATED:
+  DSD Specification
 
 SHARED_METHOD_FAMILY_EVIDENCE_AVAILABLE:
   yes
