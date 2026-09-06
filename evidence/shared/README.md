@@ -73,6 +73,15 @@ It does **not** directly validate the correctness, performance, or usefulness of
   - baseline clause is conditional on comparative/gain/performance claims;
   - does not directly validate all 22 methods.
 
+- [`SC-09_evidence-status-object-status-separation.md`](SC-09_evidence-status-object-status-separation.md) — **Evidence-Status / DSD-Object-Status Separation / 증거상태·DSD 객체상태 분리** — `promoted_with_conditions` (2026-09-06)
+  - 8 higher-level fields, one representative method per field;
+  - evidence-to-object coercion: 8/8 detected;
+  - object-to-evidence coercion: 8/8 detected;
+  - coupled-update contamination: 8/8 detected;
+  - two-axis status-pair negative controls: pass;
+  - evidence vocabulary may be domain-richer; the shared rule requires axis separation rather than one universal evidence ontology;
+  - does not directly validate all 22 methods.
+
 ## Shared rule families / 공통 규율군
 
 - **status / typed-domain discipline**: absence, undefinedness, inapplicability, prerequisite failure, defined zero, and complete typed input remain distinct when the selected interface and claim require those distinctions; intentional coarsening requires an explicit map and loss boundary;
@@ -83,8 +92,8 @@ It does **not** directly validate the correctness, performance, or usefulness of
 - **transition / lineage discipline**: keep identity-preserving regular evolution separate from identity-breaking transitions, and require typed, coherent lineage for successor/history claims whenever literal identity is not retained;
 - **evidence scope / case-origin separation**: record what a record directly validates separately from whether its case is synthetic, constructed, real, judicial, historical, personal, empirical, or organizational/technical; case origin does not by itself broaden validation scope;
 - **baseline / failure-NO_GAIN / anti-post-hoc discipline**: where comparison or confirmatory evaluation is claimed, use the strongest reasonable task-matched baseline available, preserve unfavorable/null/tied/indeterminate outcomes, and never silently rewrite locked criteria after reveal to rescue the same run;
-- specialization restraint: removing optional specialization withdraws specialization-dependent claims without inventing defaults;
-- evidence-status / DSD-object-status separation: still a candidate requiring separate shared-core testing.
+- **evidence-status / DSD-object-status separation**: keep model/object status separate from evidence/audit status; evidence may assess a proposition about object status, but `unknown/insufficient/out-of-scope` is not an object status and `undefined/inapplicable/zero/absent` is not an evidence grade;
+- specialization restraint: removing optional specialization withdraws specialization-dependent claims without inventing defaults; separate duplication audit still required to decide whether this deserves its own shared-core ID or is already covered by SC-01 and SC-04.
 
 ## Required record fields
 
@@ -97,6 +106,8 @@ TRANSFER_LIMIT:
 CASE_ORIGIN:
 REPRODUCIBILITY_RECORD:
 ```
+
+When SC-09 is active, preserve separate `DSD_OBJECT_STATUS` and `EVIDENCE_STATUS` fields plus the claim/evidence relation between them.
 
 For comparison/confirmatory records that activate SC-08, also preserve the relevant baseline, failure/no-gain criteria, precommit status, and post-reveal revision fields.
 
