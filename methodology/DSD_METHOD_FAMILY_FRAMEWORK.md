@@ -160,6 +160,8 @@ DSD structural layer
 
 A mathematical proof remains mathematical proof; a medical judgment remains subject to medical evidence and clinical standards; a historical interpretation remains subject to source criticism; an artistic interpretation is not reduced to a scalar aggregate merely because selected features can be encoded.
 
+This boundary is now separately cross-field tested as **SC-10 External-Standard / Domain-Validation Separation**. An explicit domain bridge and a DSD-internal PASS are not by themselves substitutes for the receiving domain's competent validation standard.
+
 ## 8. Status and bridge discipline / 상태·브리지 규율
 
 Across the method family:
@@ -170,7 +172,8 @@ Across the method family:
 - preserve failed mappings, alternative mappings, and `NO_GAIN` results;
 - when dynamics is used, distinguish value evolution from status/domain and formation-level transitions;
 - use explicit lineage when successor identity is not inherited automatically;
-- do not treat membership in the same higher-level field or reuse of the same DSD operator as evidence of method equivalence.
+- do not treat membership in the same higher-level field or reuse of the same DSD operator as evidence of method equivalence;
+- do not replace a receiving domain's validation standard with DSD-internal structural success.
 
 ## 9. Method composition / 방법 조합
 
@@ -214,7 +217,7 @@ Evidence scope and case origin are separate dimensions.
 
 ### 12.1 Shared method-family evidence
 
-Shared evidence supports reusable operating disciplines such as status separation, explicit bridges, minimum-layer selection, aggregate/reconstruction restraint, specialization restraint, `NO_GAIN` preservation, strongest-baseline comparison, and anti-post-hoc procedure.
+Shared evidence supports reusable operating disciplines. The current promoted registry is **SC-01 through SC-10**.
 
 It does **not** directly validate all 22 methods.
 
@@ -226,6 +229,8 @@ METHODS_DIRECTLY_TESTED:
 METHODS_NOT_DIRECTLY_VALIDATED:
 TRANSFER_LIMIT:
 ```
+
+The specialization-restraint pattern is retained as a derived profile over SC-01/03/04 rather than a separate shared-core ID.
 
 ### 12.2 Method-specific evidence
 
@@ -272,13 +277,11 @@ A real-world case is application evidence first. It contributes to method valida
 
 The current registry and migration matrix are maintained under [`../evidence/`](../evidence/).
 
-## 13. Shared-core extraction / 공통 구조 추출
-
-The next development stage begins with reusable structures that can be shared across methods without erasing method identity.
+## 13. Shared-core extraction and closure / 공통 구조 추출·종료
 
 The controlling rule is [`SHARED_CORE_EXTRACTION_RULE.md`](SHARED_CORE_EXTRACTION_RULE.md).
 
-Each candidate shared element must preserve the following separation:
+Each shared element preserves the following separation:
 
 ```text
 SHARED_CORE:
@@ -289,6 +292,31 @@ METHOD_SPECIFIC_FAILURE_CRITERIA:
 METHOD_SPECIFIC_VALIDATION:
 ```
 
-Likely first candidates are status discipline, source/interface/version locks, explicit bridges, minimum-layer selection, aggregate/reconstruction restraint, transition/lineage discipline, evidence-scope separation, strongest-baseline/no-gain rules, and anti-post-hoc recording discipline.
+The current shared-core registry is:
 
-Shared-core support is not method validation. A receiving method must still test the shared rule within its own task interface.
+```text
+SC-01  Status / Typed-Domain Discipline
+SC-02  Source / Interface / Version Lock
+SC-03  Explicit Bridge Discipline
+SC-04  Minimum-Layer / Optional-Interface Restraint
+SC-05  Aggregate / Information-Loss / Reconstruction Restraint
+SC-06  Transition / Lineage Discipline
+SC-07  Evidence Scope / Case-Origin Separation
+SC-08  Baseline / Failure-NO_GAIN / Anti-Post-Hoc Discipline
+SC-09  Evidence-Status / DSD-Object-Status Separation
+SC-10  External-Standard / Domain-Validation Separation
+```
+
+The shared-core closure audit reviewed all 45 unordered rule pairs and found no exact duplicate shared rules. Every SC has representative transfer coverage across all eight higher-level fields and explicit activation/non-transfer conditions.
+
+```text
+SHARED_CORE_CLOSURE:
+  closed_for_current_registry_with_conditions
+
+DIRECT_METHOD_VALIDATION_FROM_SHARED_CORE:
+  not claimed
+```
+
+`REPRODUCIBILITY_RECORD` remains part of method/evidence maturity architecture rather than a separate universal semantic SC because concrete rerun/retrace obligations differ materially by method.
+
+Shared-core extraction should be reopened only when source semantics, method boundaries, new independent methods, or a genuinely new stable cross-method obligation changes the current closure basis. Until then, development priority moves to method-specific protocols, evidence accumulation, reproducibility/retraceability, and real-world application cases.
