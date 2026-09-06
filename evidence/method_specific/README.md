@@ -27,7 +27,7 @@ REPRODUCIBILITY_RECORD:
 
 - `challenges/ANL-CH-*` directly validate **DSD Analysis** challenge criteria only.
 - `DSD_Audit/` and new audit records directly validate **DSD Audit** procedures and verdict discipline only.
-- Shared-rule lessons extracted from those records may be cross-referenced under `../shared/`, but this does not count as direct validation of Comparison, Classification, Prediction, Control, Reconstruction, Specification, or any other method.
+- Shared-rule lessons may be cross-referenced under `../shared/`, but do not count as direct validation of another independent method.
 
 ## Method-specific evidence lanes / 개별 증거 경로
 
@@ -35,12 +35,14 @@ REPRODUCIBILITY_RECORD:
   - dedicated protocol v0.1 established;
   - current method status: `developing`;
   - `SPEC-CH-001` completed: well-formed/malformed discrimination pilot;
-  - `SPEC-CH-002` completed: contradiction/underspecification discrimination pilot with precommit;
+  - `SPEC-CH-002` completed: contradiction/underspecification pilot with precommit;
   - `SPEC-CH-003` completed: optional-layer/bridge boundary pilot with precommit;
-  - current direct pilot count: `3`;
-  - all three results are pilot PASS with limitations;
+  - `SPEC-CH-004` completed: NO_GAIN specification pilot with precommit;
+  - current direct pilot count: `4`;
+  - all four results are pilot PASS with limitations;
+  - NO_GAIN preservation has been directly tested on a competent complete constructed baseline;
   - mature method status: not claimed;
-  - next direct record: `SPEC-CH-004`.
+  - next direct record: `SPEC-CH-005` reproducibility / independent retrace.
 
 ## Promotion expectation / 성숙도 승격 기준
 
