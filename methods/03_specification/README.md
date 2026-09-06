@@ -1,6 +1,6 @@
 # 03. DSD Specification / DSD 명세론
 
-Status: **developing** — dedicated protocol v0.1 established; first direct pilot `SPEC-CH-001` completed with limitations.
+Status: **developing** — dedicated protocol v0.1 established; direct pilots `SPEC-CH-001` and `SPEC-CH-002` completed with limitations.
 
 Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve.
 
@@ -46,14 +46,31 @@ FALSE_POSITIVES_ON_INACTIVE_INTERFACES: 0
 RESULT: SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-This is pilot-level direct evidence for the locked synthetic benchmark only. It does not make Specification a mature method.
+### SPEC-CH-002 — completed
+
+`Contradiction / Underspecification Challenge`
+
+```text
+PRECOMMIT_COMMIT: 848a01b160ecfe4fcbdb8e69d6501e40555d782d
+WELL_FORMED_CONTROLS_ACCEPTED: 2/2
+CONTRADICTION_CASES_CORRECTLY_CLASSIFIED: 3/3
+UNDERSPECIFICATION_CASES_CORRECTLY_CLASSIFIED: 3/3
+EXACT_DIAGNOSTIC_FAMILY_MATCHES: 8/8
+CONTRADICTION_UNDERSPECIFICATION_CROSS_CLASS_ERRORS: 0
+POST_REVEAL_RULE_CHANGE: no
+RESULT: SPECIFICATION_CONTRADICTION_UNDERSPECIFICATION_PILOT_PASS_WITH_LIMITATIONS
+```
+
+The second pilot shows that Protocol v0.1 distinguishes an impossible simultaneous requirement set from a requirement set that is merely missing activation, selector, or threshold information on the locked constructed benchmark.
+
+Both records are pilot-level direct evidence only. They do not make Specification a mature method.
 
 ## Evidence sequence / 증거 순서
 
 ```text
 SPEC-CH-001  basic well-formed / malformed specification discrimination — completed
-SPEC-CH-002  contradiction and underspecification challenge — next
-SPEC-CH-003  optional-layer and bridge boundary challenge
+SPEC-CH-002  contradiction and underspecification challenge — completed
+SPEC-CH-003  optional-layer and bridge boundary challenge — next
 SPEC-CH-004  NO_GAIN specification challenge
 SPEC-CH-005  reproducibility / independent retrace challenge
 ```
