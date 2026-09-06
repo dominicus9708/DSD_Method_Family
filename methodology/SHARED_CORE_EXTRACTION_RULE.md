@@ -1,6 +1,6 @@
 # DSD Shared-Core Extraction Rule / DSD 공통 구조 추출 규칙
 
-Status: working promotion rule
+Status: **closed for current registry with conditions**
 Date: 2026-09-06
 
 This document governs the DSD Method Family stage that extracts structures genuinely reusable across methods **without merging the methods themselves**.
@@ -39,9 +39,9 @@ METHOD_SPECIFIC_VALIDATION_REMAINS:
 EVIDENCE_STATUS:
 ```
 
-## 3. Initial shared-core candidates / 초기 후보
+## 3. Current shared-core registry / 현재 공통 코어 레지스트리
 
-The following are candidates because they have already appeared across the DSD formal interfaces or Analysis/Audit practice. They are **not automatically promoted** merely by appearing in this list.
+The current promoted shared core is:
 
 - **SC-01 status and typed-domain discipline** — promoted with conditions; see `../evidence/shared/SC-01_status-typed-domain-discipline.md`;
 - **SC-02 source / interface / version lock** — promoted with conditions; see `../evidence/shared/SC-02_source-interface-version-lock.md`;
@@ -51,9 +51,10 @@ The following are candidates because they have already appeared across the DSD f
 - **SC-06 transition / lineage discipline** — promoted with conditions; see `../evidence/shared/SC-06_transition-lineage-discipline.md`;
 - **SC-07 evidence scope / case-origin separation** — promoted with conditions; see `../evidence/shared/SC-07_evidence-scope-case-origin-separation.md`;
 - **SC-08 baseline / failure-NO_GAIN / anti-post-hoc discipline** — promoted with conditions; see `../evidence/shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md`;
-- **SC-09 evidence-status / DSD-object-status separation** — promoted with conditions; see `../evidence/shared/SC-09_evidence-status-object-status-separation.md`.
+- **SC-09 evidence-status / DSD-object-status separation** — promoted with conditions; see `../evidence/shared/SC-09_evidence-status-object-status-separation.md`;
+- **SC-10 external-standard / domain-validation separation** — promoted with conditions; see `../evidence/shared/SC-10_external-standard-domain-validation-separation.md`.
 
-The former specialization-restraint candidate has been resolved by a separation/duplication audit as a **derived operational profile**, not a new independent shared-core rule. See `../evidence/shared/SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md`.
+The former specialization-restraint candidate was resolved by a separation/duplication audit as a **derived operational profile**, not a new independent shared-core rule. See `../evidence/shared/SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md`.
 
 ```text
 SPECIALIZATION_RESTRAINT_PROFILE
@@ -62,7 +63,7 @@ SPECIALIZATION_RESTRAINT_PROFILE
   + SC-03 explicit bridge when specialization affects another interface
 ```
 
-No `SC-10` is assigned to this profile under the current registry.
+The current closure result is recorded in `../evidence/shared/SHARED_CORE_CLOSURE_AUDIT.md`.
 
 ## 4. Promotion test / 공통 코어 승격 시험
 
@@ -74,7 +75,7 @@ A candidate becomes shared core only after all applicable questions are answered
 4. Is the rule supported by current DSD source layers or an explicit domain-independent operating requirement?
 5. Are direct method validation claims kept separate from shared-rule support?
 
-If these conditions are not met, the rule remains method-specific or conditional.
+If these conditions are not met, the rule remains method-specific, a derived profile, a maturity requirement, or a conditional protocol module.
 
 ## 5. Evidence rule / 증거 규칙
 
@@ -92,11 +93,13 @@ Receiving methods must re-test the shared rule in their own task interfaces.
 
 See [`../methods/METHOD_BOUNDARY_MATRIX.md`](../methods/METHOD_BOUNDARY_MATRIX.md).
 
-If shared-core extraction makes two methods appear indistinguishable across all five boundary axes, the pair must be re-opened for a duplication audit. Otherwise shared infrastructure remains shared infrastructure, not a reason to merge methods.
+If shared-core extraction makes two methods appear indistinguishable across all five method-boundary axes, the pair must be re-opened for a duplication audit. Otherwise shared infrastructure remains shared infrastructure, not a reason to merge methods.
 
-## 7. Planned order / 예정 순서
+Likewise, if two shared rules become indistinguishable across all five shared-rule closure axes — activation trigger, protected distinction/dependency, prohibited failure, required record/justification, and non-transfer condition — the pair must be re-opened for a shared-rule merge audit.
 
-The development order begins with the most stable cross-method structures before method-specific new protocols:
+## 7. Development order / 개발 순서
+
+The shared-core extraction sequence for the current registry is complete:
 
 1. **SC-01 status and typed-domain discipline — completed: promoted_with_conditions**;
 2. **SC-02 source / interface / version lock — completed: promoted_with_conditions**;
@@ -107,10 +110,11 @@ The development order begins with the most stable cross-method structures before
 7. **SC-07 evidence scope / case-origin separation — completed: promoted_with_conditions**;
 8. **SC-08 baseline / failure-NO_GAIN / anti-post-hoc discipline — completed: promoted_with_conditions**;
 9. **SC-09 evidence-status / DSD-object-status separation — completed: promoted_with_conditions**;
-10. **specialization-restraint separation/duplication audit — completed: resolved_as_derived_profile; no SC-10 created**;
-11. **shared-core closure audit — next**.
+10. **specialization-restraint separation/duplication audit — completed: resolved_as_derived_profile**;
+11. **shared-core closure gap: external-standard / domain-validation separation — resolved as SC-10**;
+12. **shared-core closure audit — completed: closed_for_current_registry_with_conditions**.
 
-Each numbered SC item is promoted only after its transfer conditions and non-transfer cases are recorded. Meta-audits do not receive an SC number unless they leave an independent reusable obligation.
+Meta-audits do not receive an SC number unless they leave an independent reusable obligation.
 
 ## 8. Promotion registry / 승격 기록
 
@@ -419,6 +423,45 @@ Source support:
 
 Evidence record: [`../evidence/shared/SC-09_evidence-status-object-status-separation.md`](../evidence/shared/SC-09_evidence-status-object-status-separation.md).
 
+### SC-10 — External-Standard / Domain-Validation Separation
+
+```text
+DATE: 2026-09-06
+SOURCE_SUPPORT: pass
+CROSS_FIELD_REPRESENTATIVE_METHODS: 8
+STANDARD_OMISSION_CHECKS: 8/8 detected
+DSD_TO_DOMAIN_SUBSTITUTION_CHECKS: 8/8 detected
+WRONG_STANDARD_SUBSTITUTION_CHECKS: 8/8 detected
+NEGATIVE_CONTROL: pass
+RESULT: promoted_with_conditions
+DIRECT_METHOD_VALIDATION: not claimed
+```
+
+Invariant meaning:
+
+> A DSD-internal structural result and even an explicit domain bridge do not by themselves replace the receiving domain's own proof, empirical, professional, interpretive, legal, ethical, safety, or other task-relevant validation standard. Domain-level claims must retain the applicable external standard unless an independent equivalence result legitimately identifies the standards over the declared claim class.
+
+Transfer conditions:
+
+- a DSD method output is used to support a claim about an external domain;
+- the receiving domain has a distinct proof, authority, empirical, professional, interpretive, ethical, safety, or acceptance standard relevant to the claim;
+- DSD-internal success could be mistaken for the domain verdict itself.
+
+Non-transfer/minimal-standard cases:
+
+- the claim is explicitly DSD-internal and makes no external-domain truth/authority assertion;
+- the task record already supplies and separately applies the receiving domain standard;
+- a legitimate theorem, calibration, institutional rule, or equivalent basis proves that the DSD-side criterion is equivalent to the domain standard on the declared class;
+- DSD is used to organize evidence/assumptions while the actual domain verdict remains assigned to the domain standard.
+
+Source support:
+
+- `DSD_METHOD_FAMILY_FRAMEWORK.md` domain-bridge rule;
+- `METHOD_BOUNDARY_MATRIX.md` retention of `VALIDATION_STANDARD` as a method-boundary axis;
+- Simulation/Prediction distinction requiring domain validation for prediction beyond model consistency.
+
+Evidence record: [`../evidence/shared/SC-10_external-standard-domain-validation-separation.md`](../evidence/shared/SC-10_external-standard-domain-validation-separation.md).
+
 ## 9. Specialization-restraint separation / duplication audit / 특수화 절제 분리·중복 감사
 
 The former specialization-restraint candidate was decomposed into five obligations: optionality, core survival, dependent-claim withdrawal, no fake default, and no undeclared feedback.
@@ -432,13 +475,13 @@ CROSS_INTERFACE_FEEDBACK_COVERAGE: SC-03
 UNIQUE_INVARIANT_REMAINDER: none
 UNIQUE_FAILURE_CRITERION_REMAINDER: none
 UNIQUE_TRANSFER_CONDITION_REMAINDER: none
-NEW_SC10_CREATED: no
+NEW_SPECIALIZATION_SC_CREATED: no
 RESULT: resolved_as_derived_profile
 ```
 
 Four optional structures were checked against the same coverage logic: realized-axis geometry, Property optional representation, Static countable extension, and the one-channel local-scaling / `D_w` specialization. In each case, predecessor/core survival and dependent-claim withdrawal are already SC-04 obligations; fake-default prohibition is jointly covered by SC-01 and SC-04; any claimed cross-interface feedback requires SC-03.
 
-The existing `ANL-CH-006` challenge remains valid Analysis-specific evidence and is not rewritten. Its reusable lessons are cross-referenced into the existing shared core rather than promoted as a duplicate tenth rule.
+The existing `ANL-CH-006` challenge remains valid Analysis-specific evidence and is not rewritten. Its reusable lessons are cross-referenced into the existing shared core rather than promoted as a duplicate rule.
 
 Meta-audit record: [`../evidence/shared/SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md`](../evidence/shared/SPECIALIZATION_RESTRAINT_DUPLICATION_AUDIT.md).
 
@@ -454,6 +497,38 @@ SC-06 = separate identity-preserving evolution from identity-breaking transition
 SC-07 = keep evidence applicability separate from case origin/reality status
 SC-08 = protect evaluation integrity from weak-baseline selection, unfavorable-result erasure, and retroactive criterion changes
 SC-09 = keep evidence/audit status separate from DSD object/model status
+SC-10 = keep receiving-domain validation standards separate from DSD-internal structural success
 ```
 
-The next task is the **shared-core closure audit**. It should test SC-01 through SC-09 for mutual duplication, coverage gaps across the eight higher-level fields, clarity of conditional activation, and continued separation between shared-rule evidence and direct method validation.
+## 11. Closure status / 종료 상태
+
+The closure audit reviewed all 45 unordered pairs among SC-01 through SC-10 and found no exact duplicate shared rules.
+
+```text
+SHARED_CORE_RULES_PROMOTED: 10
+PAIRWISE_RULE_PAIRS_REVIEWED: 45
+EXACT_SHARED_RULE_DUPLICATES: 0
+HIGHER_FIELDS_WITH_REPRESENTATIVE_TRANSFER_COVERAGE: 8/8
+RULES_WITH_ACTIVATION_AND_NON_TRANSFER_CONDITIONS: 10/10
+DIRECT_METHOD_VALIDATION_SEPARATION: pass
+FRAMEWORK_SEMANTIC_GAPS_UNRESOLVED: 0
+RESULT: closed_for_current_registry_with_conditions
+```
+
+`REPRODUCIBILITY_RECORD` remains a method/evidence maturity requirement rather than a new shared semantic-core ID because its concrete rerun/retrace validation differs materially by method.
+
+Method identity/boundary remains meta-architecture rather than a shared operator. Symmetry/equivariance, holdout/transfer, resolution sensitivity, and robustness remain conditional challenge/protocol modules rather than universal shared-core obligations.
+
+Closure record: [`../evidence/shared/SHARED_CORE_CLOSURE_AUDIT.md`](../evidence/shared/SHARED_CORE_CLOSURE_AUDIT.md).
+
+### Reopening conditions
+
+Reopen shared-core extraction only when at least one of the following occurs:
+
+1. a DSD source revision changes the semantics of a promoted rule;
+2. a new independent DSD method exposes a stable obligation not expressible by SC-01 through SC-10;
+3. a future specialization violates the current derived-profile decomposition;
+4. two methods or two shared rules become indistinguishable under their respective boundary tests;
+5. a maturity requirement such as reproducibility is later formalized into a stable domain-independent DSD operating invariant.
+
+Until then, development should proceed to **method-specific protocols, evidence, and real-world application cases**, not continued proliferation of shared-core labels.
