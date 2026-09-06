@@ -32,6 +32,8 @@ The separation between evidence applicability and case origin has been cross-fie
 
 Evaluation integrity across baseline choice, unfavorable/null outcome preservation, and post-reveal criterion changes has also been cross-field tested as **SC-08**. See [`shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md`](shared/SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md). The baseline clause is conditional on a comparative/gain/performance claim; purely descriptive tasks do not require a competitor merely to be valid.
 
+The separation between **evidence/audit status** and **DSD object/model status** has been cross-field tested as **SC-09**. See [`shared/SC-09_evidence-status-object-status-separation.md`](shared/SC-09_evidence-status-object-status-separation.md). An object may be `applicable_but_undefined` while that status is fully confirmed by the available evidence, or may be `defined_zero` while evidence for applying the formal model to an external target remains insufficient.
+
 These shared-core pilots support the reusable rules themselves. They do not directly validate all 22 methods.
 
 ## Required scope fields / 적용 범위 필드
@@ -63,6 +65,19 @@ CASE_ORIGIN:
 
 `CASE_ORIGIN` may change source-verification, authority, privacy, provenance, or external-standard obligations. It does **not** by itself change `METHOD_DIRECTLY_TESTED` or expand a record from method-specific evidence to whole-family validation.
 
+When a record contains both a DSD object/model status and an evidence/audit judgment, preserve them separately:
+
+```text
+DSD_OBJECT_STATUS:
+DSD_OBJECT_STATUS_BASIS:
+EVIDENCE_STATUS:
+EVIDENCE_BASIS:
+CLAIM_ABOUT_OBJECT_STATUS:
+CLAIM_STATUS_RELATION:
+```
+
+`unknown`, `insufficient`, or `out of scope` on the evidence side must not be silently converted into `undefined`, `inapplicable`, `absent`, or `zero` on the object side, and the reverse conversion is likewise invalid without an explicit rule.
+
 For confirmatory/comparative evidence that activates SC-08, additionally preserve the strongest reasonable baseline when applicable, locked pass/failure/no-gain criteria, unfavorable/null outcomes, precommit status, and any post-reveal revisions as new versions rather than silent rewrites.
 
 ## Directory map / 폴더 구조
@@ -74,7 +89,8 @@ evidence/
 ├─ shared/
 │  ├─ README.md
 │  ├─ SC-07_evidence-scope-case-origin-separation.md
-│  └─ SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md
+│  ├─ SC-08_baseline-failure-no-gain-anti-post-hoc-discipline.md
+│  └─ SC-09_evidence-status-object-status-separation.md
 ├─ method_specific/
 │  └─ README.md
 └─ real_world_cases/
