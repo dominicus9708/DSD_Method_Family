@@ -38,11 +38,14 @@ REPRODUCIBILITY_RECORD:
   - `SPEC-CH-002` completed: contradiction/underspecification pilot with precommit;
   - `SPEC-CH-003` completed: optional-layer/bridge boundary pilot with precommit;
   - `SPEC-CH-004` completed: NO_GAIN specification pilot with precommit;
-  - current direct pilot count: `4`;
-  - all four results are pilot PASS with limitations;
-  - NO_GAIN preservation has been directly tested on a competent complete constructed baseline;
+  - `SPEC-CH-005` completed: reproducibility/retrace pilot with precommit + reference-key hash commitment;
+  - current direct pilot count: `5`;
+  - internal constructed challenge sequence: `completed`;
+  - all five results are pilot PASS with limitations;
+  - procedural retraceability and two-order stability: supported on the locked constructed packet;
+  - independent evaluator validation: `not established`;
   - mature method status: not claimed;
-  - next direct record: `SPEC-CH-005` reproducibility / independent retrace.
+  - next required evidence: `external_or_independently_generated_application_case`.
 
 ## Promotion expectation / 성숙도 승격 기준
 
@@ -57,4 +60,4 @@ A proposed or developing method should accumulate, at minimum:
 7. at least one external or independently generated application case;
 8. a strongest-reasonable-baseline comparison when applicable.
 
-Shared evidence alone does not satisfy these method-specific requirements, and several constructed pilots alone are not enough for maturity promotion.
+Shared evidence alone does not satisfy these method-specific requirements, and several constructed pilots alone are not enough for maturity promotion. Procedural same-session retrace does not substitute for a genuinely independent reviewer or external application corpus.
