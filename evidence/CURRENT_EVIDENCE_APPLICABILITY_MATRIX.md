@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + first post-closure method-specific pilot
+Status: current migration map + two post-closure Specification direct pilots
 Date: 2026-09-06
 
 This file classifies existing Analysis challenge evidence without retroactively turning it into validation of all 22 DSD methods.
@@ -41,24 +41,36 @@ A dedicated method protocol exists at:
 - `methods/03_specification/PROTOCOL.md` — **DSD Specification Protocol v0.1**;
 - `evidence/method_specific/specification/` — dedicated direct-evidence lane.
 
-First direct pilot:
+Direct pilots:
 
-- `SPEC-CH-001_well-formed-malformed-discrimination.md` — **Well-Formed / Malformed Specification Discrimination**.
+- `SPEC-CH-001_well-formed-malformed-discrimination.md` — **Well-Formed / Malformed Specification Discrimination**;
+- `SPEC-CH-002_contradiction-underspecification.md` — **Contradiction / Underspecification Challenge**, with separately committed precommit `SPEC-CH-002_precommit.md`.
 
 ```text
 METHOD: DSD Specification
 METHOD_STATUS: developing
 DEDICATED_PROTOCOL: yes
-DIRECT_METHOD_EVIDENCE: pilot_started
+DIRECT_METHOD_EVIDENCE: two_pilots_completed
+
 SPEC_CH_001_WELL_FORMED_ACCEPTED: 2/2
 SPEC_CH_001_MALFORMED_DETECTED: 6/6
 SPEC_CH_001_EXACT_DIAGNOSTIC_MATCHES: 8/8
 SPEC_CH_001_RESULT: SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
+
+SPEC_CH_002_PRECOMMIT_COMMIT: 848a01b160ecfe4fcbdb8e69d6501e40555d782d
+SPEC_CH_002_WELL_FORMED_CONTROLS_ACCEPTED: 2/2
+SPEC_CH_002_CONTRADICTIONS_CORRECT: 3/3
+SPEC_CH_002_UNDERSPECIFICATIONS_CORRECT: 3/3
+SPEC_CH_002_EXACT_DIAGNOSTIC_MATCHES: 8/8
+SPEC_CH_002_CROSS_CLASS_ERRORS: 0
+SPEC_CH_002_POST_REVEAL_RULE_CHANGE: no
+SPEC_CH_002_RESULT: SPECIFICATION_CONTRADICTION_UNDERSPECIFICATION_PILOT_PASS_WITH_LIMITATIONS
+
 MATURE_DIRECT_METHOD_VALIDATION: not_claimed
-NEXT_DIRECT_RECORD: SPEC-CH-002
+NEXT_DIRECT_RECORD: SPEC-CH-003
 ```
 
-`SPEC-CH-001` is direct method-specific evidence because it tests Specification's own structural outputs and failure criteria under Protocol v0.1. It is still a constructed synthetic pilot and does not move Specification into `DIRECTLY_MATURE_METHOD_EVIDENCE`.
+These are direct method-specific records because they test Specification's own structural outputs and failure classes under Protocol v0.1. They remain constructed synthetic pilots and do not move Specification into `DIRECTLY_MATURE_METHOD_EVIDENCE`.
 
 ## Shared-core registry status / 공통 코어 상태
 
@@ -84,6 +96,7 @@ DIRECTLY_MATURE_METHOD_EVIDENCE:
 
 DEVELOPING_WITH_DIRECT_PILOT_EVIDENCE:
   DSD Specification
+    direct_pilot_records: 2
 
 SHARED_METHOD_FAMILY_EVIDENCE_AVAILABLE:
   yes
