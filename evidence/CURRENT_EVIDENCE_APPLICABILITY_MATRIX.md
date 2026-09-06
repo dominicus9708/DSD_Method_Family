@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + first post-closure method-protocol preparation
+Status: current migration map + first post-closure method-specific pilot
 Date: 2026-09-06
 
 This file classifies existing Analysis challenge evidence without retroactively turning it into validation of all 22 DSD methods.
@@ -10,7 +10,8 @@ This file classifies existing Analysis challenge evidence without retroactively 
 - **Direct** = the record directly tested the named method.
 - **Shared support** = the record supports a reusable method-family discipline, but does not directly validate another method.
 - **Conditional transfer** = the shared rule applies only when the receiving method exposes the relevant structure or claim type.
-- **Protocol prepared** = a dedicated method protocol exists, but direct method evidence has not yet been accumulated.
+- **Protocol prepared** = a dedicated method protocol exists, but protocol existence alone is not direct validation.
+- **Direct pilot** = a method-specific challenge directly tested the method under its own protocol, but maturity is not yet established.
 
 ## ANL-CH-001 through ANL-CH-009
 
@@ -35,23 +36,29 @@ Those shared lessons do not automatically validate Analysis, Specification, Pred
 
 ## DSD Specification / DSD 명세론
 
-A dedicated method protocol now exists at:
+A dedicated method protocol exists at:
 
 - `methods/03_specification/PROTOCOL.md` — **DSD Specification Protocol v0.1**;
 - `evidence/method_specific/specification/` — dedicated direct-evidence lane.
 
-Current classification:
+First direct pilot:
+
+- `SPEC-CH-001_well-formed-malformed-discrimination.md` — **Well-Formed / Malformed Specification Discrimination**.
 
 ```text
 METHOD: DSD Specification
 METHOD_STATUS: developing
 DEDICATED_PROTOCOL: yes
-DIRECT_METHOD_CHALLENGE_CORPUS: not_yet_accumulated
-DIRECT_METHOD_VALIDATION: not_claimed
-NEXT_DIRECT_RECORD: SPEC-CH-001
+DIRECT_METHOD_EVIDENCE: pilot_started
+SPEC_CH_001_WELL_FORMED_ACCEPTED: 2/2
+SPEC_CH_001_MALFORMED_DETECTED: 6/6
+SPEC_CH_001_EXACT_DIAGNOSTIC_MATCHES: 8/8
+SPEC_CH_001_RESULT: SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
+MATURE_DIRECT_METHOD_VALIDATION: not_claimed
+NEXT_DIRECT_RECORD: SPEC-CH-002
 ```
 
-Protocol preparation is a maturity step, not a PASS result. Specification remains outside `DIRECTLY_MATURE_METHOD_EVIDENCE` until method-specific challenge and application evidence accumulate.
+`SPEC-CH-001` is direct method-specific evidence because it tests Specification's own structural outputs and failure criteria under Protocol v0.1. It is still a constructed synthetic pilot and does not move Specification into `DIRECTLY_MATURE_METHOD_EVIDENCE`.
 
 ## Shared-core registry status / 공통 코어 상태
 
@@ -75,7 +82,7 @@ DIRECTLY_MATURE_METHOD_EVIDENCE:
   DSD Analysis
   DSD Audit
 
-DEVELOPING_WITH_DEDICATED_PROTOCOL_BUT_NOT_DIRECTLY_VALIDATED:
+DEVELOPING_WITH_DIRECT_PILOT_EVIDENCE:
   DSD Specification
 
 SHARED_METHOD_FAMILY_EVIDENCE_AVAILABLE:
