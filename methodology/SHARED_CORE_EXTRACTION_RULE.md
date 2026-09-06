@@ -48,9 +48,9 @@ The following are candidates because they have already appeared across the DSD f
 - **SC-03 explicit bridge discipline** — promoted with conditions; see `../evidence/shared/SC-03_explicit-bridge-discipline.md`;
 - **SC-04 minimum-layer / optional-interface restraint** — promoted with conditions; see `../evidence/shared/SC-04_minimum-layer-optional-interface-restraint.md`;
 - **SC-05 aggregate / information-loss / reconstruction restraint** — promoted with conditions; see `../evidence/shared/SC-05_aggregate-information-loss-reconstruction-restraint.md`;
-- transition versus regular evolution distinction;
-- explicit lineage when identity is not inherited;
+- **SC-06 transition / lineage discipline** — promoted with conditions; see `../evidence/shared/SC-06_transition-lineage-discipline.md`;
 - evidence-status versus DSD-object-status separation;
+- evidence scope versus case-origin separation;
 - strongest reasonable baseline and `NO_GAIN` preservation where applicable;
 - precommit / anti-post-hoc recording discipline;
 - explicit preservation of failed, boundary, non-correspondence, and indeterminate outcomes.
@@ -94,7 +94,7 @@ The development order begins with the most stable cross-method structures before
 3. **SC-03 explicit bridge discipline — completed: promoted_with_conditions**;
 4. **SC-04 minimum-layer / optional-interface restraint — completed: promoted_with_conditions**;
 5. **SC-05 aggregate / information-loss / reconstruction restraint — completed: promoted_with_conditions**;
-6. transition/lineage discipline;
+6. **SC-06 transition / lineage discipline — completed: promoted_with_conditions**;
 7. evidence scope and case-origin separation;
 8. baseline, failure/no-gain, and anti-post-hoc recording rules.
 
@@ -261,7 +261,39 @@ Non-transfer/reconstruction cases:
 
 Evidence record: [`../evidence/shared/SC-05_aggregate-information-loss-reconstruction-restraint.md`](../evidence/shared/SC-05_aggregate-information-loss-reconstruction-restraint.md).
 
-Relations among the first five promoted rules:
+### SC-06 — Transition / Lineage Discipline
+
+```text
+DATE: 2026-09-06
+SOURCE_SUPPORT: pass
+CROSS_FIELD_REPRESENTATIVE_METHODS: 8
+TRANSITION_AS_REGULAR_EVOLUTION_CHECKS: 8/8 detected
+LINEAGE_OMISSION_OR_INVENTION_CHECKS: 8/8 detected
+LINEAGE_COHERENCE_OR_TYPE_VIOLATION_CHECKS: 8/8 detected
+NEGATIVE_CONTROL: pass
+RESULT: promoted_with_conditions
+DIRECT_METHOD_VALIDATION: not claimed
+```
+
+Invariant meaning:
+
+> Keep ordinary downstream evolution inside a regular epoch only while inherited Stage-VI identity and declared support typing remain valid. When literal identity is broken, record a transition and supply typed lineage for any successor/history claim; do not infer succession from labels, values, aggregate equality, or apparent continuity alone.
+
+Transfer conditions:
+
+- time/order-indexed work makes identity, persistence, succession, history, or successor claims;
+- a change may invalidate Stage-VI identity, admitted support, or the regular support signature;
+- pre/post objects need to remain connected without being treated as literally equal.
+
+Non-transfer/minimal-lineage cases:
+
+- purely static single-slice work does not activate SC-06;
+- fixed-background regular evolution may use canonical identity lineage without a transition record;
+- branching/merging is allowed when the relation is typed and coherent unless the task explicitly requires uniqueness.
+
+Evidence record: [`../evidence/shared/SC-06_transition-lineage-discipline.md`](../evidence/shared/SC-06_transition-lineage-discipline.md).
+
+Relations among the first six promoted rules:
 
 ```text
 SC-01 = preserve claim-relevant distinctions
@@ -269,4 +301,5 @@ SC-02 = lock the semantics that determine which rules/interfaces are active
 SC-03 = explicitly supply claim-relevant mappings between active structures
 SC-04 = keep only claim-relevant layers as dependencies and avoid optional-interface overconstraint
 SC-05 = do not infer beyond the information-preservation/reconstruction capacity of reduced aggregates
+SC-06 = separate identity-preserving evolution from identity-breaking transition and use lineage for succession
 ```
