@@ -1,6 +1,6 @@
 # DSD Specification Method-Specific Evidence / DSD 명세론 개별 방법 직접 증거
 
-Status: **five direct pilot records completed / internal constructed sequence complete / not mature**  
+Status: **five direct pilot records + first external application completed / maturity audit pending**  
 Date: 2026-09-06  
 Method: **DSD Specification / DSD 명세론**  
 Protocol: [`../../../methods/03_specification/PROTOCOL.md`](../../../methods/03_specification/PROTOCOL.md)
@@ -15,7 +15,7 @@ Shared-core pilots SC-01 through SC-10 may be reused as operating disciplines, b
 EVIDENCE_SCOPE_CLASS: method_specific
 METHOD_DIRECTLY_TESTED: DSD Specification
 METHOD_VERSION_OR_PROTOCOL: Specification Protocol v0.1
-CHALLENGE_ID:
+CHALLENGE_ID_OR_APPLICATION_ID:
 TASK:
 LOCKED_REQUIREMENT_INVENTORY:
 DSD_LAYERS_USED:
@@ -115,26 +115,58 @@ INDEPENDENT_EVALUATOR_VALIDATION: not established
 
 This fifth pilot supports procedural retraceability and order stability on a frozen constructed packet. It does **not** count as an independent external review because both retraces were performed in the same project session by the same assistant/model family.
 
-## Direct-evidence sequence
+## External / independently generated application / 외부·독립 생성 corpus 적용
+
+### SPEC-APP-001 — RFC 9112 §6.3 Message Body Length
+
+Precommit: [`../../real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length_precommit.md`](../../real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length_precommit.md)  
+Result: [`../../real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length.md`](../../real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length.md)
 
 ```text
-SPEC-CH-001  basic well-formed / malformed specification discrimination — completed
-SPEC-CH-002  contradiction and underspecification challenge — completed
-SPEC-CH-003  optional-layer and bridge boundary challenge — completed
-SPEC-CH-004  NO_GAIN specification challenge — completed
-SPEC-CH-005  reproducibility / independent retrace challenge — completed with independence limitation
+CASE_ORIGIN: public_normative_standard
+SOURCE: RFC 9112 §6.3 core precedence algorithm
+PRECOMMIT_COMMIT: 9b91cecda9516fd7cd65c9eb181e80ab4fa45deb
+SOURCE_UNIT_COVERAGE: 13/13
+TRIGGER_OR_ACTOR_SCOPE_PRESERVATION: 13/13
+PRECEDENCE_PRESERVATION: 13/13
+BCP14_MUST_OBLIGATIONS_PRESERVED: 8/8
+INVENTED_SOURCE_FACTS: 0
+SILENTLY_DROPPED_SOURCE_ACTIONS: 0
+SOURCE_FIDELITY_RESULT: pass
+FINAL_SPEC_STATUS: no_gain
+COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
+PROTOCOL_PRESSURE: ordered precedence / priority, present_nonfatal
+INDEPENDENT_EVALUATOR_VALIDATION: not_established
 ```
 
-The initial internal constructed challenge sequence is now complete.
+The first external corpus did **not** produce a forced DSD advantage. RFC 9112 §6.3 is already a compact, ordered, normative specification, so the correct comparative result under the precommitted gain criteria was `SPEC_NO_GAIN`, with the original RFC baseline preferred for this locked task.
+
+The application also exposed a nonfatal Protocol v0.1 pressure point: ordered decision procedures can be represented using explicit predecessor exclusions in `ACTIVATION_CONDITION` / `DEPENDENCIES`, but a future optional precedence/priority field may be more ergonomic. The protocol was not changed retroactively for the same run.
+
+## Evidence sequence
+
+```text
+SPEC-CH-001  completed
+SPEC-CH-002  completed
+SPEC-CH-003  completed
+SPEC-CH-004  completed
+SPEC-CH-005  completed with independence limitation
+SPEC-APP-001 first external/independently generated corpus application — completed
+```
+
+The initial internal constructed challenge sequence and the external-origin application requirement are both now present.
 
 ## Promotion restraint / 승격 절제
 
 ```text
-CURRENT_DIRECT_METHOD_EVIDENCE: five_pilots_completed
+CURRENT_INTERNAL_DIRECT_PILOTS: five_completed
 INTERNAL_CONSTRUCTED_CHALLENGE_SEQUENCE: completed
+EXTERNAL_OR_INDEPENDENTLY_GENERATED_APPLICATION_CASE: completed
+EXTERNAL_APPLICATION_RESULT: SPEC_NO_GAIN
+INDEPENDENT_EVALUATOR_VALIDATION: not_established
 CURRENT_METHOD_STATUS: developing
 MATURE_METHOD_STATUS: not_claimed
-NEXT_REQUIRED_EVIDENCE: external_or_independently_generated_application_case
+NEXT_STEP: specification_maturity_audit
 ```
 
-Completion of five constructed pilots does not establish mature direct validity. Before maturity promotion, add at least one external or independently generated requirement corpus, preserve the applicable external baseline/standard, and preferably obtain genuinely independent retrace or review evidence.
+Do not promote Specification automatically from checklist completion alone. The next step is a dedicated maturity audit that evaluates evidence breadth, external-origin evidence, independent-evaluator gap, baseline-preferred result, Protocol v0.1 pressure, and remaining real-world validation limits.
