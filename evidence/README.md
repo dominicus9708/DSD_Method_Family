@@ -28,6 +28,8 @@ without a method-specific test.
 
 Likewise, a real event, judicial case, historical case, personal case, or empirical dataset is not automatically validation of the whole method family merely because DSD can be applied to it.
 
+The separation between evidence applicability and case origin has now been cross-field tested as shared-core rule **SC-07**. See [`shared/SC-07_evidence-scope-case-origin-separation.md`](shared/SC-07_evidence-scope-case-origin-separation.md). That pilot supports the classification rule itself; it does not directly validate all 22 methods and does not claim that any new real-world case was externally verified.
+
 ## Required scope fields / 적용 범위 필드
 
 ```text
@@ -55,6 +57,8 @@ CASE_ORIGIN:
   organizational_or_technical_incident
 ```
 
+`CASE_ORIGIN` may change source-verification, authority, privacy, provenance, or external-standard obligations. It does **not** by itself change `METHOD_DIRECTLY_TESTED` or expand a record from method-specific evidence to whole-family validation.
+
 ## Directory map / 폴더 구조
 
 ```text
@@ -62,7 +66,8 @@ evidence/
 ├─ README.md
 ├─ CURRENT_EVIDENCE_APPLICABILITY_MATRIX.md
 ├─ shared/
-│  └─ README.md
+│  ├─ README.md
+│  └─ SC-07_evidence-scope-case-origin-separation.md
 ├─ method_specific/
 │  └─ README.md
 └─ real_world_cases/
