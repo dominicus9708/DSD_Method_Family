@@ -29,13 +29,15 @@ REPRODUCIBILITY_RECORD:
 - `DSD_Audit/` and new audit records directly validate **DSD Audit** procedures and verdict discipline only.
 - Shared-rule lessons extracted from those records may be cross-referenced under `../shared/`, but this does not count as direct validation of Comparison, Classification, Prediction, Control, Reconstruction, Specification, or any other method.
 
-## Prepared method-specific evidence lanes / 준비된 개별 증거 경로
+## Method-specific evidence lanes / 개별 증거 경로
 
 - [`specification/`](specification/) — **DSD Specification / DSD 명세론**
   - dedicated protocol v0.1 established;
   - current method status: `developing`;
-  - direct challenge corpus: not yet accumulated;
-  - first planned record: `SPEC-CH-001`.
+  - `SPEC-CH-001` completed: 2/2 well-formed accepted, 6/6 malformed detected, 8/8 exact diagnostic-family matches;
+  - result: `SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS`;
+  - maturity: not claimed;
+  - next direct record: `SPEC-CH-002`.
 
 ## Promotion expectation / 성숙도 승격 기준
 
@@ -50,4 +52,4 @@ A proposed or developing method should accumulate, at minimum:
 7. at least one external or independently generated application case;
 8. a strongest-reasonable-baseline comparison when applicable.
 
-Shared evidence alone does not satisfy these method-specific requirements.
+Shared evidence alone does not satisfy these method-specific requirements, and one synthetic pilot is not enough for maturity promotion.
