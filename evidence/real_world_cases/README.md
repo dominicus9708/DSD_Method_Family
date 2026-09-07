@@ -119,8 +119,32 @@ COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 
 This first external v0.2.1 run demonstrates that the method can preserve required categories while leaving source-supported site-specific implementation open, without treating missing workplace facts as a defect in the regulation or fabricating them. It does not establish a practical advantage over OSHA's own strong cross-referenced regulation/eTool/checklist baseline.
 
+#### SPEC-APP-004 — WCAG 2.2 Contrast (Minimum) + official ACT labeled examples
+
+- [`specification/SPEC-APP-004_WCAG22-contrast-v1.0_precommit.md`](specification/SPEC-APP-004_WCAG22-contrast-v1.0_precommit.md)
+- [`specification/SPEC-APP-004_WCAG22-contrast-v1.0.md`](specification/SPEC-APP-004_WCAG22-contrast-v1.0.md)
+
+```text
+PROTOCOL: v1.0
+CASE_ORIGIN: public_normative_standard_plus_official_labeled_examples
+EXTERNAL_DOMAIN: web accessibility / text contrast
+SOURCE: WCAG 2.2 SC 1.4.3 + W3C/WAI ACT Text has minimum contrast
+SELECTED_OFFICIAL_EXAMPLES: 8
+EXAMPLE_OUTCOME_FAMILY_MATCHES: 8/8
+NORMAL_LARGE_THRESHOLD_SEPARATION: pass
+INCIDENTAL_INACTIVE_BOUNDARY_PRESERVATION: pass
+SOURCE_FACT_INVENTIONS: 0
+NORMATIVE_FORCE_STRENGTHENINGS: 0
+INACTIVE_CONDITIONAL_LEDGER_BOILERPLATE: 0
+FINAL_SPEC_STATUS: no_gain
+GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
+RESULT: SPECIFICATION_V1_0_EXTERNAL_LABELED_REGRESSION_NO_GAIN_WITH_LIMITATIONS
+```
+
+This is the first post-standardization v1.0 external application. It is deliberately classified as a **labeled regression/interface test**, not a blind predictive validation, because the official W3C ACT outcome labels were visible before DSD mapping. The case directly checks that v1.0 preserves normal/large-text thresholds and incidental applicability boundaries while leaving irrelevant conditional ledgers inactive.
+
 ## Validation limit / 검증 한계
 
 A real-world or external-source case is application evidence first. It contributes to method validation only when protocol, scoring/failure criteria, external standard, source-purpose boundary, and relevant baseline were locked well enough to make the case a genuine test rather than an illustration.
 
-An external origin and an independent evaluator are different axes. The current Specification external corpus spans three domains and three document/source configurations, but all DSD scoring remains within the same project/model environment. Independent reviewer validation therefore remains unresolved.
+An external origin and an independent evaluator are different axes. The current Specification external corpus spans **four domains / four applications**, but all DSD scoring remains within the same project/model environment. `SPEC-APP-004` is additionally non-blind with respect to the official example outcome labels. Independent reviewer validation therefore remains unresolved.
