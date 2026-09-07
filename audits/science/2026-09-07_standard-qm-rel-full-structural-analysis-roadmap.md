@@ -1,7 +1,7 @@
 # Active Roadmap — Full DSD Structural Analysis of Standard Quantum Mechanics and Relativity
 
 Date: 2026-09-07
-Status: **ACTIVE TRACK (Track 2)**
+Status: **NON-QFT TRACK 2 COMPLETE — TRACK 3 HANDOFF ACTIVE**
 
 ## Activation note
 
@@ -110,7 +110,7 @@ so `FAIL` is not used for a valid in-domain object that is merely insufficient f
 - [x] First-pass placement of identical-particle exchange structure as explicit standard-domain relation.
 - [ ] Standard QFT only as a later standard-domain extension, with a fresh primitive lock and without importing quantum-gravity assumptions.
 
-Detailed audits remain pending even where first-pass placement is checked, except where explicitly marked complete below.
+The present non-QFT gate is complete. Standard QFT remains deliberately outside this completion status.
 
 ---
 
@@ -129,7 +129,7 @@ Detailed audits remain pending even where first-pass placement is checked, excep
 - [x] First-pass placement of stress-energy conservation and Bianchi consistency as standard-theory constraints.
 - [x] First-pass separation of coordinate/gauge redundancy from genuine information loss/reconstruction.
 
-Detailed audits remain pending even where first-pass placement is checked.
+The declared non-QFT relativity targets have completed first-pass placement and the selected detailed stress-test sequence.
 
 ---
 
@@ -140,11 +140,13 @@ Detailed audits remain pending even where first-pass placement is checked.
 - [x] First-pass comparison of subsystem access in QM with causal/domain access in relativity without identifying them.
 - [x] Compare standard invariants with DSD strict equivalence only through explicit maps.
 - [x] Typed dimensions remain separated: Hilbert dimension, manifold dimension, probe count, DSD channel/term/rank counts.
-- [ ] Continue detailed countermodels where one common role fails, becomes incomparable, or requires theory-specific extension.
+- [x] Detailed common-role countermodels B1-B5 completed; theory-specific failure/extension boundaries recorded.
 - [x] First genuinely common theorem admitted only after proof from the abstract typed-map structure: fiber-factorization criterion for reduced maps.
 - [x] Common typed-map lemma admitted: passive re-encoding is classified by semantic-decoder commutation, not by invertibility alone.
 - [x] Common readout-fiber theorem admitted: constant selected output constrains motion to a readout fiber and does not imply state constancy without separation/injectivity.
-- [x] Common reduced-transition closure theorem admitted: an induced reduced dynamics exists exactly when the full transition respects reduction fibers.
+- [x] Common reduced-transition closure theorem admitted and reclassified as a corollary of fiber-factorization.
+- [x] Common composition/compatibility gate admitted after B5.
+- [x] Common-theorem dependency audit complete: three independent structural families retained.
 
 ---
 
@@ -197,6 +199,8 @@ Accumulated audit-level completeness refinement:
 }
 \]
 
+For dynamic claims, the supplied evolution/transition law and retained state required for closure must also be declared.
+
 This is a structural reporting result, not a new physical law.
 
 Detailed audit records:
@@ -212,6 +216,8 @@ audits/science/2026-09-08_cross-partial-trace-causal-restriction-factorization-a
 audits/science/2026-09-08_cross-passive-representation-active-transition-audit.md
 audits/science/2026-09-08_cross-selected-readout-invariant-nonzero-dynamics-audit.md
 audits/science/2026-09-08_cross-reduction-access-transition-closure-audit.md
+audits/science/2026-09-08_cross-composition-order-typed-reductions-audit.md
+audits/science/2026-09-08_track2-common-theorem-gate-synthesis.md
 ```
 
 Reproducibility records:
@@ -227,13 +233,16 @@ audits/science/2026-09-08_cross_restriction_factorization_firewall.py
 audits/science/2026-09-08_cross_passive_representation_active_transition.py
 audits/science/2026-09-08_cross_selected_readout_invariant_nonzero_dynamics.py
 audits/science/2026-09-08_cross_reduction_transition_closure.py
+audits/science/2026-09-08_cross_composition_order_typed_reductions.py
 ```
+
+No new Python script was required for the final theorem-dependency synthesis because the final step classifies and proves dependence among already established abstract results and witnesses.
 
 ---
 
-## Next Track-2 phase — stress test of the common structuring
+## Second-depth stress test of the common structuring — complete
 
-The first detailed sequence is complete. The second-depth phase attacks the remaining cross-standard-theory questions rather than adding another untested physical identification.
+The first detailed sequence and B1-B5 countermodel cycle are complete.
 
 ```text
 A. DONE 2026-09-08 — standard invariants/equivalences vs DSD strict equivalence
@@ -243,11 +252,11 @@ A. DONE 2026-09-08 — standard invariants/equivalences vs DSD strict equivalenc
                     strict equivalence remain NON_IDENTICAL until an explicit typed bridge
                     is proved to preserve and reflect both relations.
 
-B. ACTIVE — common-role countermodel search
+B. DONE — common-role countermodel search
 
    B1. DONE 2026-09-08 — QM partial trace vs relativistic causal/domain restriction
        result: PASS_WITH_BOUNDARY
-       common theorem admitted:
+       common theorem:
          for f:X->Y and q:X->Z, q factors through f iff q is constant on every f-fiber;
          non-singleton fibers obstruct unrestricted source reconstruction.
        physical boundary:
@@ -258,76 +267,100 @@ B. ACTIVE — common-role countermodel search
 
    B2. DONE 2026-09-08 — passive representation change vs active physical transition
        result: PASS_WITH_BOUNDARY
-       common typed-map lemma admitted:
+       common typed criterion:
          for representation decoders D_r and D_r', a passive re-encoding T obeys
          D_r' o T = D_r, while an active transition realization obeys
          D_r' o E_tilde = E o D_r for a supplied semantic transition E.
        physical boundary:
          QM basis change != unitary physical evolution;
          Lorentz-frame re-description != worldline progression;
-         invertibility/reversibility alone does not classify either role;
-         the same numerical matrix/group element can appear in different typed roles.
+         invertibility/reversibility alone does not classify either role.
 
    B3. DONE 2026-09-08 — selected readout/invariant constancy vs zero dynamics
        result: PASS_WITH_BOUNDARY
-       common theorem admitted:
+       derived fiber result:
          Phi(Gamma(s)) = Phi(s) iff Gamma(s) remains in the same Phi-fiber;
-         selected-output constancy implies state constancy only when the selected/joint
-         readout is injective or point-separating on the declared orbit/target set.
-       endpoint refinement:
-         Gamma_T(s) = s at a sampled endpoint does not imply a constant trajectory on
-         0 < t < T.
+         state constancy requires an injective/separating readout on the declared target set.
        physical boundary:
-         constant QM measurement probabilities or energy expectation != stationary ray;
-         constant relativistic four-velocity norm != unchanged worldline event;
-         conserved/invariant quantity != complete state descriptor.
+         constant selected output/invariant != stationary physical state.
 
    B4. DONE 2026-09-08 — reduction/access map vs transition closure
        result: PASS_WITH_BOUNDARY
-       common theorem admitted:
+       derived corollary of B1:
          for R:S->Y and Gamma:S->S, an induced Gamma_red on im(R) satisfying
-         R o Gamma = Gamma_red o R exists iff
-         R(s)=R(s') implies R(Gamma(s))=R(Gamma(s'));
-         equivalently, Gamma must respect the equivalence relation/fibers induced by R.
-       QM witness:
-         equal subsystem-A marginals can evolve to different A marginals under SWAP,
-         while factorized local unitary dynamics closes autonomously on A.
-       relativistic wave witness:
-         initial data on a fixed interval determine only its dependence domain without
-         extra boundary/exterior data; the same fixed spatial restriction need not close.
+         R o Gamma = Gamma_red o R exists iff Gamma respects R-fibers.
        physical boundary:
-         quantum environment != spacetime exterior;
-         partial trace != domain restriction;
-         reduced open-system closure != relativistic boundary closure.
+         reduced-state validity != autonomous reduced dynamics.
 
-   B5. NEXT — composition of reductions/readouts vs order dependence
-       abstract target:
-         R2 o R1 ?= R1 o R2
-       question:
-         when do two individually valid reductions commute or factor through a joint reduction?
-       QM comparator:
-         compatible/nested subsystem and measurement reductions vs order-sensitive operations.
-       Relativity comparator:
-         nested domain restriction vs representation/access operations.
-       Goal:
-         distinguish typed composability from mere existence of both maps and derive exact
-         commutation/factorization criteria before applying theory-specific meanings.
+   B5. DONE 2026-09-08 — composition of reductions/readouts vs order dependence
+       result: PASS_WITH_BOUNDARY
+       common composition gate:
+         map existence -> typing -> composability -> compatibility/commutation test.
+       conditional theorem:
+         commuting idempotent endomaps compose to an idempotent with image equal to
+         the intersection of their images.
+       physical boundary:
+         disjoint partial traces may commute;
+         individually valid dephasing channels may not;
+         nested domain restrictions can be one-way typed rather than two-way commuting.
 
-C. COMMON-THEOREM GATE — ACTIVE
-   Admitted results:
-     1. fiber-factorization criterion for arbitrary maps;
-     2. semantic-decoder commutation criterion separating passive re-encoding from
-        active transition at the typed-map level;
-     3. readout-fiber motion criterion: selected-output constancy is fiber constancy,
-        while state constancy requires an injective/separating readout on the target orbit;
-     4. reduced-transition closure criterion: an autonomous induced dynamics exists on
-        im(R) iff the full transition respects R-fibers.
-   Rule remains:
-     no further common theorem is recorded unless it follows from the abstract map/typing
-     structure itself rather than being imported from either QM or relativity.
+C. COMMON-THEOREM GATE — DONE 2026-09-08
+   final independent families:
+     I.   fiber / quotient factorization;
+     II.  typed semantic commutation;
+     III. typed composition / compatibility.
+
+   dependency refinements:
+     - readout-fiber motion is a fiber-family consequence;
+     - reduced-transition closure is B1 factorization with q=R o Gamma;
+     - invariant completeness is quotient injectivity inside the fiber/quotient family;
+     - equivalence preservation/reflection is retained as a bridge-faithfulness audit rule.
+
+   reusable methodology interface:
+     methodology/STANDARD_THEORY_COMMON_STRUCTURING_KERNEL.md
+
+   synthesis record:
+     audits/science/2026-09-08_track2-common-theorem-gate-synthesis.md
 ```
 
 Standard QFT remains a later extension and requires a fresh primitive lock.
+
+---
+
+## Non-QFT Track-2 final verdict
+
+```text
+OVERALL: PASS_WITH_BOUNDARY
+
+broad common typed structuring:
+  SURVIVES
+
+common physical identification:
+  NOT ESTABLISHED
+
+independent common structural families:
+  3
+
+DSD core contradiction found:
+  NO
+
+DSD core revision required:
+  NO
+
+methodology refinement:
+  COMPLETED
+```
+
+Strongest safe conclusion:
+
+\[
+\boxed{
+\text{standard QM and relativity instantiate several of the same abstract
+map/typing/reconstruction patterns while retaining distinct physical primitives.}
+}
+\]
+
+This is structural commonality, not physical unification.
 
 ---
 
@@ -335,22 +368,45 @@ Standard QFT remains a later extension and requires a fresh primitive lock.
 
 The track succeeds even if the result is negative or limited.
 
-Possible outcomes include:
+The completed non-QFT cycle produced outcome **A with explicit B/C-style boundaries**:
 
 ```text
-A. broad common structuring survives;
-B. common structuring survives only for selected layers;
-C. specific foundational sectors require new optional DSD interfaces;
-D. an apparent commonality is only vocabulary-level and must be rejected;
-E. standard-theory structure exposes a contradiction or overreach in a proposed DSD specialization.
+A. broad common structuring survives at the typed/map level;
+B. the common structuring is limited to selected structural layers rather than native physical primitives;
+C. theory-specific sectors still require their own explicit standard-domain structures;
+D. several apparent vocabulary-level commonalities were rejected;
+E. no contradiction in the current DSD core was exposed by this cycle.
 ```
 
 A successful analysis does not require a quantum-gravity claim.
 
 ---
 
-## Relation to Track 3
+## Relation to Track 3 — active handoff
 
-Track 3 applies existing DSD static aggregation and structural-reorganization dynamics to the already isolated common structuring roles.
+Track 3 applies existing DSD static aggregation and structural-reorganization dynamics only to the common structuring roles that survived Track 2.
 
-Track 2 remains the breadth, boundary, and countermodel audit for that construction. Track 2 must not be backfilled with assumptions inferred from Track-3 outcomes.
+The handoff contract is:
+
+```text
+1. lock the standard-theory input independently;
+2. declare the DSD configuration/state boundary;
+3. declare every reduction/readout and codomain;
+4. test fibers and reconstruction before aggregation;
+5. supply dynamics explicitly;
+6. test reduced-dynamic closure rather than assume it;
+7. type every composition before calculating it;
+8. preserve QM-specific and relativity-specific physical meanings;
+9. reject physical coupling inferred only from common abstract structure.
+```
+
+Track 2 must not be backfilled with assumptions inferred from Track-3 outcomes.
+
+Next constructive target:
+
+```text
+Given the verified common typed kernel, determine the first static/dynamic construction
+that can be made without adding an unjustified cross-physical identification.
+```
+
+Standard QFT remains a separate later extension with a fresh primitive lock.
