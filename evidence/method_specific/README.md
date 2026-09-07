@@ -34,20 +34,23 @@ REPRODUCIBILITY_RECORD:
 
 - [`specification/`](specification/) — **DSD Specification / DSD 명세론**
   - v0.1 historical protocol retained;
-  - prospective Protocol v0.2 established for new runs after `SPEC-CH-006`;
+  - Protocol v0.2 current for new runs after `SPEC-CH-006`;
   - current method status: `developing`;
   - `SPEC-CH-001~005`: v0.1 direct constructed pilots;
   - `SPEC-CH-006`: purpose/detail/viewpoint guardrail centerline challenge;
   - current total direct constructed pilot count: `6`;
-  - first external/independently generated corpus application `SPEC-APP-001`: completed under v0.1;
-  - external application result: `SPEC_NO_GAIN`, `BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK`;
-  - external source-fidelity result: pass on the locked RFC 9112 §6.3 corpus;
-  - v0.2 external applications: `0`;
+  - `SPEC-APP-001`: RFC 9112 §6.3 under v0.1, `SPEC_NO_GAIN`, baseline preferred;
+  - `SPEC-APP-002`: Belmont Report Part C under v0.2, `MIXED_GAIN_WITH_GUARDRAIL_PRESSURE`;
+  - external applications total: `2`;
+  - external domains total: `2`;
+  - v0.2 external applications: `1`;
+  - latest source-fidelity result: 22/22 locked Belmont source units preserved, hard failures 0;
+  - latest guardrail result: `GUARDRAIL_PRESSURE`, primarily from representation/detail burden;
   - independent evaluator validation: `not established`;
-  - first Specification maturity audit: completed;
-  - promotion to `established`: `INSUFFICIENT_BASIS`;
-  - current `developing` status: confirmed;
-  - next direct application: `SPEC-APP-002` on a less-structured external corpus under v0.2.
+  - first Specification maturity audit: completed before `SPEC-APP-002`;
+  - promotion to `established` in that audit: `INSUFFICIENT_BASIS`;
+  - current status remains `developing` until a new re-audit is performed;
+  - next strongest evidence: independent retrace or intentional-open-texture boundary challenge.
 
 ### Specification guardrail distinction
 
@@ -71,6 +74,13 @@ HARD_FAILURE
 
 The guardrail profile is **not** promoted to a new shared-core rule at this stage.
 
+`SPEC-APP-002` adds another method-specific pressure distinction that is not yet promoted into the protocol as a dedicated status:
+
+```text
+source-intentional normative openness
+!= accidental specification underspecification
+```
+
 ## Promotion expectation / 성숙도 승격 기준
 
 A proposed or developing method should accumulate, at minimum:
@@ -84,6 +94,6 @@ A proposed or developing method should accumulate, at minimum:
 7. at least one external or independently generated application case;
 8. a strongest-reasonable-baseline comparison when applicable.
 
-These eight categories are a minimum evidence architecture for promotion consideration, not an automatic promotion rule. If later use exposes a stable method-specific blind spot — such as purpose/viewpoint distortion in Specification — the protocol may be prospectively revised without rewriting earlier evidence.
+These eight categories are a minimum evidence architecture for promotion consideration, not an automatic promotion rule. If later use exposes a stable method-specific blind spot — such as purpose/viewpoint distortion or intentional open-texture handling in Specification — the protocol may be prospectively revised without rewriting earlier evidence.
 
 Shared evidence alone does not satisfy method-specific promotion requirements. Procedural same-session retrace does not substitute for a genuinely independent reviewer, and external corpus origin does not substitute for independent evaluation.
