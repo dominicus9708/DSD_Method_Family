@@ -138,7 +138,7 @@ Detailed audits remain pending even where first-pass placement is checked.
 - [x] First-pass common roles: formation, typed properties, representation, access, readout, reconstruction, dynamics survive as structural roles.
 - [x] First-pass separation of reversible representation changes from non-injective restrictions in both theories.
 - [x] First-pass comparison of subsystem access in QM with causal/domain access in relativity without identifying them.
-- [ ] Compare standard invariants with DSD strict equivalence only through explicit maps.
+- [x] Compare standard invariants with DSD strict equivalence only through explicit maps.
 - [x] Typed dimensions remain separated: Hilbert dimension, manifold dimension, probe count, DSD channel/term/rank counts.
 - [ ] Search for detailed countermodels where one common role fails, becomes incomparable, or requires theory-specific extension.
 - [ ] Record any genuinely common theorem only after it is proved from the abstract map/typing structure rather than imported from either theory.
@@ -204,6 +204,7 @@ audits/science/2026-09-08_phy-qm-051-configuration-state-composite-access-audit.
 audits/science/2026-09-08_phy-rel-005-configuration-state-frame-causal-access-audit.md
 audits/science/2026-09-08_phy-rel-006-cauchy-domain-reconstruction-audit.md
 audits/science/2026-09-08_phy-rel-007-standard-domain-relation-layer-audit.md
+audits/science/2026-09-08_cross-standard-equivalence-dsd-strict-equivalence-audit.md
 ```
 
 Reproducibility records:
@@ -214,21 +215,29 @@ audits/science/2026-09-06_werner_dsd_entanglement_chsh.py
 audits/science/2026-09-08_rel_chart_frame_causal_access.py
 audits/science/2026-09-08_rel_cauchy_domain_reconstruction.py
 audits/science/2026-09-08_rel_relation_layer_symmetry_curvature_einstein_conservation.py
+audits/science/2026-09-08_cross_equivalence_invariant_firewall.py
 ```
 
 ---
 
 ## Next Track-2 phase — stress test of the common structuring
 
-The first detailed sequence is complete. The next phase should attack the remaining cross-standard-theory questions rather than add another untested physical identification.
+The first detailed sequence is complete. The second-depth phase attacks the remaining cross-standard-theory questions rather than adding another untested physical identification.
 
 ```text
-A. NEXT — explicit comparison of standard invariants/equivalences with DSD strict equivalence
-   Goal: determine exactly which comparison maps can be defined and which identifications fail.
+A. DONE 2026-09-08 — standard invariants/equivalences vs DSD strict equivalence
+   result: PASS_WITH_BOUNDARY
+   result boundary: invariant equality classifies an equivalence only when the induced
+                    quotient invariant is injective; standard physical equivalence and DSD
+                    strict equivalence remain NON_IDENTICAL until an explicit typed bridge
+                    is proved to preserve and reflect both relations.
 
-B. Countermodel search
+B. NEXT — common-role countermodel search
    Goal: find cases where a common role such as representation/access/readout/reconstruction
          becomes incomparable or requires a theory-specific extension.
+   First target: QM partial trace vs relativistic causal/domain restriction. Isolate the
+                 genuinely common non-injective-map theorem and mark where the physical
+                 analogy stops.
 
 C. Common-theorem gate
    Goal: state a genuinely common theorem only if it follows from the abstract typed-map
