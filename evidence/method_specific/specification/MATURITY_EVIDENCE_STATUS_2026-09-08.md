@@ -15,7 +15,7 @@ RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 3
 RESOLUTION_WITHHELD_NON_SOFTWARE_APPLICATIONS: 1
 METHOD_FAMILY_LINKAGE_PILOTS: 2
 BLOCKED_UNSCORED_EXTERNAL_BLIND_PRECOMMITS: 1
-PRACTICAL_COMPARATIVE_BENCHMARKS_COMPLETED: 3
+PRACTICAL_COMPARATIVE_BENCHMARKS_COMPLETED: 4
 INDEPENDENT_EVALUATOR_PACKETS_PREPARED: 2
 INDEPENDENT_EVALUATOR_PACKETS_READY_FOR_CONFIRMATORY_SCORING: 1
 ```
@@ -220,12 +220,52 @@ The DSD carrier was about 1.94x the stored UTF-8 size of the strong conventional
 
 No human time, cognitive load, or productivity measurement was available.
 
+### SPEC-MEAS-004 — change-propagation benchmark
+
+```text
+CHANGE_EVENTS: 3
+TOTAL_EXPECTED_IMPACT_ENTRY_INSTANCES: 8
+BASELINE_CORRECT_IMPACT_ENTRY_INSTANCES: 8/8
+DSD_CORRECT_IMPACT_ENTRY_INSTANCES: 8/8
+BASELINE_FALSE_IMPACT_ENTRY_INSTANCES: 0
+DSD_FALSE_IMPACT_ENTRY_INSTANCES: 0
+BASELINE_MISSED_IMPACT_ENTRY_INSTANCES: 0
+DSD_MISSED_IMPACT_ENTRY_INSTANCES: 0
+BASELINE_STALE_AFFECTED_ENTRIES: 0
+DSD_STALE_AFFECTED_ENTRIES: 0
+BASELINE_UNAFFECTED_ENTRIES_REOPENED: 0
+DSD_UNAFFECTED_ENTRIES_REOPENED: 0
+BASELINE_FROZEN_CARRIER_UTF8_BYTES: 1006
+DSD_FROZEN_CARRIER_UTF8_BYTES: 4248
+DSD_TO_BASELINE_BYTE_RATIO: 4.223
+CHANGE_PROPAGATION_ACCURACY: tie
+REVIEW_SCOPE_LOCALIZATION: tie
+REPRESENTATION_BURDEN_AXIS: baseline_advantage
+MEASURED_HUMAN_TIME: not_measured
+SCALAR_WINNER: not_assigned
+```
+
+`SPEC-MEAS-004` adds a new practical measurement axis: requirement change propagation and review-scope localization. The strong conventional baseline was explicitly given stable IDs, activation conditions, dependency links, and validation-standard metadata, so DSD could not gain by baseline impoverishment.
+
+Both routes exactly localized all three locked change closures and avoided stale or unrelated entries. The DSD carrier was about 4.223x the stored UTF-8 size of the conventional carrier.
+
+The result therefore weakens another simple automatic-superiority hypothesis:
+
+```text
+DSD_CHANGE_PROPAGATION_SUPERIORITY: not demonstrated
+DSD_REVIEW_SCOPE_SUPERIORITY: not demonstrated
+```
+
+No human maintenance time, cognitive load, organizational change cost, or independent maintainer error rate was measured.
+
 ### Current practical-benefit conclusion
 
 ```text
-MEASURED_CASE_LEVEL_REPRESENTATION_RESULT: established_on_SPEC-MEAS-001_and_003
+MEASURED_CASE_LEVEL_REPRESENTATION_RESULT: established_on_SPEC-MEAS-001_003_004
 CASE_LEVEL_HANDOFF_STRUCTURE_DIFFERENCE: established_on_SPEC-MEAS-002_and_003
 REPEATED_USE_COUNT_ADVANTAGE: not demonstrated_on_SPEC-MEAS-003
+CHANGE_PROPAGATION_ACCURACY_ADVANTAGE: not demonstrated_on_SPEC-MEAS-004
+REVIEW_SCOPE_LOCALIZATION_ADVANTAGE: not demonstrated_on_SPEC-MEAS-004
 POSITIVE_MEASURED_PRACTICAL_BENEFIT: not demonstrated
 GENERAL_MEASURED_PRACTICAL_BENEFIT: not_established
 ```
@@ -235,7 +275,9 @@ The practical evidence now supports a conditional interpretation:
 ```text
 DSD_NATIVE_TYPED_HANDOFF: demonstrated_on_locked_cases
 CONVENTIONAL_REUSABILITY: also demonstrated
+CONVENTIONAL_CHANGE_TRACEABILITY: also demonstrated
 DSD_AUTOMATIC_REUSE_SUPERIORITY: not supported
+DSD_AUTOMATIC_CHANGE_PROPAGATION_SUPERIORITY: not supported
 ```
 
 ## Re-audit readiness
@@ -251,7 +293,7 @@ POSITIVE_MEASURED_PRACTICAL_BENEFIT: not demonstrated
 
 The independent-evaluator blocker now has a release-ready packet, but it remains unresolved until a genuinely separate reviewer completes `SPEC-IND-002` and freezes the result before answer comparison.
 
-The second receiving-method linkage adds genuinely new cross-method breadth, so repeated same-boundary linkage pilots now have diminishing value. Additional internal work should target a materially new measurement axis or wait for the independent reviewer event rather than accumulating similar handoff successes.
+The second receiving-method linkage added cross-method breadth, and `SPEC-MEAS-004` added a genuinely new practical axis. However, the new change-propagation benchmark again did not demonstrate a DSD advantage over a strong conventional carrier. Further same-project constructed benchmarks now have sharply diminishing maturity value unless they measure a still-missing quantity such as actual human time, independent-maintainer error, or real organizational change cost.
 
 The next maturity re-audit should occur after a genuine independent reviewer submission is frozen and compared, or after materially stronger practical evidence resolves one of the blockers above. Running the audit now would mainly reconfirm the existing `developing` status.
 
