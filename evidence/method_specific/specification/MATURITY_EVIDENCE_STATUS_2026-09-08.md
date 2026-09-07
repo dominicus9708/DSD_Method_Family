@@ -15,7 +15,7 @@ RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 3
 RESOLUTION_WITHHELD_NON_SOFTWARE_APPLICATIONS: 1
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 BLOCKED_UNSCORED_EXTERNAL_BLIND_PRECOMMITS: 1
-PRACTICAL_COMPARATIVE_BENCHMARKS_COMPLETED: 2
+PRACTICAL_COMPARATIVE_BENCHMARKS_COMPLETED: 3
 ```
 
 ## Independent evaluator track
@@ -77,16 +77,50 @@ However, the DSD route also carries the upstream cost of the 24-atom Specificati
 
 This is a benchmark-design limitation, not a v1.0 protocol failure.
 
+### SPEC-MEAS-003 — repeated-use carrier benchmark
+
+```text
+CASE: repeated reuse of six locked OSHA EAP criterion families across four target plans
+NUMBER_OF_DOWNSTREAM_USES: 4
+TOTAL_PROBES_PER_ROUTE: 24
+ROUTE_B_PROBE_MATCHES: 24/24
+ROUTE_D_PROBE_MATCHES: 24/24
+ROUTE_B_SOURCE_REEXTRACTIONS_AFTER_CARRIER_FREEZE: 0
+ROUTE_D_SOURCE_REEXTRACTIONS_AFTER_CARRIER_FREEZE: 0
+ROUTE_B_CARRIER_REUSE_COUNT: 4
+ROUTE_D_CARRIER_REUSE_COUNT: 4
+ROUTE_B_UTF8_BYTES: 2653
+ROUTE_D_UTF8_BYTES: 5146
+DSD_TO_BASELINE_BYTE_RATIO: 1.940
+STRUCTURAL_HANDOFF_AXIS: DSD_ADVANTAGE
+REPRESENTATION_BURDEN_AXIS: BASELINE_ADVANTAGE
+REUSE_AXIS: tie
+OVERALL_SUMMARY: MIXED_RESULT
+```
+
+`SPEC-MEAS-003` directly weakens the simple reuse hypothesis. A competent conventional criterion carrier can also be frozen once and reused across repeated audits without re-reading the source. DSD retains a native receiving-method interface advantage, but that advantage does not become a reuse-count advantage on this benchmark.
+
+The DSD carrier was about 1.94x the stored UTF-8 size of the strong conventional carrier while producing the same 24/24 outcome accuracy.
+
+No human time, cognitive load, or productivity measurement was available.
+
 ### Current practical-benefit conclusion
 
 ```text
-MEASURED_CASE_LEVEL_REPRESENTATION_RESULT: established_on_SPEC-MEAS-001
-CASE_LEVEL_HANDOFF_STRUCTURE_DIFFERENCE: established_on_SPEC-MEAS-002
+MEASURED_CASE_LEVEL_REPRESENTATION_RESULT: established_on_SPEC-MEAS-001_and_003
+CASE_LEVEL_HANDOFF_STRUCTURE_DIFFERENCE: established_on_SPEC-MEAS-002_and_003
+REPEATED_USE_COUNT_ADVANTAGE: not demonstrated_on_SPEC-MEAS-003
 POSITIVE_MEASURED_PRACTICAL_BENEFIT: not demonstrated
 GENERAL_MEASURED_PRACTICAL_BENEFIT: not_established
 ```
 
-Future practical benchmarks must use mutually exclusive verdict rules or preserve a multidimensional result without forcing a scalar winner.
+The practical evidence now supports a conditional interpretation:
+
+```text
+DSD_NATIVE_TYPED_HANDOFF: demonstrated_on_locked_cases
+CONVENTIONAL_REUSABILITY: also demonstrated
+DSD_AUTOMATIC_REUSE_SUPERIORITY: not supported
+```
 
 ## Re-audit readiness
 
@@ -99,7 +133,9 @@ INDEPENDENT_EVALUATOR_VALIDATION: not_established
 POSITIVE_MEASURED_PRACTICAL_BENEFIT: not demonstrated
 ```
 
-The next maturity re-audit should occur after a genuine independent reviewer submission is frozen and compared, or after another prospectively well-formed practical benchmark provides materially new evidence. Running the audit now would mainly reconfirm the existing `developing` status without resolving the strongest remaining evidence dependency.
+Three practical comparative benchmarks now exist, including one prospectively governed by `PRACTICAL_BENCHMARK_RULE_v0.1`. Additional same-project benchmarks have diminishing value unless they add genuinely new measurements such as human time, independent reviewers, or another receiving-method boundary.
+
+The next maturity re-audit should occur after a genuine independent reviewer submission is frozen and compared, or after materially stronger evidence resolves one of the blockers above. Running the audit now would mainly reconfirm the existing `developing` status.
 
 ## Stable conclusion
 
