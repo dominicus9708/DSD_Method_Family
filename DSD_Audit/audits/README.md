@@ -113,6 +113,26 @@ RECOMMENDED_NEXT_ARTIFACT: SPEC-IND-002 axis-separated independent retrace packe
 
 The audit preserves `SPEC-IND-001` as a historical prepared packet. Its independence controls and hash commitment are sound, but the forced single-primary-class score can collapse multiple simultaneously valid v1.0 diagnostics without a prospectively locked precedence rule. The result therefore recommends a new axis-separated successor packet rather than repairing the committed packet in place.
 
+### SPEC-IND-002 axis-separated packet readiness audit — 2026-09-08
+
+- Precommit: [`methodology/2026-09-08_spec-ind-002-readiness-audit_precommit.md`](methodology/2026-09-08_spec-ind-002-readiness-audit_precommit.md)
+- Result: [`methodology/2026-09-08_spec-ind-002-readiness-audit.md`](methodology/2026-09-08_spec-ind-002-readiness-audit.md)
+
+```text
+AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-006
+CRITICAL_GATES_PASSED: 14/14
+CRITICAL_RELEASE_BLOCKERS_FAILED: 0
+GLOBAL_PRIMARY_CLASS: absent
+TARGET_AXIS_PER_CASE: exactly_one
+SECONDARY_DIAGNOSTIC_SCORE_OVERRIDE: prohibited
+EXPECTED_SEQUENCE_HASH_COMMITTED: yes
+READINESS_VERDICT: READY_FOR_INDEPENDENT_SUBMISSION
+SPEC_IND_002_STATUS: AWAITING_INDEPENDENT_EVALUATOR
+METHOD_EVIDENCE_STATUS: developing
+```
+
+The audit records one disclosed pre-review cleanup: the initial `SPEC-IND-002` packet included a non-protocol `NONE` sentinel under hard-failure values. The precommitted vocabulary gate caught it, and the sentinel was removed before any reviewer submission. The expected hash did not change. The successor packet now uses axis-separated scoring, so multiple secondary diagnostics may coexist without forcing a global primary-diagnostic choice.
+
 ## Starting a new audit / 새 감사 시작
 
 1. Copy `../templates/AUDIT_CASE_TEMPLATE.md`.
