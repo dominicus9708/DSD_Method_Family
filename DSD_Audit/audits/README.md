@@ -39,6 +39,37 @@ PRINCIPAL_BLOCKER: insufficient external/cross-domain evidence breadth
 
 The audit does not treat the first external `SPEC_NO_GAIN` / baseline-preferred result as a failure. It preserves that result and separately finds that one external corpus in one domain is insufficient evidence breadth for `established` status.
 
+### Specification -> Audit native handoff audit — 2026-09-07
+
+- Result: [`methodology/2026-09-07_specification-to-audit-handoff.md`](methodology/2026-09-07_specification-to-audit-handoff.md)
+
+```text
+AUDIT_ID: DSD-AUDIT-20260907-METHODOLOGY-002
+AUDIT_FINDING_MATCHES: 6/6
+REQUIREMENT_IDENTITY_PRESERVATION: pass
+NORMATIVE_FORCE_PRESERVATION: pass
+OPENNESS_PRESERVATION: pass
+HIDDEN_RETRANSLATION_REQUIRED: no
+```
+
+This record tests one method-family boundary only. It does not count as a new direct Audit validation case or as proof of universal inter-method interoperability.
+
+### DSD Specification v0.2.1 minimality / stability audit — 2026-09-08
+
+- Precommit: [`methodology/2026-09-08_dsd-specification-v0.2.1-minimality-stability-audit_precommit.md`](methodology/2026-09-08_dsd-specification-v0.2.1-minimality-stability-audit_precommit.md)
+- Result: [`methodology/2026-09-08_dsd-specification-v0.2.1-minimality-stability-audit.md`](methodology/2026-09-08_dsd-specification-v0.2.1-minimality-stability-audit.md)
+
+```text
+AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-003
+PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
+STRUCTURAL_CONFLICT_COUNT: 0
+BREAKING_SEMANTIC_REVISION_REQUIRED: no
+STRUCTURAL_REDESIGN_REQUIRED: no
+CURRENT_METHOD_STATUS: developing
+```
+
+The audit separates **protocol freeze readiness** from **method evidence maturity**. v0.2.1 is judged stable enough to serve as the semantic basis of a v1.0 candidate, but independent evaluator validation and measured practical benefit remain unestablished.
+
 ## Starting a new audit / 새 감사 시작
 
 1. Copy `../templates/AUDIT_CASE_TEMPLATE.md`.
