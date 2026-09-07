@@ -1,22 +1,34 @@
 # 03. DSD Specification / DSD 명세론
 
-Status: **developing / internally freeze-ready for v1.0 candidate with non-breaking cleanup** — Protocol v0.1/v0.2 evidence is preserved; Protocol v0.2.1 remains current for new runs until a v1.0 candidate is constructed and finally audited. `SPEC-LINK-001` and the v0.2.1 minimality/stability audit are now complete. Method maturity remains `developing`; protocol freeze readiness is not external validation.
+Status: **internally standardized at Protocol v1.0 / method evidence maturity remains developing** — v0.1/v0.2/v0.2.1 records remain historical evidence under their original protocols. `DSD-AUDIT-20260908-METHODOLOGY-004` passed all 14 critical standardization gates and approved v1.0 as the default DSD-internal Specification protocol for new runs. This is an interface-standardization judgment, not independent external validation or superiority over existing specification methods.
 
 Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve **without silently replacing the source's original purpose, priority, audience function, viewpoint, intentionally open judgment boundary, or site-specific implementation freedom with DSD-imposed structure**.
 
 Primary DSD sources: Formation + General Property; Static Aggregation and Dynamics when output, reduction, or transition specifications matter.
 
-Typical outputs include typed requirement/status tables, explicit bridges, external-standard boundaries, violation/unresolved conditions, guardrail records, and—when relevant—separate source-openness and downstream-determinacy records.
+Typical outputs include typed requirement/status records, explicit bridges, external-standard boundaries, violation/unresolved conditions, guardrail records, and—when relevant—separate source-openness and downstream-determinacy records.
 
 Boundary: DSD Specification organizes structural requirements; it does not replace domain-specific requirements engineering, standards, law, safety rules, clinical standards, scientific definitions, professional judgment, or other competent validation authorities.
 
 ## Protocol versions / 프로토콜 버전
 
-- [`PROTOCOL.md`](PROTOCOL.md) — **v0.1**, historical protocol for `SPEC-CH-001~005`, `SPEC-APP-001`, and the first maturity audit.
-- [`PROTOCOL_v0.2.md`](PROTOCOL_v0.2.md) — **v0.2**, protocol governing `SPEC-CH-006` transition evidence and `SPEC-APP-002`.
-- [`PROTOCOL_v0.2.1.md`](PROTOCOL_v0.2.1.md) — **current protocol for new runs**, established after `SPEC-CH-007`, used for `SPEC-APP-003` and `SPEC-LINK-001`, and now judged freeze-ready as the semantic basis of a future v1.0 candidate.
+- [`PROTOCOL.md`](PROTOCOL.md) — **v0.1 historical**, used for `SPEC-CH-001~005`, `SPEC-APP-001`, and first maturity-audit-era records.
+- [`PROTOCOL_v0.2.md`](PROTOCOL_v0.2.md) — **v0.2 historical**, used for `SPEC-CH-006` and `SPEC-APP-002`.
+- [`PROTOCOL_v0.2.1.md`](PROTOCOL_v0.2.1.md) — **v0.2.1 historical/evidence basis**, used for `SPEC-CH-007`, `SPEC-APP-003`, and `SPEC-LINK-001`.
+- [`PROTOCOL_v1.0.md`](PROTOCOL_v1.0.md) — **standard / default DSD-internal protocol for new Specification runs** after final standardization audit.
 
-v0.2 introduced:
+v1.0 preserves the stable v0.2.1 semantics while applying only the audited non-breaking cleanup package:
+
+```text
+C1 explicit conditionality for context-dependent fields
+C2 atom-level VALIDATION_STANDARD inheritance
+C3 minimal-core / extended-ledger output separation
+C4 NO_GAIN_STATUS as a derived compatibility view
+C5 G1-G4 and openness/determinacy preserved without expansion
+C6 v0.x protocol/evidence history preserved
+```
+
+## Stable v1.0 semantic core / 안정화된 v1.0 핵심
 
 ```text
 G1 SOURCE_FIDELITY
@@ -24,20 +36,16 @@ G2 PURPOSE_AND_PRIORITY_FIDELITY
 G3 DETAIL_PROPORTIONALITY
 G4 VIEWPOINT_SEPARATION
 
+SOURCE_OPENNESS_STATUS
+!= DOWNSTREAM_DETERMINACY_STATUS
+
 HARD_FAILURE
 != GUARDRAIL_PRESSURE
 != GUARDRAIL_EXCEEDED_RECOVERABLE
 != PURPOSE_OR_VIEWPOINT_DISTORTED
 ```
 
-v0.2.1 adds:
-
-```text
-SOURCE_OPENNESS_STATUS
-!= DOWNSTREAM_DETERMINACY_STATUS
-```
-
-so intentional source openness does not become an excuse for a downstream task that genuinely demands missing determinacy.
+Conditional fields and ledgers are activated only when material to the declared task. Static Aggregation, Dynamics, and optional specializations are not forced into inactive cases.
 
 ## Direct method evidence / 개별 방법 직접 증거
 
@@ -125,11 +133,9 @@ COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 RESULT: SPECIFICATION_EXTERNAL_V0_2_1_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 ```
 
-The OSHA corpus already combines a concise regulation, cross-referenced official guidance, and checklist-style review support. DSD v0.2.1 preserved the distinction between legal obligations, helpful guidance, and worksite-specific implementation openness, but did not demonstrate a material task-matched gain over that competent baseline. The DSD derivative is therefore retained as a method/evidence trace layer rather than a preferred operational replacement.
-
 ## Method-family linkage / 방법군 연계
 
-`SPEC-LINK-001` tests the first direct DSD-native receiving-method boundary:
+`SPEC-LINK-001` tested the first direct DSD-native receiving-method boundary:
 
 ```text
 external OSHA source
@@ -149,7 +155,7 @@ EXTERNAL_STANDARD_BOUNDARY_PRESERVED: yes
 RESULT: SPECIFICATION_TO_AUDIT_NATIVE_HANDOFF_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-This supports the distinction:
+This supports:
 
 ```text
 STANDALONE_NO_GAIN
@@ -158,9 +164,8 @@ STANDALONE_NO_GAIN
 
 A competent external specification can remain the preferred domain-facing representation while DSD Specification still serves as a native typed criterion carrier for another DSD method.
 
-## Minimality / stability audit and v1.0 preparation
+## Minimality / stability audit / 최소성·안정성 감사
 
-Audit record:
 [`../../DSD_Audit/audits/methodology/2026-09-08_dsd-specification-v0.2.1-minimality-stability-audit.md`](../../DSD_Audit/audits/methodology/2026-09-08_dsd-specification-v0.2.1-minimality-stability-audit.md)
 
 ```text
@@ -169,25 +174,32 @@ PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
 STRUCTURAL_CONFLICT_COUNT: 0
 BREAKING_SEMANTIC_REVISION_REQUIRED: no
 STRUCTURAL_REDESIGN_REQUIRED: no
-METHOD_STATUS_CHANGED: no
 ```
 
-The locked v1.0 cleanup package is limited to:
+## Final v1.0 standardization audit / 최종 표준화 감사
+
+Precommit: [`../../DSD_Audit/audits/methodology/2026-09-08_dsd-specification-v1.0-standardization-audit_precommit.md`](../../DSD_Audit/audits/methodology/2026-09-08_dsd-specification-v1.0-standardization-audit_precommit.md)  
+Result: [`../../DSD_Audit/audits/methodology/2026-09-08_dsd-specification-v1.0-standardization-audit.md`](../../DSD_Audit/audits/methodology/2026-09-08_dsd-specification-v1.0-standardization-audit.md)
 
 ```text
-C1 mark context-dependent fields explicitly conditional
-C2 allow atom-level VALIDATION_STANDARD inheritance from a locked higher-level standard
-C3 split minimal core output from extended diagnostic ledgers
-C4 treat NO_GAIN_STATUS as derived when FINAL_SPEC_STATUS already equals no_gain
-C5 preserve G1-G4 and openness/determinacy without adding a new conceptual layer
-C6 preserve all v0.x protocols and evidence as historical versions
+AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-004
+CRITICAL_GATES_PASSED: 14/14
+CRITICAL_FAILURES: 0
+BREAKING_SEMANTIC_LOSS: 0
+REGRESSION_FAMILIES_WITH_REQUIRED_CARRIER_LOSS: 0/11
+NEW_UNPRECOMMITTED_SEMANTIC_OBLIGATION: 0
+STANDARDIZATION_VERDICT: STANDARDIZE_WITH_DOCUMENTED_LIMITS
+DEFAULT_DSD_INTERNAL_PROTOCOL: DSD Specification Protocol v1.0
+METHOD_EVIDENCE_STATUS: developing
+METHOD_MATURITY_PROMOTION: no
 ```
 
-Protocol freeze readiness is an **internal standardization judgment**, not proof of independent evaluator agreement, practical superiority, or method maturity.
+The documented limits concern independent validation, measured practical benefit, and cross-method breadth; they do not require v1.0 semantic redesign.
 
 ## Maturity audit / 성숙도 감사
 
-First audit record: [`../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md`](../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md)
+The first maturity audit remains historical:
+[`../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md`](../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md)
 
 ```text
 AUDIT_VERDICT_ON_CURRENT_DEVELOPING_STATUS: CONFIRMED
@@ -195,7 +207,7 @@ AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 METHOD_STATUS_DECISION: RETAIN_DEVELOPING
 ```
 
-That first maturity audit predates `SPEC-APP-002`, `SPEC-CH-007`, `SPEC-APP-003`, `SPEC-LINK-001`, and the minimality/stability audit. Its historical verdict is preserved; no automatic `established` promotion is inferred from v1.0 freeze readiness.
+Later evidence supports internal v1.0 standardization but has not been used to silently convert method evidence maturity to `established`.
 
 ## Evidence state / 증거 상태
 
@@ -207,18 +219,19 @@ TOTAL_DIRECT_CONSTRUCTED_PILOTS: 7
 
 EXTERNAL_APPLICATIONS_TOTAL: 3
 EXTERNAL_DOMAINS_TOTAL: 3
-V0_2_EXTERNAL_APPLICATIONS: 1
-V0_2_1_EXTERNAL_APPLICATIONS: 1
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 
-CURRENT_PROTOCOL_FOR_NEW_RUNS: v0.2.1
-PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
+CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
+INTERNAL_PROTOCOL_STATUS: standardized
 LATEST_EXTERNAL_RESULT: SPEC_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
-METHOD_STATUS: developing
+ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
+METHOD_EVIDENCE_STATUS: developing
 ```
 
-## Next stage / 다음 단계
+## Next evidence priority / 다음 증거 우선순위
 
-Construct **DSD Specification Protocol v1.0 candidate** from v0.2.1 using only cleanup package `C1-C6`, then run a final standardization audit. If that audit passes, v1.0 may become the default **DSD-internal** Specification protocol while evidence maturity remains separately recorded.
+v1.0 is now the internal default. Further protocol revision should require a concrete defect or new stable obligation rather than routine expansion.
+
+The strongest remaining evidence priorities are independent evaluator retrace, measured practical benefit where feasible, and additional receiving-method linkage only when it answers a real interoperability question. These are maturity/evidence tasks, not prerequisites for using v1.0 as the DSD-internal standard.
