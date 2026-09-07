@@ -1,13 +1,14 @@
 # DSD Specification Method-Specific Evidence / DSD 명세론 개별 방법 직접 증거
 
-Status: **seven direct constructed pilots + three external applications + first maturity audit completed / v0.2.1 current for new runs / developing retained**  
-Date: 2026-09-07  
+Status: **seven direct constructed pilots + three external applications + one method-family linkage pilot + internal Protocol v1.0 standardization completed / method evidence maturity remains developing**  
+Date: 2026-09-08  
 Method: **DSD Specification / DSD 명세론**
 
 Protocol versions:
 - v0.1 historical: [`../../../methods/03_specification/PROTOCOL.md`](../../../methods/03_specification/PROTOCOL.md)
-- v0.2 historical/current-evidence protocol: [`../../../methods/03_specification/PROTOCOL_v0.2.md`](../../../methods/03_specification/PROTOCOL_v0.2.md)
-- v0.2.1 current for new runs: [`../../../methods/03_specification/PROTOCOL_v0.2.1.md`](../../../methods/03_specification/PROTOCOL_v0.2.1.md)
+- v0.2 historical: [`../../../methods/03_specification/PROTOCOL_v0.2.md`](../../../methods/03_specification/PROTOCOL_v0.2.md)
+- v0.2.1 historical/evidence basis: [`../../../methods/03_specification/PROTOCOL_v0.2.1.md`](../../../methods/03_specification/PROTOCOL_v0.2.1.md)
+- v1.0 standard/default for new DSD-internal runs: [`../../../methods/03_specification/PROTOCOL_v1.0.md`](../../../methods/03_specification/PROTOCOL_v1.0.md)
 
 Shared-core pilots SC-01 through SC-10 may be reused as operating disciplines, but they do not count as direct Specification validation.
 
@@ -65,14 +66,12 @@ FALSE_DETERMINACY_FROM_INVENTED_VALUE: 0
 RESULT: SPECIFICATION_OPENNESS_DETERMINACY_AXIS_SEPARATION_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-The key result is:
+The key result remains:
 
 ```text
 SOURCE_OPENNESS_STATUS
 != DOWNSTREAM_DETERMINACY_STATUS
 ```
-
-A source may intentionally preserve professional/contextual judgment while still being underdetermined for a stronger automated downstream task. `SPEC_UNDERSPECIFIED` remains task-relative and is not weakened.
 
 ## External applications / 외부·독립 생성 corpus 적용
 
@@ -104,7 +103,7 @@ COMPETITIVE_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
 RESULT: SPECIFICATION_EXTERNAL_GUARDRAIL_APPLICATION_PASS_WITH_MIXED_GAIN
 ```
 
-The Belmont case exposed the openness/underspecification pressure subsequently isolated by `SPEC-CH-007`. It remains a v0.2 record and is not rescored under v0.2.1.
+The Belmont case exposed the openness/underspecification pressure subsequently isolated by `SPEC-CH-007`. It remains a v0.2 record and is not rescored under later protocols.
 
 ### SPEC-APP-003 — OSHA Emergency Action Plan core corpus
 
@@ -115,7 +114,6 @@ Result: [`../../real_world_cases/specification/SPEC-APP-003_OSHA_EAP_core_guidan
 ```text
 CASE_ORIGIN: public_regulatory_standard_plus_official_guidance
 EXTERNAL_DOMAIN: workplace emergency planning / occupational safety
-PRECOMMIT_COMMIT: ccda4cfe9e9b25b3a97029c6a19c2e8e07076eb0
 SOURCE_UNIT_COVERAGE: 18/18
 REGULATORY_MINIMUM_ELEMENTS_PRESERVED: 11/11
 SOURCE_INTENTIONAL_OPENNESS_HANDLED_WITHOUT_FABRICATION: 7/7
@@ -130,13 +128,61 @@ COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 RESULT: SPECIFICATION_EXTERNAL_V0_2_1_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 ```
 
-This is the first external v0.2.1 application. The corpus determines required EAP categories while intentionally leaving exact worksite implementation to the employer within applicable constraints. v0.2.1 preserved that openness as sufficient for the locked structural-review task and did not fabricate local routes, devices, people, or procedures.
+The unfavorable comparison is preserved: DSD Specification did not beat the strong OSHA regulation/eTool/checklist baseline for that locked standalone task.
 
-The strongest OSHA baseline already combines regulation, section-linked eTool guidance, and checklist-style review support. Therefore the additional DSD typing and openness/determinacy ledger did not demonstrate a material operational gain for this locked task. The unfavorable comparative result is preserved.
+## Method-family linkage evidence / 방법군 연계 증거
+
+`SPEC-LINK-001` is a linkage pilot, not an eighth direct Specification challenge and not direct Audit validation.
+
+Result: [`SPEC-LINK-001_specification-to-audit-handoff.md`](SPEC-LINK-001_specification-to-audit-handoff.md)
+
+```text
+RECEIVING_METHOD: DSD Audit
+AUDIT_FINDING_MATCHES: 6/6
+REQUIREMENT_IDENTITY_PRESERVATION: pass
+NORMATIVE_FORCE_PRESERVATION: pass
+OPENNESS_PRESERVATION: pass
+HIDDEN_RETRANSLATION_REQUIRED: no
+EXTERNAL_STANDARD_BOUNDARY_PRESERVED: yes
+RESULT: SPECIFICATION_TO_AUDIT_NATIVE_HANDOFF_PILOT_PASS_WITH_LIMITATIONS
+```
+
+This supports method-family handoff utility separately from standalone domain-task gain.
+
+## Protocol stability and standardization audits / 프로토콜 안정성·표준화 감사
+
+These are DSD Audit methodology records and are not counted as additional direct Specification pilots.
+
+### v0.2.1 minimality/stability audit
+
+```text
+AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-003
+PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
+STRUCTURAL_CONFLICT_COUNT: 0
+BREAKING_SEMANTIC_REVISION_REQUIRED: no
+STRUCTURAL_REDESIGN_REQUIRED: no
+```
+
+### v1.0 final standardization audit
+
+```text
+AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-004
+CRITICAL_GATES_PASSED: 14/14
+CRITICAL_FAILURES: 0
+BREAKING_SEMANTIC_LOSS: 0
+REGRESSION_FAMILIES_WITH_REQUIRED_CARRIER_LOSS: 0/11
+NEW_UNPRECOMMITTED_SEMANTIC_OBLIGATION: 0
+STANDARDIZATION_VERDICT: STANDARDIZE_WITH_DOCUMENTED_LIMITS
+DEFAULT_DSD_INTERNAL_PROTOCOL: DSD Specification Protocol v1.0
+METHOD_EVIDENCE_STATUS: developing
+METHOD_MATURITY_PROMOTION: no
+```
+
+Protocol standardization and evidence maturity remain separate axes.
 
 ## Maturity meta-audit / 성숙도 메타감사
 
-The first maturity audit remains a DSD Audit meta-record rather than an eighth direct Specification pilot.
+The first maturity audit remains historical rather than being silently replaced:
 
 ```text
 AUDIT_ID: DSD-AUDIT-20260907-METHODOLOGY-001
@@ -145,7 +191,7 @@ AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 METHOD_STATUS_DECISION: RETAIN_DEVELOPING
 ```
 
-That audit predates `SPEC-APP-002`, `SPEC-CH-007`, and `SPEC-APP-003`. Its verdict is preserved until a new re-audit is explicitly performed.
+Later work establishes internal v1.0 interface stability but does not itself establish independent evaluator agreement or measured practical benefit.
 
 ## Current evidence state / 현재 증거 상태
 
@@ -157,15 +203,15 @@ TOTAL_DIRECT_CONSTRUCTED_PILOTS: 7
 
 EXTERNAL_APPLICATIONS_TOTAL: 3
 EXTERNAL_DOMAINS_TOTAL: 3
-V0_2_EXTERNAL_APPLICATIONS: 1
-V0_2_1_EXTERNAL_APPLICATIONS: 1
+METHOD_FAMILY_LINKAGE_PILOTS: 1
 
-CURRENT_PROTOCOL_FOR_NEW_RUNS: v0.2.1
+CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
+INTERNAL_PROTOCOL_STATUS: standardized
 LATEST_EXTERNAL_RESULT: SPEC_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
-CURRENT_METHOD_STATUS: developing
-ESTABLISHED_STATUS_AFTER_LATEST_EVIDENCE: not_reaudited
+ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
+CURRENT_METHOD_EVIDENCE_STATUS: developing
 ```
 
-At this point another same-project external application has lower evidential value than a genuinely independent retrace. If independent review remains unavailable, the next internal step should be a new maturity re-audit that explicitly discounts the common evaluator/model dependence across all three external corpora.
+Further evidence should prioritize genuinely independent retrace, measured practical benefit where feasible, or a second receiving-method linkage only when it resolves a concrete interoperability question. Additional same-project corpora should not be treated as independent evaluator replication.
