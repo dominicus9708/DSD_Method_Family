@@ -142,6 +142,7 @@ Detailed audits remain pending even where first-pass placement is checked.
 - [x] Typed dimensions remain separated: Hilbert dimension, manifold dimension, probe count, DSD channel/term/rank counts.
 - [ ] Continue detailed countermodels where one common role fails, becomes incomparable, or requires theory-specific extension.
 - [x] First genuinely common theorem admitted only after proof from the abstract typed-map structure: fiber-factorization criterion for reduced maps.
+- [x] Common typed-map lemma admitted: passive re-encoding is classified by semantic-decoder commutation, not by invertibility alone.
 
 ---
 
@@ -206,6 +207,7 @@ audits/science/2026-09-08_phy-rel-006-cauchy-domain-reconstruction-audit.md
 audits/science/2026-09-08_phy-rel-007-standard-domain-relation-layer-audit.md
 audits/science/2026-09-08_cross-standard-equivalence-dsd-strict-equivalence-audit.md
 audits/science/2026-09-08_cross-partial-trace-causal-restriction-factorization-audit.md
+audits/science/2026-09-08_cross-passive-representation-active-transition-audit.md
 ```
 
 Reproducibility records:
@@ -218,6 +220,7 @@ audits/science/2026-09-08_rel_cauchy_domain_reconstruction.py
 audits/science/2026-09-08_rel_relation_layer_symmetry_curvature_einstein_conservation.py
 audits/science/2026-09-08_cross_equivalence_invariant_firewall.py
 audits/science/2026-09-08_cross_restriction_factorization_firewall.py
+audits/science/2026-09-08_cross_passive_representation_active_transition.py
 ```
 
 ---
@@ -247,18 +250,33 @@ B. ACTIVE — common-role countermodel search
          local quantum-query sufficiency != causal eligibility;
          entanglement is not inferred from generic noninjectivity.
 
-   B2. NEXT — passive representation change vs active physical transition
+   B2. DONE 2026-09-08 — passive representation change vs active physical transition
+       result: PASS_WITH_BOUNDARY
+       common typed-map lemma admitted:
+         for representation decoders D_r and D_r', a passive re-encoding T obeys
+         D_r' o T = D_r, while an active transition realization obeys
+         D_r' o E_tilde = E o D_r for a supplied semantic transition E.
+       physical boundary:
+         QM basis change != unitary physical evolution;
+         Lorentz-frame re-description != worldline progression;
+         invertibility/reversibility alone does not classify either role;
+         the same numerical matrix/group element can appear in different typed roles.
+
+   B3. NEXT — selected readout/invariant constancy vs zero dynamics
        QM comparator:
-         unitary basis/representation change vs physical unitary state evolution.
+         nontrivial active unitary evolution with a preserved selected readout/invariant.
        Relativity comparator:
-         invertible coordinate/frame change vs physical spacetime/state evolution.
+         nontrivial worldline/flow evolution in a symmetry-preserving or stationary setting.
        Goal:
-         test whether a common reversible-representation role survives while remaining
-         strictly NON_IDENTICAL to temporal transition Gamma.
+         test the implication
+         same selected readout/invariant -> Gamma = identity,
+         and cross-check the existing DSD static-dynamic independence result.
 
 C. COMMON-THEOREM GATE — ACTIVE
-   First admitted theorem:
-     fiber-factorization criterion for arbitrary maps.
+   Admitted results:
+     1. fiber-factorization criterion for arbitrary maps;
+     2. semantic-decoder commutation criterion separating passive re-encoding from
+        active transition at the typed-map level.
    Rule remains:
      no further common theorem is recorded unless it follows from the abstract map/typing
      structure itself rather than being imported from either QM or relativity.
