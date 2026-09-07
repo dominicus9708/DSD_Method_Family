@@ -1,6 +1,6 @@
 # DSD Specification Protocol v1.0 / DSD 명세론 표준 프로토콜 v1.0
 
-Status: **candidate pending final standardization audit**  
+Status: **standard / default DSD-internal protocol for new Specification runs; method evidence status remains developing**  
 Date: 2026-09-08  
 Method: **DSD Specification / DSD 명세론**  
 Higher field: **II. Criteria & Validation / 기준·검증**
@@ -386,7 +386,7 @@ It does not replace domain proof, empirical validation, professional judgment, l
 PROTOCOL.md        -> v0.1 historical
 PROTOCOL_v0.2.md   -> v0.2 historical
 PROTOCOL_v0.2.1.md -> v0.2.1 historical/current evidence basis
-PROTOCOL_v1.0.md   -> candidate until final standardization audit passes
+PROTOCOL_v1.0.md   -> v1.0 standard/default for new DSD-internal Specification runs
 ```
 
 Historical evidence keeps the protocol version under which it was produced. No automatic rescoring occurs.
@@ -409,7 +409,7 @@ INDEPENDENT_EVALUATOR_VALIDATION
 MEASURED_ENGINEERING_BENEFIT
 ALL_METHOD_HANDOFF_INTEROPERABILITY
 EXTERNAL_SPECIFICATION_SUPERIORITY
-PERFECTION_OR FINALITY
+PERFECTION_OR_FINALITY
 ```
 
 Method evidence status remains `developing` unless a separate maturity audit changes it.
