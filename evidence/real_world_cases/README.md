@@ -148,8 +148,35 @@ RESULT: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_
 
 The issue body was used to freeze a behavioral acceptance contract before issue comments, candidate PRs, and the closing commit were inspected. The actual maintainer resolution matched the predicted non-mutating iteration/containment behavior and regression-test family, while also adding adjacent lookup-error improvements that were not retroactively inserted into the prediction. This is stronger than a labeled regression but is **not** independent-evaluator or full-blind validation.
 
+#### SPEC-APP-007 — Flask `stream_with_context` teardown-order issue #5804
+
+- Precommit: [`specification/SPEC-APP-007_Flask-stream-with-context_teardown_precommit.md`](specification/SPEC-APP-007_Flask-stream-with-context_teardown_precommit.md)
+- Frozen prediction: [`specification/SPEC-APP-007_Flask-stream-with-context_teardown_predictions.md`](specification/SPEC-APP-007_Flask-stream-with-context_teardown_predictions.md)
+- Result: [`specification/SPEC-APP-007_Flask-stream-with-context_teardown.md`](specification/SPEC-APP-007_Flask-stream-with-context_teardown.md)
+
+```text
+PROTOCOL: v1.0
+CASE_ORIGIN: organizational_or_technical_incident
+EXTERNAL_DOMAIN: Python web framework / streamed-response request-context lifecycle
+SELECTED_DSD_LAYERS: PROPERTY_CORE + DYNAMICS_LAYER
+RESOLUTION_ARTIFACT_WITHHELD_UNTIL_AFTER_PREDICTION: yes
+MAINTAINER_RESOLUTION_PR: pallets/flask#5812
+FULL_MATCH_AXES: 5/6
+PARTIAL_MATCH_AXES: 1/6
+NON_MATCH_AXES: 0/6
+IMPLEMENTATION_OVERPREDICTION_COUNT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+FINAL_SPEC_STATUS: usable
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_REAL_WORLD_LIFECYCLE_RESOLUTION_WITHHELD_MATCH_WITH_ONE_TEST_COVERAGE_PARTIAL
+```
+
+The issue body was used to freeze a lifecycle acceptance contract before maintainer comments and the resolving PR were inspected. The actual merged-context / push-count repair matched five behavioral and implementation-freedom axes. The sixth, direct regression-test-family axis, remains `PARTIAL_MATCH`: PR #5812 retained/adapted stream-context retention coverage but did not add a dedicated issue-#5804 teardown timing/count regression reproduction. The partial result is preserved rather than inflated to a full match.
+
+This is also the first completed v1.0 external Specification application in the current sequence where `DYNAMICS_LAYER` was materially selected for event-order/lifecycle constraints.
+
 ## Validation limit / 검증 한계
 
 A real-world or external-source case is application evidence first. It contributes to method validation only when protocol, scoring/failure criteria, external standard, source-purpose boundary, and relevant baseline were locked well enough to make the case a genuine test rather than an illustration.
 
-An external origin and an independent evaluator are different axes. The current Specification corpus has **five completed external applications across five completed domains**, plus one blocked/unscored external blind precommit. `SPEC-APP-006` adds one resolution-artifact-withheld real-world comparison, but all DSD reasoning remains within the same project/model environment. Independent reviewer validation therefore remains unresolved.
+An external origin and an independent evaluator are different axes. The current Specification corpus has **six completed external applications across six completed domains**, plus one blocked/unscored external blind precommit. `SPEC-APP-006` and `SPEC-APP-007` provide two resolution-artifact-withheld real-world comparisons, but all DSD reasoning remains within the same project/model environment. Independent reviewer validation and measured practical benefit therefore remain unresolved.
