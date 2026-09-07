@@ -1,6 +1,6 @@
 # DSD Specification Method-Specific Evidence / DSD 명세론 개별 방법 직접 증거
 
-Status: **eight direct constructed pilots + five completed external applications + one blocked external blind precommit + one method-family linkage pilot / internal Protocol v1.0 standardized / method evidence maturity remains developing**  
+Status: **eight direct constructed pilots + six completed external applications + one blocked external blind precommit + one method-family linkage pilot / internal Protocol v1.0 standardized / method evidence maturity remains developing**  
 Date: 2026-09-08  
 Method: **DSD Specification / DSD 명세론**
 
@@ -202,6 +202,33 @@ RESULT: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_
 
 This is the first completed external case in which the real maintainer resolution artifacts were deliberately withheld until after the DSD v1.0 acceptance prediction was frozen. It supports case-level acceptance-contract alignment, not independent evaluator validation. The actual closing commit also added adjacent lookup-error behavior that was not retroactively inserted into the prediction.
 
+### SPEC-APP-007 — Flask `stream_with_context` teardown-order issue #5804
+
+Protocol: **v1.0**  
+Precommit: [`../../real_world_cases/specification/SPEC-APP-007_Flask-stream-with-context_teardown_precommit.md`](../../real_world_cases/specification/SPEC-APP-007_Flask-stream-with-context_teardown_precommit.md)  
+Frozen prediction: [`../../real_world_cases/specification/SPEC-APP-007_Flask-stream-with-context_teardown_predictions.md`](../../real_world_cases/specification/SPEC-APP-007_Flask-stream-with-context_teardown_predictions.md)  
+Result: [`../../real_world_cases/specification/SPEC-APP-007_Flask-stream-with-context_teardown.md`](../../real_world_cases/specification/SPEC-APP-007_Flask-stream-with-context_teardown.md)
+
+```text
+CASE_ORIGIN: organizational_or_technical_incident
+EXTERNAL_DOMAIN: Python web framework / streamed-response request-context lifecycle
+SELECTED_DSD_LAYERS: PROPERTY_CORE + DYNAMICS_LAYER
+RESOLUTION_ARTIFACT_WITHHELD_UNTIL_AFTER_PREDICTION: yes
+MAINTAINER_RESOLUTION_PR: pallets/flask#5812
+FULL_MATCH_AXES: 5/6
+PARTIAL_MATCH_AXES: 1/6
+NON_MATCH_AXES: 0/6
+IMPLEMENTATION_OVERPREDICTION_COUNT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+FINAL_SPEC_STATUS: usable
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_REAL_WORLD_LIFECYCLE_RESOLUTION_WITHHELD_MATCH_WITH_ONE_TEST_COVERAGE_PARTIAL
+```
+
+Five frozen behavioral/implementation-freedom axes matched the actual merged-context / push-count repair. The direct regression-test-family axis is preserved as `PARTIAL_MATCH` because the PR adapted general stream-context retention coverage but did not add a dedicated issue-#5804 teardown callback timing/count reproduction.
+
+This case also demonstrates selective `DYNAMICS_LAYER` activation for event-order/lifecycle constraints without forcing Static Aggregation or Formation.
+
 ## Method-family linkage evidence / 방법군 연계 증거
 
 `SPEC-LINK-001` is a linkage pilot, not a direct Specification challenge and not direct Audit validation.
@@ -252,21 +279,21 @@ V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
 
-EXTERNAL_APPLICATIONS_COMPLETED: 5
-EXTERNAL_DOMAINS_COMPLETED: 5
+EXTERNAL_APPLICATIONS_COMPLETED: 6
+EXTERNAL_DOMAINS_COMPLETED: 6
 EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
-RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 1
-V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 2
+RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 2
+V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 3
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 INTERNAL_PROTOCOL_STATUS: standardized
 LATEST_COMPLETED_DIRECT_RESULT: SPECIFICATION_V1_0_DEPENDENCY_LABEL_WITHHELD_CROSSVALIDATOR_PASS_WITH_LIMITATIONS
-LATEST_COMPLETED_EXTERNAL_RESULT: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_LIMITATIONS
+LATEST_COMPLETED_EXTERNAL_RESULT: SPECIFICATION_V1_0_REAL_WORLD_LIFECYCLE_RESOLUTION_WITHHELD_MATCH_WITH_ONE_TEST_COVERAGE_PARTIAL
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
 CURRENT_METHOD_EVIDENCE_STATUS: developing
 ```
 
-Further evidence should prioritize independent retrace, a second naturally separated real-world resolution case from a different domain, measured practical benefit where feasible, or a concrete second receiving-method linkage. Blocked/unscored attempts remain visible and do not count as completed evidence.
+Further evidence should now prioritize independent retrace, measured practical benefit, or a materially different non-software real-world case with naturally separated source and later outcome. Additional receiving-method linkage should be pursued when it answers a concrete interoperability question. Blocked/unscored attempts and partial matches remain visible and do not count as full successes.
