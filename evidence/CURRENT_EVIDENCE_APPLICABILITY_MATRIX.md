@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + eight Specification direct constructed pilots + six completed external Specification applications + one blocked unscored external blind precommit + one method-family linkage pilot + internal v1.0 standardization completed  
+Status: current migration map + eight Specification direct constructed pilots + seven completed external Specification applications + one blocked unscored external blind precommit + one method-family linkage pilot + internal v1.0 standardization completed  
 Date: 2026-09-08
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
@@ -12,7 +12,7 @@ This file classifies existing method evidence without retroactively turning one 
 - **Direct pilot** = method-specific challenge under its own locked protocol/profile.
 - **External application** = application to material authored independently of DSD; external origin does not imply independent evaluator.
 - **Blocked/unscored precommit** = planned evidence whose locked test condition could not be satisfied; it remains visible but is not counted as completed evidence.
-- **Resolution-artifact-withheld external application** = a real-world source is used to freeze an acceptance prediction before comments/patches/closing resolution are exposed; stronger than a labeled regression, but not equivalent to independent-evaluator or full-blind validation.
+- **Resolution-artifact-withheld external application** = a real-world source is used to freeze an acceptance prediction before later resolution artifacts are exposed; stronger than a labeled regression, but not equivalent to independent-evaluator or full-blind validation.
 - **Method-family linkage pilot** = tests one locked inter-method handoff boundary only.
 - **Protocol standardization audit** = tests internal interface stability/default-use readiness, not external maturity.
 - **Maturity meta-audit** = evaluates whether accumulated evidence justifies a method-status transition.
@@ -39,11 +39,12 @@ V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
 
-EXTERNAL_APPLICATIONS_COMPLETED: 6
-EXTERNAL_DOMAINS_COMPLETED: 6
+EXTERNAL_APPLICATIONS_COMPLETED: 7
+EXTERNAL_DOMAINS_COMPLETED: 7
 EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
-RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 2
-V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 3
+RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 3
+RESOLUTION_WITHHELD_NON_SOFTWARE_APPLICATIONS: 1
+V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 4
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 ```
 
@@ -148,13 +149,29 @@ SPEC-APP-007 — Flask stream_with_context issue #5804
   post-reveal prediction change: 0
   final status: usable
   result: SPECIFICATION_V1_0_REAL_WORLD_LIFECYCLE_RESOLUTION_WITHHELD_MATCH_WITH_ONE_TEST_COVERAGE_PARTIAL
+
+SPEC-APP-008 — NHTSA PE24003 / recall 25V586
+  protocol: v1.0
+  case origin: public_regulatory_safety_investigation
+  external domain: automotive safety / defect investigation
+  selected layers: PROPERTY_CORE + DYNAMICS_LAYER
+  resolution artifacts withheld until after prediction: yes
+  full match axes: 5/6
+  partial match axes: 1/6
+  non-match axes: 0/6
+  implementation overprediction: 0
+  post-reveal prediction change: 0
+  final status: usable_with_unresolved_items
+  result: SPECIFICATION_V1_0_AUTOMOTIVE_SAFETY_RESOLUTION_WITHHELD_MATCH_WITH_REMEDY_DETAIL_PARTIAL
 ```
 
 `SPEC-APP-004` is a labeled regression/interface check because expected ACT labels were visible before DSD mapping. It is not blind prediction evidence.
 
 `SPEC-APP-006` is the first completed real-world case where the actual maintainer resolution was naturally separated and withheld until after the DSD acceptance contract was frozen. It supports case-level resolution alignment but does not establish independent evaluator validation, full blindness, or measured engineering benefit.
 
-`SPEC-APP-007` is the second resolution-withheld case. It preserves an unfavorable partial result on the direct regression-test-family axis: PR #5812 adapted general stream-context retention coverage but did not add a dedicated issue-#5804 teardown timing/count regression reproduction. It also demonstrates conditional `DYNAMICS_LAYER` activation for lifecycle event order without forcing unrelated layers.
+`SPEC-APP-007` is the second resolution-withheld case. It preserves an unfavorable partial result on the direct regression-test-family axis and demonstrates conditional `DYNAMICS_LAYER` activation for lifecycle event order without forcing unrelated layers.
+
+`SPEC-APP-008` is the third resolution-withheld case and the first in a non-software safety-regulatory domain. It matched five of six frozen structural axes against the official NHTSA closure/recall record. The remedy-to-hazard axis remains partial because the concrete recall remedy was still under development at the official PE closure stage. It preserves `DEFECT_AND_RECALL_DECISION_RESOLVED != REMEDY_IMPLEMENTATION_AND_EFFECTIVENESS_FULLY_RESOLVED`.
 
 ### Blocked external blind attempt — SPEC-APP-005
 
@@ -234,11 +251,12 @@ INTERNALLY_STANDARDIZED_BUT_EVIDENCE_DEVELOPING:
     direct_constructed_pilots: 8
     current_protocol_for_new_runs: v1.0
     internal_protocol_status: standardized
-    completed_external_applications: 6
-    completed_external_domains: 6
+    completed_external_applications: 7
+    completed_external_domains: 7
     blocked_unscored_external_blind_precommits: 1
-    resolution_withheld_real_world_applications: 2
-    v1_0_external_applications_completed: 3
+    resolution_withheld_real_world_applications: 3
+    resolution_withheld_non_software_applications: 1
+    v1_0_external_applications_completed: 4
     method_family_linkage_pilots: 1
     independent_evaluator_validation: not_established
     measured_practical_benefit: not_established
