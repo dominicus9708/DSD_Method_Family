@@ -141,7 +141,7 @@ Nevertheless,
 \operatorname{Tr}_B|\Phi^+\rangle\langle\Phi^+|
 =
 \operatorname{Tr}_B|\Phi^-\rangle\langle\Phi^-|
-=rac{I_2}{2},
+= I_2/2,
 \]
 
 and similarly on subsystem \(B\).
