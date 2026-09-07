@@ -74,7 +74,27 @@ STRUCTURAL_REDESIGN_REQUIRED: no
 CURRENT_METHOD_STATUS: developing
 ```
 
-The audit separates **protocol freeze readiness** from **method evidence maturity**. v0.2.1 is judged stable enough to serve as the semantic basis of a v1.0 candidate, but independent evaluator validation and measured practical benefit remain unestablished.
+The audit separates **protocol freeze readiness** from **method evidence maturity**. v0.2.1 was judged stable enough to serve as the semantic basis of a v1.0 candidate, while independent evaluator validation and measured practical benefit remained unestablished.
+
+### DSD Specification v1.0 final standardization audit — 2026-09-08
+
+- Precommit: [`methodology/2026-09-08_dsd-specification-v1.0-standardization-audit_precommit.md`](methodology/2026-09-08_dsd-specification-v1.0-standardization-audit_precommit.md)
+- Result: [`methodology/2026-09-08_dsd-specification-v1.0-standardization-audit.md`](methodology/2026-09-08_dsd-specification-v1.0-standardization-audit.md)
+
+```text
+AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-004
+CRITICAL_GATES_PASSED: 14/14
+CRITICAL_FAILURES: 0
+BREAKING_SEMANTIC_LOSS: 0
+REGRESSION_FAMILIES_WITH_REQUIRED_CARRIER_LOSS: 0/11
+NEW_UNPRECOMMITTED_SEMANTIC_OBLIGATION: 0
+STANDARDIZATION_VERDICT: STANDARDIZE_WITH_DOCUMENTED_LIMITS
+DEFAULT_DSD_INTERNAL_PROTOCOL: DSD Specification Protocol v1.0
+METHOD_EVIDENCE_STATUS: developing
+METHOD_MATURITY_PROMOTION: no
+```
+
+This audit authorizes **internal protocol standardization only**. The documented limits concern independent evaluator validation, measured practical benefit, and cross-method breadth; they are not converted into hidden maturity claims.
 
 ## Starting a new audit / 새 감사 시작
 
