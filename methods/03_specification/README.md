@@ -178,6 +178,32 @@ The issue body was used to freeze the repair acceptance semantics before maintai
 
 This is a **resolution-artifact-withheld real-world comparison**, stronger than a labeled regression but still not a fully blind or independent-evaluator validation.
 
+### SPEC-APP-007 — Flask `stream_with_context` issue #5804
+
+Protocol: **v1.0**.
+
+```text
+PRECOMMIT: f6bca91ec8b5e6db5d88be603f57f865567a2f12
+FROZEN_PREDICTION: 09ea2055c9fedce578f7e993003287ee5f327d60
+MAINTAINER_RESOLUTION_PR: pallets/flask#5812
+CASE_ORIGIN: organizational_or_technical_incident
+EXTERNAL_DOMAIN: Python web framework / streamed-response request-context lifecycle
+SELECTED_DSD_LAYERS: PROPERTY_CORE + DYNAMICS_LAYER
+RESOLUTION_ARTIFACT_WITHHELD_UNTIL_AFTER_PREDICTION: yes
+FULL_MATCH_AXES: 5/6
+PARTIAL_MATCH_AXES: 1/6
+NON_MATCH_AXES: 0/6
+IMPLEMENTATION_OVERPREDICTION_COUNT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+FINAL_SPEC_STATUS: usable
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_REAL_WORLD_LIFECYCLE_RESOLUTION_WITHHELD_MATCH_WITH_ONE_TEST_COVERAGE_PARTIAL
+```
+
+The behavior-level lifecycle contract matched the actual merged-context / push-count repair on five axes. The sixth precommitted axis remained only partial because PR #5812 preserved/adapted general stream-context retention tests but did not add a dedicated issue-#5804 teardown timing/count regression reproduction. This unfavorable partial is preserved rather than promoted to a full match.
+
+`SPEC-APP-007` also gives the first completed v1.0 external Specification case in the current evidence sequence where `DYNAMICS_LAYER` was materially selected for transition ordering instead of being forced as boilerplate.
+
 ## Method-family linkage / 방법군 연계
 
 `SPEC-LINK-001` tested the first direct DSD-native receiving-method boundary:
@@ -239,17 +265,17 @@ V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
 
-EXTERNAL_APPLICATIONS_COMPLETED: 5
-EXTERNAL_DOMAINS_COMPLETED: 5
+EXTERNAL_APPLICATIONS_COMPLETED: 6
+EXTERNAL_DOMAINS_COMPLETED: 6
 EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
-RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 1
-V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 2
+RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 2
+V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 3
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 INTERNAL_PROTOCOL_STATUS: standardized
 LATEST_DIRECT_RESULT: SPECIFICATION_V1_0_DEPENDENCY_LABEL_WITHHELD_CROSSVALIDATOR_PASS_WITH_LIMITATIONS
-LATEST_EXTERNAL_RESULT: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_LIMITATIONS
+LATEST_EXTERNAL_RESULT: SPECIFICATION_V1_0_REAL_WORLD_LIFECYCLE_RESOLUTION_WITHHELD_MATCH_WITH_ONE_TEST_COVERAGE_PARTIAL
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
@@ -260,4 +286,4 @@ METHOD_EVIDENCE_STATUS: developing
 
 v1.0 remains the internal default. Further protocol revision should require a concrete defect or new stable obligation rather than routine expansion.
 
-The strongest remaining evidence priorities are an independent evaluator retrace, a second naturally separated real-world resolution case from another domain, measured practical benefit where feasible, and additional receiving-method linkage only when it answers a real interoperability question. Blocked/unscored tests remain visible rather than being converted into apparent successes.
+After two resolution-withheld real-world cases, the highest-value next evidence is no longer merely another software issue. Priority should move toward independent evaluator retrace, measured practical benefit where feasible, or a real-world application from a materially different non-software domain with naturally separated input and later outcome. Additional receiving-method linkage should be added only when it answers a concrete interoperability question. Blocked/unscored tests remain visible rather than being converted into apparent successes.
