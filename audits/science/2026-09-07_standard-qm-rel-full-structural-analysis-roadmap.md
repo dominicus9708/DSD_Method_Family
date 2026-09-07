@@ -102,7 +102,7 @@ Do not force every target through layers that are not mathematically meaningful 
 - [x] First-pass placement of identical-particle exchange structure as explicit standard-domain relation.
 - [ ] Standard QFT only as a later standard-domain extension, with a fresh primitive lock and without importing quantum-gravity assumptions.
 
-Detailed audits remain pending even where first-pass placement is checked.
+Detailed audits remain pending even where first-pass placement is checked, except where explicitly marked complete below.
 
 ---
 
@@ -140,11 +140,31 @@ Detailed audits remain pending even where first-pass placement is checked.
 ## Detailed audit order now active
 
 ```text
-1. QM measurement — POVM readout vs instrument transition
-2. QM composite access — tensor product / partial trace / entanglement
+1. DONE 2026-09-08 / PHY-QM-050
+   QM measurement — POVM readout vs instrument transition
+   result: PASS_WITH_REFINEMENT
+   refinement: configuration-state completeness is relative to the declared system boundary;
+               currently describable apparatus/control data belong in an experiment-complete
+               one-slice record, while the actual instrument transition remains in Gamma.
+
+2. NEXT
+   QM composite access — tensor product / partial trace / entanglement
+
 3. Relativity — chart/frame representation vs causal accessibility
 4. Relativity — Cauchy data / domain of dependence / reconstruction
 5. Standard-domain relation layer — symmetry, curvature, Einstein equation, conservation
+```
+
+Detailed audit record:
+
+```text
+audits/science/2026-09-08_phy-qm-050-configuration-state-povm-instrument-audit.md
+```
+
+The prior finite computation is reused rather than duplicated:
+
+```text
+audits/science/2026-09-06_sequential_quantum_instrument_dsd_order.py
 ```
 
 ---
