@@ -1,6 +1,6 @@
 # 03. DSD Specification / DSD 명세론
 
-Status: **developing** — Protocol v0.1 historical evidence preserved; prospective Protocol v0.2 established for new runs after `SPEC-CH-006`; first external application and maturity audit completed; `developing` retained.
+Status: **developing** — Protocol v0.1 historical evidence preserved; Protocol v0.2 is current for new runs; `SPEC-CH-006` and first external v0.2 application `SPEC-APP-002` completed; first maturity audit still retains `developing`.
 
 Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve **without silently replacing the source's original purpose, priority, audience function, or viewpoint with the DSD representation itself**.
 
@@ -22,7 +22,7 @@ Boundary: DSD Specification organizes structural requirements; it does not repla
 ## Protocol versions / 프로토콜 버전
 
 - [`PROTOCOL.md`](PROTOCOL.md) — **DSD Specification Protocol v0.1**, retained as the historical protocol for `SPEC-CH-001~005`, `SPEC-APP-001`, and the first maturity audit.
-- [`PROTOCOL_v0.2.md`](PROTOCOL_v0.2.md) — **prospective current protocol for new runs**.
+- [`PROTOCOL_v0.2.md`](PROTOCOL_v0.2.md) — **current prospective protocol for new runs**.
 
 Protocol v0.2 adds, prospectively:
 
@@ -70,9 +70,9 @@ SOURCE_FACT_INVENTION_ESCALATED_TO_HARD_FAILURE: 1/1
 RESULT: SPECIFICATION_GUARDRAIL_CENTERLINE_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-This sixth challenge directly tests the new guardrail distinction. It does **not** establish external usefulness of v0.2 because it is still a constructed same-project challenge.
+This sixth challenge directly tests the new guardrail distinction. It does **not** establish broad external usefulness of v0.2 because it is a constructed same-project challenge.
 
-## First external application / 첫 외부 적용
+## External applications / 외부 적용
 
 External evidence lane:
 [`../../evidence/real_world_cases/specification/`](../../evidence/real_world_cases/specification/)
@@ -92,14 +92,36 @@ COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 PROTOCOL_PRESSURE: ordered precedence / priority, present_nonfatal
 ```
 
-The v0.1 application remains valid at its original resolution. However, **purpose fidelity, detail proportionality, and viewpoint separation were not separately precommitted guardrail axes in that run**, so they must not be retroactively marked as passed.
+The v0.1 application remains valid at its original resolution. Purpose fidelity, detail proportionality, and viewpoint separation were not separately precommitted guardrail axes and must not be retroactively marked as passed.
+
+### SPEC-APP-002 — Belmont Report Part C. Applications
 
 ```text
-SPEC_APP_001_SOURCE_FIDELITY: pass
-SPEC_APP_001_PURPOSE_FIDELITY_GUARDRAIL: untested_as_formal_axis
-SPEC_APP_001_DETAIL_PROPORTIONALITY_GUARDRAIL: untested_as_formal_axis
-SPEC_APP_001_VIEWPOINT_SEPARATION_GUARDRAIL: untested_as_formal_axis
+PROTOCOL: v0.2
+CASE_ORIGIN: public_normative_ethics_guideline
+EXTERNAL_DOMAIN: human-subject research ethics
+PRECOMMIT: 2ad9b5820a959195b32e1d9560be6328a4905771
+SOURCE_UNIT_COVERAGE: 22/22
+LOCAL_PRIORITY_PRESERVATION: 5/5
+UNRESOLVED_JUDGMENT_BOUNDARIES_PRESERVED: 4/4
+INVENTED_SOURCE_FACTS: 0
+NORMATIVE_FORCE_STRENGTHENINGS: 0
+DSD_VIEWPOINT_OVERATTRIBUTIONS: 0
+FINAL_SPEC_STATUS: usable
+GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
+COMPETITIVE_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
 ```
+
+The Belmont application is deliberately treated as a derivative structural checking layer rather than a replacement for the Report's ethical reasoning. DSD added source-unit traceability and downstream coverage/checkability, while the original Belmont prose remains preferred for the primary ethical-reading and contextual-reasoning task.
+
+The application also exposed a new nonfatal v0.2 pressure point:
+
+```text
+intentional normative openness
+!= accidental specification underspecification
+```
+
+The current protocol can preserve that distinction in `UNRESOLVED_CONDITION` and limits, but does not yet give source-intentional open texture its own dedicated status. No retroactive field was added during the run.
 
 ## Maturity audit / 성숙도 감사
 
@@ -114,7 +136,7 @@ AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 METHOD_STATUS_DECISION: RETAIN_DEVELOPING
 ```
 
-A post-audit revision note now records that v0.1 lacked explicit purpose/detail/viewpoint guardrails. This does not invalidate the original audit verdict; it strengthens the reason not to promote prematurely and requires the next external application to use v0.2 prospectively.
+The original maturity verdict is not overwritten by later evidence. Since that audit, v0.2 gained one external application in a second domain and one mixed positive operational result, but independent evaluator validation and measured practical benefit remain absent. A new status decision requires a new re-audit rather than silent promotion.
 
 ## Evidence state / 증거 상태
 
@@ -122,14 +144,18 @@ A post-audit revision note now records that v0.1 lacked explicit purpose/detail/
 SPEC-CH-001~005  completed under v0.1
 SPEC-CH-006      completed; prospective guardrail model accepted
 SPEC-APP-001     completed under v0.1
+SPEC-APP-002     completed under v0.2
 SPECIFICATION_MATURITY_AUDIT completed; retain developing
 
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v0.2
-V0_2_EXTERNAL_APPLICATION_EVIDENCE: not_yet_established
+EXTERNAL_APPLICATIONS_TOTAL: 2
+EXTERNAL_DOMAINS_TOTAL: 2
+V0_2_EXTERNAL_APPLICATIONS: 1
+V0_2_EXTERNAL_APPLICATION_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 METHOD_STATUS: developing
-ESTABLISHED_STATUS: not_justified_on_current_evidence
-NEXT_STEP: SPEC-APP-002_less_structured_external_corpus_under_v0.2
+ESTABLISHED_STATUS: not_reaudited_after_SPEC_APP_002
+NEXT_STEP: independent_retrace_or_open-texture_boundary_challenge
 ```
 
-`SPEC-APP-002` should lock the source's purpose, target user/action, priority hierarchy, DSD transformation purpose, and strongest reasonable baseline before atomization, then score hard failure and guardrail status separately.
+The strongest next evidence is either a genuinely independent retrace of `SPEC-APP-002`, or a prospective challenge that distinguishes source-intentional normative openness from accidental `SPEC_UNDERSPECIFIED` without weakening the latter detector.
