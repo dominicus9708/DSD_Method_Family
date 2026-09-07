@@ -1,8 +1,8 @@
 # 03. DSD Specification / DSD 명세론
 
-Status: **developing** — dedicated protocol v0.1 established; direct pilots `SPEC-CH-001` through `SPEC-CH-005` completed with limitations; first external/independently generated corpus application `SPEC-APP-001` completed; maturity audit completed and `developing` retained.
+Status: **developing** — Protocol v0.1 historical evidence preserved; prospective Protocol v0.2 established for new runs after `SPEC-CH-006`; first external application and maturity audit completed; `developing` retained.
 
-Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve.
+Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve **without silently replacing the source's original purpose, priority, audience function, or viewpoint with the DSD representation itself**.
 
 Primary DSD sources: Formation + General Property; Static Aggregation and Dynamics when output, reduction, or transition specifications matter.
 
@@ -14,21 +14,35 @@ Typical outputs:
 - aggregate/reconstruction obligations when reduction is specified;
 - transition and lineage obligations;
 - external-standard requirements for domain-level claims;
-- explicit violation, unresolved, contradiction, and `NO_GAIN` conditions.
+- explicit violation, unresolved, contradiction, and `NO_GAIN` conditions;
+- a separate purpose/detail/viewpoint **guardrail ledger** under v0.2.
 
-Boundary: DSD Specification organizes structural requirements; it does not replace domain-specific requirements engineering, standards, law, safety rules, clinical standards, scientific definitions, or other competent validation authorities.
+Boundary: DSD Specification organizes structural requirements; it does not replace domain-specific requirements engineering, standards, law, safety rules, clinical standards, scientific definitions, or other competent validation authorities. A DSD-derived viewpoint may be useful, but it is not attributed to the source author unless the source supports that attribution.
 
-## Dedicated protocol / 전용 프로토콜
+## Protocol versions / 프로토콜 버전
 
-- [`PROTOCOL.md`](PROTOCOL.md) — **DSD Specification Protocol v0.1**
-  - locks target scope and requirement-source inventory;
-  - atomizes requirements into typed records;
-  - preserves claim-relevant status distinctions;
-  - separates required dependencies from optional interfaces;
-  - records explicit bridges, external standards, reduction/reconstruction, and transition/lineage obligations when activated;
-  - distinguishes `SATISFIED / VIOLATED / UNRESOLVED_OR_UNDERSPECIFIED / NOT_APPLICABLE` where relevant;
-  - defines method-specific contradiction, underspecification, overconstraint, wrong-standard, and `SPEC_NO_GAIN` outcomes;
-  - makes completeness only relative to the locked requirement inventory unless a stronger external completeness basis is supplied.
+- [`PROTOCOL.md`](PROTOCOL.md) — **DSD Specification Protocol v0.1**, retained as the historical protocol for `SPEC-CH-001~005`, `SPEC-APP-001`, and the first maturity audit.
+- [`PROTOCOL_v0.2.md`](PROTOCOL_v0.2.md) — **prospective current protocol for new runs**.
+
+Protocol v0.2 adds, prospectively:
+
+```text
+G1 SOURCE_FIDELITY
+G2 PURPOSE_AND_PRIORITY_FIDELITY
+G3 DETAIL_PROPORTIONALITY
+G4 VIEWPOINT_SEPARATION
+```
+
+and separates:
+
+```text
+HARD_FAILURE
+!= GUARDRAIL_PRESSURE
+!= GUARDRAIL_EXCEEDED_RECOVERABLE
+!= PURPOSE_OR_VIEWPOINT_DISTORTED
+```
+
+It also adds an optional `PRECEDENCE_OR_PRIORITY` field for sources whose semantics actually depend on ordering or priority. This field is not retroactively inserted into v0.1 records.
 
 ## Direct method evidence / 개별 방법 직접 증거
 
@@ -36,31 +50,27 @@ Evidence lane: [`../../evidence/method_specific/specification/`](../../evidence/
 
 ```text
 SPEC-CH-001  well-formed / malformed discrimination
-  RESULT: SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
-
 SPEC-CH-002  contradiction / underspecification
-  PRECOMMIT: 848a01b160ecfe4fcbdb8e69d6501e40555d782d
-  RESULT: SPECIFICATION_CONTRADICTION_UNDERSPECIFICATION_PILOT_PASS_WITH_LIMITATIONS
-
 SPEC-CH-003  optional-layer / bridge boundary
-  PRECOMMIT: d2cc07121043546be8e2450d8af288491b837e76
-  RESULT: SPECIFICATION_OPTIONAL_LAYER_BRIDGE_BOUNDARY_PILOT_PASS_WITH_LIMITATIONS
-
 SPEC-CH-004  NO_GAIN specification
-  PRECOMMIT: 4d55d00af7fa376d370415a48b82de6883ba6fc8
-  RESULT: SPECIFICATION_NO_GAIN_PILOT_PASS_WITH_LIMITATIONS
-
 SPEC-CH-005  reproducibility / independent retrace
-  PRECOMMIT: dda33b2028c9e5fb0f7b3bef938a8b834219f787
-  TRACE_A_B_FINAL_STATUS_AGREEMENT: 8/8
-  TRACE_A_B_DIAGNOSTIC_AGREEMENT: 8/8
-  TRACE_A_B_ATOMIZATION_BOUNDARY_MATCHES: 32/32
-  ORDER_SENSITIVITY_ERRORS: 0
-  RESULT: SPECIFICATION_RETRACE_REPRODUCIBILITY_PILOT_PASS_WITH_LIMITATIONS
-  INDEPENDENT_EVALUATOR_VALIDATION: not established
 ```
 
-The five internal records are pilot-level direct evidence. `SPEC-CH-005` establishes procedural retraceability on a locked finite packet, not independent reviewer validation.
+These five records remain v0.1-era direct pilot evidence.
+
+### SPEC-CH-006 — Guardrail Centerline Challenge
+
+```text
+PRECOMMIT: fe009d8da9ab992e6885d07e14ff26355b776a86
+EXACT_GUARDRAIL_FAMILY_MATCHES: 8/8
+FALSE_HARD_FAILURE_ON_PRESSURE_CASES: 0
+FALSE_REJECTION_OF_DECLARED_DERIVATIVE_VIEW: 0
+UNKNOWN_PURPOSE_PRESERVED_AS_UNDETERMINED: 1/1
+SOURCE_FACT_INVENTION_ESCALATED_TO_HARD_FAILURE: 1/1
+RESULT: SPECIFICATION_GUARDRAIL_CENTERLINE_PILOT_PASS_WITH_LIMITATIONS
+```
+
+This sixth challenge directly tests the new guardrail distinction. It does **not** establish external usefulness of v0.2 because it is still a constructed same-project challenge.
 
 ## First external application / 첫 외부 적용
 
@@ -70,9 +80,8 @@ External evidence lane:
 ### SPEC-APP-001 — RFC 9112 §6.3 Message Body Length
 
 ```text
+PROTOCOL: v0.1
 CASE_ORIGIN: public_normative_standard
-SOURCE: RFC 9112 §6.3 core precedence algorithm
-PRECOMMIT: 9b91cecda9516fd7cd65c9eb181e80ab4fa45deb
 SOURCE_UNIT_COVERAGE: 13/13
 PRECEDENCE_PRESERVATION: 13/13
 BCP14_MUST_OBLIGATIONS_PRESERVED: 8/8
@@ -83,9 +92,14 @@ COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 PROTOCOL_PRESSURE: ordered precedence / priority, present_nonfatal
 ```
 
-RFC 9112 already presents the selected requirements as a compact ordered normative procedure. Under the precommitted gain criteria, DSD atomization added no demonstrated distinction, traceability, ambiguity-reduction, or downstream-checkability gain, so `SPEC_NO_GAIN` was preserved rather than manufacturing a benefit claim.
+The v0.1 application remains valid at its original resolution. However, **purpose fidelity, detail proportionality, and viewpoint separation were not separately precommitted guardrail axes in that run**, so they must not be retroactively marked as passed.
 
-Protocol v0.1 could preserve the RFC precedence using explicit predecessor exclusions in `ACTIVATION_CONDITION` / `DEPENDENCIES`, but this was repetitive. An optional explicit precedence/priority field is therefore a **future refinement candidate**, not a retroactive change to this run.
+```text
+SPEC_APP_001_SOURCE_FIDELITY: pass
+SPEC_APP_001_PURPOSE_FIDELITY_GUARDRAIL: untested_as_formal_axis
+SPEC_APP_001_DETAIL_PROPORTIONALITY_GUARDRAIL: untested_as_formal_axis
+SPEC_APP_001_VIEWPOINT_SEPARATION_GUARDRAIL: untested_as_formal_axis
+```
 
 ## Maturity audit / 성숙도 감사
 
@@ -98,32 +112,24 @@ MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
 AUDIT_VERDICT_ON_CURRENT_DEVELOPING_STATUS: CONFIRMED
 AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 METHOD_STATUS_DECISION: RETAIN_DEVELOPING
-ESTABLISHED_EVIDENCE_BREADTH: insufficient
-EXTERNAL_CORPUS_COUNT: 1
-EXTERNAL_DOMAIN_COUNT: 1
-INDEPENDENT_EVALUATOR_VALIDATION: not_established
-MEASURED_ENGINEERING_BENEFIT: not_established
 ```
 
-The eight minimum evidence-component categories are present, but they are treated as an eligibility floor for promotion review rather than an automatic status upgrade. The principal blocker is evidence breadth: the external evidence remains one subsection of one technical standard in one domain. The external `NO_GAIN` result is preserved as valid evidence of fidelity and non-favoritism, not converted into either a failure or a gain claim.
+A post-audit revision note now records that v0.1 lacked explicit purpose/detail/viewpoint guardrails. This does not invalidate the original audit verdict; it strengthens the reason not to promote prematurely and requires the next external application to use v0.2 prospectively.
 
 ## Evidence state / 증거 상태
 
 ```text
-SPEC-CH-001  completed
-SPEC-CH-002  completed
-SPEC-CH-003  completed
-SPEC-CH-004  completed
-SPEC-CH-005  completed with independence limitation
-SPEC-APP-001 external/independently generated corpus application  completed
-SPECIFICATION_MATURITY_AUDIT  completed
+SPEC-CH-001~005  completed under v0.1
+SPEC-CH-006      completed; prospective guardrail model accepted
+SPEC-APP-001     completed under v0.1
+SPECIFICATION_MATURITY_AUDIT completed; retain developing
 
-INTERNAL_CONSTRUCTED_CHALLENGE_SEQUENCE: completed
-EXTERNAL_OR_INDEPENDENTLY_GENERATED_APPLICATION_CASE: completed
+CURRENT_PROTOCOL_FOR_NEW_RUNS: v0.2
+V0_2_EXTERNAL_APPLICATION_EVIDENCE: not_yet_established
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 METHOD_STATUS: developing
 ESTABLISHED_STATUS: not_justified_on_current_evidence
-NEXT_STEP: SPEC-APP-002_less_structured_external_corpus
+NEXT_STEP: SPEC-APP-002_less_structured_external_corpus_under_v0.2
 ```
 
-Next development should add a less-structured external requirement corpus and at least one different external domain, followed by genuinely independent retrace/review where feasible. Any precedence/priority refinement belongs to a prospective Protocol v0.2 rather than retroactive rescoring of `SPEC-APP-001`.
+`SPEC-APP-002` should lock the source's purpose, target user/action, priority hierarchy, DSD transformation purpose, and strongest reasonable baseline before atomization, then score hard failure and guardrail status separately.
