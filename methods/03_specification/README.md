@@ -204,6 +204,32 @@ The behavior-level lifecycle contract matched the actual merged-context / push-c
 
 `SPEC-APP-007` also gives the first completed v1.0 external Specification case in the current evidence sequence where `DYNAMICS_LAYER` was materially selected for transition ordering instead of being forced as boilerplate.
 
+### SPEC-APP-008 — NHTSA PE24003 / recall 25V586
+
+Protocol: **v1.0**.
+
+```text
+PRECOMMIT: 290984342bfb42b909425c9a0e69f6c1798641c2
+FROZEN_PREDICTION: d11996c19c46c710a24df6259d0d2fb0c0c17a38
+CASE_ORIGIN: public_regulatory_safety_investigation
+EXTERNAL_DOMAIN: automotive safety / defect investigation
+SELECTED_DSD_LAYERS: PROPERTY_CORE + DYNAMICS_LAYER
+RESOLUTION_ARTIFACT_WITHHELD_UNTIL_AFTER_PREDICTION: yes
+OFFICIAL_CLOSING_ACTION: recall 25V586
+FULL_MATCH_AXES: 5/6
+PARTIAL_MATCH_AXES: 1/6
+NON_MATCH_AXES: 0/6
+IMPLEMENTATION_OVERPREDICTION_COUNT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+FINAL_SPEC_STATUS: usable_with_unresolved_items
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_AUTOMOTIVE_SAFETY_RESOLUTION_WITHHELD_MATCH_WITH_REMEDY_DETAIL_PARTIAL
+```
+
+The Opening Resume was used to freeze safety-consequence, recurrence, scope, causal-disposition, remedy-bridge, and implementation-freedom requirements before the official Closing Resume and Part 573 recall report were inspected. The later official record expanded the affected population, identified an elevated failure rate and fuel-starvation failure chain, and closed the PE with recall 25V586. The remedy-to-hazard axis remains `PARTIAL_MATCH` at the official closure-document stage because the concrete remedy was still under development and ODI explicitly retained later remedy evaluation.
+
+This is the first completed resolution-withheld Specification comparison in the current sequence from a **non-software safety-regulatory domain**. It also preserves the distinction `DEFECT_AND_RECALL_DECISION_RESOLVED != REMEDY_IMPLEMENTATION_AND_EFFECTIVENESS_FULLY_RESOLVED`.
+
 ## Method-family linkage / 방법군 연계
 
 `SPEC-LINK-001` tested the first direct DSD-native receiving-method boundary:
@@ -265,17 +291,18 @@ V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
 
-EXTERNAL_APPLICATIONS_COMPLETED: 6
-EXTERNAL_DOMAINS_COMPLETED: 6
+EXTERNAL_APPLICATIONS_COMPLETED: 7
+EXTERNAL_DOMAINS_COMPLETED: 7
 EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
-RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 2
-V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 3
+RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 3
+RESOLUTION_WITHHELD_NON_SOFTWARE_APPLICATIONS: 1
+V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 4
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 INTERNAL_PROTOCOL_STATUS: standardized
 LATEST_DIRECT_RESULT: SPECIFICATION_V1_0_DEPENDENCY_LABEL_WITHHELD_CROSSVALIDATOR_PASS_WITH_LIMITATIONS
-LATEST_EXTERNAL_RESULT: SPECIFICATION_V1_0_REAL_WORLD_LIFECYCLE_RESOLUTION_WITHHELD_MATCH_WITH_ONE_TEST_COVERAGE_PARTIAL
+LATEST_EXTERNAL_RESULT: SPECIFICATION_V1_0_AUTOMOTIVE_SAFETY_RESOLUTION_WITHHELD_MATCH_WITH_REMEDY_DETAIL_PARTIAL
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
@@ -286,4 +313,4 @@ METHOD_EVIDENCE_STATUS: developing
 
 v1.0 remains the internal default. Further protocol revision should require a concrete defect or new stable obligation rather than routine expansion.
 
-After two resolution-withheld real-world cases, the highest-value next evidence is no longer merely another software issue. Priority should move toward independent evaluator retrace, measured practical benefit where feasible, or a real-world application from a materially different non-software domain with naturally separated input and later outcome. Additional receiving-method linkage should be added only when it answers a concrete interoperability question. Blocked/unscored tests remain visible rather than being converted into apparent successes.
+The evidence corpus now includes a naturally separated non-software safety-regulatory resolution case. The highest-value remaining next steps are an independent evaluator retrace, measured practical benefit where feasible, and only then additional cross-domain resolution-withheld cases where they add a genuinely new boundary. Additional receiving-method linkage should be added only when it answers a concrete interoperability question. Blocked/unscored tests and partial matches remain visible rather than being converted into apparent successes.
