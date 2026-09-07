@@ -169,10 +169,16 @@ Detailed audits remain pending even where first-pass placement is checked.
                and global reconstruction are distinct roles; a causally restricted record
                can be valid in-domain while non-injective for a global-reconstruction target.
 
-4. NEXT
+4. DONE 2026-09-08 / PHY-REL-006
    Relativity — Cauchy data / domain of dependence / reconstruction
+   result: PASS_WITH_REFINEMENT
+   refinement: one-slice data become predictive only relative to an explicit standard
+               evolution relation; completeness is additionally relative to the supplied
+               Cauchy data and target dependence domain, and domain-limited determination
+               does not imply global reconstruction.
 
-5. Standard-domain relation layer — symmetry, curvature, Einstein equation, conservation
+5. NEXT
+   Standard-domain relation layer — symmetry, curvature, Einstein equation, conservation
 ```
 
 Detailed audit records:
@@ -181,6 +187,7 @@ Detailed audit records:
 audits/science/2026-09-08_phy-qm-050-configuration-state-povm-instrument-audit.md
 audits/science/2026-09-08_phy-qm-051-configuration-state-composite-access-audit.md
 audits/science/2026-09-08_phy-rel-005-configuration-state-frame-causal-access-audit.md
+audits/science/2026-09-08_phy-rel-006-cauchy-domain-reconstruction-audit.md
 ```
 
 Reproducibility records:
@@ -189,6 +196,7 @@ Reproducibility records:
 audits/science/2026-09-06_sequential_quantum_instrument_dsd_order.py
 audits/science/2026-09-06_werner_dsd_entanglement_chsh.py
 audits/science/2026-09-08_rel_chart_frame_causal_access.py
+audits/science/2026-09-08_rel_cauchy_domain_reconstruction.py
 ```
 
 ---
