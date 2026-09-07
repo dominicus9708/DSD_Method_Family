@@ -78,7 +78,7 @@ no_gain
 
 ### HARD_FAILURES
 
-For the scored hard-failure cases in this packet, choose the **directly instantiated target hard-failure class** from:
+For the scored hard-failure cases in this packet, choose the **directly instantiated target hard-failure class** from the representative v1.0 hard-failure vocabulary:
 
 ```text
 SOURCE_FACT_INVENTION
@@ -89,7 +89,6 @@ REQUIRED_BRIDGE_OMISSION
 SPEC_WRONG_STANDARD
 CLAIM_RELEVANT_STATUS_COLLAPSE
 FABRICATED_DETERMINACY
-NONE
 ```
 
 Other secondary problems may be noted separately, but do not replace the directly instantiated scored class.
