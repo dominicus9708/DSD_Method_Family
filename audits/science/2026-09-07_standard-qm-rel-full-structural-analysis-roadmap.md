@@ -140,8 +140,8 @@ Detailed audits remain pending even where first-pass placement is checked.
 - [x] First-pass comparison of subsystem access in QM with causal/domain access in relativity without identifying them.
 - [x] Compare standard invariants with DSD strict equivalence only through explicit maps.
 - [x] Typed dimensions remain separated: Hilbert dimension, manifold dimension, probe count, DSD channel/term/rank counts.
-- [ ] Search for detailed countermodels where one common role fails, becomes incomparable, or requires theory-specific extension.
-- [ ] Record any genuinely common theorem only after it is proved from the abstract map/typing structure rather than imported from either theory.
+- [ ] Continue detailed countermodels where one common role fails, becomes incomparable, or requires theory-specific extension.
+- [x] First genuinely common theorem admitted only after proof from the abstract typed-map structure: fiber-factorization criterion for reduced maps.
 
 ---
 
@@ -205,6 +205,7 @@ audits/science/2026-09-08_phy-rel-005-configuration-state-frame-causal-access-au
 audits/science/2026-09-08_phy-rel-006-cauchy-domain-reconstruction-audit.md
 audits/science/2026-09-08_phy-rel-007-standard-domain-relation-layer-audit.md
 audits/science/2026-09-08_cross-standard-equivalence-dsd-strict-equivalence-audit.md
+audits/science/2026-09-08_cross-partial-trace-causal-restriction-factorization-audit.md
 ```
 
 Reproducibility records:
@@ -216,6 +217,7 @@ audits/science/2026-09-08_rel_chart_frame_causal_access.py
 audits/science/2026-09-08_rel_cauchy_domain_reconstruction.py
 audits/science/2026-09-08_rel_relation_layer_symmetry_curvature_einstein_conservation.py
 audits/science/2026-09-08_cross_equivalence_invariant_firewall.py
+audits/science/2026-09-08_cross_restriction_factorization_firewall.py
 ```
 
 ---
@@ -232,16 +234,34 @@ A. DONE 2026-09-08 — standard invariants/equivalences vs DSD strict equivalenc
                     strict equivalence remain NON_IDENTICAL until an explicit typed bridge
                     is proved to preserve and reflect both relations.
 
-B. NEXT — common-role countermodel search
-   Goal: find cases where a common role such as representation/access/readout/reconstruction
-         becomes incomparable or requires a theory-specific extension.
-   First target: QM partial trace vs relativistic causal/domain restriction. Isolate the
-                 genuinely common non-injective-map theorem and mark where the physical
-                 analogy stops.
+B. ACTIVE — common-role countermodel search
 
-C. Common-theorem gate
-   Goal: state a genuinely common theorem only if it follows from the abstract typed-map
-         structure itself rather than being imported from either QM or relativity.
+   B1. DONE 2026-09-08 — QM partial trace vs relativistic causal/domain restriction
+       result: PASS_WITH_BOUNDARY
+       common theorem admitted:
+         for f:X->Y and q:X->Z, q factors through f iff q is constant on every f-fiber;
+         non-singleton fibers obstruct unrestricted source reconstruction.
+       physical boundary:
+         partial trace != causal restriction;
+         tensor factor != spacetime domain;
+         local quantum-query sufficiency != causal eligibility;
+         entanglement is not inferred from generic noninjectivity.
+
+   B2. NEXT — passive representation change vs active physical transition
+       QM comparator:
+         unitary basis/representation change vs physical unitary state evolution.
+       Relativity comparator:
+         invertible coordinate/frame change vs physical spacetime/state evolution.
+       Goal:
+         test whether a common reversible-representation role survives while remaining
+         strictly NON_IDENTICAL to temporal transition Gamma.
+
+C. COMMON-THEOREM GATE — ACTIVE
+   First admitted theorem:
+     fiber-factorization criterion for arbitrary maps.
+   Rule remains:
+     no further common theorem is recorded unless it follows from the abstract map/typing
+     structure itself rather than being imported from either QM or relativity.
 ```
 
 Standard QFT remains a later extension and requires a fresh primitive lock.
