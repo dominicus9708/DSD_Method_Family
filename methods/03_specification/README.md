@@ -155,6 +155,29 @@ COUNT_AS_BLIND_EVIDENCE: no
 
 The official test file embeds expected `valid` labels alongside schema/data, and the current source-delivery path could not redact those labels before evaluator exposure. The precommit was preserved rather than weakened. `SPEC-CH-008` is separately classified and does not substitute for completion of this external application.
 
+### SPEC-APP-006 — python-jsonschema `ErrorTree` issue #1328
+
+Protocol: **v1.0**.
+
+```text
+PRECOMMIT: 70a9ffd9b02d839057f1efb62b7c8a605e6cc813
+FROZEN_PREDICTION: cbabc9d6533da1643588a1b934d5a41da2be6022
+ACTUAL_CLOSING_COMMIT: 7fa1acc948b34ab6283b3621ecbdc4360a717ba7
+CASE_ORIGIN: organizational_or_technical_incident
+RESOLUTION_ARTIFACT_WITHHELD_UNTIL_AFTER_PREDICTION: yes
+PRIMARY_AXES_MATCHED: 5/5
+IMPLEMENTATION_OVERPREDICTION_COUNT: 0
+SOURCE_FACT_INVENTION_COUNT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+FINAL_SPEC_STATUS: usable
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_LIMITATIONS
+```
+
+The issue body was used to freeze the repair acceptance semantics before maintainer comments, candidate PRs, and the actual closing commit were read. The closing implementation matched the predicted non-mutating iteration/containment behavior, preserved the genuine error child, kept valid error-free child access supported, and added the predicted regression-test family. Adjacent lookup-error improvements were not retroactively added to the prediction.
+
+This is a **resolution-artifact-withheld real-world comparison**, stronger than a labeled regression but still not a fully blind or independent-evaluator validation.
+
 ## Method-family linkage / 방법군 연계
 
 `SPEC-LINK-001` tested the first direct DSD-native receiving-method boundary:
@@ -216,16 +239,17 @@ V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
 
-EXTERNAL_APPLICATIONS_COMPLETED: 4
-EXTERNAL_DOMAINS_COMPLETED: 4
+EXTERNAL_APPLICATIONS_COMPLETED: 5
+EXTERNAL_DOMAINS_COMPLETED: 5
 EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
-V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 1
+RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 1
+V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 2
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 INTERNAL_PROTOCOL_STATUS: standardized
 LATEST_DIRECT_RESULT: SPECIFICATION_V1_0_DEPENDENCY_LABEL_WITHHELD_CROSSVALIDATOR_PASS_WITH_LIMITATIONS
-LATEST_EXTERNAL_RESULT: SPECIFICATION_V1_0_EXTERNAL_LABELED_REGRESSION_NO_GAIN_WITH_LIMITATIONS
+LATEST_EXTERNAL_RESULT: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_LIMITATIONS
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
@@ -236,4 +260,4 @@ METHOD_EVIDENCE_STATUS: developing
 
 v1.0 remains the internal default. Further protocol revision should require a concrete defect or new stable obligation rather than routine expansion.
 
-The strongest remaining evidence priorities are a genuinely evaluator-separated external case, independent evaluator retrace, measured practical benefit where feasible, and additional receiving-method linkage only when it answers a real interoperability question. Blocked/unscored tests remain visible rather than being converted into apparent successes.
+The strongest remaining evidence priorities are an independent evaluator retrace, a second naturally separated real-world resolution case from another domain, measured practical benefit where feasible, and additional receiving-method linkage only when it answers a real interoperability question. Blocked/unscored tests remain visible rather than being converted into apparent successes.
