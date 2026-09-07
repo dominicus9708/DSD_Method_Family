@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + six Specification direct constructed pilots + first external Specification application + completed maturity audit  
+Status: current migration map + six Specification direct constructed pilots + two external Specification applications + completed first maturity audit  
 Date: 2026-09-07
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
@@ -31,11 +31,11 @@ Protocol versions:
 v0.1 historical protocol:
   methods/03_specification/PROTOCOL.md
 
-v0.2 prospective current protocol for new runs:
+v0.2 current protocol for new runs:
   methods/03_specification/PROTOCOL_v0.2.md
 ```
 
-The first five constructed pilots and `SPEC-APP-001` remain v0.1-era evidence. `SPEC-CH-006` directly tests the prospective purpose/detail/viewpoint guardrail distinction used to establish v0.2 for new runs.
+The first five constructed pilots and `SPEC-APP-001` remain v0.1-era evidence. `SPEC-CH-006` directly tests the purpose/detail/viewpoint guardrail distinction used in v0.2. `SPEC-APP-002` is the first external v0.2 application.
 
 ```text
 METHOD: DSD Specification
@@ -45,8 +45,9 @@ CURRENT_PROTOCOL_FOR_NEW_RUNS: v0.2
 V0_1_DIRECT_PILOTS: 5
 V0_2_GUARDRAIL_TRANSITION_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 6
-EXTERNAL_APPLICATIONS_TOTAL: 1
-V0_2_EXTERNAL_APPLICATIONS: 0
+EXTERNAL_APPLICATIONS_TOTAL: 2
+EXTERNAL_DOMAINS_TOTAL: 2
+V0_2_EXTERNAL_APPLICATIONS: 1
 ```
 
 ### v0.1 direct evidence
@@ -110,15 +111,42 @@ FINAL_SPEC_STATUS: no_gain
 COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 ```
 
-The v0.2 guardrail axes were not separately precommitted in this v0.1 application:
+The v0.2 guardrail axes were not separately precommitted in this v0.1 application and remain untested as formal axes for that record.
+
+### External application — SPEC-APP-002
+
+Protocol: v0.2.
 
 ```text
-PURPOSE_FIDELITY_GUARDRAIL: untested_as_formal_axis
-DETAIL_PROPORTIONALITY_GUARDRAIL: untested_as_formal_axis
-VIEWPOINT_SEPARATION_GUARDRAIL: untested_as_formal_axis
+CASE_ORIGIN: public_normative_ethics_guideline
+SOURCE: Belmont Report Part C. Applications
+EXTERNAL_DOMAIN: human-subject research ethics
+PRECOMMIT: 2ad9b5820a959195b32e1d9560be6328a4905771
+SOURCE_UNIT_COVERAGE: 22/22
+LOCAL_PRIORITY_PRESERVATION: 5/5
+UNRESOLVED_JUDGMENT_BOUNDARIES_PRESERVED: 4/4
+INVENTED_SOURCE_FACTS: 0
+NORMATIVE_FORCE_STRENGTHENINGS: 0
+DSD_VIEWPOINT_OVERATTRIBUTIONS: 0
+HARD_FAILURE_COUNT: 0
+FINAL_SPEC_STATUS: usable
+GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
+COMPETITIVE_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
+RESULT: SPECIFICATION_EXTERNAL_GUARDRAIL_APPLICATION_PASS_WITH_MIXED_GAIN
 ```
 
-Do not retroactively convert those fields to PASS.
+The gain is task-limited. The Belmont original remains preferred for primary ethical interpretation and contextual reasoning. DSD adds source-unit traceability, actor/condition separation, and coverage/review checkability as a derivative layer.
+
+A new nonfatal protocol pressure is recorded:
+
+```text
+intentional normative openness
+!= accidental specification underspecification
+```
+
+v0.2 preserved four identified open judgment boundaries without false deterministic resolution, but does not yet give source-intentional open texture its own dedicated status.
+
+The secondary Assurance Training comparator named in the precommit was verified before scoring as archived/outdated by HHS. It was retained only as a historical concise comparator and was not silently treated as a current regulatory compliance baseline.
 
 ### First maturity meta-audit
 
@@ -128,18 +156,16 @@ SPEC_MATURITY_MINIMUM_COMPONENTS_PRESENT: 8/8
 SPEC_MATURITY_CURRENT_DEVELOPING_STATUS: CONFIRMED
 SPEC_MATURITY_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 SPEC_MATURITY_STATUS_DECISION: RETAIN_DEVELOPING
-SPEC_MATURITY_ESTABLISHED_EVIDENCE_BREADTH: insufficient
-SPEC_MATURITY_EXTERNAL_CORPUS_COUNT: 1
-SPEC_MATURITY_EXTERNAL_DOMAIN_COUNT: 1
-SPEC_MATURITY_INDEPENDENT_EVALUATOR_VALIDATION: not_established
-SPEC_MATURITY_MEASURED_ENGINEERING_BENEFIT: not_established
 ```
 
-The post-audit discovery of the v0.1 purpose/detail/viewpoint guardrail gap does not erase the audit. It adds a prospective protocol requirement and further supports withholding `established` status until v0.2 is tested on external corpora.
+This audit predates `SPEC-APP-002`. Its verdict is preserved rather than silently updated.
 
 ```text
-ESTABLISHED_STATUS: not_justified_on_current_evidence
-NEXT_DIRECT_APPLICATION: SPEC-APP-002_less_structured_external_corpus_under_v0.2
+CURRENT_STATUS_AFTER_SPEC_APP_002: developing
+ESTABLISHED_STATUS_AFTER_SPEC_APP_002: not_reaudited
+INDEPENDENT_EVALUATOR_VALIDATION: not_established
+MEASURED_ENGINEERING_BENEFIT: not_established
+NEXT_EVIDENCE: independent_retrace_or_open-texture_boundary_challenge
 ```
 
 ## Shared-core registry status / 공통 코어 상태
@@ -167,12 +193,13 @@ DEVELOPING_WITH_DIRECT_AND_EXTERNAL_APPLICATION_EVIDENCE:
   DSD Specification
     direct_constructed_pilots: 6
     current_protocol_for_new_runs: v0.2
-    v0.2_external_applications: 0
-    external_or_independent_corpus_applications_total: 1
-    external_application_result: SPEC_NO_GAIN
+    external_applications_total: 2
+    external_domains_total: 2
+    v0.2_external_applications: 1
+    latest_external_result: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
     independent_evaluator_validation: not_established
-    maturity_audit: completed
-    established_promotion: insufficient_basis
+    first_maturity_audit: completed_before_SPEC_APP_002
+    established_status_after_latest_evidence: not_reaudited
     current_status: developing
 
 SHARED_CORE_REGISTRY_STATUS:
