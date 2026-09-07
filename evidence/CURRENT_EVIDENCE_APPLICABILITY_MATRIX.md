@@ -1,7 +1,7 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + five Specification direct pilots + first external Specification application  
-Date: 2026-09-06
+Status: current migration map + five Specification direct pilots + first external Specification application + completed maturity audit  
+Date: 2026-09-07
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
 
@@ -11,8 +11,9 @@ This file classifies existing method evidence without retroactively turning one 
 - **Shared support** = the record supports a reusable method-family discipline, but does not directly validate another method.
 - **Conditional transfer** = the shared rule applies only when the receiving method exposes the relevant structure or claim type.
 - **Protocol prepared** = a dedicated method protocol exists, but protocol existence alone is not direct validation.
-- **Direct pilot** = a method-specific challenge directly tested the method under its own protocol, but maturity is not yet established.
+- **Direct pilot** = a method-specific challenge directly tested the method under its own protocol, but established status is not thereby implied.
 - **External application** = the method is applied under locked criteria to material authored independently of DSD; this origin class does not imply an independent evaluator.
+- **Maturity meta-audit** = DSD Audit evaluates whether accumulated evidence justifies a method-status transition; it is not another direct pilot of the audited method.
 
 ## Analysis corpus / 분석론 기록
 
@@ -21,6 +22,8 @@ This file classifies existing method evidence without retroactively turning one 
 ## Audit corpus / 감사 기록
 
 Existing `DSD_Audit/` and new audit records remain direct evidence for **DSD Audit** procedures and verdict discipline only. Shared lessons do not automatically validate Specification, Prediction, Reconstruction, or other methods.
+
+The Specification maturity decision is recorded as a DSD Audit meta-record under `DSD_Audit/audits/methodology/`; it audits the status transition but does not count as a sixth Specification direct pilot.
 
 ## DSD Specification / DSD 명세론
 
@@ -36,6 +39,9 @@ Internal direct pilots:
 
 External application:
 - `evidence/real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length.md` with separate precommit.
+
+Maturity meta-audit:
+- `DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md` with separate precommit.
 
 ```text
 METHOD: DSD Specification
@@ -96,13 +102,27 @@ SPEC_APP_001_COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 SPEC_APP_001_PROTOCOL_PRESSURE: ordered_precedence_priority_present_nonfatal
 SPEC_APP_001_INDEPENDENT_EVALUATOR_VALIDATION: not_established
 
-MATURE_DIRECT_METHOD_VALIDATION: not_claimed
-NEXT_STEP: specification_maturity_audit
+SPEC_MATURITY_AUDIT_ID: DSD-AUDIT-20260907-METHODOLOGY-001
+SPEC_MATURITY_AUDIT_PRECOMMIT: de0cf86ade506f4a15ddfbabfa63066a796e63cf
+SPEC_MATURITY_MINIMUM_COMPONENTS_PRESENT: 8/8
+SPEC_MATURITY_CURRENT_DEVELOPING_STATUS: CONFIRMED
+SPEC_MATURITY_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
+SPEC_MATURITY_STATUS_DECISION: RETAIN_DEVELOPING
+SPEC_MATURITY_ESTABLISHED_EVIDENCE_BREADTH: insufficient
+SPEC_MATURITY_EXTERNAL_CORPUS_COUNT: 1
+SPEC_MATURITY_EXTERNAL_DOMAIN_COUNT: 1
+SPEC_MATURITY_INDEPENDENT_EVALUATOR_VALIDATION: not_established
+SPEC_MATURITY_MEASURED_ENGINEERING_BENEFIT: not_established
+
+ESTABLISHED_STATUS: not_justified_on_current_evidence
+NEXT_DIRECT_APPLICATION: SPEC-APP-002_less_structured_external_corpus
 ```
 
-`SPEC-APP-001` satisfies the repository checklist's **external or independently generated corpus-origin** requirement because RFC 9112 is an external public normative standard authored independently of DSD. It does not satisfy the separate independent-evaluator requirement.
+`SPEC-APP-001` satisfies the repository checklist's external or independently generated corpus-origin requirement because RFC 9112 is an external public normative standard authored independently of DSD. It does not satisfy the separate independent-evaluator requirement.
 
 The external result is intentionally non-favorable to a DSD superiority claim: the RFC baseline was already compact, ordered, and normative, so the precommitted comparative verdict was `SPEC_NO_GAIN` with the baseline preferred for this locked task. This counts as evidence of source fidelity and NO_GAIN preservation, not as evidence of engineering benefit.
+
+The maturity audit found all eight minimum evidence-component categories present, but retained `developing` because evidence breadth is still one external subsection in one domain. Minimum checklist presence is therefore separated from established-status justification.
 
 ## Shared-core registry status / 공통 코어 상태
 
@@ -130,10 +150,12 @@ DEVELOPING_WITH_DIRECT_AND_EXTERNAL_APPLICATION_EVIDENCE:
     internal_constructed_sequence: completed
     NO_GAIN_pilot: completed
     procedural_retrace: completed
-    external_or_independent_corpus_application: completed
+    external_or_independent_corpus_application: 1
     external_application_result: SPEC_NO_GAIN
     independent_evaluator_validation: not_established
-    maturity_audit: pending
+    maturity_audit: completed
+    established_promotion: insufficient_basis
+    current_status: developing
 
 SHARED_METHOD_FAMILY_EVIDENCE_AVAILABLE:
   yes
