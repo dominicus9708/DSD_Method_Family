@@ -21,6 +21,12 @@ audits/
 
 Create a domain directory when the first real audit exists. `methodology/` is used for audits whose object is a DSD method, protocol, evidence architecture, or maturity/status decision rather than an external subject-matter case.
 
+Active domain index:
+
+- [`mathematics/README.md`](mathematics/README.md) — current mathematics audit navigation; presently indexes the Collatz `MATH-001..007` sequence.
+
+A domain README is a navigation layer, not a replacement for individual audit records. Historical records remain at their original paths.
+
 ## Current methodology audits / 현재 방법론 감사
 
 ### DSD Specification maturity audit — 2026-09-07
