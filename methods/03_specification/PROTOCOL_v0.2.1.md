@@ -26,7 +26,7 @@ PROTOCOL.md        -> v0.1
 PROTOCOL_v0.2.md   -> v0.2
 ```
 
-v0.2.1 adds only the distinction validated prospectively by `SPEC-CH-007`:
+v0.2.1 adds the distinction validated prospectively by `SPEC-CH-007`:
 
 ```text
 SOURCE_OPENNESS_STATUS
@@ -114,7 +114,7 @@ A range or finite set can be fully determinate when the source intentionally def
 
 ### SOURCE_INTENTIONAL_OPENNESS
 
-Use only when source evidence supports that contextual judgment, bounded discretion, balancing, professional judgment, or an open choice is intentionally preserved.
+Use only when source evidence supports that contextual judgment, bounded discretion, balancing, professional judgment, site-specific implementation, or an open choice is intentionally preserved.
 
 Intentional openness must not be inferred merely from missing information.
 
@@ -144,7 +144,7 @@ SOURCE_OPENNESS_STATUS: SOURCE_INTENTIONAL_OPENNESS
 DOWNSTREAM_DETERMINACY_STATUS: UNDERDETERMINED_FOR_DECLARED_TASK
 ```
 
-For example, a source may intentionally delegate bounded professional judgment while an attempted fully automated downstream task demands a unique answer that the source does not provide.
+For example, a source may intentionally delegate bounded professional judgment or site-specific implementation while an attempted fully automatic downstream task demands a unique answer that the source does not provide.
 
 ## 6. Relation to `SPEC_UNDERSPECIFIED` / 미명세 판정과의 관계
 
@@ -389,17 +389,25 @@ v0.2.1 transition evidence:
     RESULT: SPECIFICATION_OPENNESS_DETERMINACY_AXIS_SEPARATION_PILOT_PASS_WITH_LIMITATIONS
 
 v0.2.1 external applications:
-  0
+  SPEC-APP-003 — OSHA Emergency Action Plan core corpus
+    SOURCE_UNIT_COVERAGE: 18/18
+    REGULATORY_MINIMUM_ELEMENTS_PRESERVED: 11/11
+    SITE_SPECIFIC_OPENNESS_HANDLED_WITHOUT_FABRICATION: 7/7
+    DOWNSTREAM_DETERMINACY_STATUS: SUFFICIENT_AT_DECLARED_RESOLUTION
+    FINAL_SPEC_STATUS: no_gain
+    GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
+    COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
+    RESULT: SPECIFICATION_EXTERNAL_V0_2_1_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 
 METHOD_STATUS:
   developing
 ```
 
+The first external v0.2.1 run confirms that source-supported site-specific implementation openness can be represented without fabricating local detail or weakening task-relative underspecification. It does not establish a practical advantage over a strong domain baseline.
+
 ## 18. Promotion restraint / 승격 절제
 
-Protocol v0.2.1 is a prospective method-specific refinement only.
-
-It does not establish:
+Protocol v0.2.1 does not establish:
 - independent evaluator agreement;
 - broad cross-domain superiority;
 - improved professional judgment;
@@ -407,4 +415,4 @@ It does not establish:
 - a new shared-core rule;
 - `established` method status.
 
-The strongest next evidence is a genuinely independent retrace of an existing locked application, or a new external application under v0.2.1 followed by a separate maturity re-audit.
+With three external corpora now accumulated across the method history, the strongest next evidence is a genuinely independent retrace of an existing locked application. If independent review is unavailable, a new maturity re-audit should explicitly discount common-evaluator dependence instead of treating corpus count as independent replication.
