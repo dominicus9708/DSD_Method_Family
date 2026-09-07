@@ -13,7 +13,7 @@ EXTERNAL_APPLICATIONS_COMPLETED: 7
 EXTERNAL_DOMAINS_COMPLETED: 7
 RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 3
 RESOLUTION_WITHHELD_NON_SOFTWARE_APPLICATIONS: 1
-METHOD_FAMILY_LINKAGE_PILOTS: 1
+METHOD_FAMILY_LINKAGE_PILOTS: 2
 BLOCKED_UNSCORED_EXTERNAL_BLIND_PRECOMMITS: 1
 PRACTICAL_COMPARATIVE_BENCHMARKS_COMPLETED: 3
 INDEPENDENT_EVALUATOR_PACKETS_PREPARED: 2
@@ -93,6 +93,60 @@ NEXT_BLOCKER_RESOLUTION_EVENT: genuine independent evaluator submission
 PROTOCOL_V1_0_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
+
+## Method-family linkage breadth
+
+### SPEC-LINK-001 — Specification -> Audit
+
+```text
+RECEIVING_METHOD: DSD Audit
+AUDIT_FINDING_MATCHES: 6/6
+REQUIREMENT_IDENTITY_PRESERVATION: pass
+NORMATIVE_FORCE_PRESERVATION: pass
+OPENNESS_PRESERVATION: pass
+HIDDEN_RETRANSLATION_REQUIRED: no
+EXTERNAL_STANDARD_BOUNDARY_PRESERVED: yes
+```
+
+This demonstrates one receiving boundary where the upstream Specification carrier becomes actively evaluative because the receiving method is Audit.
+
+### SPEC-LINK-002 — Specification -> Analysis
+
+`SPEC-LINK-002` prospectively locked a constructed sensor-status carrier and then tested whether established DSD Analysis could consume it without becoming Audit.
+
+```text
+PRECOMMIT_COMMIT: 3f199bc0305b53ec2d26d7b73848c2493568f701
+RESULT_COMMIT: 0b08a9b8db24d4bfeb3d0780194c538e5424b17c
+PRECOMMITTED_PROBES_PASSED: 8/8
+UPSTREAM_REQUIREMENT_IDS_PRESERVED: 6/6
+CARRIER_IDENTITIES_PRESERVED: 6/6
+ZERO_UNDEFINED_COLLAPSE: 0
+ABSENCE_UNDEFINED_COLLAPSE: 0
+FABRICATED_THRESHOLD_VALUE: no
+A_TO_C_BRIDGE_INFERRED_FROM_NUMERIC_SIMILARITY: no
+AUDIT_OR_COMPLIANCE_VERDICT_EMITTED: no
+EXTERNAL_STANDARD_E_REPLACED_BY_DSD: no
+LINKAGE_VERDICT: FULL_LINKAGE_PASS
+```
+
+The case supports the narrow boundary rule:
+
+```text
+TYPED_REQUIREMENT_CARRIER_TRANSFER
+!= REQUIREMENT_EVALUATION
+```
+
+Specification atoms may serve as stable structural reference carriers for Analysis while normative force remains unjudged. This differs from `SPEC-LINK-001`, where Audit legitimately activates criterion evaluation.
+
+```text
+METHOD_FAMILY_LINKAGE_PILOTS: 2
+DEMONSTRATED_RECEIVING_METHODS:
+  Audit
+  Analysis
+ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
+```
+
+This increases receiving-method breadth but does not establish practical superiority, independent evaluator validation, or universal interoperability.
 
 ## Practical-benefit track
 
@@ -197,9 +251,9 @@ POSITIVE_MEASURED_PRACTICAL_BENEFIT: not demonstrated
 
 The independent-evaluator blocker now has a release-ready packet, but it remains unresolved until a genuinely separate reviewer completes `SPEC-IND-002` and freezes the result before answer comparison.
 
-Three practical comparative benchmarks now exist, including one prospectively governed by `PRACTICAL_BENCHMARK_RULE_v0.1`. Additional same-project benchmarks have diminishing value unless they add genuinely new measurements such as human time, independent reviewers, or another receiving-method boundary.
+The second receiving-method linkage adds genuinely new cross-method breadth, so repeated same-boundary linkage pilots now have diminishing value. Additional internal work should target a materially new measurement axis or wait for the independent reviewer event rather than accumulating similar handoff successes.
 
-The next maturity re-audit should occur after a genuine independent reviewer submission is frozen and compared, or after materially stronger evidence resolves one of the blockers above. Running the audit now would mainly reconfirm the existing `developing` status.
+The next maturity re-audit should occur after a genuine independent reviewer submission is frozen and compared, or after materially stronger practical evidence resolves one of the blockers above. Running the audit now would mainly reconfirm the existing `developing` status.
 
 ## Stable conclusion
 
