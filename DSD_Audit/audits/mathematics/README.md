@@ -16,11 +16,8 @@
 \]
 
 - **Current top-address labels:** `340` (`1024..1363`)
-- **Current frontier:** lower-61 reachable endpoint phases
-
-\[
-\operatorname{Reach}_{61}\subset\{(q_{61},y\bmod2048)\}.
-\]
+- **MATH-008 result:** lower-61 endpoint phase reachability is full for `q61=39..58`; the 61+11 coefficient-only phase-refinement route is saturated.
+- **Current frontier:** add a new same-integer observable beyond `(q61,y mod2048)` rather than further phase coarsening/reachability filtering.
 
 ## Canonical Collatz audit sequence
 
@@ -32,7 +29,8 @@
 | `DSD-AUDIT-20260907-MATH-004` | [`2026-09-07_collatz-first-cell-endpoint-q-lock-audit.md`](2026-09-07_collatz-first-cell-endpoint-q-lock-audit.md) | Endpoint q-lock/address-faithful Hensel interpretation; revised to candidate-language first crossing scope |
 | `DSD-AUDIT-20260907-MATH-005` | [`2026-09-07_collatz-340block-endpoint-halo-audit.md`](2026-09-07_collatz-340block-endpoint-halo-audit.md) | Same-endpoint coupling localized to adjacent-block halos |
 | `DSD-AUDIT-20260907-MATH-006` | [`2026-09-07_collatz-block-label-11bit-transducer-audit.md`](2026-09-07_collatz-block-label-11bit-transducer-audit.md) | Exact 61+11 block-label transducer; low-surplus pointwise label caps |
-| `DSD-AUDIT-20260907-MATH-007` | [`2026-09-07_collatz-block-label-right-congruence-audit.md`](2026-09-07_collatz-block-label-right-congruence-audit.md) | Exact right-congruence barrier; `q61=39..43` requires all 2048 endpoint phases |
+| `DSD-AUDIT-20260907-MATH-007` | [`2026-09-07_collatz-block-label-right-congruence-audit.md`](2026-09-07_collatz-block-label-right-congruence-audit.md) | Exact right-congruence barrier; low-surplus masks retain full endpoint-phase distinction |
+| `DSD-AUDIT-20260908-MATH-008` | [`2026-09-08_collatz-lower61-endpoint-phase-reachability-audit.md`](2026-09-08_collatz-lower61-endpoint-phase-reachability-audit.md) | Exact constructive reachability; all 2048 phases occur for `q61=39..58`; proposed phase-sparsity refinement is `STRATEGY SATURATION` |
 
 ## Reading order
 
@@ -45,6 +43,25 @@ For the present proof attempt, read in this order:
 5. `MATH-005` — block coupling locality.
 6. `MATH-006` — exact block-label transducer.
 7. `MATH-007` — why endpoint phase cannot be coarsened away in the strongest range.
+8. `MATH-008` — why actual phase reachability does not rescue that compression: all relevant phases really occur.
+
+## Current MATH-008 boundary
+
+The exact reachable-phase cardinalities are
+
+\[
+\#\operatorname{Reach}_{61}(q)=
+\begin{cases}
+2048,&39\le q\le58,\\
+1166,&q=59,\\
+58,&q=60,\\
+1,&q=61.
+\end{cases}
+\]
+
+Every `q61` range where MATH-006 can reject any of the 340 labels (`39..45`) already reaches the full `2048` ambient phases. Thus no phase-reachability restriction can sharpen the coefficient-only depth-72 label mask.
+
+This closes only that strategy branch. It does not remove the valid pointwise MATH-006 caps and does not close the first universal cell.
 
 ## Audit discipline
 
@@ -71,6 +88,10 @@ Finite scans and exact finite tables may establish the finite statement they act
 ### Preserve ordinary-integer lineage
 
 A residue, quotient state, endpoint class, or symbolic path may be used only when the bridge back to the same ordinary integer is explicit at the required resolution.
+
+### Saturated route is not a false theorem
+
+If a proposed refinement produces no additional exclusion, preserve the upstream theorems and record the refinement as `STRATEGY SATURATION` rather than erasing the valid prior results.
 
 ## External literature citation classes
 
