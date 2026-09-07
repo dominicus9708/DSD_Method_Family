@@ -32,6 +32,32 @@ INDEPENDENT_EVALUATOR_VALIDATION: not_established
 
 The project evaluator must not self-complete this packet and call it independent evidence.
 
+### SPEC-IND-001 readiness audit
+
+`DSD-AUDIT-20260908-METHODOLOGY-005` reviewed the packet as a **post-hoc internal readiness review** rather than as confirmatory evidence.
+
+```text
+INDEPENDENCE_REQUIREMENT_DISCIPLINE: PASS
+ANSWER_COMMITMENT_DISCIPLINE: PASS
+PRIMARY_CLASS_EXCLUSIVITY: FAIL
+PREDECLARED_CLASS_PRECEDENCE: ABSENT
+DECISIVE_INDEPENDENT_SCORING_READINESS: NOT_READY
+SPEC_IND_001_HISTORY_PRESERVED: yes
+```
+
+The packet's independence gates and hidden-answer hash commitment are sound. The weakness is the exact-one `PRIMARY_CLASS` scoring rule: Protocol v1.0 allows different diagnostic families to be simultaneously relevant, while `SPEC-IND-001` does not prospectively define a global precedence rule that would make the listed primary classes mutually exclusive.
+
+Because the expected primary-class sequence has already been committed, adding such a precedence rule now would be a post-hoc scoring change. `SPEC-IND-001` is therefore preserved unchanged as a historical prepared packet, but its eventual exact-primary-class score should not be treated as decisive maturity evidence.
+
+The next actionable independent-evaluator artifact is a prospectively scored `SPEC-IND-002` packet using **axis-separated scoring**: each case locks one scored target axis before review, while other active diagnostics remain secondary and do not alter the target-axis score.
+
+```text
+RECOMMENDED_NEXT_INDEPENDENT_PACKET: SPEC-IND-002
+SCORING_FORM: axis-separated
+PROTOCOL_V1_0_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
 ## Practical-benefit track
 
 ### SPEC-MEAS-001 — standalone acceptance benchmark
