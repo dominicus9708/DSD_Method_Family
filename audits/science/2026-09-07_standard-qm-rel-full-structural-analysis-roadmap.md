@@ -145,7 +145,7 @@ Detailed audits remain pending even where first-pass placement is checked.
 
 ---
 
-## Detailed audit order now active
+## Detailed audit order — first sequence complete
 
 ```text
 1. DONE 2026-09-08 / PHY-QM-050
@@ -177,9 +177,24 @@ Detailed audits remain pending even where first-pass placement is checked.
                Cauchy data and target dependence domain, and domain-limited determination
                does not imply global reconstruction.
 
-5. NEXT
+5. DONE 2026-09-08 / PHY-REL-007
    Standard-domain relation layer — symmetry, curvature, Einstein equation, conservation
+   result: PASS_WITH_REFINEMENT
+   refinement: a one-slice record may carry all required operands while still requiring
+               independently supplied transformation, differential, field-equation, and
+               consistency relations; storing a relation as data is not the same as deriving
+               or satisfying it.
 ```
+
+Accumulated audit-level completeness refinement:
+
+\[
+\boxed{
+\text{completeness is relative to carrier/boundary, query, supplied relations, and target domain.}
+}
+\]
+
+This is a structural reporting result, not a new physical law.
 
 Detailed audit records:
 
@@ -188,6 +203,7 @@ audits/science/2026-09-08_phy-qm-050-configuration-state-povm-instrument-audit.m
 audits/science/2026-09-08_phy-qm-051-configuration-state-composite-access-audit.md
 audits/science/2026-09-08_phy-rel-005-configuration-state-frame-causal-access-audit.md
 audits/science/2026-09-08_phy-rel-006-cauchy-domain-reconstruction-audit.md
+audits/science/2026-09-08_phy-rel-007-standard-domain-relation-layer-audit.md
 ```
 
 Reproducibility records:
@@ -197,7 +213,29 @@ audits/science/2026-09-06_sequential_quantum_instrument_dsd_order.py
 audits/science/2026-09-06_werner_dsd_entanglement_chsh.py
 audits/science/2026-09-08_rel_chart_frame_causal_access.py
 audits/science/2026-09-08_rel_cauchy_domain_reconstruction.py
+audits/science/2026-09-08_rel_relation_layer_symmetry_curvature_einstein_conservation.py
 ```
+
+---
+
+## Next Track-2 phase — stress test of the common structuring
+
+The first detailed sequence is complete. The next phase should attack the remaining cross-standard-theory questions rather than add another untested physical identification.
+
+```text
+A. NEXT — explicit comparison of standard invariants/equivalences with DSD strict equivalence
+   Goal: determine exactly which comparison maps can be defined and which identifications fail.
+
+B. Countermodel search
+   Goal: find cases where a common role such as representation/access/readout/reconstruction
+         becomes incomparable or requires a theory-specific extension.
+
+C. Common-theorem gate
+   Goal: state a genuinely common theorem only if it follows from the abstract typed-map
+         structure itself rather than being imported from either QM or relativity.
+```
+
+Standard QFT remains a later extension and requires a fresh primitive lock.
 
 ---
 
@@ -223,4 +261,4 @@ A successful analysis does not require a quantum-gravity claim.
 
 Track 3 applies existing DSD static aggregation and structural-reorganization dynamics to the already isolated common structuring roles.
 
-Track 2 is now active as the breadth and boundary audit for that construction. Track 2 must not be backfilled with assumptions inferred from Track-3 outcomes.
+Track 2 remains the breadth, boundary, and countermodel audit for that construction. Track 2 must not be backfilled with assumptions inferred from Track-3 outcomes.
