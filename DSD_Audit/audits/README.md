@@ -8,6 +8,7 @@ This directory is the authoritative location for **new DSD Audit case records** 
 
 ```text
 audits/
+├─ methodology/
 ├─ mathematics/
 ├─ science/
 ├─ law/
@@ -18,7 +19,25 @@ audits/
 └─ README.md
 ```
 
-Create a domain directory when the first real audit exists.
+Create a domain directory when the first real audit exists. `methodology/` is used for audits whose object is a DSD method, protocol, evidence architecture, or maturity/status decision rather than an external subject-matter case.
+
+## Current methodology audits / 현재 방법론 감사
+
+### DSD Specification maturity audit — 2026-09-07
+
+- Precommit: [`methodology/2026-09-07_dsd-specification-maturity-audit_precommit.md`](methodology/2026-09-07_dsd-specification-maturity-audit_precommit.md)
+- Result: [`methodology/2026-09-07_dsd-specification-maturity-audit.md`](methodology/2026-09-07_dsd-specification-maturity-audit.md)
+
+```text
+AUDIT_ID: DSD-AUDIT-20260907-METHODOLOGY-001
+MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
+AUDIT_VERDICT_ON_CURRENT_DEVELOPING_STATUS: CONFIRMED
+AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
+METHOD_STATUS_DECISION: RETAIN_DEVELOPING
+PRINCIPAL_BLOCKER: insufficient external/cross-domain evidence breadth
+```
+
+The audit does not treat the first external `SPEC_NO_GAIN` / baseline-preferred result as a failure. It preserves that result and separately finds that one external corpus in one domain is insufficient evidence breadth for `established` status.
 
 ## Starting a new audit / 새 감사 시작
 
