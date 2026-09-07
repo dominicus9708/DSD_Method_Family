@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + seven Specification direct constructed pilots + two external Specification applications + completed first maturity audit  
+Status: current migration map + seven Specification direct constructed pilots + three external Specification applications + completed first maturity audit  
 Date: 2026-09-07
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
@@ -17,11 +17,11 @@ This file classifies existing method evidence without retroactively turning one 
 
 ## Analysis corpus / 분석론 기록
 
-`ANL-CH-001` through `ANL-CH-009` remain direct evidence for **DSD Analysis** challenge criteria only. Their shared lessons may support common rules, but do not directly validate another method.
+`ANL-CH-001` through `ANL-CH-009` remain direct evidence for **DSD Analysis** challenge criteria only.
 
 ## Audit corpus / 감사 기록
 
-Existing `DSD_Audit/` and new audit records remain direct evidence for **DSD Audit** procedures and verdict discipline only. Shared lessons do not automatically validate Specification, Prediction, Reconstruction, or other methods.
+Existing `DSD_Audit/` and new audit records remain direct evidence for **DSD Audit** procedures and verdict discipline only.
 
 ## DSD Specification / DSD 명세론
 
@@ -34,7 +34,7 @@ v0.1 historical:
 v0.2 historical / APP-002 protocol:
   methods/03_specification/PROTOCOL_v0.2.md
 
-v0.2.1 current for new runs:
+v0.2.1 current for new runs / APP-003 protocol:
   methods/03_specification/PROTOCOL_v0.2.1.md
 ```
 
@@ -47,10 +47,10 @@ V0_1_DIRECT_PILOTS: 5
 V0_2_GUARDRAIL_TRANSITION_PILOT: 1
 V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 7
-EXTERNAL_APPLICATIONS_TOTAL: 2
-EXTERNAL_DOMAINS_TOTAL: 2
+EXTERNAL_APPLICATIONS_TOTAL: 3
+EXTERNAL_DOMAINS_TOTAL: 3
 V0_2_EXTERNAL_APPLICATIONS: 1
-V0_2_1_EXTERNAL_APPLICATIONS: 0
+V0_2_1_EXTERNAL_APPLICATIONS: 1
 ```
 
 ### v0.1 direct evidence
@@ -74,15 +74,6 @@ SPEC_CH_006_FALSE_REJECTION_OF_DECLARED_DERIVATIVE_VIEW: 0
 SPEC_CH_006_RESULT: SPECIFICATION_GUARDRAIL_CENTERLINE_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-Accepted v0.2 guardrail ledger:
-
-```text
-G1 SOURCE_FIDELITY
-G2 PURPOSE_AND_PRIORITY_FIDELITY
-G3 DETAIL_PROPORTIONALITY
-G4 VIEWPOINT_SEPARATION
-```
-
 ### SPEC-CH-007 openness / determinacy axis separation
 
 ```text
@@ -90,11 +81,6 @@ SPEC_CH_007_PRECOMMIT: 1b3665696007b29535b3f46815cad39f4f02c03f
 SPEC_CH_007_EXACT_SOURCE_OPENNESS_AXIS_MATCHES: 8/8
 SPEC_CH_007_EXACT_DOWNSTREAM_DETERMINACY_AXIS_MATCHES: 8/8
 SPEC_CH_007_EXACT_JOINT_AXIS_MATCHES: 8/8
-SPEC_CH_007_TASK_SUFFICIENT_INTENTIONAL_OPENNESS_ACCEPTED: 2/2
-SPEC_CH_007_INTENTIONAL_OPENNESS_WITH_AUTOMATION_GAP_PRESERVED: 1/1
-SPEC_CH_007_ACCIDENTAL_OR_UNRESOLVED_MISSING_DATA_DETECTED: 3/3
-SPEC_CH_007_UNSUPPORTED_INTENT_NOT_INVENTED: 3/3
-SPEC_CH_007_INVENTED_RESOLUTION_ESCALATED_TO_HARD_FAILURE: 1/1
 SPEC_CH_007_FALSE_UNDERSPEC_ON_TASK_SUFFICIENT_OPENNESS: 0
 SPEC_CH_007_FALSE_OPENNESS_EXCUSE_FOR_MISSING_DATA: 0
 SPEC_CH_007_FALSE_DETERMINACY_FROM_INVENTED_VALUE: 0
@@ -108,9 +94,7 @@ SOURCE_OPENNESS_STATUS
 != DOWNSTREAM_DETERMINACY_STATUS
 ```
 
-`SPEC_UNDERSPECIFIED` remains task-relative. A source-supported intentional openness can be sufficient for one declared human-review task and insufficient for a stronger automation task.
-
-This remains method-specific and does not add or reopen a shared-core ID.
+`SPEC_UNDERSPECIFIED` remains task-relative.
 
 ### External application — SPEC-APP-001
 
@@ -119,14 +103,13 @@ Protocol: v0.1.
 ```text
 CASE_ORIGIN: public_normative_standard
 SOURCE: RFC 9112 §6.3
+EXTERNAL_DOMAIN: HTTP message framing
 SOURCE_UNIT_COVERAGE: 13/13
 PRECEDENCE_PRESERVATION: 13/13
 SOURCE_FIDELITY_RESULT: pass
 FINAL_SPEC_STATUS: no_gain
 COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 ```
-
-The v0.2 guardrail axes were not separately precommitted in this v0.1 application and remain untested as formal axes for that record.
 
 ### External application — SPEC-APP-002
 
@@ -146,7 +129,30 @@ COMPETITIVE_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
 RESULT: SPECIFICATION_EXTERNAL_GUARDRAIL_APPLICATION_PASS_WITH_MIXED_GAIN
 ```
 
-The Belmont application exposed the source-openness / downstream-determinacy pressure isolated by `SPEC-CH-007`. It remains a v0.2 record and is not rescored under v0.2.1.
+### External application — SPEC-APP-003
+
+Protocol: v0.2.1.
+
+```text
+CASE_ORIGIN: public_regulatory_standard_plus_official_guidance
+SOURCE: OSHA 29 CFR 1910.38 + official EAP/alarm eTool/checklist material
+EXTERNAL_DOMAIN: workplace emergency planning / occupational safety
+PRECOMMIT: ccda4cfe9e9b25b3a97029c6a19c2e8e07076eb0
+SOURCE_UNIT_COVERAGE: 18/18
+REGULATORY_MINIMUM_ELEMENTS_PRESERVED: 11/11
+SITE_SPECIFIC_OPENNESS_HANDLED_WITHOUT_FABRICATION: 7/7
+DOWNSTREAM_DETERMINACY_STATUS: SUFFICIENT_AT_DECLARED_RESOLUTION
+INVENTED_SITE_SPECIFIC_FACTS: 0
+NORMATIVE_FORCE_STRENGTHENINGS: 0
+REGULATION_GUIDANCE_COLLAPSE: 0
+HARD_FAILURE_COUNT: 0
+FINAL_SPEC_STATUS: no_gain
+GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
+COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
+RESULT: SPECIFICATION_EXTERNAL_V0_2_1_NO_GAIN_WITH_GUARDRAIL_PRESSURE
+```
+
+This first external v0.2.1 application supports source-faithful use of the openness/determinacy axes on an operational/regulatory corpus. It does **not** show task-matched superiority: OSHA's own regulation, cross-referenced eTool, and checklist already provide a strong baseline for the locked structural-review task.
 
 ### First maturity meta-audit
 
@@ -157,14 +163,15 @@ SPEC_MATURITY_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 SPEC_MATURITY_STATUS_DECISION: RETAIN_DEVELOPING
 ```
 
-This audit predates both `SPEC-APP-002` and `SPEC-CH-007`. Its verdict is preserved rather than silently updated.
+This audit predates `SPEC-APP-002`, `SPEC-CH-007`, and `SPEC-APP-003`; it remains historical until a new re-audit.
 
 ```text
 CURRENT_STATUS_AFTER_LATEST_EVIDENCE: developing
 ESTABLISHED_STATUS_AFTER_LATEST_EVIDENCE: not_reaudited
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
-NEXT_EVIDENCE: genuinely_independent_retrace_or_new_external_v0_2_1_application
+SAME_PROJECT_EVALUATOR_DEPENDENCE: present
+NEXT_EVIDENCE: genuinely_independent_retrace_or_dependency_discounted_maturity_reaudit
 ```
 
 ## Shared-core registry status / 공통 코어 상태
@@ -190,12 +197,13 @@ DEVELOPING_WITH_DIRECT_AND_EXTERNAL_APPLICATION_EVIDENCE:
   DSD Specification
     direct_constructed_pilots: 7
     current_protocol_for_new_runs: v0.2.1
-    external_applications_total: 2
-    external_domains_total: 2
-    v0.2.1_external_applications: 0
-    latest_external_result: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
+    external_applications_total: 3
+    external_domains_total: 3
+    v0.2.1_external_applications: 1
+    latest_external_result: SPEC_NO_GAIN_WITH_GUARDRAIL_PRESSURE
     independent_evaluator_validation: not_established
-    first_maturity_audit: completed_before_SPEC_APP_002_and_SPEC_CH_007
+    measured_practical_benefit: not_established
+    first_maturity_audit: historical_before_latest_evidence
     established_status_after_latest_evidence: not_reaudited
     current_status: developing
 
