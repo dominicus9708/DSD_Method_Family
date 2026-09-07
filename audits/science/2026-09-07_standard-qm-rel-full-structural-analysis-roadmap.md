@@ -143,6 +143,7 @@ Detailed audits remain pending even where first-pass placement is checked.
 - [ ] Continue detailed countermodels where one common role fails, becomes incomparable, or requires theory-specific extension.
 - [x] First genuinely common theorem admitted only after proof from the abstract typed-map structure: fiber-factorization criterion for reduced maps.
 - [x] Common typed-map lemma admitted: passive re-encoding is classified by semantic-decoder commutation, not by invertibility alone.
+- [x] Common readout-fiber theorem admitted: constant selected output constrains motion to a readout fiber and does not imply state constancy without separation/injectivity.
 
 ---
 
@@ -208,6 +209,7 @@ audits/science/2026-09-08_phy-rel-007-standard-domain-relation-layer-audit.md
 audits/science/2026-09-08_cross-standard-equivalence-dsd-strict-equivalence-audit.md
 audits/science/2026-09-08_cross-partial-trace-causal-restriction-factorization-audit.md
 audits/science/2026-09-08_cross-passive-representation-active-transition-audit.md
+audits/science/2026-09-08_cross-selected-readout-invariant-nonzero-dynamics-audit.md
 ```
 
 Reproducibility records:
@@ -221,6 +223,7 @@ audits/science/2026-09-08_rel_relation_layer_symmetry_curvature_einstein_conserv
 audits/science/2026-09-08_cross_equivalence_invariant_firewall.py
 audits/science/2026-09-08_cross_restriction_factorization_firewall.py
 audits/science/2026-09-08_cross_passive_representation_active_transition.py
+audits/science/2026-09-08_cross_selected_readout_invariant_nonzero_dynamics.py
 ```
 
 ---
@@ -262,21 +265,41 @@ B. ACTIVE — common-role countermodel search
          invertibility/reversibility alone does not classify either role;
          the same numerical matrix/group element can appear in different typed roles.
 
-   B3. NEXT — selected readout/invariant constancy vs zero dynamics
+   B3. DONE 2026-09-08 — selected readout/invariant constancy vs zero dynamics
+       result: PASS_WITH_BOUNDARY
+       common theorem admitted:
+         Phi(Gamma(s)) = Phi(s) iff Gamma(s) remains in the same Phi-fiber;
+         selected-output constancy implies state constancy only when the selected/joint
+         readout is injective or point-separating on the declared orbit/target set.
+       endpoint refinement:
+         Gamma_T(s) = s at a sampled endpoint does not imply a constant trajectory on
+         0 < t < T.
+       physical boundary:
+         constant QM measurement probabilities or energy expectation != stationary ray;
+         constant relativistic four-velocity norm != unchanged worldline event;
+         conserved/invariant quantity != complete state descriptor.
+
+   B4. NEXT — reduction/access map vs transition closure
+       abstract target:
+         R o Gamma = Gamma_red o R ?
+       question:
+         when does a reduced/access-limited state admit an autonomous induced transition?
        QM comparator:
-         nontrivial active unitary evolution with a preserved selected readout/invariant.
+         subsystem reduction / partial trace vs global unitary or open-system dynamics.
        Relativity comparator:
-         nontrivial worldline/flow evolution in a symmetry-preserving or stationary setting.
+         domain restriction / Cauchy domain vs evolution inside and outside the declared domain.
        Goal:
-         test the implication
-         same selected readout/invariant -> Gamma = identity,
-         and cross-check the existing DSD static-dynamic independence result.
+         derive the exact fiber-compatibility condition for an induced reduced dynamics,
+         then test where standard QM and relativity satisfy or violate it without identifying
+         their physical mechanisms.
 
 C. COMMON-THEOREM GATE — ACTIVE
    Admitted results:
      1. fiber-factorization criterion for arbitrary maps;
      2. semantic-decoder commutation criterion separating passive re-encoding from
-        active transition at the typed-map level.
+        active transition at the typed-map level;
+     3. readout-fiber motion criterion: selected-output constancy is fiber constancy,
+        while state constancy requires an injective/separating readout on the target orbit.
    Rule remains:
      no further common theorem is recorded unless it follows from the abstract map/typing
      structure itself rather than being imported from either QM or relativity.
