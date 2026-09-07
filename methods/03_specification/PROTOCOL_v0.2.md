@@ -442,10 +442,34 @@ v0.2 guardrail transition evidence:
     RESULT: SPECIFICATION_GUARDRAIL_CENTERLINE_PILOT_PASS_WITH_LIMITATIONS
 
 v0.2 external evidence:
-  not yet established
+  SPEC-APP-002 — Belmont Report Part C
+    SOURCE_UNIT_COVERAGE: 22/22
+    LOCAL_PRIORITY_PRESERVATION: 5/5
+    UNRESOLVED_JUDGMENT_BOUNDARIES_PRESERVED: 4/4
+    HARD_FAILURE_COUNT: 0
+    FINAL_SPEC_STATUS: usable
+    GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
+    COMPETITIVE_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
 
 METHOD_STATUS:
   developing
 ```
 
-Next direct application: `SPEC-APP-002`, using a less-structured external corpus with purpose, audience, priority, viewpoint, and detail-burden guardrails locked before DSD transformation.
+## 23. Open protocol pressure / 현재 프로토콜 압력점
+
+`SPEC-APP-002` exposed a distinction that v0.2 can preserve but does not yet represent with a dedicated first-class status:
+
+```text
+source-intentional normative openness
+!= accidental specification underspecification
+```
+
+The Belmont Report intentionally leaves some ethical boundaries open to contextual judgment. During `SPEC-APP-002`, these were preserved through `UNRESOLVED_CONDITION` and limits without converting them into `SPEC_UNDERSPECIFIED` failures or false deterministic rules.
+
+```text
+PRESSURE_STATUS: present_nonfatal
+RETROACTIVE_PROTOCOL_CHANGE: no
+PROSPECTIVE_REFINEMENT: test_before_any_v0.3_change
+```
+
+The next strongest evidence is either an independent retrace of `SPEC-APP-002` or a dedicated prospective boundary challenge for intentional open texture versus accidental underspecification.
