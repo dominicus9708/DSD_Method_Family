@@ -2,13 +2,13 @@
 
 This folder is reserved for applications to **independent real-world material** rather than synthetic toy cases or internally constructed benchmarks.
 
-Examples include actual events, judicial cases, historical incidents, personal cases, empirical datasets, documented organizational or technical incidents, public normative standards/specifications, ethics/policy guidelines, and public regulatory standards with official guidance.
+Examples include actual events, judicial cases, historical incidents, personal cases, empirical datasets, documented organizational or technical incidents, public normative standards/specifications, ethics/policy guidelines, public regulatory standards with official guidance, and public regulatory safety investigations.
 
 ## Separation rule / 분리 원칙
 
 `CASE_ORIGIN` is separate from `EVIDENCE_SCOPE_CLASS`.
 
-A judicial case may be a method-specific Audit case. A public standard, ethics guideline, or regulatory corpus may directly test Specification while remaining external-source application evidence rather than a synthetic benchmark.
+A judicial case may be a method-specific Audit case. A public standard, ethics guideline, regulatory corpus, or official investigation may directly test Specification while remaining external-source application evidence rather than a synthetic benchmark.
 
 ## Required case fields
 
@@ -37,11 +37,11 @@ Origin labels are not validation verdicts. An independently authored source can 
 
 - Case facts are locked separately from DSD interpretation.
 - Prefer official, primary, or otherwise authoritative records where available.
-- Judicial, historical, personal, normative, ethical, and regulatory corpora keep their domain-specific source hierarchy and uncertainty boundaries.
+- Judicial, historical, personal, normative, ethical, regulatory, and safety-investigation corpora keep their domain-specific source hierarchy and uncertainty boundaries.
 - Public standards lock authoritative version/status and exact section scope before DSD scoring.
 - Conflicting or differently weighted sources are preserved rather than silently merged.
 - A blocked or contaminated precommit remains visible and is not counted as a completed application.
-- A resolution-withheld incident test must freeze its acceptance prediction before comments, PRs, patches, or closing commits are revealed.
+- A resolution-withheld incident or investigation test must freeze its acceptance prediction before comments, patches, closing resumes, recall reports, or other later resolution artifacts are revealed.
 
 ## Current external application records / 현재 외부 적용 기록
 
@@ -175,8 +175,36 @@ The issue body was used to freeze a lifecycle acceptance contract before maintai
 
 This is also the first completed v1.0 external Specification application in the current sequence where `DYNAMICS_LAYER` was materially selected for event-order/lifecycle constraints.
 
+#### SPEC-APP-008 — NHTSA PE24003 / Alfa Romeo low-pressure fuel-pump investigation
+
+- Precommit: [`specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump_precommit.md`](specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump_precommit.md)
+- Frozen prediction: [`specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump_prediction.md`](specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump_prediction.md)
+- Result: [`specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump.md`](specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump.md)
+
+```text
+PROTOCOL: v1.0
+CASE_ORIGIN: public_regulatory_safety_investigation
+EXTERNAL_DOMAIN: automotive safety / defect investigation
+SELECTED_DSD_LAYERS: PROPERTY_CORE + DYNAMICS_LAYER
+RESOLUTION_ARTIFACT_WITHHELD_UNTIL_AFTER_PREDICTION: yes
+OFFICIAL_CLOSING_ACTION: recall 25V586
+FULL_MATCH_AXES: 5/6
+PARTIAL_MATCH_AXES: 1/6
+NON_MATCH_AXES: 0/6
+SOURCE_FACT_INVENTION_COUNT: 0
+IMPLEMENTATION_OVERPREDICTION_COUNT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+FINAL_SPEC_STATUS: usable_with_unresolved_items
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_AUTOMOTIVE_SAFETY_RESOLUTION_WITHHELD_MATCH_WITH_REMEDY_DETAIL_PARTIAL
+```
+
+The NHTSA Opening Resume was used to freeze six acceptance axes before the Closing Resume and Part 573 recall report were inspected. The later official resolution expanded the scope from the initial Giulia population to a 53,849-vehicle Giulia/Stelvio recall population, identified a suspect fuel-delivery-module failure chain, and closed the PE with recall 25V586. The remedy-to-hazard axis remains `PARTIAL_MATCH` because the concrete remedy was still under development in the official closure-stage materials and ODI explicitly retained later remedy evaluation.
+
+This is the first completed resolution-withheld case in the current sequence from a **non-software safety-regulatory domain**. It supports the distinction between resolved defect/recall disposition and still-open remedy implementation/effectiveness.
+
 ## Validation limit / 검증 한계
 
 A real-world or external-source case is application evidence first. It contributes to method validation only when protocol, scoring/failure criteria, external standard, source-purpose boundary, and relevant baseline were locked well enough to make the case a genuine test rather than an illustration.
 
-An external origin and an independent evaluator are different axes. The current Specification corpus has **six completed external applications across six completed domains**, plus one blocked/unscored external blind precommit. `SPEC-APP-006` and `SPEC-APP-007` provide two resolution-artifact-withheld real-world comparisons, but all DSD reasoning remains within the same project/model environment. Independent reviewer validation and measured practical benefit therefore remain unresolved.
+An external origin and an independent evaluator are different axes. The current Specification corpus has **seven completed external applications across seven completed domains**, plus one blocked/unscored external blind precommit. `SPEC-APP-006`, `SPEC-APP-007`, and `SPEC-APP-008` provide three resolution-artifact-withheld real-world comparisons; `SPEC-APP-008` is the first of those in a non-software safety-regulatory domain. All DSD reasoning remains within the same project/model environment. Independent reviewer validation and measured practical benefit therefore remain unresolved.
