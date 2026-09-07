@@ -1,6 +1,6 @@
 # Mathematics audit index / 수학 감사 인덱스
 
-이 디렉터리는 DSD Audit의 수학 분야 감사 기록을 보존합니다. 개별 파일은 역사 판정과 근거를 보존하고, 이 README는 **현재 탐색용 인덱스**입니다.
+이 디렉터리는 DSD Audit의 수학 분야 감사 기록을 보존합니다. 개별 감사 파일은 역사 판정과 근거를 보존하며, 이 README는 **현재 탐색용 인덱스**입니다.
 
 ## Current Collatz status
 
@@ -14,150 +14,132 @@
 \]
 
 - **Current top-address labels:** `340` (`1024..1363`)
-- **MATH-008:** lower-61 phase reachability refinement is saturated.
-- **MATH-009:** root-Hensel correction ordering and endpoint/minimum-start ordering are one affine ordering inside a fixed `(k,q,E)` fiber; no independent pruning credit.
-- **MATH-010:** DSD descriptors/stage gates were inserted into the exact 61+11 computation; a concrete double-address-lift representation error was blocked, while MATH-006 arithmetic was reproduced unchanged.
-- **MATH-011:** the depth-72 coefficient-survival predicate was compressed to the complete finite threshold descriptor `H(r)`, and the 340-address scan was converted exactly to a cyclic sliding window. The address-predicate evaluation layer drops from `16,015,360` lookups to `47,104` threshold evaluations across `q61=39..61`.
-- **Current frontier:** seek an analogous complete descriptor for depth-72+ same-integer continuation/Hensel eligibility, keeping only descriptors that yield safe pruning, safe merging, or fewer exact state expansions.
+- **MATH-008:** actual lower-61 phase reachability is saturated for the coefficient-only phase route.
+- **MATH-009:** Hensel correction ordering and endpoint/minimum-start ordering are redundant within a fixed fiber.
+- **MATH-010:** DSD representation-stage gates entered the computation and blocked double address lift.
+- **MATH-011:** finite coefficient survival was compressed to `H(r)` and the 340-address aggregation to a cyclic sliding window, producing exact computational acceleration.
+- **MATH-012:** the root-Hensel arithmetic-credit inequality was compressed exactly to the even-step descriptor `d=k-q`; the old depth-195 uniform boundary is refined branchwise.
+- **Current frontier:** after the cheap gate `k-q<=71`, test whether the remaining non-redundant Hensel/endpoint conditions admit another exact small descriptor.
 
 ## Canonical Collatz audit sequence
 
 | Audit ID | Record | Outcome / role |
 |---|---|---|
-| `DSD-AUDIT-20260907-MATH-001` | [`2026-09-07_collatz-proof-architecture-full-audit.md`](2026-09-07_collatz-proof-architecture-full-audit.md) | Full proof-architecture audit; global result `PARTIALLY_CONFIRMED`, Collatz remains `OPEN` |
-| `DSD-AUDIT-20260907-MATH-002` | [`2026-09-07_collatz-external-literature-citation-audit.md`](2026-09-07_collatz-external-literature-citation-audit.md) | Claim-level external literature audit and `A/B/C/D/FINITE ONLY` citation policy |
-| `DSD-AUDIT-20260907-MATH-003` | [`2026-09-07_collatz-denjoy-koksma-first-cell-audit.md`](2026-09-07_collatz-denjoy-koksma-first-cell-audit.md) | Denjoy–Koksma/Ostrowski input; first-cell top-address count `341 → 340`; scalar-only frontier fixed |
-| `DSD-AUDIT-20260907-MATH-004` | [`2026-09-07_collatz-first-cell-endpoint-q-lock-audit.md`](2026-09-07_collatz-first-cell-endpoint-q-lock-audit.md) | Endpoint q-lock/address-faithful Hensel interpretation |
+| `DSD-AUDIT-20260907-MATH-001` | [`2026-09-07_collatz-proof-architecture-full-audit.md`](2026-09-07_collatz-proof-architecture-full-audit.md) | Global dependency/status map; `PARTIALLY_CONFIRMED`, Collatz `OPEN` |
+| `DSD-AUDIT-20260907-MATH-002` | [`2026-09-07_collatz-external-literature-citation-audit.md`](2026-09-07_collatz-external-literature-citation-audit.md) | Claim-level external literature audit; `A/B/C/D/FINITE ONLY` policy |
+| `DSD-AUDIT-20260907-MATH-003` | [`2026-09-07_collatz-denjoy-koksma-first-cell-audit.md`](2026-09-07_collatz-denjoy-koksma-first-cell-audit.md) | DK/Ostrowski input; `341→340` first-cell address frontier |
+| `DSD-AUDIT-20260907-MATH-004` | [`2026-09-07_collatz-first-cell-endpoint-q-lock-audit.md`](2026-09-07_collatz-first-cell-endpoint-q-lock-audit.md) | Candidate-language endpoint q-lock and address-faithful interpretation |
 | `DSD-AUDIT-20260907-MATH-005` | [`2026-09-07_collatz-340block-endpoint-halo-audit.md`](2026-09-07_collatz-340block-endpoint-halo-audit.md) | Same-endpoint coupling localized to adjacent-block halos |
-| `DSD-AUDIT-20260907-MATH-006` | [`2026-09-07_collatz-block-label-11bit-transducer-audit.md`](2026-09-07_collatz-block-label-11bit-transducer-audit.md) | Exact 61+11 block-label transducer; low-surplus pointwise label caps |
-| `DSD-AUDIT-20260907-MATH-007` | [`2026-09-07_collatz-block-label-right-congruence-audit.md`](2026-09-07_collatz-block-label-right-congruence-audit.md) | Exact right-congruence barrier; low-surplus masks retain full endpoint-phase distinction |
-| `DSD-AUDIT-20260908-MATH-008` | [`2026-09-08_collatz-lower61-endpoint-phase-reachability-audit.md`](2026-09-08_collatz-lower61-endpoint-phase-reachability-audit.md) | All 2048 phases occur for `q61=39..58`; phase-sparsity refinement is `STRATEGY SATURATION` |
-| `DSD-AUDIT-20260908-MATH-009` | [`2026-09-08_collatz-root-hensel-endpoint-ordering-redundancy-audit.md`](2026-09-08_collatz-root-hensel-endpoint-ordering-redundancy-audit.md) | Same-fiber correction ordering and minimum-start ordering are algebraically identical; `REDUNDANT / NO NEW PRUNING` |
-| `DSD-AUDIT-20260908-MATH-010` | [`2026-09-08_collatz-dsd-native-61plus11-computation-audit.md`](2026-09-08_collatz-dsd-native-61plus11-computation-audit.md) | DSD-native stage/resolution/exclusion/margin state added; double address lift rejected; exact MATH-006 regression retained |
-| `DSD-AUDIT-20260908-MATH-011` | [`2026-09-08_collatz-dsd-complete-descriptor-cyclic-window-acceleration-audit.md`](2026-09-08_collatz-dsd-complete-descriptor-cyclic-window-acceleration-audit.md) | Complete tail threshold descriptor `H(r)` + exact inverse-multiplier cyclic-window transform; `CONFIRMED WITHIN SCOPE / COMPUTATIONAL ACCELERATION` |
+| `DSD-AUDIT-20260907-MATH-006` | [`2026-09-07_collatz-block-label-11bit-transducer-audit.md`](2026-09-07_collatz-block-label-11bit-transducer-audit.md) | Exact 61+11 block-label transducer; pointwise low-surplus caps |
+| `DSD-AUDIT-20260907-MATH-007` | [`2026-09-07_collatz-block-label-right-congruence-audit.md`](2026-09-07_collatz-block-label-right-congruence-audit.md) | Exact phase right-congruence barrier |
+| `DSD-AUDIT-20260908-MATH-008` | [`2026-09-08_collatz-lower61-endpoint-phase-reachability-audit.md`](2026-09-08_collatz-lower61-endpoint-phase-reachability-audit.md) | All 2048 phases occur for `q61=39..58`; phase-sparsity route `STRATEGY SATURATION` |
+| `DSD-AUDIT-20260908-MATH-009` | [`2026-09-08_collatz-root-hensel-endpoint-ordering-redundancy-audit.md`](2026-09-08_collatz-root-hensel-endpoint-ordering-redundancy-audit.md) | Same-fiber Hensel/endpoint ordering is one affine relation; `REDUNDANT / NO NEW PRUNING` |
+| `DSD-AUDIT-20260908-MATH-010` | [`2026-09-08_collatz-dsd-native-61plus11-computation-audit.md`](2026-09-08_collatz-dsd-native-61plus11-computation-audit.md) | DSD-native stage/resolution/exclusion state; double address lift rejected |
+| `DSD-AUDIT-20260908-MATH-011` | [`2026-09-08_collatz-dsd-complete-descriptor-cyclic-window-acceleration-audit.md`](2026-09-08_collatz-dsd-complete-descriptor-cyclic-window-acceleration-audit.md) | Complete finite `H(r)` descriptor + exact cyclic-window transform; computational acceleration |
+| `DSD-AUDIT-20260908-MATH-012` | [`2026-09-08_collatz-hensel-even-budget-descriptor-audit.md`](2026-09-08_collatz-hensel-even-budget-descriptor-audit.md) | Root-Hensel arithmetic-credit predicate exactly reduced to `k-q<=71`; branchwise refinement of depth-195 boundary |
 
 ## Reading order
 
-1. `MATH-001` — global dependency/status map.
+1. `MATH-001` — global status/dependencies.
 2. `MATH-002` — legal external inputs.
-3. `MATH-003` — 340-block first-cell start window.
-4. `MATH-004` — same-endpoint ordinary-integer lineage.
+3. `MATH-003` — 340-block first-cell window.
+4. `MATH-004` — endpoint q-lock.
 5. `MATH-005` — adjacent-block locality.
 6. `MATH-006` — exact 61+11 transducer.
-7. `MATH-007` — phase right-congruence barrier.
+7. `MATH-007` — phase quotient barrier.
 8. `MATH-008` — actual phase reachability saturation.
 9. `MATH-009` — Hensel/endpoint ordering redundancy.
-10. `MATH-010` — DSD-native computation state and transition gate.
-11. `MATH-011` — DSD complete descriptor used for exact calculation acceleration.
+10. `MATH-010` — DSD-native representation gates.
+11. `MATH-011` — complete descriptor used for exact acceleration.
+12. `MATH-012` — depth-72+ Hensel arithmetic-credit complete descriptor.
 
-## Current finite boundary
+## MATH-011 computational compression
 
-The exact reachable-phase cardinalities remain
-
-\[
-\#\operatorname{Reach}_{61}(q)=
-\begin{cases}
-2048,&39\le q\le58,\\
-1166,&q=59,\\
-58,&q=60,\\
-1,&q=61.
-\end{cases}
-\]
-
-MATH-010 does not change those values or the MATH-006 survivor caps. It changes the **calculation semantics**: `BASE_ENDPOINT` and `ADDRESS_LIFTED` are different stages, and the affine address lift may be applied exactly once.
-
-For `q61=39`, MATH-010 additionally records the exact 2048-residue first-failure profile:
-
-- depth62: 1024;
-- depth64: 256;
-- depth65: 256;
-- depth67: 96;
-- depth69: 56;
-- depth70: 76;
-- depth72: 37;
-- survive through72: 247.
-
-All 247 survivors attain minimum coefficient margin `0` within depths62..72. This is a finite exact diagnostic, not a density statement.
-
-## DSD-native computation rule introduced by MATH-010
-
-Exact arithmetic remains primary. DSD metadata is carried alongside it:
+For lifted residue `r mod2048`,
 
 \[
-\mathcal A=(D,R,S,E,T,C,N,O).
+H(r)=\max_{1\le j\le11}\bigl(q_{\min}(61+j)-s_j(r)\bigr)
 \]
 
-The key transition gate is
+is complete for the finite depth-72 coefficient-survival predicate:
 
 \[
-\texttt{BASE\_ENDPOINT}\to\texttt{ADDRESS\_LIFTED}
+r\text{ survives}\iff q_{61}\ge H(r).
 \]
 
-exactly once. Reapplying the address contribution to an already lifted phase is a prohibited transition.
+With the inverse of `3^q mod2048`, the 340-address aggregation becomes a cyclic contiguous window. The expensive predicate-evaluation layer is reduced from `16,015,360` to `47,104` evaluations while reproducing the full legacy count vectors exactly.
 
-## DSD computational compression introduced by MATH-011
+This is computational acceleration, not a stronger Collatz theorem.
 
-For each lifted residue `r mod 2048`, let `s_j(r)` be the tail odd-count through `j` steps and define
+## MATH-012 Hensel arithmetic-credit descriptor
+
+At the frozen theorem-facing floor `2^71`, the existing arithmetic-credit predicate
 
 \[
-H(r)=\max_{1\le j\le11}\bigl(q_{\min}(61+j)-s_j(r)\bigr).
+2^{k-q}\left(1-\left(\frac23\right)^q\right)<2^{71}
 \]
 
-Then
+is, for `q>=2`, exactly equivalent to
 
 \[
-r\text{ survives through depth }72\iff q_{61}\ge H(r).
+\boxed{k-q\le71.}
 \]
 
-So `H(r)` is complete for this finite predicate. Its exact distribution is
+Thus `d=k-q`, the number of even steps in the prefix, is a complete descriptor for **this credit predicate only**.
 
-`39:247, 40:554, 41:570, 42:406, 43:195, 44:63, 45:12, 46:1`.
-
-For fixed `q`, the invertible multiplier `m=3^q mod2048` gives the coordinate change `z=m^{-1}y`, turning
+Together with coefficient survival:
 
 \[
-\sum_{a=1024}^{1363}\mathbf1[H(y+am)\le q]
+\boxed{Q_*(k)=\max\{q_{\min}(k),k-71\}.}
 \]
 
-into a cyclic contiguous length-340 window. Full legacy count vectors are reproduced exactly.
+The uniform historical boundary is refined by
 
-This is a computational acceleration, not a stronger Collatz theorem.
+- `(195,124)` — credit safe;
+- `(196,124)` — coefficient-safe / credit-unsafe;
+- `(196,125)` — credit safe.
 
-## Audit discipline
+Therefore depth196 is the first depth where the lowest coefficient-surviving q loses this credit. This does not automatically extend full arbitrary-word Hensel maximality on higher-q branches; all other conditions remain separately required.
 
-### SAFE does not mean global proof
+The certificate exactly regresses `130,816` states with `2<=q<=k<=512` against the legacy big-integer predicate with no mismatch.
 
-A `CONFIRMED` local audit applies only to its locked scope.
+## DSD audit discipline
 
-### Computation does not become a theorem by scale
+### Exact arithmetic stays primary
+
+DSD may compress or reparameterize a predicate only when exact equivalence is proved or exhaustively regressed within the stated finite scope.
+
+### Complete descriptors are scope-bound
+
+`H(r)` is complete for the finite 61+11 coefficient predicate. `d=k-q` is complete for the root-Hensel arithmetic-credit predicate. Neither is automatically a complete Collatz state.
+
+### Mechanism failure is not candidate exclusion
+
+\[
+k-q>71
+\]
+
+means the audited Hensel credit is unavailable. It does **not** mean the ordinary Collatz candidate is impossible.
+
+### Preserve ordinary-integer lineage
+
+Residue, endpoint, quotient, parity, and correction states may be merged only when the exact relation needed by the downstream predicate is preserved.
+
+### Redundant evidence is not multiplied
+
+Endpoint ordering and correction ordering remain one affine relation in the fixed-fiber scope.
+
+### Computation does not become a universal theorem by scale
 
 \[
 \text{finite computation}\not\Rightarrow\text{universal theorem}.
 \]
-
-### Measure/density language is not emptiness
 
 \[
 \text{almost all}\not\Rightarrow\text{all},
 \qquad
 \mu(S)=0\not\Rightarrow S=\varnothing.
 \]
-
-### Preserve ordinary-integer lineage and representation stage
-
-A residue, quotient state, endpoint class, or symbolic path may be used only when the bridge back to the same ordinary integer is explicit at the required resolution. A derived/address-lifted representation cannot silently be reused as though it were the original base representation.
-
-### Redundant information is not new evidence
-
-The same exact affine relation expressed in different coordinates cannot be counted twice as independent pruning.
-
-### A complete descriptor is scope-bound
-
-A descriptor complete for one finite predicate may be used to accelerate exactly that predicate. It cannot be promoted to arbitrary-depth completeness without a new proof.
-
-### Saturated route is not a false theorem
-
-A refinement that adds no exclusion is recorded as `STRATEGY SATURATION` or `NO NEW PRUNING`; valid upstream results remain valid.
 
 ## External literature citation classes
 
@@ -169,10 +151,10 @@ A refinement that adds no exclusion is recorded as `STRATEGY SATURATION` or `NO 
 
 ## Revision policy
 
-- Do not silently erase older reasonable verdicts.
-- Revise scope explicitly or add linked migration records.
-- Preserve old commits and paths for traceability.
-- Use this README to identify the current sequence rather than moving historical files merely for appearance.
+- Preserve historical audit files and commits.
+- Revise scope explicitly rather than silently replacing earlier verdicts.
+- A saturated/failed strategy branch does not invalidate correct upstream mathematics.
+- Use this README as the current sequence map rather than moving historical files for cosmetic reasons.
 
 ## Related repository
 
