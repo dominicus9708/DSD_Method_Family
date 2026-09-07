@@ -1,6 +1,6 @@
 # 03. DSD Specification / DSD 명세론
 
-Status: **developing** — dedicated protocol v0.1 established; direct pilots `SPEC-CH-001` through `SPEC-CH-005` completed with limitations; first external/independently generated corpus application `SPEC-APP-001` completed; maturity audit pending.
+Status: **developing** — dedicated protocol v0.1 established; direct pilots `SPEC-CH-001` through `SPEC-CH-005` completed with limitations; first external/independently generated corpus application `SPEC-APP-001` completed; maturity audit completed and `developing` retained.
 
 Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve.
 
@@ -87,6 +87,26 @@ RFC 9112 already presents the selected requirements as a compact ordered normati
 
 Protocol v0.1 could preserve the RFC precedence using explicit predecessor exclusions in `ACTIVATION_CONDITION` / `DEPENDENCIES`, but this was repetitive. An optional explicit precedence/priority field is therefore a **future refinement candidate**, not a retroactive change to this run.
 
+## Maturity audit / 성숙도 감사
+
+Audit record:
+[`../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md`](../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md)
+
+```text
+AUDIT_ID: DSD-AUDIT-20260907-METHODOLOGY-001
+MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
+AUDIT_VERDICT_ON_CURRENT_DEVELOPING_STATUS: CONFIRMED
+AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
+METHOD_STATUS_DECISION: RETAIN_DEVELOPING
+ESTABLISHED_EVIDENCE_BREADTH: insufficient
+EXTERNAL_CORPUS_COUNT: 1
+EXTERNAL_DOMAIN_COUNT: 1
+INDEPENDENT_EVALUATOR_VALIDATION: not_established
+MEASURED_ENGINEERING_BENEFIT: not_established
+```
+
+The eight minimum evidence-component categories are present, but they are treated as an eligibility floor for promotion review rather than an automatic status upgrade. The principal blocker is evidence breadth: the external evidence remains one subsection of one technical standard in one domain. The external `NO_GAIN` result is preserved as valid evidence of fidelity and non-favoritism, not converted into either a failure or a gain claim.
+
 ## Evidence state / 증거 상태
 
 ```text
@@ -96,13 +116,14 @@ SPEC-CH-003  completed
 SPEC-CH-004  completed
 SPEC-CH-005  completed with independence limitation
 SPEC-APP-001 external/independently generated corpus application  completed
+SPECIFICATION_MATURITY_AUDIT  completed
 
 INTERNAL_CONSTRUCTED_CHALLENGE_SEQUENCE: completed
 EXTERNAL_OR_INDEPENDENTLY_GENERATED_APPLICATION_CASE: completed
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 METHOD_STATUS: developing
-MATURE_METHOD_STATUS: not_claimed
-NEXT_STEP: specification_maturity_audit
+ESTABLISHED_STATUS: not_justified_on_current_evidence
+NEXT_STEP: SPEC-APP-002_less_structured_external_corpus
 ```
 
-The project checklist now has both the internal challenge sequence and one external-origin application. Maturity is **not** promoted automatically: a dedicated audit must still weigh evidence breadth, the independent-evaluator gap, the baseline-preferred external result, protocol pressure, and absence of measured real-world engineering benefit.
+Next development should add a less-structured external requirement corpus and at least one different external domain, followed by genuinely independent retrace/review where feasible. Any precedence/priority refinement belongs to a prospective Protocol v0.2 rather than retroactive rescoring of `SPEC-APP-001`.
