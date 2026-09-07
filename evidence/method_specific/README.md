@@ -28,6 +28,7 @@ REPRODUCIBILITY_RECORD:
 - `challenges/ANL-CH-*` directly validate **DSD Analysis** challenge criteria only.
 - `DSD_Audit/` and new audit records directly validate **DSD Audit** procedures and verdict discipline only.
 - Shared-rule lessons may be cross-referenced under `../shared/`, but do not count as direct validation of another independent method.
+- A maturity/status audit of a method is an Audit meta-record; it does not increase that method's direct-pilot count by itself.
 
 ## Method-specific evidence lanes / 개별 증거 경로
 
@@ -39,13 +40,18 @@ REPRODUCIBILITY_RECORD:
   - `SPEC-CH-003` completed: optional-layer/bridge boundary pilot with precommit;
   - `SPEC-CH-004` completed: NO_GAIN specification pilot with precommit;
   - `SPEC-CH-005` completed: reproducibility/retrace pilot with precommit + reference-key hash commitment;
-  - current direct pilot count: `5`;
+  - current internal direct pilot count: `5`;
   - internal constructed challenge sequence: `completed`;
-  - all five results are pilot PASS with limitations;
   - procedural retraceability and two-order stability: supported on the locked constructed packet;
+  - first external/independently generated corpus application `SPEC-APP-001`: completed;
+  - external application result: `SPEC_NO_GAIN`, `BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK`;
+  - external source-fidelity result: pass on the locked RFC 9112 §6.3 corpus;
   - independent evaluator validation: `not established`;
-  - mature method status: not claimed;
-  - next required evidence: `external_or_independently_generated_application_case`.
+  - Specification maturity audit: completed;
+  - promotion to `established`: `INSUFFICIENT_BASIS`;
+  - current `developing` status: confirmed;
+  - principal blocker: insufficient external/cross-domain evidence breadth;
+  - next direct application: `SPEC-APP-002` on a less-structured external corpus.
 
 ## Promotion expectation / 성숙도 승격 기준
 
@@ -60,4 +66,6 @@ A proposed or developing method should accumulate, at minimum:
 7. at least one external or independently generated application case;
 8. a strongest-reasonable-baseline comparison when applicable.
 
-Shared evidence alone does not satisfy these method-specific requirements, and several constructed pilots alone are not enough for maturity promotion. Procedural same-session retrace does not substitute for a genuinely independent reviewer or external application corpus.
+These eight categories are a minimum evidence architecture for promotion consideration, not an automatic promotion rule. The DSD Specification maturity audit found all eight categories represented but retained `developing` because the external evidence is still only one selected subsection in one external domain, independent evaluator agreement is not established, and measured practical benefit has not been demonstrated.
+
+Shared evidence alone does not satisfy these method-specific requirements. Procedural same-session retrace does not substitute for a genuinely independent reviewer, and external corpus origin does not substitute for independent evaluation.
