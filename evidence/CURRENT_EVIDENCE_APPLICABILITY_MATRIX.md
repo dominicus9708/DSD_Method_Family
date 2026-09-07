@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + five Specification direct pilots + first external Specification application + completed maturity audit  
+Status: current migration map + six Specification direct constructed pilots + first external Specification application + completed maturity audit  
 Date: 2026-09-07
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
@@ -11,7 +11,7 @@ This file classifies existing method evidence without retroactively turning one 
 - **Shared support** = the record supports a reusable method-family discipline, but does not directly validate another method.
 - **Conditional transfer** = the shared rule applies only when the receiving method exposes the relevant structure or claim type.
 - **Protocol prepared** = a dedicated method protocol exists, but protocol existence alone is not direct validation.
-- **Direct pilot** = a method-specific challenge directly tested the method under its own protocol, but established status is not thereby implied.
+- **Direct pilot** = a method-specific challenge directly tested the method under its own protocol or locked prospective profile, but established status is not thereby implied.
 - **External application** = the method is applied under locked criteria to material authored independently of DSD; this origin class does not imply an independent evaluator.
 - **Maturity meta-audit** = DSD Audit evaluates whether accumulated evidence justifies a method-status transition; it is not another direct pilot of the audited method.
 
@@ -23,87 +23,107 @@ This file classifies existing method evidence without retroactively turning one 
 
 Existing `DSD_Audit/` and new audit records remain direct evidence for **DSD Audit** procedures and verdict discipline only. Shared lessons do not automatically validate Specification, Prediction, Reconstruction, or other methods.
 
-The Specification maturity decision is recorded as a DSD Audit meta-record under `DSD_Audit/audits/methodology/`; it audits the status transition but does not count as a sixth Specification direct pilot.
-
 ## DSD Specification / DSD 명세론
 
-Protocol:
-- `methods/03_specification/PROTOCOL.md` — **DSD Specification Protocol v0.1**.
+Protocol versions:
 
-Internal direct pilots:
-- `SPEC-CH-001_well-formed-malformed-discrimination.md`;
-- `SPEC-CH-002_contradiction-underspecification.md` with precommit;
-- `SPEC-CH-003_optional-layer-bridge-boundary.md` with precommit;
-- `SPEC-CH-004_no-gain-specification.md` with precommit;
-- `SPEC-CH-005_reproducibility-independent-retrace.md` with precommit and reference-key hash commitment.
+```text
+v0.1 historical protocol:
+  methods/03_specification/PROTOCOL.md
 
-External application:
-- `evidence/real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length.md` with separate precommit.
+v0.2 prospective current protocol for new runs:
+  methods/03_specification/PROTOCOL_v0.2.md
+```
 
-Maturity meta-audit:
-- `DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md` with separate precommit.
+The first five constructed pilots and `SPEC-APP-001` remain v0.1-era evidence. `SPEC-CH-006` directly tests the prospective purpose/detail/viewpoint guardrail distinction used to establish v0.2 for new runs.
 
 ```text
 METHOD: DSD Specification
 METHOD_STATUS: developing
-DEDICATED_PROTOCOL: yes
-DIRECT_INTERNAL_PILOTS: five_completed
-INTERNAL_CONSTRUCTED_CHALLENGE_SEQUENCE: completed
+CURRENT_PROTOCOL_FOR_NEW_RUNS: v0.2
 
+V0_1_DIRECT_PILOTS: 5
+V0_2_GUARDRAIL_TRANSITION_PILOT: 1
+TOTAL_DIRECT_CONSTRUCTED_PILOTS: 6
+EXTERNAL_APPLICATIONS_TOTAL: 1
+V0_2_EXTERNAL_APPLICATIONS: 0
+```
+
+### v0.1 direct evidence
+
+```text
 SPEC_CH_001_RESULT: SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
-
-SPEC_CH_002_PRECOMMIT_COMMIT: 848a01b160ecfe4fcbdb8e69d6501e40555d782d
-SPEC_CH_002_CONTRADICTIONS_CORRECT: 3/3
-SPEC_CH_002_UNDERSPECIFICATIONS_CORRECT: 3/3
-SPEC_CH_002_EXACT_DIAGNOSTIC_MATCHES: 8/8
-SPEC_CH_002_CROSS_CLASS_ERRORS: 0
 SPEC_CH_002_RESULT: SPECIFICATION_CONTRADICTION_UNDERSPECIFICATION_PILOT_PASS_WITH_LIMITATIONS
-
-SPEC_CH_003_PRECOMMIT_COMMIT: d2cc07121043546be8e2450d8af288491b837e76
-SPEC_CH_003_OPTIONAL_OVERCONSTRAINTS_CORRECT: 3/3
-SPEC_CH_003_REQUIRED_BRIDGE_FAILURES_CORRECT: 3/3
-SPEC_CH_003_EXACT_DIAGNOSTIC_MATCHES: 8/8
-SPEC_CH_003_CROSS_CLASS_ERRORS: 0
 SPEC_CH_003_RESULT: SPECIFICATION_OPTIONAL_LAYER_BRIDGE_BOUNDARY_PILOT_PASS_WITH_LIMITATIONS
-
-SPEC_CH_004_PRECOMMIT_COMMIT: 4d55d00af7fa376d370415a48b82de6883ba6fc8
-SPEC_CH_004_NO_GAIN_CASES_CORRECT: 3/3
-SPEC_CH_004_OPERATIONAL_GAIN_CASES_CORRECT: 3/3
-SPEC_CH_004_UNDERSPECIFIED_CASES_CORRECT: 2/2
-SPEC_CH_004_EXACT_STATUS_FAMILY_MATCHES: 8/8
-SPEC_CH_004_FALSE_NO_GAIN_ON_INCOMPLETE_SOURCE: 0
-SPEC_CH_004_FALSE_COSMETIC_GAIN: 0
-SPEC_CH_004_INVENTED_SOURCE_FACTS: 0
 SPEC_CH_004_RESULT: SPECIFICATION_NO_GAIN_PILOT_PASS_WITH_LIMITATIONS
-
-SPEC_CH_005_PRECOMMIT_COMMIT: dda33b2028c9e5fb0f7b3bef938a8b834219f787
-SPEC_CH_005_REFERENCE_KEY_HASH_MATCH: yes
-SPEC_CH_005_TRACE_A_FINAL_STATUS_MATCHES: 8/8
-SPEC_CH_005_TRACE_B_FINAL_STATUS_MATCHES: 8/8
-SPEC_CH_005_TRACE_A_B_FINAL_STATUS_AGREEMENT: 8/8
-SPEC_CH_005_TRACE_A_B_DIAGNOSTIC_AGREEMENT: 8/8
-SPEC_CH_005_TRACE_A_B_ATOMIZATION_BOUNDARY_MATCHES: 32/32
-SPEC_CH_005_SOURCE_FACT_INVENTION: 0
-SPEC_CH_005_ORDER_SENSITIVITY_ERRORS: 0
 SPEC_CH_005_RESULT: SPECIFICATION_RETRACE_REPRODUCIBILITY_PILOT_PASS_WITH_LIMITATIONS
 SPEC_CH_005_INDEPENDENT_EVALUATOR_VALIDATION: not_established
+```
 
-SPEC_APP_001_CASE_ORIGIN: public_normative_standard
-SPEC_APP_001_SOURCE: RFC 9112 §6.3 core precedence algorithm
-SPEC_APP_001_PRECOMMIT_COMMIT: 9b91cecda9516fd7cd65c9eb181e80ab4fa45deb
-SPEC_APP_001_SOURCE_UNIT_COVERAGE: 13/13
-SPEC_APP_001_TRIGGER_OR_ACTOR_SCOPE_PRESERVATION: 13/13
-SPEC_APP_001_PRECEDENCE_PRESERVATION: 13/13
-SPEC_APP_001_BCP14_MUST_OBLIGATIONS_PRESERVED: 8/8
-SPEC_APP_001_INVENTED_SOURCE_FACTS: 0
-SPEC_APP_001_SOURCE_FIDELITY_RESULT: pass
-SPEC_APP_001_FINAL_SPEC_STATUS: no_gain
-SPEC_APP_001_COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
-SPEC_APP_001_PROTOCOL_PRESSURE: ordered_precedence_priority_present_nonfatal
-SPEC_APP_001_INDEPENDENT_EVALUATOR_VALIDATION: not_established
+### SPEC-CH-006 guardrail centerline evidence
 
+```text
+SPEC_CH_006_PRECOMMIT: fe009d8da9ab992e6885d07e14ff26355b776a86
+SPEC_CH_006_EXACT_GUARDRAIL_FAMILY_MATCHES: 8/8
+SPEC_CH_006_FALSE_HARD_FAILURE_ON_PRESSURE_CASES: 0
+SPEC_CH_006_FALSE_REJECTION_OF_DECLARED_DERIVATIVE_VIEW: 0
+SPEC_CH_006_UNDECLARED_PURPOSE_SHIFT_DETECTED: 1/1
+SPEC_CH_006_AUTHORIAL_INTENT_OVERATTRIBUTION_DETECTED: 1/1
+SPEC_CH_006_UNKNOWN_PURPOSE_PRESERVED_AS_UNDETERMINED: 1/1
+SPEC_CH_006_SOURCE_FACT_INVENTION_ESCALATED_TO_HARD_FAILURE: 1/1
+SPEC_CH_006_RESULT: SPECIFICATION_GUARDRAIL_CENTERLINE_PILOT_PASS_WITH_LIMITATIONS
+```
+
+Accepted v0.2 guardrail ledger:
+
+```text
+G1 SOURCE_FIDELITY
+G2 PURPOSE_AND_PRIORITY_FIDELITY
+G3 DETAIL_PROPORTIONALITY
+G4 VIEWPOINT_SEPARATION
+```
+
+and the method-specific distinction:
+
+```text
+HARD_FAILURE
+!= GUARDRAIL_PRESSURE
+!= GUARDRAIL_EXCEEDED_RECOVERABLE
+!= PURPOSE_OR_VIEWPOINT_DISTORTED
+```
+
+This is currently Specification-specific evidence. It does not reopen or add an SC shared-core ID.
+
+### External application — SPEC-APP-001
+
+Protocol: v0.1.
+
+```text
+CASE_ORIGIN: public_normative_standard
+SOURCE: RFC 9112 §6.3
+SOURCE_UNIT_COVERAGE: 13/13
+PRECEDENCE_PRESERVATION: 13/13
+BCP14_MUST_OBLIGATIONS_PRESERVED: 8/8
+INVENTED_SOURCE_FACTS: 0
+SOURCE_FIDELITY_RESULT: pass
+FINAL_SPEC_STATUS: no_gain
+COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
+```
+
+The v0.2 guardrail axes were not separately precommitted in this v0.1 application:
+
+```text
+PURPOSE_FIDELITY_GUARDRAIL: untested_as_formal_axis
+DETAIL_PROPORTIONALITY_GUARDRAIL: untested_as_formal_axis
+VIEWPOINT_SEPARATION_GUARDRAIL: untested_as_formal_axis
+```
+
+Do not retroactively convert those fields to PASS.
+
+### First maturity meta-audit
+
+```text
 SPEC_MATURITY_AUDIT_ID: DSD-AUDIT-20260907-METHODOLOGY-001
-SPEC_MATURITY_AUDIT_PRECOMMIT: de0cf86ade506f4a15ddfbabfa63066a796e63cf
 SPEC_MATURITY_MINIMUM_COMPONENTS_PRESENT: 8/8
 SPEC_MATURITY_CURRENT_DEVELOPING_STATUS: CONFIRMED
 SPEC_MATURITY_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
@@ -113,29 +133,28 @@ SPEC_MATURITY_EXTERNAL_CORPUS_COUNT: 1
 SPEC_MATURITY_EXTERNAL_DOMAIN_COUNT: 1
 SPEC_MATURITY_INDEPENDENT_EVALUATOR_VALIDATION: not_established
 SPEC_MATURITY_MEASURED_ENGINEERING_BENEFIT: not_established
-
-ESTABLISHED_STATUS: not_justified_on_current_evidence
-NEXT_DIRECT_APPLICATION: SPEC-APP-002_less_structured_external_corpus
 ```
 
-`SPEC-APP-001` satisfies the repository checklist's external or independently generated corpus-origin requirement because RFC 9112 is an external public normative standard authored independently of DSD. It does not satisfy the separate independent-evaluator requirement.
+The post-audit discovery of the v0.1 purpose/detail/viewpoint guardrail gap does not erase the audit. It adds a prospective protocol requirement and further supports withholding `established` status until v0.2 is tested on external corpora.
 
-The external result is intentionally non-favorable to a DSD superiority claim: the RFC baseline was already compact, ordered, and normative, so the precommitted comparative verdict was `SPEC_NO_GAIN` with the baseline preferred for this locked task. This counts as evidence of source fidelity and NO_GAIN preservation, not as evidence of engineering benefit.
-
-The maturity audit found all eight minimum evidence-component categories present, but retained `developing` because evidence breadth is still one external subsection in one domain. Minimum checklist presence is therefore separated from established-status justification.
+```text
+ESTABLISHED_STATUS: not_justified_on_current_evidence
+NEXT_DIRECT_APPLICATION: SPEC-APP-002_less_structured_external_corpus_under_v0.2
+```
 
 ## Shared-core registry status / 공통 코어 상태
 
-The current shared-core registry contains **SC-01 through SC-10** and is closed for the present registry with conditions.
+The current shared-core registry contains **SC-01 through SC-10** and remains closed for the present registry with conditions.
 
 ```text
 SHARED_CORE_RULES_PROMOTED: 10
 SPECIALIZATION_RESTRAINT: derived_profile
 SHARED_CORE_CLOSURE_RESULT: closed_for_current_registry_with_conditions
 DIRECT_METHOD_VALIDATION_FROM_SHARED_CORE: not claimed
+SPECIFICATION_GUARDRAIL_PROFILE_PROMOTED_TO_SHARED_CORE: no
 ```
 
-`REPRODUCIBILITY_RECORD` remains a method/evidence maturity requirement rather than a separate shared semantic-core ID.
+Purpose/detail/viewpoint guardrails remain Specification-method-specific until repeated independent evidence across multiple methods shows a stable domain-independent common obligation that cannot already be represented by the current shared-core architecture.
 
 ## Current overall classification / 현재 총괄 분류
 
@@ -146,19 +165,15 @@ DIRECTLY_MATURE_METHOD_EVIDENCE:
 
 DEVELOPING_WITH_DIRECT_AND_EXTERNAL_APPLICATION_EVIDENCE:
   DSD Specification
-    direct_internal_pilots: 5
-    internal_constructed_sequence: completed
-    NO_GAIN_pilot: completed
-    procedural_retrace: completed
-    external_or_independent_corpus_application: 1
+    direct_constructed_pilots: 6
+    current_protocol_for_new_runs: v0.2
+    v0.2_external_applications: 0
+    external_or_independent_corpus_applications_total: 1
     external_application_result: SPEC_NO_GAIN
     independent_evaluator_validation: not_established
     maturity_audit: completed
     established_promotion: insufficient_basis
     current_status: developing
-
-SHARED_METHOD_FAMILY_EVIDENCE_AVAILABLE:
-  yes
 
 SHARED_CORE_REGISTRY_STATUS:
   closed_for_current_registry_with_conditions
@@ -168,11 +183,8 @@ OTHER_METHODS_DIRECTLY_VALIDATED_BY_ANALYSIS_OR_AUDIT_CORPUS:
 
 OTHER_METHODS_DIRECTLY_VALIDATED_BY_SHARED_CORE_TRANSFER_PILOTS:
   no
-
-REAL_WORLD_OR_EXTERNAL_CASE_CORPUS_STATUS:
-  first public normative-standard application populated
 ```
 
 ## Migration rule / 이관 규칙
 
-Historical records keep their original path and original verdict. New method-family classification is additive and does not rewrite prior `PASS`, `FAIL`, `NO_GAIN`, `BASELINE_PREFERRED`, or `NON_CORRESPONDENCE` results.
+Historical records keep their original path, protocol version, and verdict. New protocol revisions and evidence classification are additive. Do not rewrite prior `PASS`, `FAIL`, `NO_GAIN`, `BASELINE_PREFERRED`, `NON_CORRESPONDENCE`, or untested-axis status merely to appear current.
