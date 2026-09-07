@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + eight Specification direct constructed pilots + five completed external Specification applications + one blocked unscored external blind precommit + one method-family linkage pilot + internal v1.0 standardization completed  
+Status: current migration map + eight Specification direct constructed pilots + six completed external Specification applications + one blocked unscored external blind precommit + one method-family linkage pilot + internal v1.0 standardization completed  
 Date: 2026-09-08
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
@@ -39,11 +39,11 @@ V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
 
-EXTERNAL_APPLICATIONS_COMPLETED: 5
-EXTERNAL_DOMAINS_COMPLETED: 5
+EXTERNAL_APPLICATIONS_COMPLETED: 6
+EXTERNAL_DOMAINS_COMPLETED: 6
 EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
-RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 1
-V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 2
+RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 2
+V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 3
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 ```
 
@@ -134,11 +134,27 @@ SPEC-APP-006 — python-jsonschema ErrorTree issue #1328
   post-reveal prediction change: 0
   final status: usable
   result: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_LIMITATIONS
+
+SPEC-APP-007 — Flask stream_with_context issue #5804
+  protocol: v1.0
+  external domain: Python web framework / streamed-response request-context lifecycle
+  selected layers: PROPERTY_CORE + DYNAMICS_LAYER
+  resolution artifacts withheld until after prediction: yes
+  maintainer resolution: pallets/flask#5812
+  full match axes: 5/6
+  partial match axes: 1/6
+  non-match axes: 0/6
+  implementation overprediction: 0
+  post-reveal prediction change: 0
+  final status: usable
+  result: SPECIFICATION_V1_0_REAL_WORLD_LIFECYCLE_RESOLUTION_WITHHELD_MATCH_WITH_ONE_TEST_COVERAGE_PARTIAL
 ```
 
 `SPEC-APP-004` is a labeled regression/interface check because expected ACT labels were visible before DSD mapping. It is not blind prediction evidence.
 
 `SPEC-APP-006` is the first completed real-world case where the actual maintainer resolution was naturally separated and withheld until after the DSD acceptance contract was frozen. It supports case-level resolution alignment but does not establish independent evaluator validation, full blindness, or measured engineering benefit.
+
+`SPEC-APP-007` is the second resolution-withheld case. It preserves an unfavorable partial result on the direct regression-test-family axis: PR #5812 adapted general stream-context retention coverage but did not add a dedicated issue-#5804 teardown timing/count regression reproduction. It also demonstrates conditional `DYNAMICS_LAYER` activation for lifecycle event order without forcing unrelated layers.
 
 ### Blocked external blind attempt — SPEC-APP-005
 
@@ -218,10 +234,11 @@ INTERNALLY_STANDARDIZED_BUT_EVIDENCE_DEVELOPING:
     direct_constructed_pilots: 8
     current_protocol_for_new_runs: v1.0
     internal_protocol_status: standardized
-    completed_external_applications: 5
-    completed_external_domains: 5
+    completed_external_applications: 6
+    completed_external_domains: 6
     blocked_unscored_external_blind_precommits: 1
-    resolution_withheld_real_world_applications: 1
+    resolution_withheld_real_world_applications: 2
+    v1_0_external_applications_completed: 3
     method_family_linkage_pilots: 1
     independent_evaluator_validation: not_established
     measured_practical_benefit: not_established
@@ -234,4 +251,4 @@ SHARED_CORE_REGISTRY_STATUS:
 
 ## Migration rule / 이관 규칙
 
-Historical records keep their original path, protocol version, and verdict. New protocol revisions and evidence classification are additive. Do not rewrite prior `PASS`, `FAIL`, `NO_GAIN`, `BASELINE_PREFERRED`, `NON_CORRESPONDENCE`, blocked/unscored status, or untested-axis status merely to appear current.
+Historical records keep their original path, protocol version, and verdict. New protocol revisions and evidence classification are additive. Do not rewrite prior `PASS`, `FAIL`, `NO_GAIN`, `BASELINE_PREFERRED`, `NON_CORRESPONDENCE`, blocked/unscored status, partial-match status, or untested-axis status merely to appear current.
