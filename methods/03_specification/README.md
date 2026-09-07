@@ -1,8 +1,8 @@
 # 03. DSD Specification / DSD 명세론
 
-Status: **developing** — Protocol v0.1/v0.2 evidence preserved; prospective Protocol v0.2.1 is current for new runs after `SPEC-CH-007`; two external applications completed; first maturity audit still retains `developing`.
+Status: **developing** — Protocol v0.1/v0.2 evidence preserved; Protocol v0.2.1 is current for new runs; `SPEC-CH-007` and first external v0.2.1 application `SPEC-APP-003` completed; first maturity audit still retains `developing` and has not yet been superseded by a re-audit.
 
-Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve **without silently replacing the source's original purpose, priority, audience function, viewpoint, or intentionally open judgment boundary with a DSD-imposed deterministic structure**.
+Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve **without silently replacing the source's original purpose, priority, audience function, viewpoint, intentionally open judgment boundary, or site-specific implementation freedom with DSD-imposed structure**.
 
 Primary DSD sources: Formation + General Property; Static Aggregation and Dynamics when output, reduction, or transition specifications matter.
 
@@ -13,39 +13,28 @@ Boundary: DSD Specification organizes structural requirements; it does not repla
 ## Protocol versions / 프로토콜 버전
 
 - [`PROTOCOL.md`](PROTOCOL.md) — **v0.1**, historical protocol for `SPEC-CH-001~005`, `SPEC-APP-001`, and the first maturity audit.
-- [`PROTOCOL_v0.2.md`](PROTOCOL_v0.2.md) — **v0.2**, historical/prospective protocol governing `SPEC-CH-006` transition evidence and `SPEC-APP-002`.
-- [`PROTOCOL_v0.2.1.md`](PROTOCOL_v0.2.1.md) — **current protocol for new runs** after `SPEC-CH-007`.
+- [`PROTOCOL_v0.2.md`](PROTOCOL_v0.2.md) — **v0.2**, protocol governing `SPEC-CH-006` transition evidence and `SPEC-APP-002`.
+- [`PROTOCOL_v0.2.1.md`](PROTOCOL_v0.2.1.md) — **current protocol for new runs**, established after `SPEC-CH-007` and used for `SPEC-APP-003`.
 
-v0.2 introduced the method-specific guardrails:
+v0.2 introduced:
 
 ```text
 G1 SOURCE_FIDELITY
 G2 PURPOSE_AND_PRIORITY_FIDELITY
 G3 DETAIL_PROPORTIONALITY
 G4 VIEWPOINT_SEPARATION
-```
 
-with:
-
-```text
 HARD_FAILURE
 != GUARDRAIL_PRESSURE
 != GUARDRAIL_EXCEEDED_RECOVERABLE
 != PURPOSE_OR_VIEWPOINT_DISTORTED
 ```
 
-v0.2.1 adds a separate two-axis distinction:
+v0.2.1 adds:
 
 ```text
 SOURCE_OPENNESS_STATUS
 != DOWNSTREAM_DETERMINACY_STATUS
-```
-
-A valid joint state is:
-
-```text
-SOURCE_INTENTIONAL_OPENNESS
-+ UNDERDETERMINED_FOR_DECLARED_TASK
 ```
 
 so intentional source openness does not become an excuse for a downstream task that genuinely demands missing determinacy.
@@ -54,21 +43,22 @@ so intentional source openness does not become an excuse for a downstream task t
 
 Evidence lane: [`../../evidence/method_specific/specification/`](../../evidence/method_specific/specification/)
 
-### SPEC-CH-001~005 — v0.1
+```text
+SPEC-CH-001~005  v0.1 direct pilots
+SPEC-CH-006      guardrail centerline challenge
+SPEC-CH-007      source-openness / downstream-determinacy boundary challenge
+```
 
-The five initial direct pilots remain unchanged.
-
-### SPEC-CH-006 — Guardrail Centerline Challenge
+### SPEC-CH-006
 
 ```text
 PRECOMMIT: fe009d8da9ab992e6885d07e14ff26355b776a86
 EXACT_GUARDRAIL_FAMILY_MATCHES: 8/8
 FALSE_HARD_FAILURE_ON_PRESSURE_CASES: 0
-FALSE_REJECTION_OF_DECLARED_DERIVATIVE_VIEW: 0
 RESULT: SPECIFICATION_GUARDRAIL_CENTERLINE_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-### SPEC-CH-007 — Source-Intentional Openness / Underspecification Boundary
+### SPEC-CH-007
 
 ```text
 PRECOMMIT: 1b3665696007b29535b3f46815cad39f4f02c03f
@@ -80,8 +70,6 @@ FALSE_OPENNESS_EXCUSE_FOR_MISSING_REQUIRED_DATA: 0
 FALSE_DETERMINACY_FROM_INVENTED_VALUE: 0
 RESULT: SPECIFICATION_OPENNESS_DETERMINACY_AXIS_SEPARATION_PILOT_PASS_WITH_LIMITATIONS
 ```
-
-The crucial result is that `SOURCE_INTENTIONAL_OPENNESS` and `SPEC_UNDERSPECIFIED` are not logical opposites. The former describes source-supported openness; the latter remains relative to the declared downstream task.
 
 ## External applications / 외부 적용
 
@@ -99,8 +87,6 @@ FINAL_SPEC_STATUS: no_gain
 COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 ```
 
-Purpose/detail/viewpoint guardrails were not formal precommitted axes in this run and are not retroactively scored.
-
 ### SPEC-APP-002 — Belmont Report Part C
 
 Protocol: **v0.2**.
@@ -116,7 +102,30 @@ GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
 COMPETITIVE_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
 ```
 
-The Belmont original remains preferred for primary ethical reading/contextual reasoning; the DSD derivative adds source-unit traceability and coverage/review checkability. This application exposed the openness/underspecification pressure later tested by `SPEC-CH-007`.
+The Belmont original remains preferred for primary ethical reasoning; DSD adds a derivative trace/coverage checking layer.
+
+### SPEC-APP-003 — OSHA Emergency Action Plan core corpus
+
+Protocol: **v0.2.1**.
+
+```text
+EXTERNAL_DOMAIN: workplace emergency planning / occupational safety
+PRECOMMIT: ccda4cfe9e9b25b3a97029c6a19c2e8e07076eb0
+SOURCE_UNIT_COVERAGE: 18/18
+REGULATORY_MINIMUM_ELEMENTS_PRESERVED: 11/11
+SITE_SPECIFIC_OPENNESS_HANDLED_WITHOUT_FABRICATION: 7/7
+INVENTED_SITE_SPECIFIC_FACTS: 0
+NORMATIVE_FORCE_STRENGTHENINGS: 0
+REGULATION_GUIDANCE_COLLAPSE: 0
+HARD_FAILURE_COUNT: 0
+DOWNSTREAM_DETERMINACY_STATUS: SUFFICIENT_AT_DECLARED_RESOLUTION
+FINAL_SPEC_STATUS: no_gain
+GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
+COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
+RESULT: SPECIFICATION_EXTERNAL_V0_2_1_NO_GAIN_WITH_GUARDRAIL_PRESSURE
+```
+
+The OSHA corpus already combines a concise regulation, cross-referenced official guidance, and checklist-style review support. DSD v0.2.1 preserved the distinction between legal obligations, helpful guidance, and worksite-specific implementation openness, but did not demonstrate a material task-matched gain over that competent baseline. The DSD derivative is therefore retained as a method/evidence trace layer rather than a preferred operational replacement.
 
 ## Maturity audit / 성숙도 감사
 
@@ -128,7 +137,7 @@ AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 METHOD_STATUS_DECISION: RETAIN_DEVELOPING
 ```
 
-That audit predates `SPEC-APP-002` and `SPEC-CH-007`. Its verdict is preserved. A new status decision requires a separate re-audit rather than silent promotion.
+That audit predates `SPEC-APP-002`, `SPEC-CH-007`, and `SPEC-APP-003`. Its verdict remains historical and is not silently overwritten. A new status decision requires a new re-audit.
 
 ## Evidence state / 증거 상태
 
@@ -138,11 +147,12 @@ V0_2_GUARDRAIL_TRANSITION_PILOT: 1
 V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 7
 
-EXTERNAL_APPLICATIONS_TOTAL: 2
-EXTERNAL_DOMAINS_TOTAL: 2
+EXTERNAL_APPLICATIONS_TOTAL: 3
+EXTERNAL_DOMAINS_TOTAL: 3
 V0_2_EXTERNAL_APPLICATIONS: 1
-V0_2_1_EXTERNAL_APPLICATIONS: 0
+V0_2_1_EXTERNAL_APPLICATIONS: 1
 
+LATEST_EXTERNAL_RESULT: SPEC_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v0.2.1
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
@@ -150,4 +160,4 @@ METHOD_STATUS: developing
 ESTABLISHED_STATUS_AFTER_LATEST_EVIDENCE: not_reaudited
 ```
 
-The strongest next evidence is a genuinely independent retrace of an existing locked application. If that cannot yet be obtained, the next project-controlled step should be a new external application under v0.2.1 rather than pretending a same-session rerun is independent.
+The strongest next evidence is now a genuinely independent retrace of an existing locked application. If that cannot be obtained, the next project-controlled step should be a new maturity re-audit that explicitly discounts dependence among same-project evaluations rather than treating three external corpora as three independent evaluators.
