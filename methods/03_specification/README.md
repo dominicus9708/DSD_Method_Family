@@ -1,6 +1,6 @@
 # 03. DSD Specification / DSD 명세론
 
-Status: **developing** — Protocol v0.1/v0.2 evidence preserved; Protocol v0.2.1 is current for new runs; `SPEC-CH-007` and first external v0.2.1 application `SPEC-APP-003` completed; first maturity audit still retains `developing` and has not yet been superseded by a re-audit.
+Status: **developing / internally freeze-ready for v1.0 candidate with non-breaking cleanup** — Protocol v0.1/v0.2 evidence is preserved; Protocol v0.2.1 remains current for new runs until a v1.0 candidate is constructed and finally audited. `SPEC-LINK-001` and the v0.2.1 minimality/stability audit are now complete. Method maturity remains `developing`; protocol freeze readiness is not external validation.
 
 Task: state explicitly what entities, statuses, inputs, prerequisites, outputs, transitions, and distinctions a system or study must preserve **without silently replacing the source's original purpose, priority, audience function, viewpoint, intentionally open judgment boundary, or site-specific implementation freedom with DSD-imposed structure**.
 
@@ -14,7 +14,7 @@ Boundary: DSD Specification organizes structural requirements; it does not repla
 
 - [`PROTOCOL.md`](PROTOCOL.md) — **v0.1**, historical protocol for `SPEC-CH-001~005`, `SPEC-APP-001`, and the first maturity audit.
 - [`PROTOCOL_v0.2.md`](PROTOCOL_v0.2.md) — **v0.2**, protocol governing `SPEC-CH-006` transition evidence and `SPEC-APP-002`.
-- [`PROTOCOL_v0.2.1.md`](PROTOCOL_v0.2.1.md) — **current protocol for new runs**, established after `SPEC-CH-007` and used for `SPEC-APP-003`.
+- [`PROTOCOL_v0.2.1.md`](PROTOCOL_v0.2.1.md) — **current protocol for new runs**, established after `SPEC-CH-007`, used for `SPEC-APP-003` and `SPEC-LINK-001`, and now judged freeze-ready as the semantic basis of a future v1.0 candidate.
 
 v0.2 introduced:
 
@@ -127,6 +127,64 @@ RESULT: SPECIFICATION_EXTERNAL_V0_2_1_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 
 The OSHA corpus already combines a concise regulation, cross-referenced official guidance, and checklist-style review support. DSD v0.2.1 preserved the distinction between legal obligations, helpful guidance, and worksite-specific implementation openness, but did not demonstrate a material task-matched gain over that competent baseline. The DSD derivative is therefore retained as a method/evidence trace layer rather than a preferred operational replacement.
 
+## Method-family linkage / 방법군 연계
+
+`SPEC-LINK-001` tests the first direct DSD-native receiving-method boundary:
+
+```text
+external OSHA source
+-> DSD Specification v0.2.1
+-> DSD Audit
+```
+
+Result:
+
+```text
+AUDIT_FINDING_MATCHES: 6/6
+REQUIREMENT_IDENTITY_PRESERVATION: pass
+NORMATIVE_FORCE_PRESERVATION: pass
+OPENNESS_PRESERVATION: pass
+HIDDEN_RETRANSLATION_REQUIRED: no
+EXTERNAL_STANDARD_BOUNDARY_PRESERVED: yes
+RESULT: SPECIFICATION_TO_AUDIT_NATIVE_HANDOFF_PILOT_PASS_WITH_LIMITATIONS
+```
+
+This supports the distinction:
+
+```text
+STANDALONE_NO_GAIN
+!= METHOD_FAMILY_INTEGRATION_NO_GAIN
+```
+
+A competent external specification can remain the preferred domain-facing representation while DSD Specification still serves as a native typed criterion carrier for another DSD method.
+
+## Minimality / stability audit and v1.0 preparation
+
+Audit record:
+[`../../DSD_Audit/audits/methodology/2026-09-08_dsd-specification-v0.2.1-minimality-stability-audit.md`](../../DSD_Audit/audits/methodology/2026-09-08_dsd-specification-v0.2.1-minimality-stability-audit.md)
+
+```text
+AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-003
+PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
+STRUCTURAL_CONFLICT_COUNT: 0
+BREAKING_SEMANTIC_REVISION_REQUIRED: no
+STRUCTURAL_REDESIGN_REQUIRED: no
+METHOD_STATUS_CHANGED: no
+```
+
+The locked v1.0 cleanup package is limited to:
+
+```text
+C1 mark context-dependent fields explicitly conditional
+C2 allow atom-level VALIDATION_STANDARD inheritance from a locked higher-level standard
+C3 split minimal core output from extended diagnostic ledgers
+C4 treat NO_GAIN_STATUS as derived when FINAL_SPEC_STATUS already equals no_gain
+C5 preserve G1-G4 and openness/determinacy without adding a new conceptual layer
+C6 preserve all v0.x protocols and evidence as historical versions
+```
+
+Protocol freeze readiness is an **internal standardization judgment**, not proof of independent evaluator agreement, practical superiority, or method maturity.
+
 ## Maturity audit / 성숙도 감사
 
 First audit record: [`../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md`](../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md)
@@ -137,7 +195,7 @@ AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 METHOD_STATUS_DECISION: RETAIN_DEVELOPING
 ```
 
-That audit predates `SPEC-APP-002`, `SPEC-CH-007`, and `SPEC-APP-003`. Its verdict remains historical and is not silently overwritten. A new status decision requires a new re-audit.
+That first maturity audit predates `SPEC-APP-002`, `SPEC-CH-007`, `SPEC-APP-003`, `SPEC-LINK-001`, and the minimality/stability audit. Its historical verdict is preserved; no automatic `established` promotion is inferred from v1.0 freeze readiness.
 
 ## Evidence state / 증거 상태
 
@@ -151,13 +209,16 @@ EXTERNAL_APPLICATIONS_TOTAL: 3
 EXTERNAL_DOMAINS_TOTAL: 3
 V0_2_EXTERNAL_APPLICATIONS: 1
 V0_2_1_EXTERNAL_APPLICATIONS: 1
+METHOD_FAMILY_LINKAGE_PILOTS: 1
 
-LATEST_EXTERNAL_RESULT: SPEC_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v0.2.1
+PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
+LATEST_EXTERNAL_RESULT: SPEC_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 METHOD_STATUS: developing
-ESTABLISHED_STATUS_AFTER_LATEST_EVIDENCE: not_reaudited
 ```
 
-The strongest next evidence is now a genuinely independent retrace of an existing locked application. If that cannot be obtained, the next project-controlled step should be a new maturity re-audit that explicitly discounts dependence among same-project evaluations rather than treating three external corpora as three independent evaluators.
+## Next stage / 다음 단계
+
+Construct **DSD Specification Protocol v1.0 candidate** from v0.2.1 using only cleanup package `C1-C6`, then run a final standardization audit. If that audit passes, v1.0 may become the default **DSD-internal** Specification protocol while evidence maturity remains separately recorded.
