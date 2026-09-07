@@ -15,7 +15,7 @@ Boundary: DSD Specification organizes structural requirements; it does not repla
 - [`PROTOCOL.md`](PROTOCOL.md) — **v0.1 historical**, used for `SPEC-CH-001~005`, `SPEC-APP-001`, and first maturity-audit-era records.
 - [`PROTOCOL_v0.2.md`](PROTOCOL_v0.2.md) — **v0.2 historical**, used for `SPEC-CH-006` and `SPEC-APP-002`.
 - [`PROTOCOL_v0.2.1.md`](PROTOCOL_v0.2.1.md) — **v0.2.1 historical/evidence basis**, used for `SPEC-CH-007`, `SPEC-APP-003`, and `SPEC-LINK-001`.
-- [`PROTOCOL_v1.0.md`](PROTOCOL_v1.0.md) — **standard / default DSD-internal protocol for new Specification runs** after final standardization audit.
+- [`PROTOCOL_v1.0.md`](PROTOCOL_v1.0.md) — **standard / default DSD-internal protocol for new Specification runs** after final standardization audit; first external v1.0 regression application is `SPEC-APP-004`.
 
 v1.0 preserves the stable v0.2.1 semantics while applying only the audited non-breaking cleanup package:
 
@@ -84,9 +84,7 @@ RESULT: SPECIFICATION_OPENNESS_DETERMINACY_AXIS_SEPARATION_PILOT_PASS_WITH_LIMIT
 External evidence lane: [`../../evidence/real_world_cases/specification/`](../../evidence/real_world_cases/specification/)
 
 ### SPEC-APP-001 — RFC 9112 §6.3
-
 Protocol: **v0.1**.
-
 ```text
 SOURCE_UNIT_COVERAGE: 13/13
 PRECEDENCE_PRESERVATION: 13/13
@@ -96,9 +94,7 @@ COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 ```
 
 ### SPEC-APP-002 — Belmont Report Part C
-
 Protocol: **v0.2**.
-
 ```text
 EXTERNAL_DOMAIN: human-subject research ethics
 SOURCE_UNIT_COVERAGE: 22/22
@@ -109,13 +105,10 @@ FINAL_SPEC_STATUS: usable
 GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
 COMPETITIVE_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
 ```
-
 The Belmont original remains preferred for primary ethical reasoning; DSD adds a derivative trace/coverage checking layer.
 
 ### SPEC-APP-003 — OSHA Emergency Action Plan core corpus
-
 Protocol: **v0.2.1**.
-
 ```text
 EXTERNAL_DOMAIN: workplace emergency planning / occupational safety
 PRECOMMIT: ccda4cfe9e9b25b3a97029c6a19c2e8e07076eb0
@@ -132,6 +125,28 @@ GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
 COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 RESULT: SPECIFICATION_EXTERNAL_V0_2_1_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 ```
+
+### SPEC-APP-004 — WCAG 2.2 Contrast (Minimum) + official ACT examples
+Protocol: **v1.0**.
+
+- Precommit: [`../../evidence/real_world_cases/specification/SPEC-APP-004_WCAG22-contrast-v1.0_precommit.md`](../../evidence/real_world_cases/specification/SPEC-APP-004_WCAG22-contrast-v1.0_precommit.md)
+- Result: [`../../evidence/real_world_cases/specification/SPEC-APP-004_WCAG22-contrast-v1.0.md`](../../evidence/real_world_cases/specification/SPEC-APP-004_WCAG22-contrast-v1.0.md)
+
+```text
+EXTERNAL_DOMAIN: web accessibility / WCAG text contrast
+SELECTED_OFFICIAL_EXAMPLES: 8
+EXAMPLE_OUTCOME_FAMILY_MATCHES: 8/8
+NORMAL_LARGE_THRESHOLD_SEPARATION: pass
+INCIDENTAL_INACTIVE_BOUNDARY_PRESERVATION: pass
+SOURCE_FACT_INVENTIONS: 0
+NORMATIVE_FORCE_STRENGTHENINGS: 0
+INACTIVE_CONDITIONAL_LEDGER_BOILERPLATE: 0
+FINAL_SPEC_STATUS: no_gain
+GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
+RESULT: SPECIFICATION_V1_0_EXTERNAL_LABELED_REGRESSION_NO_GAIN_WITH_LIMITATIONS
+```
+
+This is the first external application after v1.0 standardization. Because the official W3C ACT outcome labels were visible before DSD mapping, it is treated as a labeled interface/regression check rather than blind predictive evidence. It directly supports the v1.0 conditional-field restraint: only claim-relevant dependency/applicability structure was activated.
 
 ## Method-family linkage / 방법군 연계
 
@@ -217,13 +232,14 @@ V0_2_GUARDRAIL_TRANSITION_PILOT: 1
 V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 7
 
-EXTERNAL_APPLICATIONS_TOTAL: 3
-EXTERNAL_DOMAINS_TOTAL: 3
+EXTERNAL_APPLICATIONS_TOTAL: 4
+EXTERNAL_DOMAINS_TOTAL: 4
+V1_0_EXTERNAL_APPLICATIONS: 1
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 INTERNAL_PROTOCOL_STATUS: standardized
-LATEST_EXTERNAL_RESULT: SPEC_NO_GAIN_WITH_GUARDRAIL_PRESSURE
+LATEST_EXTERNAL_RESULT: SPECIFICATION_V1_0_EXTERNAL_LABELED_REGRESSION_NO_GAIN_WITH_LIMITATIONS
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
@@ -234,4 +250,4 @@ METHOD_EVIDENCE_STATUS: developing
 
 v1.0 is now the internal default. Further protocol revision should require a concrete defect or new stable obligation rather than routine expansion.
 
-The strongest remaining evidence priorities are independent evaluator retrace, measured practical benefit where feasible, and additional receiving-method linkage only when it answers a real interoperability question. These are maturity/evidence tasks, not prerequisites for using v1.0 as the DSD-internal standard.
+The strongest remaining evidence priorities are an **unlabeled or evaluator-blinded real-world case**, independent evaluator retrace, measured practical benefit where feasible, and additional receiving-method linkage only when it answers a real interoperability question. These are maturity/evidence tasks, not prerequisites for using v1.0 as the DSD-internal standard.
