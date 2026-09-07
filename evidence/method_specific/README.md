@@ -42,10 +42,11 @@ REPRODUCIBILITY_RECORD:
   - total direct constructed pilot count: `7`;
   - `SPEC-APP-001`: RFC 9112 §6.3 under v0.1, `SPEC_NO_GAIN`, baseline preferred;
   - `SPEC-APP-002`: Belmont Report Part C under v0.2, `MIXED_GAIN_WITH_GUARDRAIL_PRESSURE`;
-  - external applications total: `2` across `2` external domains;
-  - v0.2.1 external applications: `0`;
+  - `SPEC-APP-003`: OSHA Emergency Action Plan core corpus under v0.2.1, `SPEC_NO_GAIN` with `GUARDRAIL_PRESSURE`, baseline preferred;
+  - external applications total: `3` across `3` external domains;
+  - v0.2.1 external applications: `1`;
   - independent evaluator validation: `not established`;
-  - first maturity audit predates `SPEC-APP-002` and `SPEC-CH-007` and remains preserved;
+  - first maturity audit predates `SPEC-APP-002`, `SPEC-CH-007`, and `SPEC-APP-003` and remains preserved;
   - current status remains `developing` until a new re-audit is explicitly performed.
 
 ### Current Specification-specific boundaries
@@ -75,7 +76,7 @@ intentional source openness -> falsely labeled accidental defect
 missing required data -> falsely excused as discretion
 ```
 
-`SPEC_UNDERSPECIFIED` remains relative to the declared downstream task. A source may intentionally preserve judgment while still being insufficient for a stronger automation task.
+`SPEC_UNDERSPECIFIED` remains relative to the declared downstream task. `SPEC-APP-003` additionally confirms on an external regulatory corpus that source-supported worksite implementation openness can be sufficient for a structural-review task without supplying the actual site-specific values.
 
 Neither the guardrail profile nor the openness/determinacy axes are promoted to new shared-core IDs at this stage.
 
@@ -94,4 +95,4 @@ A proposed or developing method should accumulate, at minimum:
 
 These eight categories are a minimum evidence architecture for promotion consideration, not an automatic promotion rule. Later method-specific blind spots may justify prospective protocol refinement without rewriting earlier evidence.
 
-Same-session retrace does not substitute for a genuinely independent reviewer. The strongest remaining evidence gap for Specification is independent evaluation; if unavailable, new external v0.2.1 evidence should be accumulated without pretending it closes that gap.
+Same-session or same-project retrace does not substitute for a genuinely independent reviewer. With three external corpora now accumulated, the strongest remaining evidence gap for Specification is independent evaluation. If unavailable, the next internal step should be a maturity re-audit that explicitly discounts common-evaluator dependence rather than treating corpus count as independent replication.
