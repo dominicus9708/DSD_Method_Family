@@ -1,6 +1,6 @@
 # DSD Specification Method-Specific Evidence / DSD 명세론 개별 방법 직접 증거
 
-Status: **eight direct constructed pilots + six completed external applications + one blocked external blind precommit + one method-family linkage pilot / internal Protocol v1.0 standardized / method evidence maturity remains developing**  
+Status: **eight direct constructed pilots + seven completed external applications + one blocked external blind precommit + one method-family linkage pilot / internal Protocol v1.0 standardized / method evidence maturity remains developing**  
 Date: 2026-09-08  
 Method: **DSD Specification / DSD 명세론**
 
@@ -229,6 +229,41 @@ Five frozen behavioral/implementation-freedom axes matched the actual merged-con
 
 This case also demonstrates selective `DYNAMICS_LAYER` activation for event-order/lifecycle constraints without forcing Static Aggregation or Formation.
 
+### SPEC-APP-008 — NHTSA PE24003 low-pressure fuel-pump investigation
+
+Protocol: **v1.0**  
+Precommit: [`../../real_world_cases/specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump_precommit.md`](../../real_world_cases/specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump_precommit.md)  
+Frozen prediction: [`../../real_world_cases/specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump_prediction.md`](../../real_world_cases/specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump_prediction.md)  
+Result: [`../../real_world_cases/specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump.md`](../../real_world_cases/specification/SPEC-APP-008_NHTSA-PE24003-fuel-pump.md)
+
+```text
+CASE_ORIGIN: public_regulatory_safety_investigation
+EXTERNAL_DOMAIN: automotive safety / defect investigation
+SELECTED_DSD_LAYERS: PROPERTY_CORE + DYNAMICS_LAYER
+RESOLUTION_ARTIFACT_WITHHELD_UNTIL_AFTER_PREDICTION: yes
+OFFICIAL_CLOSING_ACTION: recall 25V586
+FULL_MATCH_AXES: 5/6
+PARTIAL_MATCH_AXES: 1/6
+NON_MATCH_AXES: 0/6
+SOURCE_FACT_INVENTION_COUNT: 0
+IMPLEMENTATION_OVERPREDICTION_COUNT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+FINAL_SPEC_STATUS: usable_with_unresolved_items
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_AUTOMOTIVE_SAFETY_RESOLUTION_WITHHELD_MATCH_WITH_REMEDY_DETAIL_PARTIAL
+```
+
+This is the first completed resolution-withheld Specification comparison in the current evidence sequence from a non-software safety-regulatory domain. Five locked axes matched the official PE closure and recall record. The remedy-to-hazard axis remains partial because the official closure-stage Part 573 report still listed the concrete remedy as under development and ODI reserved later remedy evaluation.
+
+The case directly preserves:
+
+```text
+DEFECT_AND_RECALL_DECISION_RESOLVED
+!= REMEDY_IMPLEMENTATION_AND_EFFECTIVENESS_FULLY_RESOLVED
+```
+
+and independently reuses the v1.0 openness/determinacy distinction without changing the protocol.
+
 ## Method-family linkage evidence / 방법군 연계 증거
 
 `SPEC-LINK-001` is a linkage pilot, not a direct Specification challenge and not direct Audit validation.
@@ -279,21 +314,22 @@ V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
 
-EXTERNAL_APPLICATIONS_COMPLETED: 6
-EXTERNAL_DOMAINS_COMPLETED: 6
+EXTERNAL_APPLICATIONS_COMPLETED: 7
+EXTERNAL_DOMAINS_COMPLETED: 7
 EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
-RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 2
-V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 3
+RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 3
+RESOLUTION_WITHHELD_NON_SOFTWARE_APPLICATIONS: 1
+V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 4
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 INTERNAL_PROTOCOL_STATUS: standardized
 LATEST_COMPLETED_DIRECT_RESULT: SPECIFICATION_V1_0_DEPENDENCY_LABEL_WITHHELD_CROSSVALIDATOR_PASS_WITH_LIMITATIONS
-LATEST_COMPLETED_EXTERNAL_RESULT: SPECIFICATION_V1_0_REAL_WORLD_LIFECYCLE_RESOLUTION_WITHHELD_MATCH_WITH_ONE_TEST_COVERAGE_PARTIAL
+LATEST_COMPLETED_EXTERNAL_RESULT: SPECIFICATION_V1_0_AUTOMOTIVE_SAFETY_RESOLUTION_WITHHELD_MATCH_WITH_REMEDY_DETAIL_PARTIAL
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
 CURRENT_METHOD_EVIDENCE_STATUS: developing
 ```
 
-Further evidence should now prioritize independent retrace, measured practical benefit, or a materially different non-software real-world case with naturally separated source and later outcome. Additional receiving-method linkage should be pursued when it answers a concrete interoperability question. Blocked/unscored attempts and partial matches remain visible and do not count as full successes.
+Further evidence should prioritize independent retrace and measured practical benefit. Additional cross-domain cases are worthwhile when they expose a new boundary rather than merely accumulating favorable counts. Blocked/unscored attempts and partial matches remain visible and do not count as full successes.
