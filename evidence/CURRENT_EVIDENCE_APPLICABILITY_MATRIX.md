@@ -1,7 +1,7 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + seven Specification direct constructed pilots + three external Specification applications + completed first maturity audit  
-Date: 2026-09-07
+Status: current migration map + seven Specification direct constructed pilots + three external Specification applications + one method-family linkage pilot + internal v1.0 standardization completed  
+Date: 2026-09-08
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
 
@@ -13,6 +13,8 @@ This file classifies existing method evidence without retroactively turning one 
 - **Protocol prepared** = a dedicated method protocol exists, but protocol existence alone is not direct validation.
 - **Direct pilot** = a method-specific challenge directly tested the method under its own protocol or locked prospective profile, but established status is not thereby implied.
 - **External application** = the method is applied under locked criteria to material authored independently of DSD; this origin class does not imply an independent evaluator.
+- **Method-family linkage pilot** = tests whether one method's typed output can be consumed by another DSD method at a locked interface; it does not directly validate the receiving method or all inter-method boundaries.
+- **Protocol standardization audit** = tests internal interface stability/default-use readiness; it does not imply evidence maturity or external superiority.
 - **Maturity meta-audit** = DSD Audit evaluates whether accumulated evidence justifies a method-status transition; it is not another direct pilot of the audited method.
 
 ## Analysis corpus / 분석론 기록
@@ -21,7 +23,7 @@ This file classifies existing method evidence without retroactively turning one 
 
 ## Audit corpus / 감사 기록
 
-Existing `DSD_Audit/` and new audit records remain direct evidence for **DSD Audit** procedures and verdict discipline only.
+Existing `DSD_Audit/` and new audit records remain direct evidence for **DSD Audit** procedures and verdict discipline only. Methodology audits of another DSD method are not automatically counted as new direct Audit validation cases.
 
 ## DSD Specification / DSD 명세론
 
@@ -31,17 +33,21 @@ Protocol versions:
 v0.1 historical:
   methods/03_specification/PROTOCOL.md
 
-v0.2 historical / APP-002 protocol:
+v0.2 historical:
   methods/03_specification/PROTOCOL_v0.2.md
 
-v0.2.1 current for new runs / APP-003 protocol:
+v0.2.1 historical/evidence basis:
   methods/03_specification/PROTOCOL_v0.2.1.md
+
+v1.0 standard/default for new DSD-internal runs:
+  methods/03_specification/PROTOCOL_v1.0.md
 ```
 
 ```text
 METHOD: DSD Specification
-METHOD_STATUS: developing
-CURRENT_PROTOCOL_FOR_NEW_RUNS: v0.2.1
+METHOD_EVIDENCE_STATUS: developing
+INTERNAL_PROTOCOL_STATUS: standardized
+CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 
 V0_1_DIRECT_PILOTS: 5
 V0_2_GUARDRAIL_TRANSITION_PILOT: 1
@@ -49,8 +55,7 @@ V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 7
 EXTERNAL_APPLICATIONS_TOTAL: 3
 EXTERNAL_DOMAINS_TOTAL: 3
-V0_2_EXTERNAL_APPLICATIONS: 1
-V0_2_1_EXTERNAL_APPLICATIONS: 1
+METHOD_FAMILY_LINKAGE_PILOTS: 1
 ```
 
 ### v0.1 direct evidence
@@ -87,7 +92,7 @@ SPEC_CH_007_FALSE_DETERMINACY_FROM_INVENTED_VALUE: 0
 SPEC_CH_007_RESULT: SPECIFICATION_OPENNESS_DETERMINACY_AXIS_SEPARATION_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-Accepted prospective v0.2.1 distinction:
+Accepted stable distinction:
 
 ```text
 SOURCE_OPENNESS_STATUS
@@ -152,7 +157,56 @@ COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 RESULT: SPECIFICATION_EXTERNAL_V0_2_1_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 ```
 
-This first external v0.2.1 application supports source-faithful use of the openness/determinacy axes on an operational/regulatory corpus. It does **not** show task-matched superiority: OSHA's own regulation, cross-referenced eTool, and checklist already provide a strong baseline for the locked structural-review task.
+This external v0.2.1 application supports source-faithful use of the openness/determinacy axes on an operational/regulatory corpus. It does **not** show task-matched superiority: OSHA's own regulation, cross-referenced eTool, and checklist already provide a strong baseline for the locked structural-review task.
+
+### Method-family linkage — SPEC-LINK-001
+
+```text
+RECEIVING_METHOD: DSD Audit
+AUDIT_FINDING_MATCHES: 6/6
+REQUIREMENT_IDENTITY_PRESERVATION: pass
+NORMATIVE_FORCE_PRESERVATION: pass
+OPENNESS_PRESERVATION: pass
+HIDDEN_RETRANSLATION_REQUIRED: no
+EXTERNAL_STANDARD_BOUNDARY_PRESERVED: yes
+RESULT: SPECIFICATION_TO_AUDIT_NATIVE_HANDOFF_PILOT_PASS_WITH_LIMITATIONS
+```
+
+This supports one native handoff boundary only:
+
+```text
+STANDALONE_NO_GAIN
+!= METHOD_FAMILY_INTEGRATION_NO_GAIN
+```
+
+It does not validate all 22 methods or universal interoperability.
+
+### Protocol minimality/stability audit
+
+```text
+AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-003
+PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
+STRUCTURAL_CONFLICT_COUNT: 0
+BREAKING_SEMANTIC_REVISION_REQUIRED: no
+STRUCTURAL_REDESIGN_REQUIRED: no
+```
+
+### Protocol v1.0 final standardization audit
+
+```text
+AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-004
+CRITICAL_GATES_PASSED: 14/14
+CRITICAL_FAILURES: 0
+BREAKING_SEMANTIC_LOSS: 0
+REGRESSION_FAMILIES_WITH_REQUIRED_CARRIER_LOSS: 0/11
+NEW_UNPRECOMMITTED_SEMANTIC_OBLIGATION: 0
+STANDARDIZATION_VERDICT: STANDARDIZE_WITH_DOCUMENTED_LIMITS
+DEFAULT_DSD_INTERNAL_PROTOCOL: DSD Specification Protocol v1.0
+METHOD_EVIDENCE_STATUS: developing
+METHOD_MATURITY_PROMOTION: no
+```
+
+The standardization audit approves v1.0 as the default DSD-internal interface. It does not convert internal standardization into an evidence-maturity or superiority claim.
 
 ### First maturity meta-audit
 
@@ -163,15 +217,17 @@ SPEC_MATURITY_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 SPEC_MATURITY_STATUS_DECISION: RETAIN_DEVELOPING
 ```
 
-This audit predates `SPEC-APP-002`, `SPEC-CH-007`, and `SPEC-APP-003`; it remains historical until a new re-audit.
+That historical maturity verdict is not silently overwritten by protocol standardization.
 
 ```text
-CURRENT_STATUS_AFTER_LATEST_EVIDENCE: developing
-ESTABLISHED_STATUS_AFTER_LATEST_EVIDENCE: not_reaudited
+CURRENT_METHOD_EVIDENCE_STATUS: developing
+INTERNAL_PROTOCOL_STATUS: standardized
+CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 SAME_PROJECT_EVALUATOR_DEPENDENCE: present
-NEXT_EVIDENCE: genuinely_independent_retrace_or_dependency_discounted_maturity_reaudit
+ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
+NEXT_EVIDENCE: independent_retrace_or_measured_benefit_or_concrete_second_handoff_question
 ```
 
 ## Shared-core registry status / 공통 코어 상태
@@ -193,19 +249,19 @@ DIRECTLY_MATURE_METHOD_EVIDENCE:
   DSD Analysis
   DSD Audit
 
-DEVELOPING_WITH_DIRECT_AND_EXTERNAL_APPLICATION_EVIDENCE:
+INTERNALLY_STANDARDIZED_BUT_EVIDENCE_DEVELOPING:
   DSD Specification
     direct_constructed_pilots: 7
-    current_protocol_for_new_runs: v0.2.1
+    current_protocol_for_new_runs: v1.0
+    internal_protocol_status: standardized
     external_applications_total: 3
     external_domains_total: 3
-    v0.2.1_external_applications: 1
+    method_family_linkage_pilots: 1
     latest_external_result: SPEC_NO_GAIN_WITH_GUARDRAIL_PRESSURE
     independent_evaluator_validation: not_established
     measured_practical_benefit: not_established
-    first_maturity_audit: historical_before_latest_evidence
-    established_status_after_latest_evidence: not_reaudited
-    current_status: developing
+    all_method_handoff_interoperability: not_established
+    current_method_evidence_status: developing
 
 SHARED_CORE_REGISTRY_STATUS:
   closed_for_current_registry_with_conditions
