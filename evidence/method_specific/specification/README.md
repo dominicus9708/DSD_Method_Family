@@ -1,6 +1,6 @@
 # DSD Specification Method-Specific Evidence / DSD 명세론 개별 방법 직접 증거
 
-Status: **eight direct constructed pilots + four completed external applications + one blocked external blind precommit + one method-family linkage pilot / internal Protocol v1.0 standardized / method evidence maturity remains developing**  
+Status: **eight direct constructed pilots + five completed external applications + one blocked external blind precommit + one method-family linkage pilot / internal Protocol v1.0 standardized / method evidence maturity remains developing**  
 Date: 2026-09-08  
 Method: **DSD Specification / DSD 명세론**
 
@@ -179,6 +179,29 @@ COUNT_AS_BLIND_EVIDENCE: no
 
 The embedded official `valid` labels could not be technically isolated from schema/data before source delivery in the current runtime. The precommit was therefore preserved rather than weakened after the fact.
 
+### SPEC-APP-006 — python-jsonschema `ErrorTree` issue #1328
+
+Protocol: **v1.0**  
+Precommit: [`../../real_world_cases/specification/SPEC-APP-006_ErrorTree-read-mutation_precommit.md`](../../real_world_cases/specification/SPEC-APP-006_ErrorTree-read-mutation_precommit.md)  
+Frozen prediction: [`../../real_world_cases/specification/SPEC-APP-006_ErrorTree-read-mutation_prediction.md`](../../real_world_cases/specification/SPEC-APP-006_ErrorTree-read-mutation_prediction.md)  
+Result: [`../../real_world_cases/specification/SPEC-APP-006_ErrorTree-read-mutation.md`](../../real_world_cases/specification/SPEC-APP-006_ErrorTree-read-mutation.md)
+
+```text
+CASE_ORIGIN: organizational_or_technical_incident
+EXTERNAL_DOMAIN: Python library API behavior / error-structure semantics
+RESOLUTION_ARTIFACT_WITHHELD_UNTIL_AFTER_PREDICTION: yes
+ACTUAL_CLOSING_COMMIT: 7fa1acc948b34ab6283b3621ecbdc4360a717ba7
+PRIMARY_AXES_MATCHED: 5/5
+IMPLEMENTATION_OVERPREDICTION_COUNT: 0
+SOURCE_FACT_INVENTION_COUNT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+FINAL_SPEC_STATUS: usable
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_LIMITATIONS
+```
+
+This is the first completed external case in which the real maintainer resolution artifacts were deliberately withheld until after the DSD v1.0 acceptance prediction was frozen. It supports case-level acceptance-contract alignment, not independent evaluator validation. The actual closing commit also added adjacent lookup-error behavior that was not retroactively inserted into the prediction.
+
 ## Method-family linkage evidence / 방법군 연계 증거
 
 `SPEC-LINK-001` is a linkage pilot, not a direct Specification challenge and not direct Audit validation.
@@ -229,19 +252,21 @@ V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
 
-EXTERNAL_APPLICATIONS_COMPLETED: 4
-EXTERNAL_DOMAINS_COMPLETED: 4
+EXTERNAL_APPLICATIONS_COMPLETED: 5
+EXTERNAL_DOMAINS_COMPLETED: 5
 EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
+RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 1
+V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 2
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 INTERNAL_PROTOCOL_STATUS: standardized
 LATEST_COMPLETED_DIRECT_RESULT: SPECIFICATION_V1_0_DEPENDENCY_LABEL_WITHHELD_CROSSVALIDATOR_PASS_WITH_LIMITATIONS
-LATEST_COMPLETED_EXTERNAL_RESULT: SPECIFICATION_V1_0_EXTERNAL_LABELED_REGRESSION_NO_GAIN_WITH_LIMITATIONS
+LATEST_COMPLETED_EXTERNAL_RESULT: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_LIMITATIONS
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
 CURRENT_METHOD_EVIDENCE_STATUS: developing
 ```
 
-Further evidence should prioritize a genuinely evaluator-separated external case, independent retrace, measured practical benefit where feasible, or a concrete second receiving-method linkage. Blocked/unscored attempts remain visible and do not count as completed evidence.
+Further evidence should prioritize independent retrace, a second naturally separated real-world resolution case from a different domain, measured practical benefit where feasible, or a concrete second receiving-method linkage. Blocked/unscored attempts remain visible and do not count as completed evidence.
