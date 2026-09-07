@@ -17,7 +17,8 @@
 - **MATH-008:** lower-61 phase reachability refinement is saturated.
 - **MATH-009:** root-Hensel correction ordering and endpoint/minimum-start ordering are one affine ordering inside a fixed `(k,q,E)` fiber; no independent pruning credit.
 - **MATH-010:** DSD descriptors/stage gates were inserted into the exact 61+11 computation; a concrete double-address-lift representation error was blocked, while MATH-006 arithmetic was reproduced unchanged.
-- **Current frontier:** add genuinely new same-integer information, preferably by coupling the new first-failure/margin diagnostics to depth72+ eligibility or to the `<2^35` adjacent-block halo structure.
+- **MATH-011:** the depth-72 coefficient-survival predicate was compressed to the complete finite threshold descriptor `H(r)`, and the 340-address scan was converted exactly to a cyclic sliding window. The address-predicate evaluation layer drops from `16,015,360` lookups to `47,104` threshold evaluations across `q61=39..61`.
+- **Current frontier:** seek an analogous complete descriptor for depth-72+ same-integer continuation/Hensel eligibility, keeping only descriptors that yield safe pruning, safe merging, or fewer exact state expansions.
 
 ## Canonical Collatz audit sequence
 
@@ -33,6 +34,7 @@
 | `DSD-AUDIT-20260908-MATH-008` | [`2026-09-08_collatz-lower61-endpoint-phase-reachability-audit.md`](2026-09-08_collatz-lower61-endpoint-phase-reachability-audit.md) | All 2048 phases occur for `q61=39..58`; phase-sparsity refinement is `STRATEGY SATURATION` |
 | `DSD-AUDIT-20260908-MATH-009` | [`2026-09-08_collatz-root-hensel-endpoint-ordering-redundancy-audit.md`](2026-09-08_collatz-root-hensel-endpoint-ordering-redundancy-audit.md) | Same-fiber correction ordering and minimum-start ordering are algebraically identical; `REDUNDANT / NO NEW PRUNING` |
 | `DSD-AUDIT-20260908-MATH-010` | [`2026-09-08_collatz-dsd-native-61plus11-computation-audit.md`](2026-09-08_collatz-dsd-native-61plus11-computation-audit.md) | DSD-native stage/resolution/exclusion/margin state added; double address lift rejected; exact MATH-006 regression retained |
+| `DSD-AUDIT-20260908-MATH-011` | [`2026-09-08_collatz-dsd-complete-descriptor-cyclic-window-acceleration-audit.md`](2026-09-08_collatz-dsd-complete-descriptor-cyclic-window-acceleration-audit.md) | Complete tail threshold descriptor `H(r)` + exact inverse-multiplier cyclic-window transform; `CONFIRMED WITHIN SCOPE / COMPUTATIONAL ACCELERATION` |
 
 ## Reading order
 
@@ -46,6 +48,7 @@
 8. `MATH-008` — actual phase reachability saturation.
 9. `MATH-009` — Hensel/endpoint ordering redundancy.
 10. `MATH-010` — DSD-native computation state and transition gate.
+11. `MATH-011` — DSD complete descriptor used for exact calculation acceleration.
 
 ## Current finite boundary
 
@@ -84,8 +87,6 @@ Exact arithmetic remains primary. DSD metadata is carried alongside it:
 \mathcal A=(D,R,S,E,T,C,N,O).
 \]
 
-The calculation records descriptor, resolution, selection, first exclusion cause, transition stage, consistency, evidence norm, and outcome.
-
 The key transition gate is
 
 \[
@@ -93,6 +94,34 @@ The key transition gate is
 \]
 
 exactly once. Reapplying the address contribution to an already lifted phase is a prohibited transition.
+
+## DSD computational compression introduced by MATH-011
+
+For each lifted residue `r mod 2048`, let `s_j(r)` be the tail odd-count through `j` steps and define
+
+\[
+H(r)=\max_{1\le j\le11}\bigl(q_{\min}(61+j)-s_j(r)\bigr).
+\]
+
+Then
+
+\[
+r\text{ survives through depth }72\iff q_{61}\ge H(r).
+\]
+
+So `H(r)` is complete for this finite predicate. Its exact distribution is
+
+`39:247, 40:554, 41:570, 42:406, 43:195, 44:63, 45:12, 46:1`.
+
+For fixed `q`, the invertible multiplier `m=3^q mod2048` gives the coordinate change `z=m^{-1}y`, turning
+
+\[
+\sum_{a=1024}^{1363}\mathbf1[H(y+am)\le q]
+\]
+
+into a cyclic contiguous length-340 window. Full legacy count vectors are reproduced exactly.
+
+This is a computational acceleration, not a stronger Collatz theorem.
 
 ## Audit discipline
 
@@ -121,6 +150,10 @@ A residue, quotient state, endpoint class, or symbolic path may be used only whe
 ### Redundant information is not new evidence
 
 The same exact affine relation expressed in different coordinates cannot be counted twice as independent pruning.
+
+### A complete descriptor is scope-bound
+
+A descriptor complete for one finite predicate may be used to accelerate exactly that predicate. It cannot be promoted to arbitrary-depth completeness without a new proof.
 
 ### Saturated route is not a false theorem
 
