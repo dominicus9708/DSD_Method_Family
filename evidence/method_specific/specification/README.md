@@ -1,191 +1,138 @@
 # DSD Specification Method-Specific Evidence / DSD 명세론 개별 방법 직접 증거
 
-Status: **five direct pilot records + first external application completed / maturity audit completed / developing retained**  
+Status: **six direct constructed pilots + first external application + first maturity audit completed / v0.2 current for new runs / developing retained**  
 Date: 2026-09-07  
-Method: **DSD Specification / DSD 명세론**  
-Protocol: [`../../../methods/03_specification/PROTOCOL.md`](../../../methods/03_specification/PROTOCOL.md)
+Method: **DSD Specification / DSD 명세론**
 
-This folder records evidence that directly tests the **Specification** method under its own task, inputs, operation, outputs, failure/no-gain criteria, and validation standard.
+Protocol versions:
+- v0.1 historical: [`../../../methods/03_specification/PROTOCOL.md`](../../../methods/03_specification/PROTOCOL.md)
+- v0.2 current for new runs: [`../../../methods/03_specification/PROTOCOL_v0.2.md`](../../../methods/03_specification/PROTOCOL_v0.2.md)
 
 Shared-core pilots SC-01 through SC-10 may be reused as operating disciplines, but they do not count as direct Specification validation.
 
-## Required record fields
-
-```text
-EVIDENCE_SCOPE_CLASS: method_specific
-METHOD_DIRECTLY_TESTED: DSD Specification
-METHOD_VERSION_OR_PROTOCOL: Specification Protocol v0.1
-CHALLENGE_ID_OR_APPLICATION_ID:
-TASK:
-LOCKED_REQUIREMENT_INVENTORY:
-DSD_LAYERS_USED:
-DOMAIN_BRIDGE:
-EXTERNAL_STANDARD:
-PRECOMMITTED_CRITERIA:
-PERTURBATIONS_OR_CASES:
-EXPECTED_SPEC_STATUS:
-OBSERVED_SPEC_STATUS:
-CONTRADICTIONS_FOUND:
-UNDERSPECIFIED_ITEMS:
-OVERCONSTRAINTS_FOUND:
-NO_GAIN_STATUS:
-RESULT:
-LIMITS:
-REPRODUCIBILITY_RECORD:
-```
-
 ## Direct evidence registry / 직접 증거 레지스트리
 
-### SPEC-CH-001 — Well-Formed / Malformed Specification Discrimination
+### SPEC-CH-001 through SPEC-CH-005 — v0.1 evidence
 
-Record: [`SPEC-CH-001_well-formed-malformed-discrimination.md`](SPEC-CH-001_well-formed-malformed-discrimination.md)
-
-```text
-WELL_FORMED_CASES_ACCEPTED: 2/2
-MALFORMED_CASES_DETECTED: 6/6
-EXACT_DIAGNOSTIC_FAMILY_MATCHES: 8/8
-RESULT: SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
-```
-
-### SPEC-CH-002 — Contradiction / Underspecification Challenge
-
-Precommit: [`SPEC-CH-002_precommit.md`](SPEC-CH-002_precommit.md)  
-Result: [`SPEC-CH-002_contradiction-underspecification.md`](SPEC-CH-002_contradiction-underspecification.md)
+The five initial direct pilots remain under the v0.1 protocol family and preserve their original verdicts:
 
 ```text
-PRECOMMIT_COMMIT: 848a01b160ecfe4fcbdb8e69d6501e40555d782d
-WELL_FORMED_CONTROLS_ACCEPTED: 2/2
-CONTRADICTION_CASES_CORRECTLY_CLASSIFIED: 3/3
-UNDERSPECIFICATION_CASES_CORRECTLY_CLASSIFIED: 3/3
-EXACT_DIAGNOSTIC_FAMILY_MATCHES: 8/8
-CROSS_CLASS_ERRORS: 0
-RESULT: SPECIFICATION_CONTRADICTION_UNDERSPECIFICATION_PILOT_PASS_WITH_LIMITATIONS
+SPEC-CH-001  SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
+SPEC-CH-002  SPECIFICATION_CONTRADICTION_UNDERSPECIFICATION_PILOT_PASS_WITH_LIMITATIONS
+SPEC-CH-003  SPECIFICATION_OPTIONAL_LAYER_BRIDGE_BOUNDARY_PILOT_PASS_WITH_LIMITATIONS
+SPEC-CH-004  SPECIFICATION_NO_GAIN_PILOT_PASS_WITH_LIMITATIONS
+SPEC-CH-005  SPECIFICATION_RETRACE_REPRODUCIBILITY_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-### SPEC-CH-003 — Optional-Layer / Bridge Boundary Challenge
+`SPEC-CH-005` supports procedural retraceability and order stability on a locked constructed packet, not independent reviewer validation.
 
-Precommit: [`SPEC-CH-003_precommit.md`](SPEC-CH-003_precommit.md)  
-Result: [`SPEC-CH-003_optional-layer-bridge-boundary.md`](SPEC-CH-003_optional-layer-bridge-boundary.md)
+### SPEC-CH-006 — Guardrail Centerline Challenge / 가드레일 중심선 도전
+
+Precommit: [`SPEC-CH-006_guardrail-centerline_precommit.md`](SPEC-CH-006_guardrail-centerline_precommit.md)  
+Result: [`SPEC-CH-006_guardrail-centerline.md`](SPEC-CH-006_guardrail-centerline.md)
 
 ```text
-PRECOMMIT_COMMIT: d2cc07121043546be8e2450d8af288491b837e76
-WELL_FORMED_CONTROLS_ACCEPTED: 2/2
-OPTIONAL_LAYER_OVERCONSTRAINT_CASES_CORRECT: 3/3
-REQUIRED_BRIDGE_FAILURE_CASES_CORRECT: 3/3
-EXACT_DIAGNOSTIC_FAMILY_MATCHES: 8/8
-CROSS_CLASS_ERRORS: 0
-RESULT: SPECIFICATION_OPTIONAL_LAYER_BRIDGE_BOUNDARY_PILOT_PASS_WITH_LIMITATIONS
+PRECOMMIT_COMMIT: fe009d8da9ab992e6885d07e14ff26355b776a86
+EXACT_GUARDRAIL_FAMILY_MATCHES: 8/8
+FALSE_HARD_FAILURE_ON_PRESSURE_CASES: 0
+FALSE_REJECTION_OF_DECLARED_DERIVATIVE_VIEW: 0
+UNDECLARED_PURPOSE_SHIFT_DETECTED: 1/1
+AUTHORIAL_INTENT_OVERATTRIBUTION_DETECTED: 1/1
+UNKNOWN_PURPOSE_PRESERVED_AS_UNDETERMINED: 1/1
+SOURCE_FACT_INVENTION_ESCALATED_TO_HARD_FAILURE: 1/1
+RESULT: SPECIFICATION_GUARDRAIL_CENTERLINE_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-### SPEC-CH-004 — NO_GAIN Specification Challenge
-
-Precommit: [`SPEC-CH-004_precommit.md`](SPEC-CH-004_precommit.md)  
-Result: [`SPEC-CH-004_no-gain-specification.md`](SPEC-CH-004_no-gain-specification.md)
+The accepted prospective guardrail profile is:
 
 ```text
-PRECOMMIT_COMMIT: 4d55d00af7fa376d370415a48b82de6883ba6fc8
-NO_GAIN_CASES_CORRECTLY_PRESERVED: 3/3
-OPERATIONAL_GAIN_CASES_CORRECTLY_DISTINGUISHED: 3/3
-UNDERSPECIFIED_CASES_CORRECTLY_DISTINGUISHED: 2/2
-EXACT_EXPECTED_FINAL_STATUS_FAMILY: 8/8
-FALSE_NO_GAIN_ON_INCOMPLETE_SOURCE: 0
-FALSE_GAIN_FROM_COSMETIC_RELABELING_OR_REORDERING: 0
-INVENTED_SOURCE_FACTS: 0
-RESULT: SPECIFICATION_NO_GAIN_PILOT_PASS_WITH_LIMITATIONS
+G1 SOURCE_FIDELITY
+G2 PURPOSE_AND_PRIORITY_FIDELITY
+G3 DETAIL_PROPORTIONALITY
+G4 VIEWPOINT_SEPARATION
 ```
 
-### SPEC-CH-005 — Reproducibility / Independent Retrace Challenge
-
-Precommit: [`SPEC-CH-005_precommit.md`](SPEC-CH-005_precommit.md)  
-Result: [`SPEC-CH-005_reproducibility-independent-retrace.md`](SPEC-CH-005_reproducibility-independent-retrace.md)
+and the key boundary is:
 
 ```text
-PRECOMMIT_COMMIT: dda33b2028c9e5fb0f7b3bef938a8b834219f787
-REFERENCE_KEY_HASH_MATCH: yes
-TRACE_A_FINAL_STATUS_MATCHES: 8/8
-TRACE_B_FINAL_STATUS_MATCHES: 8/8
-TRACE_A_B_FINAL_STATUS_AGREEMENT: 8/8
-TRACE_A_B_DIAGNOSTIC_AGREEMENT: 8/8
-TRACE_A_B_ATOMIZATION_BOUNDARY_MATCHES: 32/32
-SOURCE_FACT_INVENTION: 0
-ORDER_SENSITIVITY_ERRORS: 0
-RESULT: SPECIFICATION_RETRACE_REPRODUCIBILITY_PILOT_PASS_WITH_LIMITATIONS
-INDEPENDENT_EVALUATOR_VALIDATION: not established
+HARD_FAILURE
+!= GUARDRAIL_PRESSURE
+!= GUARDRAIL_EXCEEDED_RECOVERABLE
+!= PURPOSE_OR_VIEWPOINT_DISTORTED
 ```
 
-This fifth pilot supports procedural retraceability and order stability on a frozen constructed packet. It does **not** count as an independent external review because both retraces were performed in the same project session by the same assistant/model family.
+This means extra detail or a changed analytic viewpoint is not automatically discarded. The representation crosses the guardrail when the change is undeclared, the source purpose or priority is functionally displaced, DSD-added structure is attributed to the source, or source facts/intent are invented.
 
-## External / independently generated application / 외부·독립 생성 corpus 적용
+## Protocol v0.2 / 프로토콜 v0.2
+
+`SPEC-CH-006` authorizes prospective v0.2 use for new runs.
+
+Protocol v0.2 adds:
+
+- source-purpose / target-user / priority lock;
+- explicit DSD transformation-purpose and viewpoint-change declaration;
+- separate guardrail ledger;
+- optional `PRECEDENCE_OR_PRIORITY` for genuinely ordered sources;
+- separate hard-failure and guardrail verdicts.
+
+It does not rescore v0.1 evidence.
+
+## External application / 외부·독립 생성 corpus 적용
 
 ### SPEC-APP-001 — RFC 9112 §6.3 Message Body Length
 
-Precommit: [`../../real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length_precommit.md`](../../real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length_precommit.md)  
-Result: [`../../real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length.md`](../../real_world_cases/specification/SPEC-APP-001_RFC9112_message-body-length.md)
+Protocol: **v0.1**
 
 ```text
 CASE_ORIGIN: public_normative_standard
-SOURCE: RFC 9112 §6.3 core precedence algorithm
 PRECOMMIT_COMMIT: 9b91cecda9516fd7cd65c9eb181e80ab4fa45deb
 SOURCE_UNIT_COVERAGE: 13/13
 TRIGGER_OR_ACTOR_SCOPE_PRESERVATION: 13/13
 PRECEDENCE_PRESERVATION: 13/13
 BCP14_MUST_OBLIGATIONS_PRESERVED: 8/8
 INVENTED_SOURCE_FACTS: 0
-SILENTLY_DROPPED_SOURCE_ACTIONS: 0
 SOURCE_FIDELITY_RESULT: pass
 FINAL_SPEC_STATUS: no_gain
 COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
-PROTOCOL_PRESSURE: ordered precedence / priority, present_nonfatal
-INDEPENDENT_EVALUATOR_VALIDATION: not_established
 ```
 
-The first external corpus did **not** produce a forced DSD advantage. RFC 9112 §6.3 is already a compact, ordered, normative specification, so the correct comparative result under the precommitted gain criteria was `SPEC_NO_GAIN`, with the original RFC baseline preferred for this locked task.
+The first external corpus did not produce a forced DSD advantage. The baseline was already a compact ordered normative specification.
 
-The application also exposed a nonfatal Protocol v0.1 pressure point: ordered decision procedures can be represented using explicit predecessor exclusions in `ACTIVATION_CONDITION` / `DEPENDENCIES`, but a future optional precedence/priority field may be more ergonomic. The protocol was not changed retroactively for the same run.
+The following v0.2 guardrail axes were **not separately precommitted in SPEC-APP-001** and therefore remain untested as formal axes for that record:
+
+```text
+PURPOSE_FIDELITY_GUARDRAIL: untested_as_formal_axis
+DETAIL_PROPORTIONALITY_GUARDRAIL: untested_as_formal_axis
+VIEWPOINT_SEPARATION_GUARDRAIL: untested_as_formal_axis
+```
 
 ## Maturity meta-audit / 성숙도 메타감사
 
-The following DSD Audit record evaluates whether the accumulated Specification evidence justifies a method-status transition. It is **not** counted as a sixth direct Specification pilot.
-
-- Precommit: [`../../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit_precommit.md`](../../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit_precommit.md)
-- Result: [`../../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md`](../../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md)
+The first maturity audit remains a DSD Audit meta-record, not a seventh direct Specification pilot.
 
 ```text
+AUDIT_ID: DSD-AUDIT-20260907-METHODOLOGY-001
 MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
 AUDIT_VERDICT_ON_CURRENT_DEVELOPING_STATUS: CONFIRMED
 AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 METHOD_STATUS_DECISION: RETAIN_DEVELOPING
-PRINCIPAL_BLOCKER: insufficient external/cross-domain evidence breadth
-INDEPENDENT_EVALUATOR_VALIDATION: not_established
-MEASURED_ENGINEERING_BENEFIT: not_established
 ```
 
-The audit separates minimum checklist presence from established-status justification. The current record has enough support for `developing`, but one external subsection in one domain is not enough breadth to authorize `established`.
+A post-audit revision note records the newly recognized purpose/detail/viewpoint guardrail gap in v0.1. The original verdict is not erased or rescored.
 
-## Evidence sequence
-
-```text
-SPEC-CH-001  completed
-SPEC-CH-002  completed
-SPEC-CH-003  completed
-SPEC-CH-004  completed
-SPEC-CH-005  completed with independence limitation
-SPEC-APP-001 first external/independently generated corpus application — completed
-SPECIFICATION_MATURITY_AUDIT — completed; retain developing
-```
-
-## Promotion restraint / 승격 절제
+## Current evidence state / 현재 증거 상태
 
 ```text
-CURRENT_INTERNAL_DIRECT_PILOTS: five_completed
-INTERNAL_CONSTRUCTED_CHALLENGE_SEQUENCE: completed
-EXTERNAL_OR_INDEPENDENTLY_GENERATED_APPLICATION_CASES: 1
-EXTERNAL_APPLICATION_RESULT: SPEC_NO_GAIN
+V0_1_DIRECT_PILOTS: 5
+V0_2_GUARDRAIL_TRANSITION_PILOT: 1
+TOTAL_DIRECT_CONSTRUCTED_PILOTS: 6
+EXTERNAL_APPLICATIONS: 1
+V0_2_EXTERNAL_APPLICATIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 ESTABLISHED_EVIDENCE_BREADTH: insufficient
 CURRENT_METHOD_STATUS: developing
-ESTABLISHED_STATUS: not_justified_on_current_evidence
-NEXT_DIRECT_APPLICATION: SPEC-APP-002_less_structured_external_corpus
+CURRENT_PROTOCOL_FOR_NEW_RUNS: v0.2
+NEXT_DIRECT_APPLICATION: SPEC-APP-002_less_structured_external_corpus_under_v0.2
 ```
 
-Next evidence should broaden the external corpus rather than add more same-style toy cases: apply v0.1 to a less-structured independent requirement source, add a different external domain, and obtain genuinely independent retrace/review when feasible.
+`SPEC-APP-002` should be precommitted under v0.2 with source purpose, target user/action, priority, DSD transformation purpose, guardrail criteria, and strongest reasonable baseline locked before atomization.
