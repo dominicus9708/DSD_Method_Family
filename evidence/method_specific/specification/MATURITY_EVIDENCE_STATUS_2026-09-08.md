@@ -16,9 +16,13 @@ RESOLUTION_WITHHELD_NON_SOFTWARE_APPLICATIONS: 1
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 BLOCKED_UNSCORED_EXTERNAL_BLIND_PRECOMMITS: 1
 PRACTICAL_COMPARATIVE_BENCHMARKS_COMPLETED: 3
+INDEPENDENT_EVALUATOR_PACKETS_PREPARED: 2
+INDEPENDENT_EVALUATOR_PACKETS_READY_FOR_CONFIRMATORY_SCORING: 1
 ```
 
 ## Independent evaluator track
+
+### SPEC-IND-001 — historical prepared packet
 
 `SPEC-IND-001` is prepared but not completed.
 
@@ -31,8 +35,6 @@ INDEPENDENT_EVALUATOR_VALIDATION: not_established
 ```
 
 The project evaluator must not self-complete this packet and call it independent evidence.
-
-### SPEC-IND-001 readiness audit
 
 `DSD-AUDIT-20260908-METHODOLOGY-005` reviewed the packet as a **post-hoc internal readiness review** rather than as confirmatory evidence.
 
@@ -49,11 +51,45 @@ The packet's independence gates and hidden-answer hash commitment are sound. The
 
 Because the expected primary-class sequence has already been committed, adding such a precedence rule now would be a post-hoc scoring change. `SPEC-IND-001` is therefore preserved unchanged as a historical prepared packet, but its eventual exact-primary-class score should not be treated as decisive maturity evidence.
 
-The next actionable independent-evaluator artifact is a prospectively scored `SPEC-IND-002` packet using **axis-separated scoring**: each case locks one scored target axis before review, while other active diagnostics remain secondary and do not alter the target-axis score.
+### SPEC-IND-002 — axis-separated successor packet
+
+`SPEC-IND-002` has now been prospectively prepared as the successor independent-evaluator packet.
+
+```text
+PACKET_PRECOMMIT_AUDIT_COMMIT: c78f430a0883e44ed3119a8817aa30f2762ebd17
+INITIAL_PACKET_COMMIT: dd343dcf25a678f71bf8ff3f02935aaa1a096054
+PRE_REVIEW_VOCABULARY_CLEANUP_COMMIT: 43be7d28e78c4b42d8e6d51f3ee696bdbb0e2db1
+ANSWER_HASH_COMMIT: 83ddb2866df3ce742f713c6031ea653edc9170fc
+ANSWER_SHA256: 962c65d8ad27ca7e0af6aba201ceeb1a9fdbac80e525651942756a911dc455ff
+READINESS_AUDIT_COMMIT: 9afe0b763d23566db4451c483b7743cce38c03c0
+INDEPENDENT_EVALUATOR_SUBMISSION: absent
+INDEPENDENT_EVALUATOR_VALIDATION: not_established
+```
+
+The packet replaces the global forced `PRIMARY_CLASS` with exactly one scored target axis per case. Secondary diagnostics may still coexist, but they cannot change the target-axis score.
+
+```text
+SCORING_FORM: axis-separated
+TARGET_AXIS_PER_CASE: exactly_one
+GLOBAL_PRIMARY_CLASS: absent
+SECONDARY_DIAGNOSTIC_SCORE_OVERRIDE: prohibited
+EXPECTED_SEQUENCE_HASH_COMMITTED_BEFORE_REVIEW: yes
+```
+
+The readiness audit `DSD-AUDIT-20260908-METHODOLOGY-006` passed all 14 precommitted gates after one disclosed pre-review cleanup: the initial packet had included a non-protocol `NONE` sentinel in the hard-failure vocabulary, which was removed before any reviewer submission. The expected hash did not change.
+
+```text
+CRITICAL_GATES_PASSED: 14/14
+CRITICAL_RELEASE_BLOCKERS_FAILED: 0
+READINESS_VERDICT: READY_FOR_INDEPENDENT_SUBMISSION
+SPEC_IND_002_STATUS: AWAITING_INDEPENDENT_EVALUATOR
+```
+
+The next meaningful independent-evidence event is therefore **not another same-project self-retrace**. It is a genuinely separate reviewer submission frozen before answer comparison.
 
 ```text
 RECOMMENDED_NEXT_INDEPENDENT_PACKET: SPEC-IND-002
-SCORING_FORM: axis-separated
+NEXT_BLOCKER_RESOLUTION_EVENT: genuine independent evaluator submission
 PROTOCOL_V1_0_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
@@ -158,6 +194,8 @@ Current blockers remain:
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 POSITIVE_MEASURED_PRACTICAL_BENEFIT: not demonstrated
 ```
+
+The independent-evaluator blocker now has a release-ready packet, but it remains unresolved until a genuinely separate reviewer completes `SPEC-IND-002` and freezes the result before answer comparison.
 
 Three practical comparative benchmarks now exist, including one prospectively governed by `PRACTICAL_BENCHMARK_RULE_v0.1`. Additional same-project benchmarks have diminishing value unless they add genuinely new measurements such as human time, independent reviewers, or another receiving-method boundary.
 
