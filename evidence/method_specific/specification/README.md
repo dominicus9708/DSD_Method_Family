@@ -1,6 +1,6 @@
 # DSD Specification Method-Specific Evidence / DSD 명세론 개별 방법 직접 증거
 
-Status: **seven direct constructed pilots + three external applications + one method-family linkage pilot + internal Protocol v1.0 standardization completed / method evidence maturity remains developing**  
+Status: **eight direct constructed pilots + four completed external applications + one blocked external blind precommit + one method-family linkage pilot / internal Protocol v1.0 standardized / method evidence maturity remains developing**  
 Date: 2026-09-08  
 Method: **DSD Specification / DSD 명세론**
 
@@ -73,6 +73,32 @@ SOURCE_OPENNESS_STATUS
 != DOWNSTREAM_DETERMINACY_STATUS
 ```
 
+### SPEC-CH-008 — `dependentRequired` label-withheld implementation cross-check
+
+Precommit: [`SPEC-CH-008_dependentRequired-blind-crossvalidator_precommit.md`](SPEC-CH-008_dependentRequired-blind-crossvalidator_precommit.md)  
+Frozen predictions: [`SPEC-CH-008_dependentRequired-blind-crossvalidator_predictions.md`](SPEC-CH-008_dependentRequired-blind-crossvalidator_predictions.md)  
+Result: [`SPEC-CH-008_dependentRequired-blind-crossvalidator.md`](SPEC-CH-008_dependentRequired-blind-crossvalidator.md)
+
+```text
+PRECOMMIT_COMMIT: 92277445b73a72d7d4d9ff29f849d7068eb4244a
+PREDICTION_COMMIT: 7c5f32231d21b4b59251f4093a7116ab899bfb4e
+CROSS_VALIDATOR: Python jsonschema 4.26.0 / Draft202012Validator
+CROSS_VALIDATOR_MATCHES: 16/16
+UNRESOLVED_PREDICTIONS: 0
+FALSE_DEPENDENCY_ACTIVATION_ON_ABSENT_TRIGGER: 0
+MISSED_ACTIVE_DEPENDENCY: 0
+FALSE_BIDIRECTIONAL_INFERENCE: 0
+EMPTY_DEPENDENCY_LIST_ERROR: 0
+ROOT_NESTED_SCOPE_ERROR: 0
+FALSE_FAILURE_ON_NON_OBJECT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+IRRELEVANT_OPTIONAL_LEDGERS_ACTIVATED: 0
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_DEPENDENCY_LABEL_WITHHELD_CROSSVALIDATOR_PASS_WITH_LIMITATIONS
+```
+
+This is a constructed method-specific challenge with a post-freeze independent software implementation cross-check. It is **not** independent evaluator validation and is **not** external real-world application evidence.
+
 ## External applications / 외부·독립 생성 corpus 적용
 
 ### SPEC-APP-001 — RFC 9112 §6.3
@@ -103,38 +129,59 @@ COMPETITIVE_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
 RESULT: SPECIFICATION_EXTERNAL_GUARDRAIL_APPLICATION_PASS_WITH_MIXED_GAIN
 ```
 
-The Belmont case exposed the openness/underspecification pressure subsequently isolated by `SPEC-CH-007`. It remains a v0.2 record and is not rescored under later protocols.
-
 ### SPEC-APP-003 — OSHA Emergency Action Plan core corpus
 
 Protocol: **v0.2.1**  
-Precommit: [`../../real_world_cases/specification/SPEC-APP-003_OSHA_EAP_core_guidance_precommit.md`](../../real_world_cases/specification/SPEC-APP-003_OSHA_EAP_core_guidance_precommit.md)  
 Result: [`../../real_world_cases/specification/SPEC-APP-003_OSHA_EAP_core_guidance.md`](../../real_world_cases/specification/SPEC-APP-003_OSHA_EAP_core_guidance.md)
 
 ```text
-CASE_ORIGIN: public_regulatory_standard_plus_official_guidance
 EXTERNAL_DOMAIN: workplace emergency planning / occupational safety
 SOURCE_UNIT_COVERAGE: 18/18
 REGULATORY_MINIMUM_ELEMENTS_PRESERVED: 11/11
 SOURCE_INTENTIONAL_OPENNESS_HANDLED_WITHOUT_FABRICATION: 7/7
 DOWNSTREAM_DETERMINACY_STATUS: SUFFICIENT_AT_DECLARED_RESOLUTION
-INVENTED_SITE_SPECIFIC_FACTS: 0
-NORMATIVE_FORCE_STRENGTHENINGS: 0
-REGULATION_GUIDANCE_COLLAPSE: 0
 HARD_FAILURE_COUNT: 0
 FINAL_SPEC_STATUS: no_gain
 GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
 COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
-RESULT: SPECIFICATION_EXTERNAL_V0_2_1_NO_GAIN_WITH_GUARDRAIL_PRESSURE
 ```
 
-The unfavorable comparison is preserved: DSD Specification did not beat the strong OSHA regulation/eTool/checklist baseline for that locked standalone task.
+### SPEC-APP-004 — WCAG 2.2 Contrast (Minimum) labeled regression
+
+Protocol: **v1.0**  
+Result: [`../../real_world_cases/specification/SPEC-APP-004_WCAG22-contrast-v1.0.md`](../../real_world_cases/specification/SPEC-APP-004_WCAG22-contrast-v1.0.md)
+
+```text
+EXTERNAL_DOMAIN: web accessibility / WCAG text contrast
+EXAMPLE_OUTCOME_FAMILY_MATCHES: 8/8
+NORMAL_LARGE_THRESHOLD_SEPARATION: pass
+INCIDENTAL_INACTIVE_BOUNDARY_PRESERVATION: pass
+INACTIVE_CONDITIONAL_LEDGER_BOILERPLATE: 0
+FINAL_SPEC_STATUS: no_gain
+GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
+RESULT: SPECIFICATION_V1_0_EXTERNAL_LABELED_REGRESSION_NO_GAIN_WITH_LIMITATIONS
+```
+
+This is a labeled post-standardization regression/interface test, not blind predictive evidence.
+
+### SPEC-APP-005 — JSON Schema official test-suite blind run — blocked without scoring
+
+Precommit: [`../../real_world_cases/specification/SPEC-APP-005_JSON-Schema-dependentRequired_blind_precommit.md`](../../real_world_cases/specification/SPEC-APP-005_JSON-Schema-dependentRequired_blind_precommit.md)  
+Blocked record: [`../../real_world_cases/specification/SPEC-APP-005_JSON-Schema-dependentRequired_blind_blocked.md`](../../real_world_cases/specification/SPEC-APP-005_JSON-Schema-dependentRequired_blind_blocked.md)
+
+```text
+STATUS: BLOCKED_BY_LABEL_ISOLATION_TOOLING
+PREDICTIONS_COMMITTED: no
+OFFICIAL_LABELS_SCORED: no
+COUNT_AS_EXTERNAL_APPLICATION_COMPLETION: no
+COUNT_AS_BLIND_EVIDENCE: no
+```
+
+The embedded official `valid` labels could not be technically isolated from schema/data before source delivery in the current runtime. The precommit was therefore preserved rather than weakened after the fact.
 
 ## Method-family linkage evidence / 방법군 연계 증거
 
-`SPEC-LINK-001` is a linkage pilot, not an eighth direct Specification challenge and not direct Audit validation.
-
-Result: [`SPEC-LINK-001_specification-to-audit-handoff.md`](SPEC-LINK-001_specification-to-audit-handoff.md)
+`SPEC-LINK-001` is a linkage pilot, not a direct Specification challenge and not direct Audit validation.
 
 ```text
 RECEIVING_METHOD: DSD Audit
@@ -147,46 +194,26 @@ EXTERNAL_STANDARD_BOUNDARY_PRESERVED: yes
 RESULT: SPECIFICATION_TO_AUDIT_NATIVE_HANDOFF_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-This supports method-family handoff utility separately from standalone domain-task gain.
-
 ## Protocol stability and standardization audits / 프로토콜 안정성·표준화 감사
 
 These are DSD Audit methodology records and are not counted as additional direct Specification pilots.
 
-### v0.2.1 minimality/stability audit
-
 ```text
-AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-003
-PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
-STRUCTURAL_CONFLICT_COUNT: 0
-BREAKING_SEMANTIC_REVISION_REQUIRED: no
-STRUCTURAL_REDESIGN_REQUIRED: no
+DSD-AUDIT-20260908-METHODOLOGY-003
+  PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
+
+DSD-AUDIT-20260908-METHODOLOGY-004
+  CRITICAL_GATES_PASSED: 14/14
+  STANDARDIZATION_VERDICT: STANDARDIZE_WITH_DOCUMENTED_LIMITS
+  DEFAULT_DSD_INTERNAL_PROTOCOL: DSD Specification Protocol v1.0
 ```
-
-### v1.0 final standardization audit
-
-```text
-AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-004
-CRITICAL_GATES_PASSED: 14/14
-CRITICAL_FAILURES: 0
-BREAKING_SEMANTIC_LOSS: 0
-REGRESSION_FAMILIES_WITH_REQUIRED_CARRIER_LOSS: 0/11
-NEW_UNPRECOMMITTED_SEMANTIC_OBLIGATION: 0
-STANDARDIZATION_VERDICT: STANDARDIZE_WITH_DOCUMENTED_LIMITS
-DEFAULT_DSD_INTERNAL_PROTOCOL: DSD Specification Protocol v1.0
-METHOD_EVIDENCE_STATUS: developing
-METHOD_MATURITY_PROMOTION: no
-```
-
-Protocol standardization and evidence maturity remain separate axes.
 
 ## Maturity meta-audit / 성숙도 메타감사
 
-The first maturity audit remains historical rather than being silently replaced:
+The first maturity audit remains historical:
 
 ```text
 AUDIT_ID: DSD-AUDIT-20260907-METHODOLOGY-001
-AUDIT_VERDICT_ON_CURRENT_DEVELOPING_STATUS: CONFIRMED
 AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 METHOD_STATUS_DECISION: RETAIN_DEVELOPING
 ```
@@ -199,19 +226,22 @@ Later work establishes internal v1.0 interface stability but does not itself est
 V0_1_DIRECT_PILOTS: 5
 V0_2_GUARDRAIL_TRANSITION_PILOT: 1
 V0_2_1_OPENNESS_TRANSITION_PILOT: 1
-TOTAL_DIRECT_CONSTRUCTED_PILOTS: 7
+V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
+TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
 
-EXTERNAL_APPLICATIONS_TOTAL: 3
-EXTERNAL_DOMAINS_TOTAL: 3
+EXTERNAL_APPLICATIONS_COMPLETED: 4
+EXTERNAL_DOMAINS_COMPLETED: 4
+EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 
 CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 INTERNAL_PROTOCOL_STATUS: standardized
-LATEST_EXTERNAL_RESULT: SPEC_NO_GAIN_WITH_GUARDRAIL_PRESSURE
+LATEST_COMPLETED_DIRECT_RESULT: SPECIFICATION_V1_0_DEPENDENCY_LABEL_WITHHELD_CROSSVALIDATOR_PASS_WITH_LIMITATIONS
+LATEST_COMPLETED_EXTERNAL_RESULT: SPECIFICATION_V1_0_EXTERNAL_LABELED_REGRESSION_NO_GAIN_WITH_LIMITATIONS
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
 CURRENT_METHOD_EVIDENCE_STATUS: developing
 ```
 
-Further evidence should prioritize genuinely independent retrace, measured practical benefit where feasible, or a second receiving-method linkage only when it resolves a concrete interoperability question. Additional same-project corpora should not be treated as independent evaluator replication.
+Further evidence should prioritize a genuinely evaluator-separated external case, independent retrace, measured practical benefit where feasible, or a concrete second receiving-method linkage. Blocked/unscored attempts remain visible and do not count as completed evidence.
