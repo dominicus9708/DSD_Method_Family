@@ -86,6 +86,14 @@ For every standard-theory target, audit the following layers separately where ap
 
 Do not force every target through layers that are not mathematically meaningful for that target.
 
+Scoped negative-looking outcomes are reported under:
+
+```text
+methodology/AUDIT_OUTCOME_SEMANTICS.md
+```
+
+so `FAIL` is not used for a valid in-domain object that is merely insufficient for an extension, non-identical to another object, or lossy for a stronger reconstruction target.
+
 ---
 
 ## Quantum-mechanics worklist
@@ -154,10 +162,16 @@ Detailed audits remain pending even where first-pass placement is checked.
                local query family while remaining insufficient for global reconstruction
                or entanglement classification; completeness is target/query-relative.
 
-3. NEXT
+3. DONE 2026-09-08 / PHY-REL-005
    Relativity — chart/frame representation vs causal accessibility
+   result: PASS_WITH_REFINEMENT
+   refinement: invertible representation change, causal eligibility, operational access,
+               and global reconstruction are distinct roles; a causally restricted record
+               can be valid in-domain while non-injective for a global-reconstruction target.
 
-4. Relativity — Cauchy data / domain of dependence / reconstruction
+4. NEXT
+   Relativity — Cauchy data / domain of dependence / reconstruction
+
 5. Standard-domain relation layer — symmetry, curvature, Einstein equation, conservation
 ```
 
@@ -166,13 +180,15 @@ Detailed audit records:
 ```text
 audits/science/2026-09-08_phy-qm-050-configuration-state-povm-instrument-audit.md
 audits/science/2026-09-08_phy-qm-051-configuration-state-composite-access-audit.md
+audits/science/2026-09-08_phy-rel-005-configuration-state-frame-causal-access-audit.md
 ```
 
-Prior finite computations are reused rather than duplicated:
+Reproducibility records:
 
 ```text
 audits/science/2026-09-06_sequential_quantum_instrument_dsd_order.py
 audits/science/2026-09-06_werner_dsd_entanglement_chsh.py
+audits/science/2026-09-08_rel_chart_frame_causal_access.py
 ```
 
 ---
