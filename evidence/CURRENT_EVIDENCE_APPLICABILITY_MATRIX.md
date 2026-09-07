@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + eight Specification direct constructed pilots + four completed external Specification applications + one blocked unscored external blind precommit + one method-family linkage pilot + internal v1.0 standardization completed  
+Status: current migration map + eight Specification direct constructed pilots + five completed external Specification applications + one blocked unscored external blind precommit + one method-family linkage pilot + internal v1.0 standardization completed  
 Date: 2026-09-08
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
@@ -12,6 +12,7 @@ This file classifies existing method evidence without retroactively turning one 
 - **Direct pilot** = method-specific challenge under its own locked protocol/profile.
 - **External application** = application to material authored independently of DSD; external origin does not imply independent evaluator.
 - **Blocked/unscored precommit** = planned evidence whose locked test condition could not be satisfied; it remains visible but is not counted as completed evidence.
+- **Resolution-artifact-withheld external application** = a real-world source is used to freeze an acceptance prediction before comments/patches/closing resolution are exposed; stronger than a labeled regression, but not equivalent to independent-evaluator or full-blind validation.
 - **Method-family linkage pilot** = tests one locked inter-method handoff boundary only.
 - **Protocol standardization audit** = tests internal interface stability/default-use readiness, not external maturity.
 - **Maturity meta-audit** = evaluates whether accumulated evidence justifies a method-status transition.
@@ -38,9 +39,11 @@ V0_2_1_OPENNESS_TRANSITION_PILOT: 1
 V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
 TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
 
-EXTERNAL_APPLICATIONS_COMPLETED: 4
-EXTERNAL_DOMAINS_COMPLETED: 4
+EXTERNAL_APPLICATIONS_COMPLETED: 5
+EXTERNAL_DOMAINS_COMPLETED: 5
 EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
+RESOLUTION_WITHHELD_REAL_WORLD_APPLICATIONS: 1
+V1_0_EXTERNAL_APPLICATIONS_COMPLETED: 2
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 ```
 
@@ -120,9 +123,22 @@ SPEC-APP-004 — WCAG 2.2 SC 1.4.3 + official ACT examples
   official example family matches: 8/8
   inactive conditional ledger boilerplate: 0
   result: SPECIFICATION_V1_0_EXTERNAL_LABELED_REGRESSION_NO_GAIN_WITH_LIMITATIONS
+
+SPEC-APP-006 — python-jsonschema ErrorTree issue #1328
+  protocol: v1.0
+  external domain: Python library API behavior / error-structure semantics
+  resolution artifacts withheld until after prediction: yes
+  actual closing commit: 7fa1acc948b34ab6283b3621ecbdc4360a717ba7
+  primary axes matched: 5/5
+  implementation overprediction: 0
+  post-reveal prediction change: 0
+  final status: usable
+  result: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_LIMITATIONS
 ```
 
 `SPEC-APP-004` is a labeled regression/interface check because expected ACT labels were visible before DSD mapping. It is not blind prediction evidence.
+
+`SPEC-APP-006` is the first completed real-world case where the actual maintainer resolution was naturally separated and withheld until after the DSD acceptance contract was frozen. It supports case-level resolution alignment but does not establish independent evaluator validation, full blindness, or measured engineering benefit.
 
 ### Blocked external blind attempt — SPEC-APP-005
 
@@ -202,9 +218,10 @@ INTERNALLY_STANDARDIZED_BUT_EVIDENCE_DEVELOPING:
     direct_constructed_pilots: 8
     current_protocol_for_new_runs: v1.0
     internal_protocol_status: standardized
-    completed_external_applications: 4
-    completed_external_domains: 4
+    completed_external_applications: 5
+    completed_external_domains: 5
     blocked_unscored_external_blind_precommits: 1
+    resolution_withheld_real_world_applications: 1
     method_family_linkage_pilots: 1
     independent_evaluator_validation: not_established
     measured_practical_benefit: not_established
