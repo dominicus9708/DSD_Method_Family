@@ -12,7 +12,7 @@ PRIMARY_EXTERNAL_BASE:
   standard relativity
 NONPRIMARY_QUANTUM_GRAVITY_PREMISES: not used
 CORE_PAPER_REVISION: not required by this stage
-REPRODUIBILITY:
+REPRODUCIBILITY:
   audits/science/2026-09-07_describability_regime_partition_dynamics.py
 ```
 
