@@ -14,16 +14,6 @@ A judicial case may be a method-specific Audit case. A public standard, ethics g
 
 ```text
 CASE_ORIGIN:
-  real_event
-  judicial_case
-  historical_case
-  personal_case
-  empirical_dataset
-  organizational_or_technical_incident
-  public_normative_standard
-  public_normative_ethics_guideline
-  public_regulatory_standard_plus_official_guidance
-
 SOURCE_STATUS:
 PRIMARY_OR_AUTHORITATIVE_SOURCE:
 SECONDARY_SOURCES:
@@ -46,23 +36,17 @@ Origin labels are not validation verdicts. An independently authored source can 
 ## Source discipline / 출처 규율
 
 - Case facts are locked separately from DSD interpretation.
-- A real event should prefer official, primary, or otherwise authoritative records where available.
-- A judicial case should distinguish the judgment/decision text, procedural posture, legal issue, later treatment, and commentary.
-- A historical case should distinguish primary sources, later compilations, scholarship, and uncertain reconstruction.
-- A personal case should minimize identifying or sensitive information and document consent/permission where relevant.
-- A public normative standard should lock authoritative version/status, relevant updates/errata, normative-force notation, and exact section scope before DSD scoring.
-- An ethics/policy guideline should lock purpose, intended actors, normative generality, and acknowledged judgment space.
-- A regulation-plus-guidance corpus should distinguish binding regulatory text, incorporated requirements, official explanation, examples, recommendations, and worksite/domain-specific implementation values.
-- Conflicting or differently weighted sources are preserved rather than silently merged into one narrative.
+- Prefer official, primary, or otherwise authoritative records where available.
+- Judicial, historical, personal, normative, ethical, and regulatory corpora keep their domain-specific source hierarchy and uncertainty boundaries.
+- Public standards lock authoritative version/status and exact section scope before DSD scoring.
+- Conflicting or differently weighted sources are preserved rather than silently merged.
+- A blocked or contaminated precommit remains visible and is not counted as a completed application.
 
 ## Current external application records / 현재 외부 적용 기록
 
 ### DSD Specification
 
 #### SPEC-APP-001 — RFC 9112 §6.3
-
-- [`specification/SPEC-APP-001_RFC9112_message-body-length_precommit.md`](specification/SPEC-APP-001_RFC9112_message-body-length_precommit.md)
-- [`specification/SPEC-APP-001_RFC9112_message-body-length.md`](specification/SPEC-APP-001_RFC9112_message-body-length.md)
 
 ```text
 PROTOCOL: v0.1
@@ -76,9 +60,6 @@ COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 
 #### SPEC-APP-002 — Belmont Report Part C. Applications
 
-- [`specification/SPEC-APP-002_Belmont-Part-C_precommit.md`](specification/SPEC-APP-002_Belmont-Part-C_precommit.md)
-- [`specification/SPEC-APP-002_Belmont-Part-C.md`](specification/SPEC-APP-002_Belmont-Part-C.md)
-
 ```text
 PROTOCOL: v0.2
 CASE_ORIGIN: public_normative_ethics_guideline
@@ -86,7 +67,6 @@ EXTERNAL_DOMAIN: human-subject research ethics
 SOURCE_UNIT_COVERAGE: 22/22
 LOCAL_PRIORITY_PRESERVATION: 5/5
 UNRESOLVED_JUDGMENT_BOUNDARIES_PRESERVED: 4/4
-HARD_FAILURE_COUNT: 0
 FINAL_SPEC_STATUS: usable
 GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
 COMPETITIVE_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
@@ -96,55 +76,56 @@ The original Belmont prose remains preferred for primary ethical reasoning; DSD 
 
 #### SPEC-APP-003 — OSHA Emergency Action Plan core corpus
 
-- [`specification/SPEC-APP-003_OSHA_EAP_core_guidance_precommit.md`](specification/SPEC-APP-003_OSHA_EAP_core_guidance_precommit.md)
-- [`specification/SPEC-APP-003_OSHA_EAP_core_guidance.md`](specification/SPEC-APP-003_OSHA_EAP_core_guidance.md)
-
 ```text
 PROTOCOL: v0.2.1
 CASE_ORIGIN: public_regulatory_standard_plus_official_guidance
 EXTERNAL_DOMAIN: workplace emergency planning / occupational safety
-SOURCE: 29 CFR 1910.38 + OSHA EAP/alarm eTool and checklist material
 SOURCE_UNIT_COVERAGE: 18/18
 REGULATORY_MINIMUM_ELEMENTS_PRESERVED: 11/11
 SITE_SPECIFIC_OPENNESS_HANDLED_WITHOUT_FABRICATION: 7/7
-DOWNSTREAM_DETERMINACY_STATUS: SUFFICIENT_AT_DECLARED_RESOLUTION
-INVENTED_SITE_SPECIFIC_FACTS: 0
-NORMATIVE_FORCE_STRENGTHENINGS: 0
-REGULATION_GUIDANCE_COLLAPSE: 0
-HARD_FAILURE_COUNT: 0
 FINAL_SPEC_STATUS: no_gain
 GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
 COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
 ```
 
-This first external v0.2.1 run demonstrates that the method can preserve required categories while leaving source-supported site-specific implementation open, without treating missing workplace facts as a defect in the regulation or fabricating them. It does not establish a practical advantage over OSHA's own strong cross-referenced regulation/eTool/checklist baseline.
-
 #### SPEC-APP-004 — WCAG 2.2 Contrast (Minimum) + official ACT labeled examples
-
-- [`specification/SPEC-APP-004_WCAG22-contrast-v1.0_precommit.md`](specification/SPEC-APP-004_WCAG22-contrast-v1.0_precommit.md)
-- [`specification/SPEC-APP-004_WCAG22-contrast-v1.0.md`](specification/SPEC-APP-004_WCAG22-contrast-v1.0.md)
 
 ```text
 PROTOCOL: v1.0
 CASE_ORIGIN: public_normative_standard_plus_official_labeled_examples
 EXTERNAL_DOMAIN: web accessibility / text contrast
-SOURCE: WCAG 2.2 SC 1.4.3 + W3C/WAI ACT Text has minimum contrast
 SELECTED_OFFICIAL_EXAMPLES: 8
 EXAMPLE_OUTCOME_FAMILY_MATCHES: 8/8
 NORMAL_LARGE_THRESHOLD_SEPARATION: pass
 INCIDENTAL_INACTIVE_BOUNDARY_PRESERVATION: pass
-SOURCE_FACT_INVENTIONS: 0
-NORMATIVE_FORCE_STRENGTHENINGS: 0
 INACTIVE_CONDITIONAL_LEDGER_BOILERPLATE: 0
 FINAL_SPEC_STATUS: no_gain
 GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
 RESULT: SPECIFICATION_V1_0_EXTERNAL_LABELED_REGRESSION_NO_GAIN_WITH_LIMITATIONS
 ```
 
-This is the first post-standardization v1.0 external application. It is deliberately classified as a **labeled regression/interface test**, not a blind predictive validation, because the official W3C ACT outcome labels were visible before DSD mapping. The case directly checks that v1.0 preserves normal/large-text thresholds and incidental applicability boundaries while leaving irrelevant conditional ledgers inactive.
+This is a post-standardization labeled regression/interface test, not blind predictive evidence.
+
+#### SPEC-APP-005 — JSON Schema Draft 2020-12 `dependentRequired` blind attempt — blocked
+
+- Precommit: [`specification/SPEC-APP-005_JSON-Schema-dependentRequired_blind_precommit.md`](specification/SPEC-APP-005_JSON-Schema-dependentRequired_blind_precommit.md)
+- Block record: [`specification/SPEC-APP-005_JSON-Schema-dependentRequired_blind_blocked.md`](specification/SPEC-APP-005_JSON-Schema-dependentRequired_blind_blocked.md)
+
+```text
+PINNED_CORPUS: JSON-Schema-Test-Suite commit f6fd52a0a95472e079cbfc6ef7f089702b80e045
+STATUS: BLOCKED_BY_LABEL_ISOLATION_TOOLING
+PREDICTIONS_COMMITTED: no
+OFFICIAL_LABELS_SCORED: no
+COUNT_AS_EXTERNAL_APPLICATION_COMPLETION: no
+COUNT_AS_BLIND_EVIDENCE: no
+```
+
+The official file embeds expected `valid` labels with schema/data. The current source-delivery path could not supply a redacted packet without first exposing those labels to the predicting evaluator. The test was therefore stopped rather than weakening the precommitted blind rule.
+
+The separately completed `SPEC-CH-008` uses constructed cases and a post-freeze `jsonschema` implementation comparison; it is method-specific constructed evidence and does not complete this external application.
 
 ## Validation limit / 검증 한계
 
 A real-world or external-source case is application evidence first. It contributes to method validation only when protocol, scoring/failure criteria, external standard, source-purpose boundary, and relevant baseline were locked well enough to make the case a genuine test rather than an illustration.
 
-An external origin and an independent evaluator are different axes. The current Specification external corpus spans **four domains / four applications**, but all DSD scoring remains within the same project/model environment. `SPEC-APP-004` is additionally non-blind with respect to the official example outcome labels. Independent reviewer validation therefore remains unresolved.
+An external origin and an independent evaluator are different axes. The current Specification corpus has **four completed external applications across four completed domains**, plus one blocked/unscored external blind precommit. All completed DSD scoring remains within the same project/model environment. Independent reviewer validation therefore remains unresolved.
