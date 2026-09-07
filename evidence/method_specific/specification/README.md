@@ -1,7 +1,7 @@
 # DSD Specification Method-Specific Evidence / DSD 명세론 개별 방법 직접 증거
 
-Status: **five direct pilot records + first external application completed / maturity audit pending**  
-Date: 2026-09-06  
+Status: **five direct pilot records + first external application completed / maturity audit completed / developing retained**  
+Date: 2026-09-07  
 Method: **DSD Specification / DSD 명세론**  
 Protocol: [`../../../methods/03_specification/PROTOCOL.md`](../../../methods/03_specification/PROTOCOL.md)
 
@@ -143,6 +143,25 @@ The first external corpus did **not** produce a forced DSD advantage. RFC 9112 �
 
 The application also exposed a nonfatal Protocol v0.1 pressure point: ordered decision procedures can be represented using explicit predecessor exclusions in `ACTIVATION_CONDITION` / `DEPENDENCIES`, but a future optional precedence/priority field may be more ergonomic. The protocol was not changed retroactively for the same run.
 
+## Maturity meta-audit / 성숙도 메타감사
+
+The following DSD Audit record evaluates whether the accumulated Specification evidence justifies a method-status transition. It is **not** counted as a sixth direct Specification pilot.
+
+- Precommit: [`../../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit_precommit.md`](../../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit_precommit.md)
+- Result: [`../../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md`](../../../DSD_Audit/audits/methodology/2026-09-07_dsd-specification-maturity-audit.md)
+
+```text
+MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
+AUDIT_VERDICT_ON_CURRENT_DEVELOPING_STATUS: CONFIRMED
+AUDIT_VERDICT_ON_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
+METHOD_STATUS_DECISION: RETAIN_DEVELOPING
+PRINCIPAL_BLOCKER: insufficient external/cross-domain evidence breadth
+INDEPENDENT_EVALUATOR_VALIDATION: not_established
+MEASURED_ENGINEERING_BENEFIT: not_established
+```
+
+The audit separates minimum checklist presence from established-status justification. The current record has enough support for `developing`, but one external subsection in one domain is not enough breadth to authorize `established`.
+
 ## Evidence sequence
 
 ```text
@@ -152,21 +171,21 @@ SPEC-CH-003  completed
 SPEC-CH-004  completed
 SPEC-CH-005  completed with independence limitation
 SPEC-APP-001 first external/independently generated corpus application — completed
+SPECIFICATION_MATURITY_AUDIT — completed; retain developing
 ```
-
-The initial internal constructed challenge sequence and the external-origin application requirement are both now present.
 
 ## Promotion restraint / 승격 절제
 
 ```text
 CURRENT_INTERNAL_DIRECT_PILOTS: five_completed
 INTERNAL_CONSTRUCTED_CHALLENGE_SEQUENCE: completed
-EXTERNAL_OR_INDEPENDENTLY_GENERATED_APPLICATION_CASE: completed
+EXTERNAL_OR_INDEPENDENTLY_GENERATED_APPLICATION_CASES: 1
 EXTERNAL_APPLICATION_RESULT: SPEC_NO_GAIN
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
+ESTABLISHED_EVIDENCE_BREADTH: insufficient
 CURRENT_METHOD_STATUS: developing
-MATURE_METHOD_STATUS: not_claimed
-NEXT_STEP: specification_maturity_audit
+ESTABLISHED_STATUS: not_justified_on_current_evidence
+NEXT_DIRECT_APPLICATION: SPEC-APP-002_less_structured_external_corpus
 ```
 
-Do not promote Specification automatically from checklist completion alone. The next step is a dedicated maturity audit that evaluates evidence breadth, external-origin evidence, independent-evaluator gap, baseline-preferred result, Protocol v0.1 pressure, and remaining real-world validation limits.
+Next evidence should broaden the external corpus rather than add more same-style toy cases: apply v0.1 to a less-structured independent requirement source, add a different external domain, and obtain genuinely independent retrace/review when feasible.
