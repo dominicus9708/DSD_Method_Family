@@ -96,6 +96,23 @@ METHOD_MATURITY_PROMOTION: no
 
 This audit authorizes **internal protocol standardization only**. The documented limits concern independent evaluator validation, measured practical benefit, and cross-method breadth; they are not converted into hidden maturity claims.
 
+### SPEC-IND-001 independent evaluator packet readiness audit — 2026-09-08
+
+- Result: [`methodology/2026-09-08_spec-ind-001-independent-packet-readiness-audit.md`](methodology/2026-09-08_spec-ind-001-independent-packet-readiness-audit.md)
+
+```text
+AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-005
+INDEPENDENCE_REQUIREMENT_DISCIPLINE: PASS
+ANSWER_COMMITMENT_DISCIPLINE: PASS
+PRIMARY_CLASS_EXCLUSIVITY: FAIL
+PREDECLARED_CLASS_PRECEDENCE: ABSENT
+DECISIVE_INDEPENDENT_SCORING_READINESS: NOT_READY
+PROTOCOL_V1_0_REVISION_REQUIRED: no
+RECOMMENDED_NEXT_ARTIFACT: SPEC-IND-002 axis-separated independent retrace packet
+```
+
+The audit preserves `SPEC-IND-001` as a historical prepared packet. Its independence controls and hash commitment are sound, but the forced single-primary-class score can collapse multiple simultaneously valid v1.0 diagnostics without a prospectively locked precedence rule. The result therefore recommends a new axis-separated successor packet rather than repairing the committed packet in place.
+
 ## Starting a new audit / 새 감사 시작
 
 1. Copy `../templates/AUDIT_CASE_TEMPLATE.md`.
