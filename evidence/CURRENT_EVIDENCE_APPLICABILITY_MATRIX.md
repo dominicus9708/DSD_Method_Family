@@ -1,6 +1,6 @@
 # Current Evidence Applicability Matrix / 현재 증거 적용성 행렬
 
-Status: current migration map + seven Specification direct constructed pilots + three external Specification applications + one method-family linkage pilot + internal v1.0 standardization completed  
+Status: current migration map + eight Specification direct constructed pilots + four completed external Specification applications + one blocked unscored external blind precommit + one method-family linkage pilot + internal v1.0 standardization completed  
 Date: 2026-09-08
 
 This file classifies existing method evidence without retroactively turning one method's results into validation of all 22 DSD methods.
@@ -8,14 +8,13 @@ This file classifies existing method evidence without retroactively turning one 
 ## Interpretation key / 해석 키
 
 - **Direct** = the record directly tested the named method.
-- **Shared support** = the record supports a reusable method-family discipline, but does not directly validate another method.
-- **Conditional transfer** = the shared rule applies only when the receiving method exposes the relevant structure or claim type.
-- **Protocol prepared** = a dedicated method protocol exists, but protocol existence alone is not direct validation.
-- **Direct pilot** = a method-specific challenge directly tested the method under its own protocol or locked prospective profile, but established status is not thereby implied.
-- **External application** = the method is applied under locked criteria to material authored independently of DSD; this origin class does not imply an independent evaluator.
-- **Method-family linkage pilot** = tests whether one method's typed output can be consumed by another DSD method at a locked interface; it does not directly validate the receiving method or all inter-method boundaries.
-- **Protocol standardization audit** = tests internal interface stability/default-use readiness; it does not imply evidence maturity or external superiority.
-- **Maturity meta-audit** = DSD Audit evaluates whether accumulated evidence justifies a method-status transition; it is not another direct pilot of the audited method.
+- **Shared support** = reusable method-family discipline, not direct validation of another method.
+- **Direct pilot** = method-specific challenge under its own locked protocol/profile.
+- **External application** = application to material authored independently of DSD; external origin does not imply independent evaluator.
+- **Blocked/unscored precommit** = planned evidence whose locked test condition could not be satisfied; it remains visible but is not counted as completed evidence.
+- **Method-family linkage pilot** = tests one locked inter-method handoff boundary only.
+- **Protocol standardization audit** = tests internal interface stability/default-use readiness, not external maturity.
+- **Maturity meta-audit** = evaluates whether accumulated evidence justifies a method-status transition.
 
 ## Analysis corpus / 분석론 기록
 
@@ -27,22 +26,6 @@ Existing `DSD_Audit/` and new audit records remain direct evidence for **DSD Aud
 
 ## DSD Specification / DSD 명세론
 
-Protocol versions:
-
-```text
-v0.1 historical:
-  methods/03_specification/PROTOCOL.md
-
-v0.2 historical:
-  methods/03_specification/PROTOCOL_v0.2.md
-
-v0.2.1 historical/evidence basis:
-  methods/03_specification/PROTOCOL_v0.2.1.md
-
-v1.0 standard/default for new DSD-internal runs:
-  methods/03_specification/PROTOCOL_v1.0.md
-```
-
 ```text
 METHOD: DSD Specification
 METHOD_EVIDENCE_STATUS: developing
@@ -52,112 +35,109 @@ CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 V0_1_DIRECT_PILOTS: 5
 V0_2_GUARDRAIL_TRANSITION_PILOT: 1
 V0_2_1_OPENNESS_TRANSITION_PILOT: 1
-TOTAL_DIRECT_CONSTRUCTED_PILOTS: 7
-EXTERNAL_APPLICATIONS_TOTAL: 3
-EXTERNAL_DOMAINS_TOTAL: 3
+V1_0_CONSTRUCTED_CROSSVALIDATOR_PILOT: 1
+TOTAL_DIRECT_CONSTRUCTED_PILOTS: 8
+
+EXTERNAL_APPLICATIONS_COMPLETED: 4
+EXTERNAL_DOMAINS_COMPLETED: 4
+EXTERNAL_BLIND_PRECOMMITS_BLOCKED_UNSCORED: 1
 METHOD_FAMILY_LINKAGE_PILOTS: 1
 ```
 
-### v0.1 direct evidence
+### Stable v1.0 distinctions
 
 ```text
-SPEC_CH_001_RESULT: SPECIFICATION_DISCRIMINATION_PILOT_PASS_WITH_LIMITATIONS
-SPEC_CH_002_RESULT: SPECIFICATION_CONTRADICTION_UNDERSPECIFICATION_PILOT_PASS_WITH_LIMITATIONS
-SPEC_CH_003_RESULT: SPECIFICATION_OPTIONAL_LAYER_BRIDGE_BOUNDARY_PILOT_PASS_WITH_LIMITATIONS
-SPEC_CH_004_RESULT: SPECIFICATION_NO_GAIN_PILOT_PASS_WITH_LIMITATIONS
-SPEC_CH_005_RESULT: SPECIFICATION_RETRACE_REPRODUCIBILITY_PILOT_PASS_WITH_LIMITATIONS
-SPEC_CH_005_INDEPENDENT_EVALUATOR_VALIDATION: not_established
-```
+G1 SOURCE_FIDELITY
+G2 PURPOSE_AND_PRIORITY_FIDELITY
+G3 DETAIL_PROPORTIONALITY
+G4 VIEWPOINT_SEPARATION
 
-### SPEC-CH-006 guardrail centerline evidence
-
-```text
-SPEC_CH_006_PRECOMMIT: fe009d8da9ab992e6885d07e14ff26355b776a86
-SPEC_CH_006_EXACT_GUARDRAIL_FAMILY_MATCHES: 8/8
-SPEC_CH_006_FALSE_HARD_FAILURE_ON_PRESSURE_CASES: 0
-SPEC_CH_006_FALSE_REJECTION_OF_DECLARED_DERIVATIVE_VIEW: 0
-SPEC_CH_006_RESULT: SPECIFICATION_GUARDRAIL_CENTERLINE_PILOT_PASS_WITH_LIMITATIONS
-```
-
-### SPEC-CH-007 openness / determinacy axis separation
-
-```text
-SPEC_CH_007_PRECOMMIT: 1b3665696007b29535b3f46815cad39f4f02c03f
-SPEC_CH_007_EXACT_SOURCE_OPENNESS_AXIS_MATCHES: 8/8
-SPEC_CH_007_EXACT_DOWNSTREAM_DETERMINACY_AXIS_MATCHES: 8/8
-SPEC_CH_007_EXACT_JOINT_AXIS_MATCHES: 8/8
-SPEC_CH_007_FALSE_UNDERSPEC_ON_TASK_SUFFICIENT_OPENNESS: 0
-SPEC_CH_007_FALSE_OPENNESS_EXCUSE_FOR_MISSING_DATA: 0
-SPEC_CH_007_FALSE_DETERMINACY_FROM_INVENTED_VALUE: 0
-SPEC_CH_007_RESULT: SPECIFICATION_OPENNESS_DETERMINACY_AXIS_SEPARATION_PILOT_PASS_WITH_LIMITATIONS
-```
-
-Accepted stable distinction:
-
-```text
 SOURCE_OPENNESS_STATUS
 != DOWNSTREAM_DETERMINACY_STATUS
+
+HARD_FAILURE
+!= GUARDRAIL_PRESSURE
 ```
 
-`SPEC_UNDERSPECIFIED` remains task-relative.
+### Direct pilots SPEC-CH-001~007
 
-### External application — SPEC-APP-001
-
-Protocol: v0.1.
+Historical direct results remain under the protocol version in which they were produced:
 
 ```text
-CASE_ORIGIN: public_normative_standard
-SOURCE: RFC 9112 §6.3
-EXTERNAL_DOMAIN: HTTP message framing
-SOURCE_UNIT_COVERAGE: 13/13
-PRECEDENCE_PRESERVATION: 13/13
-SOURCE_FIDELITY_RESULT: pass
-FINAL_SPEC_STATUS: no_gain
-COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
+SPEC-CH-001 discrimination
+SPEC-CH-002 contradiction / underspecification
+SPEC-CH-003 optional-layer / bridge boundary
+SPEC-CH-004 NO_GAIN
+SPEC-CH-005 procedural retrace / order stability
+SPEC-CH-006 guardrail centerline
+SPEC-CH-007 source openness / downstream determinacy
 ```
 
-### External application — SPEC-APP-002
+None is silently rescored under v1.0.
 
-Protocol: v0.2.
+### SPEC-CH-008 — v1.0 dependency label-withheld cross-validator
 
 ```text
-CASE_ORIGIN: public_normative_ethics_guideline
-SOURCE: Belmont Report Part C. Applications
-EXTERNAL_DOMAIN: human-subject research ethics
-SOURCE_UNIT_COVERAGE: 22/22
-LOCAL_PRIORITY_PRESERVATION: 5/5
-UNRESOLVED_JUDGMENT_BOUNDARIES_PRESERVED: 4/4
-HARD_FAILURE_COUNT: 0
-FINAL_SPEC_STATUS: usable
-GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
-COMPETITIVE_RESULT: MIXED_GAIN_WITH_GUARDRAIL_PRESSURE
-RESULT: SPECIFICATION_EXTERNAL_GUARDRAIL_APPLICATION_PASS_WITH_MIXED_GAIN
+CASE_ORIGIN: constructed_method_specific_challenge
+NORMATIVE_BASIS: JSON Schema Draft 2020-12 Validation §6.5.4
+PRECOMMIT: 92277445b73a72d7d4d9ff29f849d7068eb4244a
+PREDICTION_COMMIT: 7c5f32231d21b4b59251f4093a7116ab899bfb4e
+CROSS_VALIDATOR: Python jsonschema 4.26.0 / Draft202012Validator
+CROSS_VALIDATOR_MATCHES: 16/16
+UNRESOLVED_PREDICTIONS: 0
+FALSE_DEPENDENCY_ACTIVATION_ON_ABSENT_TRIGGER: 0
+MISSED_ACTIVE_DEPENDENCY: 0
+FALSE_BIDIRECTIONAL_INFERENCE: 0
+EMPTY_DEPENDENCY_LIST_ERROR: 0
+ROOT_NESTED_SCOPE_ERROR: 0
+FALSE_FAILURE_ON_NON_OBJECT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+IRRELEVANT_OPTIONAL_LEDGERS_ACTIVATED: 0
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_DEPENDENCY_LABEL_WITHHELD_CROSSVALIDATOR_PASS_WITH_LIMITATIONS
 ```
 
-### External application — SPEC-APP-003
+This supports v1.0 dependency and conditional-field behavior on the locked cases. It is not independent evaluator validation because the cases and DSD reasoning were produced within the same project/model environment. The software implementation was invoked only after predictions were frozen.
 
-Protocol: v0.2.1.
+### Completed external applications
 
 ```text
-CASE_ORIGIN: public_regulatory_standard_plus_official_guidance
-SOURCE: OSHA 29 CFR 1910.38 + official EAP/alarm eTool/checklist material
-EXTERNAL_DOMAIN: workplace emergency planning / occupational safety
-PRECOMMIT: ccda4cfe9e9b25b3a97029c6a19c2e8e07076eb0
-SOURCE_UNIT_COVERAGE: 18/18
-REGULATORY_MINIMUM_ELEMENTS_PRESERVED: 11/11
-SITE_SPECIFIC_OPENNESS_HANDLED_WITHOUT_FABRICATION: 7/7
-DOWNSTREAM_DETERMINACY_STATUS: SUFFICIENT_AT_DECLARED_RESOLUTION
-INVENTED_SITE_SPECIFIC_FACTS: 0
-NORMATIVE_FORCE_STRENGTHENINGS: 0
-REGULATION_GUIDANCE_COLLAPSE: 0
-HARD_FAILURE_COUNT: 0
-FINAL_SPEC_STATUS: no_gain
-GUARDRAIL_VERDICT: GUARDRAIL_PRESSURE
-COMPETITIVE_RESULT: BASELINE_PREFERRED_FOR_THIS_LOCKED_TASK
-RESULT: SPECIFICATION_EXTERNAL_V0_2_1_NO_GAIN_WITH_GUARDRAIL_PRESSURE
+SPEC-APP-001 — RFC 9112 §6.3
+  protocol: v0.1
+  result: SPEC_NO_GAIN / baseline preferred
+
+SPEC-APP-002 — Belmont Report Part C
+  protocol: v0.2
+  result: usable / mixed gain with guardrail pressure
+
+SPEC-APP-003 — OSHA EAP core corpus
+  protocol: v0.2.1
+  result: SPEC_NO_GAIN / guardrail pressure / baseline preferred
+
+SPEC-APP-004 — WCAG 2.2 SC 1.4.3 + official ACT examples
+  protocol: v1.0
+  external domain: web accessibility
+  official example family matches: 8/8
+  inactive conditional ledger boilerplate: 0
+  result: SPECIFICATION_V1_0_EXTERNAL_LABELED_REGRESSION_NO_GAIN_WITH_LIMITATIONS
 ```
 
-This external v0.2.1 application supports source-faithful use of the openness/determinacy axes on an operational/regulatory corpus. It does **not** show task-matched superiority: OSHA's own regulation, cross-referenced eTool, and checklist already provide a strong baseline for the locked structural-review task.
+`SPEC-APP-004` is a labeled regression/interface check because expected ACT labels were visible before DSD mapping. It is not blind prediction evidence.
+
+### Blocked external blind attempt — SPEC-APP-005
+
+```text
+SOURCE: JSON-Schema-Test-Suite dependentRequired.json
+PINNED_COMMIT: f6fd52a0a95472e079cbfc6ef7f089702b80e045
+PRECOMMIT: 154af0ae57e1cc6bc78bdefdcfb83faf1ba71a9c
+STATUS: BLOCKED_BY_LABEL_ISOLATION_TOOLING
+PREDICTIONS_COMMITTED: no
+OFFICIAL_LABELS_SCORED: no
+COUNT_AS_EXTERNAL_APPLICATION_COMPLETION: no
+COUNT_AS_BLIND_EVIDENCE: no
+```
+
+The locked official source combines input and expected labels in one file, and the current delivery path could not redact expected labels before evaluator exposure. The precommit was preserved rather than weakened after the tooling constraint appeared.
 
 ### Method-family linkage — SPEC-LINK-001
 
@@ -172,67 +152,35 @@ EXTERNAL_STANDARD_BOUNDARY_PRESERVED: yes
 RESULT: SPECIFICATION_TO_AUDIT_NATIVE_HANDOFF_PILOT_PASS_WITH_LIMITATIONS
 ```
 
-This supports one native handoff boundary only:
+This supports one native handoff boundary only and does not validate universal interoperability.
+
+### Protocol audits
 
 ```text
-STANDALONE_NO_GAIN
-!= METHOD_FAMILY_INTEGRATION_NO_GAIN
+DSD-AUDIT-20260908-METHODOLOGY-003
+  PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
+
+DSD-AUDIT-20260908-METHODOLOGY-004
+  CRITICAL_GATES_PASSED: 14/14
+  BREAKING_SEMANTIC_LOSS: 0
+  REGRESSION_FAMILIES_WITH_REQUIRED_CARRIER_LOSS: 0/11
+  STANDARDIZATION_VERDICT: STANDARDIZE_WITH_DOCUMENTED_LIMITS
+  DEFAULT_DSD_INTERNAL_PROTOCOL: DSD Specification Protocol v1.0
 ```
 
-It does not validate all 22 methods or universal interoperability.
-
-### Protocol minimality/stability audit
+### Maturity boundary
 
 ```text
-AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-003
-PROTOCOL_FREEZE_READINESS: FREEZE_READY_WITH_NONBREAKING_CLEANUP
-STRUCTURAL_CONFLICT_COUNT: 0
-BREAKING_SEMANTIC_REVISION_REQUIRED: no
-STRUCTURAL_REDESIGN_REQUIRED: no
-```
-
-### Protocol v1.0 final standardization audit
-
-```text
-AUDIT_ID: DSD-AUDIT-20260908-METHODOLOGY-004
-CRITICAL_GATES_PASSED: 14/14
-CRITICAL_FAILURES: 0
-BREAKING_SEMANTIC_LOSS: 0
-REGRESSION_FAMILIES_WITH_REQUIRED_CARRIER_LOSS: 0/11
-NEW_UNPRECOMMITTED_SEMANTIC_OBLIGATION: 0
-STANDARDIZATION_VERDICT: STANDARDIZE_WITH_DOCUMENTED_LIMITS
-DEFAULT_DSD_INTERNAL_PROTOCOL: DSD Specification Protocol v1.0
-METHOD_EVIDENCE_STATUS: developing
-METHOD_MATURITY_PROMOTION: no
-```
-
-The standardization audit approves v1.0 as the default DSD-internal interface. It does not convert internal standardization into an evidence-maturity or superiority claim.
-
-### First maturity meta-audit
-
-```text
-SPEC_MATURITY_AUDIT_ID: DSD-AUDIT-20260907-METHODOLOGY-001
-SPEC_MATURITY_CURRENT_DEVELOPING_STATUS: CONFIRMED
-SPEC_MATURITY_PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
-SPEC_MATURITY_STATUS_DECISION: RETAIN_DEVELOPING
-```
-
-That historical maturity verdict is not silently overwritten by protocol standardization.
-
-```text
+FIRST_MATURITY_AUDIT: DSD-AUDIT-20260907-METHODOLOGY-001
+HISTORICAL_PROMOTION_VERDICT: INSUFFICIENT_BASIS
 CURRENT_METHOD_EVIDENCE_STATUS: developing
-INTERNAL_PROTOCOL_STATUS: standardized
-CURRENT_PROTOCOL_FOR_NEW_RUNS: v1.0
 INDEPENDENT_EVALUATOR_VALIDATION: not_established
 MEASURED_PRACTICAL_BENEFIT: not_established
 SAME_PROJECT_EVALUATOR_DEPENDENCE: present
 ALL_METHOD_HANDOFF_INTEROPERABILITY: not_established
-NEXT_EVIDENCE: independent_retrace_or_measured_benefit_or_concrete_second_handoff_question
 ```
 
 ## Shared-core registry status / 공통 코어 상태
-
-The current shared-core registry contains **SC-01 through SC-10** and remains closed for the present registry with conditions.
 
 ```text
 SHARED_CORE_RULES_PROMOTED: 10
@@ -251,13 +199,13 @@ DIRECTLY_MATURE_METHOD_EVIDENCE:
 
 INTERNALLY_STANDARDIZED_BUT_EVIDENCE_DEVELOPING:
   DSD Specification
-    direct_constructed_pilots: 7
+    direct_constructed_pilots: 8
     current_protocol_for_new_runs: v1.0
     internal_protocol_status: standardized
-    external_applications_total: 3
-    external_domains_total: 3
+    completed_external_applications: 4
+    completed_external_domains: 4
+    blocked_unscored_external_blind_precommits: 1
     method_family_linkage_pilots: 1
-    latest_external_result: SPEC_NO_GAIN_WITH_GUARDRAIL_PRESSURE
     independent_evaluator_validation: not_established
     measured_practical_benefit: not_established
     all_method_handoff_interoperability: not_established
@@ -269,4 +217,4 @@ SHARED_CORE_REGISTRY_STATUS:
 
 ## Migration rule / 이관 규칙
 
-Historical records keep their original path, protocol version, and verdict. New protocol revisions and evidence classification are additive. Do not rewrite prior `PASS`, `FAIL`, `NO_GAIN`, `BASELINE_PREFERRED`, `NON_CORRESPONDENCE`, or untested-axis status merely to appear current.
+Historical records keep their original path, protocol version, and verdict. New protocol revisions and evidence classification are additive. Do not rewrite prior `PASS`, `FAIL`, `NO_GAIN`, `BASELINE_PREFERRED`, `NON_CORRESPONDENCE`, blocked/unscored status, or untested-axis status merely to appear current.
