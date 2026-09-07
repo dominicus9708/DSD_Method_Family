@@ -41,6 +41,7 @@ Origin labels are not validation verdicts. An independently authored source can 
 - Public standards lock authoritative version/status and exact section scope before DSD scoring.
 - Conflicting or differently weighted sources are preserved rather than silently merged.
 - A blocked or contaminated precommit remains visible and is not counted as a completed application.
+- A resolution-withheld incident test must freeze its acceptance prediction before comments, PRs, patches, or closing commits are revealed.
 
 ## Current external application records / 현재 외부 적용 기록
 
@@ -124,8 +125,31 @@ The official file embeds expected `valid` labels with schema/data. The current s
 
 The separately completed `SPEC-CH-008` uses constructed cases and a post-freeze `jsonschema` implementation comparison; it is method-specific constructed evidence and does not complete this external application.
 
+#### SPEC-APP-006 — python-jsonschema `ErrorTree` read-mutation issue #1328
+
+- Precommit: [`specification/SPEC-APP-006_ErrorTree-read-mutation_precommit.md`](specification/SPEC-APP-006_ErrorTree-read-mutation_precommit.md)
+- Frozen prediction: [`specification/SPEC-APP-006_ErrorTree-read-mutation_prediction.md`](specification/SPEC-APP-006_ErrorTree-read-mutation_prediction.md)
+- Result: [`specification/SPEC-APP-006_ErrorTree-read-mutation.md`](specification/SPEC-APP-006_ErrorTree-read-mutation.md)
+
+```text
+PROTOCOL: v1.0
+CASE_ORIGIN: organizational_or_technical_incident
+EXTERNAL_DOMAIN: Python library API behavior / error-structure semantics
+RESOLUTION_ARTIFACT_WITHHELD_UNTIL_AFTER_PREDICTION: yes
+ACTUAL_CLOSING_COMMIT: 7fa1acc948b34ab6283b3621ecbdc4360a717ba7
+PRIMARY_AXES_MATCHED: 5/5
+IMPLEMENTATION_OVERPREDICTION_COUNT: 0
+SOURCE_FACT_INVENTION_COUNT: 0
+POST_REVEAL_PREDICTION_CHANGE: 0
+FINAL_SPEC_STATUS: usable
+GUARDRAIL_VERDICT: INSIDE_GUARDRAILS
+RESULT: SPECIFICATION_V1_0_REAL_WORLD_RESOLUTION_WITHHELD_ACCEPTANCE_MATCH_WITH_LIMITATIONS
+```
+
+The issue body was used to freeze a behavioral acceptance contract before issue comments, candidate PRs, and the closing commit were inspected. The actual maintainer resolution matched the predicted non-mutating iteration/containment behavior and regression-test family, while also adding adjacent lookup-error improvements that were not retroactively inserted into the prediction. This is stronger than a labeled regression but is **not** independent-evaluator or full-blind validation.
+
 ## Validation limit / 검증 한계
 
 A real-world or external-source case is application evidence first. It contributes to method validation only when protocol, scoring/failure criteria, external standard, source-purpose boundary, and relevant baseline were locked well enough to make the case a genuine test rather than an illustration.
 
-An external origin and an independent evaluator are different axes. The current Specification corpus has **four completed external applications across four completed domains**, plus one blocked/unscored external blind precommit. All completed DSD scoring remains within the same project/model environment. Independent reviewer validation therefore remains unresolved.
+An external origin and an independent evaluator are different axes. The current Specification corpus has **five completed external applications across five completed domains**, plus one blocked/unscored external blind precommit. `SPEC-APP-006` adds one resolution-artifact-withheld real-world comparison, but all DSD reasoning remains within the same project/model environment. Independent reviewer validation therefore remains unresolved.
