@@ -1,7 +1,34 @@
-# Deferred Roadmap — Full DSD Structural Analysis of Standard Quantum Mechanics and Relativity
+# Active Roadmap — Full DSD Structural Analysis of Standard Quantum Mechanics and Relativity
 
 Date: 2026-09-07
-Status: **DEFERRED / FUTURE TRACK (Track 2)**
+Status: **ACTIVE TRACK (Track 2)**
+
+## Activation note
+
+Track 2 was activated after the first configuration-state coverage audit:
+
+```text
+audits/science/2026-09-07_standard-qm-rel-configuration-state-coverage-audit.md
+```
+
+First-pass accounting over the 22 non-QFT roadmap targets:
+
+```text
+STATE      10 / 22
+RELATION    7 / 22
+TRANSITION  5 / 22
+UNPLACED    0 / 22  (structural placement only)
+```
+
+This count is a roadmap classification, not a measure of theoretical content and not a claim that DSD derives the standard theories.
+
+The principal result is that the one-slice DSD configuration state should remain distinct from explicit standard-domain relations and temporal transition laws:
+
+\[
+\text{one-slice state }\Sigma_t
++\text{ explicit standard-domain relations}
++\text{ transition }\Gamma.
+\]
 
 ## Purpose
 
@@ -63,46 +90,62 @@ Do not force every target through layers that are not mathematically meaningful 
 
 ## Quantum-mechanics worklist
 
-- [ ] State carrier and density-operator structure beyond finite tomography examples.
-- [ ] Observable and POVM families as typed readout structures.
-- [ ] Projective measurement and general instruments: outcome vs post-measurement transition.
-- [ ] Composite systems, tensor products, subsystem restriction, and partial trace.
-- [ ] Entanglement, separability, and reconstruction boundaries without renaming them as DSD properties.
-- [ ] Contextuality: local context records, overlap conditions, and global completion.
-- [ ] Symmetry/unitary representation and invariance vs representation change.
-- [ ] Schrödinger/unitary dynamics and open-system CPTP evolution as external standard dynamics.
-- [ ] Conservation relations and their status relative to DSD lineage/transition records.
-- [ ] Identical-particle and exchange-structure typing, if needed after the core finite-system program.
+- [x] First-pass structural placement of state carrier and density-operator structure.
+- [x] First-pass structural placement of observable and POVM families.
+- [x] First-pass separation of projective/general measurement readout from instrument transition.
+- [x] First-pass structural placement of composite systems, tensor products, subsystem restriction, and partial trace.
+- [x] First-pass placement of entanglement, separability, and reconstruction boundaries without renaming them as DSD properties.
+- [x] First-pass boundary: contextuality local records fit, cross-context gluing remains an explicit relation/extension.
+- [x] First-pass boundary: symmetry/unitary representation requires explicit group/relation data.
+- [x] First-pass placement of Schrödinger/unitary and open-system CPTP evolution in transition layer.
+- [x] First-pass placement of conservation relations in trajectory/domain-validation layer.
+- [x] First-pass placement of identical-particle exchange structure as explicit standard-domain relation.
 - [ ] Standard QFT only as a later standard-domain extension, with a fresh primitive lock and without importing quantum-gravity assumptions.
+
+Detailed audits remain pending even where first-pass placement is checked.
 
 ---
 
 ## Relativity worklist
 
-- [ ] Manifold/event carrier and chart-domain structure.
-- [ ] Coordinate charts and invertible chart transitions.
-- [ ] Reference frames, tetrads/congruences, and worldline-dependent measured quantities.
-- [ ] Metric structure and invariant interval/proper time.
-- [ ] Timelike/null/spacelike relations and causal accessibility.
-- [ ] Geodesic and accelerated motion as separate standard structures.
-- [ ] Curvature tensors and local/global geometric records.
-- [ ] Einstein field equation as a standard-domain relation, without identifying its source with a DSD aggregate.
-- [ ] Weak-field limit and standard benchmark hierarchy.
-- [ ] Initial-value/Cauchy structure and domain-of-dependence analysis.
-- [ ] Stress-energy conservation and Bianchi-identity consistency as standard-theory constraints.
-- [ ] Coordinate/gauge redundancy vs genuine information loss/reconstruction.
+- [x] First-pass placement of manifold/event carrier and chart-domain structure.
+- [x] First-pass placement of coordinate charts and invertible chart transitions.
+- [x] First-pass placement of reference frames, tetrads/congruences, and worldline-dependent measured quantities.
+- [x] First-pass placement of metric structure and invariant interval/proper time.
+- [x] First-pass placement of timelike/null/spacelike relations and causal accessibility.
+- [x] First-pass placement of geodesic and accelerated motion in the transition/trajectory layer.
+- [x] First-pass boundary: curvature requires explicit differential-geometric relation/specialization.
+- [x] First-pass boundary: Einstein field equation remains an explicit standard-domain relation; no DSD source identification.
+- [x] First-pass placement of weak-field limit and standard benchmark hierarchy as explicit comparison/approximation structure.
+- [x] First-pass placement of initial-value/Cauchy structure and domain-of-dependence analysis in state + transition + reconstruction layers.
+- [x] First-pass placement of stress-energy conservation and Bianchi consistency as standard-theory constraints.
+- [x] First-pass separation of coordinate/gauge redundancy from genuine information loss/reconstruction.
+
+Detailed audits remain pending even where first-pass placement is checked.
 
 ---
 
 ## Cross-standard-theory comparison worklist
 
-- [ ] Identify which common roles really survive both theories: formation, typed properties, representation, access, readout, reconstruction, dynamics.
-- [ ] Separate reversible representation changes from non-injective restrictions in both theories.
-- [ ] Compare subsystem access in QM with causal/domain access in relativity without identifying them.
+- [x] First-pass common roles: formation, typed properties, representation, access, readout, reconstruction, dynamics survive as structural roles.
+- [x] First-pass separation of reversible representation changes from non-injective restrictions in both theories.
+- [x] First-pass comparison of subsystem access in QM with causal/domain access in relativity without identifying them.
 - [ ] Compare standard invariants with DSD strict equivalence only through explicit maps.
-- [ ] Track typed dimensions separately: Hilbert dimension, manifold dimension, probe count, DSD channel/term/rank counts.
-- [ ] Search for countermodels where one common role fails, becomes incomparable, or requires theory-specific extension.
+- [x] Typed dimensions remain separated: Hilbert dimension, manifold dimension, probe count, DSD channel/term/rank counts.
+- [ ] Search for detailed countermodels where one common role fails, becomes incomparable, or requires theory-specific extension.
 - [ ] Record any genuinely common theorem only after it is proved from the abstract map/typing structure rather than imported from either theory.
+
+---
+
+## Detailed audit order now active
+
+```text
+1. QM measurement — POVM readout vs instrument transition
+2. QM composite access — tensor product / partial trace / entanglement
+3. Relativity — chart/frame representation vs causal accessibility
+4. Relativity — Cauchy data / domain of dependence / reconstruction
+5. Standard-domain relation layer — symmetry, curvature, Einstein equation, conservation
+```
 
 ---
 
@@ -124,8 +167,8 @@ A successful analysis does not require a quantum-gravity claim.
 
 ---
 
-## Relation to active Track 3
+## Relation to Track 3
 
-Track 3 currently applies existing DSD static aggregation and structural-reorganization dynamics to the already isolated common structuring roles.
+Track 3 applies existing DSD static aggregation and structural-reorganization dynamics to the already isolated common structuring roles.
 
-Track 2 will later act as a breadth and boundary audit for that construction. Track 2 must not be backfilled with assumptions inferred from Track-3 outcomes.
+Track 2 is now active as the breadth and boundary audit for that construction. Track 2 must not be backfilled with assumptions inferred from Track-3 outcomes.
