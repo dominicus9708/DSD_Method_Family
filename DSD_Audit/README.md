@@ -33,8 +33,18 @@ DSD_Audit/
 ├─ protocols/
 │  └─ README.md
 └─ audits/
-   └─ README.md
+   ├─ README.md
+   ├─ methodology/
+   └─ mathematics/
+      └─ README.md
 ```
+
+Current domain navigation:
+
+- [`audits/README.md`](audits/README.md) — audit-record policy and domain layout
+- [`audits/mathematics/README.md`](audits/mathematics/README.md) — current mathematics audit index; currently includes the Collatz `MATH-001..007` sequence
+
+Domain indexes are navigation aids. Historical audit records remain at their original paths unless an explicit migration is required.
 
 ## Operating rule / 운영 원칙
 
