@@ -144,6 +144,7 @@ Detailed audits remain pending even where first-pass placement is checked.
 - [x] First genuinely common theorem admitted only after proof from the abstract typed-map structure: fiber-factorization criterion for reduced maps.
 - [x] Common typed-map lemma admitted: passive re-encoding is classified by semantic-decoder commutation, not by invertibility alone.
 - [x] Common readout-fiber theorem admitted: constant selected output constrains motion to a readout fiber and does not imply state constancy without separation/injectivity.
+- [x] Common reduced-transition closure theorem admitted: an induced reduced dynamics exists exactly when the full transition respects reduction fibers.
 
 ---
 
@@ -210,6 +211,7 @@ audits/science/2026-09-08_cross-standard-equivalence-dsd-strict-equivalence-audi
 audits/science/2026-09-08_cross-partial-trace-causal-restriction-factorization-audit.md
 audits/science/2026-09-08_cross-passive-representation-active-transition-audit.md
 audits/science/2026-09-08_cross-selected-readout-invariant-nonzero-dynamics-audit.md
+audits/science/2026-09-08_cross-reduction-access-transition-closure-audit.md
 ```
 
 Reproducibility records:
@@ -224,6 +226,7 @@ audits/science/2026-09-08_cross_equivalence_invariant_firewall.py
 audits/science/2026-09-08_cross_restriction_factorization_firewall.py
 audits/science/2026-09-08_cross_passive_representation_active_transition.py
 audits/science/2026-09-08_cross_selected_readout_invariant_nonzero_dynamics.py
+audits/science/2026-09-08_cross_reduction_transition_closure.py
 ```
 
 ---
@@ -279,19 +282,36 @@ B. ACTIVE — common-role countermodel search
          constant relativistic four-velocity norm != unchanged worldline event;
          conserved/invariant quantity != complete state descriptor.
 
-   B4. NEXT — reduction/access map vs transition closure
+   B4. DONE 2026-09-08 — reduction/access map vs transition closure
+       result: PASS_WITH_BOUNDARY
+       common theorem admitted:
+         for R:S->Y and Gamma:S->S, an induced Gamma_red on im(R) satisfying
+         R o Gamma = Gamma_red o R exists iff
+         R(s)=R(s') implies R(Gamma(s))=R(Gamma(s'));
+         equivalently, Gamma must respect the equivalence relation/fibers induced by R.
+       QM witness:
+         equal subsystem-A marginals can evolve to different A marginals under SWAP,
+         while factorized local unitary dynamics closes autonomously on A.
+       relativistic wave witness:
+         initial data on a fixed interval determine only its dependence domain without
+         extra boundary/exterior data; the same fixed spatial restriction need not close.
+       physical boundary:
+         quantum environment != spacetime exterior;
+         partial trace != domain restriction;
+         reduced open-system closure != relativistic boundary closure.
+
+   B5. NEXT — composition of reductions/readouts vs order dependence
        abstract target:
-         R o Gamma = Gamma_red o R ?
+         R2 o R1 ?= R1 o R2
        question:
-         when does a reduced/access-limited state admit an autonomous induced transition?
+         when do two individually valid reductions commute or factor through a joint reduction?
        QM comparator:
-         subsystem reduction / partial trace vs global unitary or open-system dynamics.
+         compatible/nested subsystem and measurement reductions vs order-sensitive operations.
        Relativity comparator:
-         domain restriction / Cauchy domain vs evolution inside and outside the declared domain.
+         nested domain restriction vs representation/access operations.
        Goal:
-         derive the exact fiber-compatibility condition for an induced reduced dynamics,
-         then test where standard QM and relativity satisfy or violate it without identifying
-         their physical mechanisms.
+         distinguish typed composability from mere existence of both maps and derive exact
+         commutation/factorization criteria before applying theory-specific meanings.
 
 C. COMMON-THEOREM GATE — ACTIVE
    Admitted results:
@@ -299,7 +319,9 @@ C. COMMON-THEOREM GATE — ACTIVE
      2. semantic-decoder commutation criterion separating passive re-encoding from
         active transition at the typed-map level;
      3. readout-fiber motion criterion: selected-output constancy is fiber constancy,
-        while state constancy requires an injective/separating readout on the target orbit.
+        while state constancy requires an injective/separating readout on the target orbit;
+     4. reduced-transition closure criterion: an autonomous induced dynamics exists on
+        im(R) iff the full transition respects R-fibers.
    Rule remains:
      no further common theorem is recorded unless it follows from the abstract map/typing
      structure itself rather than being imported from either QM or relativity.
