@@ -147,24 +147,32 @@ Detailed audits remain pending even where first-pass placement is checked.
                currently describable apparatus/control data belong in an experiment-complete
                one-slice record, while the actual instrument transition remains in Gamma.
 
-2. NEXT
+2. DONE 2026-09-08 / PHY-QM-051
    QM composite access — tensor product / partial trace / entanglement
+   result: PASS_WITH_REFINEMENT
+   refinement: a reduced subsystem configuration state may be complete for its declared
+               local query family while remaining insufficient for global reconstruction
+               or entanglement classification; completeness is target/query-relative.
 
-3. Relativity — chart/frame representation vs causal accessibility
+3. NEXT
+   Relativity — chart/frame representation vs causal accessibility
+
 4. Relativity — Cauchy data / domain of dependence / reconstruction
 5. Standard-domain relation layer — symmetry, curvature, Einstein equation, conservation
 ```
 
-Detailed audit record:
+Detailed audit records:
 
 ```text
 audits/science/2026-09-08_phy-qm-050-configuration-state-povm-instrument-audit.md
+audits/science/2026-09-08_phy-qm-051-configuration-state-composite-access-audit.md
 ```
 
-The prior finite computation is reused rather than duplicated:
+Prior finite computations are reused rather than duplicated:
 
 ```text
 audits/science/2026-09-06_sequential_quantum_instrument_dsd_order.py
+audits/science/2026-09-06_werner_dsd_entanglement_chsh.py
 ```
 
 ---
