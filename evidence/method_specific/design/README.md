@@ -1,53 +1,89 @@
 # DSD Design Direct Evidence / DSD 설계론 직접 증거
 
-Status: **planning / no direct validation yet**
+Status: **Protocol v0.1 established / no direct validation yet**
 
 This lane records evidence that directly tests **DSD Design / DSD 설계론**.
 
 Evidence from DSD Analysis, Audit, Specification, Synthesis, Transformation, Optimization, or shared-core validation does not automatically count as direct Design validation.
 
-## Required record fields
+## Current protocol
+
+- `methods/04_design/PROTOCOL_v0.1.md` — initial executable protocol, validation pending.
+
+Protocol creation is required infrastructure but does not itself count as a direct Design pilot.
+
+## Required evidence record fields
+
+Every v0.1 evidence record should preserve at minimum:
 
 ```text
 EVIDENCE_SCOPE_CLASS: method_specific
 METHOD_DIRECTLY_TESTED: DSD Design
-METHOD_VERSION_OR_PROTOCOL:
+METHOD_VERSION_OR_PROTOCOL: v0.1
 CASE_ID:
+CASE_CLASS:
 CASE_ORIGIN:
-TASK:
-GOAL:
-CONSTRAINTS:
-INPUTS:
-DSD_LAYERS_USED:
+DESIGN_TASK_ID:
+TASK_SCOPE:
+CLAIMED_OUTPUT_LEVEL:
+GOALS:
+HARD_CONSTRAINTS:
+CONSTRAINT_SOURCE_OR_SPECIFICATION:
+BASE_STRUCTURE_OR_PREDECESSOR:
+TARGET_DSD_LAYER_SCOPE:
+TARGET_RESOLUTION:
+CANDIDATE_OR_CONSTRUCTION_BASIS:
+CANDIDATE_GENERATION_RULE:
+CANDIDATE_COVERAGE:
+DSD_INTERFACE_PROFILE:
+VALIDATION_OR_ACCEPTANCE_RULE:
 DOMAIN_BRIDGE:
 EXTERNAL_STANDARD:
-CANDIDATE_GENERATION_RULE:
-ADMISSIBILITY_CHECK:
-PROPERTY_AND_PREREQUISITE_CHECK:
-CHANNEL_OR_BRIDGE_REQUIREMENTS:
-OUTPUT_OR_TRAJECTORY_REQUIREMENTS:
-SELECTION_RULE:
+AUXILIARY_METHODS_OR_HANDOFFS:
+CANDIDATES_ACTUALLY_EVALUATED_OR_SYMBOLIC_FAMILY:
+CANDIDATE_STATUS_RECORD:
+ADMISSIBLE_TARGETS_OR_ADMISSIBLE_FAMILY:
 REJECTED_CANDIDATE_REASONS:
-FAILURE_OR_NO_GAIN_CRITERIA:
-BASELINE:
+UNRESOLVED_FIELDS:
+TERMINAL_DESIGN_STATUS:
+TERMINAL_STATUS_BASIS:
+DESIGN_PROTOCOL_CONFORMANCE:
+DESIGN_METHOD_GAIN_STATUS:
+BASELINE_IF_GAIN_ASSESSED:
+GAIN_CRITERION_IF_ASSESSED:
 RESULT:
 LIMITS:
 REPRODUCIBILITY_RECORD:
 ```
 
-## Planned case classes
+Inactive conditional fields should be omitted or marked consistently rather than filled with invented content.
+
+## Case-ID convention fixed by Protocol v0.1
 
 ```text
-DES-CH-*   constructed challenges
-DES-APP-*  external or independently generated applications
-DES-AUD-*  Design-specific maturity/audit records
+DES-CH-###   constructed Design challenges
+DES-APP-###  external or independently generated Design applications
+DES-AUD-###  Design-specific audit / maturity records
 ```
 
-The prefixes are provisional until Protocol v0.1 fixes the case-ID convention.
+Every case additionally records one or more explicitly tested `CASE_CLASS` values:
+
+```text
+positive
+negative_or_failure
+boundary
+no_gain
+baseline_comparison
+reproducibility
+external_application
+other_declared
+```
+
+Planning-stage `DES-BND-DRAFT-*` counterexamples remain pre-protocol planning records and are not direct v0.1 evidence.
 
 ## Minimum evidence architecture before promotion consideration
 
-1. dedicated Design protocol;
+1. dedicated Design protocol — **established at v0.1**;
 2. positive constructed case;
 3. negative/failure case;
 4. boundary case;
@@ -61,13 +97,15 @@ A later maturity audit evaluates the accumulated corpus; the checklist itself do
 ## Current status
 
 ```text
+DEDICATED_PROTOCOL: v0.1 established
 DIRECT_CONSTRUCTED_PILOTS: 0
 EXTERNAL_APPLICATIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
-CURRENT_PROTOCOL: not established
-CURRENT_METHOD_STATUS: planning / proposed
+BASELINE_BENEFIT: not established
+CURRENT_METHOD_EVIDENCE_STATUS: validation_pending
 ```
 
 ## Immediate next evidence task
 
-Do not begin application pilots until the Design-specific task interface, minimum valid output, and boundary against Specification/Synthesis/Transformation/Optimization are explicitly fixed.
+Run the first **positive constructed Design challenge** under a pre-frozen Protocol v0.1 task record.
+The case should contain at least one admissible target, preserve all claim-relevant DSD distinctions, avoid hidden Optimization, and leave `DESIGN_METHOD_GAIN_STATUS = NOT_ASSESSED` unless a baseline comparison is separately performed.
