@@ -52,13 +52,14 @@ REPRODUCIBILITY_RECORD:
 - [`design/`](design/) — **DSD Design / DSD 설계론**
   - Protocol v0.1 established on `2026-09-08`;
   - current method evidence status: `validation_in_progress`;
-  - direct constructed pilots: `5`;
+  - direct constructed pilots: `6`;
   - positive cases: `1` (`DES-CH-001`, PASS);
   - negative/failure cases: `1` (`DES-CH-002`, PASS);
   - boundary cases under executable protocol: `2 attempted`;
   - successful boundary validations: `1` (`DES-CH-004`, PASS);
   - preserved boundary test-design failures: `1` (`DES-CH-003`, 20/21 with challenge-design defect; no protocol failure inferred);
   - `NO_GAIN` cases: `1` (`DES-CH-005`, PASS);
+  - broader baseline-comparison cases: `1` (`DES-CH-006`, PASS with `NO_GAIN`);
   - external applications: `0`;
   - independent evaluator validation: `not established`;
   - `DES-CH-001` preserved `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED != CHANNEL_ABSENCE`, returned `{T1,T2}` as the admissible family, and used no hidden Optimization;
@@ -66,7 +67,9 @@ REPRODUCIBILITY_RECORD:
   - `DES-CH-003` exposed a target-resolution test defect because its candidate differences existed only in downstream-only `resource_cost`; the historical failed challenge was preserved without post-hoc repair;
   - `DES-CH-004` prospectively corrected that test with `reserve_mode = MODE_A / MODE_B / MODE_C` inside the Design target resolution and passed 23/23 checks while keeping downstream Optimization ranking separate;
   - `DES-CH-005` froze `B0_EXPLICIT_CONSTRAINT_MATRIX` as a competent simple baseline and passed 25/25 checks with `DESIGN_ADMISSIBLE / CONFORMANT / NO_GAIN`; B0 and DSD returned the same admissible family and rejection basis, and extra DSD bookkeeping was not counted as gain;
-  - next required evidence: a broader strongest-reasonable-baseline comparison that is not deliberately reduced to a trivial finite synthetic fixture.
+  - `DES-CH-006` froze `B1_TYPED_ADMISSIBILITY_TABLE` as a broader competent comparator over Formation + General Property, 15 candidates, typed failure states, multi-constraint rejection sets, and both `DESIGN_SPACE` and `UNIQUE_TARGET`; all 54/54 checks passed and B1 matched DSD on every measured gain dimension, so `DESIGN_METHOD_GAIN_STATUS = NO_GAIN`;
+  - strongest-reasonable-baseline comparison category is now established at the constructed-evidence level; this is a comparison result, not a superiority claim;
+  - next required evidence: the first external or independently generated Design application.
 
 ### Current Specification-specific boundaries
 
