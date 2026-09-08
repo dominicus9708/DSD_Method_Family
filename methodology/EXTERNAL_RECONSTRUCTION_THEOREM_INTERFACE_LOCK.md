@@ -170,3 +170,58 @@ EXPLICIT ASSUMPTION REQUIRED FOR THE CHOSEN THEOREM INTERFACE
 ```
 
 This resolution narrows the theorem-interface gap without increasing the independent DSD-derived evidence count.
+
+## 9. QM Core 004G resolution — CRG-QM
+
+QM Core 004G tested whether connectedness of the full reversible-transformation group follows from DSD Dynamics/lineage or from continuous pure-state reachability.
+
+Result:
+
+```text
+strict Formation equivalence                         != connected reversible topology
+continuous regular DSD trajectories                  != connected full reversible group
+lineage preservation                                 != connected full reversible group
+continuous pure-state reachability                    != connected full reversible group
+```
+
+Countermodel:
+
+\[
+G=O(2)
+\]
+
+acting on the unit circle. `SO(2)` supplies continuous reversible paths between any two pure states, while `O(2)` also contains determinant-`-1` reflections. The continuous determinant map separates the `+1` and `-1` components, so the full reversible group is disconnected.
+
+Thus the earlier `CRR-QM` selector is strictly weaker than the comparator's Continuous Reversibility condition.
+
+A sufficient exact lock is:
+
+```text
+RGPR-QM  Reversible-Group Path Realizability
+```
+
+requiring an explicit topology on the reversible group and a continuous path from the identity to every allowed reversible transformation. Together with pure-state transitivity this yields the required CRG-QM condition.
+
+Current provenance remains:
+
+```text
+CRG-QM / RGPR-QM    D  EXACT_COMPARATOR_LOCK
+```
+
+Status:
+
+```text
+NOT DERIVED FROM CLASS A/B
+CRR-QM IS STRICTLY WEAKER
+EXPLICIT CLASS-D ASSUMPTION REQUIRED FOR THE CHOSEN THEOREM INTERFACE
+```
+
+After 004F–004G, two of the five 004E locks are classified rather than left open. The unresolved locks are:
+
+```text
+ETC-QM
+ULRRDE-QM
+CFE-QM
+```
+
+The theorem-transfer gate remains blocked until these are likewise resolved or explicitly adopted.
