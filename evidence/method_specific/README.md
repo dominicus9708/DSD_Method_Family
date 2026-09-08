@@ -39,6 +39,7 @@ REPRODUCIBILITY_RECORD:
 
 - [`design/`](design/) — **DSD Design / DSD 설계론**
   - Protocol v0.1 established on `2026-09-08`;
+  - maturity classification after `DES-AUD-001`: `developing`;
   - current evidence status: `validation_in_progress`;
   - direct constructed pilots: `7`;
   - positive: `DES-CH-001` PASS;
@@ -48,6 +49,7 @@ REPRODUCIBILITY_RECORD:
   - strongest-reasonable-baseline comparison: `DES-CH-006` PASS with `NO_GAIN`;
   - external application: `DES-APP-001` PASS using W3C WCAG 2.2 subset;
   - reproducibility/retrace: `DES-CH-007` PASS at deterministic same-project level;
+  - maturity audit: `DES-AUD-001` completed, 24/24 audit-discipline checks PASS, promotion to established withheld;
   - independent evaluator validation: `not established`.
 
 Key Design evidence summary:
@@ -61,15 +63,42 @@ DES-CH-005: 25/25 PASS, NO_GAIN
 DES-CH-006: 54/54 PASS, competent typed baseline matched DSD, NO_GAIN
 DES-APP-001: 36/36 PASS, external W3C WCAG 2.2 subset
 DES-CH-007: 44/44 PASS, deterministic retrace of DES-APP-001
+DES-AUD-001: 24/24 audit checks PASS, maturity = developing
 ```
 
-`DES-APP-001` kept external authority separate from the Design verdict, did not promote best-practice language into a hard requirement, did not invent a post-hoc exception, and did not overclaim full WCAG conformance.
+`DES-AUD-001` scored the maturity axes as:
 
-`DES-CH-007` reconstructed W1-W10 verdicts, rejection bases, `{W1,W2,W3}`, `DESIGN_ADMISSIBLE`, `CONFORMANT`, `NOT_ASSESSED`, external source/version, and `WCAG_APPLICATION_BRIDGE_001` from frozen Design Protocol + source precommit and matched the preserved historical result exactly.
+```text
+M1  dedicated executable protocol                  PASS
+M2  positive/negative terminal discrimination      PASS
+M3  neighboring-method boundary discrimination     PASS
+M4  NO_GAIN preservation                           PASS
+M5  reproducibility/retraceability                 CONDITIONAL_PASS
+M6  external application origin                    PASS
+M7  strongest-reasonable-baseline comparison       PASS
+M8  external source fidelity and bridge discipline PASS
+M9  established-level evidence breadth             INSUFFICIENT
+M10 independent/practical-performance evidence     UNRESOLVED_BUT_BOUNDED
+M11 protocol pressure / unresolved core defect     PRESENT_NONFATAL
+M12 maximum-supported-claim discipline             PASS
+M13 candidate/construction-basis discipline        PASS
+M14 historical failure / anti-post-hoc preservation PASS
+```
 
-The retrace was non-blinded and same-project/common-evaluator; it therefore establishes deterministic record sufficiency/retraceability, **not** independent replication.
+Final Design maturity decision:
 
-Design minimum evidence categories are now populated at least once, but this is not an automatic maturity grant. The next step is a Design maturity audit that explicitly discounts common-evaluator dependence and keeps independent validation open.
+```text
+MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
+METHOD_MATURITY_CLASSIFICATION: developing
+PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
+PRIMARY_BLOCKER: insufficient external evidence breadth
+SECONDARY_BLOCKER: independent/practical evidence not established
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The maturity audit explicitly does not count as a new Design direct pilot.
+The preferred next evidence is a second external Design application in a materially different domain, ideally with an externally supplied artifact or candidate/construction basis rather than a project-authored fixture.
 
 ## Promotion expectation / 성숙도 승격 기준
 
@@ -86,4 +115,4 @@ A proposed/developing method should accumulate, at minimum:
 
 These are minimum evidence categories for promotion consideration, not an automatic promotion rule. Later blind spots may justify prospective refinement without rewriting earlier evidence.
 
-Same-session or same-project retrace does not substitute for a genuinely independent reviewer. External-application count also does not by itself establish independent replication.
+Same-session or same-project retrace does not substitute for a genuinely independent reviewer. External-application count also does not by itself establish independent replication or established cross-domain breadth.
