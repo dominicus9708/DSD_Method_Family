@@ -60,16 +60,19 @@ REPRODUCIBILITY_RECORD:
   - preserved boundary test-design failures: `1` (`DES-CH-003`, 20/21 with challenge-design defect; no protocol failure inferred);
   - `NO_GAIN` cases: `1` (`DES-CH-005`, PASS);
   - broader baseline-comparison cases: `1` (`DES-CH-006`, PASS with `NO_GAIN`);
-  - external applications: `0`;
+  - external applications: `1` (`DES-APP-001`, PASS);
   - independent evaluator validation: `not established`;
-  - `DES-CH-001` preserved `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED != CHANNEL_ABSENCE`, returned `{T1,T2}` as the admissible family, and used no hidden Optimization;
-  - `DES-CH-002` distinguished `DESIGN_INFEASIBLE` from `DESIGN_UNDERDETERMINED` and `DESIGN_BLOCKED` with 20/20 required checks passed;
-  - `DES-CH-003` exposed a target-resolution test defect because its candidate differences existed only in downstream-only `resource_cost`; the historical failed challenge was preserved without post-hoc repair;
-  - `DES-CH-004` prospectively corrected that test with `reserve_mode = MODE_A / MODE_B / MODE_C` inside the Design target resolution and passed 23/23 checks while keeping downstream Optimization ranking separate;
-  - `DES-CH-005` froze `B0_EXPLICIT_CONSTRAINT_MATRIX` as a competent simple baseline and passed 25/25 checks with `DESIGN_ADMISSIBLE / CONFORMANT / NO_GAIN`; B0 and DSD returned the same admissible family and rejection basis, and extra DSD bookkeeping was not counted as gain;
-  - `DES-CH-006` froze `B1_TYPED_ADMISSIBILITY_TABLE` as a broader competent comparator over Formation + General Property, 15 candidates, typed failure states, multi-constraint rejection sets, and both `DESIGN_SPACE` and `UNIQUE_TARGET`; all 54/54 checks passed and B1 matched DSD on every measured gain dimension, so `DESIGN_METHOD_GAIN_STATUS = NO_GAIN`;
-  - strongest-reasonable-baseline comparison category is now established at the constructed-evidence level; this is a comparison result, not a superiority claim;
-  - next required evidence: the first external or independently generated Design application.
+  - `DES-CH-001` preserved `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED != CHANNEL_ABSENCE`, returned `{T1,T2}`, and used no hidden Optimization;
+  - `DES-CH-002` distinguished `DESIGN_INFEASIBLE`, `DESIGN_UNDERDETERMINED`, and `DESIGN_BLOCKED` with 20/20 checks passed;
+  - `DES-CH-003` exposed a target-resolution test defect; the historical failed challenge was preserved without post-hoc repair;
+  - `DES-CH-004` prospectively corrected the boundary test and passed 23/23 while keeping downstream Optimization separate;
+  - `DES-CH-005` passed 25/25 with `DESIGN_ADMISSIBLE / CONFORMANT / NO_GAIN` against `B0_EXPLICIT_CONSTRAINT_MATRIX`;
+  - `DES-CH-006` passed 54/54 against competent typed baseline `B1_TYPED_ADMISSIBILITY_TABLE`; B1 matched DSD on every frozen gain dimension, so `DESIGN_METHOD_GAIN_STATUS = NO_GAIN`;
+  - strongest-reasonable-baseline comparison category is established at constructed-evidence level; this is not a superiority claim;
+  - `DES-APP-001` used W3C WCAG 2.2 Recommendation 2024-12-12, limited to SC 1.4.3, 2.5.3, and 2.5.8, with a frozen W1-W10 candidate fixture; `{W1,W2,W3}` was the admissible family and all 36/36 checks passed;
+  - `DES-APP-001` kept the external authority separate from the Design verdict, did not promote the SC 2.5.3 best-practice note into a hard requirement, did not invent a SC 2.5.8 exception, and did not overclaim full WCAG conformance;
+  - external-application evidence category is now established at the single external-standard application level;
+  - next required evidence: dedicated reproducibility/retrace test, followed by maturity audit; independent evaluator validation remains open.
 
 ### Current Specification-specific boundaries
 
@@ -117,4 +120,4 @@ A proposed or developing method should accumulate, at minimum:
 
 These eight categories are a minimum evidence architecture for promotion consideration, not an automatic promotion rule. Later method-specific blind spots may justify prospective protocol refinement without rewriting earlier evidence.
 
-Same-session or same-project retrace does not substitute for a genuinely independent reviewer. With three external corpora now accumulated, the strongest remaining evidence gap for Specification is independent evaluation. If unavailable, the next internal step should be a maturity re-audit that explicitly discounts common-evaluator dependence rather than treating corpus count as independent replication.
+Same-session or same-project retrace does not substitute for a genuinely independent reviewer. External corpus/application count also does not by itself establish independent replication.
