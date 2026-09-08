@@ -123,3 +123,50 @@ post-hoc target fitting
 The first is controlled by independent premise locking before comparison.
 
 The second is controlled by provenance labeling after new target-specific conditions are introduced.
+
+## 8. QM Core 004F resolution — OSC-QM
+
+QM Core 004F tested whether operational-state closedness can be derived from existing Class-A/Class-B structure.
+
+Result:
+
+```text
+Formation definitional closure                       != topological closure
+complete Property descriptor                         != topological closure
+Banach-valued static carrier                         != closed physical image
+regular dynamic slice admissibility                  != closed global state family
+ORD/ORE + finite separation + bounded coordinates    != compactness
+```
+
+Countermodel:
+
+\[
+\Omega=(0,1)\subset\mathbb R
+\]
+
+is bounded, convex, and compatible with affine randomized-preparation readouts, but is not closed.
+
+The sufficient exact lock is sequential operational limit admission in the finite evaluation carrier:
+
+\[
+\iota(\omega_n)\to v
+\Longrightarrow
+\exists\omega\in\Omega:\ \iota(\omega)=v.
+\]
+
+In finite dimension, this yields closedness; bounded probability coordinates then yield compactness.
+
+Current provenance remains:
+
+```text
+OSC-QM / SOLA-QM    D  EXACT_COMPARATOR_LOCK
+```
+
+Status:
+
+```text
+NOT DERIVED FROM CLASS A/B
+EXPLICIT ASSUMPTION REQUIRED FOR THE CHOSEN THEOREM INTERFACE
+```
+
+This resolution narrows the theorem-interface gap without increasing the independent DSD-derived evidence count.
