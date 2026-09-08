@@ -80,7 +80,7 @@ CANDIDATE_COVERAGE: exhaustive / non_exhaustive / unknown
 
 `DESIGN_INFEASIBLE` requires either exhaustive candidate coverage with all required candidates rejected or an explicit impossibility argument. Failure to find a candidate in a non-exhaustive search is not enough for a global infeasibility claim.
 
-`DES-CH-002` now directly exercises both sides of this rule:
+`DES-CH-002` directly exercises both sides of this rule:
 
 ```text
 exhaustive + all rejected -> DESIGN_INFEASIBLE
@@ -95,7 +95,7 @@ SOFT_PREFERENCE != HARD_CONSTRAINT
 
 Design must not silently promote a soft preference into a hard constraint after candidate inspection merely to force a unique result. Any such change must be a new/upstream task revision with provenance.
 
-## Output-level guard / 산출 수준 보호 규칙
+## Output-level and target-resolution guard / 산출 수준·해상도 보호 규칙
 
 ```text
 DESIGN_SPACE
@@ -107,6 +107,15 @@ PARTIAL_TARGET
 Multiple admissible targets are an ordinary Design success when the declared output is `DESIGN_SPACE` or `ADMISSIBLE_TARGET`.
 
 If `UNIQUE_TARGET` is requested and multiple materially distinct admissible targets survive without a non-optimization determinacy rule, the Design result is `DESIGN_UNDERDETERMINED`; choosing the best surviving alternative belongs to DSD Optimization.
+
+`DES-CH-003` exposed an additional guardrail that was already implicit in Protocol v0.1 but had not yet been pressure-tested directly:
+
+```text
+material target distinctness must be judged at TARGET_RESOLUTION
+```
+
+Candidate IDs or downstream-only metadata do not by themselves establish multiple distinct Design targets.
+This was preserved as a failed challenge rather than repaired post hoc.
 
 ## Method boundary / 방법 경계
 
@@ -191,7 +200,60 @@ CHALLENGE_VERDICT: PASS
 
 Case B directly demonstrates that `DESIGN_BLOCKED + CONFORMANT` is a valid protocol outcome when the missing prerequisite is explicitly recorded and not fabricated.
 
-Evidence limit for both pilots: constructed same-session evidence only.
+### `DES-CH-003` — first executable Design/Optimization boundary attempt
+
+Precommitted before evaluation.
+
+The challenge froze three candidate records whose only difference was downstream-only `resource_cost`, while excluding that field from the Design target resolution.
+The planned `UNIQUE_TARGET -> DESIGN_UNDERDETERMINED` result therefore lacked materially distinct Design targets at the declared resolution.
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 21
+PASSED: 20
+FAILED: 1
+CHALLENGE_VERDICT: FAIL_AS_PRECOMMITTED_CHALLENGE
+FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
+PROTOCOL_FAILURE_INFERRED: no
+POST_HOC_REPAIR: none
+```
+
+The result is preserved as a failed direct challenge, not counted as a successful boundary validation.
+
+### `DES-CH-004` — corrected Design/Optimization boundary pilot
+
+A new precommit corrected only the future test design.
+Candidate mode was explicitly included in `TARGET_RESOLUTION`:
+
+```text
+C1 -> MODE_A
+C2 -> MODE_B
+C3 -> MODE_C
+```
+
+All three targets remained Design-admissible, while downstream `resource_cost` could rank them only in Optimization.
+
+Result:
+
+```text
+Case S: DESIGN_SPACE
+  -> {C1,C2,C3}
+  -> DESIGN_ADMISSIBLE
+
+Case U: UNIQUE_TARGET
+  -> three materially distinct admissible targets remain
+  -> DESIGN_UNDERDETERMINED
+
+PRECOMMITTED_REQUIRED_CHECKS: 23
+PASSED: 23
+FAILED: 0
+DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT in both subcases
+DESIGN_METHOD_GAIN_STATUS: NOT_ASSESSED
+CHALLENGE_VERDICT: PASS
+```
+
+The Design/Optimization boundary is therefore directly supported at pilot level without counting this as Optimization-method validation.
+
+Evidence limit for all pilots: constructed same-session evidence only.
 
 ## DSD layer policy / DSD 층위 정책
 
@@ -212,8 +274,8 @@ No bridge is inferred from a property name, intuition, or shared vocabulary alon
 3. ✅ Establish `PROTOCOL_v0.1.md`.
 4. ✅ Run first positive constructed pilot: `DES-CH-001` PASS.
 5. ✅ Run first negative/failure constructed pilot: `DES-CH-002` PASS.
-6. **Next:** run a boundary pilot under the protocol.
-7. Run a `NO_GAIN` pilot.
+6. ✅ Run executable boundary stage: `DES-CH-003` failed test design preserved; corrected `DES-CH-004` PASS.
+7. **Next:** run a `NO_GAIN` pilot.
 8. Compare against a strongest reasonable baseline where applicable.
 9. Run at least one external or independently generated application case.
 10. Record reproducibility/retrace results.
@@ -242,10 +304,12 @@ Current direct evidence state:
 
 ```text
 DEDICATED_PROTOCOL: v0.1 established
-DIRECT_CONSTRUCTED_PILOTS: 2
+DIRECT_CONSTRUCTED_PILOTS: 4
 POSITIVE_CASES: 1
 NEGATIVE_OR_FAILURE_CASES: 1
-BOUNDARY_CASES_UNDER_PROTOCOL: 0
+BOUNDARY_CASES_UNDER_PROTOCOL: 2 attempted
+BOUNDARY_VALIDATION_PASSES: 1
+BOUNDARY_TEST_DESIGN_FAILURES: 1
 NO_GAIN_CASES: 0
 EXTERNAL_APPLICATIONS: 0
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
@@ -253,17 +317,21 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 
 ## Recording rule / 기록 규칙
 
-Historical runs are preserved under the protocol version used at execution time; later protocol revisions do not rewrite earlier results.
+Historical runs are preserved under the protocol version used at execution time; later protocol revisions or corrected challenges do not rewrite earlier results.
+
+`DES-CH-003 -> DES-CH-004` is the current explicit example of this rule.
 
 ## Next step / 다음 단계
 
-Precommit and run the first **boundary Design challenge** under Protocol v0.1.
+Precommit and run the first **`NO_GAIN` Design challenge** under Protocol v0.1.
 
-The preferred pressure point is the Design/Optimization boundary:
+The next case should lock a strongest reasonable baseline before evaluation and permit the result:
 
 ```text
-hard constraints -> admissible family
-objective ranking -> Optimization
+Design result correct
++ protocol conformant
++ baseline equally sufficient on the declared gain criterion
+-> DESIGN_METHOD_GAIN_STATUS: NO_GAIN
 ```
 
-The challenge should keep at least two candidates admissible under Design while providing an explicit objective that would rank them, and verify that Design does not absorb that ranking into its own verdict.
+A `NO_GAIN` result is not a Design failure.
