@@ -148,12 +148,82 @@ The case directly tests that non-exhaustive failure-to-find is not promoted to g
 
 Evidence limit: constructed same-session negative/failure pilot only; one case ID with three locked subcases, therefore direct-pilot increment is +1, not +3.
 
+### `DES-CH-003` — first Design/Optimization boundary attempt
+
+Files:
+
+- `DES-CH-003_precommit.md` — precommit commit `0d1abcf`.
+- `DES-CH-003_boundary-design-optimization.md` — executed result; result commit `d15aaec`.
+
+Result:
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 21
+PASSED: 20
+FAILED: 1
+DIRECT_EVIDENCE_RESULT: FAIL_AS_PRECOMMITTED_CHALLENGE
+FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
+PROTOCOL_FAILURE_INFERRED: no
+```
+
+The failed requirement was the expected `DESIGN_UNDERDETERMINED` result for `UNIQUE_TARGET`.
+The only differences among `O1-O3` were `resource_cost` values, but the same precommit excluded `resource_cost` from the declared Design target resolution and treated it only as downstream Optimization metadata.
+Therefore `O1-O3` were not materially distinct Design targets at the frozen resolution.
+
+The case was not repaired post hoc and remains direct evidence of the precommit/test-resolution blind spot.
+It counts as an executed direct pilot but not as a successful boundary validation.
+
+### `DES-CH-004` — corrected Design/Optimization boundary
+
+Files:
+
+- `DES-CH-004_precommit.md` — corrected candidate distinction frozen before evaluation; precommit commit `47d73f6`.
+- `DES-CH-004_boundary-design-optimization-corrected.md` — executed result; result commit `0a89bde`.
+
+Prospective correction:
+
+```text
+reserve_mode(q_reserve) = MODE_A / MODE_B / MODE_C
+```
+
+is explicitly part of `TARGET_RESOLUTION`, so `C1`, `C2`, and `C3` are materially distinct Design targets while all remain admissible under the same hard constraints.
+
+A separate downstream objective:
+
+```text
+minimize resource_cost
+```
+
+can rank them, but is not used inside Design.
+
+Result:
+
+```text
+Case S: DESIGN_SPACE
+  -> {C1,C2,C3}
+  -> DESIGN_ADMISSIBLE
+
+Case U: UNIQUE_TARGET
+  -> three materially distinct admissible targets remain
+  -> DESIGN_UNDERDETERMINED
+
+PRECOMMITTED_REQUIRED_CHECKS: 23
+PASSED: 23
+FAILED: 0
+DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT in both subcases
+DESIGN_METHOD_GAIN_STATUS: NOT_ASSESSED
+DIRECT_EVIDENCE_RESULT: PASS
+```
+
+This is the first successful executable-protocol Design boundary validation.
+It validates the Design-side separation only; DSD Optimization itself is not validated by this case.
+
 ## Minimum evidence architecture before promotion consideration
 
 1. dedicated Design protocol — **established at v0.1**;
 2. positive constructed case — **DES-CH-001 PASS**;
 3. negative/failure case — **DES-CH-002 PASS**;
-4. boundary case;
+4. boundary case — **DES-CH-004 PASS after DES-CH-003 test-design failure was preserved**;
 5. `NO_GAIN` case;
 6. reproducibility/retrace record;
 7. at least one external or independently generated application case;
@@ -165,10 +235,12 @@ A later maturity audit evaluates the accumulated corpus; the checklist itself do
 
 ```text
 DEDICATED_PROTOCOL: v0.1 established
-DIRECT_CONSTRUCTED_PILOTS: 2
+DIRECT_CONSTRUCTED_PILOTS: 4
 POSITIVE_CASES: 1
 NEGATIVE_OR_FAILURE_CASES: 1
-BOUNDARY_CASES_UNDER_PROTOCOL: 0
+BOUNDARY_CASES_UNDER_PROTOCOL: 2 attempted
+BOUNDARY_VALIDATION_PASSES: 1
+BOUNDARY_TEST_DESIGN_FAILURES: 1
 NO_GAIN_CASES: 0
 EXTERNAL_APPLICATIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
@@ -178,6 +250,6 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 
 ## Immediate next evidence task
 
-Run a **boundary constructed Design challenge** under a separately pre-frozen Protocol v0.1 record.
+Run a separately precommitted **`NO_GAIN` Design challenge** under Protocol v0.1 with a strongest reasonable baseline locked before comparison.
 
-The strongest next boundary pressure is Design versus Optimization: two or more candidates should remain admissible under hard constraints, while an explicit objective would rank them. Design must stop at the admissible family or a task-authorized non-optimization result and must not absorb the Optimization verdict.
+The challenge should allow the DSD Design result to be correct while demonstrating that the DSD procedure adds no material gain over the baseline on the declared gain criterion.
