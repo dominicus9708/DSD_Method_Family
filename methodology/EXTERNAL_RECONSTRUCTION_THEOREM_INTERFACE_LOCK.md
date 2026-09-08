@@ -154,7 +154,7 @@ The sufficient exact lock is sequential operational limit admission in the finit
 \exists\omega\in\Omega:\ \iota(\omega)=v.
 \]
 
-In finite dimension, this yields closedness; bounded probability coordinates then yield compactness.
+In finite dimension, this yields closedness; bounded probability coordinates then yields compactness.
 
 Current provenance remains:
 
@@ -296,3 +296,82 @@ CFE-QM
 ```
 
 The theorem-transfer gate remains blocked. The ETC tensor result adds interface precision, but because it depends on Class-C/D inputs it contributes no new independent A/B evidence that generic DSD derived quantum theory.
+
+## 11. QM Core 004I resolution — ULRRDE-QM
+
+QM Core 004I tested whether one designated recursive restriction, connected pure-state transitivity, or selected retained dynamics can be universalized to the exact Subspace-Axiom equivalence used by the comparator.
+
+A concrete finite-dimensional countermodel uses
+
+\[
+K=D^2\times D^2
+\]
+
+with the maximal affine effect carrier and reversible group
+
+\[
+G=SO(2)\times SO(2).
+\]
+
+The state space is compact and convex, the no-restriction effect condition is satisfied, and the connected reversible group acts transitively on the pure-state set `S^1 x S^1`. Its operational capacity is exactly two.
+
+Nevertheless two complete binary measurements have inequivalent zero faces:
+
+```text
+diagonal effect    e_D = 1/2 + (x_1+y_1)/4
+zero face          singleton
+
+single-factor      e_X = (1+x_1)/2
+zero face          D^2
+```
+
+Thus one designated `Q_2 -> Q_1` recursive face can pass while another complete measurement fails. The same model has distinct complete-frame orbits, so connected pure-state transitivity does not imply transitivity on complete measurements.
+
+A second dynamics control separates a selected retained subgroup from the full face-preserving reversible group:
+
+```text
+selected retained dynamics  SO(2)
+full face group              O(2)
+```
+
+so selected-dynamics intertwining does not establish full dynamical-state-space equivalence.
+
+The exact universal lock is therefore decomposed into:
+
+```text
+LFRR-QM  Linear Full Reference Recursion
+CMT-QM   Complete-Measurement Transitivity
+```
+
+If one reference complete measurement has linear lower-capacity equivalence for every excluded outcome together with conjugacy of the full face-preserving reversible group, and every complete measurement is reversibly transported to the reference measurement up to outcome permutation, then every zero face inherits the lower-capacity equivalence.
+
+Formally,
+
+\[
+\boxed{
+\mathrm{LFRR\!-\!QM}+\mathrm{CMT\!-\!QM}
+\Longrightarrow
+\mathrm{ULRRDE\!-\!QM}.
+}
+\]
+
+The universal quantifier is therefore a conditional theorem-interface consequence rather than a separate monolithic primitive lock.
+
+Provenance remains conservative:
+
+```text
+RRDE-QM      C  TARGET_SPECIALIZATION_SELECTOR
+LFRR-QM      D  EXACT_COMPARATOR_REFINEMENT
+CMT-QM       D  EXACT_COMPARATOR_LOCK
+ULRRDE-QM       CONDITIONAL_DERIVATION FROM D INPUTS
+```
+
+No generic DSD theorem supplies LFRR-QM or CMT-QM. Formation/property restriction and submodel structure remain weaker than lower-physical-type equivalence, while DSD Dynamics/lineage does not identify the complete reversible stabilizer of a retained face.
+
+After 004I the only still-unresolved exact target from the original 004E five-lock list is:
+
+```text
+CFE-QM
+```
+
+The theorem-transfer gate remains blocked until CFE-QM is classified and all Class-C/D inputs required for a chosen comparator instantiation are explicitly adopted or independently justified.
