@@ -51,6 +51,7 @@ Method boundary:
 - Multiple admissible targets are not a Design failure when the declared output is a design space or an admissible target. Choosing the best one by preference/objective belongs to Optimization.
 - Soft preferences are not silently promoted to hard constraints by Design; any such revision must come from an explicit upstream/task-authority change with provenance.
 - When Design consumes a substantive neighboring-method verdict, that handoff is recorded and the neighboring method remains separately identifiable.
+- Material distinctness for `UNIQUE_TARGET` and `DESIGN_UNDERDETERMINED` is judged at the declared `TARGET_RESOLUTION`; candidate IDs or downstream-only metadata are insufficient by themselves.
 - Combined workflows are allowed, but method verdicts and direct evidence remain separate.
 
 Boundary: DSD Design structures design decisions but does not replace engineering, architectural, artistic, organizational, or other domain design knowledge and does not assume a universal candidate generator.
@@ -61,6 +62,8 @@ Boundary: DSD Design structures design decisions but does not replace engineerin
 - Direct evidence lane: [`../../evidence/method_specific/design/`](../../evidence/method_specific/design/)
 - `DES-CH-001` — positive constructed challenge, `PASS`.
 - `DES-CH-002` — negative/failure terminal-status challenge, `PASS`.
+- `DES-CH-003` — first Design/Optimization boundary attempt, `FAIL_AS_PRECOMMITTED_CHALLENGE` due to challenge-design defect; no protocol failure inferred.
+- `DES-CH-004` — corrected Design/Optimization boundary challenge, `PASS`.
 
 `DES-CH-001` returned exactly `{T1,T2}` as admissible while preserving `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED != CHANNEL_ABSENCE` and using no hidden Optimization.
 
@@ -77,19 +80,23 @@ required predecessor identity unavailable
 -> DESIGN_BLOCKED
 ```
 
-All three subcases were `CONFORMANT`; no missing predecessor data was fabricated and no non-exhaustive failure-to-find was promoted to infeasibility.
+`DES-CH-003` revealed that its candidate differences existed only in `resource_cost`, which the same precommit had excluded from the Design target resolution. The planned underdetermination result was therefore not supported; the failed case was preserved without post-hoc repair.
+
+`DES-CH-004` prospectively corrected the test by placing `reserve_mode = MODE_A / MODE_B / MODE_C` inside the target resolution. All three targets remained Design-admissible, while `resource_cost` remained only a downstream Optimization objective. The Design-space subcase returned all three; the `UNIQUE_TARGET` subcase correctly returned `DESIGN_UNDERDETERMINED` rather than selecting the cheapest target.
 
 ```text
-DIRECT_CONSTRUCTED_PILOTS: 2
+DIRECT_CONSTRUCTED_PILOTS: 4
 POSITIVE_CASES: 1
 NEGATIVE_OR_FAILURE_CASES: 1
-BOUNDARY_CASES_UNDER_PROTOCOL: 0
+BOUNDARY_CASES_UNDER_PROTOCOL: 2 attempted
+BOUNDARY_VALIDATION_PASSES: 1
+BOUNDARY_TEST_DESIGN_FAILURES: 1
 NO_GAIN_CASES: 0
 EXTERNAL_APPLICATIONS: 0
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The current pilots are direct evidence for Protocol v0.1 execution only; they do not establish external applicability, baseline superiority, independent agreement, or method maturity.
+The current pilots are direct evidence for Protocol v0.1 execution only; they do not establish external applicability, baseline superiority, independent agreement, Optimization validity, or method maturity.
 
 ## Development records
 
@@ -102,6 +109,12 @@ The current pilots are direct evidence for Protocol v0.1 execution only; they do
 
 ## Next development step
 
-Precommit and run the first **boundary constructed Design challenge** under Protocol v0.1.
+Precommit and run the first **`NO_GAIN` constructed Design challenge** under Protocol v0.1.
 
-The next pressure point is Design versus Optimization: keep at least two targets admissible under hard constraints while an explicit objective would rank them, and verify that Design does not silently absorb the objective-based selection.
+Lock a strongest reasonable baseline and gain criterion before evaluation. A correct Design result may still end with:
+
+```text
+DESIGN_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+when the baseline is equally sufficient on the declared comparison criterion.
