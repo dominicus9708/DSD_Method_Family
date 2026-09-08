@@ -52,15 +52,16 @@ REPRODUCIBILITY_RECORD:
 - [`design/`](design/) — **DSD Design / DSD 설계론**
   - Protocol v0.1 established on `2026-09-08`;
   - current method evidence status: `validation_in_progress`;
-  - direct constructed pilots: `1`;
+  - direct constructed pilots: `2`;
   - positive cases: `1` (`DES-CH-001`, PASS);
-  - negative/failure cases: `0`;
+  - negative/failure cases: `1` (`DES-CH-002`, PASS);
   - boundary cases under executable protocol: `0`;
   - `NO_GAIN` cases: `0`;
   - external applications: `0`;
   - independent evaluator validation: `not established`;
   - `DES-CH-001` precommitted an exhaustive four-candidate symbolic Design space before scoring, preserved `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED != CHANNEL_ABSENCE`, returned `{T1,T2}` as the admissible family, and used no hidden Optimization;
-  - next required evidence: a separately precommitted negative/failure case distinguishing `DESIGN_INFEASIBLE`, `DESIGN_UNDERDETERMINED`, and `DESIGN_BLOCKED` without unsupported global no-solution claims.
+  - `DES-CH-002` precommitted three non-success subcases and distinguished `DESIGN_INFEASIBLE` from `DESIGN_UNDERDETERMINED` and `DESIGN_BLOCKED` with 20/20 required checks passed; non-exhaustive failure-to-find was not promoted to infeasibility and missing predecessor identity was not fabricated;
+  - next required evidence: a separately precommitted boundary case under Protocol v0.1, preferably Design versus Optimization.
 
 ### Current Specification-specific boundaries
 
