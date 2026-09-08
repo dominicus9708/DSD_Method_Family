@@ -253,6 +253,59 @@ CHALLENGE_VERDICT: PASS
 
 The Design/Optimization boundary is therefore directly supported at pilot level without counting this as Optimization-method validation.
 
+### `DES-CH-005` — first NO_GAIN pilot
+
+The precommit froze the baseline, gain criteria, candidate family, expected outputs, and evidence-count rule before evaluation.
+
+Baseline:
+
+```text
+B0_EXPLICIT_CONSTRAINT_MATRIX
+```
+
+Frozen task:
+
+```text
+CANDIDATES: {N1,N2,N3}
+H1 q_primary admitted
+H2 q_reserve admitted
+TARGET_RESOLUTION:
+  exact admission state of q_primary, q_reserve, q_aux
+```
+
+Both B0 and DSD Design returned the same claim-relevant result:
+
+```text
+admissible family -> {N1,N2}
+N3 -> rejected on H2
+N1 != N2 at TARGET_RESOLUTION -> preserved
+unsupported uniqueness/Optimization closure -> none
+```
+
+The four precommitted gain dimensions were not established:
+
+```text
+G1 distinction-preservation gain: not established
+G2 rejection-traceability gain: not established
+G3 unsupported-closure-avoidance gain: not established
+G4 retraceability gain: not established
+```
+
+Result:
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 25
+PASSED: 25
+FAILED: 0
+TERMINAL_DESIGN_STATUS: DESIGN_ADMISSIBLE
+DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT
+DESIGN_METHOD_GAIN_STATUS: NO_GAIN
+CHALLENGE_VERDICT: PASS
+```
+
+This is the first direct confirmation that a correct, conformant Design run may still add no demonstrated method gain over a competent baseline on the declared task.
+Extra DSD bookkeeping is not counted as gain by itself.
+
 Evidence limit for all pilots: constructed same-session evidence only.
 
 ## DSD layer policy / DSD 층위 정책
@@ -275,8 +328,8 @@ No bridge is inferred from a property name, intuition, or shared vocabulary alon
 4. ✅ Run first positive constructed pilot: `DES-CH-001` PASS.
 5. ✅ Run first negative/failure constructed pilot: `DES-CH-002` PASS.
 6. ✅ Run executable boundary stage: `DES-CH-003` failed test design preserved; corrected `DES-CH-004` PASS.
-7. **Next:** run a `NO_GAIN` pilot.
-8. Compare against a strongest reasonable baseline where applicable.
+7. ✅ Run first `NO_GAIN` pilot: `DES-CH-005` PASS.
+8. **Next:** compare against a broader strongest reasonable baseline.
 9. Run at least one external or independently generated application case.
 10. Record reproducibility/retrace results.
 11. Run a DSD Audit maturity review.
@@ -304,13 +357,14 @@ Current direct evidence state:
 
 ```text
 DEDICATED_PROTOCOL: v0.1 established
-DIRECT_CONSTRUCTED_PILOTS: 4
+DIRECT_CONSTRUCTED_PILOTS: 5
 POSITIVE_CASES: 1
 NEGATIVE_OR_FAILURE_CASES: 1
 BOUNDARY_CASES_UNDER_PROTOCOL: 2 attempted
 BOUNDARY_VALIDATION_PASSES: 1
 BOUNDARY_TEST_DESIGN_FAILURES: 1
-NO_GAIN_CASES: 0
+NO_GAIN_CASES: 1
+NO_GAIN_VALIDATION_PASSES: 1
 EXTERNAL_APPLICATIONS: 0
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
@@ -323,15 +377,16 @@ Historical runs are preserved under the protocol version used at execution time;
 
 ## Next step / 다음 단계
 
-Precommit and run the first **`NO_GAIN` Design challenge** under Protocol v0.1.
+Precommit and run a broader **strongest-reasonable-baseline comparison** under Protocol v0.1.
 
-The next case should lock a strongest reasonable baseline before evaluation and permit the result:
+`DES-CH-005` used the strongest reasonable comparator for a deliberately simple synthetic finite task, but that narrow case does not by itself close the broader baseline evidence requirement.
+
+The next baseline case should provide a competent non-DSD procedure a genuine chance to:
 
 ```text
-Design result correct
-+ protocol conformant
-+ baseline equally sufficient on the declared gain criterion
--> DESIGN_METHOD_GAIN_STATUS: NO_GAIN
+match DSD
+or outperform DSD
+or lose a precommitted claim-relevant distinction
 ```
 
-A `NO_GAIN` result is not a Design failure.
+with baseline, gain criteria, task resolution, and scoring locked before evaluation.
