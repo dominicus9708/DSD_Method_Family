@@ -346,3 +346,99 @@ evidence/method_specific/design/README.md: 93c3608
 ### Next technical step
 
 Run a separately precommitted **negative/failure Design challenge** under Protocol v0.1. The case should test a genuine non-success terminal outcome while preserving the distinction between `DESIGN_INFEASIBLE`, `DESIGN_UNDERDETERMINED`, and `DESIGN_BLOCKED`.
+
+---
+
+## 2026-09-08 — Step 5: DES-CH-002 negative/failure constructed challenge
+
+Status: **PASS / first direct negative-failure Design pilot**
+
+### Precommit
+
+Created before evaluation:
+
+- `evidence/method_specific/design/DES-CH-002_precommit.md`
+- precommit commit: `1c40630`
+
+The precommit froze three subcases under one case ID:
+
+```text
+Case I  exhaustive no-solution
+Case U  non-exhaustive failure-to-find
+Case B  missing claim-required predecessor
+```
+
+The challenge explicitly required the three outcomes to remain distinct.
+
+### Executed result
+
+Created after the precommit:
+
+- `evidence/method_specific/design/DES-CH-002_negative-terminal-status-separation.md`
+- result commit: `65b47c9`
+
+Result:
+
+```text
+Case I
+  exhaustive family I1-I2
+  all candidates rejected on explicit hard constraints
+  -> DESIGN_INFEASIBLE
+
+Case U
+  non_exhaustive evaluated sample U1-U2
+  no admissible candidate found
+  global no-target claim unsupported
+  -> DESIGN_UNDERDETERMINED
+
+Case B
+  required predecessor P_B identity unavailable
+  candidate B1 cannot establish H1 without fabrication
+  -> DESIGN_BLOCKED
+```
+
+Case B additionally demonstrated the valid combination:
+
+```text
+DESIGN_BLOCKED + CONFORMANT
+```
+
+because the protocol correctly exposed the missing prerequisite instead of inventing it.
+
+### Precommitted score
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 20
+PASSED: 20
+FAILED: 0
+CHALLENGE_VERDICT: PASS
+```
+
+### Three-ledger result
+
+```text
+Case I: DESIGN_INFEASIBLE / CONFORMANT / NOT_ASSESSED
+Case U: DESIGN_UNDERDETERMINED / CONFORMANT / NOT_ASSESSED
+Case B: DESIGN_BLOCKED / CONFORMANT / NOT_ASSESSED
+```
+
+No hidden Optimization, inactive-layer rescue, candidate-basis change, unsupported exhaustiveness claim, or predecessor fabrication occurred.
+
+### Evidence status after DES-CH-002
+
+```text
+DEDICATED_PROTOCOL: v0.1 established
+DIRECT_CONSTRUCTED_PILOTS: 2
+POSITIVE_CASES: 1
+NEGATIVE_OR_FAILURE_CASES: 1
+BOUNDARY_CASES_UNDER_PROTOCOL: 0
+NO_GAIN_CASES: 0
+EXTERNAL_APPLICATIONS: 0
+CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
+```
+
+The three subcases count as one direct pilot because they belong to one precommitted case ID, `DES-CH-002`.
+
+### Next technical step
+
+Run a separately precommitted **boundary Design challenge** under Protocol v0.1. The strongest next pressure point is Design versus Optimization: admissibility must remain separate from objective-based ranking or selection.
