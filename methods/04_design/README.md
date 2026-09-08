@@ -66,6 +66,7 @@ Boundary: DSD Design structures design decisions but does not replace engineerin
 - `DES-CH-003` — first Design/Optimization boundary attempt, `FAIL_AS_PRECOMMITTED_CHALLENGE` due to challenge-design defect; no protocol failure inferred.
 - `DES-CH-004` — corrected Design/Optimization boundary challenge, `PASS`.
 - `DES-CH-005` — first `NO_GAIN` baseline-equivalence challenge, `PASS`.
+- `DES-CH-006` — broader strongest-reasonable-baseline comparison, `PASS` with `NO_GAIN`.
 
 `DES-CH-001` returned exactly `{T1,T2}` as admissible while preserving `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED != CHANNEL_ABSENCE` and using no hidden Optimization.
 
@@ -94,10 +95,29 @@ CONFORMANT
 NO_GAIN
 ```
 
-This confirms that extra DSD bookkeeping or terminology alone is not counted as method gain.
+`DES-CH-006` then raised the baseline pressure from a simple Formation-only fixture to a mixed Formation + General-Property task with 15 candidates, multiple typed property non-success states, full multi-constraint rejection sets, and both `DESIGN_SPACE` and `UNIQUE_TARGET` subcases. The frozen `B1_TYPED_ADMISSIBILITY_TABLE` was explicitly allowed to preserve the same typed states and output-level restraint. B1 matched DSD on every measured dimension:
 
 ```text
-DIRECT_CONSTRUCTED_PILOTS: 5
+Case S:
+  B1  -> {A1,A2}
+  DSD -> {A1,A2} / DESIGN_ADMISSIBLE
+
+Case U:
+  B1  -> NOT_UNIQUE_AT_DECLARED_RESOLUTION
+  DSD -> DESIGN_UNDERDETERMINED
+
+failure sets:
+  B1 == DSD
+
+G1-G5: all NOT_ESTABLISHED
+DESIGN_METHOD_GAIN_STATUS: NO_GAIN
+PRECOMMITTED_REQUIRED_CHECKS: 54/54 PASS
+```
+
+This fills the strongest-reasonable-baseline comparison category at the constructed-evidence level. It does not establish Design superiority; the competent baseline matched DSD on the frozen claim-relevant dimensions.
+
+```text
+DIRECT_CONSTRUCTED_PILOTS: 6
 POSITIVE_CASES: 1
 NEGATIVE_OR_FAILURE_CASES: 1
 BOUNDARY_CASES_UNDER_PROTOCOL: 2 attempted
@@ -105,11 +125,14 @@ BOUNDARY_VALIDATION_PASSES: 1
 BOUNDARY_TEST_DESIGN_FAILURES: 1
 NO_GAIN_CASES: 1
 NO_GAIN_VALIDATION_PASSES: 1
+BASELINE_COMPARISON_CASES: 1
+BASELINE_COMPARISON_PASSES: 1
+BASELINE_COMPARISON_RESULT: NO_GAIN
 EXTERNAL_APPLICATIONS: 0
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The current pilots are direct evidence for Protocol v0.1 execution only; they do not establish external applicability, broad baseline superiority, independent agreement, Optimization validity, or method maturity.
+The current pilots are direct evidence for Protocol v0.1 execution only; they do not establish external applicability, independent agreement, Optimization validity, or method maturity.
 
 ## Development records
 
@@ -122,6 +145,6 @@ The current pilots are direct evidence for Protocol v0.1 execution only; they do
 
 ## Next development step
 
-Run a broader **strongest-reasonable-baseline comparison** under a new precommit.
+Run the first **external or independently generated Design application** under Protocol v0.1.
 
-Unlike `DES-CH-005`, the next comparison should not be intentionally trivial. It should give a competent non-DSD baseline a genuine opportunity to match, outperform, or lose a precommitted claim-relevant distinction, while keeping the baseline and gain criteria fixed before evaluation.
+The application should use an external source whose actual requirements can be frozen without reinterpretation, identify a reproducible candidate/construction basis, and keep domain authority separate from the DSD Design verdict.
