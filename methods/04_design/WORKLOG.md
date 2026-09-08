@@ -442,3 +442,112 @@ The three subcases count as one direct pilot because they belong to one precommi
 ### Next technical step
 
 Run a separately precommitted **boundary Design challenge** under Protocol v0.1. The strongest next pressure point is Design versus Optimization: admissibility must remain separate from objective-based ranking or selection.
+
+---
+
+## 2026-09-08 — Step 6: Design / Optimization boundary validation
+
+Status: **completed with one preserved failed challenge and one corrected PASS**
+
+### DES-CH-003 — first boundary attempt
+
+Precommit:
+
+- `evidence/method_specific/design/DES-CH-003_precommit.md`
+- precommit commit: `0d1abcf`
+
+Result:
+
+- `evidence/method_specific/design/DES-CH-003_boundary-design-optimization.md`
+- result commit: `d15aaec`
+
+The challenge attempted to keep `O1-O3` as multiple Design targets while using `resource_cost` only as downstream Optimization metadata.
+However the frozen `TARGET_RESOLUTION` included only channel admission and readiness definedness.
+Because the only differences among `O1-O3` were their `resource_cost` values, the three records were not materially distinct Design targets at the declared Design resolution.
+
+The precommitted `UNIQUE_TARGET -> DESIGN_UNDERDETERMINED` expectation therefore failed.
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 21
+PASSED: 20
+FAILED: 1
+CHALLENGE_VERDICT: FAIL_AS_PRECOMMITTED_CHALLENGE
+FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
+PROTOCOL_FAILURE_INFERRED: no
+POST_HOC_REPAIR_PERFORMED: no
+```
+
+The failed challenge was preserved without rewriting.
+It exposed a useful rule: target uniqueness and underdetermination must be evaluated relative to the declared target resolution, not candidate IDs or downstream-only metadata.
+
+### DES-CH-004 — corrected boundary challenge
+
+A new case ID was created rather than modifying `DES-CH-003`.
+
+Precommit:
+
+- `evidence/method_specific/design/DES-CH-004_precommit.md`
+- precommit commit: `47d73f6`
+
+The correction placed a categorical property inside the Design target resolution:
+
+```text
+reserve_mode(q_reserve) = MODE_A / MODE_B / MODE_C
+```
+
+All three values were permitted by the Design hard constraints, so `C1-C3` remained materially distinct and Design-admissible.
+The downstream-only objective remained:
+
+```text
+minimize resource_cost
+```
+
+Executed result:
+
+- `evidence/method_specific/design/DES-CH-004_boundary-design-optimization-corrected.md`
+- result commit: `0a89bde`
+
+```text
+Case S: DESIGN_SPACE
+  -> {C1,C2,C3}
+  -> DESIGN_ADMISSIBLE
+
+Case U: UNIQUE_TARGET
+  -> C1,C2,C3 materially distinct and admissible
+  -> no Design-side determinacy rule
+  -> DESIGN_UNDERDETERMINED
+
+DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT in both subcases
+DESIGN_METHOD_GAIN_STATUS: NOT_ASSESSED
+HIDDEN_OPTIMIZATION: no
+```
+
+Precommitted score:
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 23
+PASSED: 23
+FAILED: 0
+CHALLENGE_VERDICT: PASS
+```
+
+### Step-6 evidence state
+
+```text
+DIRECT_CONSTRUCTED_PILOTS: 4
+POSITIVE_CASES: 1
+NEGATIVE_OR_FAILURE_CASES: 1
+BOUNDARY_CASES_UNDER_PROTOCOL: 2 attempted
+BOUNDARY_VALIDATION_PASSES: 1
+BOUNDARY_TEST_DESIGN_FAILURES: 1
+NO_GAIN_CASES: 0
+EXTERNAL_APPLICATIONS: 0
+CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
+```
+
+The successful boundary evidence validates only the Design-side separation from Optimization.
+It does not validate the proposed Optimization method itself.
+
+### Next technical step
+
+Precommit and run a `NO_GAIN` Design challenge with a strongest reasonable baseline and explicit gain criterion locked before comparison.
