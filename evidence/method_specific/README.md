@@ -49,6 +49,15 @@ REPRODUCIBILITY_RECORD:
   - first maturity audit predates `SPEC-APP-002`, `SPEC-CH-007`, and `SPEC-APP-003` and remains preserved;
   - current status remains `developing` until a new re-audit is explicitly performed.
 
+- [`design/`](design/) — **DSD Design / DSD 설계론**
+  - planning lane opened on `2026-09-08`;
+  - current method status: `planning / proposed`;
+  - dedicated protocol: `not yet established`;
+  - direct constructed pilots: `0`;
+  - external applications: `0`;
+  - independent evaluator validation: `not established`;
+  - first required step: lock the Design-specific task interface and minimum valid output before running pilots.
+
 ### Current Specification-specific boundaries
 
 Guardrail ledger:
