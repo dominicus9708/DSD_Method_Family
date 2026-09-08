@@ -261,7 +261,56 @@ DIRECT_EVIDENCE_RESULT: PASS
 This is the first successful direct `NO_GAIN` Design pilot.
 It confirms that extra DSD notation or bookkeeping is not counted as gain by itself and that a correct, conformant Design execution may add no demonstrated benefit over a competent baseline for the declared task.
 
-Because B0 was intentionally a simple same-session synthetic comparator, this case does not by itself close the broader strongest-reasonable-baseline requirement for method maturity.
+Because B0 was intentionally a simple same-session synthetic comparator, this case did not by itself close the broader strongest-reasonable-baseline requirement.
+
+### `DES-CH-006` — broader typed strongest-reasonable-baseline comparison
+
+Files:
+
+- `DES-CH-006_precommit.md` — 15 candidates, Formation + General Property, baseline state vocabulary, gain criteria, and 54 required checks frozen before evaluation; precommit commit `3a44350`.
+- `DES-CH-006_broader-typed-baseline-comparison.md` — executed result; result commit `c3708c3`.
+
+Frozen comparator:
+
+```text
+B1_TYPED_ADMISSIBILITY_TABLE
+```
+
+B1 was intentionally competent rather than Boolean-only. It preserved separate structural/property columns and seven typed property-state classes, recorded full hard-constraint failure sets, and had an explicit `NOT_UNIQUE_AT_DECLARED_RESOLUTION` result.
+
+Both B1 and DSD evaluated the same exhaustive family A1-A15 under H1-H4.
+
+Result:
+
+```text
+Case S:
+  B1  -> {A1,A2}
+  DSD -> {A1,A2} / DESIGN_ADMISSIBLE
+
+Case U:
+  B1  -> NOT_UNIQUE_AT_DECLARED_RESOLUTION
+  DSD -> DESIGN_UNDERDETERMINED
+
+candidate failure sets:
+  B1  == DSD for A3-A15
+
+G1 status-distinction gain: not established
+G2 rejection-traceability gain: not established
+G3 structure/property-separation gain: not established
+G4 output-level-closure gain: not established
+G5 retraceability gain: not established
+
+DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT in both DSD subcases
+DESIGN_METHOD_GAIN_STATUS: NO_GAIN
+PRECOMMITTED_REQUIRED_CHECKS: 54
+PASSED: 54
+FAILED: 0
+DIRECT_EVIDENCE_RESULT: PASS
+```
+
+This fills the Design `baseline_comparison` evidence category at the constructed-evidence level.
+It does not establish DSD superiority; on the frozen measured dimensions, the competent typed baseline matched DSD.
+Independent evaluation and external application remain open.
 
 ## Minimum evidence architecture before promotion consideration
 
@@ -272,7 +321,7 @@ Because B0 was intentionally a simple same-session synthetic comparator, this ca
 5. `NO_GAIN` case — **DES-CH-005 PASS**;
 6. reproducibility/retrace record;
 7. at least one external or independently generated application case;
-8. strongest-reasonable-baseline comparison when applicable.
+8. strongest-reasonable-baseline comparison — **DES-CH-006 PASS at constructed-evidence level; result NO_GAIN**.
 
 A later maturity audit evaluates the accumulated corpus; the checklist itself does not confer maturity.
 
@@ -280,7 +329,7 @@ A later maturity audit evaluates the accumulated corpus; the checklist itself do
 
 ```text
 DEDICATED_PROTOCOL: v0.1 established
-DIRECT_CONSTRUCTED_PILOTS: 5
+DIRECT_CONSTRUCTED_PILOTS: 6
 POSITIVE_CASES: 1
 NEGATIVE_OR_FAILURE_CASES: 1
 BOUNDARY_CASES_UNDER_PROTOCOL: 2 attempted
@@ -288,14 +337,16 @@ BOUNDARY_VALIDATION_PASSES: 1
 BOUNDARY_TEST_DESIGN_FAILURES: 1
 NO_GAIN_CASES: 1
 NO_GAIN_VALIDATION_PASSES: 1
+BASELINE_COMPARISON_CASES: 1
+BASELINE_COMPARISON_PASSES: 1
+BASELINE_COMPARISON_RESULT: NO_GAIN
 EXTERNAL_APPLICATIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
-BROAD_BASELINE_BENEFIT: not established
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
 ## Immediate next evidence task
 
-Run a broader **strongest-reasonable-baseline comparison** that is not deliberately reduced to a trivial finite fixture.
+Run the first **external or independently generated Design application** under Protocol v0.1.
 
-The next comparison should use a task where a competent non-DSD baseline has a genuine opportunity either to match DSD, outperform it, or lose a precommitted claim-relevant distinction. The comparison criterion and baseline must again be frozen before execution.
+The application must preserve the external source's own requirements rather than inventing them, explicitly identify the candidate/construction basis, and keep any domain-standard or neighboring-method authority separate from the DSD Design verdict.
