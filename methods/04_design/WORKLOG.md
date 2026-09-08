@@ -16,7 +16,7 @@ evidence/method_specific/design/
 ### Initial decisions
 
 - Design remains an independent method under **Field III: Construction & Transformation**.
-- Primary DSD sources are Formation + General Property.
+- Formation is the primary structural interface; General Property is activated only when typed property requirements materially enter the target.
 - Static Aggregation and Dynamics remain optional and task-activated.
 - Specification may provide locked goals/constraints upstream, but Specification and Design are not merged.
 - Synthesis, Transformation, and Optimization remain neighboring but distinct methods.
@@ -54,3 +54,72 @@ MATURITY_AUDIT: not yet performed
 ```
 
 No maturity claim is made at this stage.
+
+---
+
+## 2026-09-08 — Step 1: task interface and minimum valid output
+
+Status: **planning step 1 complete at draft level**
+
+Created:
+
+- `TASK_INTERFACE_v0.1-draft.md`
+
+### Main results
+
+1. A Design task must lock its goals, hard constraints, output level, target resolution, predecessor/base structure, target DSD layer scope, candidate/construction basis, candidate-generation rule, candidate coverage, domain bridge, and external standard where required.
+2. DSD Design does not contain a universal candidate generator and does not fabricate missing domain design knowledge.
+3. Candidate coverage is explicitly classified as `exhaustive / non_exhaustive / unknown`.
+4. `DESIGN_INFEASIBLE` requires exhaustive candidate coverage or an explicit impossibility argument; non-exhaustive failure-to-find is not a global infeasibility result.
+5. The earlier provisional `DESIGN_ACCEPTED` label is replaced with `DESIGN_ADMISSIBLE` to avoid conflating structural admissibility with downstream approval or optimization.
+6. Terminal Design status is separated from method-gain status.
+
+```text
+TERMINAL_DESIGN_STATUS:
+  DESIGN_ADMISSIBLE
+  DESIGN_INFEASIBLE
+  DESIGN_UNDERDETERMINED
+  DESIGN_BLOCKED
+
+DESIGN_METHOD_GAIN_STATUS:
+  GAIN_ESTABLISHED
+  NO_GAIN
+  NOT_ASSESSED
+```
+
+7. Multiple admissible candidates are an ordinary Design success when the task asks for a design space or an admissible target. Selecting the best alternative by an objective belongs to DSD Optimization.
+8. Minimum valid output is defined for successful and non-success executions, including traceable target/rejection/status basis and reproducibility fields.
+
+### Source-interface consistency notes
+
+The task interface follows the current DSD interface profile:
+
+- Formation status distinctions remain preserved.
+- General Property remains a typed extension over a fixed Stage-VI formation background and cannot silently rewrite formation identity.
+- Static Aggregation is optional and does not support reconstruction from aggregate equality without an additional condition.
+- Dynamics is optional; formation-level identity changes require explicit lineage rather than ordinary value evolution.
+- Optional geometric/specialization data are not universal Property coordinates.
+
+### Evidence status after Step 1
+
+This planning artifact is **not** counted as a direct Design pilot.
+
+```text
+DIRECT_CONSTRUCTED_PILOTS: 0
+EXTERNAL_APPLICATIONS: 0
+CURRENT_PROTOCOL: not established
+CURRENT_METHOD_STATUS: planning / proposed
+```
+
+### Next technical step
+
+Build method-boundary counterexamples against:
+
+```text
+Specification
+Synthesis
+Transformation
+Optimization
+```
+
+The purpose is to try to break the draft task-interface boundary before drafting `PROTOCOL_v0.1.md`.
