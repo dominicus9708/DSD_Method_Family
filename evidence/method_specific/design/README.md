@@ -1,8 +1,10 @@
 # DSD Design Direct Evidence / DSD 설계론 직접 증거
 
-Status: **Protocol v0.1 established / validation in progress**
+Status: **Protocol v0.1 established / maturity: developing / validation in progress**
 
 This lane records evidence that directly tests **DSD Design / DSD 설계론**. Evidence from other DSD methods or shared-core validation does not automatically count as direct Design validation.
+
+A Design maturity audit is an **Audit meta-record** and does not increase the Design direct-pilot count.
 
 ## Current protocol
 
@@ -133,54 +135,67 @@ Files:
 - `DES-CH-007_precommit.md` — immutable artifact manifest and 44 checks frozen before retrace scoring; precommit `d6d9103`.
 - `DES-CH-007_retrace-des-app-001.md` — executed retrace; result `d666a41`.
 
-Frozen retrace anchors:
-
 ```text
-Protocol v0.1:
-  b3d658c839dfe60b65efbc44abf874e257d4a0e2
-DES-APP-001 precommit:
-  4847dbd1f5a38adb5d5c285b19ac41ebcfe86b96
-DES-APP-001 historical result:
-  32a7842758be0cc179f996fdd8035d9683d31da9
-```
-
-Re-execution from frozen Protocol + source precommit reconstructed exactly:
-
-```text
-candidate order W1-W10
-H0-H3
-external source/version
-bridge WCAG_APPLICATION_BRIDGE_001
-candidate verdicts and rejection sets
-admissible family {W1,W2,W3}
-DESIGN_ADMISSIBLE
-CONFORMANT
-NOT_ASSESSED
-```
-
-Retrace ledger:
-
-```text
-RETRACE_ARTIFACT_INTEGRITY:      PASS
-RETRACE_TASK_FIELD_MATCH:        PASS
-RETRACE_EXTERNAL_SOURCE_MATCH:   PASS
-RETRACE_BRIDGE_MATCH:            PASS
-RETRACE_CANDIDATE_RECORD_MATCH:  PASS
-RETRACE_CANDIDATE_VERDICT_MATCH: PASS
-RETRACE_REJECTION_BASIS_MATCH:   PASS
-RETRACE_ADMISSIBLE_FAMILY_MATCH: PASS
-RETRACE_TERMINAL_STATUS_MATCH:   PASS
-RETRACE_CONFORMANCE_MATCH:       PASS
-RETRACE_GAIN_LEDGER_MATCH:       PASS
-RETRACE_RESULT:                  PASS
-
+RETRACE_RESULT: PASS
 PRECOMMITTED_REQUIRED_CHECKS: 44/44 PASS
+REPRODUCIBILITY_LEVEL: deterministic_same_project
 ```
 
-This fills the dedicated Design `reproducibility/retrace` category at the deterministic same-project level.
-It does **not** establish independent reproducibility: the same project/evaluator already knew the historical result, the run was non-blinded, and the historical result had been fetched to freeze its immutable identity before the retrace precommit.
+The retrace reproduced candidate verdicts, rejection bases, `{W1,W2,W3}`, the three Design ledgers, external source/version, and `WCAG_APPLICATION_BRIDGE_001` from frozen artifacts.
 
-## Minimum evidence architecture before promotion consideration
+It does **not** establish independent reproducibility: the same project/evaluator already knew the historical result and the run was non-blinded.
+
+## Audit meta-record registry
+
+### `DES-AUD-001` — first DSD Design maturity audit
+
+Files:
+- `DES-AUD-001_precommit.md` — maturity axes and 24 audit-discipline checks frozen before scoring; precommit `bf4c55c`.
+- `DES-AUD-001_maturity-review.md` — completed audit; result `b2316d4`.
+
+Audit ID:
+
+```text
+DSD-AUDIT-20260908-DESIGN-001
+```
+
+Maturity-axis result:
+
+```text
+M1  dedicated executable protocol                  PASS
+M2  positive/negative terminal discrimination      PASS
+M3  neighboring-method boundary discrimination     PASS
+M4  NO_GAIN preservation                           PASS
+M5  reproducibility/retraceability                 CONDITIONAL_PASS
+M6  external application origin                    PASS
+M7  strongest-reasonable-baseline comparison       PASS
+M8  external source fidelity and bridge discipline PASS
+M9  established-level evidence breadth             INSUFFICIENT
+M10 independent/practical-performance evidence     UNRESOLVED_BUT_BOUNDED
+M11 protocol pressure / unresolved core defect     PRESENT_NONFATAL
+M12 maximum-supported-claim discipline             PASS
+M13 candidate/construction-basis discipline        PASS
+M14 historical failure / anti-post-hoc preservation PASS
+```
+
+Final audit decision:
+
+```text
+MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
+AUDIT_EXECUTION_VERDICT: PASS
+PRECOMMITTED_REQUIRED_CHECKS: 24/24 PASS
+METHOD_MATURITY_CLASSIFICATION: developing
+PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
+PRIMARY_BLOCKER: insufficient external evidence breadth
+SECONDARY_BLOCKER: independent/practical evidence not established
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+DESIGN_DIRECT_PILOT_INCREMENT_FROM_AUDIT: 0
+```
+
+The maturity audit explicitly preserves `DES-CH-003`, both `NO_GAIN` results, same-project retrace limitations, and the single-domain/project-constructed-fixture limit of `DES-APP-001`.
+
+## Minimum evidence architecture
 
 1. dedicated Design protocol — **established at v0.1**;
 2. positive case — **DES-CH-001 PASS**;
@@ -191,7 +206,7 @@ It does **not** establish independent reproducibility: the same project/evaluato
 7. external or independently generated application — **DES-APP-001 PASS at single external-standard application level**;
 8. strongest-reasonable-baseline comparison — **DES-CH-006 PASS at constructed-evidence level; result NO_GAIN**.
 
-The minimum category architecture is now populated, but this does not confer maturity. Independent evaluator validation remains absent and must be discounted in the later maturity audit.
+The minimum category architecture is fully populated, but `DES-AUD-001` confirms that this does not confer established maturity.
 
 ## Current status
 
@@ -204,21 +219,22 @@ BOUNDARY_CASES_UNDER_PROTOCOL: 2 attempted
 BOUNDARY_VALIDATION_PASSES: 1
 BOUNDARY_TEST_DESIGN_FAILURES: 1
 NO_GAIN_CASES: 1
-NO_GAIN_VALIDATION_PASSES: 1
 BASELINE_COMPARISON_CASES: 1
-BASELINE_COMPARISON_PASSES: 1
 BASELINE_COMPARISON_RESULT: NO_GAIN
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_APPLICATIONS: 1
-EXTERNAL_APPLICATION_PASSES: 1
+EXTERNAL_DOMAINS: 1
 INDEPENDENT_EVALUATOR_VALIDATION: not established
+METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
 ## Immediate next evidence task
 
-Run a **DSD Audit maturity review** of the accumulated Design corpus.
+Address the primary maturity blocker rather than adding more same-project cases on already-covered axes.
 
-The audit must explicitly discount same-project/common-evaluator dependence, preserve the historical DES-CH-003 challenge-design failure, treat NO_GAIN results as valid non-superiority evidence rather than failures, and avoid automatic maturity promotion merely because all minimum evidence categories are populated.
+The next preferred task is a **second external Design application in a materially different domain**, ideally with a candidate/construction basis supplied by an external artifact, source, or independently generated option set rather than authored solely for the DSD challenge.
+
+After external breadth increases, prepare a genuinely independent evaluator packet. Practical benefit should be measured only when such a benefit is claimed.
