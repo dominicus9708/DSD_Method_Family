@@ -1,16 +1,16 @@
 # 04. DSD Design / DSD 설계론
 
-Status: **Protocol v0.1 executable / method validation pending**
+Status: **Protocol v0.1 / validation in progress**
 
 Task: construct or filter a target structure or admissible target family from declared goals, hard constraints, and an explicit candidate/construction basis rather than only analyze an already formed target.
 
 Primary DSD interface: Formation for new structural targets or a locked inherited Stage-VI formation background for downstream target design. General Property, Static Aggregation, Dynamics, and optional specialization are activated only when the declared task actually requires them.
 
 Typical sequence:
-`task/claim lock -> constraint-source lock -> candidate/construction-basis and coverage lock -> candidate family -> status-sensitive admissibility -> explicit domain/bridge/auxiliary checks -> admissible target family -> output-level check -> terminal Design status -> separate protocol-conformance and method-gain ledgers`.
+`task lock -> constraint-source lock -> candidate/construction-basis lock -> candidate family -> status-sensitive admissibility -> explicit domain/bridge checks -> admissible target family -> output-level check -> terminal Design status -> conformance ledger -> gain ledger`.
 
 Typical outputs:
-- admissible design space within declared candidate coverage;
+- admissible design space;
 - one or more admissible target structures when justified;
 - rejected-candidate reasons;
 - explicit property and bridge requirements when used;
@@ -26,7 +26,7 @@ DESIGN_UNDERDETERMINED
 DESIGN_BLOCKED
 ```
 
-Protocol conformance is recorded separately:
+Protocol conformance is separate:
 
 ```text
 DESIGN_PROTOCOL_CONFORMANCE:
@@ -53,44 +53,35 @@ Method boundary:
 - When Design consumes a substantive neighboring-method verdict, that handoff is recorded and the neighboring method remains separately identifiable.
 - Combined workflows are allowed, but method verdicts and direct evidence remain separate.
 
-Boundary: DSD Design structures design decisions but does not replace engineering, architectural, artistic, organizational, scientific, mathematical, legal, safety, or other domain design knowledge and does not assume a universal candidate generator.
+Boundary: DSD Design structures design decisions but does not replace engineering, architectural, artistic, organizational, or other domain design knowledge and does not assume a universal candidate generator.
 
-## Current protocol
+## Current protocol and evidence
 
-- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md) — **initial executable protocol; validation pending**.
+- Executable protocol: [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
+- Direct evidence lane: [`../../evidence/method_specific/design/`](../../evidence/method_specific/design/)
+- First direct pilot: `DES-CH-001` — positive constructed challenge, `PASS`.
 
-Protocol v0.1 fixes:
+`DES-CH-001` froze an exhaustive four-candidate symbolic Design space before scoring and returned exactly `{T1,T2}` as admissible while rejecting an `APPLICABLE_BUT_UNDEFINED` property candidate and a `CHANNEL_ABSENCE` candidate for distinct reasons. The run used no hidden Optimization.
 
-- task/claim and constraint-source locking;
-- candidate/construction basis and coverage discipline;
-- DSD layer activation rules;
-- Design construction procedure D1-D13;
-- terminal Design status ledger;
-- separate protocol-conformance ledger;
-- separate method-gain ledger;
-- auxiliary-method handoff discipline;
-- case-ID convention `DES-CH-*`, `DES-APP-*`, `DES-AUD-*`;
-- minimum execution and reproducibility records.
+```text
+DIRECT_CONSTRUCTED_PILOTS: 1
+POSITIVE_CASES: 1
+NEGATIVE_OR_FAILURE_CASES: 0
+EXTERNAL_APPLICATIONS: 0
+CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
+```
+
+The positive pilot is direct evidence for Protocol v0.1 execution only; it does not establish external applicability, baseline superiority, independent agreement, or method maturity.
 
 ## Development records
 
 - Planning framework: [`PLANNING.md`](PLANNING.md)
+- Protocol v0.1: [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - Task-interface draft: [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - Boundary counterexamples: [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - Boundary amendment 001: [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 - Worklog: [`WORKLOG.md`](WORKLOG.md)
-- Direct evidence lane: [`../../evidence/method_specific/design/`](../../evidence/method_specific/design/)
 
-Planning Steps 1-2 are complete and Protocol v0.1 is now executable. Protocol creation itself is not a direct Design pilot.
+## Next development step
 
-Current evidence state:
-
-```text
-DEDICATED_PROTOCOL: v0.1 established
-DIRECT_CONSTRUCTED_PILOTS: 0
-EXTERNAL_APPLICATIONS: 0
-INDEPENDENT_EVALUATOR_VALIDATION: not established
-METHOD_EVIDENCE_STATUS: validation_pending
-```
-
-The next development step is the first **positive constructed Design challenge** under a frozen Protocol v0.1 task record.
+Precommit and run the first **negative/failure constructed Design challenge** under Protocol v0.1, with emphasis on correctly separating `DESIGN_INFEASIBLE`, `DESIGN_UNDERDETERMINED`, and `DESIGN_BLOCKED`.
