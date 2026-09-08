@@ -21,6 +21,7 @@ evidence/method_specific/design/
 - Specification may provide locked goals/constraints upstream, but Specification and Design are not merged.
 - Synthesis, Transformation, and Optimization remain neighboring but distinct methods.
 - Shared evidence and evidence from other methods do not count as direct Design validation.
+- The first technical development step is the Design-specific task interface and minimum valid output.
 
 ### Planned evidence sequence
 
@@ -38,6 +39,22 @@ task interface
 -> DSD Audit maturity review
 ```
 
+### Current direct-evidence status
+
+```text
+DEDICATED_PROTOCOL: not yet established
+POSITIVE_CASE: not yet established
+NEGATIVE_OR_FAILURE_CASE: not yet established
+BOUNDARY_CASE: not yet established
+NO_GAIN_CASE: not yet established
+REPRODUCIBILITY_RECORD: not yet established
+EXTERNAL_OR_INDEPENDENT_APPLICATION: not yet established
+BASELINE_COMPARISON: not yet established
+MATURITY_AUDIT: not yet performed
+```
+
+No maturity claim is made at this stage.
+
 ---
 
 ## 2026-09-08 — Step 1: task interface and minimum valid output
@@ -48,17 +65,64 @@ Created:
 
 - `TASK_INTERFACE_v0.1-draft.md`
 
-Main results:
+### Main results
 
-- explicit candidate/construction basis required;
-- candidate coverage classified as `exhaustive / non_exhaustive / unknown`;
-- non-exhaustive failure-to-find cannot support global infeasibility;
-- `DESIGN_ACCEPTED` replaced by `DESIGN_ADMISSIBLE`;
-- Design terminal status separated from method-gain status;
-- multiple admissible candidates are ordinary success for design-space/admissible-target claims;
-- Optimization begins when an objective ranks/selects among already admissible alternatives.
+1. A Design task must lock its goals, hard constraints, output level, target resolution, predecessor/base structure, target DSD layer scope, candidate/construction basis, candidate-generation rule, candidate coverage, domain bridge, and external standard where required.
+2. DSD Design does not contain a universal candidate generator and does not fabricate missing domain design knowledge.
+3. Candidate coverage is explicitly classified as `exhaustive / non_exhaustive / unknown`.
+4. `DESIGN_INFEASIBLE` requires exhaustive candidate coverage or an explicit impossibility argument; non-exhaustive failure-to-find is not a global infeasibility result.
+5. The earlier provisional `DESIGN_ACCEPTED` label is replaced with `DESIGN_ADMISSIBLE` to avoid conflating structural admissibility with downstream approval or optimization.
+6. Terminal Design status is separated from method-gain status.
 
-Evidence increment: **0 direct pilots**.
+```text
+TERMINAL_DESIGN_STATUS:
+  DESIGN_ADMISSIBLE
+  DESIGN_INFEASIBLE
+  DESIGN_UNDERDETERMINED
+  DESIGN_BLOCKED
+
+DESIGN_METHOD_GAIN_STATUS:
+  GAIN_ESTABLISHED
+  NO_GAIN
+  NOT_ASSESSED
+```
+
+7. Multiple admissible candidates are an ordinary Design success when the task asks for a design space or an admissible target. Selecting the best alternative by an objective belongs to DSD Optimization.
+8. Minimum valid output is defined for successful and non-success executions, including traceable target/rejection/status basis and reproducibility fields.
+
+### Source-interface consistency notes
+
+The task interface follows the current DSD interface profile:
+
+- Formation status distinctions remain preserved.
+- General Property remains a typed extension over a fixed Stage-VI formation background and cannot silently rewrite formation identity.
+- Static Aggregation is optional and does not support reconstruction from aggregate equality without an additional condition.
+- Dynamics is optional; formation-level identity changes require explicit lineage rather than ordinary value evolution.
+- Optional geometric/specialization data are not universal Property coordinates.
+
+### Evidence status after Step 1
+
+This planning artifact is **not** counted as a direct Design pilot.
+
+```text
+DIRECT_CONSTRUCTED_PILOTS: 0
+EXTERNAL_APPLICATIONS: 0
+CURRENT_PROTOCOL: not established
+CURRENT_METHOD_STATUS: planning / proposed
+```
+
+### Next technical step
+
+Build method-boundary counterexamples against:
+
+```text
+Specification
+Synthesis
+Transformation
+Optimization
+```
+
+The purpose is to try to break the draft task-interface boundary before drafting `PROTOCOL_v0.1.md`.
 
 ---
 
@@ -71,7 +135,9 @@ Created:
 - `BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`
 - `TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`
 
-Boundary set:
+### Boundary attack set
+
+Eight pre-protocol counterexamples were constructed across the nearest method boundaries:
 
 ```text
 DES-BND-DRAFT-001  Specification-only requirement ledger
@@ -84,7 +150,7 @@ DES-BND-DRAFT-007  hard threshold versus optimization objective
 DES-BND-DRAFT-008  soft-preference promotion attack
 ```
 
-Result:
+### Result
 
 ```text
 BOUNDARY_CASES_RUN: 8
@@ -95,109 +161,188 @@ FUNDAMENTAL_TASK_INTERFACE_FAILURE: 0
 DIRECT_EVIDENCE_COUNT_INCREMENT: 0
 ```
 
-Required non-breaking additions:
+No case forced Design to merge with Specification, Synthesis, Transformation, or Optimization.
+
+### Non-breaking refinements
+
+Two interface additions were required.
+
+#### R1 — Constraint provenance guard
+
+Add:
 
 ```text
-CONSTRAINT_SOURCE_OR_SPECIFICATION
-AUXILIARY_METHODS_OR_HANDOFFS
+CONSTRAINT_SOURCE_OR_SPECIFICATION:
 ```
 
-Evidence increment: **0 direct pilots**.
+Design may consume source-supplied hard constraints but may not silently promote a soft preference into a hard constraint after candidate inspection. Any such promotion must be a new/upstream task revision with provenance.
+
+#### R2 — Auxiliary-method / handoff ledger
+
+Add conditionally:
+
+```text
+AUXILIARY_METHODS_OR_HANDOFFS:
+```
+
+If Design depends on a substantive Synthesis composition verdict, Transformation preservation/loss verdict, downstream Optimization selection, or later Audit retrace, those neighboring methods remain separately identifiable. Design may consume their outputs but does not absorb their operations or evidence.
+
+### Effective pre-protocol interface
+
+```text
+TASK_INTERFACE_v0.1-draft.md
++ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+```
+
+### Evidence status after Step 2
+
+These are planning-stage boundary attacks, not direct Design pilots.
+
+```text
+DIRECT_CONSTRUCTED_PILOTS: 0
+EXTERNAL_APPLICATIONS: 0
+CURRENT_PROTOCOL: not established
+CURRENT_METHOD_STATUS: planning / proposed
+```
+
+### Next technical step
+
+Draft `PROTOCOL_v0.1.md` from the boundary-refined task interface.
 
 ---
 
-## 2026-09-08 — Step 3: Protocol v0.1 establishment
+## 2026-09-08 — Step 3: Protocol v0.1
 
-Status: **first executable Design protocol established; validation pending**
+Status: **first executable Design protocol established / validation pending**
 
 Created:
 
 - `PROTOCOL_v0.1.md`
 
-### Protocol-source lock
+### Main protocol locks
 
-```text
-TASK_INTERFACE_v0.1-draft.md
-+ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
-+ BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md
--> PROTOCOL_v0.1.md
-```
+- claim levels fixed as `DESIGN_SPACE / ADMISSIBLE_TARGET / UNIQUE_TARGET / PARTIAL_TARGET`;
+- candidate/construction basis and `CANDIDATE_COVERAGE` made protocol-core inputs;
+- `DESIGN_INFEASIBLE` restricted to exhaustive coverage or explicit impossibility argument;
+- constraint provenance and anti-post-hoc soft-to-hard promotion incorporated;
+- neighboring-method verdicts tracked through `AUXILIARY_METHODS_OR_HANDOFFS`;
+- Design outcome, protocol conformance, and method gain separated into three ledgers;
+- `DESIGN_PROTOCOL_CONFORMANCE = CONFORMANT / NONCONFORMANT / UNDETERMINED` added;
+- `GAIN_ESTABLISHED` or `NO_GAIN` allowed only after an actual baseline comparison, otherwise `NOT_ASSESSED`;
+- case IDs fixed as `DES-CH-*`, `DES-APP-*`, `DES-AUD-*`.
 
-### Main protocol decisions
-
-1. Protocol v0.1 fixes a pre-evaluation task/claim lock, constraint-source lock, candidate-basis/coverage lock, selected DSD interface lock, and validation rule.
-2. `CLAIMED_OUTPUT_LEVEL` is fixed to `DESIGN_SPACE`, `ADMISSIBLE_TARGET`, `UNIQUE_TARGET`, or `PARTIAL_TARGET`.
-3. `DESIGN_SPACE` is explicitly relative to declared candidate coverage; it does not silently claim a global exhaustive design universe.
-4. Soft preferences cannot be promoted post hoc into hard constraints by Design.
-5. Candidate/construction basis remains explicit; missing domain design knowledge may validly yield `DESIGN_BLOCKED`.
-6. Formation, General Property, Static Aggregation, Dynamics, and optional specialization follow minimum-layer activation rather than mandatory serial use.
-7. Synthesis, Transformation, Optimization, Specification, Audit, and other neighboring method verdicts remain separately recorded under `AUXILIARY_METHODS_OR_HANDOFFS` when used.
-8. Candidate-level records distinguish admissible, rejected, unresolved, and blocked cases without collapsing claim-relevant DSD states.
-9. The executable procedure is fixed as D1-D13.
-10. Design outcome, protocol conformance, and method gain are three distinct ledgers.
-
-### Terminal Design status
-
-```text
-DESIGN_ADMISSIBLE
-DESIGN_INFEASIBLE
-DESIGN_UNDERDETERMINED
-DESIGN_BLOCKED
-```
-
-### Protocol conformance
-
-```text
-DESIGN_PROTOCOL_CONFORMANCE:
-  CONFORMANT
-  NONCONFORMANT
-  UNDETERMINED
-```
-
-Representative protocol violations include post-hoc soft-to-hard promotion, undeclared candidate-basis changes, unsupported exhaustiveness/uniqueness, infeasibility overclaim, required-bridge omission, hidden Optimization, and neighboring-method verdict absorption.
-
-### Method gain
-
-```text
-DESIGN_METHOD_GAIN_STATUS:
-  GAIN_ESTABLISHED
-  NO_GAIN
-  NOT_ASSESSED
-```
-
-`GAIN_ESTABLISHED` and `NO_GAIN` require an actual baseline comparison. Otherwise the protocol requires `NOT_ASSESSED`.
-
-### Case-ID convention fixed
-
-```text
-DES-CH-###   constructed Design challenges
-DES-APP-###  external or independently generated Design applications
-DES-AUD-###  Design-specific audit / maturity records
-```
-
-Planning-stage `DES-BND-DRAFT-*` records remain planning artifacts and are not retroactively promoted to direct evidence.
-
-### Evidence status after Protocol v0.1
+### Evidence status after Step 3
 
 ```text
 DEDICATED_PROTOCOL: v0.1 established
 DIRECT_CONSTRUCTED_PILOTS: 0
 EXTERNAL_APPLICATIONS: 0
-INDEPENDENT_EVALUATOR_VALIDATION: not established
-BASELINE_BENEFIT: not established
 CURRENT_METHOD_EVIDENCE_STATUS: validation_pending
 ```
 
-Protocol establishment does not itself increase direct evidence.
+Protocol establishment does not itself count as direct evidence.
 
-### Related commits
+### GitHub record
 
 ```text
-PROTOCOL_v0.1.md  b3d658c
-README.md         d9a3eb2
-PLANNING.md       0511c2c
+PROTOCOL_v0.1.md: b3d658c
+README.md: d9a3eb2
+PLANNING.md: 0511c2c
+WORKLOG.md: 2534a10
+evidence/method_specific/design/README.md: 602df4e
 ```
 
 ### Next technical step
 
-Pre-lock and execute the first **positive constructed Design challenge** under Protocol v0.1, using a case with at least one admissible target and no need for hidden Optimization.
+Run the first precommitted positive constructed challenge under Protocol v0.1.
+
+---
+
+## 2026-09-08 — Step 4: DES-CH-001 positive constructed challenge
+
+Status: **PASS / first direct constructed Design pilot**
+
+### Precommit
+
+Created before scoring:
+
+- `evidence/method_specific/design/DES-CH-001_precommit.md`
+- precommit commit: `f82a333`
+
+The frozen challenge used a finite exhaustive family `T1-T4` and required Design to return the complete admissible `DESIGN_SPACE` without hidden Optimization.
+
+Claim-relevant distinctions:
+
+```text
+DEFINED_ZERO
+APPLICABLE_BUT_UNDEFINED
+CHANNEL_ABSENCE
+```
+
+### Executed result
+
+Created after the precommit:
+
+- `evidence/method_specific/design/DES-CH-001_positive-status-sensitive-design-space.md`
+- result commit: `9cdf871`
+
+Candidate result:
+
+```text
+T1  admitted reserve + DEFINED_ZERO              -> admissible
+T2  admitted reserve + DEFINED_NONZERO           -> admissible
+T3  admitted reserve + APPLICABLE_BUT_UNDEFINED  -> rejected on H3
+T4  CHANNEL_ABSENCE for q_reserve                 -> rejected on H2
+```
+
+Returned Design space:
+
+```text
+{T1, T2}
+```
+
+No preference or objective was used to choose between the two admissible candidates.
+
+### Precommitted score
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 11
+PASSED: 11
+FAILED: 0
+CHALLENGE_VERDICT: PASS
+```
+
+### Three-ledger result
+
+```text
+TERMINAL_DESIGN_STATUS: DESIGN_ADMISSIBLE
+DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT
+DESIGN_METHOD_GAIN_STATUS: NOT_ASSESSED
+```
+
+The case directly supports pilot-level execution of a status-sensitive positive `DESIGN_SPACE` run, but does not establish external applicability, baseline benefit, independent agreement, or method maturity.
+
+### Evidence status after DES-CH-001
+
+```text
+DEDICATED_PROTOCOL: v0.1 established
+DIRECT_CONSTRUCTED_PILOTS: 1
+POSITIVE_CASES: 1
+NEGATIVE_OR_FAILURE_CASES: 0
+BOUNDARY_CASES_UNDER_PROTOCOL: 0
+NO_GAIN_CASES: 0
+EXTERNAL_APPLICATIONS: 0
+CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
+```
+
+### GitHub record
+
+```text
+DES-CH-001_precommit.md: f82a333
+DES-CH-001_positive-status-sensitive-design-space.md: 9cdf871
+evidence/method_specific/design/README.md: 93c3608
+```
+
+### Next technical step
+
+Run a separately precommitted **negative/failure Design challenge** under Protocol v0.1. The case should test a genuine non-success terminal outcome while preserving the distinction between `DESIGN_INFEASIBLE`, `DESIGN_UNDERDETERMINED`, and `DESIGN_BLOCKED`.
