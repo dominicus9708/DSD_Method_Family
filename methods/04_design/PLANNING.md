@@ -80,6 +80,13 @@ CANDIDATE_COVERAGE: exhaustive / non_exhaustive / unknown
 
 `DESIGN_INFEASIBLE` requires either exhaustive candidate coverage with all required candidates rejected or an explicit impossibility argument. Failure to find a candidate in a non-exhaustive search is not enough for a global infeasibility claim.
 
+`DES-CH-002` now directly exercises both sides of this rule:
+
+```text
+exhaustive + all rejected -> DESIGN_INFEASIBLE
+non_exhaustive + none found -> DESIGN_UNDERDETERMINED
+```
+
 ## Constraint-provenance guard / 제약 출처 보호 규칙
 
 ```text
@@ -128,21 +135,11 @@ Two non-breaking refinements were required:
 1. `CONSTRAINT_SOURCE_OR_SPECIFICATION`
 2. `AUXILIARY_METHODS_OR_HANDOFFS`
 
-## First direct pilot / 첫 직접 파일럿
+## Direct pilots / 직접 파일럿
 
-`DES-CH-001` is the first direct constructed Design challenge under Protocol v0.1.
+### `DES-CH-001` — positive Design-space pilot
 
-The task and expected result were frozen in `evidence/method_specific/design/DES-CH-001_precommit.md` before scoring.
-
-The challenge used an exhaustive four-candidate symbolic Design space and directly tested:
-
-```text
-DEFINED_ZERO
-!= APPLICABLE_BUT_UNDEFINED
-!= CHANNEL_ABSENCE
-```
-
-Result:
+Precommitted before scoring.
 
 ```text
 ADMISSIBLE_FAMILY: {T1,T2}
@@ -156,9 +153,45 @@ DESIGN_METHOD_GAIN_STATUS: NOT_ASSESSED
 CHALLENGE_VERDICT: PASS
 ```
 
+Directly tested:
+
+```text
+DEFINED_ZERO
+!= APPLICABLE_BUT_UNDEFINED
+!= CHANNEL_ABSENCE
+```
+
 No hidden Optimization was used; the method returned both admissible targets rather than selecting one as best.
 
-Evidence limit: constructed same-session positive pilot only.
+### `DES-CH-002` — negative/failure terminal-status pilot
+
+Precommitted before evaluation as one case ID with three locked subcases.
+
+```text
+Case I: exhaustive family + all candidates rejected
+  -> DESIGN_INFEASIBLE
+
+Case U: non_exhaustive sample + no admissible target found
+  -> DESIGN_UNDERDETERMINED
+
+Case B: required predecessor identity unavailable
+  -> DESIGN_BLOCKED
+```
+
+Result:
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 20
+PASSED: 20
+FAILED: 0
+DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT in all three subcases
+DESIGN_METHOD_GAIN_STATUS: NOT_ASSESSED
+CHALLENGE_VERDICT: PASS
+```
+
+Case B directly demonstrates that `DESIGN_BLOCKED + CONFORMANT` is a valid protocol outcome when the missing prerequisite is explicitly recorded and not fabricated.
+
+Evidence limit for both pilots: constructed same-session evidence only.
 
 ## DSD layer policy / DSD 층위 정책
 
@@ -178,8 +211,8 @@ No bridge is inferred from a property name, intuition, or shared vocabulary alon
 2. ✅ Build boundary counterexamples against Specification, Synthesis, Transformation, and Optimization; incorporate non-breaking refinements.
 3. ✅ Establish `PROTOCOL_v0.1.md`.
 4. ✅ Run first positive constructed pilot: `DES-CH-001` PASS.
-5. **Next:** run a negative/failure constructed pilot under a separately frozen task record.
-6. Run a boundary pilot under the protocol.
+5. ✅ Run first negative/failure constructed pilot: `DES-CH-002` PASS.
+6. **Next:** run a boundary pilot under the protocol.
 7. Run a `NO_GAIN` pilot.
 8. Compare against a strongest reasonable baseline where applicable.
 9. Run at least one external or independently generated application case.
@@ -209,9 +242,9 @@ Current direct evidence state:
 
 ```text
 DEDICATED_PROTOCOL: v0.1 established
-DIRECT_CONSTRUCTED_PILOTS: 1
+DIRECT_CONSTRUCTED_PILOTS: 2
 POSITIVE_CASES: 1
-NEGATIVE_OR_FAILURE_CASES: 0
+NEGATIVE_OR_FAILURE_CASES: 1
 BOUNDARY_CASES_UNDER_PROTOCOL: 0
 NO_GAIN_CASES: 0
 EXTERNAL_APPLICATIONS: 0
@@ -224,14 +257,13 @@ Historical runs are preserved under the protocol version used at execution time;
 
 ## Next step / 다음 단계
 
-Precommit and run the first **negative/failure Design challenge** under Protocol v0.1.
+Precommit and run the first **boundary Design challenge** under Protocol v0.1.
 
-The preferred next pressure point is the distinction among:
+The preferred pressure point is the Design/Optimization boundary:
 
 ```text
-DESIGN_INFEASIBLE
-DESIGN_UNDERDETERMINED
-DESIGN_BLOCKED
+hard constraints -> admissible family
+objective ranking -> Optimization
 ```
 
-A non-exhaustive failure-to-find must not be upgraded to `DESIGN_INFEASIBLE`.
+The challenge should keep at least two candidates admissible under Design while providing an explicit objective that would rank them, and verify that Design does not absorb that ranking into its own verdict.
