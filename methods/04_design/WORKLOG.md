@@ -123,3 +123,88 @@ Optimization
 ```
 
 The purpose is to try to break the draft task-interface boundary before drafting `PROTOCOL_v0.1.md`.
+
+---
+
+## 2026-09-08 — Step 2: boundary counterexamples
+
+Status: **planning step 2 complete with non-breaking refinements**
+
+Created:
+
+- `BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`
+- `TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`
+
+### Boundary attack set
+
+Eight pre-protocol counterexamples were constructed across the nearest method boundaries:
+
+```text
+DES-BND-DRAFT-001  Specification-only requirement ledger
+DES-BND-DRAFT-002  Specification-to-Design handoff
+DES-BND-DRAFT-003  Synthesis-only fixed target
+DES-BND-DRAFT-004  Design candidate generation invoking Synthesis
+DES-BND-DRAFT-005  Transformation-only fixed source/target
+DES-BND-DRAFT-006  Design target-schema construction invoking Transformation
+DES-BND-DRAFT-007  hard threshold versus optimization objective
+DES-BND-DRAFT-008  soft-preference promotion attack
+```
+
+### Result
+
+```text
+BOUNDARY_CASES_RUN: 8
+BOUNDARY_PRESERVED_WITHOUT_REFINEMENT: 5
+BOUNDARY_PRESERVED_WITH_NONBREAKING_REFINEMENT: 3
+EXACT_METHOD_COLLAPSE_FOUND: 0
+FUNDAMENTAL_TASK_INTERFACE_FAILURE: 0
+DIRECT_EVIDENCE_COUNT_INCREMENT: 0
+```
+
+No case forced Design to merge with Specification, Synthesis, Transformation, or Optimization.
+
+### Non-breaking refinements
+
+Two interface additions were required.
+
+#### R1 — Constraint provenance guard
+
+Add:
+
+```text
+CONSTRAINT_SOURCE_OR_SPECIFICATION:
+```
+
+Design may consume source-supplied hard constraints but may not silently promote a soft preference into a hard constraint after candidate inspection. Any such promotion must be a new/upstream task revision with provenance.
+
+#### R2 — Auxiliary-method / handoff ledger
+
+Add conditionally:
+
+```text
+AUXILIARY_METHODS_OR_HANDOFFS:
+```
+
+If Design depends on a substantive Synthesis composition verdict, Transformation preservation/loss verdict, downstream Optimization selection, or later Audit retrace, those neighboring methods remain separately identifiable. Design may consume their outputs but does not absorb their operations or evidence.
+
+### Effective pre-protocol interface
+
+```text
+TASK_INTERFACE_v0.1-draft.md
++ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+```
+
+### Evidence status after Step 2
+
+These are planning-stage boundary attacks, not direct Design pilots.
+
+```text
+DIRECT_CONSTRUCTED_PILOTS: 0
+EXTERNAL_APPLICATIONS: 0
+CURRENT_PROTOCOL: not established
+CURRENT_METHOD_STATUS: planning / proposed
+```
+
+### Next technical step
+
+Draft `PROTOCOL_v0.1.md` from the boundary-refined task interface.
