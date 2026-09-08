@@ -6,39 +6,21 @@ Date opened: **2026-09-08**
 
 ## Purpose / 목적
 
-Develop DSD Design as an independent method that constructs and filters target structures from declared goals and constraints, while preserving the current 22-method boundary discipline.
+Develop DSD Design as an independent method that constructs and filters target structures from declared goals and constraints while preserving the 22-method boundary discipline.
 
-Shared-core evidence and neighboring-method results may be referenced, but direct Design validation must be accumulated separately.
+Shared-core evidence and neighboring-method results may be referenced, but direct Design validation is accumulated separately.
 
-## Current protocol / 현재 프로토콜
+## Protocol and interface
 
-- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
-- pre-protocol basis: `TASK_INTERFACE_v0.1-draft.md`, `TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`, `BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`.
+- Current executable protocol: [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
+- Design assumes no universal candidate generator.
+- Candidate coverage remains `exhaustive / non_exhaustive / unknown`.
+- `DESIGN_INFEASIBLE` requires exhaustive coverage or an impossibility argument.
+- Material distinctness is judged at `TARGET_RESOLUTION`.
+- Soft preferences are not silently promoted into hard constraints.
+- External authority and neighboring-method verdicts remain separately identifiable.
 
-## Current task interface / 현재 과업 인터페이스
-
-```text
-GOALS
-+ HARD_CONSTRAINTS
-+ CONSTRAINT_SOURCE_OR_SPECIFICATION
-+ BASE_STRUCTURE_OR_PREDECESSOR
-+ TARGET_DSD_LAYER_SCOPE
-+ TARGET_RESOLUTION
-+ CANDIDATE_OR_CONSTRUCTION_BASIS
-+ CANDIDATE_GENERATION_RULE
-+ CANDIDATE_COVERAGE
-+ selected DSD interface
-+ explicit DOMAIN_BRIDGE when required
-+ EXTERNAL_STANDARD when an external-domain claim is made
-+ AUXILIARY_METHODS_OR_HANDOFFS when materially used
--> candidate design family
--> status-sensitive admissibility evaluation
--> admissible target family OR terminal non-success result
-```
-
-Design does not assume a universal candidate generator and does not fabricate missing domain design knowledge.
-
-## Three independent ledgers / 3중 장부
+## Three independent ledgers
 
 ```text
 TERMINAL_DESIGN_STATUS:
@@ -58,189 +40,94 @@ DESIGN_METHOD_GAIN_STATUS:
   NOT_ASSESSED
 ```
 
-## Core guardrails / 핵심 보호 규칙
-
-### Candidate coverage
-
-```text
-CANDIDATE_COVERAGE: exhaustive / non_exhaustive / unknown
-```
-
-`DESIGN_INFEASIBLE` requires exhaustive coverage with all relevant candidates rejected or an explicit impossibility argument. Non-exhaustive failure-to-find is not global infeasibility.
-
-### Constraint provenance
-
-```text
-SOFT_PREFERENCE != HARD_CONSTRAINT
-```
-
-Design does not silently promote soft preference to hard constraint after candidate inspection.
-
-### Output level and target resolution
-
-```text
-DESIGN_SPACE
-ADMISSIBLE_TARGET
-UNIQUE_TARGET
-PARTIAL_TARGET
-```
-
-Material target distinctness is judged at `TARGET_RESOLUTION`; candidate IDs or downstream-only metadata are insufficient.
-
-### Neighboring-method boundary
-
-- Specification locks or exposes requirements and scope upstream when used.
-- Design constructs/filters admissible target structures under goals and hard constraints.
-- Synthesis combines admitted parts.
-- Transformation records source-target preservation/loss.
-- Optimization selects among already-admissible alternatives under an objective.
-- Audit retraces a completed Design execution.
-
-### External-source boundary
-
-An external standard may supply hard requirements or applicability conditions through an explicit bridge, but DSD Design must keep:
-
-```text
-external authority
-!= DSD method verdict
-
-source requirement
-!= task-local fixture assumption
-
-best-practice note
-!= hard criterion unless the source makes it normative
-
-subset application
-!= full-standard conformance claim
-```
-
-No source clause or exception is revised post hoc to rescue or reject a candidate.
-
-## Evidence sequence / 증거 진행
-
-### `DES-CH-001` — positive
-
-```text
-{T1,T2} -> DESIGN_ADMISSIBLE
-11/11 PASS
-```
-
-Preserved `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED != CHANNEL_ABSENCE`.
-
-### `DES-CH-002` — negative/failure
-
-```text
-exhaustive no-solution -> DESIGN_INFEASIBLE
-non_exhaustive failure-to-find -> DESIGN_UNDERDETERMINED
-missing predecessor -> DESIGN_BLOCKED
-20/20 PASS
-```
-
-### `DES-CH-003` — failed boundary test design
-
-```text
-20/21
-FAIL_AS_PRECOMMITTED_CHALLENGE
-CHALLENGE_DESIGN_DEFECT
-PROTOCOL_FAILURE_INFERRED: no
-```
-
-Preserved without post-hoc repair.
-
-### `DES-CH-004` — corrected Design/Optimization boundary
-
-```text
-Case S -> {C1,C2,C3} / DESIGN_ADMISSIBLE
-Case U -> DESIGN_UNDERDETERMINED
-23/23 PASS
-```
-
-### `DES-CH-005` — NO_GAIN
-
-```text
-Baseline: B0_EXPLICIT_CONSTRAINT_MATRIX
-DSD == B0 on frozen claim-relevant result
-DESIGN_ADMISSIBLE / CONFORMANT / NO_GAIN
-25/25 PASS
-```
-
-### `DES-CH-006` — broader strongest-reasonable baseline
-
-```text
-Baseline: B1_TYPED_ADMISSIBILITY_TABLE
-Formation + General Property
-15 candidates
-DESIGN_SPACE + UNIQUE_TARGET
-B1 == DSD on all frozen gain dimensions
-G1-G5: NOT_ESTABLISHED
-DESIGN_METHOD_GAIN_STATUS: NO_GAIN
-54/54 PASS
-```
-
-This establishes the `baseline_comparison` category at constructed-evidence level, not DSD superiority.
-
-### `DES-APP-001` — first external-standard application
-
-External source:
-
-```text
-W3C WCAG 2.2 Recommendation 2024-12-12
-SC 1.4.3 Contrast (Minimum)
-SC 2.5.3 Label in Name
-SC 2.5.8 Target Size (Minimum)
-```
-
-Candidate fixture:
-
-```text
-W1-W10
-Formation + General Property
-DOMAIN_BRIDGE: WCAG_APPLICATION_BRIDGE_001
-```
-
-Result:
-
-```text
-ADMISSIBLE_FAMILY: {W1,W2,W3}
-W4 -> H1 target size
-W5 -> H1 target size
-W6 -> H2 label in name
-W7 -> H2 with APPLICABLE_BUT_UNDEFINED name
-W8 -> H3 contrast
-W9 -> H1,H2,H3
-W10 -> H0 CHANNEL_ABSENCE
-
-TERMINAL_DESIGN_STATUS: DESIGN_ADMISSIBLE
-DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT
-DESIGN_METHOD_GAIN_STATUS: NOT_ASSESSED
-36/36 PASS
-```
-
-The application did not promote the WCAG best-practice note about label position into a hard requirement, did not invent a target-size exception, and did not claim full WCAG conformance from the three-criterion subset.
-
-## DSD layer policy / DSD 층위 정책
-
-1. **Formation** — active for new structural targets, or explicitly locked as inherited Stage-VI predecessor for downstream design.
-2. **General Property** — active only when typed property declaration, applicability, prerequisites, or partial assignment matter.
-3. **Static Aggregation** — active only when a declared analytic readout/aggregate is needed.
-4. **Dynamics** — active only when trajectory, transition, lineage, propagation, or other time dependence matters.
-5. **Optional specialization** — active only through explicit supplied specialization/domain data.
-
-No bridge is inferred from a name, intuition, or shared vocabulary alone.
-
 ## Development sequence / 개발 순서
 
 1. ✅ Design-specific task interface and minimum valid output.
 2. ✅ Boundary counterexamples and non-breaking refinements.
 3. ✅ `PROTOCOL_v0.1.md`.
-4. ✅ Positive pilot `DES-CH-001`.
-5. ✅ Negative/failure pilot `DES-CH-002`.
-6. ✅ Boundary stage: failed `DES-CH-003` preserved; corrected `DES-CH-004` PASS.
-7. ✅ NO_GAIN pilot `DES-CH-005`.
-8. ✅ Broader strongest-reasonable-baseline comparison `DES-CH-006` PASS / `NO_GAIN`.
-9. ✅ First external-standard application `DES-APP-001` PASS.
-10. **Next:** dedicated reproducibility/retrace test.
-11. DSD Audit maturity review.
+4. ✅ Positive pilot `DES-CH-001` — 11/11 PASS.
+5. ✅ Negative/failure pilot `DES-CH-002` — 20/20 PASS.
+6. ✅ Boundary stage — failed `DES-CH-003` preserved; corrected `DES-CH-004` 23/23 PASS.
+7. ✅ NO_GAIN pilot `DES-CH-005` — 25/25 PASS.
+8. ✅ Broader strongest-reasonable-baseline comparison `DES-CH-006` — 54/54 PASS / NO_GAIN.
+9. ✅ First external-standard application `DES-APP-001` — W3C WCAG 2.2 subset, 36/36 PASS.
+10. ✅ Dedicated reproducibility/retrace `DES-CH-007` — 44/44 PASS at deterministic same-project level.
+11. **Next:** DSD Audit maturity review.
+
+## Evidence milestones / 증거 이정표
+
+### Positive and non-success behavior
+
+`DES-CH-001` preserved status distinctions and returned the complete admissible family.
+
+`DES-CH-002` directly separated:
+
+```text
+DESIGN_INFEASIBLE
+DESIGN_UNDERDETERMINED
+DESIGN_BLOCKED
+```
+
+including the valid `DESIGN_BLOCKED + CONFORMANT` combination.
+
+### Boundary behavior
+
+`DES-CH-003` exposed a challenge-design defect and was preserved at 20/21 rather than repaired post hoc.
+`DES-CH-004` prospectively corrected the candidate-resolution problem and passed the Design/Optimization boundary test.
+
+### Method-gain behavior
+
+`DES-CH-005` and `DES-CH-006` both produced valid `NO_GAIN` results against competent baselines.
+The latter used Formation + General Property, 15 candidates, typed status distinctions, full failure sets, and DESIGN_SPACE + UNIQUE_TARGET.
+No extra DSD bookkeeping was counted as gain by itself.
+
+### External application
+
+`DES-APP-001` froze W3C WCAG 2.2 Recommendation 2024-12-12, limited to:
+
+```text
+SC 1.4.3 Contrast (Minimum)
+SC 2.5.3 Label in Name
+SC 2.5.8 Target Size (Minimum)
+```
+
+It returned `{W1,W2,W3}` and passed 36/36 checks while keeping source requirements separate from fixture assumptions, not promoting best-practice language into a hard criterion, not inventing an exception, and not overclaiming full WCAG conformance.
+
+### Dedicated retrace
+
+`DES-CH-007` froze immutable refs for:
+
+```text
+Protocol v0.1:
+  b3d658c839dfe60b65efbc44abf874e257d4a0e2
+DES-APP-001 precommit:
+  4847dbd1f5a38adb5d5c285b19ac41ebcfe86b96
+DES-APP-001 historical result:
+  32a7842758be0cc179f996fdd8035d9683d31da9
+```
+
+The clean claim-relevant re-execution from frozen Protocol + source precommit reconstructed exactly:
+
+```text
+H0-H3
+W1-W10 candidate records
+candidate verdicts and rejection sets
+admissible family {W1,W2,W3}
+external source/version
+WCAG_APPLICATION_BRIDGE_001
+DESIGN_ADMISSIBLE
+CONFORMANT
+NOT_ASSESSED
+```
+
+and matched the historical result.
+
+```text
+RETRACE_RESULT: PASS
+PRECOMMITTED_REQUIRED_CHECKS: 44/44 PASS
+```
+
+The evidence claim is deliberately limited: this is a same-project, same-evaluator-family, non-blinded deterministic retrace. It does not establish independent replication.
 
 ## Evidence architecture status / 증거 구조 상태
 
@@ -252,7 +139,7 @@ BOUNDARY_CASE: established with one preserved failed predecessor test
 NO_GAIN_CASE: established
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established at constructed level
 EXTERNAL_OR_INDEPENDENT_APPLICATION: established at single external-standard application level
-REPRODUCIBILITY_RECORD: case-level records exist; dedicated retrace stage not completed
+REPRODUCIBILITY_RETRACE: established at deterministic same-project level
 INDEPENDENT_EVALUATOR_VALIDATION: not established
 MATURITY_AUDIT: not performed
 ```
@@ -260,18 +147,32 @@ MATURITY_AUDIT: not performed
 Current evidence counts:
 
 ```text
-DIRECT_CONSTRUCTED_PILOTS: 6
+DIRECT_CONSTRUCTED_PILOTS: 7
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
 EXTERNAL_APPLICATIONS: 1
-EXTERNAL_APPLICATION_PASSES: 1
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
+The minimum evidence categories are now populated, but category completion is not an automatic maturity rule.
+
 ## Recording rule / 기록 규칙
 
-Historical runs remain preserved under the protocol version used at execution time. Corrected future tests do not rewrite earlier runs.
+Historical runs remain preserved under the protocol version used at execution time. Prospective corrections do not rewrite earlier evidence.
 
 ## Next step / 다음 단계
 
-Precommit and run a dedicated **reproducibility/retrace Design test**.
+Run a **DSD Audit maturity review** over the accumulated Design corpus.
 
-The test should freeze an existing completed Design evidence record, reconstruct its declared inputs from the stored record only, and require a clean re-execution to reproduce candidate verdicts, terminal status, protocol conformance, source/bridge version, and method-gain status where applicable without editing the original case.
+The audit must:
+
+```text
+preserve DES-CH-003 as a real challenge-design failure
+separate protocol correctness from method gain
+count DES-CH-005 and DES-CH-006 NO_GAIN without converting them into superiority evidence
+recognize DES-APP-001 as one external-standard application, not broad external validation
+recognize DES-CH-007 as deterministic retrace, not independent replication
+discount common-evaluator/same-project dependence
+keep independent evaluator validation explicitly open
+avoid automatic promotion merely because minimum evidence categories are populated
+```
