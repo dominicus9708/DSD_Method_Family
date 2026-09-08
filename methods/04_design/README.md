@@ -1,6 +1,6 @@
 # 04. DSD Design / DSD 설계론
 
-Status: **Protocol v0.1 / validation in progress**
+Status: **Protocol v0.1 / maturity: developing / validation in progress**
 
 Task: construct or filter a target structure or admissible target family from declared goals, hard constraints, and an explicit candidate/construction basis rather than only analyze an already formed target.
 
@@ -29,6 +29,8 @@ DESIGN_METHOD_GAIN_STATUS:
   NOT_ASSESSED
 ```
 
+Maturity classification is a separate Audit-level decision and is not inferred from these three ledgers.
+
 ## Method boundaries
 
 - Specification may lock goals/constraints upstream.
@@ -36,7 +38,7 @@ DESIGN_METHOD_GAIN_STATUS:
 - Synthesis combines admitted parts.
 - Transformation records source-target preservation/loss.
 - Optimization selects among already-admissible alternatives under an objective.
-- Audit retraces a completed Design execution.
+- Audit retraces a completed Design execution and may separately review maturity.
 - Material target distinctness is judged at `TARGET_RESOLUTION`.
 - Soft preferences are not silently promoted into hard constraints.
 - External authority remains separate from the Design verdict; a subset application does not become a full-standard conformance claim.
@@ -56,8 +58,9 @@ Boundary: DSD Design structures design decisions but does not replace domain des
 - `DES-CH-006` — broader strongest-reasonable-baseline comparison, PASS with NO_GAIN.
 - `DES-APP-001` — first external-standard application using W3C WCAG 2.2 subset, PASS.
 - `DES-CH-007` — first dedicated deterministic retrace, PASS.
+- `DES-AUD-001` — first Design maturity audit, completed; classification `developing`, established promotion withheld.
 
-### Key accumulated results
+## Key accumulated results
 
 `DES-CH-002`:
 
@@ -75,24 +78,13 @@ UNIQUE_TARGET request -> DESIGN_UNDERDETERMINED
 objective-based choice remains Optimization
 ```
 
-`DES-CH-005`:
+`DES-CH-005` and `DES-CH-006`:
 
 ```text
-B0_EXPLICIT_CONSTRAINT_MATRIX == DSD on frozen claim-relevant result
-DESIGN_ADMISSIBLE / CONFORMANT / NO_GAIN
-25/25 PASS
-```
-
-`DES-CH-006`:
-
-```text
-B1_TYPED_ADMISSIBILITY_TABLE
-Formation + General Property
-15 candidates
-DESIGN_SPACE + UNIQUE_TARGET
-G1-G5 all NOT_ESTABLISHED
-DESIGN_METHOD_GAIN_STATUS: NO_GAIN
-54/54 PASS
+competent baseline comparison
+-> DSD protocol result remains valid
+-> measured superiority not established
+-> DESIGN_METHOD_GAIN_STATUS: NO_GAIN
 ```
 
 `DES-APP-001`:
@@ -107,22 +99,58 @@ DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
 
 The application preserved best-practice versus hard-criterion status, did not invent target-size exceptions, preserved undefined/inapplicable/absent distinctions, and did not overclaim full WCAG conformance.
 
-`DES-CH-007` retraced `DES-APP-001` from immutable Git refs:
-
-```text
-Protocol v0.1 ref: b3d658c839dfe60b65efbc44abf874e257d4a0e2
-DES-APP-001 precommit ref: 4847dbd1f5a38adb5d5c285b19ac41ebcfe86b96
-historical result ref: 32a7842758be0cc179f996fdd8035d9683d31da9
-```
-
-Reconstructed candidate verdicts, rejection bases, `{W1,W2,W3}`, `DESIGN_ADMISSIBLE`, `CONFORMANT`, `NOT_ASSESSED`, external source/version, and bridge all matched the historical record.
+`DES-CH-007` retraced `DES-APP-001` from immutable Git refs and matched candidate verdicts, rejection bases, admissible family, three Design ledgers, external source/version, and bridge.
 
 ```text
 RETRACE_RESULT: PASS
 PRECOMMITTED_REQUIRED_CHECKS: 44/44 PASS
+REPRODUCIBILITY_LEVEL: deterministic_same_project
 ```
 
-This establishes deterministic same-project retraceability only. It does not establish blinded or independent replication because the historical result was already known to the same project/evaluator.
+This does not establish blinded or independent replication.
+
+## First maturity audit — DES-AUD-001
+
+Audit ID:
+
+```text
+DSD-AUDIT-20260908-DESIGN-001
+```
+
+The audit froze 14 maturity axes and 24 audit-discipline checks before scoring.
+
+```text
+M1  dedicated executable protocol                  PASS
+M2  positive/negative terminal discrimination      PASS
+M3  neighboring-method boundary discrimination     PASS
+M4  NO_GAIN preservation                           PASS
+M5  reproducibility/retraceability                 CONDITIONAL_PASS
+M6  external application origin                    PASS
+M7  strongest-reasonable-baseline comparison       PASS
+M8  external source fidelity and bridge discipline PASS
+M9  established-level evidence breadth             INSUFFICIENT
+M10 independent/practical-performance evidence     UNRESOLVED_BUT_BOUNDED
+M11 protocol pressure / unresolved core defect     PRESENT_NONFATAL
+M12 maximum-supported-claim discipline             PASS
+M13 candidate/construction-basis discipline        PASS
+M14 historical failure / anti-post-hoc preservation PASS
+```
+
+Final decision:
+
+```text
+MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
+AUDIT_EXECUTION_VERDICT: PASS
+PRECOMMITTED_REQUIRED_CHECKS: 24/24 PASS
+METHOD_MATURITY_CLASSIFICATION: developing
+PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
+PRIMARY_BLOCKER: insufficient external evidence breadth
+SECONDARY_BLOCKER: independent/practical evidence not established
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The audit does not count as an additional Design pilot.
 
 ## Current evidence state
 
@@ -135,20 +163,17 @@ BOUNDARY_CASES_UNDER_PROTOCOL: 2 attempted
 BOUNDARY_VALIDATION_PASSES: 1
 BOUNDARY_TEST_DESIGN_FAILURES: 1
 NO_GAIN_CASES: 1
-NO_GAIN_VALIDATION_PASSES: 1
 BASELINE_COMPARISON_CASES: 1
-BASELINE_COMPARISON_PASSES: 1
 BASELINE_COMPARISON_RESULT: NO_GAIN
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_APPLICATIONS: 1
-EXTERNAL_APPLICATION_PASSES: 1
+EXTERNAL_DOMAINS: 1
 INDEPENDENT_EVALUATOR_VALIDATION: not established
+METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
-
-All minimum evidence categories are now populated at least once, but this is not an automatic maturity grant.
 
 ## Development records
 
@@ -157,10 +182,13 @@ All minimum evidence categories are now populated at least once, but this is not
 - Task-interface draft: [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - Boundary counterexamples: [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - Boundary amendment 001: [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
-- Worklog: [`WORKLOG.md`](WORKLOG.md) — historical development log; current evidence README/Planning are the latest status sources.
+- Worklog: [`WORKLOG.md`](WORKLOG.md)
+- Maturity audit: `../../evidence/method_specific/design/DES-AUD-001_maturity-review.md`
 
 ## Next development step
 
-Run a **DSD Audit maturity review** of the accumulated Design evidence.
+Address the primary maturity blocker.
 
-The audit must explicitly discount common-evaluator/same-project dependence, preserve the `DES-CH-003` challenge-design failure, treat `NO_GAIN` evidence as valid non-superiority evidence rather than as method failure, and avoid automatic maturity promotion solely because the minimum evidence categories are now populated.
+Run a **second external Design application in a materially different domain**, preferably using an externally supplied real artifact, candidate family, or independently generated option set rather than a project-authored fixture.
+
+After external breadth increases, prepare a genuinely independent evaluator packet. Do not revise Protocol v0.1 merely to improve maturity optics; revise only if a new case exposes a genuine protocol defect.
