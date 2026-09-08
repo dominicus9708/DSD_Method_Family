@@ -59,19 +59,37 @@ Boundary: DSD Design structures design decisions but does not replace engineerin
 
 - Executable protocol: [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - Direct evidence lane: [`../../evidence/method_specific/design/`](../../evidence/method_specific/design/)
-- First direct pilot: `DES-CH-001` — positive constructed challenge, `PASS`.
+- `DES-CH-001` — positive constructed challenge, `PASS`.
+- `DES-CH-002` — negative/failure terminal-status challenge, `PASS`.
 
-`DES-CH-001` froze an exhaustive four-candidate symbolic Design space before scoring and returned exactly `{T1,T2}` as admissible while rejecting an `APPLICABLE_BUT_UNDEFINED` property candidate and a `CHANNEL_ABSENCE` candidate for distinct reasons. The run used no hidden Optimization.
+`DES-CH-001` returned exactly `{T1,T2}` as admissible while preserving `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED != CHANNEL_ABSENCE` and using no hidden Optimization.
+
+`DES-CH-002` separately precommitted three non-success subcases and obtained:
 
 ```text
-DIRECT_CONSTRUCTED_PILOTS: 1
+exhaustive + all candidates rejected
+-> DESIGN_INFEASIBLE
+
+non_exhaustive + no admissible target found
+-> DESIGN_UNDERDETERMINED
+
+required predecessor identity unavailable
+-> DESIGN_BLOCKED
+```
+
+All three subcases were `CONFORMANT`; no missing predecessor data was fabricated and no non-exhaustive failure-to-find was promoted to infeasibility.
+
+```text
+DIRECT_CONSTRUCTED_PILOTS: 2
 POSITIVE_CASES: 1
-NEGATIVE_OR_FAILURE_CASES: 0
+NEGATIVE_OR_FAILURE_CASES: 1
+BOUNDARY_CASES_UNDER_PROTOCOL: 0
+NO_GAIN_CASES: 0
 EXTERNAL_APPLICATIONS: 0
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The positive pilot is direct evidence for Protocol v0.1 execution only; it does not establish external applicability, baseline superiority, independent agreement, or method maturity.
+The current pilots are direct evidence for Protocol v0.1 execution only; they do not establish external applicability, baseline superiority, independent agreement, or method maturity.
 
 ## Development records
 
@@ -84,4 +102,6 @@ The positive pilot is direct evidence for Protocol v0.1 execution only; it does 
 
 ## Next development step
 
-Precommit and run the first **negative/failure constructed Design challenge** under Protocol v0.1, with emphasis on correctly separating `DESIGN_INFEASIBLE`, `DESIGN_UNDERDETERMINED`, and `DESIGN_BLOCKED`.
+Precommit and run the first **boundary constructed Design challenge** under Protocol v0.1.
+
+The next pressure point is Design versus Optimization: keep at least two targets admissible under hard constraints while an explicit objective would rank them, and verify that Design does not silently absorb the objective-based selection.
