@@ -225,3 +225,74 @@ CFE-QM
 ```
 
 The theorem-transfer gate remains blocked until these are likewise resolved or explicitly adopted.
+
+## 10. QM Core 004H resolution — ETC-QM
+
+QM Core 004H decomposed the earlier monolithic exact-tomographic-composite lock into independent product-composition semantics and local-product readout injectivity.
+
+Two algebraic countermodels establish the non-implications:
+
+```text
+LDC-QM alone       != full local-product availability
+full product span  != local tomography when an extra global coordinate survives
+```
+
+The missing precursor is recorded as:
+
+```text
+ILPC-QM  Independent Local Product Composition
+```
+
+which declares product preparations, product effects, randomizer compatibility, product probability factorization, product normalization, and local transformation products when required.
+
+After the finite ordered-carrier linearization, ILPC-QM gives a bilinear product map and therefore a linear map
+
+\[
+\widetilde\beta:V_A\otimes V_B\to V_{AB}.
+\]
+
+With spanning local effects and product-probability factorization, the product map is injective, giving
+
+\[
+\dim V_{AB}\ge \dim V_A\dim V_B.
+\]
+
+LDC-QM supplies the opposite dimension bound because the separating local-product readout span has dimension at most `dim(V_A) dim(V_B)`:
+
+\[
+\dim V_{AB}\le \dim V_A\dim V_B.
+\]
+
+Hence
+
+\[
+\boxed{\dim V_{AB}=\dim V_A\dim V_B}
+\]
+
+and the injective product map is a finite-dimensional isomorphism:
+
+\[
+\boxed{V_{AB}\cong V_A\otimes V_B.}
+\]
+
+Thus exact tensor-carrier equality is no longer treated as an independent primitive lock. It is a **conditional derivation** once ILPC-QM, LDC-QM, and the finite operational linearization are supplied.
+
+Provenance remains conservative:
+
+```text
+ORD/ORE linearization     B  GENERAL_OPERATIONAL_DERIVATION
+LDC-QM                     C  TARGET_SPECIALIZATION_SELECTOR
+ILPC-QM                    D  PROVISIONAL EXACT-COMPARATOR PRECURSOR
+ETC tensor equality        CONDITIONAL_DERIVATION FROM C/D INPUTS
+```
+
+ILPC-QM is not reclassified as Class B merely because it has general operational wording; it was isolated during the exact quantum-comparator stage. Independent non-QM validation is required before any provenance upgrade.
+
+After 004H the remaining unresolved exact targets are:
+
+```text
+ULRRDE-QM
+CFE-QM
+```
+
+The theorem-transfer gate remains blocked. The ETC tensor result adds interface precision, but because it depends on Class-C/D inputs it contributes no new independent A/B evidence that generic DSD derived quantum theory.
