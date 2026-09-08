@@ -90,16 +90,6 @@ Files:
 - `DES-CH-001_precommit.md` — task/candidate/pass criteria frozen before scoring; precommit commit `f82a333`.
 - `DES-CH-001_positive-status-sensitive-design-space.md` — executed result; result commit `9cdf871`.
 
-Locked challenge:
-
-```text
-CLAIMED_OUTPUT_LEVEL: DESIGN_SPACE
-CANDIDATE_COVERAGE: exhaustive relative to the toy challenge
-CANDIDATES: T1,T2,T3,T4
-EXPECTED_ADMISSIBLE: T1,T2
-EXPECTED_REJECTED: T3,T4
-```
-
 Result:
 
 ```text
@@ -124,11 +114,45 @@ The admissible family `{T1,T2}` was returned without selecting one as best, so n
 
 Evidence limit: constructed same-session positive pilot only; no external, baseline, or independent-evaluator claim.
 
+### `DES-CH-002` — negative terminal-status separation
+
+Files:
+
+- `DES-CH-002_precommit.md` — three non-success subcases frozen before evaluation; precommit commit `1c40630`.
+- `DES-CH-002_negative-terminal-status-separation.md` — executed result; result commit `65b47c9`.
+
+Frozen pressure points:
+
+```text
+Case I: exhaustive candidate universe + all candidates rejected
+Case U: non_exhaustive evaluated sample + no admissible target found
+Case B: claim-required predecessor identity unavailable
+```
+
+Result:
+
+```text
+Case I -> DESIGN_INFEASIBLE
+Case U -> DESIGN_UNDERDETERMINED
+Case B -> DESIGN_BLOCKED
+
+PRECOMMITTED_REQUIRED_CHECKS: 20
+PASSED: 20
+FAILED: 0
+DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT in all three subcases
+DESIGN_METHOD_GAIN_STATUS: NOT_ASSESSED
+DIRECT_EVIDENCE_RESULT: PASS
+```
+
+The case directly tests that non-exhaustive failure-to-find is not promoted to global infeasibility and that a missing claim-required predecessor is exposed as blocking rather than fabricated or treated as a rejection.
+
+Evidence limit: constructed same-session negative/failure pilot only; one case ID with three locked subcases, therefore direct-pilot increment is +1, not +3.
+
 ## Minimum evidence architecture before promotion consideration
 
 1. dedicated Design protocol — **established at v0.1**;
 2. positive constructed case — **DES-CH-001 PASS**;
-3. negative/failure case;
+3. negative/failure case — **DES-CH-002 PASS**;
 4. boundary case;
 5. `NO_GAIN` case;
 6. reproducibility/retrace record;
@@ -141,9 +165,9 @@ A later maturity audit evaluates the accumulated corpus; the checklist itself do
 
 ```text
 DEDICATED_PROTOCOL: v0.1 established
-DIRECT_CONSTRUCTED_PILOTS: 1
+DIRECT_CONSTRUCTED_PILOTS: 2
 POSITIVE_CASES: 1
-NEGATIVE_OR_FAILURE_CASES: 0
+NEGATIVE_OR_FAILURE_CASES: 1
 BOUNDARY_CASES_UNDER_PROTOCOL: 0
 NO_GAIN_CASES: 0
 EXTERNAL_APPLICATIONS: 0
@@ -154,6 +178,6 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 
 ## Immediate next evidence task
 
-Run a **negative/failure constructed Design challenge** under a separately pre-frozen Protocol v0.1 task record.
+Run a **boundary constructed Design challenge** under a separately pre-frozen Protocol v0.1 record.
 
-The next case should test a genuine non-success terminal outcome without turning missing information or non-exhaustive search into an unsupported `DESIGN_INFEASIBLE` claim.
+The strongest next boundary pressure is Design versus Optimization: two or more candidates should remain admissible under hard constraints, while an explicit objective would rank them. Design must stop at the admissible family or a task-authorized non-optimization result and must not absorb the Optimization verdict.
