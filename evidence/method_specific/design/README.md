@@ -218,13 +218,58 @@ DIRECT_EVIDENCE_RESULT: PASS
 This is the first successful executable-protocol Design boundary validation.
 It validates the Design-side separation only; DSD Optimization itself is not validated by this case.
 
+### `DES-CH-005` — NO_GAIN baseline equivalence
+
+Files:
+
+- `DES-CH-005_precommit.md` — baseline, gain criteria, candidates, and expected records frozen before evaluation; precommit commit `b030f90`.
+- `DES-CH-005_no-gain-baseline-equivalence.md` — executed result; result commit `1533567`.
+
+Frozen strongest reasonable baseline for this simple synthetic task:
+
+```text
+B0_EXPLICIT_CONSTRAINT_MATRIX
+```
+
+Both B0 and DSD Design used the same exhaustive family `{N1,N2,N3}`, the same hard constraints H1-H2, and the same target resolution including the exact q_aux admission state.
+
+Result:
+
+```text
+B0 admissible family:  {N1,N2}
+DSD admissible family: {N1,N2}
+
+B0 rejection:
+  N3 -> H2
+DSD rejection:
+  N3 -> H2
+
+G1 distinction-preservation gain: not established
+G2 rejection-traceability gain: not established
+G3 unsupported-closure-avoidance gain: not established
+G4 retraceability gain: not established
+
+TERMINAL_DESIGN_STATUS: DESIGN_ADMISSIBLE
+DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT
+DESIGN_METHOD_GAIN_STATUS: NO_GAIN
+PRECOMMITTED_REQUIRED_CHECKS: 25
+PASSED: 25
+FAILED: 0
+DIRECT_EVIDENCE_RESULT: PASS
+```
+
+This is the first successful direct `NO_GAIN` Design pilot.
+It confirms that extra DSD notation or bookkeeping is not counted as gain by itself and that a correct, conformant Design execution may add no demonstrated benefit over a competent baseline for the declared task.
+
+Because B0 was intentionally a simple same-session synthetic comparator, this case does not by itself close the broader strongest-reasonable-baseline requirement for method maturity.
+
 ## Minimum evidence architecture before promotion consideration
 
 1. dedicated Design protocol — **established at v0.1**;
 2. positive constructed case — **DES-CH-001 PASS**;
 3. negative/failure case — **DES-CH-002 PASS**;
 4. boundary case — **DES-CH-004 PASS after DES-CH-003 test-design failure was preserved**;
-5. `NO_GAIN` case;
+5. `NO_GAIN` case — **DES-CH-005 PASS**;
 6. reproducibility/retrace record;
 7. at least one external or independently generated application case;
 8. strongest-reasonable-baseline comparison when applicable.
@@ -235,21 +280,22 @@ A later maturity audit evaluates the accumulated corpus; the checklist itself do
 
 ```text
 DEDICATED_PROTOCOL: v0.1 established
-DIRECT_CONSTRUCTED_PILOTS: 4
+DIRECT_CONSTRUCTED_PILOTS: 5
 POSITIVE_CASES: 1
 NEGATIVE_OR_FAILURE_CASES: 1
 BOUNDARY_CASES_UNDER_PROTOCOL: 2 attempted
 BOUNDARY_VALIDATION_PASSES: 1
 BOUNDARY_TEST_DESIGN_FAILURES: 1
-NO_GAIN_CASES: 0
+NO_GAIN_CASES: 1
+NO_GAIN_VALIDATION_PASSES: 1
 EXTERNAL_APPLICATIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
-BASELINE_BENEFIT: not established
+BROAD_BASELINE_BENEFIT: not established
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
 ## Immediate next evidence task
 
-Run a separately precommitted **`NO_GAIN` Design challenge** under Protocol v0.1 with a strongest reasonable baseline locked before comparison.
+Run a broader **strongest-reasonable-baseline comparison** that is not deliberately reduced to a trivial finite fixture.
 
-The challenge should allow the DSD Design result to be correct while demonstrating that the DSD procedure adds no material gain over the baseline on the declared gain criterion.
+The next comparison should use a task where a competent non-DSD baseline has a genuine opportunity either to match DSD, outperform it, or lose a precommitted claim-relevant distinction. The comparison criterion and baseline must again be frozen before execution.
