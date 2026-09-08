@@ -1,6 +1,6 @@
 # DSD Design Planning / DSD 설계론 기획
 
-Status: **Protocol v0.1 established / validation pending**
+Status: **Protocol v0.1 / validation in progress**
 
 Date opened: **2026-09-08**
 
@@ -8,38 +8,21 @@ Date opened: **2026-09-08**
 
 Develop DSD Design as an independent method that constructs and filters target structures from declared goals and constraints, while preserving the current 22-method boundary discipline.
 
-The method is not treated as mature merely because a protocol now exists. Shared-core evidence and neighboring-method results may be referenced, but direct Design validation must be accumulated separately.
+The method is not treated as mature merely because related DSD methods already have evidence. Shared-core evidence and neighboring-method results may be referenced, but direct Design validation must be accumulated separately.
 
-## Completed planning basis / 완료된 기획 기반
+## Current protocol / 현재 프로토콜
 
-Planning Steps 1-2 are complete.
+The first executable protocol is established:
 
-Pre-protocol sources:
+- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
+
+Its pre-protocol basis is preserved in:
 
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 
-These established:
-
-- minimum well-formed Design inputs;
-- candidate/construction-basis requirements;
-- candidate-coverage discipline;
-- DSD layer activation rules;
-- terminal Design statuses;
-- separation of Design outcome, protocol conformance, and method gain;
-- constraint provenance and prohibition of silent soft-to-hard promotion;
-- auxiliary-method/handoff recording;
-- method boundaries against Specification, Synthesis, Transformation, Optimization, and later Audit.
-
-## Current executable protocol / 현재 실행 프로토콜
-
-- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
-
-Protocol v0.1 is the first executable Design protocol.
-It is not a maturity or external-validity claim.
-
-### Core task interface
+## Current task interface / 현재 과업 인터페이스
 
 ```text
 GOALS
@@ -60,20 +43,9 @@ GOALS
 -> admissible target family OR terminal non-success result
 ```
 
-Design does not assume a universal candidate generator. Domain-specific candidate or construction resources must be supplied explicitly enough to reproduce the covered space actually used.
+Design does not assume a universal candidate generator. Domain-specific candidate or construction resources must be supplied explicitly enough to reproduce the space actually used.
 
-### Claimed output levels
-
-```text
-DESIGN_SPACE
-ADMISSIBLE_TARGET
-UNIQUE_TARGET
-PARTIAL_TARGET
-```
-
-A `DESIGN_SPACE` result is always relative to declared candidate coverage. A global completeness claim requires an independently justified exhaustive basis.
-
-### Terminal Design status
+## Current terminal-status ledger / 현재 종결 상태 장부
 
 ```text
 DESIGN_ADMISSIBLE
@@ -82,16 +54,7 @@ DESIGN_UNDERDETERMINED
 DESIGN_BLOCKED
 ```
 
-### Protocol conformance
-
-```text
-DESIGN_PROTOCOL_CONFORMANCE:
-  CONFORMANT
-  NONCONFORMANT
-  UNDETERMINED
-```
-
-### Method gain
+Method gain remains separate:
 
 ```text
 DESIGN_METHOD_GAIN_STATUS:
@@ -100,28 +63,43 @@ DESIGN_METHOD_GAIN_STATUS:
   NOT_ASSESSED
 ```
 
-These three ledgers are intentionally distinct.
+Protocol conformance is a third independent ledger:
+
+```text
+DESIGN_PROTOCOL_CONFORMANCE:
+  CONFORMANT
+  NONCONFORMANT
+  UNDETERMINED
+```
 
 ## Candidate-coverage guard / 후보 범위 보호 규칙
-
-Record:
 
 ```text
 CANDIDATE_COVERAGE: exhaustive / non_exhaustive / unknown
 ```
 
-`DESIGN_INFEASIBLE` requires either exhaustive candidate coverage with all required candidates rejected or an explicit impossibility argument. Failure to find a candidate in a non-exhaustive or unknown search is not enough for a global infeasibility claim.
+`DESIGN_INFEASIBLE` requires either exhaustive candidate coverage with all required candidates rejected or an explicit impossibility argument. Failure to find a candidate in a non-exhaustive search is not enough for a global infeasibility claim.
 
 ## Constraint-provenance guard / 제약 출처 보호 규칙
-
-Design may consume hard constraints from an explicit task owner, Specification result, theorem, domain standard, physical/technical limit, or other declared source.
-
-Design itself must not silently promote a soft preference into a hard constraint after seeing the candidate space merely to force a unique result.
-Any such change must be a new/upstream task revision with provenance.
 
 ```text
 SOFT_PREFERENCE != HARD_CONSTRAINT
 ```
+
+Design must not silently promote a soft preference into a hard constraint after candidate inspection merely to force a unique result. Any such change must be a new/upstream task revision with provenance.
+
+## Output-level guard / 산출 수준 보호 규칙
+
+```text
+DESIGN_SPACE
+ADMISSIBLE_TARGET
+UNIQUE_TARGET
+PARTIAL_TARGET
+```
+
+Multiple admissible targets are an ordinary Design success when the declared output is `DESIGN_SPACE` or `ADMISSIBLE_TARGET`.
+
+If `UNIQUE_TARGET` is requested and multiple materially distinct admissible targets survive without a non-optimization determinacy rule, the Design result is `DESIGN_UNDERDETERMINED`; choosing the best surviving alternative belongs to DSD Optimization.
 
 ## Method boundary / 방법 경계
 
@@ -132,13 +110,61 @@ SOFT_PREFERENCE != HARD_CONSTRAINT
 - **Optimization** selects among already admissible alternatives by an explicit objective or preference criterion.
 - **Audit** later retraces the Design execution against its locked scope, inputs, bridges, evidence, and verdict rules.
 
-One workflow may use several methods, but method-specific verdicts and evidence remain separately identifiable.
+One workflow may use several methods, but their method verdicts and direct evidence remain separately identifiable.
+
+## Boundary-counterexample result / 경계 반례 결과
+
+```text
+BOUNDARY_CASES_RUN: 8
+BOUNDARY_PRESERVED_WITHOUT_REFINEMENT: 5
+BOUNDARY_PRESERVED_WITH_NONBREAKING_REFINEMENT: 3
+EXACT_METHOD_COLLAPSE_FOUND: 0
+FUNDAMENTAL_TASK_INTERFACE_FAILURE: 0
+DIRECT_EVIDENCE_COUNT_INCREMENT: 0
+```
+
+Two non-breaking refinements were required:
+
+1. `CONSTRAINT_SOURCE_OR_SPECIFICATION`
+2. `AUXILIARY_METHODS_OR_HANDOFFS`
+
+## First direct pilot / 첫 직접 파일럿
+
+`DES-CH-001` is the first direct constructed Design challenge under Protocol v0.1.
+
+The task and expected result were frozen in `evidence/method_specific/design/DES-CH-001_precommit.md` before scoring.
+
+The challenge used an exhaustive four-candidate symbolic Design space and directly tested:
+
+```text
+DEFINED_ZERO
+!= APPLICABLE_BUT_UNDEFINED
+!= CHANNEL_ABSENCE
+```
+
+Result:
+
+```text
+ADMISSIBLE_FAMILY: {T1,T2}
+REJECTED: {T3,T4}
+PRECOMMITTED_REQUIRED_CHECKS: 11
+PASSED: 11
+FAILED: 0
+TERMINAL_DESIGN_STATUS: DESIGN_ADMISSIBLE
+DESIGN_PROTOCOL_CONFORMANCE: CONFORMANT
+DESIGN_METHOD_GAIN_STATUS: NOT_ASSESSED
+CHALLENGE_VERDICT: PASS
+```
+
+No hidden Optimization was used; the method returned both admissible targets rather than selecting one as best.
+
+Evidence limit: constructed same-session positive pilot only.
 
 ## DSD layer policy / DSD 층위 정책
 
 The minimum-layer principle overrides a fixed serial package.
 
-1. **Formation** — active for new structural targets, or explicitly locked as an inherited Stage-VI predecessor for downstream target design.
+1. **Formation** — active for new structural targets, or explicitly locked as the inherited Stage-VI predecessor for downstream target design.
 2. **General Property** — activated only when typed property declaration, applicability, contextual prerequisites, or partial property assignment matter to the target.
 3. **Static Aggregation** — activated only when a candidate is evaluated through a declared analytic readout or aggregate.
 4. **Dynamics** — activated only when trajectory, transition, lineage, propagation, or other time-dependent requirements matter.
@@ -146,49 +172,13 @@ The minimum-layer principle overrides a fixed serial package.
 
 No bridge is inferred from a property name, intuition, or shared vocabulary alone.
 
-## Protocol v0.1 procedure / 프로토콜 v0.1 절차
-
-```text
-D1  LOCK TASK AND CLAIM
-D2  LOCK CONSTRAINT SOURCES
-D3  LOCK CANDIDATE / CONSTRUCTION BASIS AND COVERAGE
-D4  LOCK SELECTED DSD INTERFACES AND REQUIRED BRIDGES
-D5  CONSTRUCT / ENUMERATE COVERED CANDIDATES
-D6  RUN STATUS-SENSITIVE DSD ADMISSIBILITY CHECKS
-D7  RUN DOMAIN / EXTERNAL / AUXILIARY-METHOD CHECKS WHEN ACTIVE
-D8  CONSTRUCT ADMISSIBLE FAMILY
-D9  CHECK CLAIMED OUTPUT LEVEL
-D10 ASSIGN TERMINAL DESIGN STATUS
-D11 RECORD PROTOCOL CONFORMANCE SEPARATELY
-D12 RECORD METHOD-GAIN STATUS SEPARATELY
-D13 RECORD LIMITS AND REPRODUCIBILITY DATA
-```
-
-## Evidence convention / 증거 규칙
-
-Protocol v0.1 fixes:
-
-```text
-DES-CH-###   constructed Design challenges
-DES-APP-###  external or independently generated Design applications
-DES-AUD-###  Design-specific audit / maturity records
-```
-
-Every case additionally records `CASE_CLASS`, such as positive, negative/failure, boundary, no_gain, baseline comparison, reproducibility, or external application.
-
-Direct Design evidence is stored under:
-
-`evidence/method_specific/design/`
-
-Planning artifacts remain planning records and are not retroactively counted as direct v0.1 pilots.
-
 ## Development sequence / 개발 순서
 
 1. ✅ Lock the Design-specific task interface and minimum valid output at draft level.
-2. ✅ Build boundary counterexamples and incorporate non-breaking refinements.
-3. ✅ Establish executable `PROTOCOL_v0.1.md`.
-4. **Next:** run the first positive constructed Design challenge under a frozen Protocol v0.1 task record.
-5. Run a negative/failure pilot.
+2. ✅ Build boundary counterexamples against Specification, Synthesis, Transformation, and Optimization; incorporate non-breaking refinements.
+3. ✅ Establish `PROTOCOL_v0.1.md`.
+4. ✅ Run first positive constructed pilot: `DES-CH-001` PASS.
+5. **Next:** run a negative/failure constructed pilot under a separately frozen task record.
 6. Run a boundary pilot under the protocol.
 7. Run a `NO_GAIN` pilot.
 8. Compare against a strongest reasonable baseline where applicable.
@@ -196,18 +186,52 @@ Planning artifacts remain planning records and are not retroactively counted as 
 10. Record reproducibility/retrace results.
 11. Run a DSD Audit maturity review.
 
-## Current evidence state / 현재 증거 상태
+## Evidence rule / 증거 규칙
+
+Direct Design evidence is stored under:
+
+`evidence/method_specific/design/`
+
+The minimum promotion architecture follows the repository-wide method-specific evidence rule:
+
+- dedicated protocol;
+- positive case;
+- negative/failure case;
+- boundary case;
+- `NO_GAIN` case;
+- reproducibility record;
+- at least one external or independently generated application;
+- strongest-reasonable-baseline comparison when applicable.
+
+These are minimum evidence categories, not an automatic maturity grant.
+
+Current direct evidence state:
 
 ```text
 DEDICATED_PROTOCOL: v0.1 established
-DIRECT_CONSTRUCTED_PILOTS: 0
+DIRECT_CONSTRUCTED_PILOTS: 1
+POSITIVE_CASES: 1
+NEGATIVE_OR_FAILURE_CASES: 0
+BOUNDARY_CASES_UNDER_PROTOCOL: 0
+NO_GAIN_CASES: 0
 EXTERNAL_APPLICATIONS: 0
-INDEPENDENT_EVALUATOR_VALIDATION: not established
-METHOD_EVIDENCE_STATUS: validation_pending
+CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Protocol establishment is an infrastructure milestone, not direct validation.
+## Recording rule / 기록 규칙
+
+Historical runs are preserved under the protocol version used at execution time; later protocol revisions do not rewrite earlier results.
 
 ## Next step / 다음 단계
 
-Construct and pre-lock the first **positive Design challenge** so that Protocol v0.1 can be tested on a case where at least one admissible target should exist without invoking hidden Optimization.
+Precommit and run the first **negative/failure Design challenge** under Protocol v0.1.
+
+The preferred next pressure point is the distinction among:
+
+```text
+DESIGN_INFEASIBLE
+DESIGN_UNDERDETERMINED
+DESIGN_BLOCKED
+```
+
+A non-exhaustive failure-to-find must not be upgraded to `DESIGN_INFEASIBLE`.
