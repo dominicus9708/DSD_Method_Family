@@ -133,3 +133,133 @@ implicit component-to-whole property lifting
 ```
 
 The purpose is to try to break the draft interface before writing `Synthesis Protocol v0.1`.
+
+---
+
+## 2026-09-10 — Step 2: pre-protocol boundary counterexamples
+
+Status: **Step 2 complete / method boundary preserved with four non-breaking refinement groups**
+
+### Created artifacts
+
+```text
+methods/05_synthesis/BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md
+methods/05_synthesis/TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+```
+
+Boundary attack creation commit:
+
+```text
+d089b04
+```
+
+Boundary amendment creation commit:
+
+```text
+d1f51b2
+```
+
+### Attack scope
+
+Sixteen cases attacked the draft across:
+
+```text
+hidden Design
+explicit Design -> Synthesis handoff
+Transformation-only mapping
+Transformation -> Synthesis handoff
+Aggregation-only readout
+Aggregation after genuine synthesis
+hidden Optimization
+implicit component -> whole property lift
+unjustified commutativity
+unjustified associativity / parenthesization
+identity / idempotence assumptions
+composition-tree equivalence / uniqueness
+partial-synthesis residual obligations
+static composition vs temporal assembly process
+component-list vs composition-space exhaustiveness
+Formation Clause VII vs domain synthesis legitimacy
+```
+
+### Aggregate result
+
+```text
+BOUNDARY_ATTACKS_RUN: 16
+PRESERVED_NO_REFINEMENT: 11
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+DIRECT_SYNTHESIS_PILOT_INCREMENT: 0
+```
+
+No case forced Synthesis to merge with Design, Transformation, Aggregation, or Optimization.
+
+### Required refinement groups
+
+The Step-1 task identity survived, but four missing explicit obligations were exposed.
+
+```text
+R1
+  COMPOSITION_LAW_PROFILE
+  GROUPING_OR_PARENTHESIZATION_POLICY
+
+R2
+  COMPOSITION_EQUIVALENCE_OR_CANONICALIZATION_RULE
+
+R3
+  RESIDUAL_OPEN_INTERFACES_OR_OBLIGATIONS
+
+R4
+  ASSEMBLY_SEQUENCE_OR_PROCESS_SCOPE
+```
+
+R1 prevents notation from silently implying commutativity, associativity, identity, or idempotence.
+
+R2 prevents candidate IDs or syntax trees from being treated as material target distinctness for uniqueness claims.
+
+R3 prevents `PARTIAL_SYNTHESIS` from being mistaken for a completed target when open interfaces, omitted parts, or unresolved prerequisites remain.
+
+R4 separates structural operand/order semantics from a time-resolved assembly process and prevents static composability from becoming an unsupported process-feasibility claim.
+
+### Added nonconformance candidates
+
+```text
+UNDECLARED_GROUPING_OR_PARENTHESIZATION_ASSUMPTION
+UNDECLARED_COMPOSITION_EQUIVALENCE
+PARTIAL_SYNTHESIS_RESIDUAL_OMISSION
+STATIC_COMPOSABILITY_PROMOTED_TO_PROCESS_FEASIBILITY
+```
+
+The existing unjustified associativity and commutativity classes remain.
+
+### Historical preservation rule
+
+`TASK_INTERFACE_v0.1-draft.md` remains the Step-1 pre-attack artifact.
+The effective interface is now represented as:
+
+```text
+TASK_INTERFACE_v0.1-draft.md
++ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+```
+
+The original draft is not silently rewritten after seeing the attack results.
+
+### Evidence state after Step 2
+
+The boundary attacks remain pre-protocol planning artifacts and do not count as protocol-level direct evidence.
+
+```text
+DEDICATED_SYNTHESIS_PROTOCOL: not established
+DIRECT_SYNTHESIS_PILOTS: 0
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
+BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 0
+EXTERNAL_SYNTHESIS_APPLICATIONS: 0
+INDEPENDENT_SYNTHESIS_VALIDATION: not established
+SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
+CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_pending
+```
+
+### Next technical step
+
+Freeze the first executable `Synthesis Protocol v0.1` from the effective Step-2 interface, explicitly integrating the four refinement groups without rewriting the historical Step-1 and Step-2 artifacts.
