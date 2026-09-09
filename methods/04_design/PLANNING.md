@@ -57,9 +57,9 @@ Maturity is evaluated separately by DSD Audit.
 11. ✅ First DSD Audit maturity review `DES-AUD-001` — audit 24/24 PASS; maturity classified `developing`; established promotion withheld.
 12. ✅ Second external application `DES-APP-002` — NIST SP 800-63B-4 AAL2 route-form grammar, 38/38 PASS.
 13. ✅ First blinded independent-evaluator packet `DES-IEP-001` prepared; public reviewer packet + submission template + hidden reference commitment frozen, but no external submission yet.
-14. **Next:** obtain a genuinely separate evaluator submission under DES-IEP-001 and score it only after immutable submission freeze and reference-key reveal.
-15. Optional additional breadth: non-software/physical external application with real irregular candidate artifact.
-16. Re-audit maturity only after materially new evidence is frozen.
+14. **Pending external action:** obtain a genuinely separate evaluator submission under DES-IEP-001 and score it only after immutable submission freeze and reference-key reveal.
+15. ✅ Additional breadth track: physical built-environment external application `DES-APP-003` using selected 2010 ADA ramp requirements, 38/38 PASS.
+16. Re-audit maturity only after materially new independent or comparably strong evidence is frozen.
 
 ## Evidence milestones / 증거 이정표
 
@@ -101,23 +101,7 @@ It returned `{W1,W2,W3}` and passed 36/36 checks while keeping source requiremen
 
 ### External application 2 — DES-APP-002
 
-`DES-APP-002` freezes NIST SP 800-63B-4, July 2025, AAL2 authenticator route-form rules.
-
-The source supplies the positive candidate/construction grammar:
-
-```text
-MF out-of-band
-MF OTP
-MF cryptographic authentication
-
-listed physical authenticator:
-  look-up secret
-  out-of-band device
-  SF OTP
-  SF cryptographic authentication
-plus:
-  password or biometric comparison
-```
+`DES-APP-002` uses NIST SP 800-63B-4, July 2025, AAL2 authenticator route-form rules.
 
 Execution result:
 
@@ -142,7 +126,56 @@ TWO_DISTINCT_FACTOR_STRUCTURE
 != NIST_AAL2_PERMITTED_FORM
 ```
 
-This moves external evidence from `1 application / 1 domain` to `2 applications / 2 domains`, with the second case using a source-supplied positive route-form grammar.
+### External application 3 — DES-APP-003
+
+`DES-APP-003` moves the external lane into the physical built-environment domain using the U.S. Access Board's 2010 ADA Standards for Accessible Design, selected §405 ramp requirements.
+
+Frozen subset:
+
+```text
+§405.2 running slope 1:12 maximum
+§405.3 cross slope 1:48 maximum
+§405.5 clear width 36 inches minimum
+§405.6 rise 30 inches maximum per ramp run
+§405.7 top and bottom landings required
+```
+
+Execution result:
+
+```text
+R1 -> admissible
+R2 -> admissible
+R3 -> rejected H1
+R4 -> rejected H2
+R5 -> rejected H3
+R6 -> rejected H4
+R7 -> rejected H5
+R8 -> rejected H1,H2,H3,H4,H5
+R9 -> admissible
+R10 -> rejected H0; other geometric fields remain INAPPLICABLE
+
+ADMISSIBLE_FAMILY:
+{R1,R2,R9}
+
+DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+PRECOMMITTED_REQUIRED_CHECKS: 38/38 PASS
+```
+
+The case does not convert advisory gentler-slope recommendations into hard constraints, does not invoke inactive alteration/employee-work-area exceptions, and does not overclaim full ADA ramp compliance or engineering certification.
+
+This moves external evidence from:
+
+```text
+2 applications / 2 domains
+```
+
+to:
+
+```text
+3 applications / 3 domains
+```
+
+across web accessibility, digital identity/security, and built environment/physical accessibility.
 
 ### Dedicated retrace
 
@@ -171,12 +204,12 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-`DES-APP-002` and `DES-IEP-001` are later records and do not retroactively change the audit.
+`DES-APP-002`, `DES-APP-003`, and `DES-IEP-001` are later records and do not retroactively change the audit.
 A new maturity decision requires a new audit record.
 
 ## Independent evaluator packet / 독립 평가자 패킷
 
-`DES-IEP-001` is now prepared and frozen as infrastructure.
+`DES-IEP-001` is prepared and frozen as infrastructure.
 
 Public artifacts:
 
@@ -196,18 +229,6 @@ Public reference-key commitment:
 ```text
 SHA-256
 3f2cf7c7787578063096c98ada872f29fffb6fdef27f7893d039e04604a2b0cf
-```
-
-The canonical plaintext reference key and nonce remain outside the reviewer packet until an evaluator freezes the submission.
-The packet contains two held-out tasks using the frozen WCAG and NIST rule sets, with 12 packet-specific candidates and 24 semantic checks.
-
-Precommitted agreement levels:
-
-```text
-FULL: eligible + 24/24
-PARTIAL: eligible + >=21/24 + all 10 critical checks
-DISAGREEMENT: eligible + <21/24 or any critical failure
-CONTAMINATED_OR_INELIGIBLE: independence gate failure
 ```
 
 Preparation status:
@@ -230,8 +251,8 @@ NEGATIVE_OR_FAILURE_CASE: established
 BOUNDARY_CASE: established with one preserved failed predecessor test
 NO_GAIN_CASE: established
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established at constructed level
-EXTERNAL_APPLICATIONS: 2
-EXTERNAL_DOMAINS: 2
+EXTERNAL_APPLICATIONS: 3
+EXTERNAL_DOMAINS: 3
 REPRODUCIBILITY_RETRACE: established at deterministic same-project level
 INDEPENDENT_EVALUATOR_PACKET: prepared
 INDEPENDENT_EVALUATOR_VALIDATION: not established
@@ -244,9 +265,9 @@ Current evidence counts:
 DIRECT_CONSTRUCTED_PILOTS: 7
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
-EXTERNAL_APPLICATIONS: 2
-EXTERNAL_DOMAINS: 2
-EXTERNAL_APPLICATION_PASSES: 2
+EXTERNAL_APPLICATIONS: 3
+EXTERNAL_DOMAINS: 3
+EXTERNAL_APPLICATION_PASSES: 3
 INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
@@ -256,17 +277,18 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 
 Historical runs remain preserved under the protocol version used at execution time. Prospective corrections do not rewrite earlier evidence. Maturity re-audits must be new audit records rather than edits to `DES-AUD-001`.
 
-The independent evaluator packet is also append-only at the committed version. If a defect is found before distribution, record a revision explicitly rather than silently replacing the frozen packet.
+The independent evaluator packet is append-only at the committed version. If a defect is found, record a revision explicitly rather than silently replacing the frozen packet.
 
 ## Next step / 다음 단계
 
-The current same-project development work has reached the point where the next core evidence event requires a genuinely separate evaluator.
+External breadth is no longer the immediate bottleneck: three external applications now span three materially different domains.
+The highest-value unresolved evidence event is independent evaluation.
 
 Operational sequence:
 
 ```text
 1. select evaluator
-2. distribute frozen reviewer packet + submission template + external source material only
+2. distribute frozen clean reviewer packet + submission template + external source material only
 3. collect eligibility/contamination declarations
 4. freeze final evaluator submission with immutable/timestamped identifier
 5. reveal private escrow nonce and canonical key
@@ -274,5 +296,3 @@ Operational sequence:
 7. score the frozen submission under the precommitted 24-check rule
 8. record the result as a new evidence/Audit record without editing the original submission
 ```
-
-A non-software/physical external application remains useful as an additional breadth track, particularly if the candidate set is taken directly from a real artifact rather than project-frozen controls.
