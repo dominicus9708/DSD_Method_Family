@@ -1,6 +1,6 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **planning / proposed / Step 1 task interface complete**
+Status: **planning / proposed / Step 2 boundary attack complete**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
@@ -14,11 +14,23 @@ which larger constructions are legitimately synthesizable,
 and what structure/relations/statuses are retained or lost?
 ```
 
-## Step-1 planning locks
+## Effective pre-protocol interface
 
-The first Synthesis-specific task interface is now drafted at:
+Historical Step-1 draft:
 
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
+
+Step-2 boundary pressure:
+
+- [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
+- [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
+
+Effective interface before Protocol v0.1:
+
+```text
+TASK_INTERFACE_v0.1-draft.md
++ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+```
 
 Planning and chronology:
 
@@ -29,7 +41,7 @@ Direct-evidence lane:
 
 - [`../../evidence/method_specific/synthesis/`](../../evidence/method_specific/synthesis/)
 
-Current guards:
+## Core guards surviving Step 2
 
 ```text
 INDIVIDUAL_COMPONENT_ADMISSIBILITY
@@ -46,7 +58,43 @@ AGGREGATE_READOUT
 
 COMPONENT_PROPERTY
 != WHOLE_PROPERTY
+
+candidate ID / syntax tree
+!= material synthesized-target distinctness
+
+PARTIAL_SYNTHESIS
+!= completed synthesized target
+
+STATIC_COMPOSITION_ORDER
+!= TEMPORAL_ASSEMBLY_SEQUENCE
 ```
+
+## Step-2 boundary result
+
+Sixteen pre-protocol attacks were run.
+
+```text
+BOUNDARY_ATTACKS_RUN: 16
+PRESERVED_NO_REFINEMENT: 11
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+DIRECT_SYNTHESIS_PILOT_INCREMENT: 0
+```
+
+The attacks covered Design, Transformation, Aggregation, Optimization, property lifting, algebraic assumptions, composition equivalence, partial-synthesis residuals, process scope, coverage, and Formation/domain-composition boundaries.
+
+Four refinement groups were added without changing the method identity:
+
+```text
+COMPOSITION_LAW_PROFILE
+GROUPING_OR_PARENTHESIZATION_POLICY
+COMPOSITION_EQUIVALENCE_OR_CANONICALIZATION_RULE
+RESIDUAL_OPEN_INTERFACES_OR_OBLIGATIONS
+ASSEMBLY_SEQUENCE_OR_PROCESS_SCOPE
+```
+
+The original Step-1 interface file remains preserved; the refinements are recorded separately rather than applied retroactively.
 
 ## Initial output levels
 
@@ -110,11 +158,18 @@ A finite sum or analytic output is not automatically a substantive synthesized w
 Synthesis forms the legitimate composition family.
 Optimization chooses among already legitimate alternatives under an objective.
 
+### Static Synthesis vs process/Dynamics
+
+A final static composition may be admissible while a time-resolved assembly sequence remains untested.
+Process feasibility requires an explicit process scope and, where relevant, Dynamics or a domain process model.
+
 ## Current evidence state
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: not established
 DIRECT_SYNTHESIS_PILOTS: 0
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
+BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 0
 EXTERNAL_SYNTHESIS_APPLICATIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -125,14 +180,5 @@ Planning artifacts do not count as direct Synthesis validation.
 
 ## Next development step
 
-Pressure-test the Step-1 interface with pre-protocol boundary counterexamples against:
-
-```text
-Design
-Transformation
-Aggregation
-Optimization
-implicit component-to-whole property lifting
-```
-
-Apply only non-breaking refinements that those counterexamples actually require, then freeze the first executable `Synthesis Protocol v0.1`.
+Freeze the first executable `Synthesis Protocol v0.1` from the effective Step-2 interface.
+The protocol must incorporate the composition-law/grouping, equivalence/canonicalization, partial-residual, and process-scope guards while preserving the historical planning artifacts unchanged.
