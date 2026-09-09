@@ -1,6 +1,6 @@
 # 04. DSD Design / DSD 설계론
 
-Status: **Protocol v0.1 / maturity: developing / validation in progress**
+Status: **Protocol v0.1 / maturity: established / independent validation still open**
 
 Task: construct or filter a target structure or admissible target family from declared goals, hard constraints, and an explicit candidate/construction basis rather than only analyze an already formed target.
 
@@ -58,10 +58,11 @@ Boundary: DSD Design structures design decisions but does not replace domain des
 - `DES-CH-006` — broader strongest-reasonable-baseline comparison, PASS with NO_GAIN.
 - `DES-APP-001` — first external-standard application using W3C WCAG 2.2 subset, PASS.
 - `DES-CH-007` — first dedicated deterministic retrace, PASS.
-- `DES-AUD-001` — first Design maturity audit, completed; classification `developing`, established promotion withheld.
+- `DES-AUD-001` — first Design maturity audit; historical `developing` classification, established promotion withheld at that time.
 - `DES-APP-002` — second external application using NIST SP 800-63B-4 AAL2 route-form grammar, PASS 38/38.
 - `DES-IEP-001` — first blinded independent-evaluator packet prepared with hidden SHA-256 reference commitment; not yet executed.
 - `DES-APP-003` — third external application using selected 2010 ADA ramp requirements in the built-environment domain, PASS 38/38.
+- `DES-AUD-002` — revision maturity audit, 26/26 audit checks PASS; method/protocol maturity promoted to `established` with independent/practical validation explicitly still open.
 
 ## Key accumulated results
 
@@ -152,29 +153,42 @@ REPRODUCIBILITY_LEVEL: deterministic_same_project
 
 This does not establish blinded or independent replication.
 
-## First maturity audit — DES-AUD-001
+## Maturity audit lineage
 
-Audit ID:
-
-```text
-DSD-AUDIT-20260908-DESIGN-001
-```
-
-The audit froze 14 maturity axes and 24 audit-discipline checks before scoring.
+### DES-AUD-001 — historical first audit
 
 ```text
-MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
-AUDIT_EXECUTION_VERDICT: PASS
+AUDIT_ID: DSD-AUDIT-20260908-DESIGN-001
 PRECOMMITTED_REQUIRED_CHECKS: 24/24 PASS
 METHOD_MATURITY_CLASSIFICATION: developing
 PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
 PRIMARY_BLOCKER: insufficient external evidence breadth
 SECONDARY_BLOCKER: independent/practical evidence not established
+```
+
+This decision remains valid for the corpus available on 2026-09-08 and is not rewritten.
+
+### DES-AUD-002 — revision audit
+
+After `DES-APP-002` and `DES-APP-003`, external evidence expanded to three applications in three materially different domains, including source-supplied positive construction grammar in the NIST case.
+
+```text
+AUDIT_ID: DSD-AUDIT-20260909-DESIGN-002
+PRECOMMITTED_REQUIRED_CHECKS: 26/26 PASS
+AUDIT_EXECUTION_VERDICT: PASS
+M9_EXTERNAL_BREADTH: PASS
+M5_REPRODUCIBILITY: CONDITIONAL_PASS
+M10_INDEPENDENT_PRACTICAL: UNRESOLVED_BUT_BOUNDED
+M11_PROTOCOL_PRESSURE: PRESENT_NONFATAL
+FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+METHOD_MATURITY_CLASSIFICATION: established
+PROMOTION_TO_ESTABLISHED: SUPPORTED
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-`DES-APP-002`, `DES-APP-003`, and later evaluator-packet infrastructure are post-audit records and do not retroactively rewrite this audit. Any maturity reclassification requires a new revision audit.
+The established label means **method/protocol evidence maturity under the current DSD method-family framework**.
+It does not imply independent evaluator agreement, independent replication, inter-rater reproducibility, practical superiority, efficiency advantage, or defect-reduction advantage.
 
 ## Independent evaluator packet — DES-IEP-001
 
@@ -230,7 +244,7 @@ EXTERNAL_APPLICATION_PASSES: 3
 INDEPENDENT_EVALUATOR_PACKET: prepared
 INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
-METHOD_MATURITY_CLASSIFICATION: developing
+METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
@@ -242,15 +256,15 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 - Boundary counterexamples: [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - Boundary amendment 001: [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 - Worklog: [`WORKLOG.md`](WORKLOG.md)
-- Maturity audit: `../../evidence/method_specific/design/DES-AUD-001_maturity-review.md`
-- Second external application: `../../evidence/method_specific/design/DES-APP-002_nist-aal2-route-form-application.md`
+- Historical maturity audit: `../../evidence/method_specific/design/DES-AUD-001_maturity-review.md`
+- Revision maturity audit: `../../evidence/method_specific/design/DES-AUD-002_revision-maturity-review.md`
 - Independent evaluator packet: `../../evidence/method_specific/design/DES-IEP-001_reviewer-packet.md`
 - Third physical external application: `../../evidence/method_specific/design/DES-APP-003_ada-ramp-run-physical-application.md`
 
 ## Next development step
 
-The independent-evaluator track remains the primary unresolved evidence path.
-External breadth now spans three materially different domains, so another same-project external application is lower priority.
+M9 external breadth is no longer the immediate bottleneck.
+The highest-value unresolved evidence path is now independent evaluation under `DES-IEP-001`.
 
 Operational sequence:
 
@@ -264,4 +278,5 @@ select genuinely separate evaluator
 -> score frozen submission in a new Audit/evidence record
 ```
 
-Do not revise Protocol v0.1 merely to improve maturity optics; revise only if a new case exposes a genuine protocol defect. Do not overwrite `DES-AUD-001`; any maturity change requires a new re-audit.
+A disagreement is valid evidence and must be preserved.
+Do not revise Protocol v0.1 merely to improve maturity optics; revise only if a new case exposes a genuine protocol defect.
