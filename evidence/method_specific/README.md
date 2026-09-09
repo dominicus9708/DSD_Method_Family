@@ -36,23 +36,24 @@ REPRODUCIBILITY_RECORD:
 - [`specification/`](specification/) — **DSD Specification / DSD 명세론**
   - historical v0.1/v0.2 evidence preserved;
   - newer Protocol lineage and external applications remain in the Specification lane;
-  - independent evaluator validation is not established.
+  - use the newest Specification-specific records rather than this cross-method summary for detailed maturity truth.
 
 - [`design/`](design/) — **DSD Design / DSD 설계론**
   - Protocol v0.1 established on `2026-09-08`;
-  - maturity classification after `DES-AUD-001`: `developing`;
-  - current evidence status: `validation_in_progress`;
+  - revision maturity classification after `DES-AUD-002`: **established**;
+  - current evidence status: `validation_in_progress` because independent/practical validation remains open;
   - direct constructed pilots: `7`;
   - positive: `DES-CH-001` PASS;
   - negative/failure: `DES-CH-002` PASS;
   - boundary: `DES-CH-003` preserved failed challenge design + corrected `DES-CH-004` PASS;
   - NO_GAIN: `DES-CH-005` PASS;
   - strongest-reasonable-baseline comparison: `DES-CH-006` PASS with `NO_GAIN`;
-  - external applications: `DES-APP-001` W3C WCAG 2.2 + `DES-APP-002` NIST SP 800-63B-4 + `DES-APP-003` 2010 ADA ramp-run subset, all PASS;
+  - external applications: `DES-APP-001` W3C WCAG 2.2 + `DES-APP-002` NIST SP 800-63B-4 + `DES-APP-003` 2010 ADA selected ramp-run subset, all PASS;
   - external domains: `3`;
   - reproducibility/retrace: `DES-CH-007` PASS at deterministic same-project level;
-  - maturity audit: `DES-AUD-001` completed, 24/24 audit-discipline checks PASS, promotion to established withheld at audit time;
-  - independent evaluator packet: `DES-IEP-001` prepared with frozen reviewer packet, submission template, and hidden-reference SHA-256 commitment;
+  - historical maturity audit: `DES-AUD-001` developing at its audit time;
+  - revision maturity audit: `DES-AUD-002` 26/26 audit checks PASS, M9 external breadth PASS, `PROMOTE_ESTABLISHED`;
+  - independent evaluator packet: `DES-IEP-001` prepared and cleanroom-distributable;
   - independent evaluator submissions: `0`;
   - independent evaluator validation: `not established`.
 
@@ -68,41 +69,33 @@ DES-CH-006: 54/54 PASS, competent typed baseline matched DSD, NO_GAIN
 DES-APP-001: 36/36 PASS, external W3C WCAG 2.2 subset
 DES-CH-007: 44/44 PASS, deterministic retrace of DES-APP-001
 DES-AUD-001: 24/24 audit checks PASS, maturity = developing at audit time
-DES-APP-002: 38/38 PASS, external NIST SP 800-63B-4 AAL2 route-form application
+DES-APP-002: 38/38 PASS, external NIST AAL2 route-form application
 DES-IEP-001: packet prepared, submissions 0, no independent validation yet
-DES-APP-003: 38/38 PASS, external 2010 ADA selected ramp-run physical application
+DES-APP-003: 38/38 PASS, external ADA ramp-run physical application
+DES-AUD-002: 26/26 audit checks PASS, method/protocol maturity = established
 ```
 
-`DES-APP-003` adds the built-environment / physical-accessibility domain with selected U.S. Access Board ramp requirements:
+### Design maturity separation
+
+`DES-AUD-002` establishes only **method/protocol evidence maturity under the current DSD method-family framework**.
 
 ```text
-running slope 1:12 maximum
-cross slope 1:48 maximum
-clear width 36 inches minimum
-rise 30 inches maximum per run
-top and bottom landings required
+METHOD_MATURITY_CLASSIFICATION: established
+M9_EXTERNAL_BREADTH: PASS
+M5_REPRODUCIBILITY: CONDITIONAL_PASS
+M10_INDEPENDENT_PRACTICAL: UNRESOLVED_BUT_BOUNDED
+INDEPENDENT_EVALUATOR_VALIDATION: not established
+MEASURED_PRACTICAL_SUPERIORITY: not established
 ```
 
-It returns `{R1,R2,R9}` within the frozen fixture and preserves absent-ramp `CHANNEL_ABSENCE` versus inapplicable geometry while avoiding full-ADA or engineering-certification overclaims.
-
-`DES-IEP-001` freezes:
+Therefore:
 
 ```text
-reviewer packet commit:
-78b1fb45d0b2e40838517828d089942e7b55e7d8
-
-submission template commit:
-fe1eedca019b4283a21047d21fcac12dd672e328
-
-reference commitment commit:
-8fe4ff64b3fc964746d7e8c11bd03d712c40fedd
-
-SHA-256 commitment:
-3f2cf7c7787578063096c98ada872f29fffb6fdef27f7893d039e04604a2b0cf
+established method/protocol maturity
+!= independent evaluator validation
+!= independent replication
+!= measured practical superiority
 ```
-
-The reference plaintext and nonce are withheld until an eligible evaluator freezes a submission.
-Preparation does not increase Design evidence counts.
 
 Current Design status:
 
@@ -114,13 +107,12 @@ EXTERNAL_APPLICATION_PASSES: 3
 INDEPENDENT_EVALUATOR_PACKET: prepared
 INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
-METHOD_MATURITY_CLASSIFICATION: developing
+METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
-`DES-APP-002`, `DES-APP-003`, and `DES-IEP-001` are post-audit records and do not retroactively modify `DES-AUD-001`.
-The next core Design evidence event requires a genuinely separate evaluator to submit against the frozen packet before key reveal.
-A later maturity reclassification requires a new audit record.
+The next core Design evidence event requires a genuinely separate evaluator to submit against the frozen `DES-IEP-001` packet before key reveal.
+A later audit should preserve either agreement or disagreement rather than treating independent review as a required positive result.
 
 ## Promotion expectation / 성숙도 승격 기준
 
@@ -137,4 +129,4 @@ A proposed/developing method should accumulate, at minimum:
 
 These are minimum evidence categories for promotion consideration, not an automatic promotion rule. Later blind spots may justify prospective refinement without rewriting earlier evidence.
 
-Same-session or same-project retrace does not substitute for a genuinely independent reviewer. External-application count also does not by itself establish independent replication or established cross-domain breadth.
+Same-session or same-project retrace does not substitute for a genuinely independent reviewer. External-application count also does not by itself establish independent replication or practical superiority.
