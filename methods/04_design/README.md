@@ -60,6 +60,7 @@ Boundary: DSD Design structures design decisions but does not replace domain des
 - `DES-CH-007` — first dedicated deterministic retrace, PASS.
 - `DES-AUD-001` — first Design maturity audit, completed; classification `developing`, established promotion withheld.
 - `DES-APP-002` — second external application using NIST SP 800-63B-4 AAL2 route-form grammar, PASS 38/38.
+- `DES-IEP-001` — first blinded independent-evaluator packet prepared with hidden SHA-256 reference commitment; not yet executed.
 
 ## Key accumulated results
 
@@ -159,7 +160,40 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-`DES-APP-002` is later evidence and does not retroactively rewrite this audit. Any maturity reclassification requires a new revision audit.
+`DES-APP-002` and the later evaluator-packet infrastructure do not retroactively rewrite this audit. Any maturity reclassification requires a new revision audit.
+
+## Independent evaluator packet — DES-IEP-001
+
+The first blinded packet is frozen for later use by a genuinely separate evaluator.
+
+```text
+REVIEWER_PACKET:
+  ../../evidence/method_specific/design/DES-IEP-001_reviewer-packet.md
+  commit 78b1fb45d0b2e40838517828d089942e7b55e7d8
+
+SUBMISSION_TEMPLATE:
+  ../../evidence/method_specific/design/DES-IEP-001_submission-template.md
+  commit fe1eedca019b4283a21047d21fcac12dd672e328
+
+REFERENCE_COMMITMENT:
+  ../../evidence/method_specific/design/DES-IEP-001_reference-commitment.md
+  commit 8fe4ff64b3fc964746d7e8c11bd03d712c40fedd
+
+PUBLIC_SHA256_COMMITMENT:
+  3f2cf7c7787578063096c98ada872f29fffb6fdef27f7893d039e04604a2b0cf
+```
+
+The packet uses two held-out tasks derived from the frozen WCAG and NIST source rules, with 12 packet-specific candidate records and 24 semantic scoring checks.
+The expected plaintext key and nonce remain hidden until a reviewer freezes the submission.
+
+```text
+INDEPENDENT_EVALUATOR_PACKET: prepared
+REFERENCE_KEY_COMMITMENT: frozen
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
+INDEPENDENT_EVALUATOR_VALIDATION: not established
+```
+
+Packet preparation is not direct Design evidence.
 
 ## Current evidence state
 
@@ -180,6 +214,8 @@ REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_APPLICATIONS: 2
 EXTERNAL_DOMAINS: 2
 EXTERNAL_APPLICATION_PASSES: 2
+INDEPENDENT_EVALUATOR_PACKET: prepared
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
 METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
@@ -195,11 +231,23 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 - Worklog: [`WORKLOG.md`](WORKLOG.md)
 - Maturity audit: `../../evidence/method_specific/design/DES-AUD-001_maturity-review.md`
 - Second external application: `../../evidence/method_specific/design/DES-APP-002_nist-aal2-route-form-application.md`
+- Independent evaluator packet: `../../evidence/method_specific/design/DES-IEP-001_reviewer-packet.md`
 
 ## Next development step
 
-External breadth has increased from one to two domains, including a case whose positive construction grammar is directly supplied by NIST.
+The packet infrastructure is prepared; the next step cannot be completed by the current project evaluator alone.
 
-The next preferred step is a **genuinely independent evaluator packet** with expected results hidden before reviewer submission. A further non-software/physical external application remains useful for additional breadth and irregular real-artifact candidate pressure.
+Operational sequence:
 
+```text
+select genuinely separate evaluator
+-> distribute frozen packet/template only
+-> obtain independence declarations
+-> freeze completed evaluator submission
+-> reveal escrow nonce/reference key
+-> verify SHA-256 commitment
+-> score frozen submission in a new Audit/evidence record
+```
+
+A further non-software/physical external application remains useful for additional breadth and can proceed in parallel.
 Do not revise Protocol v0.1 merely to improve maturity optics; revise only if a new case exposes a genuine protocol defect. Do not overwrite `DES-AUD-001`; any maturity change requires a new re-audit.
