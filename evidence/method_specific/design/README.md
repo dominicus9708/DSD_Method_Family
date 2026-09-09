@@ -190,6 +190,49 @@ It also keeps the verifier-level requirement to offer at least one phishing-resi
 
 This broadens external evidence from web accessibility to digital identity/authentication security and uses a source-supplied positive candidate/construction grammar. The full 15-record evaluation fixture and negative controls remain project-frozen, so independent validation is still absent.
 
+### `DES-APP-003` — 2010 ADA ramp-run physical application
+
+Files:
+- `DES-APP-003_precommit.md` — selected ADA §405 source subset, R1-R10 fixture, scope guards, and 38 checks frozen before scoring; precommit `b78ca3a`.
+- `DES-APP-003_ada-ramp-run-physical-application.md` — executed result; commit `091b969`.
+
+External authority: U.S. Access Board, 2010 ADA Standards for Accessible Design, selected ramp requirements from §405.
+
+Frozen source checks:
+
+```text
+§405.2 running slope 1:12 maximum
+§405.3 cross slope 1:48 maximum
+§405.5 clear width 36 inches minimum
+§405.6 rise 30 inches maximum per run
+§405.7 top and bottom landings required
+```
+
+Execution:
+
+```text
+R1 -> admissible
+R2 -> admissible
+R3 -> rejected H1
+R4 -> rejected H2
+R5 -> rejected H3
+R6 -> rejected H4
+R7 -> rejected H5
+R8 -> rejected H1,H2,H3,H4,H5
+R9 -> admissible
+R10 -> rejected H0; ramp geometry remains INAPPLICABLE
+
+ADMISSIBLE_FAMILY:
+{R1,R2,R9}
+
+DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+PRECOMMITTED_REQUIRED_CHECKS: 38/38 PASS
+```
+
+The case does not promote advisory gentler-slope recommendations into hard constraints, does not import alteration or employee-work-area exceptions after candidate inspection, and does not claim full ADA ramp compliance, structural adequacy, construction safety, or permit approval from the selected subset.
+
+This expands external evidence into a third materially different domain: built environment / physical accessibility. The finite R1-R10 fixture is still project-constructed, so it does not resolve independent-evaluator validation.
+
 ## Independent evaluator infrastructure
 
 ### `DES-IEP-001` — blinded evaluator packet prepared
@@ -273,7 +316,7 @@ SHARED_CORE_REOPEN_REQUIRED: no
 DESIGN_DIRECT_PILOT_INCREMENT_FROM_AUDIT: 0
 ```
 
-`DES-APP-002` and `DES-IEP-001` are post-audit records and do not retroactively rewrite `DES-AUD-001`. Any new maturity decision requires a separate re-audit.
+`DES-APP-002`, `DES-APP-003`, and `DES-IEP-001` are post-audit records and do not retroactively rewrite `DES-AUD-001`. Any new maturity decision requires a separate re-audit.
 
 ## Minimum evidence architecture
 
@@ -283,7 +326,7 @@ DESIGN_DIRECT_PILOT_INCREMENT_FROM_AUDIT: 0
 4. boundary case — **DES-CH-004 PASS after DES-CH-003 failed test design was preserved**;
 5. `NO_GAIN` case — **DES-CH-005 PASS**;
 6. reproducibility/retrace record — **DES-CH-007 PASS at deterministic same-project level**;
-7. external or independently generated applications — **DES-APP-001 and DES-APP-002 PASS in two external domains**;
+7. external or independently generated applications — **DES-APP-001, DES-APP-002, and DES-APP-003 PASS across three external domains**;
 8. strongest-reasonable-baseline comparison — **DES-CH-006 PASS at constructed-evidence level; result NO_GAIN**.
 
 The minimum category architecture is fully populated, but established maturity is not inferred automatically.
@@ -304,9 +347,9 @@ BASELINE_COMPARISON_RESULT: NO_GAIN
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_APPLICATIONS: 2
-EXTERNAL_DOMAINS: 2
-EXTERNAL_APPLICATION_PASSES: 2
+EXTERNAL_APPLICATIONS: 3
+EXTERNAL_DOMAINS: 3
+EXTERNAL_APPLICATION_PASSES: 3
 INDEPENDENT_EVALUATOR_PACKET: prepared
 INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
@@ -317,14 +360,14 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ## Immediate next evidence task
 
 The independent evaluator infrastructure is frozen but has not yet generated evidence.
+External breadth now spans three materially different domains, so another same-project external application is lower priority than independent validation.
 
-The next task is operational rather than another same-project scoring run:
+The next task is operational:
 
 1. select a genuinely separate evaluator;
-2. distribute only the frozen reviewer packet, submission template, and required external source material;
+2. distribute only the frozen clean reviewer packet, submission template, and required external source material;
 3. record evaluator eligibility and any contamination disclosure;
 4. obtain an immutable/timestamped completed submission before answer-key reveal;
 5. reveal the escrow nonce/reference key, verify the commitment hash, and score the frozen submission under a new Audit/evidence record.
 
-A further non-software/physical external application remains valuable as a parallel breadth track.
 Do not rewrite `DES-AUD-001`; any maturity reclassification must occur through a new revision audit after materially new evidence is frozen.
