@@ -47,9 +47,10 @@ REPRODUCIBILITY_RECORD:
   - boundary: `DES-CH-003` preserved failed challenge design + corrected `DES-CH-004` PASS;
   - NO_GAIN: `DES-CH-005` PASS;
   - strongest-reasonable-baseline comparison: `DES-CH-006` PASS with `NO_GAIN`;
-  - external application: `DES-APP-001` PASS using W3C WCAG 2.2 subset;
+  - external applications: `DES-APP-001` W3C WCAG 2.2 + `DES-APP-002` NIST SP 800-63B-4, both PASS;
+  - external domains: `2`;
   - reproducibility/retrace: `DES-CH-007` PASS at deterministic same-project level;
-  - maturity audit: `DES-AUD-001` completed, 24/24 audit-discipline checks PASS, promotion to established withheld;
+  - maturity audit: `DES-AUD-001` completed, 24/24 audit-discipline checks PASS, promotion to established withheld at audit time;
   - independent evaluator validation: `not established`.
 
 Key Design evidence summary:
@@ -63,42 +64,32 @@ DES-CH-005: 25/25 PASS, NO_GAIN
 DES-CH-006: 54/54 PASS, competent typed baseline matched DSD, NO_GAIN
 DES-APP-001: 36/36 PASS, external W3C WCAG 2.2 subset
 DES-CH-007: 44/44 PASS, deterministic retrace of DES-APP-001
-DES-AUD-001: 24/24 audit checks PASS, maturity = developing
+DES-AUD-001: 24/24 audit checks PASS, maturity = developing at audit time
+DES-APP-002: 38/38 PASS, external NIST SP 800-63B-4 AAL2 route-form application
 ```
 
-`DES-AUD-001` scored the maturity axes as:
+`DES-APP-002` uses a source-supplied positive authenticator-route grammar and preserves:
 
 ```text
-M1  dedicated executable protocol                  PASS
-M2  positive/negative terminal discrimination      PASS
-M3  neighboring-method boundary discrimination     PASS
-M4  NO_GAIN preservation                           PASS
-M5  reproducibility/retraceability                 CONDITIONAL_PASS
-M6  external application origin                    PASS
-M7  strongest-reasonable-baseline comparison       PASS
-M8  external source fidelity and bridge discipline PASS
-M9  established-level evidence breadth             INSUFFICIENT
-M10 independent/practical-performance evidence     UNRESOLVED_BUT_BOUNDED
-M11 protocol pressure / unresolved core defect     PRESENT_NONFATAL
-M12 maximum-supported-claim discipline             PASS
-M13 candidate/construction-basis discipline        PASS
-M14 historical failure / anti-post-hoc preservation PASS
+TWO_DISTINCT_FACTOR_STRUCTURE
+!= NIST_AAL2_PERMITTED_FORM
 ```
 
-Final Design maturity decision:
+It also keeps verifier-level phishing-resistant-option requirements separate from per-route filtering and does not fabricate replay-resistance, cryptographic implementation, protected-channel, FIPS, or full deployed-system conformance from form-level data.
+
+Current Design status:
 
 ```text
-MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
+DIRECT_CONSTRUCTED_PILOTS: 7
+EXTERNAL_APPLICATIONS: 2
+EXTERNAL_DOMAINS: 2
+EXTERNAL_APPLICATION_PASSES: 2
+INDEPENDENT_EVALUATOR_VALIDATION: not established
 METHOD_MATURITY_CLASSIFICATION: developing
-PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
-PRIMARY_BLOCKER: insufficient external evidence breadth
-SECONDARY_BLOCKER: independent/practical evidence not established
-PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
+CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The maturity audit explicitly does not count as a new Design direct pilot.
-The preferred next evidence is a second external Design application in a materially different domain, ideally with an externally supplied artifact or candidate/construction basis rather than a project-authored fixture.
+`DES-APP-002` is post-audit evidence and does not retroactively modify `DES-AUD-001`. The next preferred evidence step is a genuinely independent evaluator packet with expected results committed separately before reviewer submission. A later maturity reclassification requires a new audit record.
 
 ## Promotion expectation / 성숙도 승격 기준
 
