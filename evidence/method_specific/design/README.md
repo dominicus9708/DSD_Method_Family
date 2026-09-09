@@ -5,6 +5,7 @@ Status: **Protocol v0.1 established / maturity: developing / validation in progr
 This lane records evidence that directly tests **DSD Design / DSD 설계론**. Evidence from other DSD methods or shared-core validation does not automatically count as direct Design validation.
 
 A Design maturity audit is an **Audit meta-record** and does not increase the Design direct-pilot count.
+Independent-evaluator packet preparation is also infrastructure rather than direct evidence; only an eligible frozen external submission can change the independent-validation ledger.
 
 ## Current protocol
 
@@ -16,6 +17,7 @@ A Design maturity audit is an **Audit meta-record** and does not increase the De
 DES-CH-###   constructed Design challenges
 DES-APP-###  external or independently generated Design applications
 DES-AUD-###  Design-specific audit / maturity records
+DES-IEP-###  independent evaluator packet infrastructure
 ```
 
 Case classes include `positive`, `negative_or_failure`, `boundary`, `no_gain`, `baseline_comparison`, `reproducibility`, `external_application`, and other explicitly declared classes.
@@ -188,6 +190,60 @@ It also keeps the verifier-level requirement to offer at least one phishing-resi
 
 This broadens external evidence from web accessibility to digital identity/authentication security and uses a source-supplied positive candidate/construction grammar. The full 15-record evaluation fixture and negative controls remain project-frozen, so independent validation is still absent.
 
+## Independent evaluator infrastructure
+
+### `DES-IEP-001` — blinded evaluator packet prepared
+
+Public frozen files:
+
+```text
+DES-IEP-001_reviewer-packet.md
+  commit 78b1fb45d0b2e40838517828d089942e7b55e7d8
+
+DES-IEP-001_submission-template.md
+  commit fe1eedca019b4283a21047d21fcac12dd672e328
+
+DES-IEP-001_reference-commitment.md
+  commit 8fe4ff64b3fc964746d7e8c11bd03d712c40fedd
+```
+
+Reference-key SHA-256 commitment:
+
+```text
+3f2cf7c7787578063096c98ada872f29fffb6fdef27f7893d039e04604a2b0cf
+```
+
+The plaintext reference key and nonce are withheld from the reviewer until an eligible submission is frozen.
+The packet contains two held-out tasks using WCAG and NIST source rules, 12 candidate records total, three-ledger outputs, and source-scope questions.
+
+Precommitted agreement classes:
+
+```text
+INDEPENDENT_AGREEMENT_FULL
+  eligible + 24/24 semantic checks
+
+INDEPENDENT_AGREEMENT_PARTIAL
+  eligible + >=21/24 + 10/10 critical checks
+
+INDEPENDENT_DISAGREEMENT
+  eligible + <21/24 or any critical failure
+
+CONTAMINATED_OR_INELIGIBLE
+  independence gate failure
+```
+
+Current effect:
+
+```text
+INDEPENDENT_EVALUATOR_PACKET: prepared
+REFERENCE_KEY_COMMITMENT: frozen
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
+INDEPENDENT_EVALUATOR_VALIDATION: not established
+DESIGN_DIRECT_PILOT_INCREMENT_FROM_PACKET_PREPARATION: 0
+```
+
+This is infrastructure only. It is not counted as Design validation until a genuinely separate evaluator freezes a submission before answer-key reveal.
+
 ## Audit meta-record registry
 
 ### `DES-AUD-001` — first DSD Design maturity audit
@@ -217,7 +273,7 @@ SHARED_CORE_REOPEN_REQUIRED: no
 DESIGN_DIRECT_PILOT_INCREMENT_FROM_AUDIT: 0
 ```
 
-`DES-APP-002` is post-audit evidence and does not retroactively rewrite `DES-AUD-001`. Any new maturity decision requires a separate re-audit.
+`DES-APP-002` and `DES-IEP-001` are post-audit records and do not retroactively rewrite `DES-AUD-001`. Any new maturity decision requires a separate re-audit.
 
 ## Minimum evidence architecture
 
@@ -251,6 +307,8 @@ REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_APPLICATIONS: 2
 EXTERNAL_DOMAINS: 2
 EXTERNAL_APPLICATION_PASSES: 2
+INDEPENDENT_EVALUATOR_PACKET: prepared
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
 METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
@@ -258,8 +316,15 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 
 ## Immediate next evidence task
 
-`DES-APP-002` materially improves the M9 external-breadth record but does not resolve independent validation.
+The independent evaluator infrastructure is frozen but has not yet generated evidence.
 
-The next preferred task is to prepare a **genuinely independent evaluator packet** with frozen task material and hidden expected results. A further non-software/physical external application remains valuable for broader cross-domain pressure, especially if its candidate set comes directly from a real external artifact rather than a project fixture.
+The next task is operational rather than another same-project scoring run:
 
+1. select a genuinely separate evaluator;
+2. distribute only the frozen reviewer packet, submission template, and required external source material;
+3. record evaluator eligibility and any contamination disclosure;
+4. obtain an immutable/timestamped completed submission before answer-key reveal;
+5. reveal the escrow nonce/reference key, verify the commitment hash, and score the frozen submission under a new Audit/evidence record.
+
+A further non-software/physical external application remains valuable as a parallel breadth track.
 Do not rewrite `DES-AUD-001`; any maturity reclassification must occur through a new revision audit after materially new evidence is frozen.
