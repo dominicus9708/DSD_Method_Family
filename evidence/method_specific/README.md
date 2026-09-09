@@ -29,6 +29,7 @@ REPRODUCIBILITY_RECORD:
 - Audit records directly validate DSD Audit procedures/verdict discipline only.
 - Shared-rule lessons may be cross-referenced but do not automatically become another method's direct validation.
 - A maturity/status audit is an Audit meta-record and does not itself increase the audited method's direct-pilot count.
+- Independent-evaluator packet preparation is infrastructure only; it becomes evidence only after an eligible external submission is frozen and scored against the precommitted reference.
 
 ## Method-specific evidence lanes / 개별 증거 경로
 
@@ -51,6 +52,8 @@ REPRODUCIBILITY_RECORD:
   - external domains: `2`;
   - reproducibility/retrace: `DES-CH-007` PASS at deterministic same-project level;
   - maturity audit: `DES-AUD-001` completed, 24/24 audit-discipline checks PASS, promotion to established withheld at audit time;
+  - independent evaluator packet: `DES-IEP-001` prepared with frozen reviewer packet, submission template, and hidden-reference SHA-256 commitment;
+  - independent evaluator submissions: `0`;
   - independent evaluator validation: `not established`.
 
 Key Design evidence summary:
@@ -66,6 +69,7 @@ DES-APP-001: 36/36 PASS, external W3C WCAG 2.2 subset
 DES-CH-007: 44/44 PASS, deterministic retrace of DES-APP-001
 DES-AUD-001: 24/24 audit checks PASS, maturity = developing at audit time
 DES-APP-002: 38/38 PASS, external NIST SP 800-63B-4 AAL2 route-form application
+DES-IEP-001: packet prepared, submissions 0, no independent validation yet
 ```
 
 `DES-APP-002` uses a source-supplied positive authenticator-route grammar and preserves:
@@ -75,7 +79,24 @@ TWO_DISTINCT_FACTOR_STRUCTURE
 != NIST_AAL2_PERMITTED_FORM
 ```
 
-It also keeps verifier-level phishing-resistant-option requirements separate from per-route filtering and does not fabricate replay-resistance, cryptographic implementation, protected-channel, FIPS, or full deployed-system conformance from form-level data.
+`DES-IEP-001` freezes:
+
+```text
+reviewer packet commit:
+78b1fb45d0b2e40838517828d089942e7b55e7d8
+
+submission template commit:
+fe1eedca019b4283a21047d21fcac12dd672e328
+
+reference commitment commit:
+8fe4ff64b3fc964746d7e8c11bd03d712c40fedd
+
+SHA-256 commitment:
+3f2cf7c7787578063096c98ada872f29fffb6fdef27f7893d039e04604a2b0cf
+```
+
+The reference plaintext and nonce are withheld until an eligible evaluator freezes a submission.
+Preparation does not increase Design evidence counts.
 
 Current Design status:
 
@@ -84,12 +105,16 @@ DIRECT_CONSTRUCTED_PILOTS: 7
 EXTERNAL_APPLICATIONS: 2
 EXTERNAL_DOMAINS: 2
 EXTERNAL_APPLICATION_PASSES: 2
+INDEPENDENT_EVALUATOR_PACKET: prepared
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
 METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
-`DES-APP-002` is post-audit evidence and does not retroactively modify `DES-AUD-001`. The next preferred evidence step is a genuinely independent evaluator packet with expected results committed separately before reviewer submission. A later maturity reclassification requires a new audit record.
+`DES-APP-002` and `DES-IEP-001` are post-audit records and do not retroactively modify `DES-AUD-001`.
+The next core Design evidence event requires a genuinely separate evaluator to submit against the frozen packet before key reveal.
+A later maturity reclassification requires a new audit record.
 
 ## Promotion expectation / 성숙도 승격 기준
 
