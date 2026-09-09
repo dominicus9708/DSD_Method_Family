@@ -48,8 +48,8 @@ REPRODUCIBILITY_RECORD:
   - boundary: `DES-CH-003` preserved failed challenge design + corrected `DES-CH-004` PASS;
   - NO_GAIN: `DES-CH-005` PASS;
   - strongest-reasonable-baseline comparison: `DES-CH-006` PASS with `NO_GAIN`;
-  - external applications: `DES-APP-001` W3C WCAG 2.2 + `DES-APP-002` NIST SP 800-63B-4, both PASS;
-  - external domains: `2`;
+  - external applications: `DES-APP-001` W3C WCAG 2.2 + `DES-APP-002` NIST SP 800-63B-4 + `DES-APP-003` 2010 ADA ramp-run subset, all PASS;
+  - external domains: `3`;
   - reproducibility/retrace: `DES-CH-007` PASS at deterministic same-project level;
   - maturity audit: `DES-AUD-001` completed, 24/24 audit-discipline checks PASS, promotion to established withheld at audit time;
   - independent evaluator packet: `DES-IEP-001` prepared with frozen reviewer packet, submission template, and hidden-reference SHA-256 commitment;
@@ -70,14 +70,20 @@ DES-CH-007: 44/44 PASS, deterministic retrace of DES-APP-001
 DES-AUD-001: 24/24 audit checks PASS, maturity = developing at audit time
 DES-APP-002: 38/38 PASS, external NIST SP 800-63B-4 AAL2 route-form application
 DES-IEP-001: packet prepared, submissions 0, no independent validation yet
+DES-APP-003: 38/38 PASS, external 2010 ADA selected ramp-run physical application
 ```
 
-`DES-APP-002` uses a source-supplied positive authenticator-route grammar and preserves:
+`DES-APP-003` adds the built-environment / physical-accessibility domain with selected U.S. Access Board ramp requirements:
 
 ```text
-TWO_DISTINCT_FACTOR_STRUCTURE
-!= NIST_AAL2_PERMITTED_FORM
+running slope 1:12 maximum
+cross slope 1:48 maximum
+clear width 36 inches minimum
+rise 30 inches maximum per run
+top and bottom landings required
 ```
+
+It returns `{R1,R2,R9}` within the frozen fixture and preserves absent-ramp `CHANNEL_ABSENCE` versus inapplicable geometry while avoiding full-ADA or engineering-certification overclaims.
 
 `DES-IEP-001` freezes:
 
@@ -102,9 +108,9 @@ Current Design status:
 
 ```text
 DIRECT_CONSTRUCTED_PILOTS: 7
-EXTERNAL_APPLICATIONS: 2
-EXTERNAL_DOMAINS: 2
-EXTERNAL_APPLICATION_PASSES: 2
+EXTERNAL_APPLICATIONS: 3
+EXTERNAL_DOMAINS: 3
+EXTERNAL_APPLICATION_PASSES: 3
 INDEPENDENT_EVALUATOR_PACKET: prepared
 INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
@@ -112,7 +118,7 @@ METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
-`DES-APP-002` and `DES-IEP-001` are post-audit records and do not retroactively modify `DES-AUD-001`.
+`DES-APP-002`, `DES-APP-003`, and `DES-IEP-001` are post-audit records and do not retroactively modify `DES-AUD-001`.
 The next core Design evidence event requires a genuinely separate evaluator to submit against the frozen packet before key reveal.
 A later maturity reclassification requires a new audit record.
 
