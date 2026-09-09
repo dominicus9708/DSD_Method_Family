@@ -59,6 +59,7 @@ Boundary: DSD Design structures design decisions but does not replace domain des
 - `DES-APP-001` — first external-standard application using W3C WCAG 2.2 subset, PASS.
 - `DES-CH-007` — first dedicated deterministic retrace, PASS.
 - `DES-AUD-001` — first Design maturity audit, completed; classification `developing`, established promotion withheld.
+- `DES-APP-002` — second external application using NIST SP 800-63B-4 AAL2 route-form grammar, PASS 38/38.
 
 ## Key accumulated results
 
@@ -97,7 +98,34 @@ DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
 36/36 PASS
 ```
 
-The application preserved best-practice versus hard-criterion status, did not invent target-size exceptions, preserved undefined/inapplicable/absent distinctions, and did not overclaim full WCAG conformance.
+`DES-APP-002`:
+
+```text
+NIST SP 800-63B-4, July 2025
+AAL2 permitted authenticator route forms
+source-supplied positive grammar + four source-grounded controls
+
+N1-N11 -> admissible
+N12 password only -> rejected
+N13 SF cryptographic only -> rejected
+N14 biometric alone -> rejected
+N15 password + biometric -> rejected because source-permitted two-SF grammar requires a listed physical authenticator
+
+ADMISSIBLE_FAMILY:
+{N1,N2,N3,N4,N5,N6,N7,N8,N9,N10,N11}
+
+DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+38/38 PASS
+```
+
+The case preserves:
+
+```text
+TWO_DISTINCT_FACTOR_STRUCTURE
+!= NIST_AAL2_PERMITTED_FORM
+```
+
+and keeps verifier-level phishing-resistant-option requirements separate from individual route-form filtering. It does not infer replay resistance, approved cryptography, protected channels, FIPS validation, or full deployed-system AAL2 conformance from form-level records.
 
 `DES-CH-007` retraced `DES-APP-001` from immutable Git refs and matched candidate verdicts, rejection bases, admissible family, three Design ledgers, external source/version, and bridge.
 
@@ -120,25 +148,6 @@ DSD-AUDIT-20260908-DESIGN-001
 The audit froze 14 maturity axes and 24 audit-discipline checks before scoring.
 
 ```text
-M1  dedicated executable protocol                  PASS
-M2  positive/negative terminal discrimination      PASS
-M3  neighboring-method boundary discrimination     PASS
-M4  NO_GAIN preservation                           PASS
-M5  reproducibility/retraceability                 CONDITIONAL_PASS
-M6  external application origin                    PASS
-M7  strongest-reasonable-baseline comparison       PASS
-M8  external source fidelity and bridge discipline PASS
-M9  established-level evidence breadth             INSUFFICIENT
-M10 independent/practical-performance evidence     UNRESOLVED_BUT_BOUNDED
-M11 protocol pressure / unresolved core defect     PRESENT_NONFATAL
-M12 maximum-supported-claim discipline             PASS
-M13 candidate/construction-basis discipline        PASS
-M14 historical failure / anti-post-hoc preservation PASS
-```
-
-Final decision:
-
-```text
 MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
 AUDIT_EXECUTION_VERDICT: PASS
 PRECOMMITTED_REQUIRED_CHECKS: 24/24 PASS
@@ -150,7 +159,7 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-The audit does not count as an additional Design pilot.
+`DES-APP-002` is later evidence and does not retroactively rewrite this audit. Any maturity reclassification requires a new revision audit.
 
 ## Current evidence state
 
@@ -168,8 +177,9 @@ BASELINE_COMPARISON_RESULT: NO_GAIN
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_APPLICATIONS: 1
-EXTERNAL_DOMAINS: 1
+EXTERNAL_APPLICATIONS: 2
+EXTERNAL_DOMAINS: 2
+EXTERNAL_APPLICATION_PASSES: 2
 INDEPENDENT_EVALUATOR_VALIDATION: not established
 METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
@@ -184,11 +194,12 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 - Boundary amendment 001: [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 - Worklog: [`WORKLOG.md`](WORKLOG.md)
 - Maturity audit: `../../evidence/method_specific/design/DES-AUD-001_maturity-review.md`
+- Second external application: `../../evidence/method_specific/design/DES-APP-002_nist-aal2-route-form-application.md`
 
 ## Next development step
 
-Address the primary maturity blocker.
+External breadth has increased from one to two domains, including a case whose positive construction grammar is directly supplied by NIST.
 
-Run a **second external Design application in a materially different domain**, preferably using an externally supplied real artifact, candidate family, or independently generated option set rather than a project-authored fixture.
+The next preferred step is a **genuinely independent evaluator packet** with expected results hidden before reviewer submission. A further non-software/physical external application remains useful for additional breadth and irregular real-artifact candidate pressure.
 
-After external breadth increases, prepare a genuinely independent evaluator packet. Do not revise Protocol v0.1 merely to improve maturity optics; revise only if a new case exposes a genuine protocol defect.
+Do not revise Protocol v0.1 merely to improve maturity optics; revise only if a new case exposes a genuine protocol defect. Do not overwrite `DES-AUD-001`; any maturity change requires a new re-audit.
