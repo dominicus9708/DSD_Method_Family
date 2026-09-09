@@ -56,9 +56,10 @@ Maturity is evaluated separately by DSD Audit.
 10. ✅ Dedicated reproducibility/retrace `DES-CH-007` — 44/44 PASS at deterministic same-project level.
 11. ✅ First DSD Audit maturity review `DES-AUD-001` — audit 24/24 PASS; maturity classified `developing`; established promotion withheld.
 12. ✅ Second external application `DES-APP-002` — NIST SP 800-63B-4 AAL2 route-form grammar, 38/38 PASS.
-13. **Next:** prepare a genuinely independent evaluator packet with hidden expected results before reviewer submission.
-14. Optional additional breadth: non-software/physical external application with real irregular candidate artifact.
-15. Re-audit maturity only after materially new evidence is frozen.
+13. ✅ First blinded independent-evaluator packet `DES-IEP-001` prepared; public reviewer packet + submission template + hidden reference commitment frozen, but no external submission yet.
+14. **Next:** obtain a genuinely separate evaluator submission under DES-IEP-001 and score it only after immutable submission freeze and reference-key reveal.
+15. Optional additional breadth: non-software/physical external application with real irregular candidate artifact.
+16. Re-audit maturity only after materially new evidence is frozen.
 
 ## Evidence milestones / 증거 이정표
 
@@ -118,8 +119,6 @@ plus:
   password or biometric comparison
 ```
 
-The frozen fixture adds four source-grounded controls.
-
 Execution result:
 
 ```text
@@ -143,45 +142,14 @@ TWO_DISTINCT_FACTOR_STRUCTURE
 != NIST_AAL2_PERMITTED_FORM
 ```
 
-The execution also preserves verifier-level phishing-resistant-option requirements at portfolio scope and does not invent route-level replay-resistance, cryptography, protected-channel, FIPS, or full-deployment conformance.
-
-This moves external evidence from:
-
-```text
-1 application / 1 domain
-```
-
-to:
-
-```text
-2 applications / 2 domains
-```
-
-with the second case using a source-supplied positive route-form grammar.
+This moves external evidence from `1 application / 1 domain` to `2 applications / 2 domains`, with the second case using a source-supplied positive route-form grammar.
 
 ### Dedicated retrace
 
-`DES-CH-007` froze immutable refs for the protocol, `DES-APP-001` precommit, and historical result.
-
-The claim-relevant re-execution reconstructed exactly:
-
-```text
-H0-H3
-W1-W10 candidate records
-candidate verdicts and rejection sets
-admissible family {W1,W2,W3}
-external source/version
-WCAG_APPLICATION_BRIDGE_001
-DESIGN_ADMISSIBLE
-CONFORMANT
-NOT_ASSESSED
-```
-
-and matched the historical result.
+`DES-CH-007` reproduced the frozen `DES-APP-001` claim-relevant result exactly and passed 44/44 checks.
 
 ```text
 RETRACE_RESULT: PASS
-PRECOMMITTED_REQUIRED_CHECKS: 44/44 PASS
 REPRODUCIBILITY_LEVEL: deterministic_same_project
 ```
 
@@ -190,14 +158,6 @@ This is not independent replication.
 ## First maturity audit / 첫 성숙도 감사
 
 `DES-AUD-001` precommitted 14 maturity axes and 24 audit-discipline checks before scoring.
-
-Audit ID:
-
-```text
-DSD-AUDIT-20260908-DESIGN-001
-```
-
-Result at audit time:
 
 ```text
 MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
@@ -211,8 +171,55 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-`DES-APP-002` is later evidence and therefore does not retroactively change this result.
+`DES-APP-002` and `DES-IEP-001` are later records and do not retroactively change the audit.
 A new maturity decision requires a new audit record.
+
+## Independent evaluator packet / 독립 평가자 패킷
+
+`DES-IEP-001` is now prepared and frozen as infrastructure.
+
+Public artifacts:
+
+```text
+DES-IEP-001_reviewer-packet.md
+  commit 78b1fb45d0b2e40838517828d089942e7b55e7d8
+
+DES-IEP-001_submission-template.md
+  commit fe1eedca019b4283a21047d21fcac12dd672e328
+
+DES-IEP-001_reference-commitment.md
+  commit 8fe4ff64b3fc964746d7e8c11bd03d712c40fedd
+```
+
+Public reference-key commitment:
+
+```text
+SHA-256
+3f2cf7c7787578063096c98ada872f29fffb6fdef27f7893d039e04604a2b0cf
+```
+
+The canonical plaintext reference key and nonce remain outside the reviewer packet until an evaluator freezes the submission.
+The packet contains two held-out tasks using the frozen WCAG and NIST rule sets, with 12 packet-specific candidates and 24 semantic checks.
+
+Precommitted agreement levels:
+
+```text
+FULL: eligible + 24/24
+PARTIAL: eligible + >=21/24 + all 10 critical checks
+DISAGREEMENT: eligible + <21/24 or any critical failure
+CONTAMINATED_OR_INELIGIBLE: independence gate failure
+```
+
+Preparation status:
+
+```text
+INDEPENDENT_EVALUATOR_PACKET: prepared
+REFERENCE_KEY_COMMITMENT: frozen
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
+INDEPENDENT_EVALUATOR_VALIDATION: not established
+```
+
+The project assistant/session that created the packet cannot count as the independent evaluator.
 
 ## Evidence architecture status / 증거 구조 상태
 
@@ -226,6 +233,7 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established at constructed level
 EXTERNAL_APPLICATIONS: 2
 EXTERNAL_DOMAINS: 2
 REPRODUCIBILITY_RETRACE: established at deterministic same-project level
+INDEPENDENT_EVALUATOR_PACKET: prepared
 INDEPENDENT_EVALUATOR_VALIDATION: not established
 MATURITY_AUDIT: completed, developing classification
 ```
@@ -239,6 +247,7 @@ DEDICATED_RETRACE_PASSES: 1
 EXTERNAL_APPLICATIONS: 2
 EXTERNAL_DOMAINS: 2
 EXTERNAL_APPLICATION_PASSES: 2
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
@@ -247,18 +256,23 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 
 Historical runs remain preserved under the protocol version used at execution time. Prospective corrections do not rewrite earlier evidence. Maturity re-audits must be new audit records rather than edits to `DES-AUD-001`.
 
+The independent evaluator packet is also append-only at the committed version. If a defect is found before distribution, record a revision explicitly rather than silently replacing the frozen packet.
+
 ## Next step / 다음 단계
 
-The first audit's primary breadth blocker has been materially pressured by `DES-APP-002`, but independent evaluator validation remains absent.
+The current same-project development work has reached the point where the next core evidence event requires a genuinely separate evaluator.
 
-The next preferred step is to prepare a frozen **independent evaluator packet** that:
+Operational sequence:
 
 ```text
-contains task material and scoring instructions without revealing expected results
-commits expected results separately before reviewer submission
-keeps reviewer identity/independence distinct from the project evaluator
-prevents post-submission criterion changes
-scores candidate verdicts, rejection bases, terminal status, conformance, and source-scope discipline
+1. select evaluator
+2. distribute frozen reviewer packet + submission template + external source material only
+3. collect eligibility/contamination declarations
+4. freeze final evaluator submission with immutable/timestamped identifier
+5. reveal private escrow nonce and canonical key
+6. recompute and verify SHA-256 commitment
+7. score the frozen submission under the precommitted 24-check rule
+8. record the result as a new evidence/Audit record without editing the original submission
 ```
 
 A non-software/physical external application remains useful as an additional breadth track, particularly if the candidate set is taken directly from a real artifact rather than project-frozen controls.
