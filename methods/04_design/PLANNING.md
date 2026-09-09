@@ -1,6 +1,6 @@
 # DSD Design Planning / DSD 설계론 기획
 
-Status: **Protocol v0.1 / maturity: developing / validation in progress**
+Status: **Protocol v0.1 / maturity: established / independent validation open**
 
 Date opened: **2026-09-08**
 
@@ -54,12 +54,13 @@ Maturity is evaluated separately by DSD Audit.
 8. ✅ Broader strongest-reasonable-baseline comparison `DES-CH-006` — 54/54 PASS / NO_GAIN.
 9. ✅ First external-standard application `DES-APP-001` — W3C WCAG 2.2 subset, 36/36 PASS.
 10. ✅ Dedicated reproducibility/retrace `DES-CH-007` — 44/44 PASS at deterministic same-project level.
-11. ✅ First DSD Audit maturity review `DES-AUD-001` — audit 24/24 PASS; maturity classified `developing`; established promotion withheld.
+11. ✅ First DSD Audit maturity review `DES-AUD-001` — historical developing classification; established promotion withheld at that time.
 12. ✅ Second external application `DES-APP-002` — NIST SP 800-63B-4 AAL2 route-form grammar, 38/38 PASS.
-13. ✅ First blinded independent-evaluator packet `DES-IEP-001` prepared; public reviewer packet + submission template + hidden reference commitment frozen, but no external submission yet.
-14. **Pending external action:** obtain a genuinely separate evaluator submission under DES-IEP-001 and score it only after immutable submission freeze and reference-key reveal.
-15. ✅ Additional breadth track: physical built-environment external application `DES-APP-003` using selected 2010 ADA ramp requirements, 38/38 PASS.
-16. Re-audit maturity only after materially new independent or comparably strong evidence is frozen.
+13. ✅ First blinded independent-evaluator packet `DES-IEP-001` prepared; public packet/template + hidden reference commitment frozen, but no external submission yet.
+14. **Pending external action:** obtain a genuinely separate evaluator submission under `DES-IEP-001` and score it only after immutable submission freeze and reference-key reveal.
+15. ✅ Additional physical breadth: `DES-APP-003` — U.S. Access Board 2010 ADA Standards §405 selected ramp-run application, 38/38 PASS.
+16. ✅ Revision maturity audit `DES-AUD-002` — 26/26 audit checks PASS; M9 external breadth PASS; method/protocol maturity promoted to `established` with M5/M10 limitations preserved.
+17. **Next:** complete the independent-evaluator track; later re-audit only after genuinely new independent/practical evidence or a new protocol pressure event.
 
 ## Evidence milestones / 증거 이정표
 
@@ -87,95 +88,34 @@ including the valid `DESIGN_BLOCKED + CONFORMANT` combination.
 `DES-CH-005` and `DES-CH-006` both produced valid `NO_GAIN` results against competent baselines.
 No extra DSD bookkeeping was counted as gain by itself.
 
-### External application 1 — DES-APP-001
-
-`DES-APP-001` froze W3C WCAG 2.2 Recommendation 2024-12-12, limited to:
+### External applications
 
 ```text
-SC 1.4.3 Contrast (Minimum)
-SC 2.5.3 Label in Name
-SC 2.5.8 Target Size (Minimum)
+DES-APP-001
+  W3C WCAG 2.2 subset
+  web accessibility
+  36/36 PASS
+
+DES-APP-002
+  NIST SP 800-63B-4 AAL2 route-form subset
+  digital identity / authentication security
+  source-supplied positive construction grammar
+  38/38 PASS
+
+DES-APP-003
+  U.S. Access Board 2010 ADA Standards §405 selected ramp-run subset
+  built environment / physical accessibility
+  38/38 PASS
 ```
 
-It returned `{W1,W2,W3}` and passed 36/36 checks while keeping source requirements separate from fixture assumptions, not promoting best-practice language into a hard criterion, not inventing an exception, and not overclaiming full WCAG conformance.
-
-### External application 2 — DES-APP-002
-
-`DES-APP-002` uses NIST SP 800-63B-4, July 2025, AAL2 authenticator route-form rules.
-
-Execution result:
+External evidence therefore now spans:
 
 ```text
-N1-N11 -> admissible
-N12 password only -> rejected H1,H2
-N13 SF cryptographic only -> rejected H1,H2
-N14 biometric alone -> rejected H1,H2
-N15 password + biometric -> rejected H1 while H2 passes
-
-ADMISSIBLE_FAMILY:
-{N1,N2,N3,N4,N5,N6,N7,N8,N9,N10,N11}
-
-DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
-PRECOMMITTED_REQUIRED_CHECKS: 38/38 PASS
+3 applications / 3 materially different domains
 ```
 
-Key boundary:
-
-```text
-TWO_DISTINCT_FACTOR_STRUCTURE
-!= NIST_AAL2_PERMITTED_FORM
-```
-
-### External application 3 — DES-APP-003
-
-`DES-APP-003` moves the external lane into the physical built-environment domain using the U.S. Access Board's 2010 ADA Standards for Accessible Design, selected §405 ramp requirements.
-
-Frozen subset:
-
-```text
-§405.2 running slope 1:12 maximum
-§405.3 cross slope 1:48 maximum
-§405.5 clear width 36 inches minimum
-§405.6 rise 30 inches maximum per ramp run
-§405.7 top and bottom landings required
-```
-
-Execution result:
-
-```text
-R1 -> admissible
-R2 -> admissible
-R3 -> rejected H1
-R4 -> rejected H2
-R5 -> rejected H3
-R6 -> rejected H4
-R7 -> rejected H5
-R8 -> rejected H1,H2,H3,H4,H5
-R9 -> admissible
-R10 -> rejected H0; other geometric fields remain INAPPLICABLE
-
-ADMISSIBLE_FAMILY:
-{R1,R2,R9}
-
-DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
-PRECOMMITTED_REQUIRED_CHECKS: 38/38 PASS
-```
-
-The case does not convert advisory gentler-slope recommendations into hard constraints, does not invoke inactive alteration/employee-work-area exceptions, and does not overclaim full ADA ramp compliance or engineering certification.
-
-This moves external evidence from:
-
-```text
-2 applications / 2 domains
-```
-
-to:
-
-```text
-3 applications / 3 domains
-```
-
-across web accessibility, digital identity/security, and built environment/physical accessibility.
+The three cases preserve external authority and subset scope separately from DSD verdicts.
+None is expanded into full-standard or engineering certification.
 
 ### Dedicated retrace
 
@@ -186,52 +126,89 @@ RETRACE_RESULT: PASS
 REPRODUCIBILITY_LEVEL: deterministic_same_project
 ```
 
-This is not independent replication.
+This remains non-independent.
 
-## First maturity audit / 첫 성숙도 감사
+## Maturity audit lineage / 성숙도 감사 계보
 
-`DES-AUD-001` precommitted 14 maturity axes and 24 audit-discipline checks before scoring.
+### DES-AUD-001
+
+At the first audit time:
 
 ```text
-MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
-PRECOMMITTED_REQUIRED_CHECKS: 24/24 PASS
-AUDIT_EXECUTION_VERDICT: PASS
+EXTERNAL_APPLICATIONS: 1
+EXTERNAL_DOMAINS: 1
+M9: INSUFFICIENT
 METHOD_MATURITY_CLASSIFICATION: developing
 PROMOTION_TO_ESTABLISHED: INSUFFICIENT_BASIS
-PRIMARY_BLOCKER: insufficient external evidence breadth
-SECONDARY_BLOCKER: independent/practical evidence not established
+```
+
+That decision remains historical and unchanged.
+
+### DES-AUD-002
+
+The revision audit froze the expanded corpus and reused the same 14 maturity axes and inherited promotion logic before scoring.
+
+```text
+AUDIT_ID: DSD-AUDIT-20260909-DESIGN-002
+PRECOMMITTED_REQUIRED_CHECKS: 26/26 PASS
+AUDIT_EXECUTION_VERDICT: PASS
+
+M1  PASS
+M2  PASS
+M3  PASS
+M4  PASS
+M5  CONDITIONAL_PASS
+M6  PASS
+M7  PASS
+M8  PASS
+M9  PASS
+M10 UNRESOLVED_BUT_BOUNDED
+M11 PRESENT_NONFATAL
+M12 PASS
+M13 PASS
+M14 PASS
+
+FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+METHOD_MATURITY_CLASSIFICATION: established
+PROMOTION_TO_ESTABLISHED: SUPPORTED
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-`DES-APP-002`, `DES-APP-003`, and `DES-IEP-001` are later records and do not retroactively change the audit.
-A new maturity decision requires a new audit record.
+The material change is M9: the external corpus is no longer one-domain/one-fixture evidence.
+The NIST case additionally pressures candidate/construction provenance using source-supplied positive grammar.
+
+The established label is limited to **method/protocol evidence maturity under the current DSD method-family framework**.
+It does not establish:
+
+```text
+independent evaluator agreement
+independent replication
+broad inter-rater reproducibility
+measured practical superiority
+measured efficiency advantage
+measured defect-reduction advantage
+```
 
 ## Independent evaluator packet / 독립 평가자 패킷
 
-`DES-IEP-001` is prepared and frozen as infrastructure.
-
-Public artifacts:
+`DES-IEP-001` remains prepared and frozen as infrastructure.
 
 ```text
-DES-IEP-001_reviewer-packet.md
-  commit 78b1fb45d0b2e40838517828d089942e7b55e7d8
+REVIEWER_PACKET_COMMIT:
+78b1fb45d0b2e40838517828d089942e7b55e7d8
 
-DES-IEP-001_submission-template.md
-  commit fe1eedca019b4283a21047d21fcac12dd672e328
+SUBMISSION_TEMPLATE_COMMIT:
+fe1eedca019b4283a21047d21fcac12dd672e328
 
-DES-IEP-001_reference-commitment.md
-  commit 8fe4ff64b3fc964746d7e8c11bd03d712c40fedd
-```
+REFERENCE_COMMITMENT_COMMIT:
+8fe4ff64b3fc964746d7e8c11bd03d712c40fedd
 
-Public reference-key commitment:
-
-```text
-SHA-256
+REFERENCE_SHA256:
 3f2cf7c7787578063096c98ada872f29fffb6fdef27f7893d039e04604a2b0cf
 ```
 
-Preparation status:
+Current state:
 
 ```text
 INDEPENDENT_EVALUATOR_PACKET: prepared
@@ -253,13 +230,14 @@ NO_GAIN_CASE: established
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established at constructed level
 EXTERNAL_APPLICATIONS: 3
 EXTERNAL_DOMAINS: 3
-REPRODUCIBILITY_RETRACE: established at deterministic same-project level
+REPRODUCIBILITY_RETRACE: deterministic_same_project
 INDEPENDENT_EVALUATOR_PACKET: prepared
 INDEPENDENT_EVALUATOR_VALIDATION: not established
-MATURITY_AUDIT: completed, developing classification
+METHOD_MATURITY_CLASSIFICATION: established
+CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Current evidence counts:
+Current counts:
 
 ```text
 DIRECT_CONSTRUCTED_PILOTS: 7
@@ -269,30 +247,29 @@ EXTERNAL_APPLICATIONS: 3
 EXTERNAL_DOMAINS: 3
 EXTERNAL_APPLICATION_PASSES: 3
 INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
-METHOD_MATURITY_CLASSIFICATION: developing
-CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
 ## Recording rule / 기록 규칙
 
-Historical runs remain preserved under the protocol version used at execution time. Prospective corrections do not rewrite earlier evidence. Maturity re-audits must be new audit records rather than edits to `DES-AUD-001`.
+Historical runs remain preserved under the protocol version used at execution time.
+Prospective corrections do not rewrite earlier evidence.
+`DES-AUD-001` and `DES-AUD-002` are time-indexed audit records and neither replaces the other.
 
-The independent evaluator packet is append-only at the committed version. If a defect is found, record a revision explicitly rather than silently replacing the frozen packet.
+The independent evaluator packet is append-only at the committed version.
+A disagreement from a later reviewer is evidence and must not be repaired away.
 
 ## Next step / 다음 단계
 
-External breadth is no longer the immediate bottleneck: three external applications now span three materially different domains.
+The former M9 breadth blocker is now closed.
 The highest-value unresolved evidence event is independent evaluation.
 
-Operational sequence:
-
 ```text
-1. select evaluator
-2. distribute frozen clean reviewer packet + submission template + external source material only
+1. select a genuinely separate evaluator
+2. distribute the frozen clean reviewer packet + submission template + source material only
 3. collect eligibility/contamination declarations
-4. freeze final evaluator submission with immutable/timestamped identifier
-5. reveal private escrow nonce and canonical key
-6. recompute and verify SHA-256 commitment
+4. freeze the final evaluator submission with an immutable/timestamped identifier
+5. reveal the private escrow nonce and canonical key
+6. recompute and verify the SHA-256 commitment
 7. score the frozen submission under the precommitted 24-check rule
-8. record the result as a new evidence/Audit record without editing the original submission
+8. preserve agreement or disagreement as a new Audit/evidence record
 ```
