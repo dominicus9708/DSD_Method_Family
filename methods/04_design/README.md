@@ -61,6 +61,7 @@ Boundary: DSD Design structures design decisions but does not replace domain des
 - `DES-AUD-001` — first Design maturity audit, completed; classification `developing`, established promotion withheld.
 - `DES-APP-002` — second external application using NIST SP 800-63B-4 AAL2 route-form grammar, PASS 38/38.
 - `DES-IEP-001` — first blinded independent-evaluator packet prepared with hidden SHA-256 reference commitment; not yet executed.
+- `DES-APP-003` — third external application using selected 2010 ADA ramp requirements in the built-environment domain, PASS 38/38.
 
 ## Key accumulated results
 
@@ -106,12 +107,6 @@ NIST SP 800-63B-4, July 2025
 AAL2 permitted authenticator route forms
 source-supplied positive grammar + four source-grounded controls
 
-N1-N11 -> admissible
-N12 password only -> rejected
-N13 SF cryptographic only -> rejected
-N14 biometric alone -> rejected
-N15 password + biometric -> rejected because source-permitted two-SF grammar requires a listed physical authenticator
-
 ADMISSIBLE_FAMILY:
 {N1,N2,N3,N4,N5,N6,N7,N8,N9,N10,N11}
 
@@ -119,14 +114,33 @@ DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
 38/38 PASS
 ```
 
-The case preserves:
+Key boundary:
 
 ```text
 TWO_DISTINCT_FACTOR_STRUCTURE
 != NIST_AAL2_PERMITTED_FORM
 ```
 
-and keeps verifier-level phishing-resistant-option requirements separate from individual route-form filtering. It does not infer replay resistance, approved cryptography, protected channels, FIPS validation, or full deployed-system AAL2 conformance from form-level records.
+`DES-APP-003`:
+
+```text
+2010 ADA Standards for Accessible Design
+selected §405 ramp-run subset
+
+§405.2 running slope 1:12 maximum
+§405.3 cross slope 1:48 maximum
+§405.5 clear width 36 inches minimum
+§405.6 rise 30 inches maximum
+§405.7 top and bottom landings required
+
+ADMISSIBLE_FAMILY:
+{R1,R2,R9}
+
+DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+38/38 PASS
+```
+
+The physical application preserves source scope: advisory recommendations are not promoted into mandatory criteria, inactive alteration/employee-work-area exceptions are not introduced post hoc, and selected-subset admissibility is not expanded into full ADA ramp compliance or engineering certification.
 
 `DES-CH-007` retraced `DES-APP-001` from immutable Git refs and matched candidate verdicts, rejection bases, admissible family, three Design ledgers, external source/version, and bridge.
 
@@ -160,7 +174,7 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-`DES-APP-002` and the later evaluator-packet infrastructure do not retroactively rewrite this audit. Any maturity reclassification requires a new revision audit.
+`DES-APP-002`, `DES-APP-003`, and later evaluator-packet infrastructure are post-audit records and do not retroactively rewrite this audit. Any maturity reclassification requires a new revision audit.
 
 ## Independent evaluator packet — DES-IEP-001
 
@@ -183,7 +197,6 @@ PUBLIC_SHA256_COMMITMENT:
   3f2cf7c7787578063096c98ada872f29fffb6fdef27f7893d039e04604a2b0cf
 ```
 
-The packet uses two held-out tasks derived from the frozen WCAG and NIST source rules, with 12 packet-specific candidate records and 24 semantic scoring checks.
 The expected plaintext key and nonce remain hidden until a reviewer freezes the submission.
 
 ```text
@@ -211,9 +224,9 @@ BASELINE_COMPARISON_RESULT: NO_GAIN
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_APPLICATIONS: 2
-EXTERNAL_DOMAINS: 2
-EXTERNAL_APPLICATION_PASSES: 2
+EXTERNAL_APPLICATIONS: 3
+EXTERNAL_DOMAINS: 3
+EXTERNAL_APPLICATION_PASSES: 3
 INDEPENDENT_EVALUATOR_PACKET: prepared
 INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
@@ -232,16 +245,18 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 - Maturity audit: `../../evidence/method_specific/design/DES-AUD-001_maturity-review.md`
 - Second external application: `../../evidence/method_specific/design/DES-APP-002_nist-aal2-route-form-application.md`
 - Independent evaluator packet: `../../evidence/method_specific/design/DES-IEP-001_reviewer-packet.md`
+- Third physical external application: `../../evidence/method_specific/design/DES-APP-003_ada-ramp-run-physical-application.md`
 
 ## Next development step
 
-The packet infrastructure is prepared; the next step cannot be completed by the current project evaluator alone.
+The independent-evaluator track remains the primary unresolved evidence path.
+External breadth now spans three materially different domains, so another same-project external application is lower priority.
 
 Operational sequence:
 
 ```text
 select genuinely separate evaluator
--> distribute frozen packet/template only
+-> distribute frozen clean packet/template only
 -> obtain independence declarations
 -> freeze completed evaluator submission
 -> reveal escrow nonce/reference key
@@ -249,5 +264,4 @@ select genuinely separate evaluator
 -> score frozen submission in a new Audit/evidence record
 ```
 
-A further non-software/physical external application remains useful for additional breadth and can proceed in parallel.
 Do not revise Protocol v0.1 merely to improve maturity optics; revise only if a new case exposes a genuine protocol defect. Do not overwrite `DES-AUD-001`; any maturity change requires a new re-audit.
