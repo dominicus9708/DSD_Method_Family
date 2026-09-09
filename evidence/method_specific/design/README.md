@@ -113,15 +113,6 @@ Files:
 External authority: W3C `WCAG 2.2`, Recommendation 2024-12-12, limited to SC 1.4.3, 2.5.3, and 2.5.8.
 
 ```text
-W1,W2,W3 -> admissible
-W4 -> H1
-W5 -> H1
-W6 -> H2
-W7 -> H2 with APPLICABLE_BUT_UNDEFINED name
-W8 -> H3
-W9 -> H1,H2,H3
-W10 -> H0 CHANNEL_ABSENCE
-
 ADMISSIBLE_FAMILY: {W1,W2,W3}
 DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
 PRECOMMITTED_REQUIRED_CHECKS: 36/36 PASS
@@ -145,6 +136,58 @@ The retrace reproduced candidate verdicts, rejection bases, `{W1,W2,W3}`, the th
 
 It does **not** establish independent reproducibility: the same project/evaluator already knew the historical result and the run was non-blinded.
 
+### `DES-APP-002` — NIST SP 800-63B-4 AAL2 route-form application
+
+Files:
+- `DES-APP-002_precommit.md` — source, candidate grammar, 15-form fixture, scope guards, and 38 checks frozen before scoring; precommit `cadc9ae`.
+- `DES-APP-002_nist-aal2-route-form-application.md` — executed result; commit `329f2b8`.
+
+External authority: NIST SP 800-63B-4, July 2025, Authentication Assurance Level 2.
+
+The source directly supplies the positive route-form grammar:
+
+```text
+MF out-of-band
+MF OTP
+MF cryptographic authentication
+
+one of:
+  look-up secret
+  out-of-band device
+  SF OTP
+  SF cryptographic authentication
+plus either:
+  password
+  biometric comparison
+```
+
+The frozen 15-form fixture contains those 11 permitted forms plus four source-grounded controls.
+
+```text
+N1-N11 -> admissible
+N12 password only -> H1,H2 fail
+N13 SF cryptographic only -> H1,H2 fail
+N14 biometric alone -> H1,H2 fail; biometric is not a standalone authenticator
+N15 password + biometric -> H1 fail / H2 pass
+
+ADMISSIBLE_FAMILY:
+{N1,N2,N3,N4,N5,N6,N7,N8,N9,N10,N11}
+
+DESIGN_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+PRECOMMITTED_REQUIRED_CHECKS: 38/38 PASS
+```
+
+The case preserves the distinction:
+
+```text
+TWO_DISTINCT_FACTOR_STRUCTURE
+!= NIST_AAL2_PERMITTED_FORM
+```
+
+It also keeps the verifier-level requirement to offer at least one phishing-resistant AAL2 option separate from individual route-form admissibility and does not fabricate replay-resistance, cryptography, protected-channel, FIPS, or full deployed-system conformance from form-level records.
+
+This broadens external evidence from web accessibility to digital identity/authentication security and uses a source-supplied positive candidate/construction grammar. The full 15-record evaluation fixture and negative controls remain project-frozen, so independent validation is still absent.
+
 ## Audit meta-record registry
 
 ### `DES-AUD-001` — first DSD Design maturity audit
@@ -159,26 +202,7 @@ Audit ID:
 DSD-AUDIT-20260908-DESIGN-001
 ```
 
-Maturity-axis result:
-
-```text
-M1  dedicated executable protocol                  PASS
-M2  positive/negative terminal discrimination      PASS
-M3  neighboring-method boundary discrimination     PASS
-M4  NO_GAIN preservation                           PASS
-M5  reproducibility/retraceability                 CONDITIONAL_PASS
-M6  external application origin                    PASS
-M7  strongest-reasonable-baseline comparison       PASS
-M8  external source fidelity and bridge discipline PASS
-M9  established-level evidence breadth             INSUFFICIENT
-M10 independent/practical-performance evidence     UNRESOLVED_BUT_BOUNDED
-M11 protocol pressure / unresolved core defect     PRESENT_NONFATAL
-M12 maximum-supported-claim discipline             PASS
-M13 candidate/construction-basis discipline        PASS
-M14 historical failure / anti-post-hoc preservation PASS
-```
-
-Final audit decision:
+Final audit decision at the time it was executed:
 
 ```text
 MINIMUM_PROMOTION_COMPONENTS_PRESENT: 8/8
@@ -193,7 +217,7 @@ SHARED_CORE_REOPEN_REQUIRED: no
 DESIGN_DIRECT_PILOT_INCREMENT_FROM_AUDIT: 0
 ```
 
-The maturity audit explicitly preserves `DES-CH-003`, both `NO_GAIN` results, same-project retrace limitations, and the single-domain/project-constructed-fixture limit of `DES-APP-001`.
+`DES-APP-002` is post-audit evidence and does not retroactively rewrite `DES-AUD-001`. Any new maturity decision requires a separate re-audit.
 
 ## Minimum evidence architecture
 
@@ -203,10 +227,10 @@ The maturity audit explicitly preserves `DES-CH-003`, both `NO_GAIN` results, sa
 4. boundary case — **DES-CH-004 PASS after DES-CH-003 failed test design was preserved**;
 5. `NO_GAIN` case — **DES-CH-005 PASS**;
 6. reproducibility/retrace record — **DES-CH-007 PASS at deterministic same-project level**;
-7. external or independently generated application — **DES-APP-001 PASS at single external-standard application level**;
+7. external or independently generated applications — **DES-APP-001 and DES-APP-002 PASS in two external domains**;
 8. strongest-reasonable-baseline comparison — **DES-CH-006 PASS at constructed-evidence level; result NO_GAIN**.
 
-The minimum category architecture is fully populated, but `DES-AUD-001` confirms that this does not confer established maturity.
+The minimum category architecture is fully populated, but established maturity is not inferred automatically.
 
 ## Current status
 
@@ -224,8 +248,9 @@ BASELINE_COMPARISON_RESULT: NO_GAIN
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_APPLICATIONS: 1
-EXTERNAL_DOMAINS: 1
+EXTERNAL_APPLICATIONS: 2
+EXTERNAL_DOMAINS: 2
+EXTERNAL_APPLICATION_PASSES: 2
 INDEPENDENT_EVALUATOR_VALIDATION: not established
 METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
@@ -233,8 +258,8 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 
 ## Immediate next evidence task
 
-Address the primary maturity blocker rather than adding more same-project cases on already-covered axes.
+`DES-APP-002` materially improves the M9 external-breadth record but does not resolve independent validation.
 
-The next preferred task is a **second external Design application in a materially different domain**, ideally with a candidate/construction basis supplied by an external artifact, source, or independently generated option set rather than authored solely for the DSD challenge.
+The next preferred task is to prepare a **genuinely independent evaluator packet** with frozen task material and hidden expected results. A further non-software/physical external application remains valuable for broader cross-domain pressure, especially if its candidate set comes directly from a real external artifact rather than a project fixture.
 
-After external breadth increases, prepare a genuinely independent evaluator packet. Practical benefit should be measured only when such a benefit is claimed.
+Do not rewrite `DES-AUD-001`; any maturity reclassification must occur through a new revision audit after materially new evidence is frozen.
