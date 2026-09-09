@@ -114,6 +114,38 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 The next core Design evidence event requires a genuinely separate evaluator to submit against the frozen `DES-IEP-001` packet before key reveal.
 A later audit should preserve either agreement or disagreement rather than treating independent review as a required positive result.
 
+- [`synthesis/`](synthesis/) — **DSD Synthesis / DSD 합성론**
+  - planning opened on `2026-09-10`;
+  - current maturity classification: `proposed`;
+  - current evidence status: `validation_pending`;
+  - dedicated executable protocol: not established;
+  - direct Synthesis pilots: `0`;
+  - external Synthesis applications: `0`;
+  - independent Synthesis validation: not established;
+  - Step-1 task interface draft: `methods/05_synthesis/TASK_INTERFACE_v0.1-draft.md`;
+  - next task: pre-protocol boundary attacks before freezing `Synthesis Protocol v0.1`.
+
+Current Synthesis planning guards:
+
+```text
+INDIVIDUAL_COMPONENT_ADMISSIBILITY
+!= AUTOMATIC_COMPOSABILITY
+
+EXHAUSTIVE_COMPONENT_LIST
+!= EXHAUSTIVE_COMPOSITION_SPACE
+
+FORMATION_CLAUSE_VII_COMPOSITION
+!= DOMAIN_SYNTHESIS_LEGITIMACY
+
+AGGREGATE_READOUT
+!= SYNTHESIZED_WHOLE
+
+COMPONENT_PROPERTY
+!= WHOLE_PROPERTY
+```
+
+These are planning/interface guards and are **not yet direct Synthesis validation evidence**.
+
 ## Promotion expectation / 성숙도 승격 기준
 
 A proposed/developing method should accumulate, at minimum:
