@@ -1,6 +1,6 @@
 # DSD Synthesis Direct Evidence / DSD 합성론 직접 증거
 
-Status: **planning / proposed / Step 2 boundary attack complete / validation pending**
+Status: **Protocol v0.1 established / proposed maturity / validation pending**
 
 This lane records evidence that directly tests **DSD Synthesis / DSD 합성론**.
 
@@ -9,7 +9,7 @@ Shared-core evidence, Design evidence, Transformation evidence, Aggregation evid
 ## Current development state
 
 ```text
-DEDICATED_SYNTHESIS_PROTOCOL: not established
+DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
 DIRECT_SYNTHESIS_PILOTS: 0
 POSITIVE_SYNTHESIS_CASES: 0
 NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 0
@@ -24,24 +24,28 @@ SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_pending
 ```
 
-## Planning artifacts
+Protocol establishment does not increase the direct-pilot count.
 
+## Protocol and planning artifacts
+
+- `methods/05_synthesis/PROTOCOL_v0.1.md` — first executable protocol, creation commit `8787b24`.
 - `methods/05_synthesis/TASK_INTERFACE_v0.1-draft.md` — Step-1 historical task-interface draft.
 - `methods/05_synthesis/BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md` — Step-2 pre-protocol boundary attack, 16 cases.
 - `methods/05_synthesis/TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md` — Step-2 non-breaking interface refinement.
 - `methods/05_synthesis/PLANNING.md` — current development sequence.
 - `methods/05_synthesis/WORKLOG.md` — chronological worklog.
 
-Planning artifacts do not increase the direct-pilot count.
-
-Effective pre-protocol interface:
+Protocol lineage:
 
 ```text
 TASK_INTERFACE_v0.1-draft.md
 + TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+-> PROTOCOL_v0.1.md
 ```
 
-## Step-2 boundary planning result
+The pre-protocol artifacts remain preserved and are not retroactively counted as Protocol-v0.1 direct validation.
+
+## Pre-protocol boundary result
 
 ```text
 BOUNDARY_ATTACKS_RUN: 16
@@ -52,50 +56,9 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 DIRECT_SYNTHESIS_PILOT_INCREMENT: 0
 ```
 
-The attacks preserve the method boundary against Design, Transformation, Aggregation, and Optimization while pressure-testing property lifting, algebraic assumptions, target equivalence, partial-synthesis residuals, process scope, exhaustiveness, and Formation/domain-composition separation.
+The attacks preserved the method boundary against Design, Transformation, Aggregation, and Optimization while pressure-testing property lifting, algebraic assumptions, target equivalence, partial-synthesis residuals, process scope, exhaustiveness, and Formation/domain-composition separation.
 
-Required non-breaking refinement groups:
-
-```text
-COMPOSITION_LAW_PROFILE
-GROUPING_OR_PARENTHESIZATION_POLICY
-COMPOSITION_EQUIVALENCE_OR_CANONICALIZATION_RULE
-RESIDUAL_OPEN_INTERFACES_OR_OBLIGATIONS
-ASSEMBLY_SEQUENCE_OR_PROCESS_SCOPE
-```
-
-These are not direct validation results because no executable Synthesis protocol existed when the attacks were run.
-
-## Direct-evidence case convention
-
-Initial convention:
-
-```text
-SYN-CH-###   constructed Synthesis challenges
-SYN-APP-###  external or independently generated Synthesis applications
-SYN-AUD-###  Synthesis-specific audit / maturity records
-SYN-IEP-###  independent evaluator packet infrastructure
-```
-
-Case IDs become active after the first executable Synthesis protocol is frozen.
-Pre-protocol planning attacks use the `SYN-BND-DRAFT-*` namespace and are not retroactively counted as protocol-level direct evidence.
-
-## Minimum evidence architecture
-
-A future promotion consideration should accumulate, at minimum:
-
-1. a dedicated executable Synthesis protocol;
-2. positive cases;
-3. negative/failure cases;
-4. method-boundary cases;
-5. `NO_GAIN` cases;
-6. method-appropriate reproducibility/retraceability records;
-7. at least one external or independently generated application;
-8. a strongest-reasonable-baseline comparison when applicable.
-
-These are evidence categories, not an automatic maturity certificate.
-
-## Current planning guards
+## Protocol-v0.1 core guards
 
 ```text
 INDIVIDUAL_COMPONENT_ADMISSIBILITY
@@ -123,5 +86,45 @@ STATIC_COMPOSITION_ORDER
 != TEMPORAL_ASSEMBLY_SEQUENCE
 ```
 
-The next direct-development task is **Protocol v0.1 establishment**, not yet a direct pilot.
-No Synthesis result should be called direct validation until an executable protocol and separately frozen case record exist.
+Protocol v0.1 also freezes the supplied composition-law profile, grouping/parenthesization policy, target equivalence/canonicalization rule, residual obligations, process scope, and conditional lineage/transition checks before closure claims.
+
+## Direct-evidence case convention
+
+```text
+SYN-CH-###   constructed Synthesis challenges
+SYN-APP-###  external or independently generated Synthesis applications
+SYN-AUD-###  Synthesis-specific audit / maturity records
+SYN-IEP-###  independent evaluator packet infrastructure
+```
+
+Case IDs are now active for Protocol-v0.1 direct evidence.
+A challenge whose expected result or score matters must be separately precommitted before evaluation.
+
+Pre-protocol planning attacks retain the `SYN-BND-DRAFT-*` namespace and remain planning evidence only.
+
+## Minimum evidence architecture
+
+A future promotion consideration should accumulate, at minimum:
+
+1. a dedicated executable Synthesis protocol;
+2. positive cases;
+3. negative/failure cases;
+4. method-boundary cases;
+5. `NO_GAIN` cases;
+6. method-appropriate reproducibility/retraceability records;
+7. at least one external or independently generated application;
+8. a strongest-reasonable-baseline comparison when applicable.
+
+These are evidence categories, not an automatic maturity certificate.
+
+## Immediate next direct-evidence task
+
+Create and commit the precommit for:
+
+```text
+CASE_ID: SYN-CH-001
+CASE_CLASS: positive
+PROTOCOL: v0.1
+```
+
+The fixture should contain at least one admissible composition and one rejected composition due to an explicit interface/prerequisite condition, while freezing composition law, target resolution, equivalence rule, composition coverage, three-ledger expectations, and check count before execution.
