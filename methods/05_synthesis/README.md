@@ -1,6 +1,6 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **Protocol v0.1 established / broader strongest-reasonable-baseline comparison PASS / validation in progress**
+Status: **Protocol v0.1 established / strongest-reasonable-baseline PASS / first external application PASS / validation in progress**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
@@ -71,6 +71,8 @@ Optimization: admissible alternatives -> objective-based selection
 Dynamics/domain process model: time-resolved assembly when claimed
 ```
 
+Success or failure of one case does not determine whether Synthesis must survive, merge, or be deleted. Method independence is evaluated separately by boundary structure, unique task/output/failure criteria, and later maturity audit.
+
 ## Direct Protocol-v0.1 evidence
 
 ```text
@@ -120,7 +122,21 @@ SYN-CH-006
     established_at_constructed_evidence_level
 ```
 
-`SYN-CH-006` is materially broader than the first typed-chain baseline. It simultaneously exercises supplied associativity/grouping equivalence, explicit whole-Property lift, status distinctions, relation retention, formation effect, staged `NOT_REACHED` dependencies, and raw-versus-canonical closure. The competent `B1_TYPED_COMPOSITION_GRAPH_CHECKER` receives the same records and matches all frozen dimensions, so the correct comparative result remains `NO_GAIN`.
+## External application evidence
+
+```text
+SYN-APP-001
+  external source: RFC 3986 / STD 66 generic URI syntax
+  external domain: Internet identifier syntax
+  precommit 29ea45a
+  result 6985246
+  candidates R1-R12
+  admissible family {R1,R2,R3,R4,R10,R11,R12}
+  40/40 PASS
+  SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+```
+
+`SYN-APP-001` is the first case in which domain composition legitimacy is not invented by the project. The external grammar supplies generic URI component order, authority/path branch conditions, scheme/path/query/fragment syntax, and enough structure to distinguish absent from present-empty optional components. The result remains generic-syntax-only and is not upgraded to scheme-specific validity, dereference success, normalization equivalence, or security.
 
 ## Current evidence state
 
@@ -136,14 +152,16 @@ SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 REPRODUCIBILITY_CASES: 0
-EXTERNAL_SYNTHESIS_APPLICATIONS: 0
+EXTERNAL_SYNTHESIS_APPLICATIONS: 1
+EXTERNAL_SYNTHESIS_DOMAINS: 1
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The evidence so far is still project-constructed. It does not establish external applicability, cross-domain generality, independent reproducibility, practical superiority, or maturity.
+The evidence does not establish broad external generality, independent reproducibility, practical superiority, or maturity.
 
 ## Next development step
 
-Create and precommit the first external Synthesis application `SYN-APP-001`. Prefer a stable public source that supplies a real composition or assembly grammar, component/interface compatibility rules, or admissible construction forms. Keep source-level domain legitimacy separate from DSD protocol conformance, and leave method gain `NOT_ASSESSED` unless a fair baseline is independently justified.
+Create a dedicated deterministic same-project retrace of `SYN-APP-001` from its immutable source/precommit/result chain. After that, add a second materially different external domain before considering a maturity audit.
