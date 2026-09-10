@@ -16,17 +16,7 @@ Direct-evidence path:
 evidence/method_specific/comparison/
 ```
 
-Initial method form:
-
-```text
-supplied subjects
-+ comparison scope/resolution
-+ supplied map/correspondence family
-+ preservation/equivalence criteria
--> correspondence/divergence profile
-```
-
-Created `TASK_INTERFACE_v0.1-draft.md`.
+Created `TASK_INTERFACE_v0.1-draft.md` with the initial Comparison task interface.
 
 ---
 
@@ -50,7 +40,6 @@ PRESERVED_NO_REFINEMENT: 11
 PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
 BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
-DIRECT_COMPARISON_PILOT_INCREMENT: 0
 ```
 
 Forced refinements:
@@ -70,14 +59,12 @@ R4 LINEAGE_IDENTITY_CLAIM_POLICY
 
 ## 2026-09-10 — Planning Step 4: Protocol v0.1 freeze
 
-Status: **first executable Comparison protocol established**
-
 ```text
 methods/06_comparison/PROTOCOL_v0.1.md
 commit a1700d960e0b41dfe32bf85b6334448d9104100d
 ```
 
-Protocol v0.1 freezes a `C1-C20` executable sequence. Protocol creation adds no direct Comparison pilot.
+Protocol v0.1 freezes the `C1-C20` executable sequence. Protocol creation adds no direct Comparison pilot.
 
 ---
 
@@ -85,61 +72,19 @@ Protocol v0.1 freezes a `C1-C20` executable sequence. Protocol creation adds no 
 
 Status: **40/40 PASS**
 
-Precommit:
-
 ```text
-evidence/method_specific/comparison/CMP-CH-001_precommit.md
-commit 16c4b15f93d66299a2a3890f436e1aff0076713c
-blob 1c87d4261022a07175796bce16e794f9d0c77f31
+PRECOMMIT: 16c4b15f93d66299a2a3890f436e1aff0076713c
+RESULT: c601bd20d4d5fc6ba7dd5d4cb20b4a80f66ec880
 ```
-
-Result:
-
-```text
-evidence/method_specific/comparison/CMP-CH-001_positive-direct-comparison.md
-commit c601bd20d4d5fc6ba7dd5d4cb20b4a80f66ec880
-```
-
-Four frozen task instances were executed:
 
 ```text
 T1 -> STRICT_EQUIVALENT
-     bijection + forward/inverse relation preservation + Property-status preservation
-
-T2 -> DIRECT_CORRESPONDENCE
-     injective direct map with preserved mapped relation/status
-     y2 outside image
-     strict equivalence = no
-
+T2 -> DIRECT_CORRESPONDENCE / strict equivalence no
 T3 -> ENCODED_CORRESPONDENCE
-     supplied bridge e: 0<->OFF, 1<->ON
-     bridge bijective and relation/status preserving
-     not relabeled DIRECT_CORRESPONDENCE
-
-T4 -> aggregate readout equal (4=4)
-     support cardinalities 3 vs 1
-     no bijection under frozen strict structural family
-     structural equivalence = no
-     NONCORRESPONDENCE under frozen strict family
-```
-
-Three-ledger result for all four:
-
-```text
-TERMINAL_COMPARISON_STATUS: COMPARISON_RESOLVED
-COMPARISON_PROTOCOL_CONFORMANCE: CONFORMANT
-COMPARISON_METHOD_GAIN_STATUS: NOT_ASSESSED
-```
-
-Precommitted score:
-
-```text
-A immutable/precommit discipline  8/8
-B T1 strict-equivalence           8/8
-C T2 weaker-direct                8/8
-D T3 encoded                      8/8
-E T4 aggregate-collision          8/8
-TOTAL                            40/40 PASS
+T4 -> aggregate equal + structural NONCORRESPONDENCE
+ALL TERMINAL: COMPARISON_RESOLVED
+ALL CONFORMANCE: CONFORMANT
+ALL GAIN: NOT_ASSESSED
 ```
 
 Evidence effect:
@@ -147,22 +92,109 @@ Evidence effect:
 ```text
 DIRECT_COMPARISON_PILOTS: 1
 POSITIVE_COMPARISON_CASES: 1
+```
+
+---
+
+## 2026-09-10 — Step 6: CMP-CH-002 negative/failure terminal distinction
+
+Status: **48/48 PASS**
+
+Precommit:
+
+```text
+evidence/method_specific/comparison/CMP-CH-002_precommit.md
+commit c852a688c3411c7d8568e2597262c4ec32a0355e
+blob caec1bb29368cd291abd77ae7789ecfe50ac4a98
+```
+
+Result:
+
+```text
+evidence/method_specific/comparison/CMP-CH-002_negative-failure-terminal-distinction.md
+commit ca2e91f6a73d36561e77f699c3b221ada0f97dfc
+```
+
+Five frozen tasks:
+
+```text
+N1 non-exhaustive family:
+  f11 fails relation preservation
+  f12 remains untested
+  -> UNDETERMINED_CORRESPONDENCE
+  -> COMPARISON_UNDERDETERMINED
+
+N2 partial element coverage:
+  f2 bijective, relation preserved
+  readiness(y1) withheld
+  -> UNDETERMINED_CORRESPONDENCE
+  -> COMPARISON_UNDERDETERMINED
+
+N3 missing required semantic bridge:
+  no substantive map evaluation fabricated
+  -> UNDETERMINED_CORRESPONDENCE
+  -> COMPARISON_BLOCKED
+
+N4 forward success / inverse unverified:
+  f4 bijective and forward relation preserved
+  inverse-preservation evidence not evaluated in frozen run
+  -> UNDETERMINED_CORRESPONDENCE
+  -> COMPARISON_UNDERDETERMINED
+
+N5 exhaustive all-map failure:
+  g1 relation preservation FAIL
+  g2 relation preservation FAIL
+  no untested map remains
+  -> NONCORRESPONDENCE
+  -> COMPARISON_RESOLVED
+```
+
+Three-ledger state:
+
+```text
+ALL CONFORMANCE: CONFORMANT
+ALL GAIN: NOT_ASSESSED
+TERMINAL:
+  N1,N2,N4 -> COMPARISON_UNDERDETERMINED
+  N3 -> COMPARISON_BLOCKED
+  N5 -> COMPARISON_RESOLVED
+```
+
+Precommitted score:
+
+```text
+A immutable/precommit discipline     8/8
+B N1 non-exhaustive map              8/8
+C N2 partial element coverage        8/8
+D N3 missing bridge                  8/8
+E N4 inverse evidence                8/8
+F N5 exhaustive noncorrespondence    8/8
+TOTAL                               48/48 PASS
+```
+
+Preserved distinctions:
+
+```text
+NONEXHAUSTIVE_MAP_FAILURE != RESOLVED_NONCORRESPONDENCE
+PARTIAL_ELEMENT_COVERAGE != STRICT_EQUIVALENCE
+MISSING_REQUIRED_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
+FORWARD_MAP_SUCCESS != VERIFIED_INVERSE_PRESERVATION
+COMPARISON_UNDERDETERMINED != COMPARISON_BLOCKED
+EXHAUSTIVE_ALL_MAP_FAILURE != NONEXHAUSTIVE_FAILURE_TO_FIND
+```
+
+Evidence effect:
+
+```text
+DIRECT_COMPARISON_PILOTS: 2
+POSITIVE_COMPARISON_CASES: 1
+NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 METHOD_SURVIVAL_OR_MERGER_DECISION_FROM_THIS_CASE: none
 ```
 
-The challenge preserved:
-
-```text
-STRICT_EQUIVALENT != DIRECT_CORRESPONDENCE
-DIRECT_CORRESPONDENCE != ENCODED_CORRESPONDENCE
-AGGREGATE_EQUALITY != STRUCTURAL_EQUIVALENCE
-INJECTIVE_DIRECT_CORRESPONDENCE != BIJECTIVE_EQUIVALENCE
-MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
-```
-
 ### Next
 
-Separately precommit `CMP-CH-002` negative/failure challenge. It should distinguish `COMPARISON_UNDERDETERMINED`, `COMPARISON_BLOCKED`, and resolved `NONCORRESPONDENCE`, including incomplete map-family/element/reverse evidence and missing claim-required bridge cases.
+Separately precommit `CMP-CH-003` direct method-boundary challenge. It should test explicit handoffs for Analysis, Classification, Transformation, Audit, and Provenance/Lineage operations without discarding the legitimate Comparison core where it remains executable.
