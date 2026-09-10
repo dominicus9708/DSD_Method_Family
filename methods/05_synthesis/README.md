@@ -1,6 +1,6 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **Protocol v0.1 established / positive + negative/failure + boundary pilots PASS / validation in progress**
+Status: **Protocol v0.1 established / positive + negative/failure + boundary + NO_GAIN evidence present / validation in progress**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
@@ -16,17 +16,8 @@ and what structure/relations/statuses are retained or lost?
 
 ## Executable protocol and lineage
 
-Current executable protocol:
-
-- `PROTOCOL_v0.1.md`, creation commit `8787b24`.
-
-Historical artifacts remain preserved:
-
-- `TASK_INTERFACE_v0.1-draft.md`
-- `BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`
-- `TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`
-- `PLANNING.md`
-- `WORKLOG.md`
+Current executable protocol: `PROTOCOL_v0.1.md`, creation commit `8787b24`.
+Historical planning artifacts remain preserved: `TASK_INTERFACE_v0.1-draft.md`, `BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`, `TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`, `PLANNING.md`, and `WORKLOG.md`.
 
 ```text
 TASK_INTERFACE_v0.1-draft.md
@@ -47,7 +38,7 @@ PARTIAL_SYNTHESIS != completed synthesized target
 STATIC_COMPOSITION_ORDER != TEMPORAL_ASSEMBLY_SEQUENCE
 ```
 
-## Output and terminal states
+## Output / terminal / ledger structure
 
 ```text
 OUTPUT_LEVELS:
@@ -61,16 +52,11 @@ TERMINAL_SYNTHESIS_STATUS:
   SYNTHESIS_INFEASIBLE
   SYNTHESIS_UNDERDETERMINED
   SYNTHESIS_BLOCKED
-```
 
-`SYNTHESIS_INFEASIBLE` requires exhaustive composition coverage or a sufficient impossibility argument. Non-exhaustive closure failure remains underdetermined. Missing claim-required input may yield `SYNTHESIS_BLOCKED + CONFORMANT`.
-
-## Three-ledger separation
-
-```text
-TERMINAL_SYNTHESIS_STATUS
-SYNTHESIS_PROTOCOL_CONFORMANCE
-SYNTHESIS_METHOD_GAIN_STATUS
+THREE LEDGERS:
+  TERMINAL_SYNTHESIS_STATUS
+  SYNTHESIS_PROTOCOL_CONFORMANCE
+  SYNTHESIS_METHOD_GAIN_STATUS
 ```
 
 ## Method boundaries
@@ -86,77 +72,74 @@ Dynamics/domain process model: time-resolved assembly when claimed
 
 ## Direct Protocol-v0.1 evidence
 
-### SYN-CH-001 — positive composition
-
 ```text
-PRECOMMIT: 4eeba2a
-RESULT: 71e5d5c
-ADMISSIBLE_FAMILY: {K1,K2}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NOT_ASSESSED
-SCORE: 28/28 PASS
+SYN-CH-001
+  positive
+  PRECOMMIT 4eeba2a
+  RESULT 71e5d5c
+  28/28 PASS
+
+SYN-CH-002
+  negative/failure terminal distinction
+  PRECOMMIT 09fc616
+  RESULT 7dac87c
+  36/36 PASS
+  INFEASIBLE != UNDERDETERMINED != BLOCKED
+
+SYN-CH-003
+  executable method-boundary
+  PRECOMMIT 2eea8ae
+  RESULT cb55dba
+  46/46 PASS
+  Design / Transformation / Aggregation / Optimization handoffs preserved
+
+SYN-CH-004
+  first NO_GAIN baseline attempt
+  PRECOMMIT 1c77a0e
+  FIRST RESULT 29730a5
+  POSTEXECUTION AUDIT fe55899
+  33/35 FAIL
+  FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
+  Protocol failure not inferred
+
+SYN-CH-005
+  corrected prospective NO_GAIN baseline challenge
+  PRECOMMIT 3c6f323
+  RESULT f062d3f
+  37/37 PASS
+  DSD family = B0 family = {R1,R2}
+  TERMINAL: SYNTHESIS_ADMISSIBLE
+  CONFORMANCE: CONFORMANT
+  GAIN: NO_GAIN
 ```
 
-### SYN-CH-002 — negative/failure distinction
+The `SYN-CH-004` predecessor is intentionally preserved. Its Q5 fixture omitted the middle component's readiness record while expecting no H4 failure. `SYN-CH-005` repaired this prospectively under a new Case ID by freezing explicit readiness records before execution.
+
+The successful `SYN-CH-005` comparison established no measured DSD gain over `B0_TYPED_CHAIN_CHECKER` on the frozen dimensions:
 
 ```text
-PRECOMMIT: 09fc616
-RESULT: 7dac87c
-I -> SYNTHESIS_INFEASIBLE
-U -> SYNTHESIS_UNDERDETERMINED
-B -> SYNTHESIS_BLOCKED
-ALL CONFORMANCE: CONFORMANT
-ALL GAIN: NOT_ASSESSED
-SCORE: 36/36 PASS
+G1 status distinction       NOT_ESTABLISHED
+G2 failure traceability     NOT_ESTABLISHED
+G3 composition closure      NOT_ESTABLISHED
+G4 target distinctness      NOT_ESTABLISHED
+G5 retraceability           NOT_ESTABLISHED
 ```
 
-This preserves exhaustive rejection, insufficient closure coverage, and missing required input as distinct conditions.
-
-### SYN-CH-003 — executable method-boundary challenge
-
-```text
-PRECOMMIT: 2eea8ae
-RESULT: cb55dba
-BASE SYNTHESIS FAMILY: {S0,S1}
-```
-
-Four mixed-workflow pressures were separated without changing the Synthesis family:
-
-```text
-extra goal requiring new monitoring architecture -> DESIGN_REQUIRED
-adjacency-matrix representation request          -> TRANSFORMATION_REQUIRED
-scalar readout request                           -> AGGREGATION_REQUIRED
-lower-cost selection objective                   -> OPTIMIZATION_REQUIRED
-```
-
-In every subcase:
-
-```text
-TERMINAL_SYNTHESIS_STATUS: SYNTHESIS_ADMISSIBLE
-SYNTHESIS_PROTOCOL_CONFORMANCE: CONFORMANT
-SYNTHESIS_METHOD_GAIN_STATUS: NOT_ASSESSED
-```
-
-No missing part/connector was fabricated, no representation conversion or scalar readout was relabeled as Synthesis, and the cost objective did not turn `{S0,S1}` into a unique synthesized target.
-
-```text
-SCORE: 46/46 PASS
-PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
-```
+`NO_GAIN` is a valid evidence result and is not treated as method failure.
 
 ## Current evidence state
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
-DIRECT_SYNTHESIS_PILOTS: 3
+DIRECT_SYNTHESIS_PILOTS_COMPLETED: 5
+SUCCESSFUL_POSITIVE_SYNTHESIS_CASES: 1
+SUCCESSFUL_NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
+SUCCESSFUL_BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 1
+PRESERVED_FAILED_BASELINE_CHALLENGE_DESIGNS: 1
+SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 1
+SUCCESSFUL_BASELINE_COMPARISON_PASSES: 1
+STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-POSITIVE_SYNTHESIS_CASES: 1
-NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
-BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 1
-NO_GAIN_SYNTHESIS_CASES: 0
-BASELINE_COMPARISON_CASES: 0
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_SYNTHESIS_APPLICATIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
@@ -164,8 +147,8 @@ SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The current constructed pilots do not establish external applicability, baseline superiority, reproducibility, independent validation, or maturity.
+The evidence so far is constructed and does not establish external applicability, cross-domain generality, strongest-reasonable-baseline coverage, reproducibility, independent validation, practical superiority, or maturity.
 
 ## Next development step
 
-Separately precommit the first `NO_GAIN` case against a competent baseline that receives the same components, composition rule, interface records, candidate basis, coverage, and target resolution. Do not weaken the baseline to manufacture a DSD advantage.
+Separately precommit and execute a broader strongest-reasonable-baseline comparison. Use a richer Synthesis task that activates multiple method-specific dimensions at once, preferably composition equivalence/grouping together with property-lift, relation-retention, partial-residual, or formation-effect distinctions. The baseline must receive the same information and a further `NO_GAIN` outcome must remain acceptable.
