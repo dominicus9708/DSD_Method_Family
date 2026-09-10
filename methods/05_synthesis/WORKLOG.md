@@ -30,118 +30,128 @@ SYN-CH-007  48/48 PASS  deterministic_same_project retrace
 
 ---
 
-## 2026-09-10 — External application 1: RFC 3986
+## 2026-09-10 — External applications
 
 ```text
-PRECOMMIT: 29ea45a
-RESULT: 6985246
-EXTERNAL_DOMAIN: Internet identifier syntax / URI generic syntax
-SCORE: 40/40 PASS
+SYN-APP-001
+  RFC 3986 generic URI syntax
+  40/40 PASS
+
+SYN-APP-002
+  BIPM SI unit composition
+  46/46 PASS
+
+SYN-APP-003
+  USB Type-C Release 2.0 frozen mechanical mating subset
+  44/44 PASS
 ```
+
+The three domains pressure different composition structures: symbolic component grammar, unit algebra/scale composition, and physical connector mating/orientation.
 
 ---
 
-## 2026-09-10 — External application 2: BIPM SI unit composition
+## 2026-09-10 — Step 14: SYN-AUD-001 first maturity audit
 
-```text
-PRECOMMIT: 46479ae
-RESULT: c504d53
-EXTERNAL_DOMAIN: physical metrology / SI unit composition
-SCORE: 46/46 PASS
-```
-
-Preserved `SAME_DIMENSION != SAME_UNIT_SCALE`, prefixed-unit coherence distinctions, and mass-prefix legality without absorbing measurement/calibration claims.
-
----
-
-## 2026-09-10 — Step 13: SYN-APP-003 physical connector assembly
-
-Status: **44/44 PASS / third external Synthesis domain**
-
-External authority lock:
-
-```text
-USB Type-C Cable and Connector Specification Release 2.0 (August 2019)
-Frozen subset:
-  Section 2.3.2 plug orientation / cable twist detection
-  Section 2.3.3 initial power/data relationship
-  Section 3.2 connector mating interfaces
-Supporting source:
-  USB-IF Type-C overview
-EXTERNAL_DOMAIN:
-  physical connector assembly / USB Type-C mating interface
-```
-
-The test explicitly remains version-specific to the frozen Release-2.0 mechanical subset. Newer USB Type-C releases exist, but no current-release certification or compliance claim is made.
+Status: **28/28 audit-execution PASS / established method-protocol evidence maturity supported**
 
 Precommit:
 
 ```text
-evidence/method_specific/synthesis/SYN-APP-003_precommit.md
-commit: 4159872ad761f1fe06a784e1771a9b5ac994bff8
-blob: 0cfe2711c49e4a249751200dddaec357f2736ce9
+evidence/method_specific/synthesis/SYN-AUD-001_precommit.md
+commit: ba966b5f12c5df89355ea557e7a1ff997e9f866f
 ```
 
 Result:
 
 ```text
-evidence/method_specific/synthesis/SYN-APP-003_USB-Type-C-physical-mating.md
-commit: 73faaa03bf3309160fae4e7f690a277c12c40540
+evidence/method_specific/synthesis/SYN-AUD-001_maturity-review.md
+commit: bae4388c67329e23127a93799e119c491eb2989a
 ```
 
-Execution:
+The audit froze fifteen maturity axes and 28 execution-discipline checks before scoring.
+
+Axis results:
 
 ```text
-M1  plug->receptacle ORIENTATION_A        admissible
-M2  plug->receptacle ORIENTATION_B        admissible
-M3  invalid 90-degree insertion           rejected {H2}; H3-H5 NOT_REACHED
-M4  plug->plug direct                     rejected {H1}; H2-H5 NOT_REACHED
-M5  receptacle->receptacle direct         rejected {H1}; H2-H5 NOT_REACHED
-M6  C-to-C cable E1/E2 assignment         admissible; H5 PASS
-M7  C-to-C cable ends swapped             admissible; H5 PASS
-M8  physical mate -> Source/Sink claim    rejected {H4}
-M9  physical mate -> host/device claim    rejected {H4}
-M10 cable direction -> power-role claim   rejected {H4}; H5 PASS
-
-ADMISSIBLE_FAMILY: {M1,M2,M6,M7}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NOT_ASSESSED
-SCORE: 44/44 PASS
+M1  PASS
+M2  PASS
+M3  PASS
+M4  PASS
+M5  CONDITIONAL_PASS
+M6  PASS
+M7  PASS
+M8  PASS
+M9  PASS
+M10 UNRESOLVED_BUT_BOUNDED
+M11 PRESENT_NONFATAL
+M12 PASS
+M13 PASS
+M14 PASS
+M15 PASS
 ```
 
-Key distinctions:
+Promotion decision:
 
 ```text
-TYPE_C_COMPONENT_ADMITTED != DIRECTLY_MATEABLE_WITH_ANY_TYPE_C_COMPONENT
-REVERSIBLE_PLUG_ORIENTATION != ARBITRARY_ROTATIONAL_SYMMETRY
-MECHANICAL_MATING != SOURCE_SINK_ROLE_ESTABLISHMENT
-MECHANICAL_MATING != HOST_DEVICE_ROLE_ESTABLISHMENT
-REVERSIBLE_CABLE_DIRECTION != POWER_ROLE_SYMMETRY
+FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+METHOD_MATURITY_CLASSIFICATION: established
+PROMOTION_TO_ESTABLISHED: SUPPORTED
+CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-Evidence effect:
+The decisive basis is not raw pass volume. It is the combined evidence architecture:
 
 ```text
-DIRECT_SYNTHESIS_PILOTS_COMPLETED: remains 6
+stable executable protocol
+positive and non-success terminal-state discrimination
+operational neighboring-method boundary separation
+preserved failed challenge design
+multiple honest NO_GAIN records
+strongest-reasonable-baseline comparison
+same-project deterministic retrace
+three materially different external applications
+source/bridge scope discipline
+composition coverage/equivalence/Property-lift/process-scope discipline
+no identified core protocol defect requiring reopen
+```
+
+The audit preserved the principal limitations:
+
+```text
+INDEPENDENT_SYNTHESIS_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+MEASURED_PRACTICAL_SUPERIORITY: not established
+UNIVERSAL_EXTERNAL_GENERALITY: not established
+PERMANENT_METHOD_REGISTRY_SURVIVAL: not established or implied
+```
+
+Method-survival discipline was frozen as M15 and passed:
+
+```text
+CASE_PASS != METHOD_SURVIVAL_PROOF
+CASE_FAIL != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+EXTERNAL_PASS != PERMANENT_INDEPENDENCE_PROOF
+RETRACE_PASS != METHOD_IRREDUCIBILITY_PROOF
+```
+
+The audit itself did not increase direct-pilot, external-application, or reproducibility counts.
+
+### Evidence state after audit
+
+```text
+DIRECT_SYNTHESIS_PILOTS_COMPLETED: 6
 EXTERNAL_SYNTHESIS_APPLICATIONS: 3
 EXTERNAL_SYNTHESIS_DOMAINS: 3
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
-REPRODUCIBILITY_CASES: remains 1
-INDEPENDENT_SYNTHESIS_VALIDATION: not established
-SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
+REPRODUCIBILITY_CASES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
+SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: established
+CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
-
-Protocol pressure:
-
-```text
-PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
-METHOD_COLLAPSE_OR_SURVIVAL_DECISION_FROM_THIS_CASE: none
-```
-
-No USB-IF certification, USB Power Delivery, data-rate capability, signal-integrity, durability, insertion-force, or current Release-2.5 conformance claim was inferred.
 
 ### Next technical step
 
-Run the first separately precommitted Synthesis maturity audit. The audit must evaluate evidence architecture and unresolved limitations independently from raw pass counts, and it must not turn a pass/fail record into an automatic method survival/merger/deletion decision.
+Prepare `SYN-IEP-001` independent-evaluator infrastructure. Packet preparation must remain infrastructure only until a genuinely separate evaluator freezes a submission before answer/reference disclosure.
