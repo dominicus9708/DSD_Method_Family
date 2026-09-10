@@ -120,7 +120,7 @@ The next core Design evidence event requires a genuinely separate evaluator to s
   - positive Synthesis cases: `1`;
   - negative/failure Synthesis cases: `1`;
   - `SYN-CH-001`: precommit `4eeba2a`, result `71e5d5c`, **28/28 PASS**, `SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED`;
-  - `SYN-CH-002`: precommit `09fc616`, result `7dac87c`, **36/36 PASS`;
+  - `SYN-CH-002`: precommit `09fc616`, result `7dac87c`, **36/36 PASS**;
   - `SYN-CH-002` Subcase I: exhaustive all rejected -> `SYNTHESIS_INFEASIBLE / CONFORMANT / NOT_ASSESSED`;
   - `SYN-CH-002` Subcase U: non-exhaustive uniqueness closure -> `SYNTHESIS_UNDERDETERMINED / CONFORMANT / NOT_ASSESSED`;
   - `SYN-CH-002` Subcase B: required composition rule unavailable -> `SYNTHESIS_BLOCKED / CONFORMANT / NOT_ASSESSED`;
