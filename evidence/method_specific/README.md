@@ -118,16 +118,16 @@ A later audit should preserve either agreement or disagreement rather than treat
   - planning opened on `2026-09-10`;
   - current maturity classification: `proposed`;
   - current evidence status: `validation_pending`;
-  - dedicated executable protocol: not established;
+  - dedicated executable protocol: **`PROTOCOL_v0.1.md` established**, creation commit `8787b24`;
   - direct Synthesis pilots: `0`;
   - pre-protocol boundary attacks: `16`;
   - boundary result: `11` preserved without refinement + `5` preserved with non-breaking refinement, `0` collapse, `0` fundamental interface failure;
-  - effective pre-protocol interface: `TASK_INTERFACE_v0.1-draft.md + TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`;
+  - protocol lineage: `TASK_INTERFACE_v0.1-draft.md + TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md -> PROTOCOL_v0.1.md`;
   - external Synthesis applications: `0`;
   - independent Synthesis validation: not established;
-  - next task: freeze executable `Synthesis Protocol v0.1`.
+  - next direct task: separately precommit and execute positive `SYN-CH-001`.
 
-Current Synthesis planning guards:
+Current Synthesis protocol guards:
 
 ```text
 INDIVIDUAL_COMPONENT_ADMISSIBILITY
@@ -155,17 +155,26 @@ STATIC_COMPOSITION_ORDER
 != TEMPORAL_ASSEMBLY_SEQUENCE
 ```
 
-Step-2 non-breaking refinement groups:
+Protocol v0.1 freezes composition-law/grouping, target equivalence/canonicalization, partial residuals, process scope, candidate coverage, target resolution, property lift, retention/loss, and formation effect before closure claims.
+
+Current Synthesis state:
 
 ```text
-COMPOSITION_LAW_PROFILE
-GROUPING_OR_PARENTHESIZATION_POLICY
-COMPOSITION_EQUIVALENCE_OR_CANONICALIZATION_RULE
-RESIDUAL_OPEN_INTERFACES_OR_OBLIGATIONS
-ASSEMBLY_SEQUENCE_OR_PROCESS_SCOPE
+DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
+DIRECT_SYNTHESIS_PILOTS: 0
+POSITIVE_SYNTHESIS_CASES: 0
+NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 0
+BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 0
+NO_GAIN_SYNTHESIS_CASES: 0
+BASELINE_COMPARISON_CASES: 0
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_SYNTHESIS_APPLICATIONS: 0
+INDEPENDENT_SYNTHESIS_VALIDATION: not established
+SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
+CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_pending
 ```
 
-The boundary attacks remain planning artifacts and are **not yet direct Synthesis validation evidence**.
+Protocol establishment and pre-protocol attacks are **not** counted as direct Synthesis pilot evidence.
 
 ## Promotion expectation / 성숙도 승격 기준
 
