@@ -1,6 +1,6 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **planning / proposed / Step 2 boundary attack complete**
+Status: **Protocol v0.1 established / proposed maturity / validation pending**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
@@ -14,23 +14,27 @@ which larger constructions are legitimately synthesizable,
 and what structure/relations/statuses are retained or lost?
 ```
 
-## Effective pre-protocol interface
+## Executable protocol and lineage
 
-Historical Step-1 draft:
+Current executable protocol:
+
+- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
+
+Historical Step-1 draft and Step-2 pressure artifacts remain preserved:
 
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
-
-Step-2 boundary pressure:
-
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 
-Effective interface before Protocol v0.1:
+Protocol v0.1 prospectively integrates the effective pre-protocol interface:
 
 ```text
 TASK_INTERFACE_v0.1-draft.md
 + TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+-> PROTOCOL_v0.1.md
 ```
+
+The planning artifacts are not rewritten and do not count as direct Synthesis validation.
 
 Planning and chronology:
 
@@ -41,7 +45,7 @@ Direct-evidence lane:
 
 - [`../../evidence/method_specific/synthesis/`](../../evidence/method_specific/synthesis/)
 
-## Core guards surviving Step 2
+## Core guards
 
 ```text
 INDIVIDUAL_COMPONENT_ADMISSIBILITY
@@ -69,9 +73,9 @@ STATIC_COMPOSITION_ORDER
 != TEMPORAL_ASSEMBLY_SEQUENCE
 ```
 
-## Step-2 boundary result
+## Pre-protocol boundary result
 
-Sixteen pre-protocol attacks were run.
+Sixteen boundary attacks were run before the executable protocol was frozen.
 
 ```text
 BOUNDARY_ATTACKS_RUN: 16
@@ -82,21 +86,9 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 DIRECT_SYNTHESIS_PILOT_INCREMENT: 0
 ```
 
-The attacks covered Design, Transformation, Aggregation, Optimization, property lifting, algebraic assumptions, composition equivalence, partial-synthesis residuals, process scope, coverage, and Formation/domain-composition boundaries.
+The attacks required explicit composition-law/grouping, composition-equivalence/canonicalization, partial-residual, and process-scope guards without changing the method identity.
 
-Four refinement groups were added without changing the method identity:
-
-```text
-COMPOSITION_LAW_PROFILE
-GROUPING_OR_PARENTHESIZATION_POLICY
-COMPOSITION_EQUIVALENCE_OR_CANONICALIZATION_RULE
-RESIDUAL_OPEN_INTERFACES_OR_OBLIGATIONS
-ASSEMBLY_SEQUENCE_OR_PROCESS_SCOPE
-```
-
-The original Step-1 interface file remains preserved; the refinements are recorded separately rather than applied retroactively.
-
-## Initial output levels
+## Protocol-v0.1 output levels
 
 ```text
 SYNTHESIS_SPACE
@@ -105,7 +97,7 @@ UNIQUE_SYNTHESIZED_TARGET
 PARTIAL_SYNTHESIS
 ```
 
-## Initial terminal statuses
+## Terminal statuses
 
 ```text
 SYNTHESIS_ADMISSIBLE
@@ -114,7 +106,7 @@ SYNTHESIS_UNDERDETERMINED
 SYNTHESIS_BLOCKED
 ```
 
-`SYNTHESIS_INFEASIBLE` requires exhaustive composition coverage or an explicit impossibility argument.
+`SYNTHESIS_INFEASIBLE` requires exhaustive composition coverage or an explicit impossibility argument sufficient for the frozen scope.
 A non-exhaustive failure to find a valid composition is not global infeasibility.
 
 ## Three-ledger separation
@@ -163,22 +155,58 @@ Optimization chooses among already legitimate alternatives under an objective.
 A final static composition may be admissible while a time-resolved assembly sequence remains untested.
 Process feasibility requires an explicit process scope and, where relevant, Dynamics or a domain process model.
 
+## Protocol-v0.1 execution discipline
+
+Protocol v0.1 locks, before outcome inspection:
+
+```text
+component identities/status sources
+composition rule/source/arity/order/multiplicity
+composition-law profile
+grouping/parenthesization policy
+candidate basis and composition coverage
+target resolution
+equivalence/canonicalization rule
+interface and prerequisite rules
+property-lift/redeclaration rule
+retention/loss requirements
+formation-model policy
+assembly process scope
+active DSD layers / domain bridges / external standard
+```
+
+Candidate IDs or syntax trees do not establish material uniqueness.
+No algebraic law is inferred from notation alone.
+A component property is not silently promoted to a whole property.
+Static composability is not promoted to time-resolved process feasibility.
+
 ## Current evidence state
 
 ```text
-DEDICATED_SYNTHESIS_PROTOCOL: not established
+DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
 DIRECT_SYNTHESIS_PILOTS: 0
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
+POSITIVE_SYNTHESIS_CASES: 0
+NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 0
 BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 0
+NO_GAIN_SYNTHESIS_CASES: 0
+BASELINE_COMPARISON_CASES: 0
+REPRODUCIBILITY_CASES: 0
 EXTERNAL_SYNTHESIS_APPLICATIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_pending
 ```
 
-Planning artifacts do not count as direct Synthesis validation.
+Protocol establishment does not establish correctness, superiority, external applicability, or maturity.
 
 ## Next development step
 
-Freeze the first executable `Synthesis Protocol v0.1` from the effective Step-2 interface.
-The protocol must incorporate the composition-law/grouping, equivalence/canonicalization, partial-residual, and process-scope guards while preserving the historical planning artifacts unchanged.
+Create a separate precommit for the first direct positive Protocol-v0.1 challenge:
+
+```text
+SYN-CH-001
+CASE_CLASS: positive
+```
+
+The case should include at least one admissible composition and one explicit interface/prerequisite rejection, with frozen composition law, target resolution, equivalence rule, candidate coverage, and three separate Synthesis ledgers.
