@@ -22,6 +22,8 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 DIRECT_CONSTRUCTED_PILOTS: 7
 EXTERNAL_APPLICATIONS: 3
 EXTERNAL_DOMAINS: 3
+INDEPENDENT_EVALUATOR_PACKET: prepared
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_EVALUATOR_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 MEASURED_PRACTICAL_SUPERIORITY: not established
@@ -31,7 +33,7 @@ MEASURED_PRACTICAL_SUPERIORITY: not established
 
 Planning opened `2026-09-10`; executable `PROTOCOL_v0.1.md` was established at commit `8787b24`.
 
-Current Synthesis state after `SYN-AUD-001`:
+Current Synthesis state after `SYN-AUD-001` and `SYN-IEP-001` preparation:
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
@@ -50,6 +52,10 @@ REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_SYNTHESIS_APPLICATIONS: 3
 EXTERNAL_SYNTHESIS_DOMAINS: 3
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
+INDEPENDENT_EVALUATOR_PACKET: prepared
+REFERENCE_KEY_COMMITMENT: frozen
+CLEAN_DISTRIBUTION_RECORD: prepared
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 MEASURED_PRACTICAL_SUPERIORITY: not established
@@ -94,6 +100,16 @@ SYN-AUD-001
   M10: UNRESOLVED_BUT_BOUNDED
   M11: PRESENT_NONFATAL
   M15: PASS
+
+SYN-IEP-001
+  REVIEWER_PACKET: 6be55803
+  SUBMISSION_TEMPLATE: 079cdda0
+  REFERENCE_COMMITMENT: b785df0e
+  CLEAN_DISTRIBUTION_RECORD: af622b9d
+  PUBLIC_SHA256: db5d1c505c3ab2d614357525489f3b2a0dd2fc595fff1e715c69f48ceeb7073f
+  SEMANTIC_CHECKS: 24
+  CRITICAL_CHECKS: 10
+  INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 ```
 
 The established Synthesis label means method/protocol evidence maturity inside the current DSD method-family framework. It does not establish independent validation, independent replication, practical superiority, universal external generality, or permanent method survival/nonmerger.
@@ -113,9 +129,10 @@ SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 CASE_PASS != METHOD_SURVIVAL_PROOF
 CASE_FAIL != METHOD_DELETION_PROOF
 NO_GAIN != METHOD_ABSORPTION_PROOF
+PACKET_PREPARATION != INDEPENDENT_VALIDATION
 ```
 
-The next Synthesis task is `SYN-IEP-001` independent-evaluator infrastructure. Packet preparation must remain infrastructure only until a genuinely separate evaluator submission is frozen and scored.
+The next Synthesis event cannot be supplied by more same-project test volume. It requires a genuinely separate `SYN-IEP-001` evaluator to freeze a completed submission before hidden reference reveal. Only then may commitment verification and independent-evidence scoring occur.
 
 ## Promotion expectation / 성숙도 승격 기준
 
