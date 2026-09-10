@@ -1,10 +1,10 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **Protocol v0.1 established / positive + terminal-failure pilots PASS / validation in progress**
+Status: **Protocol v0.1 established / positive + negative/failure + boundary pilots PASS / validation in progress**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
-Primary DSD sources: Formation Clause-VII-compatible composition interfaces, General Property typing, Static Aggregation when analytic outputs are combined, and Dynamics only when assembly/transition order is claim-relevant.
+Primary DSD sources: Formation Clause-VII-compatible composition interfaces, General Property typing, Static Aggregation only as a separate readout handoff, and Dynamics only when assembly/transition order is claim-relevant.
 
 ## Core method question
 
@@ -18,13 +18,15 @@ and what structure/relations/statuses are retained or lost?
 
 Current executable protocol:
 
-- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md), creation commit `8787b24`.
+- `PROTOCOL_v0.1.md`, creation commit `8787b24`.
 
-Historical planning artifacts remain preserved:
+Historical artifacts remain preserved:
 
-- [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
-- [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
-- [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
+- `TASK_INTERFACE_v0.1-draft.md`
+- `BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`
+- `TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`
+- `PLANNING.md`
+- `WORKLOG.md`
 
 ```text
 TASK_INTERFACE_v0.1-draft.md
@@ -32,64 +34,36 @@ TASK_INTERFACE_v0.1-draft.md
 -> PROTOCOL_v0.1.md
 ```
 
-Planning and chronology:
-
-- [`PLANNING.md`](PLANNING.md)
-- [`WORKLOG.md`](WORKLOG.md)
-
-Direct-evidence lane:
-
-- [`../../evidence/method_specific/synthesis/`](../../evidence/method_specific/synthesis/)
-
 ## Core guards
 
 ```text
-INDIVIDUAL_COMPONENT_ADMISSIBILITY
-!= AUTOMATIC_COMPOSABILITY
-
-EXHAUSTIVE_COMPONENT_LIST
-!= EXHAUSTIVE_COMPOSITION_SPACE
-
-FORMATION_CLAUSE_VII_COMPOSITION
-!= DOMAIN_SYNTHESIS_LEGITIMACY
-
-AGGREGATE_READOUT
-!= SYNTHESIZED_WHOLE
-
-COMPONENT_PROPERTY
-!= WHOLE_PROPERTY
-
-candidate ID / syntax tree
-!= material synthesized-target distinctness
-
-PARTIAL_SYNTHESIS
-!= completed synthesized target
-
-STATIC_COMPOSITION_ORDER
-!= TEMPORAL_ASSEMBLY_SEQUENCE
+INDIVIDUAL_COMPONENT_ADMISSIBILITY != AUTOMATIC_COMPOSABILITY
+EXHAUSTIVE_COMPONENT_LIST != EXHAUSTIVE_COMPOSITION_SPACE
+FORMATION_CLAUSE_VII_COMPOSITION != DOMAIN_SYNTHESIS_LEGITIMACY
+AGGREGATE_READOUT != SYNTHESIZED_WHOLE
+COMPONENT_PROPERTY != WHOLE_PROPERTY
+candidate ID / syntax tree != material synthesized-target distinctness
+PARTIAL_SYNTHESIS != completed synthesized target
+STATIC_COMPOSITION_ORDER != TEMPORAL_ASSEMBLY_SEQUENCE
 ```
 
-## Protocol-v0.1 output levels
+## Output and terminal states
 
 ```text
-SYNTHESIS_SPACE
-SYNTHESIZED_TARGET
-UNIQUE_SYNTHESIZED_TARGET
-PARTIAL_SYNTHESIS
+OUTPUT_LEVELS:
+  SYNTHESIS_SPACE
+  SYNTHESIZED_TARGET
+  UNIQUE_SYNTHESIZED_TARGET
+  PARTIAL_SYNTHESIS
+
+TERMINAL_SYNTHESIS_STATUS:
+  SYNTHESIS_ADMISSIBLE
+  SYNTHESIS_INFEASIBLE
+  SYNTHESIS_UNDERDETERMINED
+  SYNTHESIS_BLOCKED
 ```
 
-## Terminal statuses
-
-```text
-SYNTHESIS_ADMISSIBLE
-SYNTHESIS_INFEASIBLE
-SYNTHESIS_UNDERDETERMINED
-SYNTHESIS_BLOCKED
-```
-
-`SYNTHESIS_INFEASIBLE` requires exhaustive composition coverage or an explicit impossibility argument sufficient for the frozen scope.
-A non-exhaustive failure-to-find is not global infeasibility.
-A missing claim-required composition rule or bridge may produce `SYNTHESIS_BLOCKED + CONFORMANT` when the missing input is correctly exposed rather than fabricated.
+`SYNTHESIS_INFEASIBLE` requires exhaustive composition coverage or a sufficient impossibility argument. Non-exhaustive closure failure remains underdetermined. Missing claim-required input may yield `SYNTHESIS_BLOCKED + CONFORMANT`.
 
 ## Three-ledger separation
 
@@ -99,14 +73,12 @@ SYNTHESIS_PROTOCOL_CONFORMANCE
 SYNTHESIS_METHOD_GAIN_STATUS
 ```
 
-Maturity remains a later DSD Audit decision.
-
 ## Method boundaries
 
 ```text
-Design: goals + constraints -> target/design space
+Design: goals + constraints -> target/parts/architecture basis
 Synthesis: supplied parts + supplied composition rule -> whole/composition space
-Transformation: source -> target representation/regime
+Transformation: source/whole -> target representation/regime
 Aggregation: structure/data -> declared readout
 Optimization: admissible alternatives -> objective-based selection
 Dynamics/domain process model: time-resolved assembly when claimed
@@ -119,9 +91,6 @@ Dynamics/domain process model: time-resolved assembly when claimed
 ```text
 PRECOMMIT: 4eeba2a
 RESULT: 71e5d5c
-K1,K2 -> admissible
-K3 -> rejected {H3}
-K4-K6 -> rejected {H2}
 ADMISSIBLE_FAMILY: {K1,K2}
 TERMINAL: SYNTHESIS_ADMISSIBLE
 CONFORMANCE: CONFORMANT
@@ -129,38 +98,63 @@ GAIN: NOT_ASSESSED
 SCORE: 28/28 PASS
 ```
 
-This case preserved `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED` and `individual admission != composability`.
-
-### SYN-CH-002 — terminal failure distinction
+### SYN-CH-002 — negative/failure distinction
 
 ```text
 PRECOMMIT: 09fc616
 RESULT: 7dac87c
-
-I: exhaustive {I1,I2}, all rejected {H2}
-   -> SYNTHESIS_INFEASIBLE / CONFORMANT / NOT_ASSESSED
-
-U: non-exhaustive {U1,U2}, U1 admissible, uniqueness requested
-   -> SYNTHESIS_UNDERDETERMINED / CONFORMANT / NOT_ASSESSED
-
-B: required composition rule unavailable
-   -> SYNTHESIS_BLOCKED / CONFORMANT / NOT_ASSESSED
-
+I -> SYNTHESIS_INFEASIBLE
+U -> SYNTHESIS_UNDERDETERMINED
+B -> SYNTHESIS_BLOCKED
+ALL CONFORMANCE: CONFORMANT
+ALL GAIN: NOT_ASSESSED
 SCORE: 36/36 PASS
 ```
 
-This case shows that local admissibility does not establish the requested output-level closure, and that missing required input is not the same as an ordinary candidate rejection.
-No Protocol-v0.1 revision was required.
+This preserves exhaustive rejection, insufficient closure coverage, and missing required input as distinct conditions.
+
+### SYN-CH-003 — executable method-boundary challenge
+
+```text
+PRECOMMIT: 2eea8ae
+RESULT: cb55dba
+BASE SYNTHESIS FAMILY: {S0,S1}
+```
+
+Four mixed-workflow pressures were separated without changing the Synthesis family:
+
+```text
+extra goal requiring new monitoring architecture -> DESIGN_REQUIRED
+adjacency-matrix representation request          -> TRANSFORMATION_REQUIRED
+scalar readout request                           -> AGGREGATION_REQUIRED
+lower-cost selection objective                   -> OPTIMIZATION_REQUIRED
+```
+
+In every subcase:
+
+```text
+TERMINAL_SYNTHESIS_STATUS: SYNTHESIS_ADMISSIBLE
+SYNTHESIS_PROTOCOL_CONFORMANCE: CONFORMANT
+SYNTHESIS_METHOD_GAIN_STATUS: NOT_ASSESSED
+```
+
+No missing part/connector was fabricated, no representation conversion or scalar readout was relabeled as Synthesis, and the cost objective did not turn `{S0,S1}` into a unique synthesized target.
+
+```text
+SCORE: 46/46 PASS
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
 
 ## Current evidence state
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
-DIRECT_SYNTHESIS_PILOTS: 2
+DIRECT_SYNTHESIS_PILOTS: 3
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 POSITIVE_SYNTHESIS_CASES: 1
 NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
-BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 0
+BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 1
 NO_GAIN_SYNTHESIS_CASES: 0
 BASELINE_COMPARISON_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -170,9 +164,8 @@ SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The current pilots establish only limited constructed-fixture behavior. They do not establish external applicability, baseline superiority, reproducibility, independent validation, or maturity.
+The current constructed pilots do not establish external applicability, baseline superiority, reproducibility, independent validation, or maturity.
 
 ## Next development step
 
-Separately precommit and execute a direct method-boundary challenge under Protocol v0.1.
-The challenge should force explicit handoffs for hidden Design, Transformation, Aggregation, and Optimization operations rather than allowing Synthesis to absorb those operations or their verdicts.
+Separately precommit the first `NO_GAIN` case against a competent baseline that receives the same components, composition rule, interface records, candidate basis, coverage, and target resolution. Do not weaken the baseline to manufacture a DSD advantage.
