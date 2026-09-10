@@ -1,0 +1,138 @@
+# SYN-IEP-001 — Independent Evaluator Submission Template
+
+Status: **BLIND SUBMISSION TEMPLATE**  
+Packet: `SYN-IEP-001_reviewer-packet.md`
+
+## A. Evaluator declaration
+
+```text
+EVALUATOR_ID_OR_PSEUDONYM:
+EVALUATOR_TYPE: human / separate_model_session / external_team / other
+DATE_STARTED:
+DATE_COMPLETED:
+PRIOR_DSD_EXPOSURE:
+
+E1_NO_REFERENCE_KEY_OR_NONCE_ACCESS: yes/no
+E2_NO_ANSWER_REVEALING_SYNTHESIS_EVIDENCE_INSPECTION_AFTER_ACCEPTANCE: yes/no
+E3_ONLY_ALLOWED_MATERIALS_USED: yes/no
+E4_NO_ANSWER_LEADING_FEEDBACK_AFTER_START: yes/no
+E5_SUBMISSION_FROZEN_BEFORE_KEY_REVEAL: yes/no
+E6_ACCIDENTAL_CONTAMINATION_OR_OTHER_DISCLOSURE: none / describe
+
+PROCEDURAL_CLARIFICATIONS_RECEIVED:
+  none / list exact question and reply
+```
+
+Do not inspect or request the hidden reference key before freezing this submission.
+
+---
+
+## B. Task S — SI unit-composition candidate results
+
+```text
+S1 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET= | COHERENCE_STATUS_RESULT=
+S2 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET= | COHERENCE_STATUS_RESULT=
+S3 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET= | COHERENCE_STATUS_RESULT=
+S4 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET= | COHERENCE_STATUS_RESULT=
+S5 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET= | COHERENCE_STATUS_RESULT=
+S6 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET= | COHERENCE_STATUS_RESULT=
+```
+
+Task-level result:
+
+```text
+ADMISSIBLE_FAMILY_S:
+TERMINAL_SYNTHESIS_STATUS_S:
+SYNTHESIS_PROTOCOL_CONFORMANCE_S:
+SYNTHESIS_METHOD_GAIN_STATUS_S:
+```
+
+Scope answers:
+
+```text
+S-S1_FULL_PHYSICAL_MEASUREMENT_VALIDITY_JUSTIFIED: yes/no
+S-S1_RATIONALE:
+
+S-S2_VALID_PREFIXED_SI_UNIT_IMPLIES_COHERENT: yes/no
+S-S2_RATIONALE:
+```
+
+---
+
+## C. Task P — USB Type-C physical-mating candidate results
+
+```text
+P1 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET=
+P2 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET=
+P3 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET=
+P4 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET=
+P5 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET=
+P6 | SYNTHESIS_CANDIDATE_RESULT= | FAILURE_SET=
+```
+
+Task-level result:
+
+```text
+ADMISSIBLE_FAMILY_P:
+TERMINAL_SYNTHESIS_STATUS_P:
+SYNTHESIS_PROTOCOL_CONFORMANCE_P:
+SYNTHESIS_METHOD_GAIN_STATUS_P:
+```
+
+Scope answers:
+
+```text
+P-S1_MECHANICAL_MATING_ESTABLISHES_SOURCE_SINK: yes/no
+P-S1_RATIONALE:
+
+P-S2_REVERSIBLE_ORIENTATION_PERMITS_ARBITRARY_ROTATION: yes/no
+P-S2_RATIONALE:
+```
+
+---
+
+## D. Source/task identity confirmation
+
+```text
+SOURCE_TASK_S:
+  BIPM SI Brochure, 9th edition, version 4.01 (2026)
+  frozen SI unit-composition subset
+  MATCHES_PACKET: yes/no
+
+SOURCE_TASK_P:
+  USB Type-C Cable and Connector Specification Release 2.0
+  frozen mechanical mating/orientation subset
+  MATCHES_PACKET: yes/no
+```
+
+---
+
+## E. Evaluator critique
+
+Optional but strongly encouraged.
+
+```text
+AMBIGUITIES_FOUND:
+PROTOCOL_DEFECTS_SUSPECTED:
+SOURCE_BRIDGE_DISAGREEMENTS:
+CANDIDATE_OR_COVERAGE_CONCERNS:
+METHOD_BOUNDARY_CONCERNS:
+OTHER_LIMITATIONS:
+```
+
+A disagreement is evidence and must not be edited away after reference reveal.
+
+---
+
+## F. Freeze record
+
+Before reference-key reveal, complete:
+
+```text
+SUBMISSION_FREEZE_METHOD:
+SUBMISSION_FREEZE_IDENTIFIER:
+SUBMISSION_FREEZE_TIME:
+POST_FREEZE_EDITS_BEFORE_REVEAL: none / describe
+```
+
+After freezing, provide the immutable or time-ordered identifier to the project owner.
