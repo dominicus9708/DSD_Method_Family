@@ -63,76 +63,51 @@ SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Key Synthesis evidence:
+Key Synthesis evidence includes `SYN-CH-001` through `SYN-CH-007`, three external applications, `SYN-AUD-001`, and the prepared `SYN-IEP-001` packet. The next Synthesis evidence event requires a genuinely separate evaluator submission frozen before reference reveal.
+
+### `comparison/` — DSD Comparison / DSD 비교론
+
+Planning opened `2026-09-10` after the Synthesis internal-development track reached the point where further high-value evidence requires an external evaluator.
 
 ```text
-SYN-CH-001  28/28 PASS  positive
-SYN-CH-002  36/36 PASS  INFEASIBLE != UNDERDETERMINED != BLOCKED
-SYN-CH-003  46/46 PASS  method-boundary handoffs
-SYN-CH-004  33/35 FAIL  CHALLENGE_DESIGN_DEFECT preserved
-SYN-CH-005  37/37 PASS  competent B0 / NO_GAIN
-SYN-CH-006  52/52 PASS  strongest-reasonable B1 / NO_GAIN
-SYN-CH-007  48/48 PASS  deterministic_same_project retrace
-
-SYN-APP-001
-  RFC 3986 / URI generic syntax
-  40/40 PASS
-
-SYN-APP-002
-  BIPM SI Brochure 9th ed. v4.01 (2026)
-  physical metrology / SI unit composition
-  46/46 PASS
-
-SYN-APP-003
-  USB Type-C Release 2.0 frozen mechanical subset
-  physical connector assembly / mating interface
-  44/44 PASS
-
-SYN-AUD-001
-  AUDIT_ID: DSD-AUDIT-20260910-SYNTHESIS-001
-  PRECOMMIT: ba966b5
-  RESULT: bae4388
-  28/28 audit-execution PASS
-  METHOD_MATURITY_CLASSIFICATION: established
-  PROMOTION_TO_ESTABLISHED: SUPPORTED
-  M5: CONDITIONAL_PASS
-  M9: PASS
-  M10: UNRESOLVED_BUT_BOUNDED
-  M11: PRESENT_NONFATAL
-  M15: PASS
-
-SYN-IEP-001
-  REVIEWER_PACKET: 6be55803
-  SUBMISSION_TEMPLATE: 079cdda0
-  REFERENCE_COMMITMENT: b785df0e
-  CLEAN_DISTRIBUTION_RECORD: af622b9d
-  PUBLIC_SHA256: db5d1c505c3ab2d614357525489f3b2a0dd2fc595fff1e715c69f48ceeb7073f
-  SEMANTIC_CHECKS: 24
-  CRITICAL_CHECKS: 10
-  INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
+DEDICATED_COMPARISON_PROTOCOL: not established
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 0
+DIRECT_COMPARISON_PILOTS: 0
+POSITIVE_COMPARISON_CASES: 0
+NEGATIVE_OR_FAILURE_COMPARISON_CASES: 0
+BOUNDARY_COMPARISON_CASES: 0
+NO_GAIN_COMPARISON_CASES: 0
+BASELINE_COMPARISON_CASES: 0
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_COMPARISON_APPLICATIONS: 0
+INDEPENDENT_COMPARISON_VALIDATION: not established
+COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_pending
 ```
 
-The established Synthesis label means method/protocol evidence maturity inside the current DSD method-family framework. It does not establish independent validation, independent replication, practical superiority, universal external generality, or permanent method survival/nonmerger.
-
-Current Synthesis guards include:
+Planning artifacts:
 
 ```text
-INDIVIDUAL_COMPONENT_ADMISSIBILITY != AUTOMATIC_COMPOSABILITY
-EXHAUSTIVE_COMPONENT_LIST != EXHAUSTIVE_COMPOSITION_SPACE
-FORMATION_CLAUSE_VII_COMPOSITION != DOMAIN_SYNTHESIS_LEGITIMACY
-AGGREGATE_READOUT != SYNTHESIZED_WHOLE
-COMPONENT_PROPERTY != WHOLE_PROPERTY
-candidate ID / syntax tree != material synthesized-target distinctness
-PARTIAL_SYNTHESIS != completed synthesized target
-STATIC_COMPOSITION_ORDER != TEMPORAL_ASSEMBLY_SEQUENCE
-SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
-CASE_PASS != METHOD_SURVIVAL_PROOF
-CASE_FAIL != METHOD_DELETION_PROOF
-NO_GAIN != METHOD_ABSORPTION_PROOF
-PACKET_PREPARATION != INDEPENDENT_VALIDATION
+methods/06_comparison/TASK_INTERFACE_v0.1-draft.md
+methods/06_comparison/PLANNING.md
+methods/06_comparison/WORKLOG.md
+evidence/method_specific/comparison/README.md
 ```
 
-The next Synthesis event cannot be supplied by more same-project test volume. It requires a genuinely separate `SYN-IEP-001` evaluator to freeze a completed submission before hidden reference reveal. Only then may commitment verification and independent-evidence scoring occur.
+Initial Comparison guards:
+
+```text
+AGGREGATE_EQUALITY != STRUCTURAL_EQUIVALENCE
+ONE_MAP_FAILURE != GLOBAL_NONCORRESPONDENCE
+COMMON_LABEL != COMMON_COORDINATE_OR_SEMANTIC_ROLE
+EMBEDDING != STRICT_EQUIVALENCE
+FIRST_OBSERVED_DIFFERENCE != FIRST_JUSTIFIED_BRANCH_POINT
+PARTIAL_CORRESPONDENCE != GLOBAL_EQUIVALENCE
+ENCODING_REQUIRED_CORRESPONDENCE != DIRECT_CORRESPONDENCE
+SIMILAR_OUTPUT != SHARED_LINEAGE_OR_IDENTITY
+```
+
+These planning records are not direct evidence. The next internal step is pre-protocol boundary attack and only the refinements actually forced by those attacks should enter the first executable Comparison protocol.
 
 ## Promotion expectation / 성숙도 승격 기준
 
