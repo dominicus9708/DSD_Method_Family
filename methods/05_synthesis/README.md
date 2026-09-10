@@ -1,6 +1,6 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **Protocol v0.1 established / strongest-reasonable-baseline PASS / two external domains PASS / deterministic retrace PASS / validation in progress**
+Status: **Protocol v0.1 established / strongest-reasonable-baseline PASS / three external domains PASS / deterministic retrace PASS / validation in progress**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
@@ -71,7 +71,7 @@ Optimization: admissible alternatives -> objective-based selection
 Dynamics/domain process model: time-resolved assembly when claimed
 ```
 
-Success or failure of one case does not determine whether Synthesis must survive, merge, or be deleted. Method independence is evaluated separately by boundary structure, unique task/output/failure criteria, and later maturity audit.
+Success or failure of one case does not determine whether Synthesis must survive, merge, be absorbed, or be deleted. Method independence is evaluated separately by boundary structure, unique task/output/failure criteria, and maturity audit.
 
 ## Direct Protocol-v0.1 evidence
 
@@ -86,48 +86,40 @@ SYN-CH-006  strongest-reasonable baseline      52/52 PASS / NO_GAIN
 SYN-CH-007  deterministic same-project retrace 48/48 PASS
 ```
 
-`SYN-CH-006` established the strongest-reasonable-baseline category only at constructed-evidence level. `SYN-CH-007` establishes deterministic same-project retraceability only.
-
 ## External application evidence
 
-### SYN-APP-001 — RFC 3986 generic URI syntax
-
 ```text
-PRECOMMIT: 29ea45a
-RESULT: 6985246
-EXTERNAL_DOMAIN: Internet identifier syntax
-ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
-SCORE: 40/40 PASS
-SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+SYN-APP-001
+  RFC 3986 / Internet identifier syntax
+  40/40 PASS
+
+SYN-APP-002
+  BIPM SI Brochure 9th ed. v4.01 / physical metrology unit composition
+  46/46 PASS
+
+SYN-APP-003
+  USB Type-C Cable and Connector Specification Release 2.0 mechanical subset
+  physical connector assembly / mating interface
+  PRECOMMIT 4159872
+  RESULT 73faaa0
+  ADMISSIBLE_FAMILY {M1,M2,M6,M7}
+  M3 -> H2
+  M4/M5 -> H1
+  M8/M9/M10 -> H4
+  44/44 PASS
 ```
 
-The RFC itself supplies the generic component grammar; `ABSENT != PRESENT_EMPTY` and declared-component roundtrip are preserved without upgrading generic syntax to scheme-specific validity.
-
-### SYN-APP-002 — BIPM SI unit composition
+`SYN-APP-003` is the first external case centered on physical plug/receptacle role compatibility, insertion orientation, and cable-end assignment rather than symbolic composition. It preserves:
 
 ```text
-PRECOMMIT: 46479ae
-RESULT: c504d53
-EXTERNAL_STANDARD: SI Brochure 9th ed. v4.01 (2026)
-DOI: 10.59161/AUEZ1291
-EXTERNAL_DOMAIN: physical metrology / SI unit composition
-ADMISSIBLE_FAMILY: {U1,U2,U3,U4,U5,U7,U9}
-U6/U8/U10 -> {H4}
-U11/U12 -> {H2}; H3-H5 NOT_REACHED
-SCORE: 46/46 PASS
-SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+TYPE_C_COMPONENT_ADMITTED != DIRECTLY_MATEABLE_WITH_ANY_TYPE_C_COMPONENT
+REVERSIBLE_PLUG_ORIENTATION != ARBITRARY_ROTATIONAL_SYMMETRY
+MECHANICAL_MATING != SOURCE_SINK_ROLE_ESTABLISHMENT
+MECHANICAL_MATING != HOST_DEVICE_ROLE_ESTABLISHMENT
+REVERSIBLE_CABLE_DIRECTION != POWER_ROLE_SYMMETRY
 ```
 
-The BIPM source supplies derived-unit products of powers, coherent special-name equivalences, prefix formation, exponent propagation, compound-prefix prohibition, and the kilogram/gram mass-prefix rule. The application preserves:
-
-```text
-SAME_DIMENSION != SAME_UNIT_SCALE
-VALID_PREFIXED_SI_UNIT != COHERENT_SI_UNIT
-PREFIX_COMPONENT_ADMITTED != PREFIX_COMPOSITION_FORM_LEGAL
-SI_UNIT_COMPOSITION != PHYSICAL_MEASUREMENT_VALIDITY
-```
-
-No calibration, uncertainty, traceability, experimental-realization, or physical-law claim is absorbed.
+The case is version-specific to the frozen Release-2.0 mechanical subset and does not claim current Release-2.5 conformance, USB-IF certification, USB Power Delivery success, full electrical interoperability, durability, or data-rate capability.
 
 ## Current evidence state
 
@@ -145,9 +137,9 @@ PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_SYNTHESIS_APPLICATIONS: 2
-EXTERNAL_SYNTHESIS_DOMAINS: 2
-EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 2
+EXTERNAL_SYNTHESIS_APPLICATIONS: 3
+EXTERNAL_SYNTHESIS_DOMAINS: 3
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -158,4 +150,4 @@ The evidence does not establish broad external generality, independent reproduci
 
 ## Next development step
 
-Add a third materially different external Synthesis domain, preferably involving nontrivial physical/component compatibility or assembly constraints rather than mainly symbolic grammar. Then consider the first Synthesis maturity audit only after this broader pressure is recorded.
+Run the first Synthesis maturity audit. The audit should inspect protocol stability, method-boundary integrity, negative/failure taxonomy, `NO_GAIN` honesty, three-domain external breadth, deterministic retraceability, and unresolved independence separately. It must not infer method preservation, merger, absorption, deletion, or promotion from raw PASS/FAIL counts alone.
