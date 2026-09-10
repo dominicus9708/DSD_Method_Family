@@ -9,6 +9,7 @@ This folder records evidence that directly tests one of the **22 independent DSD
 - Independent-evaluator packet preparation is infrastructure until an eligible external submission exists.
 - Failed challenge designs remain historical evidence of test pressure but do not fill successful validation categories.
 - A success or failure in one case does not by itself imply that a method must survive, merge, be absorbed, or be deleted. Method independence is assessed separately.
+- Established method/protocol evidence maturity does not permanently freeze the method registry.
 
 ## Method-specific evidence lanes / 개별 증거 경로
 
@@ -30,7 +31,7 @@ MEASURED_PRACTICAL_SUPERIORITY: not established
 
 Planning opened `2026-09-10`; executable `PROTOCOL_v0.1.md` was established at commit `8787b24`.
 
-Current Synthesis state:
+Current Synthesis state after `SYN-AUD-001`:
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
@@ -51,7 +52,8 @@ EXTERNAL_SYNTHESIS_DOMAINS: 3
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
-SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
+MEASURED_PRACTICAL_SUPERIORITY: not established
+SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
@@ -69,26 +71,32 @@ SYN-CH-007  48/48 PASS  deterministic_same_project retrace
 SYN-APP-001
   RFC 3986 / URI generic syntax
   40/40 PASS
-  external domain 1
 
 SYN-APP-002
   BIPM SI Brochure 9th ed. v4.01 (2026)
   physical metrology / SI unit composition
   46/46 PASS
-  external domain 2
 
 SYN-APP-003
-  USB Type-C Cable and Connector Specification Release 2.0 mechanical subset
-  physical connector assembly / USB Type-C mating interface
-  PRECOMMIT 4159872
-  RESULT 73faaa0
+  USB Type-C Release 2.0 frozen mechanical subset
+  physical connector assembly / mating interface
   44/44 PASS
-  admissible family {M1,M2,M6,M7}
-  M3 -> H2
-  M4/M5 -> H1
-  M8/M9/M10 -> H4
-  external domain 3
+
+SYN-AUD-001
+  AUDIT_ID: DSD-AUDIT-20260910-SYNTHESIS-001
+  PRECOMMIT: ba966b5
+  RESULT: bae4388
+  28/28 audit-execution PASS
+  METHOD_MATURITY_CLASSIFICATION: established
+  PROMOTION_TO_ESTABLISHED: SUPPORTED
+  M5: CONDITIONAL_PASS
+  M9: PASS
+  M10: UNRESOLVED_BUT_BOUNDED
+  M11: PRESENT_NONFATAL
+  M15: PASS
 ```
+
+The established Synthesis label means method/protocol evidence maturity inside the current DSD method-family framework. It does not establish independent validation, independent replication, practical superiority, universal external generality, or permanent method survival/nonmerger.
 
 Current Synthesis guards include:
 
@@ -102,16 +110,12 @@ candidate ID / syntax tree != material synthesized-target distinctness
 PARTIAL_SYNTHESIS != completed synthesized target
 STATIC_COMPOSITION_ORDER != TEMPORAL_ASSEMBLY_SEQUENCE
 SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
-SAME_DIMENSION != SAME_UNIT_SCALE
-VALID_PREFIXED_SI_UNIT != COHERENT_SI_UNIT
-SI_UNIT_COMPOSITION != PHYSICAL_MEASUREMENT_VALIDITY
-TYPE_C_COMPONENT_ADMITTED != DIRECTLY_MATEABLE_WITH_ANY_TYPE_C_COMPONENT
-REVERSIBLE_PLUG_ORIENTATION != ARBITRARY_ROTATIONAL_SYMMETRY
-MECHANICAL_MATING != SOURCE_SINK_ROLE_ESTABLISHMENT
-REVERSIBLE_CABLE_DIRECTION != POWER_ROLE_SYMMETRY
+CASE_PASS != METHOD_SURVIVAL_PROOF
+CASE_FAIL != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
 ```
 
-The next Synthesis task is the first maturity audit. It must assess protocol stability, boundary integrity, failure taxonomy, `NO_GAIN` honesty, three-domain external breadth, and retraceability while preserving unresolved independent validation and replication as explicit limits.
+The next Synthesis task is `SYN-IEP-001` independent-evaluator infrastructure. Packet preparation must remain infrastructure only until a genuinely separate evaluator submission is frozen and scored.
 
 ## Promotion expectation / 성숙도 승격 기준
 
