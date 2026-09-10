@@ -1,6 +1,6 @@
 # DSD Synthesis Planning / DSD 합성론 기획
 
-Status: **Protocol v0.1 established / Step 12 second external application complete / validation in progress**  
+Status: **Protocol v0.1 established / Step 13 third external application complete / validation in progress**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -51,93 +51,62 @@ Historical artifacts and failed challenges remain preserved rather than rewritte
 10. ✅ `SYN-APP-001` RFC 3986 generic URI external application — **40/40 PASS**.
 11. ✅ `SYN-CH-007` deterministic same-project retrace — **48/48 PASS**.
 12. ✅ `SYN-APP-002` BIPM SI unit-composition external application — **46/46 PASS**.
-13. **Next:** third materially different external domain with nontrivial component/assembly compatibility.
-14. First DSD Audit maturity review after that external pressure.
+13. ✅ `SYN-APP-003` USB Type-C physical mating external application — **44/44 PASS**.
+14. **Next:** first Synthesis maturity audit.
 15. Independent-evaluator infrastructure only when protocol/evidence stability justifies it.
 
-## Step 10 — SYN-APP-001
+## Step 13 — SYN-APP-003 physical connector assembly
+
+External source lock:
 
 ```text
-EXTERNAL_STANDARD: RFC 3986 / STD 66
-PRECOMMIT: 29ea45a
-RESULT: 6985246
-ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NOT_ASSESSED
-SCORE: 40/40 PASS
+FROZEN_STANDARD:
+  USB Type-C Cable and Connector Specification Release 2.0 (August 2019)
+  mechanical mating / plug-orientation / role-establishment subset
+SUPPORTING_SOURCE:
+  USB-IF Type-C overview
+EXTERNAL_DOMAIN:
+  physical connector assembly / USB Type-C mating interface
 ```
 
-Scope guards:
-
-```text
-RFC3986_GENERIC_SYNTAX_ADMISSIBLE != SCHEME_SPECIFIC_URI_VALIDITY
-GENERIC_SYNTACTIC_COMPOSITION != RESOURCE_RESOLUTION_SUCCESS
-PRESENT_EMPTY != ABSENT
-```
-
-## Step 11 — SYN-CH-007 retrace
-
-```text
-PRECOMMIT: 9bbcadf
-RESULT: 7256456
-RETRACE_TARGET: SYN-APP-001
-REPRODUCIBILITY_LEVEL: deterministic_same_project
-RECONSTRUCTED_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
-SCORE: 48/48 PASS
-INDEPENDENT_REPLICATION: not established
-```
-
-## Step 12 — SYN-APP-002 physical-metrology external application
-
-External source:
-
-```text
-BIPM SI Brochure
-9th edition, version 4.01, updated 2026
-DOI: 10.59161/AUEZ1291
-EXTERNAL_DOMAIN: physical metrology / SI unit composition
-```
+The current USB-IF library has newer Type-C releases, but this case deliberately freezes Release 2.0 as a version-specific public mechanical source. It makes no current Release-2.5 compliance claim.
 
 Precommit/result:
 
 ```text
-PRECOMMIT: 46479ae
-RESULT: c504d53
+PRECOMMIT: 4159872
+RESULT: 73faaa0
 ```
-
-The frozen task uses externally supplied rules for products of powers, coherent derived units, special-name equivalences, SI-prefix factors, power propagation, compound-prefix prohibition, and the kilogram/gram prefix convention.
 
 Execution:
 
 ```text
-U1 kg m s^-2 -> N             admissible / COHERENT
-U2 N m -> J                    admissible / COHERENT
-U3 J s^-1 -> W                 admissible / COHERENT
-U4 N m^-2 -> Pa                admissible / COHERENT
-U5 A s -> C                    admissible / COHERENT
-U6 kg m s^-1 -> N              rejected {H4}
-U7 cm^3 -> 10^-6 m^3           admissible / NONCOHERENT
-U8 cm^3 -> 10^-2 m^3           rejected {H4}
-U9 kN -> 10^3 N                admissible / NONCOHERENT
-U10 kN -> N at scale 1         rejected {H4}
-U11 mµm compound prefix        rejected {H2}; H3-H5 NOT_REACHED
-U12 µkg direct prefix on kg    rejected {H2}; H3-H5 NOT_REACHED
+M1 plug->receptacle orientation A       admissible
+M2 plug->receptacle orientation B       admissible
+M3 quarter-turn invalid orientation     rejected {H2}; downstream NOT_REACHED
+M4 plug->plug direct                    rejected {H1}; downstream NOT_REACHED
+M5 receptacle->receptacle direct        rejected {H1}; downstream NOT_REACHED
+M6 C-to-C cable E1/E2 assignment        admissible; H5 PASS
+M7 swapped cable-end assignment         admissible; H5 PASS
+M8 mechanical mate -> Source/Sink claim rejected {H4}
+M9 mechanical mate -> host/device claim rejected {H4}
+M10 reversible cable direction -> power-role symmetry claim rejected {H4}; H5 PASS
 
-ADMISSIBLE_FAMILY: {U1,U2,U3,U4,U5,U7,U9}
+ADMISSIBLE_FAMILY: {M1,M2,M6,M7}
 TERMINAL: SYNTHESIS_ADMISSIBLE
 CONFORMANCE: CONFORMANT
 GAIN: NOT_ASSESSED
-SCORE: 46/46 PASS
+SCORE: 44/44 PASS
 ```
 
 Preserved distinctions:
 
 ```text
-SAME_DIMENSION != SAME_UNIT_SCALE
-VALID_PREFIXED_SI_UNIT != COHERENT_SI_UNIT
-PREFIX_COMPONENT_ADMITTED != PREFIX_COMPOSITION_FORM_LEGAL
-SI_UNIT_COMPOSITION != PHYSICAL_MEASUREMENT_VALIDITY
+TYPE_C_COMPONENT_ADMITTED != DIRECTLY_MATEABLE_WITH_ANY_TYPE_C_COMPONENT
+REVERSIBLE_PLUG_ORIENTATION != ARBITRARY_ROTATIONAL_SYMMETRY
+MECHANICAL_MATING != SOURCE_SINK_ROLE_ESTABLISHMENT
+MECHANICAL_MATING != HOST_DEVICE_ROLE_ESTABLISHMENT
+REVERSIBLE_CABLE_DIRECTION != POWER_ROLE_SYMMETRY
 ```
 
 Protocol pressure:
@@ -148,7 +117,7 @@ SHARED_CORE_REOPEN_REQUIRED: no
 METHOD_COLLAPSE_OR_SURVIVAL_DECISION_FROM_THIS_CASE: none
 ```
 
-## Evidence state after Step 12 / 12단계 후 증거 상태
+## Evidence state after Step 13 / 13단계 후 증거 상태
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
@@ -164,9 +133,9 @@ PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_SYNTHESIS_APPLICATIONS: 2
-EXTERNAL_SYNTHESIS_DOMAINS: 2
-EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 2
+EXTERNAL_SYNTHESIS_APPLICATIONS: 3
+EXTERNAL_SYNTHESIS_DOMAINS: 3
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -179,10 +148,10 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 - Historical planning and failed challenge designs are preserved; corrections are prospective under new Case IDs.
 - `NO_GAIN` is a legitimate result and is separate from correctness/conformance.
 - Success or failure of any single challenge/application/retrace does not decide method survival, merger, absorption, or deletion.
-- External validity is not upgraded beyond the source's declared scope.
+- External validity is not upgraded beyond the source's declared version and scope.
 - Same-project deterministic retrace is not independent replication.
 - Protocol v0.1 is revised only prospectively if direct evidence exposes a genuine protocol defect.
 
 ## Immediate next task / 다음
 
-Precommit a third external Synthesis application in a domain with genuine component/interface or assembly constraints, preferably physical engineering or another non-symbolic setting. The goal is broader pressure, not a forced PASS or forced method-survival conclusion.
+Run a separately precommitted first Synthesis maturity audit `SYN-AUD-001`. It should evaluate evidence architecture rather than raw pass counts: protocol stability, distinct terminal-state handling, method-boundary integrity, honest failed-test preservation, NO_GAIN behavior under competent baselines, external-domain breadth, deterministic retrace, and unresolved independent validation. Method survival/merger/deletion must remain a separate conclusion, not an automatic consequence of audit score.
