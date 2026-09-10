@@ -1,7 +1,6 @@
 # Method-Specific Evidence / 개별 방법 직접 증거
 
-This folder records evidence that directly tests one of the **22 independent DSD methods**.
-Evidence does not transfer automatically between methods merely because methods share a higher-level field or common DSD source layers.
+This folder records evidence that directly tests one of the **22 independent DSD methods**. Evidence does not transfer automatically between methods merely because methods share a higher-level field or common DSD source layers.
 
 ## Required record fields
 
@@ -33,112 +32,43 @@ REPRODUCIBILITY_RECORD:
 
 ## Method-specific evidence lanes / 개별 증거 경로
 
-- `specification/` — **DSD Specification / DSD 명세론**
-  - historical v0.1/v0.2 evidence preserved;
-  - use the newest Specification-specific records for detailed maturity truth.
+### `specification/` — DSD Specification / DSD 명세론
 
-- `design/` — **DSD Design / DSD 설계론**
-  - Protocol v0.1 established on `2026-09-08`;
-  - revision maturity classification after `DES-AUD-002`: **established**;
-  - current evidence status: `validation_in_progress` because independent/practical validation remains open;
-  - direct constructed pilots: `7`;
-  - positive `DES-CH-001` PASS;
-  - negative/failure `DES-CH-002` PASS;
-  - boundary `DES-CH-003` preserved failed challenge design + corrected `DES-CH-004` PASS;
-  - `DES-CH-005` NO_GAIN PASS;
-  - `DES-CH-006` strongest-reasonable-baseline comparison PASS with NO_GAIN;
-  - external applications: WCAG 2.2, NIST SP 800-63B-4, and 2010 ADA subset, all PASS;
-  - external domains: `3`;
-  - `DES-CH-007` deterministic same-project retrace PASS;
-  - `DES-AUD-001` historical developing verdict preserved;
-  - `DES-AUD-002` 26/26 audit checks PASS and `PROMOTE_ESTABLISHED`;
-  - `DES-IEP-001` independent evaluator packet prepared, submissions `0`.
+Historical v0.1/v0.2 evidence is preserved. Use the newest Specification-specific records for detailed maturity truth.
 
-Current Design separation:
+### `design/` — DSD Design / DSD 설계론
 
 ```text
-METHOD_MATURITY_CLASSIFICATION: established
+PROTOCOL: v0.1 established
+METHOD_MATURITY_CLASSIFICATION: established after DES-AUD-002
 CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
+DIRECT_CONSTRUCTED_PILOTS: 7
+EXTERNAL_APPLICATIONS: 3
+EXTERNAL_DOMAINS: 3
 INDEPENDENT_EVALUATOR_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 MEASURED_PRACTICAL_SUPERIORITY: not established
 ```
 
-- `synthesis/` — **DSD Synthesis / DSD 합성론**
-  - planning opened on `2026-09-10`;
-  - current maturity classification: `proposed`;
-  - current evidence status: `validation_in_progress`;
-  - dedicated executable protocol: `PROTOCOL_v0.1.md`, creation commit `8787b24`;
-  - completed direct Synthesis pilots/attempts: `5`;
-  - successful positive cases: `1`;
-  - successful negative/failure cases: `1`;
-  - successful boundary cases under executable Protocol: `1`;
-  - preserved failed baseline challenge designs: `1` (`SYN-CH-004`);
-  - successful NO_GAIN cases: `1` (`SYN-CH-005`);
-  - successful baseline-comparison passes: `1`;
-  - strongest-reasonable-baseline comparison: `not established`;
-  - pre-protocol boundary attacks: `16` = 11 no-refinement + 5 non-breaking-refinement, 0 collapse, 0 fundamental interface failure;
-  - reproducibility cases: `0`;
-  - external Synthesis applications: `0`;
-  - independent Synthesis validation: `not established`.
+Key Design records include positive, negative/failure, corrected boundary, NO_GAIN, strongest-reasonable-baseline, three external applications, deterministic same-project retrace, two maturity audits, and the prepared `DES-IEP-001` independent-evaluator packet.
 
-Key Synthesis evidence:
+### `synthesis/` — DSD Synthesis / DSD 합성론
 
-```text
-SYN-CH-001
-  precommit 4eeba2a
-  result 71e5d5c
-  28/28 PASS
-  positive
-
-SYN-CH-002
-  precommit 09fc616
-  result 7dac87c
-  36/36 PASS
-  I -> SYNTHESIS_INFEASIBLE
-  U -> SYNTHESIS_UNDERDETERMINED
-  B -> SYNTHESIS_BLOCKED
-
-SYN-CH-003
-  precommit 2eea8ae
-  result cb55dba
-  46/46 PASS
-  D -> DESIGN_REQUIRED
-  T -> TRANSFORMATION_REQUIRED
-  A -> AGGREGATION_REQUIRED
-  O -> OPTIMIZATION_REQUIRED
-
-SYN-CH-004
-  precommit 1c77a0e
-  first result 29730a5
-  postexecution audit fe55899
-  33/35 FAIL
-  CHALLENGE_DESIGN_DEFECT
-  successful NO_GAIN/baseline category increment: 0
-  Protocol failure inferred: no
-
-SYN-CH-005
-  corrected prospective precommit 3c6f323
-  result f062d3f
-  37/37 PASS
-  DSD family = B0 family = {R1,R2}
-  SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
-  first successful NO_GAIN case
-  first successful competent-baseline comparison pass
-```
+Planning opened `2026-09-10` and executable `PROTOCOL_v0.1.md` was established at commit `8787b24`.
 
 Current Synthesis state:
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
-DIRECT_SYNTHESIS_PILOTS_COMPLETED: 5
+DIRECT_SYNTHESIS_PILOTS_COMPLETED: 6
 SUCCESSFUL_POSITIVE_SYNTHESIS_CASES: 1
 SUCCESSFUL_NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
 SUCCESSFUL_BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 1
 PRESERVED_FAILED_BASELINE_CHALLENGE_DESIGNS: 1
-SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 1
-SUCCESSFUL_BASELINE_COMPARISON_PASSES: 1
-STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
+SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 2
+SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
+STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_SYNTHESIS_APPLICATIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
@@ -146,7 +76,60 @@ SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The next Synthesis task is a broader strongest-reasonable-baseline comparison on a richer composition fixture. A further `NO_GAIN` result must remain acceptable.
+Key Synthesis evidence:
+
+```text
+SYN-CH-001
+  28/28 PASS
+  positive
+
+SYN-CH-002
+  36/36 PASS
+  INFEASIBLE != UNDERDETERMINED != BLOCKED
+
+SYN-CH-003
+  46/46 PASS
+  Design / Transformation / Aggregation / Optimization handoffs preserved
+
+SYN-CH-004
+  33/35 FAIL
+  CHALLENGE_DESIGN_DEFECT preserved
+  Protocol failure not inferred
+
+SYN-CH-005
+  37/37 PASS
+  competent B0 baseline
+  SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
+
+SYN-CH-006
+  PRECOMMIT: 4a6c1fe
+  RESULT: 8ad51b5
+  52/52 PASS
+  competent B1 strongest-reasonable baseline
+  raw family DSD = B1 = {A1,A2,A3,A4}
+  canonical family DSD = B1 = {C0,C1}
+  supplied grouping equivalence + whole-Property lift + relation retention + formation effect
+  SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
+  STRONGEST_REASONABLE_BASELINE_COMPARISON:
+    established_at_constructed_evidence_level
+```
+
+Current Synthesis guards include:
+
+```text
+INDIVIDUAL_COMPONENT_ADMISSIBILITY != AUTOMATIC_COMPOSABILITY
+EXHAUSTIVE_COMPONENT_LIST != EXHAUSTIVE_COMPOSITION_SPACE
+FORMATION_CLAUSE_VII_COMPOSITION != DOMAIN_SYNTHESIS_LEGITIMACY
+AGGREGATE_READOUT != SYNTHESIZED_WHOLE
+COMPONENT_PROPERTY != WHOLE_PROPERTY
+candidate ID / syntax tree != material synthesized-target distinctness
+PARTIAL_SYNTHESIS != completed synthesized target
+STATIC_COMPOSITION_ORDER != TEMPORAL_ASSEMBLY_SEQUENCE
+REJECTED_UNDER_EXHAUSTIVE_COVERAGE != INSUFFICIENT_COVERAGE_FOR_CLOSURE != MISSING_REQUIRED_INPUT
+local admissibility != requested output-level closure
+```
+
+The next Synthesis task is the first external application `SYN-APP-001` using a stable public source that itself supplies composition or assembly legitimacy. Constructed strongest-reasonable-baseline evidence does not substitute for external applicability.
 
 ## Promotion expectation / 성숙도 승격 기준
 
