@@ -1,6 +1,6 @@
 # DSD Synthesis Direct Evidence / DSD 합성론 직접 증거
 
-Status: **Protocol v0.1 established / proposed maturity / validation in progress**
+Status: **Protocol v0.1 established / first external application PASS / validation in progress**
 
 This lane records evidence that directly tests **DSD Synthesis / DSD 합성론**. Shared-core or neighboring-method evidence may be referenced but does not automatically count as direct Synthesis validation.
 
@@ -18,13 +18,15 @@ SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
-EXTERNAL_SYNTHESIS_APPLICATIONS: 0
+EXTERNAL_SYNTHESIS_APPLICATIONS: 1
+EXTERNAL_SYNTHESIS_DOMAINS: 1
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Protocol establishment and the 16 pre-protocol attacks do not increase the direct-pilot count. A failed direct challenge remains a historical direct attempt but does not fill its successful evidence category.
+Protocol establishment and the 16 pre-protocol attacks do not increase the direct-pilot count. A failed direct challenge remains a historical direct attempt but does not fill its successful evidence category. External applications are tracked separately from constructed direct pilots.
 
 ## Protocol and planning artifacts
 
@@ -121,8 +123,6 @@ GAIN: NO_GAIN
 SCORE: 37/37 PASS
 ```
 
-`B0_TYPED_CHAIN_CHECKER` preserved the same status distinctions, failure traces, closure, target distinctness, and retraceability. This filled the first successful NO_GAIN and competent-baseline categories.
-
 ### SYN-CH-006 — broader strongest-reasonable-baseline comparison
 
 ```text
@@ -141,20 +141,31 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON:
   established_at_constructed_evidence_level
 ```
 
-The richer fixture simultaneously activated:
+The richer fixture simultaneously activated explicit whole-Property lift, status distinctions, staged dependency, supplied associativity/grouping equivalence, relation retention, formation effect, and raw/canonical closure. The competent B1 baseline received the same claim-relevant information and matched all frozen dimensions.
+
+## External application evidence
+
+### SYN-APP-001 — RFC 3986 generic URI composition
 
 ```text
-explicit L_READY whole-Property lift
-DEFINED_ZERO / DEFINED_NONZERO / APPLICABLE_BUT_UNDEFINED separation
-staged structural prerequisite -> NOT_REACHED discipline
-supplied associativity with grouping canonicalization
-material-target equivalence at TARGET_RESOLUTION
-relation-retention loss
-same_background vs new_formation_required
-raw-candidate vs canonical-class closure
+EXTERNAL_STANDARD: RFC 3986 / STD 66
+EXTERNAL_DOMAIN: Internet identifier syntax / URI generic syntax
+PRECOMMIT: 29ea45a
+RESULT: 6985246
+CANDIDATES: R1-R12
+ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
+R5 -> {H2}
+R6 -> {H2}
+R7 -> {H1}
+R8 -> {H4}
+R9 -> {H3}
+TERMINAL: SYNTHESIS_ADMISSIBLE
+CONFORMANCE: CONFORMANT
+GAIN: NOT_ASSESSED
+SCORE: 40/40 PASS
 ```
 
-B1 received exactly the same information and matched DSD on all seven frozen comparison dimensions, so G1-G7 were all `NOT_ESTABLISHED`. The result is therefore a second honest `NO_GAIN`, not a DSD superiority result.
+This application uses an externally supplied generic composition grammar rather than a project-invented domain rule. It preserves `ABSENT != PRESENT_EMPTY` for authority/query/fragment states and rejects candidates that are generically parseable only under a different component decomposition. The scope remains RFC-3986 generic syntax only; no scheme-specific validity, dereference, security, or normalization claim is inferred.
 
 ## Protocol-v0.1 core guards
 
@@ -178,7 +189,7 @@ SYN-AUD-###  Synthesis-specific audit / maturity records
 SYN-IEP-###  independent evaluator packet infrastructure
 ```
 
-A challenge whose expected result matters must be separately precommitted before evaluation. Historical failed or superseded challenge designs are preserved rather than rewritten.
+A challenge whose expected result matters must be separately precommitted before evaluation. Historical failed or superseded challenge designs are preserved rather than rewritten. Success or failure of a single case does not by itself determine whether a method must survive, merge, or be deleted; method independence is a separate boundary/maturity question.
 
 ## Minimum evidence architecture
 
@@ -186,4 +197,4 @@ A future promotion consideration should accumulate, at minimum: dedicated protoc
 
 ## Immediate next direct-evidence task
 
-Run the first `SYN-APP-001` external application. Prefer a stable public source in which component/interface semantics or the composition/assembly grammar itself is externally supplied, so the project does not invent domain composability and then validate its own fixture. Method gain may remain `NOT_ASSESSED` unless a fair baseline is intrinsic to the external task.
+Create a dedicated deterministic same-project retrace/reproducibility case against the immutable `SYN-APP-001` source/precommit/result chain. After that, add a second materially different external domain before any maturity audit.
