@@ -108,55 +108,16 @@ Status: **first direct Protocol-v0.1 pilot complete / PASS**
 
 ### Precommit
 
-Created before execution:
-
 ```text
 evidence/method_specific/synthesis/SYN-CH-001_precommit.md
+commit: 4eeba2aaa7e684460a5c824a62301b6e8ed89b77
 ```
 
-Commit:
-
-```text
-4eeba2aaa7e684460a5c824a62301b6e8ed89b77
-```
-
-The precommit froze Protocol v0.1 commit/blob, six candidate records, composition rule `R_CHAIN_3`, order/grouping/law profile, exact target resolution, exhaustive coverage relative to the frozen candidate universe, material-equivalence rule, hard conditions H1-H6, expected candidate verdicts/failure sets, three-ledger expectations, and 28 required checks.
-
-### Frozen fixture
-
-Five Formation-admitted components were supplied:
-
-```text
-SRC  output alpha, readiness DEFINED_NONZERO
-AD0  alpha -> beta, readiness DEFINED_ZERO
-AD1  alpha -> beta, readiness DEFINED_NONZERO
-ADU  alpha -> beta, readiness APPLICABLE_BUT_UNDEFINED
-SNK  input beta, readiness DEFINED_NONZERO
-```
-
-Candidate family:
-
-```text
-K1 = (SRC ⊙ AD0) ⊙ SNK
-K2 = (SRC ⊙ AD1) ⊙ SNK
-K3 = (SRC ⊙ ADU) ⊙ SNK
-K4 = (AD0 ⊙ SRC) ⊙ SNK
-K5 = (SRC ⊙ SNK) ⊙ AD0
-K6 = (AD1 ⊙ SNK) ⊙ SRC
-```
-
-### Execution result
-
-Result file:
+### Result
 
 ```text
 evidence/method_specific/synthesis/SYN-CH-001_positive-chain-composition.md
-```
-
-Commit:
-
-```text
-71e5d5cfe519e7afbe2584b667354632d77e9c44
+commit: 71e5d5cfe519e7afbe2584b667354632d77e9c44
 ```
 
 Candidate verdicts:
@@ -170,26 +131,107 @@ K5 -> rejected {H2}
 K6 -> rejected {H2}
 ```
 
-Closure:
+Closure and ledgers:
 
 ```text
 SYNTHESIS_ADMISSIBLE_FAMILY: {K1,K2}
-K1 != K2 at frozen TARGET_RESOLUTION
-```
-
-Three ledgers:
-
-```text
 TERMINAL_SYNTHESIS_STATUS: SYNTHESIS_ADMISSIBLE
 SYNTHESIS_PROTOCOL_CONFORMANCE: CONFORMANT
 SYNTHESIS_METHOD_GAIN_STATUS: NOT_ASSESSED
+PRECOMMITTED_REQUIRED_CHECKS: 28/28 PASS
 ```
 
-Scoring:
+Evidence effect:
 
 ```text
-PRECOMMITTED_REQUIRED_CHECKS: 28
-PASSED: 28
+DIRECT_SYNTHESIS_PILOTS: 1
+POSITIVE_SYNTHESIS_CASES: 1
+CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
+```
+
+---
+
+## 2026-09-10 — Step 6: SYN-CH-002 negative/failure terminal-status challenge
+
+Status: **second direct Protocol-v0.1 pilot complete / 36/36 PASS**
+
+### Precommit
+
+Created before execution:
+
+```text
+evidence/method_specific/synthesis/SYN-CH-002_precommit.md
+```
+
+Commit:
+
+```text
+09fc616835880e28aabcb4e9b47182d620a0da30
+```
+
+The precommit froze three subcases under one Case ID, all expected terminal statuses, coverage classes, candidate/result expectations, missing-rule state, three-ledger expectations, and 36 required checks.
+
+### Result
+
+Created after reading the immutable precommit:
+
+```text
+evidence/method_specific/synthesis/SYN-CH-002_terminal-failure-distinction.md
+```
+
+Commit:
+
+```text
+7dac87c90e9cab4e082bdb66ed09cd8b6a53ed78
+```
+
+### Subcase I — exhaustive all rejected
+
+```text
+I1 = L ⊙ R -> rejected {H2}
+I2 = R ⊙ L -> rejected {H2}
+COMPOSITION_COVERAGE: exhaustive
+ADMISSIBLE_FAMILY: {}
+TERMINAL: SYNTHESIS_INFEASIBLE
+CONFORMANCE: CONFORMANT
+GAIN: NOT_ASSESSED
+```
+
+The infeasibility claim is restricted to the frozen exhaustive candidate universe.
+
+### Subcase U — non-exhaustive uniqueness closure
+
+```text
+U1 = A ⊙ B -> admissible
+U2 = B ⊙ A -> rejected {H2}
+COVERED_ADMISSIBLE_FAMILY: {U1}
+COMPOSITION_COVERAGE: non_exhaustive
+CLAIMED_OUTPUT_LEVEL: UNIQUE_SYNTHESIZED_TARGET
+TERMINAL: SYNTHESIS_UNDERDETERMINED
+CONFORMANCE: CONFORMANT
+GAIN: NOT_ASSESSED
+```
+
+`A ⊙ C` was intentionally outside the evaluated candidate basis and was not silently imported. Local success therefore did not establish uniqueness.
+
+### Subcase B — required rule unavailable
+
+```text
+COMPONENTS: {P,Q}
+COMPOSITION_RULE: UNAVAILABLE
+SUBSTANTIVE_CANDIDATE_EVALUATION: not performed
+TERMINAL: SYNTHESIS_BLOCKED
+CONFORMANCE: CONFORMANT
+GAIN: NOT_ASSESSED
+```
+
+Formation Clause VII or a neighboring method was not substituted for the missing composition rule.
+
+### Scoring
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 36
+PASSED: 36
 FAILED: 0
 CHALLENGE_VERDICT: PASS
 ```
@@ -198,25 +240,32 @@ CHALLENGE_VERDICT: PASS
 
 ```text
 DIRECT_CONSTRUCTED_PILOT_INCREMENT: +1
-POSITIVE_SYNTHESIS_CASE_INCREMENT: +1
-DIRECT_SYNTHESIS_PILOTS: 1
+NEGATIVE_OR_FAILURE_SYNTHESIS_CASE_INCREMENT: +1
+DIRECT_SYNTHESIS_PILOTS: 2
 POSITIVE_SYNTHESIS_CASES: 1
+NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 ```
 
-The run directly preserved `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED`, showed that individually admitted components need not be composable in a supplied order, avoided component-to-whole Property promotion, and kept static composability separate from temporal assembly feasibility.
+### Protocol pressure result
 
-It does not establish external applicability, baseline superiority, NO_GAIN behavior, terminal-failure breadth, reproducibility, independent validation, or maturity.
+```text
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The challenge preserves:
+
+```text
+REJECTED_UNDER_EXHAUSTIVE_COVERAGE
+!= INSUFFICIENT_COVERAGE_FOR_CLOSURE
+!= MISSING_REQUIRED_INPUT
+
+local admissibility
+!= requested output-level closure
+```
 
 ### Next technical step
 
-Separately precommit a negative/failure challenge that distinguishes:
-
-```text
-SYNTHESIS_INFEASIBLE
-SYNTHESIS_UNDERDETERMINED
-SYNTHESIS_BLOCKED
-```
-
-without changing Protocol v0.1 after seeing the cases.
+Separately precommit a direct method-boundary challenge under Protocol v0.1, forcing explicit handoffs for hidden Design, Transformation, Aggregation, and Optimization rather than letting Synthesis absorb those operations or their verdicts.
