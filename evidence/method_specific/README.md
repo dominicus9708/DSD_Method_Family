@@ -29,6 +29,7 @@ REPRODUCIBILITY_RECORD:
 - A maturity/status audit is an Audit meta-record and does not itself increase the audited method's direct-pilot count.
 - Independent-evaluator packet preparation is infrastructure only; it becomes evidence only after an eligible external submission is frozen and scored against the precommitted reference.
 - Failed challenge designs remain historical evidence of test pressure but do not fill successful validation categories.
+- A success or failure in one case does not by itself imply that a method must survive, merge, be absorbed, or be deleted. Method independence is assessed separately.
 
 ## Method-specific evidence lanes / 개별 증거 경로
 
@@ -70,7 +71,9 @@ SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 REPRODUCIBILITY_CASES: 0
-EXTERNAL_SYNTHESIS_APPLICATIONS: 0
+EXTERNAL_SYNTHESIS_APPLICATIONS: 1
+EXTERNAL_SYNTHESIS_DOMAINS: 1
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
@@ -112,6 +115,19 @@ SYN-CH-006
   SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
   STRONGEST_REASONABLE_BASELINE_COMPARISON:
     established_at_constructed_evidence_level
+
+SYN-APP-001
+  EXTERNAL_STANDARD: RFC 3986 / STD 66
+  EXTERNAL_DOMAIN: Internet identifier syntax / URI generic syntax
+  PRECOMMIT: 29ea45a
+  RESULT: 6985246
+  40/40 PASS
+  admissible family {R1,R2,R3,R4,R10,R11,R12}
+  R5/R6 -> H2
+  R7 -> H1
+  R8 -> H4 declared-component roundtrip failure
+  R9 -> H3 lexical failure
+  SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
 ```
 
 Current Synthesis guards include:
@@ -127,9 +143,11 @@ PARTIAL_SYNTHESIS != completed synthesized target
 STATIC_COMPOSITION_ORDER != TEMPORAL_ASSEMBLY_SEQUENCE
 REJECTED_UNDER_EXHAUSTIVE_COVERAGE != INSUFFICIENT_COVERAGE_FOR_CLOSURE != MISSING_REQUIRED_INPUT
 local admissibility != requested output-level closure
+PRESENT_EMPTY != ABSENT when the external interface distinguishes them
+GENERIC_EXTERNAL_SYNTAX != STRONGER_DOMAIN_SPECIFIC_VALIDITY
 ```
 
-The next Synthesis task is the first external application `SYN-APP-001` using a stable public source that itself supplies composition or assembly legitimacy. Constructed strongest-reasonable-baseline evidence does not substitute for external applicability.
+The next Synthesis task is a deterministic same-project retrace/reproducibility record for `SYN-APP-001`, followed by a second materially different external domain before maturity review.
 
 ## Promotion expectation / 성숙도 승격 기준
 
