@@ -117,15 +117,24 @@ A later audit should preserve either agreement or disagreement rather than treat
 - [`synthesis/`](synthesis/) — **DSD Synthesis / DSD 합성론**
   - planning opened on `2026-09-10`;
   - current maturity classification: `proposed`;
-  - current evidence status: `validation_pending`;
+  - current evidence status: `validation_in_progress`;
   - dedicated executable protocol: **`PROTOCOL_v0.1.md` established**, creation commit `8787b24`;
-  - direct Synthesis pilots: `0`;
+  - direct Synthesis pilots: `1`;
+  - positive Synthesis cases: `1`;
+  - first direct pilot: `SYN-CH-001`, separately precommitted at `4eeba2a`, result commit `71e5d5c`, **28/28 PASS**;
+  - `SYN-CH-001` admissible family: `{K1,K2}`; K3 rejected on readiness undefined, K4-K6 on interface mismatch;
+  - `SYN-CH-001` ledgers: `SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED`;
   - pre-protocol boundary attacks: `16`;
   - boundary result: `11` preserved without refinement + `5` preserved with non-breaking refinement, `0` collapse, `0` fundamental interface failure;
   - protocol lineage: `TASK_INTERFACE_v0.1-draft.md + TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md -> PROTOCOL_v0.1.md`;
+  - negative/failure cases: `0`;
+  - boundary cases under protocol: `0`;
+  - NO_GAIN cases: `0`;
+  - baseline comparison cases: `0`;
+  - reproducibility cases: `0`;
   - external Synthesis applications: `0`;
   - independent Synthesis validation: not established;
-  - next direct task: separately precommit and execute positive `SYN-CH-001`.
+  - next direct task: separately precommit negative/failure terminal-status challenge.
 
 Current Synthesis protocol guards:
 
@@ -161,8 +170,8 @@ Current Synthesis state:
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
-DIRECT_SYNTHESIS_PILOTS: 0
-POSITIVE_SYNTHESIS_CASES: 0
+DIRECT_SYNTHESIS_PILOTS: 1
+POSITIVE_SYNTHESIS_CASES: 1
 NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 0
 BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 0
 NO_GAIN_SYNTHESIS_CASES: 0
@@ -171,10 +180,11 @@ REPRODUCIBILITY_CASES: 0
 EXTERNAL_SYNTHESIS_APPLICATIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
-CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_pending
+CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Protocol establishment and pre-protocol attacks are **not** counted as direct Synthesis pilot evidence.
+The first positive pilot does not establish external applicability, baseline superiority, reproducibility, independent validation, or method maturity.
+Protocol establishment and pre-protocol attacks remain separate from direct pilot evidence.
 
 ## Promotion expectation / 성숙도 승격 기준
 
