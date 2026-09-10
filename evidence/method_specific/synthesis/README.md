@@ -1,6 +1,6 @@
 # DSD Synthesis Direct Evidence / DSD 합성론 직접 증거
 
-Status: **Protocol v0.1 established / first external application PASS / deterministic retrace PASS / validation in progress**
+Status: **Protocol v0.1 established / two external domains PASS / deterministic retrace PASS / validation in progress**
 
 This lane records evidence that directly tests **DSD Synthesis / DSD 합성론**. Shared-core or neighboring-method evidence may be referenced but does not automatically count as direct Synthesis validation.
 
@@ -20,16 +20,16 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_le
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_SYNTHESIS_APPLICATIONS: 1
-EXTERNAL_SYNTHESIS_DOMAINS: 1
-EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
+EXTERNAL_SYNTHESIS_APPLICATIONS: 2
+EXTERNAL_SYNTHESIS_DOMAINS: 2
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 2
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Protocol establishment and the 16 pre-protocol attacks do not increase the direct-pilot count. A failed direct challenge remains a historical direct attempt but does not fill its successful evidence category. External applications and retrace records are tracked separately from constructed direct pilots.
+Protocol establishment and the 16 pre-protocol attacks do not increase the direct-pilot count. Failed direct challenges remain historical attempts but do not fill successful evidence categories. External applications and retrace records are tracked separately from constructed direct pilots.
 
 ## Protocol and planning artifacts
 
@@ -59,92 +59,18 @@ DIRECT_SYNTHESIS_PILOT_INCREMENT: 0
 
 ## Direct Protocol-v0.1 evidence
 
-### SYN-CH-001 — positive symbolic chain composition
-
 ```text
-PRECOMMIT: 4eeba2a
-RESULT: 71e5d5c
-K1,K2 -> admissible
-K3 -> rejected {H3}
-K4-K6 -> rejected {H2}
-ADMISSIBLE_FAMILY: {K1,K2}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NOT_ASSESSED
-SCORE: 28/28 PASS
+SYN-CH-001  positive                           28/28 PASS
+SYN-CH-002  negative/failure distinction       36/36 PASS
+SYN-CH-003  executable method-boundary         46/46 PASS
+SYN-CH-004  first NO_GAIN attempt              33/35 FAIL
+            FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
+SYN-CH-005  corrected competent baseline       37/37 PASS / NO_GAIN
+SYN-CH-006  strongest-reasonable baseline      52/52 PASS / NO_GAIN
+SYN-CH-007  deterministic retrace               48/48 PASS
 ```
 
-### SYN-CH-002 — negative/failure terminal-status distinction
-
-```text
-PRECOMMIT: 09fc616
-RESULT: 7dac87c
-I: exhaustive all rejected -> SYNTHESIS_INFEASIBLE
-U: non-exhaustive uniqueness closure -> SYNTHESIS_UNDERDETERMINED
-B: required composition rule unavailable -> SYNTHESIS_BLOCKED
-ALL CONFORMANCE: CONFORMANT
-ALL GAIN: NOT_ASSESSED
-SCORE: 36/36 PASS
-```
-
-### SYN-CH-003 — executable method-boundary separation
-
-```text
-PRECOMMIT: 2eea8ae
-RESULT: cb55dba
-BASE FAMILY: {S0,S1}
-D -> DESIGN_REQUIRED
-T -> TRANSFORMATION_REQUIRED
-A -> AGGREGATION_REQUIRED
-O -> OPTIMIZATION_REQUIRED
-SCORE: 46/46 PASS
-PROTOCOL_REVISION_REQUIRED: no
-```
-
-### SYN-CH-004 — failed first NO_GAIN baseline attempt
-
-```text
-PRECOMMIT: 1c77a0e
-FIRST RESULT: 29730a5
-POSTEXECUTION AUDIT: fe55899
-STRICT SCORE: 33/35 FAIL
-FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
-```
-
-The frozen H4 required `readiness(Y)` while `Q5` placed `SRC` in the middle position without a frozen readiness record. The attempted post-hoc exception was rejected. The case is preserved and does not fill a successful NO_GAIN or baseline-comparison category.
-
-### SYN-CH-005 — corrected prospective NO_GAIN baseline case
-
-```text
-PRECOMMIT: 3c6f323
-RESULT: f062d3f
-DSD FAMILY: {R1,R2}
-B0 FAMILY: {R1,R2}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NO_GAIN
-SCORE: 37/37 PASS
-```
-
-### SYN-CH-006 — broader strongest-reasonable-baseline comparison
-
-```text
-PRECOMMIT: 4a6c1fe
-RESULT: 8ad51b5
-BASELINE: B1_TYPED_COMPOSITION_GRAPH_CHECKER
-RAW DSD FAMILY: {A1,A2,A3,A4}
-RAW B1 FAMILY: {A1,A2,A3,A4}
-CANONICAL DSD FAMILY: {C0,C1}
-CANONICAL B1 FAMILY: {C0,C1}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NO_GAIN
-SCORE: 52/52 PASS
-STRONGEST_REASONABLE_BASELINE_COMPARISON:
-  established_at_constructed_evidence_level
-```
-
-The richer fixture simultaneously activated explicit whole-Property lift, status distinctions, staged dependency, supplied associativity/grouping equivalence, relation retention, formation effect, and raw/canonical closure. The competent B1 baseline received the same claim-relevant information and matched all frozen dimensions.
+`SYN-CH-006` established `STRONGEST_REASONABLE_BASELINE_COMPARISON = established_at_constructed_evidence_level`; its competent baseline matched all frozen comparison dimensions. `SYN-CH-007` established only `deterministic_same_project` retraceability, not independent replication.
 
 ## External application evidence
 
@@ -155,20 +81,45 @@ EXTERNAL_STANDARD: RFC 3986 / STD 66
 EXTERNAL_DOMAIN: Internet identifier syntax / URI generic syntax
 PRECOMMIT: 29ea45a
 RESULT: 6985246
-CANDIDATES: R1-R12
 ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
-R5 -> {H2}
-R6 -> {H2}
-R7 -> {H1}
-R8 -> {H4}
-R9 -> {H3}
 TERMINAL: SYNTHESIS_ADMISSIBLE
 CONFORMANCE: CONFORMANT
 GAIN: NOT_ASSESSED
 SCORE: 40/40 PASS
 ```
 
-This application uses an externally supplied generic composition grammar rather than a project-invented domain rule. It preserves `ABSENT != PRESENT_EMPTY` for authority/query/fragment states and rejects candidates that are generically parseable only under a different component decomposition. The scope remains RFC-3986 generic syntax only; no scheme-specific validity, dereference, security, or normalization claim is inferred.
+This application uses an externally supplied generic composition grammar. It preserves `ABSENT != PRESENT_EMPTY` and rejects strings that are parseable only under a different declared component decomposition. Scope remains RFC-3986 generic syntax only.
+
+### SYN-APP-002 — BIPM SI unit composition
+
+```text
+EXTERNAL_STANDARD: BIPM SI Brochure, 9th ed., version 4.01 (2026)
+DOI: 10.59161/AUEZ1291
+EXTERNAL_DOMAIN: physical metrology / SI unit composition
+PRECOMMIT: 46479ae
+RESULT: c504d53
+ADMISSIBLE_FAMILY: {U1,U2,U3,U4,U5,U7,U9}
+U6  -> {H4}
+U8  -> {H4}
+U10 -> {H4}
+U11 -> {H2}; H3-H5 NOT_REACHED
+U12 -> {H2}; H3-H5 NOT_REACHED
+TERMINAL: SYNTHESIS_ADMISSIBLE
+CONFORMANCE: CONFORMANT
+GAIN: NOT_ASSESSED
+SCORE: 46/46 PASS
+```
+
+This materially different external domain activates products of powers, coherent special-name equivalences, prefix-factor propagation, coherence status, compound-prefix prohibition, and the kilogram/gram prefix exception. It preserves:
+
+```text
+SAME_DIMENSION != SAME_UNIT_SCALE
+VALID_PREFIXED_SI_UNIT != COHERENT_SI_UNIT
+PREFIX_COMPONENT_ADMITTED != PREFIX_COMPOSITION_FORM_LEGAL
+SI_UNIT_COMPOSITION != PHYSICAL_MEASUREMENT_VALIDITY
+```
+
+No uncertainty, calibration, traceability, realization, or physical-law claim is inferred.
 
 ## Reproducibility / retrace evidence
 
@@ -186,8 +137,6 @@ GAIN: NOT_ASSESSED
 SCORE: 48/48 PASS
 INDEPENDENT_REPLICATION: not established
 ```
-
-The retrace reconstructed all twelve verdicts, failure sets and `NOT_REACHED` staging, optional-component presence distinctions, admissible-family closure, scope guards, and all three ledgers from the frozen RFC/task/protocol chain. It is not blinded or independent evidence.
 
 ## Protocol-v0.1 core guards
 
@@ -211,7 +160,7 @@ SYN-AUD-###  Synthesis-specific audit / maturity records
 SYN-IEP-###  independent evaluator packet infrastructure
 ```
 
-A challenge whose expected result matters must be separately precommitted before evaluation. Historical failed or superseded challenge designs are preserved rather than rewritten. Success or failure of a single case does not by itself determine whether a method must survive, merge, or be deleted; method independence is a separate boundary/maturity question.
+A challenge whose expected result matters must be separately precommitted before evaluation. Historical failed or superseded challenge designs are preserved rather than rewritten. Success or failure of a single case does not by itself determine whether a method must survive, merge, be absorbed, or be deleted; method independence is a separate boundary/maturity question.
 
 ## Minimum evidence architecture
 
@@ -219,4 +168,4 @@ A future promotion consideration should accumulate, at minimum: dedicated protoc
 
 ## Immediate next direct-evidence task
 
-Add a second materially different external Synthesis domain before any maturity audit. Prefer a physical, engineering, scientific, legal, or other non-URI public standard whose composition legitimacy is externally supplied. A second external success or failure still does not itself determine method survival or merger.
+Add a third materially different external domain, preferably one with nontrivial component compatibility or assembly constraints rather than primarily symbolic grammar. Only after broader external pressure should the first Synthesis maturity audit be considered.
