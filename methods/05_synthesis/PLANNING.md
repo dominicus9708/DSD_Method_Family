@@ -1,6 +1,6 @@
 # DSD Synthesis Planning / DSD 합성론 기획
 
-Status: **Protocol v0.1 established / first maturity audit complete / method-protocol evidence maturity established / validation in progress**  
+Status: **Protocol v0.1 established / method-protocol evidence maturity established / SYN-IEP-001 prepared / validation in progress**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -55,8 +55,9 @@ Historical artifacts and failed challenges remain preserved rather than rewritte
 12. ✅ `SYN-APP-002` BIPM SI unit-composition external application — **46/46 PASS**.
 13. ✅ `SYN-APP-003` USB Type-C physical mating external application — **44/44 PASS**.
 14. ✅ `SYN-AUD-001` first maturity audit — **28/28 audit-execution PASS**, method/protocol evidence maturity `established`.
-15. **Next:** independent-evaluator infrastructure `SYN-IEP-001`.
-16. Independent evidence scoring only after a genuinely separate immutable evaluator submission exists.
+15. ✅ `SYN-IEP-001` independent-evaluator infrastructure prepared; reference commitment frozen; submissions remain 0.
+16. **Externally blocked next event:** genuinely separate immutable evaluator submission before reference reveal.
+17. After such submission: escrow reveal -> SHA-256 verification -> predeclared semantic scoring -> independent-evidence Audit.
 
 ## Step 14 — SYN-AUD-001 maturity review
 
@@ -94,8 +95,6 @@ M14 historical failure / anti-post-hoc preservation     PASS
 M15 method-survival / merger-separation discipline      PASS
 ```
 
-The promotion is supported by evidence architecture rather than raw PASS count: executable protocol, terminal-state discrimination, operational neighboring-method boundaries, preserved challenge-design failure, multiple honest `NO_GAIN` comparisons, strongest-reasonable baseline, deterministic retrace, and three materially different external domains.
-
 The label remains bounded:
 
 ```text
@@ -107,7 +106,61 @@ ESTABLISHED_METHOD_PROTOCOL_EVIDENCE_MATURITY
 != PERMANENT_METHOD_REGISTRY_SURVIVAL
 ```
 
-## Evidence state after Step 14 / 14단계 후 증거 상태
+## Step 15 — SYN-IEP-001 independent evaluator infrastructure
+
+Prepared public artifacts:
+
+```text
+REVIEWER_PACKET
+  evidence/method_specific/synthesis/SYN-IEP-001_reviewer-packet.md
+  commit: 6be55803db46c1941904501ecfa5fb13ba4ec01f
+
+SUBMISSION_TEMPLATE
+  evidence/method_specific/synthesis/SYN-IEP-001_submission-template.md
+  commit: 079cdda0957314020001fbffac252a4765dac9a9
+
+REFERENCE_COMMITMENT
+  evidence/method_specific/synthesis/SYN-IEP-001_reference-commitment.md
+  commit: b785df0e30c7e534693b9bc7f3a2011fb1617778
+  SHA-256: db5d1c505c3ab2d614357525489f3b2a0dd2fc595fff1e715c69f48ceeb7073f
+
+CLEAN_DISTRIBUTION_RECORD
+  evidence/method_specific/synthesis/SYN-IEP-001_distribution-record.md
+  commit: af622b9d3abb35ab603736bb324e24061d178f92
+```
+
+Packet tasks:
+
+```text
+Task S — BIPM SI unit composition, held-out candidates S1-S6
+Task P — USB Type-C physical mating/orientation, held-out candidates P1-P6
+```
+
+Independence gates:
+
+```text
+E1 no key/nonce access
+E2 no answer-bearing evidence inspection after acceptance
+E3 only allowed materials
+E4 no answer-leading feedback
+E5 freeze before reveal
+E6 disclose prior exposure/contamination
+```
+
+Scoring lock:
+
+```text
+TOTAL_SEMANTIC_CHECKS: 24
+CRITICAL_CHECKS: 10
+FULL: 24/24 + eligible
+PARTIAL: >=21/24 + 10/10 critical + eligible
+DISAGREEMENT: below threshold or any critical failure, while eligible
+CONTAMINATED_OR_INELIGIBLE: eligibility failure
+```
+
+The secret nonce and plaintext canonical reference key are held in a private escrow outside the public Synthesis tree. The current project assistant/session cannot become the independent evaluator.
+
+## Evidence state after Step 15 / 15단계 후 증거 상태
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
@@ -126,14 +179,16 @@ REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_SYNTHESIS_APPLICATIONS: 3
 EXTERNAL_SYNTHESIS_DOMAINS: 3
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
+INDEPENDENT_EVALUATOR_PACKET: prepared
+REFERENCE_KEY_COMMITMENT: frozen
+CLEAN_DISTRIBUTION_RECORD: prepared
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 MEASURED_PRACTICAL_SUPERIORITY: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
-
-The audit itself added no direct, external, or reproducibility evidence counts.
 
 ## Recording rule / 기록 규칙
 
@@ -144,8 +199,10 @@ The audit itself added no direct, external, or reproducibility evidence counts.
 - Established method/protocol evidence maturity does not freeze the 22-method registry permanently.
 - External validity is not upgraded beyond the source's declared version and scope.
 - Same-project deterministic retrace is not independent replication.
+- Independent-evaluator packet preparation is infrastructure, not validation.
+- Hidden reference material is never revealed before an eligible submission freeze.
 - Protocol v0.1 is revised only prospectively if direct evidence exposes a genuine protocol defect.
 
 ## Immediate next task / 다음
 
-Prepare `SYN-IEP-001` independent-evaluator infrastructure. It should include a clean reviewer packet, frozen external/source bundle or self-contained task, submission template, eligibility/contamination gates, hidden reference answer or commitment, and predeclared scoring. Packet preparation itself remains infrastructure and does not change independent-validation status.
+No further same-project Synthesis run can satisfy the dominant independence gap. The next valid evidence event requires a genuinely separate evaluator. Once a completed `SYN-IEP-001` submission is immutably frozen before key reveal, verify the commitment and score the submission under a new independent-evidence Audit record. Until then, keep `INDEPENDENT_EVALUATOR_SUBMISSIONS = 0` and do not claim independent validation or replication.
