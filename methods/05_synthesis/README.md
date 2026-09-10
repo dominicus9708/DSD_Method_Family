@@ -1,6 +1,6 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **Protocol v0.1 established / strongest-reasonable-baseline PASS / first external application PASS / validation in progress**
+Status: **Protocol v0.1 established / strongest-reasonable-baseline PASS / first external application PASS / deterministic retrace PASS / validation in progress**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
@@ -120,6 +120,14 @@ SYN-CH-006
   SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
   STRONGEST_REASONABLE_BASELINE_COMPARISON:
     established_at_constructed_evidence_level
+
+SYN-CH-007
+  deterministic same-project retrace of SYN-APP-001
+  48/48 PASS
+  PRECOMMIT 9bbcadf
+  RESULT 7256456
+  REPRODUCIBILITY_LEVEL: deterministic_same_project
+  INDEPENDENT_REPLICATION: not established
 ```
 
 ## External application evidence
@@ -138,6 +146,8 @@ SYN-APP-001
 
 `SYN-APP-001` is the first case in which domain composition legitimacy is not invented by the project. The external grammar supplies generic URI component order, authority/path branch conditions, scheme/path/query/fragment syntax, and enough structure to distinguish absent from present-empty optional components. The result remains generic-syntax-only and is not upgraded to scheme-specific validity, dereference success, normalization equivalence, or security.
 
+`SYN-CH-007` then retraced the immutable Protocol/RFC/precommit/result chain and reconstructed all twelve candidate verdicts, failure staging, status distinctions, closure, scope guards, and three ledgers exactly. This establishes only deterministic same-project retraceability, not independence.
+
 ## Current evidence state
 
 ```text
@@ -151,11 +161,14 @@ SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 2
 SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_SYNTHESIS_APPLICATIONS: 1
 EXTERNAL_SYNTHESIS_DOMAINS: 1
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
@@ -164,4 +177,4 @@ The evidence does not establish broad external generality, independent reproduci
 
 ## Next development step
 
-Create a dedicated deterministic same-project retrace of `SYN-APP-001` from its immutable source/precommit/result chain. After that, add a second materially different external domain before considering a maturity audit.
+Add a second materially different external Synthesis domain before considering a maturity audit. Prefer a stable physical, engineering, scientific, legal, or other non-URI source that supplies its own composition/assembly legitimacy. Keep application outcome separate from any method survival, merger, or deletion decision.
