@@ -1,6 +1,6 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **Protocol v0.1 established / strongest-reasonable-baseline PASS / first external application PASS / deterministic retrace PASS / validation in progress**
+Status: **Protocol v0.1 established / strongest-reasonable-baseline PASS / two external domains PASS / deterministic retrace PASS / validation in progress**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
@@ -76,77 +76,58 @@ Success or failure of one case does not determine whether Synthesis must survive
 ## Direct Protocol-v0.1 evidence
 
 ```text
-SYN-CH-001
-  positive
-  28/28 PASS
-  PRECOMMIT 4eeba2a
-  RESULT 71e5d5c
-
-SYN-CH-002
-  negative/failure distinction
-  36/36 PASS
-  PRECOMMIT 09fc616
-  RESULT 7dac87c
-
-SYN-CH-003
-  executable method-boundary
-  46/46 PASS
-  PRECOMMIT 2eea8ae
-  RESULT cb55dba
-
-SYN-CH-004
-  first NO_GAIN baseline attempt
-  33/35 FAIL
-  FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
-  PRECOMMIT 1c77a0e
-  FIRST RESULT 29730a5
-  POSTEXECUTION AUDIT fe55899
-
-SYN-CH-005
-  corrected prospective NO_GAIN case
-  37/37 PASS
-  PRECOMMIT 3c6f323
-  RESULT f062d3f
-  DSD family = B0 family = {R1,R2}
-  SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
-
-SYN-CH-006
-  broader strongest-reasonable-baseline comparison
-  52/52 PASS
-  PRECOMMIT 4a6c1fe
-  RESULT 8ad51b5
-  RAW DSD = B1 = {A1,A2,A3,A4}
-  CANONICAL DSD = B1 = {C0,C1}
-  SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
-  STRONGEST_REASONABLE_BASELINE_COMPARISON:
-    established_at_constructed_evidence_level
-
-SYN-CH-007
-  deterministic same-project retrace of SYN-APP-001
-  48/48 PASS
-  PRECOMMIT 9bbcadf
-  RESULT 7256456
-  REPRODUCIBILITY_LEVEL: deterministic_same_project
-  INDEPENDENT_REPLICATION: not established
+SYN-CH-001  positive                           28/28 PASS
+SYN-CH-002  negative/failure distinction       36/36 PASS
+SYN-CH-003  executable method-boundary         46/46 PASS
+SYN-CH-004  first NO_GAIN baseline attempt     33/35 FAIL
+            FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
+SYN-CH-005  corrected prospective baseline     37/37 PASS / NO_GAIN
+SYN-CH-006  strongest-reasonable baseline      52/52 PASS / NO_GAIN
+SYN-CH-007  deterministic same-project retrace 48/48 PASS
 ```
+
+`SYN-CH-006` established the strongest-reasonable-baseline category only at constructed-evidence level. `SYN-CH-007` establishes deterministic same-project retraceability only.
 
 ## External application evidence
 
+### SYN-APP-001 — RFC 3986 generic URI syntax
+
 ```text
-SYN-APP-001
-  external source: RFC 3986 / STD 66 generic URI syntax
-  external domain: Internet identifier syntax
-  precommit 29ea45a
-  result 6985246
-  candidates R1-R12
-  admissible family {R1,R2,R3,R4,R10,R11,R12}
-  40/40 PASS
-  SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+PRECOMMIT: 29ea45a
+RESULT: 6985246
+EXTERNAL_DOMAIN: Internet identifier syntax
+ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
+SCORE: 40/40 PASS
+SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
 ```
 
-`SYN-APP-001` is the first case in which domain composition legitimacy is not invented by the project. The external grammar supplies generic URI component order, authority/path branch conditions, scheme/path/query/fragment syntax, and enough structure to distinguish absent from present-empty optional components. The result remains generic-syntax-only and is not upgraded to scheme-specific validity, dereference success, normalization equivalence, or security.
+The RFC itself supplies the generic component grammar; `ABSENT != PRESENT_EMPTY` and declared-component roundtrip are preserved without upgrading generic syntax to scheme-specific validity.
 
-`SYN-CH-007` then retraced the immutable Protocol/RFC/precommit/result chain and reconstructed all twelve candidate verdicts, failure staging, status distinctions, closure, scope guards, and three ledgers exactly. This establishes only deterministic same-project retraceability, not independence.
+### SYN-APP-002 — BIPM SI unit composition
+
+```text
+PRECOMMIT: 46479ae
+RESULT: c504d53
+EXTERNAL_STANDARD: SI Brochure 9th ed. v4.01 (2026)
+DOI: 10.59161/AUEZ1291
+EXTERNAL_DOMAIN: physical metrology / SI unit composition
+ADMISSIBLE_FAMILY: {U1,U2,U3,U4,U5,U7,U9}
+U6/U8/U10 -> {H4}
+U11/U12 -> {H2}; H3-H5 NOT_REACHED
+SCORE: 46/46 PASS
+SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+```
+
+The BIPM source supplies derived-unit products of powers, coherent special-name equivalences, prefix formation, exponent propagation, compound-prefix prohibition, and the kilogram/gram mass-prefix rule. The application preserves:
+
+```text
+SAME_DIMENSION != SAME_UNIT_SCALE
+VALID_PREFIXED_SI_UNIT != COHERENT_SI_UNIT
+PREFIX_COMPONENT_ADMITTED != PREFIX_COMPOSITION_FORM_LEGAL
+SI_UNIT_COMPOSITION != PHYSICAL_MEASUREMENT_VALIDITY
+```
+
+No calibration, uncertainty, traceability, experimental-realization, or physical-law claim is absorbed.
 
 ## Current evidence state
 
@@ -164,9 +145,9 @@ PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_SYNTHESIS_APPLICATIONS: 1
-EXTERNAL_SYNTHESIS_DOMAINS: 1
-EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
+EXTERNAL_SYNTHESIS_APPLICATIONS: 2
+EXTERNAL_SYNTHESIS_DOMAINS: 2
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 2
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -177,4 +158,4 @@ The evidence does not establish broad external generality, independent reproduci
 
 ## Next development step
 
-Add a second materially different external Synthesis domain before considering a maturity audit. Prefer a stable physical, engineering, scientific, legal, or other non-URI source that supplies its own composition/assembly legitimacy. Keep application outcome separate from any method survival, merger, or deletion decision.
+Add a third materially different external Synthesis domain, preferably involving nontrivial physical/component compatibility or assembly constraints rather than mainly symbolic grammar. Then consider the first Synthesis maturity audit only after this broader pressure is recorded.
