@@ -70,11 +70,14 @@ SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 2
 SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_SYNTHESIS_APPLICATIONS: 1
 EXTERNAL_SYNTHESIS_DOMAINS: 1
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
@@ -128,6 +131,16 @@ SYN-APP-001
   R8 -> H4 declared-component roundtrip failure
   R9 -> H3 lexical failure
   SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+
+SYN-CH-007
+  RETRACE_TARGET: SYN-APP-001
+  PRECOMMIT: 9bbcadf
+  RESULT: 7256456
+  48/48 PASS
+  reconstructed all R1-R12 verdicts/failure staging
+  reconstructed family {R1,R2,R3,R4,R10,R11,R12}
+  REPRODUCIBILITY_LEVEL: deterministic_same_project
+  INDEPENDENT_REPLICATION: not established
 ```
 
 Current Synthesis guards include:
@@ -145,9 +158,10 @@ REJECTED_UNDER_EXHAUSTIVE_COVERAGE != INSUFFICIENT_COVERAGE_FOR_CLOSURE != MISSI
 local admissibility != requested output-level closure
 PRESENT_EMPTY != ABSENT when the external interface distinguishes them
 GENERIC_EXTERNAL_SYNTAX != STRONGER_DOMAIN_SPECIFIC_VALIDITY
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 ```
 
-The next Synthesis task is a deterministic same-project retrace/reproducibility record for `SYN-APP-001`, followed by a second materially different external domain before maturity review.
+The next Synthesis task is a second materially different external application in a non-URI domain before maturity review.
 
 ## Promotion expectation / 성숙도 승격 기준
 
@@ -162,4 +176,4 @@ A proposed/developing method should accumulate, at minimum:
 7. at least one external or independently generated application;
 8. a strongest-reasonable-baseline comparison when applicable.
 
-These are minimum evidence categories for promotion consideration, not an automatic promotion rule. Same-session or same-project retrace does not substitute for independent review, and external-application count does not establish practical superiority.
+These are minimum evidence categories for promotion consideration, not an automatic promotion rule. Same-session or same-project retrace does not substitute for independent review, and external-application count does not establish practical superiority or method survival.
