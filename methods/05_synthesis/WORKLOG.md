@@ -37,15 +37,6 @@ BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
 ```
 
-Required non-breaking refinements:
-
-```text
-R1 COMPOSITION_LAW_PROFILE + GROUPING_OR_PARENTHESIZATION_POLICY
-R2 COMPOSITION_EQUIVALENCE_OR_CANONICALIZATION_RULE
-R3 RESIDUAL_OPEN_INTERFACES_OR_OBLIGATIONS
-R4 ASSEMBLY_SEQUENCE_OR_PROCESS_SCOPE
-```
-
 The Step-1 draft remained historical and was not rewritten.
 
 ---
@@ -68,8 +59,6 @@ GAIN: NOT_ASSESSED
 SCORE: 28/28 PASS
 ```
 
-Evidence effect: direct pilot 1, successful positive 1.
-
 ---
 
 ## 2026-09-10 — Step 6: SYN-CH-002 negative/failure challenge
@@ -83,8 +72,6 @@ B -> SYNTHESIS_BLOCKED
 SCORE: 36/36 PASS
 PROTOCOL_REVISION_REQUIRED: no
 ```
-
-Evidence effect: direct pilot 2, successful negative/failure 1.
 
 ---
 
@@ -102,8 +89,6 @@ SCORE: 46/46 PASS
 PROTOCOL_REVISION_REQUIRED: no
 ```
 
-Evidence effect: direct pilot 3, successful executable boundary 1.
-
 ---
 
 ## 2026-09-10 — Step 8A: SYN-CH-004 first NO_GAIN baseline attempt
@@ -117,7 +102,7 @@ FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
 PROTOCOL_FAILURE_INFERRED: no
 ```
 
-The frozen H4 required `readiness(Y)` but malformed candidate Q5 placed `SRC` in the middle position without a frozen readiness record. The first execution's uncommitted exception was rejected. The failed challenge remains preserved and fills no successful NO_GAIN category.
+The failed challenge remains preserved and fills no successful NO_GAIN category.
 
 ---
 
@@ -134,103 +119,109 @@ GAIN: NO_GAIN
 SCORE: 37/37 PASS
 ```
 
-The correction was prospective: `SRC` and `SNK` received explicit readiness records before execution. `B0_TYPED_CHAIN_CHECKER` preserved the same five comparison dimensions. Evidence state became direct attempts 5, successful NO_GAIN 1, successful baseline comparison 1.
-
 ---
 
 ## 2026-09-10 — Step 9: SYN-CH-006 broader strongest-reasonable-baseline comparison
 
-Status: **52/52 PASS / NO_GAIN / strongest-reasonable-baseline category established at constructed level**
+```text
+PRECOMMIT: 4a6c1fe
+RESULT: 8ad51b5
+BASELINE: B1_TYPED_COMPOSITION_GRAPH_CHECKER
+RAW DSD FAMILY: {A1,A2,A3,A4}
+RAW B1 FAMILY: {A1,A2,A3,A4}
+CANONICAL DSD FAMILY: {C0,C1}
+CANONICAL B1 FAMILY: {C0,C1}
+GAIN: NO_GAIN
+SCORE: 52/52 PASS
+STRONGEST_REASONABLE_BASELINE_COMPARISON:
+  established_at_constructed_evidence_level
+```
+
+Interpretation: the richer typed composition task was handled correctly, but a strong non-DSD baseline supplied with the same semantics matched every measured dimension. No superiority claim was made.
+
+---
+
+## 2026-09-10 — Step 10: SYN-APP-001 first external application
+
+Status: **40/40 PASS / first external Synthesis domain**
+
+External authority:
+
+```text
+RFC 3986 / STD 66
+Uniform Resource Identifier (URI): Generic Syntax
+RFC Editor official source
+external domain: Internet identifier syntax / URI generic syntax
+```
 
 Precommit:
 
 ```text
-evidence/method_specific/synthesis/SYN-CH-006_precommit.md
-commit: 4a6c1fe7c702a0fd04bb01a029a9672bc5c7b6d1
-blob: 5f210fe84ea8ade1bf34449f1a09236bff03c45e
+evidence/method_specific/synthesis/SYN-APP-001_precommit.md
+commit: 29ea45a1b9143dfda147b4987f005a4ff0313842
+blob: b383fbc09b79f68e4f3bc2f46ed0037bf51a85e9
 ```
 
 Result:
 
 ```text
-evidence/method_specific/synthesis/SYN-CH-006_strongest-reasonable-baseline-comparison.md
-commit: 8ad51b5ffff826547d0f69890f979df8b7d556f8
+evidence/method_specific/synthesis/SYN-APP-001_RFC3986-generic-URI-composition.md
+commit: 69852468a8493b4fddaa8a6ac61edf40335146d9
 ```
 
-The richer fixture froze eight candidates and simultaneously activated:
-
-```text
-supplied associativity and left/right grouping
-material-target canonicalization
-L_READY whole-Property lift
-DEFINED_ZERO / DEFINED_NONZERO / APPLICABLE_BUT_UNDEFINED
-structural-prerequisite staging with NOT_REACHED downstream checks
-adjacency-relation retention
-same_background vs new_formation_required
-raw candidate family vs canonical class family
-```
+Frozen external composition rules included generic URI component order, authority/no-authority hierarchical branches, scheme syntax, path/query/fragment lexical grammar, and optional-component presence.
 
 Execution:
 
 ```text
-A1 -> admissible / C0
-A2 -> admissible / C0
-A3 -> admissible / C1
-A4 -> admissible / C1
-A5 -> rejected {H3}
-A6 -> rejected {H2}; H3-H5 NOT_REACHED
-A7 -> rejected {H4}
-A8 -> rejected {H5}
+R1  admissible
+R2  admissible
+R3  admissible; QUERY_PRESENT_EMPTY preserved
+R4  admissible; FRAGMENT_PRESENT_EMPTY preserved
+R5  rejected {H2}
+R6  rejected {H2}
+R7  rejected {H1}
+R8  rejected {H4}; raw string parses only under a different component tuple
+R9  rejected {H3}
+R10 admissible
+R11 admissible; query + fragment PRESENT_EMPTY preserved
+R12 admissible at RFC3986 generic-syntax level; AUTHORITY_PRESENT_EMPTY preserved
 
-RAW DSD FAMILY: {A1,A2,A3,A4}
-RAW B1 FAMILY: {A1,A2,A3,A4}
-CANONICAL DSD FAMILY: {C0,C1}
-CANONICAL B1 FAMILY: {C0,C1}
+ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
+TERMINAL: SYNTHESIS_ADMISSIBLE
+CONFORMANCE: CONFORMANT
+GAIN: NOT_ASSESSED
+SCORE: 40/40 PASS
 ```
 
-`B1_TYPED_COMPOSITION_GRAPH_CHECKER` received all the same claim-relevant records and was competent to preserve every scored distinction. Gain evaluation:
+Scope discipline:
 
 ```text
-G1 STATUS_AND_PROPERTY_LIFT_GAIN: NOT_ESTABLISHED
-G2 FAILURE_TRACEABILITY_GAIN: NOT_ESTABLISHED
-G3 GROUPING_EQUIVALENCE_GAIN: NOT_ESTABLISHED
-G4 RELATION_RETENTION_GAIN: NOT_ESTABLISHED
-G5 FORMATION_EFFECT_GAIN: NOT_ESTABLISHED
-G6 COMPOSITION_CLOSURE_GAIN: NOT_ESTABLISHED
-G7 RETRACEABILITY_GAIN: NOT_ESTABLISHED
-SYNTHESIS_METHOD_GAIN_STATUS: NO_GAIN
+RFC3986_GENERIC_SYNTAX_ADMISSIBLE != SCHEME_SPECIFIC_URI_VALIDITY
+GENERIC_SYNTACTIC_COMPOSITION != RESOURCE_RESOLUTION_SUCCESS
+GENERIC_SYNTACTIC_COMPOSITION != SECURITY_OR_TRUSTWORTHINESS
+PRESENT_EMPTY != ABSENT
 ```
 
-Scoring and protocol pressure:
+Evidence effect:
 
 ```text
-PRECOMMITTED_REQUIRED_CHECKS: 52
-PASSED: 52
-FAILED: 0
-CHALLENGE_VERDICT: PASS
+EXTERNAL_SYNTHESIS_APPLICATIONS: 1
+EXTERNAL_SYNTHESIS_DOMAINS: 1
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
+DIRECT_SYNTHESIS_PILOTS_COMPLETED: remains 6
+```
+
+Protocol pressure:
+
+```text
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
+METHOD_COLLAPSE_OR_SURVIVAL_DECISION_FROM_THIS_CASE: none
 ```
 
-Evidence state after Step 9:
-
-```text
-DIRECT_SYNTHESIS_PILOTS_COMPLETED: 6
-SUCCESSFUL_POSITIVE_SYNTHESIS_CASES: 1
-SUCCESSFUL_NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
-SUCCESSFUL_BOUNDARY_SYNTHESIS_CASES: 1
-PRESERVED_FAILED_BASELINE_CHALLENGE_DESIGNS: 1
-SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 2
-SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
-STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
-EXTERNAL_SYNTHESIS_APPLICATIONS: 0
-REPRODUCIBILITY_CASES: 0
-CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
-SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
-```
-
-Interpretation: DSD Synthesis handled a richer typed composition task correctly, but a strong non-DSD baseline supplied with the same semantics matched every measured dimension. This is intentionally retained as `NO_GAIN`; it establishes no superiority.
+A pass/fail result is evidence about the frozen application, not by itself a command to preserve, merge, absorb, or delete a method.
 
 ### Next technical step
 
-Create a separately precommitted `SYN-APP-001` from a stable external public source whose own rules supply component/interface compatibility or composition/assembly legitimacy. Avoid validating a domain grammar invented by this project. Method gain may remain `NOT_ASSESSED` unless a fair external baseline is independently justified.
+Run a separately precommitted deterministic same-project retrace of `SYN-APP-001` from immutable source/precommit/result references. Then add a second materially different external domain before any maturity audit.
