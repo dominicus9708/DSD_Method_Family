@@ -1,6 +1,6 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **Protocol v0.1 established / method-protocol evidence maturity established by SYN-AUD-001 / validation in progress**
+Status: **Protocol v0.1 established / method-protocol evidence maturity established / SYN-IEP-001 prepared / validation in progress**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
@@ -70,6 +70,10 @@ REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_SYNTHESIS_APPLICATIONS: 3
 EXTERNAL_SYNTHESIS_DOMAINS: 3
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
+INDEPENDENT_EVALUATOR_PACKET: prepared
+REFERENCE_KEY_COMMITMENT: frozen
+CLEAN_DISTRIBUTION_RECORD: prepared
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 MEASURED_PRACTICAL_SUPERIORITY: not established
@@ -133,12 +137,35 @@ M15 PASS
 
 `established` means **method/protocol evidence maturity under the current DSD method-family framework**. It does not establish independent evaluator validation, independent replication, broad inter-rater agreement, measured practical superiority, universal external generality, or permanent survival/nonmerger of Synthesis in every future registry revision.
 
+## SYN-IEP-001 independent-evaluator infrastructure
+
+The independent-evaluator packet is now prepared but not executed.
+
+```text
+REVIEWER_PACKET: SYN-IEP-001_reviewer-packet.md
+  commit 6be55803
+SUBMISSION_TEMPLATE: SYN-IEP-001_submission-template.md
+  commit 079cdda0
+REFERENCE_COMMITMENT: SYN-IEP-001_reference-commitment.md
+  commit b785df0e
+  SHA-256 db5d1c505c3ab2d614357525489f3b2a0dd2fc595fff1e715c69f48ceeb7073f
+CLEAN_DISTRIBUTION_RECORD: SYN-IEP-001_distribution-record.md
+  commit af622b9d
+SEMANTIC_CHECKS: 24
+CRITICAL_CHECKS: 10
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
+```
+
+The packet uses two held-out evaluator fixtures: BIPM SI unit composition (`S1-S6`) and USB Type-C physical mating (`P1-P6`). The hidden nonce and canonical reference key are escrowed outside the public method tree. Packet preparation creates no direct or independent validation evidence.
+
 ## Current evidence state
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
+INDEPENDENT_EVALUATOR_PACKET: prepared
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 MEASURED_PRACTICAL_SUPERIORITY: not established
@@ -146,4 +173,4 @@ MEASURED_PRACTICAL_SUPERIORITY: not established
 
 ## Next development step
 
-The dominant remaining weakness is independence rather than additional same-project breadth. Prepare `SYN-IEP-001` independent-evaluator infrastructure with a clean reviewer packet, frozen task/source bundle, immutable submission template, hidden reference answer or commitment, and eligibility criteria. Packet preparation itself must remain infrastructure only and may not be counted as independent validation.
+Internal evidence generation is no longer the highest-value step. Wait for or obtain a genuinely separate `SYN-IEP-001` evaluator submission. The evaluator must freeze the completed submission before any hidden reference-key reveal. Only after the freeze should the project reveal escrow, verify the SHA-256 commitment, and run the predeclared 24-check independent-evidence scoring. Until then, independence remains unestablished.
