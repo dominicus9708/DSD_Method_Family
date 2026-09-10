@@ -1,6 +1,6 @@
 # 06. DSD Comparison / DSD 비교론
 
-Status: **Protocol v0.1 established / CMP-CH-001 and CMP-CH-002 PASS / validation in progress**
+Status: **Protocol v0.1 established / CMP-CH-001 through CMP-CH-003 PASS / validation in progress**
 
 Task: compare two or more supplied structures without reducing comparison to final-output equality, and determine justified correspondence, preserved structure, divergence, strict-equivalence status, and earliest supported branching only within declared comparison/map/element coverage.
 
@@ -46,6 +46,10 @@ DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
 MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 NONEXHAUSTIVE_MAP_FAILURE != RESOLVED_NONCORRESPONDENCE
 PARTIAL_ELEMENT_COVERAGE != STRICT_EQUIVALENCE
+COMPARISON_EQUIVALENCE != INTERNAL_DECOMPOSITION
+COMPARISON_RELATION != TAXONOMY_ASSIGNMENT
+TRACE_DIFFERENCE != AUDIT_CONFORMANCE_VERDICT
+STRUCTURAL_EQUIVALENCE != LINEAGE_IDENTITY
 ```
 
 ## Output / relation / terminal structure
@@ -72,7 +76,7 @@ TERMINAL_COMPARISON_STATUS:
   COMPARISON_BLOCKED
 ```
 
-A resolved comparison may resolve to equivalence, correspondence, or justified noncorrespondence. `UNDERDETERMINED` preserves incomplete closure; `BLOCKED` preserves missing claim-required records or bridges.
+A resolved comparison may resolve to equivalence, correspondence, or justified noncorrespondence. `UNDERDETERMINED` preserves incomplete closure; `BLOCKED` preserves missing claim-required records, representations, or bridges.
 
 ## Protocol-v0.1 forced locks
 
@@ -125,7 +129,29 @@ SCORE: 48/48 PASS
 PROTOCOL_REVISION_REQUIRED: no
 ```
 
-`CMP-CH-002` confirms that failure-to-close and proven noncorrespondence are separate. A missing required bridge is `BLOCKED`, not evidence of structural difference; non-exhaustive failure remains `UNDERDETERMINED`; exhaustive all-map failure may resolve to `NONCORRESPONDENCE`.
+### CMP-CH-003 — direct method-boundary challenge
+
+```text
+PRECOMMIT: 68d330b
+RESULT: b4256d2
+B1 Analysis -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
+   HANDOFF: ANALYSIS_REQUIRED
+B2 Classification -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
+   HANDOFF: CLASSIFICATION_REQUIRED
+B3 Transformation -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
+   HANDOFF: TRANSFORMATION_REQUIRED
+B4 Audit -> COMPARISON_PROFILE / COMPARISON_RESOLVED
+   HANDOFF: AUDIT_REQUIRED
+B5 Provenance/Lineage -> STRICT_EQUIVALENT snapshot structure / COMPARISON_RESOLVED
+   LINEAGE_IDENTITY: not_established
+   HANDOFF: PROVENANCE_LINEAGE_REQUIRED
+ALL CONFORMANCE: CONFORMANT
+ALL GAIN: NOT_ASSESSED
+SCORE: 48/48 PASS
+PROTOCOL_REVISION_REQUIRED: no
+```
+
+`CMP-CH-003` preserved legitimate Comparison outputs while refusing hidden internal decomposition, taxonomy assignment, unsupplied representation conversion, Audit conformance verdicts, and lineage-identity inference.
 
 ## Method boundaries
 
@@ -140,6 +166,11 @@ Aggregation: admitted structure/data -> declared readout
 ```
 
 Comparison may consume neighboring-method outputs but does not absorb their operations or verdicts.
+
+```text
+LEGITIMATE_COMPARISON_RESULT + NEIGHBORING_HANDOFF
+!= METHOD_BOUNDARY_FAILURE
+```
 
 ## Three ledgers
 
@@ -157,10 +188,10 @@ Method gain is assessed only against a separately frozen competent baseline.
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
 PROTOCOL_CREATION_COMMIT: a1700d960e0b41dfe32bf85b6334448d9104100d
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-DIRECT_COMPARISON_PILOTS: 2
+DIRECT_COMPARISON_PILOTS: 3
 POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
-BOUNDARY_COMPARISON_CASES: 0
+BOUNDARY_COMPARISON_CASES: 1
 NO_GAIN_COMPARISON_CASES: 0
 BASELINE_COMPARISON_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -174,6 +205,6 @@ Protocol establishment itself remains infrastructure and is not counted as a dir
 
 ## Next development step
 
-Precommit and execute `CMP-CH-003` direct method-boundary challenge. It should force explicit handoff when a request requires hidden Analysis, Classification, Transformation, Audit, or Provenance/Lineage operations, while preserving any legitimate Comparison result that can still be computed from supplied records.
+Precommit and execute `CMP-CH-004` against a competent baseline. The baseline must receive the same claim-relevant subjects, maps, coverage, bridges, Property/status records, equivalence criteria, and terminal-state information and must not be weakened to manufacture a DSD advantage. A fair `NO_GAIN` result is acceptable.
 
 Case success/failure does not decide method survival, merger, absorption, or deletion.
