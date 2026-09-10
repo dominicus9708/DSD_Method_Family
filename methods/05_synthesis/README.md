@@ -1,6 +1,6 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **Protocol v0.1 established / strongest-reasonable-baseline PASS / three external domains PASS / deterministic retrace PASS / validation in progress**
+Status: **Protocol v0.1 established / method-protocol evidence maturity established by SYN-AUD-001 / validation in progress**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
@@ -39,27 +39,6 @@ PARTIAL_SYNTHESIS != completed synthesized target
 STATIC_COMPOSITION_ORDER != TEMPORAL_ASSEMBLY_SEQUENCE
 ```
 
-## Output / terminal / ledger structure
-
-```text
-OUTPUT_LEVELS:
-  SYNTHESIS_SPACE
-  SYNTHESIZED_TARGET
-  UNIQUE_SYNTHESIZED_TARGET
-  PARTIAL_SYNTHESIS
-
-TERMINAL_SYNTHESIS_STATUS:
-  SYNTHESIS_ADMISSIBLE
-  SYNTHESIS_INFEASIBLE
-  SYNTHESIS_UNDERDETERMINED
-  SYNTHESIS_BLOCKED
-
-THREE LEDGERS:
-  TERMINAL_SYNTHESIS_STATUS
-  SYNTHESIS_PROTOCOL_CONFORMANCE
-  SYNTHESIS_METHOD_GAIN_STATUS
-```
-
 ## Method boundaries
 
 ```text
@@ -71,60 +50,11 @@ Optimization: admissible alternatives -> objective-based selection
 Dynamics/domain process model: time-resolved assembly when claimed
 ```
 
-Success or failure of one case does not determine whether Synthesis must survive, merge, be absorbed, or be deleted. Method independence is evaluated separately by boundary structure, unique task/output/failure criteria, and maturity audit.
+The current corpus supports this operational separation under Protocol v0.1. It does not make method-registry survival, nonmerger, or permanent irreducibility an automatic consequence of case success.
 
-## Direct Protocol-v0.1 evidence
-
-```text
-SYN-CH-001  positive                           28/28 PASS
-SYN-CH-002  negative/failure distinction       36/36 PASS
-SYN-CH-003  executable method-boundary         46/46 PASS
-SYN-CH-004  first NO_GAIN baseline attempt     33/35 FAIL
-            FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
-SYN-CH-005  corrected prospective baseline     37/37 PASS / NO_GAIN
-SYN-CH-006  strongest-reasonable baseline      52/52 PASS / NO_GAIN
-SYN-CH-007  deterministic same-project retrace 48/48 PASS
-```
-
-## External application evidence
+## Evidence architecture
 
 ```text
-SYN-APP-001
-  RFC 3986 / Internet identifier syntax
-  40/40 PASS
-
-SYN-APP-002
-  BIPM SI Brochure 9th ed. v4.01 / physical metrology unit composition
-  46/46 PASS
-
-SYN-APP-003
-  USB Type-C Cable and Connector Specification Release 2.0 mechanical subset
-  physical connector assembly / mating interface
-  PRECOMMIT 4159872
-  RESULT 73faaa0
-  ADMISSIBLE_FAMILY {M1,M2,M6,M7}
-  M3 -> H2
-  M4/M5 -> H1
-  M8/M9/M10 -> H4
-  44/44 PASS
-```
-
-`SYN-APP-003` is the first external case centered on physical plug/receptacle role compatibility, insertion orientation, and cable-end assignment rather than symbolic composition. It preserves:
-
-```text
-TYPE_C_COMPONENT_ADMITTED != DIRECTLY_MATEABLE_WITH_ANY_TYPE_C_COMPONENT
-REVERSIBLE_PLUG_ORIENTATION != ARBITRARY_ROTATIONAL_SYMMETRY
-MECHANICAL_MATING != SOURCE_SINK_ROLE_ESTABLISHMENT
-MECHANICAL_MATING != HOST_DEVICE_ROLE_ESTABLISHMENT
-REVERSIBLE_CABLE_DIRECTION != POWER_ROLE_SYMMETRY
-```
-
-The case is version-specific to the frozen Release-2.0 mechanical subset and does not claim current Release-2.5 conformance, USB-IF certification, USB Power Delivery success, full electrical interoperability, durability, or data-rate capability.
-
-## Current evidence state
-
-```text
-DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
 DIRECT_SYNTHESIS_PILOTS_COMPLETED: 6
 SUCCESSFUL_POSITIVE_SYNTHESIS_CASES: 1
 SUCCESSFUL_NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
@@ -142,12 +72,78 @@ EXTERNAL_SYNTHESIS_DOMAINS: 3
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
-SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
-CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
+MEASURED_PRACTICAL_SUPERIORITY: not established
 ```
 
-The evidence does not establish broad external generality, independent reproducibility, practical superiority, or maturity.
+Key direct records:
+
+```text
+SYN-CH-001  28/28 PASS  positive
+SYN-CH-002  36/36 PASS  terminal-state distinction
+SYN-CH-003  46/46 PASS  Design/Transformation/Aggregation/Optimization boundary
+SYN-CH-004  33/35 FAIL  CHALLENGE_DESIGN_DEFECT preserved
+SYN-CH-005  37/37 PASS / NO_GAIN
+SYN-CH-006  52/52 PASS / NO_GAIN strongest-reasonable baseline
+SYN-CH-007  48/48 PASS  deterministic_same_project retrace
+```
+
+External records:
+
+```text
+SYN-APP-001  RFC 3986 generic URI syntax                  40/40 PASS
+SYN-APP-002  BIPM SI unit composition                     46/46 PASS
+SYN-APP-003  USB Type-C physical mating interface         44/44 PASS
+```
+
+## SYN-AUD-001 maturity result
+
+```text
+AUDIT_ID: DSD-AUDIT-20260910-SYNTHESIS-001
+PRECOMMIT: ba966b5
+RESULT: bae4388
+AUDIT_EXECUTION_VERDICT: PASS
+PRECOMMITTED_REQUIRED_CHECKS: 28/28
+FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+METHOD_MATURITY_CLASSIFICATION: established
+PROMOTION_TO_ESTABLISHED: SUPPORTED
+CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+Axis summary:
+
+```text
+M1 PASS
+M2 PASS
+M3 PASS
+M4 PASS
+M5 CONDITIONAL_PASS
+M6 PASS
+M7 PASS
+M8 PASS
+M9 PASS
+M10 UNRESOLVED_BUT_BOUNDED
+M11 PRESENT_NONFATAL
+M12 PASS
+M13 PASS
+M14 PASS
+M15 PASS
+```
+
+`established` means **method/protocol evidence maturity under the current DSD method-family framework**. It does not establish independent evaluator validation, independent replication, broad inter-rater agreement, measured practical superiority, universal external generality, or permanent survival/nonmerger of Synthesis in every future registry revision.
+
+## Current evidence state
+
+```text
+DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
+SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: established
+CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
+INDEPENDENT_SYNTHESIS_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+MEASURED_PRACTICAL_SUPERIORITY: not established
+```
 
 ## Next development step
 
-Run the first Synthesis maturity audit. The audit should inspect protocol stability, method-boundary integrity, negative/failure taxonomy, `NO_GAIN` honesty, three-domain external breadth, deterministic retraceability, and unresolved independence separately. It must not infer method preservation, merger, absorption, deletion, or promotion from raw PASS/FAIL counts alone.
+The dominant remaining weakness is independence rather than additional same-project breadth. Prepare `SYN-IEP-001` independent-evaluator infrastructure with a clean reviewer packet, frozen task/source bundle, immutable submission template, hidden reference answer or commitment, and eligibility criteria. Packet preparation itself must remain infrastructure only and may not be counted as independent validation.
