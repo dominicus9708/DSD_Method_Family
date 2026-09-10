@@ -1,11 +1,13 @@
 # DSD Synthesis Planning / DSD 합성론 기획
 
-Status: **Protocol v0.1 established / Step 13 third external application complete / validation in progress**  
+Status: **Protocol v0.1 established / first maturity audit complete / method-protocol evidence maturity established / validation in progress**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
 
-Develop DSD Synthesis as an independent method under **Field III: Construction & Transformation**. Synthesis consumes supplied admitted parts or typed component records plus an explicit composition rule and determines which larger constructions are legitimate while preserving component status, interface prerequisites, relations/support, information-loss conditions, and formation-model boundaries.
+Develop DSD Synthesis as an independent method candidate under **Field III: Construction & Transformation**. Synthesis consumes supplied admitted parts or typed component records plus an explicit composition rule and determines which larger constructions are legitimate while preserving component status, interface prerequisites, relations/support, information-loss conditions, and formation-model boundaries.
+
+Method maturity and final registry survival are separate questions.
 
 ## Current source/interface lock / 현재 기준 잠금
 
@@ -52,72 +54,60 @@ Historical artifacts and failed challenges remain preserved rather than rewritte
 11. ✅ `SYN-CH-007` deterministic same-project retrace — **48/48 PASS**.
 12. ✅ `SYN-APP-002` BIPM SI unit-composition external application — **46/46 PASS**.
 13. ✅ `SYN-APP-003` USB Type-C physical mating external application — **44/44 PASS**.
-14. **Next:** first Synthesis maturity audit.
-15. Independent-evaluator infrastructure only when protocol/evidence stability justifies it.
+14. ✅ `SYN-AUD-001` first maturity audit — **28/28 audit-execution PASS**, method/protocol evidence maturity `established`.
+15. **Next:** independent-evaluator infrastructure `SYN-IEP-001`.
+16. Independent evidence scoring only after a genuinely separate immutable evaluator submission exists.
 
-## Step 13 — SYN-APP-003 physical connector assembly
-
-External source lock:
-
-```text
-FROZEN_STANDARD:
-  USB Type-C Cable and Connector Specification Release 2.0 (August 2019)
-  mechanical mating / plug-orientation / role-establishment subset
-SUPPORTING_SOURCE:
-  USB-IF Type-C overview
-EXTERNAL_DOMAIN:
-  physical connector assembly / USB Type-C mating interface
-```
-
-The current USB-IF library has newer Type-C releases, but this case deliberately freezes Release 2.0 as a version-specific public mechanical source. It makes no current Release-2.5 compliance claim.
-
-Precommit/result:
+## Step 14 — SYN-AUD-001 maturity review
 
 ```text
-PRECOMMIT: 4159872
-RESULT: 73faaa0
-```
-
-Execution:
-
-```text
-M1 plug->receptacle orientation A       admissible
-M2 plug->receptacle orientation B       admissible
-M3 quarter-turn invalid orientation     rejected {H2}; downstream NOT_REACHED
-M4 plug->plug direct                    rejected {H1}; downstream NOT_REACHED
-M5 receptacle->receptacle direct        rejected {H1}; downstream NOT_REACHED
-M6 C-to-C cable E1/E2 assignment        admissible; H5 PASS
-M7 swapped cable-end assignment         admissible; H5 PASS
-M8 mechanical mate -> Source/Sink claim rejected {H4}
-M9 mechanical mate -> host/device claim rejected {H4}
-M10 reversible cable direction -> power-role symmetry claim rejected {H4}; H5 PASS
-
-ADMISSIBLE_FAMILY: {M1,M2,M6,M7}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NOT_ASSESSED
-SCORE: 44/44 PASS
-```
-
-Preserved distinctions:
-
-```text
-TYPE_C_COMPONENT_ADMITTED != DIRECTLY_MATEABLE_WITH_ANY_TYPE_C_COMPONENT
-REVERSIBLE_PLUG_ORIENTATION != ARBITRARY_ROTATIONAL_SYMMETRY
-MECHANICAL_MATING != SOURCE_SINK_ROLE_ESTABLISHMENT
-MECHANICAL_MATING != HOST_DEVICE_ROLE_ESTABLISHMENT
-REVERSIBLE_CABLE_DIRECTION != POWER_ROLE_SYMMETRY
-```
-
-Protocol pressure:
-
-```text
+AUDIT_ID: DSD-AUDIT-20260910-SYNTHESIS-001
+PRECOMMIT: ba966b5
+RESULT: bae4388
+AUDIT_EXECUTION_VERDICT: PASS
+PRECOMMITTED_REQUIRED_CHECKS: 28/28
+FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+METHOD_MATURITY_CLASSIFICATION: established
+PROMOTION_TO_ESTABLISHED: SUPPORTED
+CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
-METHOD_COLLAPSE_OR_SURVIVAL_DECISION_FROM_THIS_CASE: none
 ```
 
-## Evidence state after Step 13 / 13단계 후 증거 상태
+Maturity axes:
+
+```text
+M1  dedicated executable protocol                       PASS
+M2  positive/negative terminal discrimination           PASS
+M3  neighboring-method boundary discrimination          PASS
+M4  NO_GAIN preservation                                PASS
+M5  reproducibility/retraceability                       CONDITIONAL_PASS
+M6  external application origin                         PASS
+M7  strongest-reasonable-baseline comparison            PASS
+M8  external source fidelity and bridge discipline      PASS
+M9  established-level evidence breadth                  PASS
+M10 independent/practical-performance evidence          UNRESOLVED_BUT_BOUNDED
+M11 protocol pressure / unresolved core defect          PRESENT_NONFATAL
+M12 maximum-supported-claim discipline                  PASS
+M13 composition-basis / coverage / equivalence discipline PASS
+M14 historical failure / anti-post-hoc preservation     PASS
+M15 method-survival / merger-separation discipline      PASS
+```
+
+The promotion is supported by evidence architecture rather than raw PASS count: executable protocol, terminal-state discrimination, operational neighboring-method boundaries, preserved challenge-design failure, multiple honest `NO_GAIN` comparisons, strongest-reasonable baseline, deterministic retrace, and three materially different external domains.
+
+The label remains bounded:
+
+```text
+ESTABLISHED_METHOD_PROTOCOL_EVIDENCE_MATURITY
+!= INDEPENDENT_VALIDATION
+!= INDEPENDENT_REPLICATION
+!= PRACTICAL_SUPERIORITY
+!= UNIVERSAL_EXTERNAL_GENERALITY
+!= PERMANENT_METHOD_REGISTRY_SURVIVAL
+```
+
+## Evidence state after Step 14 / 14단계 후 증거 상태
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
@@ -138,9 +128,12 @@ EXTERNAL_SYNTHESIS_DOMAINS: 3
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
-SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
+MEASURED_PRACTICAL_SUPERIORITY: not established
+SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
+
+The audit itself added no direct, external, or reproducibility evidence counts.
 
 ## Recording rule / 기록 규칙
 
@@ -148,10 +141,11 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 - Historical planning and failed challenge designs are preserved; corrections are prospective under new Case IDs.
 - `NO_GAIN` is a legitimate result and is separate from correctness/conformance.
 - Success or failure of any single challenge/application/retrace does not decide method survival, merger, absorption, or deletion.
+- Established method/protocol evidence maturity does not freeze the 22-method registry permanently.
 - External validity is not upgraded beyond the source's declared version and scope.
 - Same-project deterministic retrace is not independent replication.
 - Protocol v0.1 is revised only prospectively if direct evidence exposes a genuine protocol defect.
 
 ## Immediate next task / 다음
 
-Run a separately precommitted first Synthesis maturity audit `SYN-AUD-001`. It should evaluate evidence architecture rather than raw pass counts: protocol stability, distinct terminal-state handling, method-boundary integrity, honest failed-test preservation, NO_GAIN behavior under competent baselines, external-domain breadth, deterministic retrace, and unresolved independent validation. Method survival/merger/deletion must remain a separate conclusion, not an automatic consequence of audit score.
+Prepare `SYN-IEP-001` independent-evaluator infrastructure. It should include a clean reviewer packet, frozen external/source bundle or self-contained task, submission template, eligibility/contamination gates, hidden reference answer or commitment, and predeclared scoring. Packet preparation itself remains infrastructure and does not change independent-validation status.
