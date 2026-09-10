@@ -9,13 +9,15 @@ Shared-core or neighboring-method evidence may be referenced but does not automa
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
-DIRECT_SYNTHESIS_PILOTS: 3
-POSITIVE_SYNTHESIS_CASES: 1
-NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
-BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 1
+DIRECT_SYNTHESIS_PILOTS_COMPLETED: 5
+SUCCESSFUL_POSITIVE_SYNTHESIS_CASES: 1
+SUCCESSFUL_NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
+SUCCESSFUL_BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 1
+PRESERVED_FAILED_BASELINE_CHALLENGE_DESIGNS: 1
+SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 1
+SUCCESSFUL_BASELINE_COMPARISON_PASSES: 1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-NO_GAIN_SYNTHESIS_CASES: 0
-BASELINE_COMPARISON_CASES: 0
+STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_SYNTHESIS_APPLICATIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
@@ -24,6 +26,7 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
 Protocol establishment and the 16 pre-protocol attacks do not increase the direct-pilot count.
+A failed direct challenge remains a historical direct attempt but does not fill its successful evidence category.
 
 ## Protocol and planning artifacts
 
@@ -91,40 +94,67 @@ Directly preserved `REJECTED_UNDER_EXHAUSTIVE_COVERAGE != INSUFFICIENT_COVERAGE_
 
 ### SYN-CH-003 — executable method-boundary separation
 
-Precommit `SYN-CH-003_precommit.md` — commit `2eea8ae`.
-Result `SYN-CH-003_method-boundary-separation.md` — commit `cb55dba`.
-
-The same frozen Synthesis family `{S0,S1}` was subjected to four neighboring-operation pressures:
-
 ```text
-D: extra goal requires invented monitoring architecture
-   -> DESIGN_REQUIRED handoff
-T: synthesized structure requested as adjacency-matrix representation
-   -> TRANSFORMATION_REQUIRED handoff
-A: component data requested as scalar readout
-   -> AGGREGATION_REQUIRED handoff
-O: lower-cost admissible target requested
-   -> OPTIMIZATION_REQUIRED handoff
-```
-
-In every subcase:
-
-```text
+PRECOMMIT: 2eea8ae
+RESULT: cb55dba
 SYNTHESIS_ADMISSIBLE_FAMILY: {S0,S1}
-TERMINAL_SYNTHESIS_STATUS: SYNTHESIS_ADMISSIBLE
-SYNTHESIS_PROTOCOL_CONFORMANCE: CONFORMANT
-SYNTHESIS_METHOD_GAIN_STATUS: NOT_ASSESSED
-```
-
-No missing architecture was invented, no transformed representation or aggregate readout was relabeled as Synthesis output, and the cost objective did not collapse `{S0,S1}` into a unique synthesized target.
-
-```text
+D -> DESIGN_REQUIRED
+T -> TRANSFORMATION_REQUIRED
+A -> AGGREGATION_REQUIRED
+O -> OPTIMIZATION_REQUIRED
+ALL TERMINAL: SYNTHESIS_ADMISSIBLE
+ALL CONFORMANCE: CONFORMANT
+ALL GAIN: NOT_ASSESSED
 PRECOMMITTED_REQUIRED_CHECKS: 46/46 PASS
 PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-This fills the first boundary case under the executable protocol.
+This fills the first successful executable boundary case.
+
+### SYN-CH-004 — first NO_GAIN baseline attempt, challenge-design defect preserved
+
+```text
+PRECOMMIT: 1c77a0e
+FIRST RESULT: 29730a5
+POSTEXECUTION AUDIT: fe55899
+STRICT SCORE: 33/35
+CHALLENGE_VERDICT: FAIL
+FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
+```
+
+The frozen rule required `H4 readiness(Y) is defined`, but candidate `Q5 = (M1 ⊙ SRC) ⊙ SNK` placed `SRC` in the middle position while `SRC` had no frozen readiness record. The precommit therefore incorrectly expected `{H2,H3}` instead of `{H2,H3,H4}`. The first result's attempted role-specific exception was not frozen and is invalid. This case does not fill the successful NO_GAIN or baseline-comparison category and does not imply Protocol-v0.1 failure.
+
+### SYN-CH-005 — corrected prospective NO_GAIN baseline case
+
+```text
+PRECOMMIT: 3c6f323
+RESULT: f062d3f
+PREDECESSOR FAILURE PRESERVED: SYN-CH-004
+R1 -> admissible / NONE
+R2 -> admissible / NONE
+R3 -> rejected / {H4}
+R4 -> rejected / {H2}
+R5 -> rejected / {H2,H3}
+DSD FAMILY: {R1,R2}
+B0 FAMILY: {R1,R2}
+DSD TERMINAL: SYNTHESIS_ADMISSIBLE
+DSD CONFORMANCE: CONFORMANT
+DSD METHOD GAIN: NO_GAIN
+PRECOMMITTED_REQUIRED_CHECKS: 37/37 PASS
+```
+
+`B0_TYPED_CHAIN_CHECKER` received the same components, admission flags, interfaces, readiness status classes, rule, candidate basis, coverage, grouping, and target resolution. It preserved all five frozen gain dimensions, so:
+
+```text
+G1 STATUS_DISTINCTION_GAIN: NOT_ESTABLISHED
+G2 FAILURE_TRACEABILITY_GAIN: NOT_ESTABLISHED
+G3 COMPOSITION_CLOSURE_GAIN: NOT_ESTABLISHED
+G4 TARGET_DISTINCTNESS_GAIN: NOT_ESTABLISHED
+G5 RETRACEABILITY_GAIN: NOT_ESTABLISHED
+SYNTHESIS_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+This fills the first successful dedicated NO_GAIN case and first successful competent-baseline comparison at constructed-fixture level. It does not yet establish the broader strongest-reasonable-baseline category.
 
 ## Protocol-v0.1 core guards
 
@@ -156,4 +186,4 @@ A future promotion consideration should accumulate, at minimum: dedicated protoc
 
 ## Immediate next direct-evidence task
 
-Separately precommit the first `NO_GAIN` challenge against a competent baseline receiving the same supplied parts, composition rule, interface records, candidate basis, coverage, and target resolution. The baseline must not be weakened merely to produce a DSD advantage.
+Run a separately precommitted broader strongest-reasonable-baseline comparison on a materially richer Synthesis task. The baseline must remain competent and receive the same composition-relevant information. The fixture should activate multiple Synthesis-specific dimensions at once, preferably composition equivalence/grouping plus property-lift, relation-retention, partial-residual, or formation-effect distinctions. A second `NO_GAIN` outcome must remain acceptable.
