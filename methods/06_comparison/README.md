@@ -1,6 +1,6 @@
 # 06. DSD Comparison / DSD 비교론
 
-Status: **Protocol v0.1 established / CMP-CH-001 positive direct challenge PASS / validation in progress**
+Status: **Protocol v0.1 established / CMP-CH-001 and CMP-CH-002 PASS / validation in progress**
 
 Task: compare two or more supplied structures without reducing comparison to final-output equality, and determine justified correspondence, preserved structure, divergence, strict-equivalence status, and earliest supported branching only within declared comparison/map/element coverage.
 
@@ -44,6 +44,8 @@ MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
 UNSUPPLIED_NORMALIZATION_OR_CONVERSION != COMPARISON_MAP
 DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
 MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
+NONEXHAUSTIVE_MAP_FAILURE != RESOLVED_NONCORRESPONDENCE
+PARTIAL_ELEMENT_COVERAGE != STRICT_EQUIVALENCE
 ```
 
 ## Output / relation / terminal structure
@@ -100,10 +102,30 @@ ALL TERMINAL: COMPARISON_RESOLVED
 ALL CONFORMANCE: CONFORMANT
 ALL GAIN: NOT_ASSESSED
 SCORE: 40/40 PASS
+```
+
+### CMP-CH-002 — negative/failure terminal-state challenge
+
+```text
+PRECOMMIT: c852a68
+RESULT: ca2e91f
+N1 non-exhaustive map failure
+   -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
+N2 partial Property/status coverage
+   -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
+N3 missing claim-required bridge
+   -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
+N4 forward success but required inverse evidence unverified
+   -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
+N5 exhaustive all-map relation failure
+   -> NONCORRESPONDENCE / COMPARISON_RESOLVED
+ALL CONFORMANCE: CONFORMANT
+ALL GAIN: NOT_ASSESSED
+SCORE: 48/48 PASS
 PROTOCOL_REVISION_REQUIRED: no
 ```
 
-The case simultaneously preserved bijective strict equivalence, weaker one-way direct correspondence, bridge-dependent encoded correspondence, and equal-aggregate/structurally-different separation. Map-family coverage and comparison-element coverage remained separate throughout.
+`CMP-CH-002` confirms that failure-to-close and proven noncorrespondence are separate. A missing required bridge is `BLOCKED`, not evidence of structural difference; non-exhaustive failure remains `UNDERDETERMINED`; exhaustive all-map failure may resolve to `NONCORRESPONDENCE`.
 
 ## Method boundaries
 
@@ -135,9 +157,9 @@ Method gain is assessed only against a separately frozen competent baseline.
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
 PROTOCOL_CREATION_COMMIT: a1700d960e0b41dfe32bf85b6334448d9104100d
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-DIRECT_COMPARISON_PILOTS: 1
+DIRECT_COMPARISON_PILOTS: 2
 POSITIVE_COMPARISON_CASES: 1
-NEGATIVE_OR_FAILURE_COMPARISON_CASES: 0
+NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
 BOUNDARY_COMPARISON_CASES: 0
 NO_GAIN_COMPARISON_CASES: 0
 BASELINE_COMPARISON_CASES: 0
@@ -152,6 +174,6 @@ Protocol establishment itself remains infrastructure and is not counted as a dir
 
 ## Next development step
 
-Precommit and execute `CMP-CH-002` negative/failure challenge. It should distinguish `COMPARISON_UNDERDETERMINED`, `COMPARISON_BLOCKED`, and resolved `NONCORRESPONDENCE`, and pressure non-exhaustive map-family closure, partial element coverage, missing required bridge, and missing reverse/inverse evidence.
+Precommit and execute `CMP-CH-003` direct method-boundary challenge. It should force explicit handoff when a request requires hidden Analysis, Classification, Transformation, Audit, or Provenance/Lineage operations, while preserving any legitimate Comparison result that can still be computed from supplied records.
 
 Case success/failure does not decide method survival, merger, absorption, or deletion.
