@@ -29,6 +29,7 @@ REPRODUCIBILITY_RECORD:
 - Shared-rule lessons may be cross-referenced but do not automatically become another method's direct validation.
 - A maturity/status audit is an Audit meta-record and does not itself increase the audited method's direct-pilot count.
 - Independent-evaluator packet preparation is infrastructure only; it becomes evidence only after an eligible external submission is frozen and scored against the precommitted reference.
+- Failed challenge designs remain historical evidence of test pressure but do not fill successful validation categories.
 
 ## Method-specific evidence lanes / 개별 증거 경로
 
@@ -68,13 +69,15 @@ MEASURED_PRACTICAL_SUPERIORITY: not established
   - current maturity classification: `proposed`;
   - current evidence status: `validation_in_progress`;
   - dedicated executable protocol: `PROTOCOL_v0.1.md`, creation commit `8787b24`;
-  - direct Synthesis pilots: `3`;
-  - positive cases: `1`;
-  - negative/failure cases: `1`;
-  - boundary cases under executable Protocol: `1`;
+  - completed direct Synthesis pilots/attempts: `5`;
+  - successful positive cases: `1`;
+  - successful negative/failure cases: `1`;
+  - successful boundary cases under executable Protocol: `1`;
+  - preserved failed baseline challenge designs: `1` (`SYN-CH-004`);
+  - successful NO_GAIN cases: `1` (`SYN-CH-005`);
+  - successful baseline-comparison passes: `1`;
+  - strongest-reasonable-baseline comparison: `not established`;
   - pre-protocol boundary attacks: `16` = 11 no-refinement + 5 non-breaking-refinement, 0 collapse, 0 fundamental interface failure;
-  - NO_GAIN cases: `0`;
-  - baseline comparison cases: `0`;
   - reproducibility cases: `0`;
   - external Synthesis applications: `0`;
   - independent Synthesis validation: `not established`.
@@ -86,8 +89,7 @@ SYN-CH-001
   precommit 4eeba2a
   result 71e5d5c
   28/28 PASS
-  {K1,K2} admissible
-  SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+  positive
 
 SYN-CH-002
   precommit 09fc616
@@ -96,57 +98,47 @@ SYN-CH-002
   I -> SYNTHESIS_INFEASIBLE
   U -> SYNTHESIS_UNDERDETERMINED
   B -> SYNTHESIS_BLOCKED
-  all CONFORMANT / NOT_ASSESSED
 
 SYN-CH-003
   precommit 2eea8ae
   result cb55dba
   46/46 PASS
-  common Synthesis family {S0,S1}
-  D -> DESIGN_REQUIRED handoff
-  T -> TRANSFORMATION_REQUIRED handoff
-  A -> AGGREGATION_REQUIRED handoff
-  O -> OPTIMIZATION_REQUIRED handoff
-  Synthesis family unchanged in all four subcases
-  all SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
-  PROTOCOL_REVISION_REQUIRED: no
-```
+  D -> DESIGN_REQUIRED
+  T -> TRANSFORMATION_REQUIRED
+  A -> AGGREGATION_REQUIRED
+  O -> OPTIMIZATION_REQUIRED
 
-Current Synthesis guards include:
+SYN-CH-004
+  precommit 1c77a0e
+  first result 29730a5
+  postexecution audit fe55899
+  33/35 FAIL
+  CHALLENGE_DESIGN_DEFECT
+  successful NO_GAIN/baseline category increment: 0
+  Protocol failure inferred: no
 
-```text
-INDIVIDUAL_COMPONENT_ADMISSIBILITY != AUTOMATIC_COMPOSABILITY
-EXHAUSTIVE_COMPONENT_LIST != EXHAUSTIVE_COMPOSITION_SPACE
-FORMATION_CLAUSE_VII_COMPOSITION != DOMAIN_SYNTHESIS_LEGITIMACY
-AGGREGATE_READOUT != SYNTHESIZED_WHOLE
-COMPONENT_PROPERTY != WHOLE_PROPERTY
-candidate ID / syntax tree != material synthesized-target distinctness
-PARTIAL_SYNTHESIS != completed synthesized target
-STATIC_COMPOSITION_ORDER != TEMPORAL_ASSEMBLY_SEQUENCE
-REJECTED_UNDER_EXHAUSTIVE_COVERAGE != INSUFFICIENT_COVERAGE_FOR_CLOSURE != MISSING_REQUIRED_INPUT
-local admissibility != requested output-level closure
-```
-
-Executable method-boundary evidence additionally preserves:
-
-```text
-SYNTHESIS_SUCCESS != MIXED_WORKFLOW_COMPLETION
-SYNTHESIS_ADMISSIBLE_FAMILY != OPTIMIZED_SELECTION
-SYNTHESIZED_WHOLE != AGGREGATE_READOUT
-SYNTHESIZED_STRUCTURE != TRANSFORMED_REPRESENTATION
-SUPPLIED_PARTS != DESIGN_LICENSE_TO_INVENT_MISSING_PARTS
+SYN-CH-005
+  corrected prospective precommit 3c6f323
+  result f062d3f
+  37/37 PASS
+  DSD family = B0 family = {R1,R2}
+  SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
+  first successful NO_GAIN case
+  first successful competent-baseline comparison pass
 ```
 
 Current Synthesis state:
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
-DIRECT_SYNTHESIS_PILOTS: 3
-POSITIVE_SYNTHESIS_CASES: 1
-NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
-BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 1
-NO_GAIN_SYNTHESIS_CASES: 0
-BASELINE_COMPARISON_CASES: 0
+DIRECT_SYNTHESIS_PILOTS_COMPLETED: 5
+SUCCESSFUL_POSITIVE_SYNTHESIS_CASES: 1
+SUCCESSFUL_NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
+SUCCESSFUL_BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 1
+PRESERVED_FAILED_BASELINE_CHALLENGE_DESIGNS: 1
+SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 1
+SUCCESSFUL_BASELINE_COMPARISON_PASSES: 1
+STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_SYNTHESIS_APPLICATIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
@@ -154,7 +146,7 @@ SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The next Synthesis task is the first separately precommitted `NO_GAIN` case against a competent baseline. The baseline must receive the same composition-relevant information and must not be weakened to manufacture DSD advantage.
+The next Synthesis task is a broader strongest-reasonable-baseline comparison on a richer composition fixture. A further `NO_GAIN` result must remain acceptable.
 
 ## Promotion expectation / 성숙도 승격 기준
 
