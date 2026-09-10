@@ -118,70 +118,14 @@ commit ca2e91f6a73d36561e77f699c3b221ada0f97dfc
 Five frozen tasks:
 
 ```text
-N1 non-exhaustive family:
-  f11 fails relation preservation
-  f12 remains untested
-  -> UNDETERMINED_CORRESPONDENCE
-  -> COMPARISON_UNDERDETERMINED
-
-N2 partial element coverage:
-  f2 bijective, relation preserved
-  readiness(y1) withheld
-  -> UNDETERMINED_CORRESPONDENCE
-  -> COMPARISON_UNDERDETERMINED
-
-N3 missing required semantic bridge:
-  no substantive map evaluation fabricated
-  -> UNDETERMINED_CORRESPONDENCE
-  -> COMPARISON_BLOCKED
-
-N4 forward success / inverse unverified:
-  f4 bijective and forward relation preserved
-  inverse-preservation evidence not evaluated in frozen run
-  -> UNDETERMINED_CORRESPONDENCE
-  -> COMPARISON_UNDERDETERMINED
-
-N5 exhaustive all-map failure:
-  g1 relation preservation FAIL
-  g2 relation preservation FAIL
-  no untested map remains
-  -> NONCORRESPONDENCE
-  -> COMPARISON_RESOLVED
+N1 -> non-exhaustive map failure -> COMPARISON_UNDERDETERMINED
+N2 -> partial Property/status coverage -> COMPARISON_UNDERDETERMINED
+N3 -> missing required bridge -> COMPARISON_BLOCKED
+N4 -> forward success / inverse unverified -> COMPARISON_UNDERDETERMINED
+N5 -> exhaustive all-map failure -> NONCORRESPONDENCE / COMPARISON_RESOLVED
 ```
 
-Three-ledger state:
-
-```text
-ALL CONFORMANCE: CONFORMANT
-ALL GAIN: NOT_ASSESSED
-TERMINAL:
-  N1,N2,N4 -> COMPARISON_UNDERDETERMINED
-  N3 -> COMPARISON_BLOCKED
-  N5 -> COMPARISON_RESOLVED
-```
-
-Precommitted score:
-
-```text
-A immutable/precommit discipline     8/8
-B N1 non-exhaustive map              8/8
-C N2 partial element coverage        8/8
-D N3 missing bridge                  8/8
-E N4 inverse evidence                8/8
-F N5 exhaustive noncorrespondence    8/8
-TOTAL                               48/48 PASS
-```
-
-Preserved distinctions:
-
-```text
-NONEXHAUSTIVE_MAP_FAILURE != RESOLVED_NONCORRESPONDENCE
-PARTIAL_ELEMENT_COVERAGE != STRICT_EQUIVALENCE
-MISSING_REQUIRED_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
-FORWARD_MAP_SUCCESS != VERIFIED_INVERSE_PRESERVATION
-COMPARISON_UNDERDETERMINED != COMPARISON_BLOCKED
-EXHAUSTIVE_ALL_MAP_FAILURE != NONEXHAUSTIVE_FAILURE_TO_FIND
-```
+Precommitted score: **48/48 PASS**.
 
 Evidence effect:
 
@@ -191,10 +135,105 @@ POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
+```
+
+---
+
+## 2026-09-10 — Step 7: CMP-CH-003 direct method-boundary challenge
+
+Status: **48/48 PASS**
+
+Precommit:
+
+```text
+evidence/method_specific/comparison/CMP-CH-003_precommit.md
+commit 68d330bc43b78591be2ef2c197d6a177302789aa
+blob 22c36cdfabe2518f577ddc05957844108b4f0de8
+```
+
+Result:
+
+```text
+evidence/method_specific/comparison/CMP-CH-003_direct-method-boundary.md
+commit b4256d2a3c71d2a14ce9808668300ec3a879e646
+```
+
+Five neighboring boundaries were frozen and executed:
+
+```text
+B1 Analysis
+  visible structure -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
+  no hidden decomposition invented
+  HANDOFF: ANALYSIS_REQUIRED
+
+B2 Classification
+  visible structure -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
+  no taxonomy assignment
+  HANDOFF: CLASSIFICATION_REQUIRED
+
+B3 Transformation
+  raw representations differ and no transform/bridge is supplied
+  no hidden conversion
+  -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
+  HANDOFF: TRANSFORMATION_REQUIRED
+
+B4 Audit
+  input equal, final result equal, process step different
+  -> COMPARISON_PROFILE / COMPARISON_RESOLVED
+  no Audit pass/fail verdict
+  HANDOFF: AUDIT_REQUIRED
+
+B5 Provenance/Lineage
+  snapshot structure -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
+  lineage identity -> not_established
+  HANDOFF: PROVENANCE_LINEAGE_REQUIRED
+```
+
+Preserved method-boundary distinctions:
+
+```text
+COMPARISON_EQUIVALENCE != INTERNAL_DECOMPOSITION
+COMPARISON_RELATION != TAXONOMY_ASSIGNMENT
+COMPARISON_MAP != UNSUPPLIED_TRANSFORMATION
+TRACE_DIFFERENCE != AUDIT_CONFORMANCE_VERDICT
+STRUCTURAL_EQUIVALENCE != LINEAGE_IDENTITY
+LEGITIMATE_COMPARISON_RESULT + NEIGHBORING_HANDOFF != METHOD_BOUNDARY_FAILURE
+```
+
+Three-ledger result:
+
+```text
+ALL CONFORMANCE: CONFORMANT
+ALL GAIN: NOT_ASSESSED
+B1,B2,B4,B5 TERMINAL: COMPARISON_RESOLVED
+B3 TERMINAL: COMPARISON_BLOCKED
+```
+
+Precommitted score:
+
+```text
+A immutable/precommit discipline     8/8
+B Analysis boundary                  8/8
+C Classification boundary            8/8
+D Transformation boundary            8/8
+E Audit boundary                     8/8
+F Provenance/Lineage boundary        8/8
+TOTAL                               48/48 PASS
+```
+
+Evidence effect:
+
+```text
+DIRECT_COMPARISON_PILOTS: 3
+POSITIVE_COMPARISON_CASES: 1
+NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
+BOUNDARY_COMPARISON_CASES: 1
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 METHOD_SURVIVAL_OR_MERGER_DECISION_FROM_THIS_CASE: none
 ```
 
 ### Next
 
-Separately precommit `CMP-CH-003` direct method-boundary challenge. It should test explicit handoffs for Analysis, Classification, Transformation, Audit, and Provenance/Lineage operations without discarding the legitimate Comparison core where it remains executable.
+Separately precommit `CMP-CH-004` competent-baseline challenge. Give the baseline the same claim-relevant records and capabilities needed to preserve typed status, map/element coverage, bridge provenance, relation classes, terminal distinctions, and retraceability. Do not weaken it to force a DSD advantage; `NO_GAIN` is an acceptable outcome.
