@@ -1,6 +1,6 @@
 # DSD Synthesis Planning / DSD 합성론 기획
 
-Status: **planning / proposed / Step 2 boundary attack complete**  
+Status: **Protocol v0.1 established / proposed maturity / validation pending**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -37,33 +37,43 @@ aggregate equality/readout
 != structural synthesis equality
 ```
 
-The Synthesis method must record explicit bridges and composition rules rather than infer them from names or coexistence.
+The Synthesis method records explicit bridges and composition rules rather than inferring them from names or coexistence.
 
-## Current effective pre-protocol interface / 현재 유효 pre-protocol 인터페이스
+## Protocol lineage / 프로토콜 계보
 
-Step 1 remains preserved as its historical draft.
-Step 2 adds a separate non-breaking amendment rather than rewriting the pre-attack artifact.
+Historical planning artifacts remain preserved:
+
+```text
+TASK_INTERFACE_v0.1-draft.md
+BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md
+TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+```
+
+The executable protocol is now:
+
+```text
+PROTOCOL_v0.1.md
+```
+
+Lineage:
 
 ```text
 TASK_INTERFACE_v0.1-draft.md
 + TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+-> PROTOCOL_v0.1.md
 ```
 
-Boundary-attack record:
-
-```text
-BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md
-```
+The protocol integrates the four refinement groups revealed by the 16 pre-protocol attacks without rewriting the earlier artifacts.
 
 ## Current task definition / 현재 과업 정의
 
-**Input:** supplied components, their identities/status records, an explicit composition rule and its source, composition candidate basis/coverage, cross-component prerequisites, target resolution, active DSD layers, and domain validation criteria.
+**Input:** supplied components and identity/status records; an explicit composition rule and source; arity/order/multiplicity and supplied composition-law profile; grouping policy; composition candidate basis/coverage; target resolution and equivalence rule; interface/prerequisite rules; property-lift rules; retention/loss criteria; formation policy; process scope; active DSD layers and domain criteria.
 
-**Operation:** check component eligibility, lock arity/order/multiplicity and supplied composition laws, test interfaces/prerequisites, apply the supplied rule under the declared grouping policy, audit support/relation/status retention and information loss, preserve residual obligations for partial synthesis, determine formation effect, and construct the synthesis-admissible family.
+**Operation:** lock all claim-relevant inputs before outcome inspection; verify component status; test interfaces/prerequisites; apply only the supplied composition rule and supplied algebraic laws; evaluate property lift, retention/loss, formation effect, residual obligations, and process scope; build the admissible family; judge material target distinctness under the frozen equivalence rule; assign terminal status, conformance, and gain separately.
 
-**Output:** synthesis space or target, candidate rejection basis, retention/loss record, formation-effect record, residual-obligation record when partial, terminal Synthesis status, protocol conformance, method-gain status, handoffs, limits, and reproducibility data.
+**Output:** synthesis space/target or non-success basis; candidate failure sets; retention/loss and formation-effect records; residual obligations when partial; process-scope/lineage record when applicable; three separate ledgers; handoffs, limits, and reproducibility record.
 
-## Initial output levels / 초기 산출 수준
+## Output levels / 산출 수준
 
 ```text
 SYNTHESIS_SPACE
@@ -72,7 +82,7 @@ UNIQUE_SYNTHESIZED_TARGET
 PARTIAL_SYNTHESIS
 ```
 
-## Initial terminal statuses / 초기 종결 상태
+## Terminal statuses / 종결 상태
 
 ```text
 SYNTHESIS_ADMISSIBLE
@@ -81,7 +91,7 @@ SYNTHESIS_UNDERDETERMINED
 SYNTHESIS_BLOCKED
 ```
 
-`SYNTHESIS_INFEASIBLE` requires exhaustive composition coverage or an explicit impossibility argument.
+`SYNTHESIS_INFEASIBLE` requires exhaustive composition coverage or an explicit impossibility argument sufficient for the frozen scope.
 Non-exhaustive failure-to-find is not global infeasibility.
 
 ## Three-ledger separation / 3중 장부 분리
@@ -138,8 +148,8 @@ Audit retraces whether Synthesis followed the frozen rule; Audit does not become
 1. ✅ Define the Synthesis-specific task interface and minimum valid output — `TASK_INTERFACE_v0.1-draft.md`.
 2. ✅ Run pre-protocol boundary attacks — 16 cases; 11 preserved without refinement, 5 preserved with non-breaking refinement, 0 boundary collapse, 0 fundamental interface failure.
 3. ✅ Record required non-breaking refinements separately — `TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`.
-4. **Next:** freeze the first executable `Synthesis Protocol v0.1` from the effective Step-2 interface.
-5. Run a separately precommitted positive constructed Synthesis challenge.
+4. ✅ Freeze the first executable `Synthesis Protocol v0.1` — `PROTOCOL_v0.1.md`, commit `8787b24`.
+5. **Next:** run a separately precommitted positive constructed Synthesis challenge `SYN-CH-001`.
 6. Run negative/failure terminal-status challenge(s).
 7. Run direct method-boundary challenge(s).
 8. Run first `NO_GAIN` case with a competent baseline and precommitted gain criterion.
@@ -174,23 +184,7 @@ COMPONENT_PROPERTY
 
 ## Step 2 result / 2단계 결과
 
-The Step-1 interface was attacked with 16 pre-protocol cases spanning:
-
-```text
-Design handoff / hidden Design
-Transformation-only and Transformation handoff
-Aggregation-only and Aggregation handoff
-Optimization selection
-component-to-whole Property lifting
-commutativity
-associativity / parenthesization
-identity / idempotence
-composition equivalence / canonicalization
-partial-synthesis residual obligations
-static versus temporal assembly feasibility
-component-list versus composition-space exhaustiveness
-Formation Clause VII versus domain synthesis legitimacy
-```
+The Step-1 interface was attacked with 16 pre-protocol cases spanning Design, Transformation, Aggregation, Optimization, component-to-whole Property lifting, composition-law assumptions, target equivalence, partial residuals, process scope, exhaustiveness, and Formation/domain-composition separation.
 
 Aggregate result:
 
@@ -208,37 +202,53 @@ Four refinement groups were required:
 ```text
 R1 COMPOSITION_LAW_PROFILE
    GROUPING_OR_PARENTHESIZATION_POLICY
-
 R2 COMPOSITION_EQUIVALENCE_OR_CANONICALIZATION_RULE
-
 R3 RESIDUAL_OPEN_INTERFACES_OR_OBLIGATIONS
-
 R4 ASSEMBLY_SEQUENCE_OR_PROCESS_SCOPE
 ```
 
-Key new guards:
+## Protocol v0.1 establishment / 실행 프로토콜 동결
+
+Protocol v0.1 incorporates the effective Step-2 interface into an executable S1-S17 sequence.
+It additionally operationalizes the already stated non-optimization target-selection rule as:
 
 ```text
-A ⊙ B notation
-!= supplied commutativity/associativity/identity/idempotence
-
-candidate ID or syntax tree
-!= material synthesized-target distinctness
-
-PARTIAL_SYNTHESIS
-!= completed synthesized target
-
-STATIC_COMPOSITION_ORDER
-!= TEMPORAL_ASSEMBLY_SEQUENCE
+NONOPTIMIZATION_SELECTION_RULE_IF_NEEDED
 ```
 
-The attack did not force Synthesis to absorb a neighboring method.
-The refinements improve explicitness while preserving the Step-1 method identity.
-
-## Evidence state after Step 2 / 2단계 후 증거 상태
+and conditionally records:
 
 ```text
-DEDICATED_SYNTHESIS_PROTOCOL: not established
+LINEAGE_OR_TRANSITION_CHECK
+```
+
+when a time-resolved assembly process contains formation-level identity change.
+
+Key protocol locks before outcome inspection include:
+
+```text
+component identities/status sources
+composition rule and source
+arity/order/multiplicity
+supplied algebraic-law profile
+grouping/parenthesization
+candidate basis and composition coverage
+target resolution
+equivalence/canonicalization rule
+interface/prerequisite rules
+property-lift/redeclaration rule
+retention/loss conditions
+formation-model policy
+assembly process scope
+active DSD layers and domain bridge/standard
+```
+
+No direct evidence is credited merely for protocol establishment.
+
+## Evidence state after Protocol v0.1 / 프로토콜 동결 후 증거 상태
+
+```text
+DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
 DIRECT_SYNTHESIS_PILOTS: 0
 POSITIVE_SYNTHESIS_CASES: 0
 NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 0
@@ -257,8 +267,9 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_pending
 
 - Shared-core and neighboring-method evidence may be referenced but do not automatically become direct Synthesis validation.
 - Historical planning/boundary failures remain preserved and are corrected prospectively through amendment or new case records.
-- The Step-1 task-interface file is not rewritten to hide the boundary-pressure chronology.
+- The Step-1 task-interface and Step-2 attack/amendment files are not rewritten to hide chronology.
 - No baseline superiority is claimed without a frozen baseline and gain criterion.
 - No external authority is replaced by DSD terminology.
 - No Formation Clause VII or Static Aggregation result is upgraded into domain composability without an explicit composition rule/bridge.
 - No static composability result is upgraded into time-resolved assembly feasibility without an explicit process scope/model.
+- Protocol v0.1 is revised only prospectively if direct evidence exposes a genuine protocol defect.
