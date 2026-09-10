@@ -63,13 +63,11 @@ SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Key Synthesis evidence includes `SYN-CH-001` through `SYN-CH-007`, three external applications, `SYN-AUD-001`, and the prepared `SYN-IEP-001` packet. The next Synthesis evidence event requires a genuinely separate evaluator submission frozen before reference reveal.
-
 ### `comparison/` — DSD Comparison / DSD 비교론
 
 Planning opened `2026-09-10`; executable `PROTOCOL_v0.1.md` was established at commit `a1700d960e0b41dfe32bf85b6334448d9104100d` after 16 pre-protocol boundary attacks.
 
-Current Comparison state after `CMP-CH-001`:
+Current Comparison state after `CMP-CH-002`:
 
 ```text
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
@@ -79,9 +77,9 @@ BOUNDARY_PRESERVED_NO_REFINEMENT: 11
 BOUNDARY_PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
 BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
-DIRECT_COMPARISON_PILOTS: 1
+DIRECT_COMPARISON_PILOTS: 2
 POSITIVE_COMPARISON_CASES: 1
-NEGATIVE_OR_FAILURE_COMPARISON_CASES: 0
+NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
 BOUNDARY_COMPARISON_CASES: 0
 NO_GAIN_COMPARISON_CASES: 0
 BASELINE_COMPARISON_CASES: 0
@@ -92,15 +90,7 @@ COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Protocol lineage:
-
-```text
-methods/06_comparison/TASK_INTERFACE_v0.1-draft.md
-+ methods/06_comparison/TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
--> methods/06_comparison/PROTOCOL_v0.1.md
-```
-
-First direct evidence:
+Direct evidence:
 
 ```text
 CMP-CH-001
@@ -111,12 +101,21 @@ CMP-CH-001
   T2 DIRECT_CORRESPONDENCE / strict equivalence no
   T3 ENCODED_CORRESPONDENCE
   T4 aggregate equal + structural NONCORRESPONDENCE under frozen strict family
-  ALL TERMINAL: COMPARISON_RESOLVED
+
+CMP-CH-002
+  PRECOMMIT: c852a68
+  RESULT: ca2e91f
+  SCORE: 48/48 PASS
+  N1 non-exhaustive map failure -> COMPARISON_UNDERDETERMINED
+  N2 partial element coverage -> COMPARISON_UNDERDETERMINED
+  N3 missing required bridge -> COMPARISON_BLOCKED
+  N4 forward success / inverse evidence unverified -> COMPARISON_UNDERDETERMINED
+  N5 exhaustive all-map failure -> NONCORRESPONDENCE / COMPARISON_RESOLVED
   ALL CONFORMANCE: CONFORMANT
   ALL GAIN: NOT_ASSESSED
 ```
 
-Current Comparison guards:
+Current Comparison guards include:
 
 ```text
 AGGREGATE_EQUALITY != STRUCTURAL_EQUIVALENCE
@@ -131,9 +130,10 @@ MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
 UNSUPPLIED_NORMALIZATION_OR_CONVERSION != COMPARISON_MAP
 DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
 MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
+NONEXHAUSTIVE_MAP_FAILURE != RESOLVED_NONCORRESPONDENCE
 ```
 
-The next Comparison event is a separately precommitted `CMP-CH-002` negative/failure challenge.
+The next Comparison event is a separately precommitted `CMP-CH-003` direct method-boundary challenge.
 
 ## Promotion expectation / 성숙도 승격 기준
 
