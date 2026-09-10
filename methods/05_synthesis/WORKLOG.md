@@ -70,69 +70,15 @@ Created:
 
 - `methods/05_synthesis/TASK_INTERFACE_v0.1-draft.md`.
 
-The draft defines:
-
-- minimum task record;
-- composition rule provenance;
-- arity/order/multiplicity lock;
-- composition candidate basis and coverage;
-- interface matching and cross-component prerequisite checks;
-- component-to-whole property lift/redeclaration discipline;
-- support/relation/status/information-loss checks;
-- inherited-formation versus new-formation policy;
-- initial output levels;
-- terminal Synthesis statuses;
-- protocol-conformance and method-gain ledgers;
-- neighboring-method handoffs;
-- minimum reproducibility record.
-
-### Initial output levels
-
-```text
-SYNTHESIS_SPACE
-SYNTHESIZED_TARGET
-UNIQUE_SYNTHESIZED_TARGET
-PARTIAL_SYNTHESIS
-```
-
-### Initial terminal statuses
-
-```text
-SYNTHESIS_ADMISSIBLE
-SYNTHESIS_INFEASIBLE
-SYNTHESIS_UNDERDETERMINED
-SYNTHESIS_BLOCKED
-```
-
-`SYNTHESIS_INFEASIBLE` is restricted to exhaustive composition coverage or an explicit impossibility argument.
-A non-exhaustive failure to find a composition must remain underdetermined rather than being promoted to global impossibility.
+The draft defines minimum task record, composition-rule provenance, arity/order/multiplicity lock, candidate basis/coverage, interface/prerequisite checks, property-lift discipline, retention/loss checks, formation effect, output levels, three ledgers, handoffs, and reproducibility fields.
 
 ### Evidence status
-
-This is planning infrastructure, not direct Synthesis evidence.
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: not established
 DIRECT_SYNTHESIS_PILOTS: 0
-EXTERNAL_SYNTHESIS_APPLICATIONS: 0
-INDEPENDENT_SYNTHESIS_VALIDATION: not established
-SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_pending
 ```
-
-### Next technical step
-
-Construct pre-protocol boundary counterexamples against:
-
-```text
-Design
-Transformation
-Aggregation
-Optimization
-implicit component-to-whole property lifting
-```
-
-The purpose is to try to break the draft interface before writing `Synthesis Protocol v0.1`.
 
 ---
 
@@ -161,26 +107,7 @@ d1f51b2
 
 ### Attack scope
 
-Sixteen cases attacked the draft across:
-
-```text
-hidden Design
-explicit Design -> Synthesis handoff
-Transformation-only mapping
-Transformation -> Synthesis handoff
-Aggregation-only readout
-Aggregation after genuine synthesis
-hidden Optimization
-implicit component -> whole property lift
-unjustified commutativity
-unjustified associativity / parenthesization
-identity / idempotence assumptions
-composition-tree equivalence / uniqueness
-partial-synthesis residual obligations
-static composition vs temporal assembly process
-component-list vs composition-space exhaustiveness
-Formation Clause VII vs domain synthesis legitimacy
-```
+Sixteen cases attacked hidden Design, Design handoff, Transformation-only and Transformation handoff, Aggregation-only and post-Synthesis Aggregation, hidden Optimization, implicit component-to-whole property lift, unjustified commutativity/associativity/identity/idempotence, composition-tree equivalence, partial residuals, static-vs-temporal process scope, composition-space exhaustiveness, and Formation Clause VII/domain synthesis separation.
 
 ### Aggregate result
 
@@ -193,11 +120,7 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 DIRECT_SYNTHESIS_PILOT_INCREMENT: 0
 ```
 
-No case forced Synthesis to merge with Design, Transformation, Aggregation, or Optimization.
-
 ### Required refinement groups
-
-The Step-1 task identity survived, but four missing explicit obligations were exposed.
 
 ```text
 R1
@@ -214,46 +137,153 @@ R4
   ASSEMBLY_SEQUENCE_OR_PROCESS_SCOPE
 ```
 
-R1 prevents notation from silently implying commutativity, associativity, identity, or idempotence.
-
-R2 prevents candidate IDs or syntax trees from being treated as material target distinctness for uniqueness claims.
-
-R3 prevents `PARTIAL_SYNTHESIS` from being mistaken for a completed target when open interfaces, omitted parts, or unresolved prerequisites remain.
-
-R4 separates structural operand/order semantics from a time-resolved assembly process and prevents static composability from becoming an unsupported process-feasibility claim.
-
-### Added nonconformance candidates
-
-```text
-UNDECLARED_GROUPING_OR_PARENTHESIZATION_ASSUMPTION
-UNDECLARED_COMPOSITION_EQUIVALENCE
-PARTIAL_SYNTHESIS_RESIDUAL_OMISSION
-STATIC_COMPOSABILITY_PROMOTED_TO_PROCESS_FEASIBILITY
-```
-
-The existing unjustified associativity and commutativity classes remain.
-
-### Historical preservation rule
-
-`TASK_INTERFACE_v0.1-draft.md` remains the Step-1 pre-attack artifact.
-The effective interface is now represented as:
+`TASK_INTERFACE_v0.1-draft.md` remains the historical Step-1 artifact.
+The effective pre-protocol interface became:
 
 ```text
 TASK_INTERFACE_v0.1-draft.md
 + TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
 ```
 
-The original draft is not silently rewritten after seeing the attack results.
+No direct Synthesis pilot was credited.
 
-### Evidence state after Step 2
+---
 
-The boundary attacks remain pre-protocol planning artifacts and do not count as protocol-level direct evidence.
+## 2026-09-10 — Protocol v0.1 establishment
+
+Status: **first executable Synthesis protocol established / validation pending**
+
+Created:
 
 ```text
-DEDICATED_SYNTHESIS_PROTOCOL: not established
+methods/05_synthesis/PROTOCOL_v0.1.md
+```
+
+Protocol creation commit:
+
+```text
+8787b24
+```
+
+### Protocol lineage
+
+Protocol v0.1 was frozen prospectively from:
+
+```text
+TASK_INTERFACE_v0.1-draft.md
++ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+```
+
+The earlier draft, boundary attacks, and amendment remain unchanged as historical records.
+
+### Executable locks
+
+Protocol v0.1 requires the run to freeze before outcome inspection:
+
+```text
+component identities and status/admission sources
+composition rule and rule source
+arity / order / multiplicity
+supplied composition-law profile
+grouping / parenthesization policy
+composition candidate basis and coverage
+target resolution
+composition equivalence/canonicalization rule
+interface matching and cross-component prerequisites
+property lift/redeclaration rule
+support/relation/information-loss requirements
+new-formation-model policy
+residual obligations for partial synthesis
+assembly sequence/process scope
+active DSD layers, domain bridge, and external standard
+non-optimization selection rule when a single target is returned
+```
+
+### Integrated boundary guards
+
+```text
+INDIVIDUAL_COMPONENT_ADMISSIBILITY
+!= AUTOMATIC_COMPOSABILITY
+
+EXHAUSTIVE_COMPONENT_LIST
+!= EXHAUSTIVE_COMPOSITION_SPACE
+
+FORMATION_CLAUSE_VII_COMPOSITION
+!= DOMAIN_SYNTHESIS_LEGITIMACY
+
+AGGREGATE_READOUT
+!= SYNTHESIZED_WHOLE
+
+COMPONENT_PROPERTY
+!= WHOLE_PROPERTY
+
+CANDIDATE_ID_OR_SYNTAX_TREE_DIFFERENCE
+!= MATERIAL_SYNTHESIZED_TARGET_DIFFERENCE
+
+PARTIAL_SYNTHESIS
+!= COMPLETED_SYNTHESIZED_TARGET
+
+STATIC_COMPOSITION_ORDER
+!= TEMPORAL_ASSEMBLY_SEQUENCE
+```
+
+### Executable sequence
+
+The final protocol uses `S1-S17`:
+
+```text
+S1  task/claim/target resolution/component lock
+S2  composition rule + algebraic-law/grouping lock
+S3  candidate basis/coverage/equivalence lock
+S4  DSD/domain/property/formation/process-scope lock
+S5  component status check
+S6  interface/prerequisite check
+S7  supplied-rule-only composition
+S8  property lift/redeclaration check
+S9  retention/loss/residual-obligation check
+S10 formation effect + lineage obligation check
+S11 build synthesis-admissible family
+S12 material-distinctness evaluation
+S13 output-level check
+S14 terminal Synthesis status
+S15 protocol conformance ledger
+S16 method-gain ledger
+S17 limits/handoffs/reproducibility
+```
+
+### Three-ledger result structure
+
+```text
+TERMINAL_SYNTHESIS_STATUS:
+  SYNTHESIS_ADMISSIBLE
+  SYNTHESIS_INFEASIBLE
+  SYNTHESIS_UNDERDETERMINED
+  SYNTHESIS_BLOCKED
+
+SYNTHESIS_PROTOCOL_CONFORMANCE:
+  CONFORMANT
+  NONCONFORMANT
+  UNDETERMINED
+
+SYNTHESIS_METHOD_GAIN_STATUS:
+  GAIN_ESTABLISHED
+  NO_GAIN
+  NOT_ASSESSED
+```
+
+Protocol establishment does not itself populate any result ledger for a direct case.
+
+### Evidence state after protocol freeze
+
+```text
+DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
 DIRECT_SYNTHESIS_PILOTS: 0
-PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
+POSITIVE_SYNTHESIS_CASES: 0
+NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 0
 BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 0
+NO_GAIN_SYNTHESIS_CASES: 0
+BASELINE_COMPARISON_CASES: 0
+REPRODUCIBILITY_CASES: 0
 EXTERNAL_SYNTHESIS_APPLICATIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -262,4 +292,12 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_pending
 
 ### Next technical step
 
-Freeze the first executable `Synthesis Protocol v0.1` from the effective Step-2 interface, explicitly integrating the four refinement groups without rewriting the historical Step-1 and Step-2 artifacts.
+Create a separately committed precommit for the first positive direct challenge:
+
+```text
+SYN-CH-001
+CASE_CLASS: positive
+PROTOCOL: v0.1
+```
+
+The positive fixture should include at least one admitted composition and one explicit interface/prerequisite rejection, and it must freeze target resolution, equivalence rule, composition coverage, composition law, and the expected check count before evaluation.
