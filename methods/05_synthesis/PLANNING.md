@@ -1,6 +1,6 @@
 # DSD Synthesis Planning / DSD 합성론 기획
 
-Status: **Protocol v0.1 established / Step 9 strongest-reasonable-baseline comparison complete / validation in progress**  
+Status: **Protocol v0.1 established / Step 10 first external application complete / validation in progress**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -24,6 +24,7 @@ Key constraints:
 Formation Clause VII finite composition != universal domain composability
 component property != automatic whole property
 aggregate equality/readout != structural synthesis equality
+single-case success/failure != method survival/merger/deletion decision
 ```
 
 ## Protocol lineage / 프로토콜 계보
@@ -68,129 +69,84 @@ THREE LEDGERS:
 7. ✅ `SYN-CH-003` direct method-boundary — **46/46 PASS**.
 8. ✅ First `NO_GAIN` stage — `SYN-CH-004` **33/35 FAIL** challenge-design defect preserved; corrected `SYN-CH-005` **37/37 PASS / NO_GAIN**.
 9. ✅ `SYN-CH-006` broader strongest-reasonable-baseline comparison — **52/52 PASS / NO_GAIN**, category established at constructed-evidence level.
-10. **Next:** first external/domain application with externally supplied composition legitimacy.
-11. Dedicated reproducibility/retrace record.
-12. DSD Audit maturity review after evidence architecture is materially populated.
-13. Independent-evaluator infrastructure only when protocol/evidence stability justifies it.
-
-## Step 5 — SYN-CH-001
-
-```text
-PRECOMMIT: 4eeba2a
-RESULT: 71e5d5c
-ADMISSIBLE_FAMILY: {K1,K2}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NOT_ASSESSED
-SCORE: 28/28 PASS
-```
-
-## Step 6 — SYN-CH-002
-
-```text
-PRECOMMIT: 09fc616
-RESULT: 7dac87c
-I -> SYNTHESIS_INFEASIBLE
-U -> SYNTHESIS_UNDERDETERMINED
-B -> SYNTHESIS_BLOCKED
-SCORE: 36/36 PASS
-PROTOCOL_REVISION_REQUIRED: no
-```
-
-## Step 7 — SYN-CH-003
-
-```text
-PRECOMMIT: 2eea8ae
-RESULT: cb55dba
-BASE FAMILY: {S0,S1}
-D -> DESIGN_REQUIRED
-T -> TRANSFORMATION_REQUIRED
-A -> AGGREGATION_REQUIRED
-O -> OPTIMIZATION_REQUIRED
-SCORE: 46/46 PASS
-PROTOCOL_REVISION_REQUIRED: no
-```
-
-## Step 8 — first NO_GAIN stage
-
-```text
-SYN-CH-004
-  PRECOMMIT: 1c77a0e
-  FIRST RESULT: 29730a5
-  POSTEXECUTION AUDIT: fe55899
-  33/35 FAIL
-  FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
-
-SYN-CH-005
-  PRECOMMIT: 3c6f323
-  RESULT: f062d3f
-  DSD FAMILY = B0 FAMILY = {R1,R2}
-  SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
-  37/37 PASS
-```
-
-The failed predecessor was not rewritten. `SYN-CH-005` fixed the missing middle-role readiness record prospectively under a new Case ID.
+10. ✅ `SYN-APP-001` first external application — RFC 3986 generic URI composition, **40/40 PASS**.
+11. **Next:** deterministic same-project retrace/reproducibility of `SYN-APP-001`.
+12. Second materially different external domain.
+13. DSD Audit maturity review only after evidence architecture is materially populated.
+14. Independent-evaluator infrastructure only when protocol/evidence stability justifies it.
 
 ## Step 9 — SYN-CH-006 broader strongest-reasonable-baseline
-
-Precommit and result:
 
 ```text
 PRECOMMIT: 4a6c1fe
 RESULT: 8ad51b5
 BASELINE: B1_TYPED_COMPOSITION_GRAPH_CHECKER
-```
-
-Activated simultaneously:
-
-```text
-supplied associativity + left/right grouping
-canonical material-target equivalence
-explicit L_READY whole-Property lift
-DEFINED_ZERO / DEFINED_NONZERO / APPLICABLE_BUT_UNDEFINED
-staged H1-H2 prerequisite -> H3-H5 NOT_REACHED discipline
-adjacency-relation retention
-same_background vs new_formation_required
-raw-candidate vs canonical-class closure
-```
-
-Execution:
-
-```text
-A1 -> admissible / C0
-A2 -> admissible / C0
-A3 -> admissible / C1
-A4 -> admissible / C1
-A5 -> rejected {H3}
-A6 -> rejected {H2}; H3-H5 NOT_REACHED
-A7 -> rejected {H4}
-A8 -> rejected {H5}
-
-RAW DSD FAMILY: {A1,A2,A3,A4}
-RAW B1 FAMILY: {A1,A2,A3,A4}
-CANONICAL DSD FAMILY: {C0,C1}
-CANONICAL B1 FAMILY: {C0,C1}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
+RAW DSD = B1 = {A1,A2,A3,A4}
+CANONICAL DSD = B1 = {C0,C1}
 GAIN: NO_GAIN
 SCORE: 52/52 PASS
+STRONGEST_REASONABLE_BASELINE_COMPARISON:
+  established_at_constructed_evidence_level
 ```
 
-Gain criteria:
+The competent baseline was not weakened and matched DSD on every frozen claim-relevant dimension.
+
+## Step 10 — SYN-APP-001 first external application
+
+External source:
 
 ```text
-G1 STATUS_AND_PROPERTY_LIFT_GAIN: NOT_ESTABLISHED
-G2 FAILURE_TRACEABILITY_GAIN: NOT_ESTABLISHED
-G3 GROUPING_EQUIVALENCE_GAIN: NOT_ESTABLISHED
-G4 RELATION_RETENTION_GAIN: NOT_ESTABLISHED
-G5 FORMATION_EFFECT_GAIN: NOT_ESTABLISHED
-G6 COMPOSITION_CLOSURE_GAIN: NOT_ESTABLISHED
-G7 RETRACEABILITY_GAIN: NOT_ESTABLISHED
+RFC 3986 / STD 66
+Uniform Resource Identifier (URI): Generic Syntax
+external domain: Internet identifier syntax / URI generic syntax
 ```
 
-The competent baseline was not weakened and matched DSD on every frozen claim-relevant dimension. Therefore the broader comparison legitimately returns a second `NO_GAIN`.
+Precommit/result:
 
-## Evidence state after Step 9 / 9단계 후 증거 상태
+```text
+PRECOMMIT: 29ea45a
+RESULT: 6985246
+```
+
+Frozen task: compose declared generic-URI components under the external RFC grammar while preserving component identity and optional-component presence state.
+
+```text
+R1  admissible
+R2  admissible
+R3  admissible; query PRESENT_EMPTY preserved
+R4  admissible; fragment PRESENT_EMPTY preserved
+R5  rejected {H2}; authority/path branch mismatch
+R6  rejected {H2}; no-authority path begins //
+R7  rejected {H1}; invalid generic scheme start
+R8  rejected {H4}; raw characters parse only under a different query/fragment decomposition
+R9  rejected {H3}; raw-space path lexical failure
+R10 admissible
+R11 admissible; query + fragment PRESENT_EMPTY preserved
+R12 admissible at RFC3986 generic-syntax level; authority PRESENT_EMPTY preserved
+```
+
+Closure and ledgers:
+
+```text
+SYNTHESIS_ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
+TERMINAL: SYNTHESIS_ADMISSIBLE
+CONFORMANCE: CONFORMANT
+GAIN: NOT_ASSESSED
+SCORE: 40/40 PASS
+```
+
+Scope guards retained:
+
+```text
+RFC3986_GENERIC_SYNTAX_ADMISSIBLE != SCHEME_SPECIFIC_URI_VALIDITY
+GENERIC_SYNTACTIC_COMPOSITION != RESOURCE_RESOLUTION_SUCCESS
+GENERIC_SYNTACTIC_COMPOSITION != SECURITY_OR_TRUSTWORTHINESS
+PRESENT_EMPTY != ABSENT
+```
+
+This application adds one external application and one external domain but does not alter the constructed-pilot count or maturity classification.
+
+## Evidence state after Step 10 / 10단계 후 증거 상태
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
@@ -204,7 +160,9 @@ SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 REPRODUCIBILITY_CASES: 0
-EXTERNAL_SYNTHESIS_APPLICATIONS: 0
+EXTERNAL_SYNTHESIS_APPLICATIONS: 1
+EXTERNAL_SYNTHESIS_DOMAINS: 1
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
@@ -216,13 +174,15 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 - Historical planning and failed challenge designs are preserved; corrections are prospective under new Case IDs.
 - A competent baseline is not weakened to manufacture a DSD advantage.
 - `NO_GAIN` is a legitimate result and is separate from correctness/conformance.
+- Success or failure of an individual challenge/application does not itself determine whether the method survives, merges, or is deleted.
 - Grouping/equivalence is activated only when supplied by composition law and target-resolution rules.
 - Component Property does not become whole Property without explicit lift/redeclaration.
 - Relation loss and formation effect remain claim-relevant when the task includes them.
 - No Formation Clause VII or Static Aggregation result is upgraded into domain composability without explicit legitimacy.
 - No static composability result is upgraded into time-resolved assembly feasibility without explicit process scope/model.
+- External-source generic validity is not upgraded into stronger domain-specific validity absent the required external specification.
 - Protocol v0.1 is revised only prospectively if direct evidence exposes a genuine protocol defect.
 
 ## Immediate next task / 다음
 
-Precommit the first external Synthesis application `SYN-APP-001`. Prefer a stable public source that supplies its own component/interface compatibility or assembly grammar so that domain composability is not invented by this project. Keep external-source compliance separate from Synthesis protocol conformance. Method gain should remain `NOT_ASSESSED` unless a fair baseline is independently justified.
+Precommit and execute a deterministic same-project retrace of `SYN-APP-001` using only the immutable RFC-source lock, `SYN-APP-001` precommit, and result records. The retrace must reconstruct all twelve candidate verdicts, the admissible family, presence-state distinctions, scope guards, and three ledgers without changing the original case.
