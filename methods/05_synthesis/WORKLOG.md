@@ -27,7 +27,7 @@ Created `TASK_INTERFACE_v0.1-draft.md` with component identity/status, compositi
 Created:
 
 ```text
-BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md  d089b04
+BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md   d089b04
 TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md d1f51b2
 ```
 
@@ -57,13 +57,6 @@ The Step-1 draft remained historical and was not rewritten.
 ## 2026-09-10 — Step 4: Protocol v0.1 establishment
 
 Created `methods/05_synthesis/PROTOCOL_v0.1.md` at commit `8787b24`.
-
-```text
-TASK_INTERFACE_v0.1-draft.md
-+ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
--> PROTOCOL_v0.1.md
-```
-
 Executable sequence: `S1-S17`. Protocol creation itself added no direct pilot.
 
 ---
@@ -71,16 +64,8 @@ Executable sequence: `S1-S17`. Protocol creation itself added no direct pilot.
 ## 2026-09-10 — Step 5: SYN-CH-001 positive direct challenge
 
 ```text
-PRECOMMIT: 4eeba2aaa7e684460a5c824a62301b6e8ed89b77
-RESULT: 71e5d5cfe519e7afbe2584b667354632d77e9c44
-```
-
-Result:
-
-```text
-K1,K2 -> admissible
-K3 -> rejected {H3}
-K4-K6 -> rejected {H2}
+PRECOMMIT: 4eeba2a
+RESULT: 71e5d5c
 ADMISSIBLE_FAMILY: {K1,K2}
 TERMINAL: SYNTHESIS_ADMISSIBLE
 CONFORMANCE: CONFORMANT
@@ -88,147 +73,181 @@ GAIN: NOT_ASSESSED
 SCORE: 28/28 PASS
 ```
 
-Evidence effect:
-
-```text
-DIRECT_SYNTHESIS_PILOTS: 1
-POSITIVE_SYNTHESIS_CASES: 1
-```
+Evidence effect: direct pilot 1, successful positive 1.
 
 ---
 
 ## 2026-09-10 — Step 6: SYN-CH-002 negative/failure challenge
 
 ```text
-PRECOMMIT: 09fc616835880e28aabcb4e9b47182d620a0da30
-RESULT: 7dac87c90e9cab4e082bdb66ed09cd8b6a53ed78
-```
-
-Three frozen subcases:
-
-```text
-I: exhaustive all rejected
-   -> SYNTHESIS_INFEASIBLE / CONFORMANT / NOT_ASSESSED
-U: non-exhaustive uniqueness closure
-   -> SYNTHESIS_UNDERDETERMINED / CONFORMANT / NOT_ASSESSED
-B: required composition rule unavailable
-   -> SYNTHESIS_BLOCKED / CONFORMANT / NOT_ASSESSED
-```
-
-```text
+PRECOMMIT: 09fc616
+RESULT: 7dac87c
+I -> SYNTHESIS_INFEASIBLE
+U -> SYNTHESIS_UNDERDETERMINED
+B -> SYNTHESIS_BLOCKED
 SCORE: 36/36 PASS
 PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-Evidence effect:
-
-```text
-DIRECT_SYNTHESIS_PILOTS: 2
-POSITIVE_SYNTHESIS_CASES: 1
-NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
-```
+Evidence effect: direct pilot 2, successful negative/failure 1.
 
 ---
 
 ## 2026-09-10 — Step 7: SYN-CH-003 direct method-boundary challenge
 
-Status: **third direct Protocol-v0.1 pilot complete / 46/46 PASS**
-
-### Precommit
-
 ```text
-evidence/method_specific/synthesis/SYN-CH-003_precommit.md
-commit: 2eea8aea66c080785d04c8d70830e77b545b5a2e
-blob: 8c31bab8cbe3868621520e92e04a1c522ea40bee
+PRECOMMIT: 2eea8ae
+RESULT: cb55dba
+BASE FAMILY: {S0,S1}
+D -> DESIGN_REQUIRED
+T -> TRANSFORMATION_REQUIRED
+A -> AGGREGATION_REQUIRED
+O -> OPTIMIZATION_REQUIRED
+SCORE: 46/46 PASS
+PROTOCOL_REVISION_REQUIRED: no
 ```
 
-### Shared fixture
+Evidence effect: direct pilot 3, successful executable boundary 1.
+
+---
+
+## 2026-09-10 — Step 8A: SYN-CH-004 first NO_GAIN baseline attempt
+
+Status: **challenge-design defect discovered after first execution record**
+
+Precommit:
 
 ```text
-S0 = (SRC ⊙ M0) ⊙ SNK
-S1 = (SRC ⊙ M1) ⊙ SNK
-ADMISSIBLE_FAMILY: {S0,S1}
+evidence/method_specific/synthesis/SYN-CH-004_precommit.md
+commit: 1c77a0e293551b0d9e9b0a0ba7c6bddc4d78ed8e
 ```
 
-Both targets are admissible under the frozen `R_CHAIN_3` rule. The challenge then adds four operations that are intentionally outside the Synthesis operation itself.
-
-### Boundary results
+First result record:
 
 ```text
-D — monitoring output gamma required, but no new component/connector supplied
-    Synthesis family remains {S0,S1}
-    -> DESIGN_REQUIRED
-    no architecture fabricated
-
-T — adjacency-matrix representation requested for S0
-    Synthesis family remains {S0,S1}
-    -> TRANSFORMATION_REQUIRED
-    no transformed representation produced as Synthesis output
-
-A — scalar sum of component readout weights requested
-    Synthesis family remains {S0,S1}
-    -> AGGREGATION_REQUIRED
-    no scalar readout substituted for the synthesized whole
-
-O — lower-cost admissible target requested
-    cost(M0)=1, cost(M1)=3
-    Synthesis family remains {S0,S1}
-    -> OPTIMIZATION_REQUIRED
-    S0 is not selected by Synthesis
+evidence/method_specific/synthesis/SYN-CH-004_no-gain-typed-chain-baseline.md
+commit: 29730a54442a0c102148db97308ac859ff7fd4a5
 ```
 
-Every Synthesis subcase retained:
+Postexecution audit:
 
 ```text
+evidence/method_specific/synthesis/SYN-CH-004_postexecution-audit.md
+commit: fe55899cb08946d15e8d901d68f6097837b82b7d
+```
+
+Defect:
+
+```text
+Frozen H4: readiness(Y) is defined
+Q5 = (M1 ⊙ SRC) ⊙ SNK
+Y = SRC
+SRC readiness record: absent in SYN-CH-004 precommit
+Precommitted Q5 failure set: {H2,H3}
+Strict failure set: {H2,H3,H4}
+```
+
+The first execution attempted an uncommitted role-specific H4 exception to preserve the expected answer. The postexecution audit rejected that move as invalid post-hoc reasoning.
+
+Strict score:
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 35
+PASSED: 33
+FAILED: 2
+CHALLENGE_VERDICT: FAIL
+FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
+PROTOCOL_FAILURE_INFERRED: no
+PROTOCOL_REVISION_REQUIRED: no
+```
+
+Evidence handling:
+
+```text
+DIRECT_ATTEMPT: preserved
+SUCCESSFUL_NO_GAIN_VALIDATION: no
+SUCCESSFUL_BASELINE_COMPARISON: no
+```
+
+The predecessor is not rewritten into a pass.
+
+---
+
+## 2026-09-10 — Step 8B: SYN-CH-005 prospective corrected NO_GAIN challenge
+
+Status: **corrected new Case ID / 37/37 PASS / NO_GAIN**
+
+Precommit:
+
+```text
+evidence/method_specific/synthesis/SYN-CH-005_precommit.md
+commit: 3c6f3239e817343223f44a308c3554deb11fad6e
+```
+
+Correction was frozen prospectively by giving `SRC` and `SNK` explicit readiness records before execution. No SYN-CH-004 record was edited to manufacture success.
+
+Result:
+
+```text
+evidence/method_specific/synthesis/SYN-CH-005_no-gain-typed-chain-baseline.md
+commit: f062d3f3f19a41c8bcb5d9b8b750cd48086fa215
+```
+
+Execution:
+
+```text
+R1 -> admissible / NONE
+R2 -> admissible / NONE
+R3 -> rejected / {H4}
+R4 -> rejected / {H2}
+R5 -> rejected / {H2,H3}
+
+DSD FAMILY: {R1,R2}
+B0 FAMILY: {R1,R2}
 TERMINAL_SYNTHESIS_STATUS: SYNTHESIS_ADMISSIBLE
 SYNTHESIS_PROTOCOL_CONFORMANCE: CONFORMANT
-SYNTHESIS_METHOD_GAIN_STATUS: NOT_ASSESSED
 ```
 
-### Result record
+Gain evaluation:
 
 ```text
-evidence/method_specific/synthesis/SYN-CH-003_method-boundary-separation.md
-commit: cb55dbaf0cefcfb25cc09a12c8a24b5df3e4dc53
+G1 STATUS_DISTINCTION_GAIN: NOT_ESTABLISHED
+G2 FAILURE_TRACEABILITY_GAIN: NOT_ESTABLISHED
+G3 COMPOSITION_CLOSURE_GAIN: NOT_ESTABLISHED
+G4 TARGET_DISTINCTNESS_GAIN: NOT_ESTABLISHED
+G5 RETRACEABILITY_GAIN: NOT_ESTABLISHED
+SYNTHESIS_METHOD_GAIN_STATUS: NO_GAIN
 ```
 
 Scoring:
 
 ```text
-PRECOMMITTED_REQUIRED_CHECKS: 46
-PASSED: 46
+PRECOMMITTED_REQUIRED_CHECKS: 37
+PASSED: 37
 FAILED: 0
 CHALLENGE_VERDICT: PASS
 PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-### Direct evidence effect
+Evidence state after corrected Step 8:
 
 ```text
-DIRECT_CONSTRUCTED_PILOT_INCREMENT: +1
-BOUNDARY_SYNTHESIS_CASE_INCREMENT: +1
-DIRECT_SYNTHESIS_PILOTS: 3
-POSITIVE_SYNTHESIS_CASES: 1
-NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
-BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 1
+DIRECT_SYNTHESIS_PILOTS_COMPLETED: 5
+SUCCESSFUL_POSITIVE_SYNTHESIS_CASES: 1
+SUCCESSFUL_NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
+SUCCESSFUL_BOUNDARY_SYNTHESIS_CASES: 1
+PRESERVED_FAILED_BASELINE_CHALLENGE_DESIGNS: 1
+SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 1
+SUCCESSFUL_BASELINE_COMPARISON_PASSES: 1
+STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 ```
 
 ### Interpretation
 
-The run directly preserves:
-
-```text
-SYNTHESIS_SUCCESS != MIXED_WORKFLOW_COMPLETION
-SYNTHESIS_ADMISSIBLE_FAMILY != OPTIMIZED_SELECTION
-SYNTHESIZED_WHOLE != AGGREGATE_READOUT
-SYNTHESIZED_STRUCTURE != TRANSFORMED_REPRESENTATION
-SUPPLIED_PARTS != DESIGN_LICENSE_TO_INVENT_MISSING_PARTS
-```
+The corrected case shows that DSD Synthesis can preserve an honest `NO_GAIN` result when a competent non-DSD typed checker receives the same raw information and matches every frozen comparison dimension. This is not evidence of DSD superiority.
 
 ### Next technical step
 
-Separately precommit the first `NO_GAIN` challenge against a competent baseline receiving the same parts, rule, interfaces, candidate basis, coverage, and target resolution. The baseline must be strong enough that a `NO_GAIN` result is allowed.
+Build a separately precommitted broader strongest-reasonable-baseline comparison with a richer fixture that activates multiple Synthesis-specific dimensions simultaneously, preferably composition equivalence/grouping plus property-lift/redeclaration, relation retention, partial residual, or formation-effect distinctions. A second `NO_GAIN` result must remain acceptable.
