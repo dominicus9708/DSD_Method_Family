@@ -69,9 +69,15 @@ Key Synthesis evidence includes `SYN-CH-001` through `SYN-CH-007`, three externa
 
 Planning opened `2026-09-10` after the Synthesis internal-development track reached the point where further high-value evidence requires an external evaluator.
 
+Current Comparison planning state after Step 2:
+
 ```text
 DEDICATED_COMPARISON_PROTOCOL: not established
-PRE_PROTOCOL_BOUNDARY_ATTACKS: 0
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
+BOUNDARY_PRESERVED_NO_REFINEMENT: 11
+BOUNDARY_PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
 DIRECT_COMPARISON_PILOTS: 0
 POSITIVE_COMPARISON_CASES: 0
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 0
@@ -89,12 +95,41 @@ Planning artifacts:
 
 ```text
 methods/06_comparison/TASK_INTERFACE_v0.1-draft.md
+methods/06_comparison/BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md
+methods/06_comparison/TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
 methods/06_comparison/PLANNING.md
 methods/06_comparison/WORKLOG.md
 evidence/method_specific/comparison/README.md
 ```
 
-Initial Comparison guards:
+Step-2 result:
+
+```text
+BOUNDARY_ATTACKS_RUN: 16
+PRESERVED_NO_REFINEMENT: 11
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+DIRECT_COMPARISON_PILOT_INCREMENT: 0
+```
+
+Four non-breaking refinement groups were forced:
+
+```text
+R1 MAP_PROPERTY_REQUIREMENT_PROFILE
+   REVERSE_DIRECTION_OR_INVERSE_POLICY
+
+R2 COMPARISON_ELEMENT_COVERAGE
+   CLOSURE_REQUIREMENT_BY_OUTPUT_LEVEL
+
+R3 PRECOMPARISON_TRANSFORMATION_POLICY
+   REPRESENTATION_PROVENANCE
+
+R4 LINEAGE_IDENTITY_CLAIM_POLICY
+   LINEAGE_EVIDENCE_SOURCE_OR_HANDOFF
+```
+
+Current Comparison guards:
 
 ```text
 AGGREGATE_EQUALITY != STRUCTURAL_EQUIVALENCE
@@ -104,10 +139,14 @@ EMBEDDING != STRICT_EQUIVALENCE
 FIRST_OBSERVED_DIFFERENCE != FIRST_JUSTIFIED_BRANCH_POINT
 PARTIAL_CORRESPONDENCE != GLOBAL_EQUIVALENCE
 ENCODING_REQUIRED_CORRESPONDENCE != DIRECT_CORRESPONDENCE
-SIMILAR_OUTPUT != SHARED_LINEAGE_OR_IDENTITY
+FORWARD_MAP_SUCCESS != REVERSE_MAP_SUCCESS
+MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
+UNSUPPLIED_NORMALIZATION_OR_CONVERSION != COMPARISON_MAP
+DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
+MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 ```
 
-These planning records are not direct evidence. The next internal step is pre-protocol boundary attack and only the refinements actually forced by those attacks should enter the first executable Comparison protocol.
+These planning records are not direct evidence. The next internal step is to integrate the Step-1 draft and Boundary Amendment 001 into the first executable `Comparison Protocol v0.1`.
 
 ## Promotion expectation / 성숙도 승격 기준
 
