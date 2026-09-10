@@ -1,6 +1,6 @@
 # DSD Comparison Direct Evidence / DSD 비교론 직접 증거
 
-Status: **Protocol v0.1 established / positive and negative-failure direct challenges PASS / validation in progress**
+Status: **Protocol v0.1 established / positive + negative-failure + direct-boundary challenges PASS / validation in progress**
 
 This lane records evidence that directly tests **DSD Comparison / DSD 비교론**.
 
@@ -14,10 +14,10 @@ BOUNDARY_PRESERVED_NO_REFINEMENT: 11
 BOUNDARY_PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
 BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
-DIRECT_COMPARISON_PILOTS: 2
+DIRECT_COMPARISON_PILOTS: 3
 POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
-BOUNDARY_COMPARISON_CASES: 0
+BOUNDARY_COMPARISON_CASES: 1
 NO_GAIN_COMPARISON_CASES: 0
 BASELINE_COMPARISON_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -64,39 +64,56 @@ ALL GAIN: NOT_ASSESSED
 PRECOMMIT: c852a68
 RESULT: ca2e91f
 SCORE: 48/48 PASS
+N1 non-exhaustive map failure -> COMPARISON_UNDERDETERMINED
+N2 partial Property/status coverage -> COMPARISON_UNDERDETERMINED
+N3 missing required semantic bridge -> COMPARISON_BLOCKED
+N4 forward map success, inverse evidence unverified -> COMPARISON_UNDERDETERMINED
+N5 exhaustive all-map failure -> NONCORRESPONDENCE / COMPARISON_RESOLVED
+ALL CONFORMANCE: CONFORMANT
+ALL GAIN: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED: no
+```
 
-N1 non-exhaustive map failure
-  -> UNDETERMINED_CORRESPONDENCE
-  -> COMPARISON_UNDERDETERMINED
+### CMP-CH-003 — direct method-boundary challenge
 
-N2 partial Property/status coverage
-  -> UNDETERMINED_CORRESPONDENCE
-  -> COMPARISON_UNDERDETERMINED
+```text
+PRECOMMIT: 68d330b
+RESULT: b4256d2
+SCORE: 48/48 PASS
 
-N3 missing required semantic bridge
-  -> UNDETERMINED_CORRESPONDENCE
-  -> COMPARISON_BLOCKED
+B1 Analysis
+  -> visible STRICT_EQUIVALENT / COMPARISON_RESOLVED
+  -> ANALYSIS_REQUIRED
 
-N4 forward map success, inverse-preservation evidence unverified in frozen run
-  -> UNDETERMINED_CORRESPONDENCE
-  -> COMPARISON_UNDERDETERMINED
+B2 Classification
+  -> visible STRICT_EQUIVALENT / COMPARISON_RESOLVED
+  -> CLASSIFICATION_REQUIRED
 
-N5 exhaustive all-map relation-preservation failure
-  -> NONCORRESPONDENCE
-  -> COMPARISON_RESOLVED
+B3 Transformation
+  -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
+  -> TRANSFORMATION_REQUIRED
+
+B4 Audit
+  -> input/result equality + process-trace difference / COMPARISON_RESOLVED
+  -> AUDIT_REQUIRED
+
+B5 Provenance/Lineage
+  -> snapshot STRICT_EQUIVALENT / COMPARISON_RESOLVED
+  -> lineage identity not_established
+  -> PROVENANCE_LINEAGE_REQUIRED
 
 ALL CONFORMANCE: CONFORMANT
 ALL GAIN: NOT_ASSESSED
 PROTOCOL_REVISION_REQUIRED: no
 ```
 
-The case preserves failure-to-close separately from proved noncorrespondence and keeps missing required bridge distinct from observed difference.
+The case did not absorb internal Analysis, taxonomy assignment, unsupplied Transformation, Audit verdicts, or lineage identity. A legitimate Comparison result can coexist with an explicit neighboring-method handoff.
 
 Evidence increment:
 
 ```text
 DIRECT_COMPARISON_PILOT_INCREMENT: +1
-NEGATIVE_OR_FAILURE_COMPARISON_CASE_INCREMENT: +1
+BOUNDARY_COMPARISON_CASE_INCREMENT: +1
 ```
 
 ## Protocol-v0.1 core guards
@@ -116,6 +133,10 @@ DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
 MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 NONEXHAUSTIVE_MAP_FAILURE != RESOLVED_NONCORRESPONDENCE
 PARTIAL_ELEMENT_COVERAGE != STRICT_EQUIVALENCE
+COMPARISON_EQUIVALENCE != INTERNAL_DECOMPOSITION
+COMPARISON_RELATION != TAXONOMY_ASSIGNMENT
+TRACE_DIFFERENCE != AUDIT_CONFORMANCE_VERDICT
+STRUCTURAL_EQUIVALENCE != LINEAGE_IDENTITY
 ```
 
 ## Output / terminal / ledger structure
@@ -155,6 +176,7 @@ Pre-protocol boundary planning uses `CMP-BND-DRAFT-###` and is not direct eviden
 Neighboring-method evidence may inform challenge design but does not automatically validate Comparison.
 
 ```text
+BOUNDARY_PASS != PERMANENT_METHOD_INDEPENDENCE
 CASE_PASS != METHOD_SURVIVAL_PROOF
 CASE_FAIL != METHOD_DELETION_PROOF
 NO_GAIN != METHOD_ABSORPTION_PROOF
@@ -163,4 +185,4 @@ PROTOCOL_ESTABLISHED != METHOD_VALIDATED
 
 ## Immediate next task
 
-Precommit and execute `CMP-CH-003` direct method-boundary challenge. Require explicit handoffs for hidden Analysis, Classification, Transformation, Audit, and Provenance/Lineage operations while preserving legitimate Comparison outputs where the supplied comparison records are already sufficient.
+Precommit and execute `CMP-CH-004` competent-baseline challenge. The baseline must receive the same claim-relevant subjects, map family, map/element coverage, bridges, Property/status records, equivalence criteria, and terminal-state rules. Do not weaken it to manufacture a DSD advantage; a correct `NO_GAIN` is an acceptable result.
