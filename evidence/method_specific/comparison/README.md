@@ -1,6 +1,6 @@
 # DSD Comparison Direct Evidence / DSD 비교론 직접 증거
 
-Status: **Protocol v0.1 established / direct validation pending**
+Status: **Protocol v0.1 established / first positive direct challenge PASS / validation in progress**
 
 This lane records evidence that directly tests **DSD Comparison / DSD 비교론**.
 
@@ -14,8 +14,8 @@ BOUNDARY_PRESERVED_NO_REFINEMENT: 11
 BOUNDARY_PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
 BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
-DIRECT_COMPARISON_PILOTS: 0
-POSITIVE_COMPARISON_CASES: 0
+DIRECT_COMPARISON_PILOTS: 1
+POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 0
 BOUNDARY_COMPARISON_CASES: 0
 NO_GAIN_COMPARISON_CASES: 0
@@ -24,7 +24,7 @@ REPRODUCIBILITY_CASES: 0
 EXTERNAL_COMPARISON_APPLICATIONS: 0
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
-CURRENT_COMPARISON_EVIDENCE_STATUS: validation_pending
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 ```
 
 Protocol establishment and the 16 pre-protocol attacks do not increase the direct-pilot count.
@@ -42,14 +42,6 @@ methods/06_comparison/PLANNING.md
 methods/06_comparison/WORKLOG.md
 ```
 
-Lineage:
-
-```text
-TASK_INTERFACE_v0.1-draft.md
-+ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
--> PROTOCOL_v0.1.md
-```
-
 ## Pre-protocol boundary result
 
 ```text
@@ -61,17 +53,38 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 DIRECT_COMPARISON_PILOT_INCREMENT: 0
 ```
 
-Forced non-breaking refinement groups:
+## Direct Protocol-v0.1 evidence
+
+### CMP-CH-001 — positive relation-separation challenge
 
 ```text
-R1 MAP_PROPERTY_REQUIREMENT_PROFILE
-   REVERSE_DIRECTION_OR_INVERSE_POLICY
-R2 COMPARISON_ELEMENT_COVERAGE
-   CLOSURE_REQUIREMENT_BY_OUTPUT_LEVEL
-R3 PRECOMPARISON_TRANSFORMATION_POLICY
-   REPRESENTATION_PROVENANCE
-R4 LINEAGE_IDENTITY_CLAIM_POLICY
-   LINEAGE_EVIDENCE_SOURCE_OR_HANDOFF
+PRECOMMIT: 16c4b15
+RESULT: c601bd2
+SCORE: 40/40 PASS
+
+T1 -> STRICT_EQUIVALENT
+T2 -> DIRECT_CORRESPONDENCE
+      strict equivalence = no
+T3 -> ENCODED_CORRESPONDENCE
+      not relabeled direct
+T4 -> aggregate equal
+      strict structural family NONCORRESPONDENCE
+      structural equivalence = no
+
+ALL TERMINAL: COMPARISON_RESOLVED
+ALL CONFORMANCE: CONFORMANT
+ALL GAIN: NOT_ASSESSED
+```
+
+The case simultaneously exercised full strict-equivalence closure, a weaker injective direct correspondence, an explicit encoding bridge, and aggregate collision with structural difference. It preserved map-family coverage separately from claim-relevant element coverage.
+
+Evidence increment:
+
+```text
+DIRECT_COMPARISON_PILOT_INCREMENT: +1
+POSITIVE_COMPARISON_CASE_INCREMENT: +1
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
 ## Protocol-v0.1 core guards
@@ -112,8 +125,6 @@ THREE LEDGERS:
   COMPARISON_METHOD_GAIN_STATUS
 ```
 
-A blocked Comparison run may still be protocol-conformant if it exposes a missing required bridge or record instead of fabricating one.
-
 ## Evidence IDs
 
 ```text
@@ -138,4 +149,4 @@ PROTOCOL_ESTABLISHED != METHOD_VALIDATED
 
 ## Immediate next task
 
-Separately precommit and execute `CMP-CH-001`. The first positive direct challenge should include strict equivalence with sufficient closure, weaker direct correspondence, encoded correspondence, an equal-aggregate/structurally-different collision, explicit map-property and element-coverage records, and independent terminal/conformance/gain ledgers.
+Precommit and execute `CMP-CH-002` negative/failure challenge. Distinguish `COMPARISON_UNDERDETERMINED`, `COMPARISON_BLOCKED`, and resolved `NONCORRESPONDENCE`; explicitly pressure non-exhaustive map-family closure, partial element coverage, missing claim-required bridge, and missing reverse/inverse evidence.
