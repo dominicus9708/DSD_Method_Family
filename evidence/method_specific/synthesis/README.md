@@ -1,6 +1,6 @@
 # DSD Synthesis Direct Evidence / DSD 합성론 직접 증거
 
-Status: **Protocol v0.1 established / two external domains PASS / deterministic retrace PASS / validation in progress**
+Status: **Protocol v0.1 established / three external domains PASS / deterministic retrace PASS / validation in progress**
 
 This lane records evidence that directly tests **DSD Synthesis / DSD 합성론**. Shared-core or neighboring-method evidence may be referenced but does not automatically count as direct Synthesis validation.
 
@@ -20,9 +20,9 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_le
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_SYNTHESIS_APPLICATIONS: 2
-EXTERNAL_SYNTHESIS_DOMAINS: 2
-EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 2
+EXTERNAL_SYNTHESIS_APPLICATIONS: 3
+EXTERNAL_SYNTHESIS_DOMAINS: 3
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -39,23 +39,6 @@ Protocol establishment and the 16 pre-protocol attacks do not increase the direc
 - `methods/05_synthesis/TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md` — non-breaking refinements.
 - `methods/05_synthesis/PLANNING.md` — development sequence.
 - `methods/05_synthesis/WORKLOG.md` — chronology.
-
-```text
-TASK_INTERFACE_v0.1-draft.md
-+ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
--> PROTOCOL_v0.1.md
-```
-
-## Pre-protocol boundary result
-
-```text
-BOUNDARY_ATTACKS_RUN: 16
-PRESERVED_NO_REFINEMENT: 11
-PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
-BOUNDARY_COLLAPSE_FOUND: 0
-FUNDAMENTAL_INTERFACE_FAILURE: 0
-DIRECT_SYNTHESIS_PILOT_INCREMENT: 0
-```
 
 ## Direct Protocol-v0.1 evidence
 
@@ -82,13 +65,9 @@ EXTERNAL_DOMAIN: Internet identifier syntax / URI generic syntax
 PRECOMMIT: 29ea45a
 RESULT: 6985246
 ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NOT_ASSESSED
 SCORE: 40/40 PASS
+SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
 ```
-
-This application uses an externally supplied generic composition grammar. It preserves `ABSENT != PRESENT_EMPTY` and rejects strings that are parseable only under a different declared component decomposition. Scope remains RFC-3986 generic syntax only.
 
 ### SYN-APP-002 — BIPM SI unit composition
 
@@ -99,27 +78,42 @@ EXTERNAL_DOMAIN: physical metrology / SI unit composition
 PRECOMMIT: 46479ae
 RESULT: c504d53
 ADMISSIBLE_FAMILY: {U1,U2,U3,U4,U5,U7,U9}
-U6  -> {H4}
-U8  -> {H4}
-U10 -> {H4}
-U11 -> {H2}; H3-H5 NOT_REACHED
-U12 -> {H2}; H3-H5 NOT_REACHED
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NOT_ASSESSED
 SCORE: 46/46 PASS
+SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
 ```
 
-This materially different external domain activates products of powers, coherent special-name equivalences, prefix-factor propagation, coherence status, compound-prefix prohibition, and the kilogram/gram prefix exception. It preserves:
+Preserved distinctions include `SAME_DIMENSION != SAME_UNIT_SCALE`, `VALID_PREFIXED_SI_UNIT != COHERENT_SI_UNIT`, and `SI_UNIT_COMPOSITION != PHYSICAL_MEASUREMENT_VALIDITY`.
+
+### SYN-APP-003 — USB Type-C physical mating interface
 
 ```text
-SAME_DIMENSION != SAME_UNIT_SCALE
-VALID_PREFIXED_SI_UNIT != COHERENT_SI_UNIT
-PREFIX_COMPONENT_ADMITTED != PREFIX_COMPOSITION_FORM_LEGAL
-SI_UNIT_COMPOSITION != PHYSICAL_MEASUREMENT_VALIDITY
+FROZEN_EXTERNAL_STANDARD:
+  USB Type-C Cable and Connector Specification Release 2.0 (August 2019),
+  mechanical mating/orientation subset
+SUPPORTING_SOURCE: USB-IF Type-C overview
+EXTERNAL_DOMAIN: physical connector assembly / USB Type-C mating interface
+PRECOMMIT: 4159872
+RESULT: 73faaa0
+ADMISSIBLE_FAMILY: {M1,M2,M6,M7}
+M3 -> {H2}; downstream NOT_REACHED
+M4/M5 -> {H1}; downstream NOT_REACHED
+M8/M9/M10 -> {H4}
+M10 H5 PASS while H4 fails
+SCORE: 44/44 PASS
+SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
 ```
 
-No uncertainty, calibration, traceability, realization, or physical-law claim is inferred.
+This first strongly physical interface case preserves:
+
+```text
+TYPE_C_COMPONENT_ADMITTED != DIRECTLY_MATEABLE_WITH_ANY_TYPE_C_COMPONENT
+REVERSIBLE_PLUG_ORIENTATION != ARBITRARY_ROTATIONAL_SYMMETRY
+MECHANICAL_MATING != SOURCE_SINK_ROLE_ESTABLISHMENT
+MECHANICAL_MATING != HOST_DEVICE_ROLE_ESTABLISHMENT
+REVERSIBLE_CABLE_DIRECTION != POWER_ROLE_SYMMETRY
+```
+
+The frozen case is explicitly Release-2.0-mechanical-subset specific; it does not claim current Release-2.5 compliance, USB-IF certification, USB PD success, data-rate capability, durability, or complete electrical interoperability.
 
 ## Reproducibility / retrace evidence
 
@@ -131,9 +125,6 @@ RESULT: 7256456
 RETRACE_TARGET: SYN-APP-001
 REPRODUCIBILITY_LEVEL: deterministic_same_project
 RECONSTRUCTED_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NOT_ASSESSED
 SCORE: 48/48 PASS
 INDEPENDENT_REPLICATION: not established
 ```
@@ -168,4 +159,4 @@ A future promotion consideration should accumulate, at minimum: dedicated protoc
 
 ## Immediate next direct-evidence task
 
-Add a third materially different external domain, preferably one with nontrivial component compatibility or assembly constraints rather than primarily symbolic grammar. Only after broader external pressure should the first Synthesis maturity audit be considered.
+Run the first Synthesis maturity audit against the now-populated evidence architecture. The audit must score protocol stability, boundary integrity, failure taxonomy, NO_GAIN honesty, external breadth, retraceability, and unresolved independence separately. It must not convert pass/fail counts into an automatic method-survival, merger, absorption, deletion, or promotion decision.
