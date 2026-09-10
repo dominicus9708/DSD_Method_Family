@@ -69,7 +69,7 @@ Key Synthesis evidence includes `SYN-CH-001` through `SYN-CH-007`, three externa
 
 Planning opened `2026-09-10`; executable `PROTOCOL_v0.1.md` was established at commit `a1700d960e0b41dfe32bf85b6334448d9104100d` after 16 pre-protocol boundary attacks.
 
-Current Comparison state:
+Current Comparison state after `CMP-CH-001`:
 
 ```text
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
@@ -79,8 +79,8 @@ BOUNDARY_PRESERVED_NO_REFINEMENT: 11
 BOUNDARY_PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
 BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
-DIRECT_COMPARISON_PILOTS: 0
-POSITIVE_COMPARISON_CASES: 0
+DIRECT_COMPARISON_PILOTS: 1
+POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 0
 BOUNDARY_COMPARISON_CASES: 0
 NO_GAIN_COMPARISON_CASES: 0
@@ -89,7 +89,7 @@ REPRODUCIBILITY_CASES: 0
 EXTERNAL_COMPARISON_APPLICATIONS: 0
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
-CURRENT_COMPARISON_EVIDENCE_STATUS: validation_pending
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 ```
 
 Protocol lineage:
@@ -98,6 +98,22 @@ Protocol lineage:
 methods/06_comparison/TASK_INTERFACE_v0.1-draft.md
 + methods/06_comparison/TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
 -> methods/06_comparison/PROTOCOL_v0.1.md
+```
+
+First direct evidence:
+
+```text
+CMP-CH-001
+  PRECOMMIT: 16c4b15
+  RESULT: c601bd2
+  SCORE: 40/40 PASS
+  T1 STRICT_EQUIVALENT
+  T2 DIRECT_CORRESPONDENCE / strict equivalence no
+  T3 ENCODED_CORRESPONDENCE
+  T4 aggregate equal + structural NONCORRESPONDENCE under frozen strict family
+  ALL TERMINAL: COMPARISON_RESOLVED
+  ALL CONFORMANCE: CONFORMANT
+  ALL GAIN: NOT_ASSESSED
 ```
 
 Current Comparison guards:
@@ -117,7 +133,7 @@ DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
 MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 ```
 
-Protocol establishment is infrastructure and does not fill a direct-evidence category. The next Comparison event is a separately precommitted `CMP-CH-001` positive direct challenge.
+The next Comparison event is a separately precommitted `CMP-CH-002` negative/failure challenge.
 
 ## Promotion expectation / 성숙도 승격 기준
 
