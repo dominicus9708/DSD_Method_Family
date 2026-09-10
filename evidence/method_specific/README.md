@@ -46,9 +46,9 @@ PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_SYNTHESIS_APPLICATIONS: 2
-EXTERNAL_SYNTHESIS_DOMAINS: 2
-EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 2
+EXTERNAL_SYNTHESIS_APPLICATIONS: 3
+EXTERNAL_SYNTHESIS_DOMAINS: 3
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -73,15 +73,21 @@ SYN-APP-001
 
 SYN-APP-002
   BIPM SI Brochure 9th ed. v4.01 (2026)
-  DOI 10.59161/AUEZ1291
   physical metrology / SI unit composition
-  PRECOMMIT 46479ae
-  RESULT c504d53
   46/46 PASS
-  admissible family {U1,U2,U3,U4,U5,U7,U9}
-  U6/U8/U10 -> H4
-  U11/U12 -> H2 with downstream NOT_REACHED
   external domain 2
+
+SYN-APP-003
+  USB Type-C Cable and Connector Specification Release 2.0 mechanical subset
+  physical connector assembly / USB Type-C mating interface
+  PRECOMMIT 4159872
+  RESULT 73faaa0
+  44/44 PASS
+  admissible family {M1,M2,M6,M7}
+  M3 -> H2
+  M4/M5 -> H1
+  M8/M9/M10 -> H4
+  external domain 3
 ```
 
 Current Synthesis guards include:
@@ -99,9 +105,13 @@ SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 SAME_DIMENSION != SAME_UNIT_SCALE
 VALID_PREFIXED_SI_UNIT != COHERENT_SI_UNIT
 SI_UNIT_COMPOSITION != PHYSICAL_MEASUREMENT_VALIDITY
+TYPE_C_COMPONENT_ADMITTED != DIRECTLY_MATEABLE_WITH_ANY_TYPE_C_COMPONENT
+REVERSIBLE_PLUG_ORIENTATION != ARBITRARY_ROTATIONAL_SYMMETRY
+MECHANICAL_MATING != SOURCE_SINK_ROLE_ESTABLISHMENT
+REVERSIBLE_CABLE_DIRECTION != POWER_ROLE_SYMMETRY
 ```
 
-The next Synthesis task is a third materially different external application, preferably with nontrivial component/interface or physical assembly constraints, before the first maturity review.
+The next Synthesis task is the first maturity audit. It must assess protocol stability, boundary integrity, failure taxonomy, `NO_GAIN` honesty, three-domain external breadth, and retraceability while preserving unresolved independent validation and replication as explicit limits.
 
 ## Promotion expectation / 성숙도 승격 기준
 
