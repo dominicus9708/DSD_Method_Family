@@ -1,6 +1,6 @@
 # DSD Synthesis Planning / DSD 합성론 기획
 
-Status: **Protocol v0.1 established / Step 10 first external application complete / validation in progress**  
+Status: **Protocol v0.1 established / Step 11 deterministic retrace complete / validation in progress**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -70,9 +70,9 @@ THREE LEDGERS:
 8. ✅ First `NO_GAIN` stage — `SYN-CH-004` **33/35 FAIL** challenge-design defect preserved; corrected `SYN-CH-005` **37/37 PASS / NO_GAIN**.
 9. ✅ `SYN-CH-006` broader strongest-reasonable-baseline comparison — **52/52 PASS / NO_GAIN**, category established at constructed-evidence level.
 10. ✅ `SYN-APP-001` first external application — RFC 3986 generic URI composition, **40/40 PASS**.
-11. **Next:** deterministic same-project retrace/reproducibility of `SYN-APP-001`.
-12. Second materially different external domain.
-13. DSD Audit maturity review only after evidence architecture is materially populated.
+11. ✅ `SYN-CH-007` deterministic same-project retrace of `SYN-APP-001` — **48/48 PASS**.
+12. **Next:** second materially different external domain.
+13. DSD Audit maturity review only after external breadth is materially improved.
 14. Independent-evaluator infrastructure only when protocol/evidence stability justifies it.
 
 ## Step 9 — SYN-CH-006 broader strongest-reasonable-baseline
@@ -125,8 +125,6 @@ R11 admissible; query + fragment PRESENT_EMPTY preserved
 R12 admissible at RFC3986 generic-syntax level; authority PRESENT_EMPTY preserved
 ```
 
-Closure and ledgers:
-
 ```text
 SYNTHESIS_ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
 TERMINAL: SYNTHESIS_ADMISSIBLE
@@ -144,9 +142,37 @@ GENERIC_SYNTACTIC_COMPOSITION != SECURITY_OR_TRUSTWORTHINESS
 PRESENT_EMPTY != ABSENT
 ```
 
-This application adds one external application and one external domain but does not alter the constructed-pilot count or maturity classification.
+## Step 11 — SYN-CH-007 deterministic retrace
 
-## Evidence state after Step 10 / 10단계 후 증거 상태
+Precommit/result:
+
+```text
+PRECOMMIT: 9bbcadf
+RESULT: 7256456
+RETRACE_TARGET: SYN-APP-001
+REPRODUCIBILITY_LEVEL: deterministic_same_project
+```
+
+The retrace used the immutable Protocol commit, `SYN-APP-001` precommit commit/blob, result commit, and the same RFC 3986 authority. It reconstructed exactly:
+
+```text
+R1-R4 admissible
+R5 -> {H2}; H3-H4 NOT_REACHED
+R6 -> {H2}; H3-H4 NOT_REACHED
+R7 -> {H1}; H2 PASS; H3-H4 NOT_REACHED
+R8 -> {H4}
+R9 -> {H3}; H4 NOT_REACHED
+R10-R12 admissible
+ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
+TERMINAL: SYNTHESIS_ADMISSIBLE
+CONFORMANCE: CONFORMANT
+GAIN: NOT_ASSESSED
+SCORE: 48/48 PASS
+```
+
+The retrace also reproduced `ABSENT != PRESENT_EMPTY`, declared-component roundtrip discipline, generic-syntax-only scope, and no dereference/security claim. It is explicitly **not** blind or independent replication.
+
+## Evidence state after Step 11 / 11단계 후 증거 상태
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
@@ -159,11 +185,14 @@ SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 2
 SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_SYNTHESIS_APPLICATIONS: 1
 EXTERNAL_SYNTHESIS_DOMAINS: 1
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
@@ -174,15 +203,16 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 - Historical planning and failed challenge designs are preserved; corrections are prospective under new Case IDs.
 - A competent baseline is not weakened to manufacture a DSD advantage.
 - `NO_GAIN` is a legitimate result and is separate from correctness/conformance.
-- Success or failure of an individual challenge/application does not itself determine whether the method survives, merges, or is deleted.
+- Success or failure of an individual challenge/application/retrace does not itself determine whether the method survives, merges, is absorbed, or is deleted.
 - Grouping/equivalence is activated only when supplied by composition law and target-resolution rules.
 - Component Property does not become whole Property without explicit lift/redeclaration.
 - Relation loss and formation effect remain claim-relevant when the task includes them.
 - No Formation Clause VII or Static Aggregation result is upgraded into domain composability without explicit legitimacy.
 - No static composability result is upgraded into time-resolved assembly feasibility without explicit process scope/model.
 - External-source generic validity is not upgraded into stronger domain-specific validity absent the required external specification.
+- Same-project deterministic retrace is not independent replication.
 - Protocol v0.1 is revised only prospectively if direct evidence exposes a genuine protocol defect.
 
 ## Immediate next task / 다음
 
-Precommit and execute a deterministic same-project retrace of `SYN-APP-001` using only the immutable RFC-source lock, `SYN-APP-001` precommit, and result records. The retrace must reconstruct all twelve candidate verdicts, the admissible family, presence-state distinctions, scope guards, and three ledgers without changing the original case.
+Precommit the second external Synthesis application in a materially different non-URI domain. Prefer a stable public physical/engineering/scientific/legal standard that supplies its own composition or assembly legality and supports both admissible and rejected candidate structures. Keep application outcome separate from any method survival or merger judgment.
