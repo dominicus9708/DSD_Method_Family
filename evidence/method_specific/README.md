@@ -77,8 +77,6 @@ DES-AUD-002: 26/26 audit checks PASS, method/protocol maturity = established
 
 ### Design maturity separation
 
-`DES-AUD-002` establishes only **method/protocol evidence maturity under the current DSD method-family framework**.
-
 ```text
 METHOD_MATURITY_CLASSIFICATION: established
 M9_EXTERNAL_BREADTH: PASS
@@ -112,29 +110,28 @@ CURRENT_METHOD_EVIDENCE_STATUS: validation_in_progress
 ```
 
 The next core Design evidence event requires a genuinely separate evaluator to submit against the frozen `DES-IEP-001` packet before key reveal.
-A later audit should preserve either agreement or disagreement rather than treating independent review as a required positive result.
 
 - [`synthesis/`](synthesis/) — **DSD Synthesis / DSD 합성론**
   - planning opened on `2026-09-10`;
   - current maturity classification: `proposed`;
   - current evidence status: `validation_in_progress`;
   - dedicated executable protocol: **`PROTOCOL_v0.1.md` established**, creation commit `8787b24`;
-  - direct Synthesis pilots: `1`;
+  - direct Synthesis pilots: `2`;
   - positive Synthesis cases: `1`;
-  - first direct pilot: `SYN-CH-001`, separately precommitted at `4eeba2a`, result commit `71e5d5c`, **28/28 PASS**;
-  - `SYN-CH-001` admissible family: `{K1,K2}`; K3 rejected on readiness undefined, K4-K6 on interface mismatch;
-  - `SYN-CH-001` ledgers: `SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED`;
-  - pre-protocol boundary attacks: `16`;
-  - boundary result: `11` preserved without refinement + `5` preserved with non-breaking refinement, `0` collapse, `0` fundamental interface failure;
-  - protocol lineage: `TASK_INTERFACE_v0.1-draft.md + TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md -> PROTOCOL_v0.1.md`;
-  - negative/failure cases: `0`;
-  - boundary cases under protocol: `0`;
+  - negative/failure Synthesis cases: `1`;
+  - `SYN-CH-001`: precommit `4eeba2a`, result `71e5d5c`, **28/28 PASS**, `SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED`;
+  - `SYN-CH-002`: precommit `09fc616`, result `7dac87c`, **36/36 PASS`;
+  - `SYN-CH-002` Subcase I: exhaustive all rejected -> `SYNTHESIS_INFEASIBLE / CONFORMANT / NOT_ASSESSED`;
+  - `SYN-CH-002` Subcase U: non-exhaustive uniqueness closure -> `SYNTHESIS_UNDERDETERMINED / CONFORMANT / NOT_ASSESSED`;
+  - `SYN-CH-002` Subcase B: required composition rule unavailable -> `SYNTHESIS_BLOCKED / CONFORMANT / NOT_ASSESSED`;
+  - pre-protocol boundary attacks: `16`, with 11 preserved without refinement + 5 with non-breaking refinement, 0 collapse, 0 fundamental interface failure;
+  - boundary cases under executable Protocol: `0`;
   - NO_GAIN cases: `0`;
   - baseline comparison cases: `0`;
   - reproducibility cases: `0`;
   - external Synthesis applications: `0`;
-  - independent Synthesis validation: not established;
-  - next direct task: separately precommit negative/failure terminal-status challenge.
+  - independent Synthesis validation: `not established`;
+  - next direct task: separately precommit a direct method-boundary challenge.
 
 Current Synthesis protocol guards:
 
@@ -164,15 +161,24 @@ STATIC_COMPOSITION_ORDER
 != TEMPORAL_ASSEMBLY_SEQUENCE
 ```
 
-Protocol v0.1 freezes composition-law/grouping, target equivalence/canonicalization, partial residuals, process scope, candidate coverage, target resolution, property lift, retention/loss, and formation effect before closure claims.
+Terminal-failure evidence additionally supports:
+
+```text
+REJECTED_UNDER_EXHAUSTIVE_COVERAGE
+!= INSUFFICIENT_COVERAGE_FOR_CLOSURE
+!= MISSING_REQUIRED_INPUT
+
+local admissibility
+!= requested output-level closure
+```
 
 Current Synthesis state:
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
-DIRECT_SYNTHESIS_PILOTS: 1
+DIRECT_SYNTHESIS_PILOTS: 2
 POSITIVE_SYNTHESIS_CASES: 1
-NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 0
+NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
 BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 0
 NO_GAIN_SYNTHESIS_CASES: 0
 BASELINE_COMPARISON_CASES: 0
@@ -183,8 +189,7 @@ SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The first positive pilot does not establish external applicability, baseline superiority, reproducibility, independent validation, or method maturity.
-Protocol establishment and pre-protocol attacks remain separate from direct pilot evidence.
+The current constructed pilots do not establish external applicability, baseline superiority, reproducibility, independent validation, or method maturity.
 
 ## Promotion expectation / 성숙도 승격 기준
 
