@@ -42,27 +42,6 @@ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
   commit 131541069f62c481da3098a61446f58d47e31ca7
 ```
 
-Executed 16 planning-stage attacks against the Step-1 interface:
-
-```text
-aggregate equality inflation
-one-map closure inflation
-embedding -> strict equivalence inflation
-common-label semantic mismatch
-partial element coverage -> global equivalence
-encoded -> direct correspondence
-first observed difference -> first branch
-non-exhaustive map-family false closure
-hidden Transformation
-hidden Classification
-hidden Audit
-dynamic similarity -> lineage identity
-aggregate collision -> support reconstruction
-direction-sensitive false symmetry
-Property/status collapse
-missing bridge -> proven difference
-```
-
 Result:
 
 ```text
@@ -79,45 +58,78 @@ The five refinement-bearing attacks required four groups:
 ```text
 R1 MAP_PROPERTY_REQUIREMENT_PROFILE
    REVERSE_DIRECTION_OR_INVERSE_POLICY
-
 R2 COMPARISON_ELEMENT_COVERAGE
    CLOSURE_REQUIREMENT_BY_OUTPUT_LEVEL
-
 R3 PRECOMPARISON_TRANSFORMATION_POLICY
    REPRESENTATION_PROVENANCE
-
 R4 LINEAGE_IDENTITY_CLAIM_POLICY
    LINEAGE_EVIDENCE_SOURCE_OR_HANDOFF
 ```
 
-New explicit guards:
+Step-1 draft was preserved unchanged.
+
+---
+
+## 2026-09-10 — Planning Step 4: Protocol v0.1 freeze
+
+Status: **first executable Comparison protocol established**
+
+Created:
 
 ```text
-FORWARD_MAP_SUCCESS != REVERSE_MAP_SUCCESS
-EXHAUSTIVE_MAP_FAMILY_SEARCH != EXHAUSTIVE_STRUCTURAL_ELEMENT_COVERAGE
-UNSUPPLIED_NORMALIZATION_OR_CONVERSION != COMPARISON_MAP
-DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
-MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
+methods/06_comparison/PROTOCOL_v0.1.md
+commit a1700d960e0b41dfe32bf85b6334448d9104100d
 ```
 
-The Step-1 interface file was not rewritten. Historical lineage is:
+Lineage:
 
 ```text
 TASK_INTERFACE_v0.1-draft.md
 + TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
--> future PROTOCOL_v0.1.md
+-> PROTOCOL_v0.1.md
 ```
 
-Current state after Step 2:
+Protocol v0.1 freezes a `C1-C20` executable sequence covering:
 
 ```text
-DEDICATED_COMPARISON_PROTOCOL: not established
-PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
+subjects / claim / scope / target resolution
+map-family source / direction / coverage
+required map properties and reverse/inverse policy
+claim-relevant structural-element coverage
+output-level closure requirements
+feature/relation/Property/status/equivalence rules
+encoding/bridge and precomparison transformation provenance
+first-branch search and earlier-stage closure
+aggregate collision without structural upgrade
+similarity vs lineage-identity separation
+terminal / conformance / gain ledgers
+limits / handoffs / reproducibility record
+```
+
+Key executable guards include:
+
+```text
+FORWARD_MAP_SUCCESS != REVERSE_MAP_SUCCESS
+MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
+UNSUPPLIED_NORMALIZATION_OR_CONVERSION != COMPARISON_MAP
+FIRST_OBSERVED_DIFFERENCE != FIRST_JUSTIFIED_BRANCH_POINT
+AGGREGATE_EQUALITY != STRUCTURAL_EQUIVALENCE
+DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
+MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
+```
+
+Evidence effect:
+
+```text
+DEDICATED_COMPARISON_PROTOCOL: v0.1 established
+DIRECT_COMPARISON_PILOT_INCREMENT: 0
 DIRECT_COMPARISON_PILOTS: 0
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_pending
 ```
 
-No method-survival, deletion, merger, or absorption decision was made from these planning results.
+Protocol creation does not validate the method and does not decide method survival, merger, absorption, or deletion.
 
-Next: integrate the Step-1 draft and Amendment 001 into the first executable `Comparison Protocol v0.1`.
+### Next
+
+Separately precommit `CMP-CH-001` before execution. The first direct positive challenge should jointly test strict equivalence with sufficient closure, weaker direct correspondence, encoded correspondence, aggregate collision without structural inflation, explicit map-property/element-coverage records, and three-ledger separation.
