@@ -1,6 +1,6 @@
 # DSD Synthesis Direct Evidence / DSD 합성론 직접 증거
 
-Status: **Protocol v0.1 established / method-protocol evidence maturity established by SYN-AUD-001 / validation in progress**
+Status: **Protocol v0.1 established / method-protocol evidence maturity established / SYN-IEP-001 prepared / validation in progress**
 
 This lane records evidence that directly tests **DSD Synthesis / DSD 합성론**. Shared-core or neighboring-method evidence may be referenced but does not automatically count as direct Synthesis validation.
 
@@ -23,6 +23,10 @@ REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_SYNTHESIS_APPLICATIONS: 3
 EXTERNAL_SYNTHESIS_DOMAINS: 3
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
+INDEPENDENT_EVALUATOR_PACKET: prepared
+REFERENCE_KEY_COMMITMENT: frozen
+CLEAN_DISTRIBUTION_RECORD: prepared
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 MEASURED_PRACTICAL_SUPERIORITY: not established
@@ -30,7 +34,7 @@ SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-`SYN-AUD-001` is an Audit meta-record and does not increment direct-pilot, external-application, or reproducibility counts.
+`SYN-AUD-001` is an Audit meta-record and `SYN-IEP-001` preparation is evaluator infrastructure. Neither increments direct-pilot, external-application, or reproducibility counts.
 
 ## Protocol and planning artifacts
 
@@ -58,44 +62,10 @@ SYN-CH-007  deterministic retrace               48/48 PASS
 
 ## External application evidence
 
-### SYN-APP-001 — RFC 3986 generic URI composition
-
 ```text
-EXTERNAL_STANDARD: RFC 3986 / STD 66
-EXTERNAL_DOMAIN: Internet identifier syntax / URI generic syntax
-PRECOMMIT: 29ea45a
-RESULT: 6985246
-ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
-SCORE: 40/40 PASS
-SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
-```
-
-### SYN-APP-002 — BIPM SI unit composition
-
-```text
-EXTERNAL_STANDARD: BIPM SI Brochure, 9th ed., version 4.01 (2026)
-DOI: 10.59161/AUEZ1291
-EXTERNAL_DOMAIN: physical metrology / SI unit composition
-PRECOMMIT: 46479ae
-RESULT: c504d53
-ADMISSIBLE_FAMILY: {U1,U2,U3,U4,U5,U7,U9}
-SCORE: 46/46 PASS
-SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
-```
-
-### SYN-APP-003 — USB Type-C physical mating interface
-
-```text
-FROZEN_EXTERNAL_STANDARD:
-  USB Type-C Cable and Connector Specification Release 2.0 (August 2019),
-  mechanical mating/orientation subset
-SUPPORTING_SOURCE: USB-IF Type-C overview
-EXTERNAL_DOMAIN: physical connector assembly / USB Type-C mating interface
-PRECOMMIT: 4159872
-RESULT: 73faaa0
-ADMISSIBLE_FAMILY: {M1,M2,M6,M7}
-SCORE: 44/44 PASS
-SYNTHESIS_ADMISSIBLE / CONFORMANT / NOT_ASSESSED
+SYN-APP-001  RFC 3986 generic URI composition          40/40 PASS
+SYN-APP-002  BIPM SI unit composition                  46/46 PASS
+SYN-APP-003  USB Type-C physical mating interface      44/44 PASS
 ```
 
 The three external domains are materially different at the frozen task resolution: URI grammar, SI unit algebra/scale composition, and physical connector mating/orientation.
@@ -153,6 +123,40 @@ M15 PASS
 
 The established label means **method/protocol evidence maturity within the current DSD method-family framework**. It does not establish independent validation, independent replication, practical superiority, universal external generality, or permanent method-registry survival/nonmerger.
 
+## Independent evaluator infrastructure
+
+### SYN-IEP-001 — prepared, not executed
+
+```text
+REVIEWER_PACKET:
+  evidence/method_specific/synthesis/SYN-IEP-001_reviewer-packet.md
+  commit: 6be55803
+
+SUBMISSION_TEMPLATE:
+  evidence/method_specific/synthesis/SYN-IEP-001_submission-template.md
+  commit: 079cdda0
+
+REFERENCE_COMMITMENT:
+  evidence/method_specific/synthesis/SYN-IEP-001_reference-commitment.md
+  commit: b785df0e
+  SHA-256: db5d1c505c3ab2d614357525489f3b2a0dd2fc595fff1e715c69f48ceeb7073f
+
+CLEAN_DISTRIBUTION_RECORD:
+  evidence/method_specific/synthesis/SYN-IEP-001_distribution-record.md
+  commit: af622b9d
+
+PACKET_TASKS:
+  Task S — BIPM SI unit-composition held-out fixture S1-S6
+  Task P — USB Type-C physical-mating held-out fixture P1-P6
+
+SEMANTIC_CHECKS: 24
+CRITICAL_CHECKS: 10
+INDEPENDENT_EVALUATOR_SUBMISSIONS: 0
+INDEPENDENT_SYNTHESIS_VALIDATION: not established
+```
+
+The secret nonce and canonical reference key are held outside the public Synthesis tree. They may be revealed only after an eligible evaluator freezes a submission under an immutable or time-ordered identifier. The current project assistant/session is not eligible to self-score as independent evidence.
+
 ## Protocol-v0.1 core guards
 
 ```text
@@ -189,4 +193,4 @@ SYN-IEP-###  independent evaluator packet infrastructure
 
 ## Immediate next evidence task
 
-The weakest remaining evidence axis is independence. Prepare `SYN-IEP-001` as independent-evaluator infrastructure without counting packet preparation as validation. Only a genuinely separate immutable evaluator submission may change `INDEPENDENT_SYNTHESIS_VALIDATION` or `INDEPENDENT_REPLICATION` in a later audit.
+Do not create more same-project evidence merely to fill volume. The next high-value event is a **genuinely separate SYN-IEP-001 evaluator submission**. Freeze the evaluator's completed submission before revealing the hidden reference key; only then verify the SHA-256 commitment and score the predeclared 24 semantic checks. Until that event, independent validation and replication remain unestablished.
