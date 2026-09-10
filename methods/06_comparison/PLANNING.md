@@ -1,6 +1,6 @@
 # DSD Comparison Planning / DSD 비교론 기획
 
-Status: **planning Step 2 complete / boundary amendment prepared / protocol not yet frozen**  
+Status: **Protocol v0.1 established / direct validation pending**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -18,7 +18,23 @@ DSD_INTERFACE_PROFILE.md
 METHOD_BOUNDARY_MATRIX.md
 ```
 
-Initial guards:
+## Protocol lineage / 프로토콜 계보
+
+```text
+TASK_INTERFACE_v0.1-draft.md
++ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+-> PROTOCOL_v0.1.md
+```
+
+Executable `PROTOCOL_v0.1.md` was frozen at commit:
+
+```text
+a1700d960e0b41dfe32bf85b6334448d9104100d
+```
+
+Earlier planning artifacts remain historical and are not rewritten.
+
+## Core guards / 핵심 가드
 
 ```text
 AGGREGATE_EQUALITY != STRUCTURAL_EQUIVALENCE
@@ -28,52 +44,18 @@ EMBEDDING != STRICT_EQUIVALENCE
 FIRST_OBSERVED_DIFFERENCE != FIRST_JUSTIFIED_BRANCH_POINT
 PARTIAL_CORRESPONDENCE != GLOBAL_EQUIVALENCE
 ENCODING_REQUIRED_CORRESPONDENCE != DIRECT_CORRESPONDENCE
-SIMILAR_OUTPUT != SHARED_LINEAGE_OR_IDENTITY
+FORWARD_MAP_SUCCESS != REVERSE_MAP_SUCCESS
+MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
+UNSUPPLIED_NORMALIZATION_OR_CONVERSION != COMPARISON_MAP
+DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
+MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 ```
 
-## Step 1 output / 1단계 산출
+## Step 1 / Task interface draft
 
 Created `TASK_INTERFACE_v0.1-draft.md` with subject identity/stage/status records, comparison domain, map-family source and coverage, feature/relation/property/status preservation, strict-equivalence criteria, encoding/bridge rules, first-branch search basis, aggregate-collision handling, dynamic-lineage guard, output levels, relation classes, terminal statuses, and three-ledger separation.
 
-Draft output levels:
-
-```text
-COMPARISON_PROFILE
-CORRESPONDENCE_CLASSIFICATION
-STRICT_EQUIVALENCE_DECISION
-FIRST_BRANCH_POINT
-PARTIAL_COMPARISON
-```
-
-Draft relation classes:
-
-```text
-STRICT_EQUIVALENT
-DIRECT_CORRESPONDENCE
-PARTIAL_CORRESPONDENCE
-ENCODED_CORRESPONDENCE
-NONCORRESPONDENCE
-UNDETERMINED_CORRESPONDENCE
-```
-
-Draft terminal statuses:
-
-```text
-COMPARISON_RESOLVED
-COMPARISON_UNDERDETERMINED
-COMPARISON_BLOCKED
-```
-
-## Step 2 — pre-protocol boundary attack / 경계 공격
-
-Created:
-
-```text
-methods/06_comparison/BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md
-methods/06_comparison/TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
-```
-
-Boundary result:
+## Step 2 / Pre-protocol boundary attacks
 
 ```text
 BOUNDARY_ATTACKS_RUN: 16
@@ -84,82 +66,71 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 DIRECT_COMPARISON_PILOT_INCREMENT: 0
 ```
 
-The 16 attacks covered:
-
-```text
-1 aggregate equality -> strict equivalence inflation
-2 one-map failure -> global noncorrespondence inflation
-3 embedding -> strict equivalence inflation
-4 common label -> semantic-coordinate inflation
-5 partial element coverage -> global equivalence inflation
-6 encoded -> direct correspondence inflation
-7 first observed difference -> first branch inflation
-8 non-exhaustive map family -> false closure
-9 hidden Transformation
-10 hidden Classification
-11 hidden Audit
-12 dynamic similarity -> lineage/identity inflation
-13 aggregate collision -> support reconstruction inflation
-14 direction-sensitive map -> false symmetry
-15 Property/status collapse
-16 missing bridge -> proven structural difference inflation
-```
-
-Four non-breaking refinement groups were actually forced:
+Four non-breaking refinement groups were forced:
 
 ```text
 R1 MAP_PROPERTY_REQUIREMENT_PROFILE
    REVERSE_DIRECTION_OR_INVERSE_POLICY
-
 R2 COMPARISON_ELEMENT_COVERAGE
    CLOSURE_REQUIREMENT_BY_OUTPUT_LEVEL
-
 R3 PRECOMPARISON_TRANSFORMATION_POLICY
    REPRESENTATION_PROVENANCE
-
 R4 LINEAGE_IDENTITY_CLAIM_POLICY
    LINEAGE_EVIDENCE_SOURCE_OR_HANDOFF
 ```
 
-The Step-1 draft remains historical and is not silently rewritten.
+## Step 4 / Executable Protocol v0.1
+
+Protocol v0.1 integrates the original interface and Amendment 001 into an executable `C1-C20` sequence.
+
+Key operational additions:
 
 ```text
-TASK_INTERFACE_v0.1-draft.md
-+ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
--> future PROTOCOL_v0.1.md
+map-property and inverse/direction lock
+map-family coverage separate from element coverage
+output-level closure requirements
+precomparison Transformation provenance gate
+first-branch earlier-stage closure gate
+aggregate-collision separation
+lineage-identity handoff gate
+three-ledger separation
+representative protocol-nonconformance conditions
+reproducibility record requirements
 ```
 
-## Method boundaries / 방법 경계
+Protocol freeze itself adds no direct Comparison pilot.
+
+## Output and status structure
 
 ```text
-Analysis:
-  internal decomposition / description
+OUTPUT_LEVELS:
+  COMPARISON_PROFILE
+  CORRESPONDENCE_CLASSIFICATION
+  STRICT_EQUIVALENCE_DECISION
+  FIRST_BRANCH_POINT
+  PARTIAL_COMPARISON
 
-Comparison:
-  cross-subject correspondence / preservation / divergence
+RELATION_CLASSES:
+  STRICT_EQUIVALENT
+  DIRECT_CORRESPONDENCE
+  PARTIAL_CORRESPONDENCE
+  ENCODED_CORRESPONDENCE
+  NONCORRESPONDENCE
+  UNDETERMINED_CORRESPONDENCE
 
-Classification:
-  taxonomy-based class assignment
-
-Transformation:
-  source -> target representation/regime
-
-Audit:
-  retrace/evaluate an existing result or process
-
-Provenance/Lineage:
-  historical/source/successor identity chain
+TERMINAL:
+  COMPARISON_RESOLVED
+  COMPARISON_UNDERDETERMINED
+  COMPARISON_BLOCKED
 ```
-
-Comparison may consume outputs from these methods but does not relabel their operations as Comparison.
 
 ## Development sequence / 개발 순서
 
 1. ✅ Comparison-specific task interface draft.
 2. ✅ 16 pre-protocol boundary attacks.
-3. ✅ Non-breaking Boundary Amendment 001 from the five attacks that exposed missing explicit locks.
-4. **Next:** freeze first executable `Comparison Protocol v0.1`.
-5. Positive direct challenge.
+3. ✅ Boundary Amendment 001.
+4. ✅ Executable `Comparison Protocol v0.1` — commit `a1700d9`.
+5. **Next:** `CMP-CH-001` positive direct challenge.
 6. Negative/failure challenge.
 7. Direct method-boundary challenge.
 8. `NO_GAIN` comparison against a competent baseline.
@@ -170,45 +141,27 @@ Comparison may consume outputs from these methods but does not relabel their ope
 13. Maturity audit after evidence architecture is materially populated.
 14. Independent-evaluator infrastructure only after protocol/evidence stability justifies it.
 
-## Step-2 refinements / 2단계 보강
+## CMP-CH-001 target / 다음 직접 시험
 
-### R1 map-property / directionality
-
-```text
-FORWARD_MAP_SUCCESS != REVERSE_MAP_SUCCESS
-INJECTIVE_EMBEDDING != STRICT_EQUIVALENCE
-```
-
-Explicitly lock map-property requirements and reverse/inverse policy for the requested claim.
-
-### R2 element coverage / closure
+The first direct challenge should be separately precommitted and simultaneously test:
 
 ```text
-MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
+1 strict-equivalence case with sufficient closure
+1 direct correspondence weaker than strict equivalence
+1 encoded correspondence
+1 aggregate collision with equal readout but structural difference
+explicit required map properties
+explicit map-family and element coverage
+terminal / conformance / gain ledger separation
 ```
 
-Coordinates/features, relations, Properties, status classes, and stages/layers need their own claim-relevant coverage record. Output levels require explicit closure conditions.
-
-### R3 precomparison transformation provenance
-
-```text
-UNSUPPLIED_NORMALIZATION_OR_CONVERSION != COMPARISON_MAP
-```
-
-Comparison may consume a supplied transformation output but does not invent/execute the transformation silently.
-
-### R4 lineage identity gate
-
-```text
-DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
-```
-
-Lineage claims require supplied lineage evidence or an explicit handoff.
+No expected result may be altered after execution begins.
 
 ## Current evidence state / 현재 증거 상태
 
 ```text
-DEDICATED_COMPARISON_PROTOCOL: not established
+DEDICATED_COMPARISON_PROTOCOL: v0.1 established
+PROTOCOL_CREATION_COMMIT: a1700d960e0b41dfe32bf85b6334448d9104100d
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 DIRECT_COMPARISON_PILOTS: 0
 POSITIVE_COMPARISON_CASES: 0
@@ -225,13 +178,14 @@ CURRENT_COMPARISON_EVIDENCE_STATUS: validation_pending
 
 ## Recording rule / 기록 규칙
 
-- Planning artifacts are not direct Comparison evidence.
+- Protocol establishment is infrastructure, not direct evidence.
 - Shared-core or neighboring-method evidence does not automatically become Comparison validation.
-- Aggregate equality is never silently promoted to structural identity.
-- First-branch claims require explicit earlier-stage coverage discipline.
-- A single map failure or success does not close an untested map family.
-- Map-family coverage and structural-element coverage remain separate.
+- Aggregate equality does not become structural identity.
+- One map does not close an untested map family.
+- Map-family coverage and claim-relevant element coverage remain separate.
 - Precomparison transformations require provenance and remain Transformation operations.
-- Dynamic similarity does not establish lineage identity.
+- First-branch claims require earlier-stage closure.
+- Similarity does not establish lineage identity.
+- Method gain requires a frozen competent baseline.
 - Case success/failure does not decide method survival, merger, absorption, or deletion.
 - Later corrections are prospective under new artifact/version IDs rather than rewriting failed or superseded records.
