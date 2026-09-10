@@ -23,127 +23,113 @@ SYN-CH-003  46/46 PASS  Design / Transformation / Aggregation / Optimization bou
 SYN-CH-004  33/35 FAIL  CHALLENGE_DESIGN_DEFECT preserved
 SYN-CH-005  37/37 PASS  competent baseline / NO_GAIN
 SYN-CH-006  52/52 PASS  strongest-reasonable baseline / NO_GAIN
+SYN-CH-007  48/48 PASS  deterministic_same_project retrace
 ```
 
-`SYN-CH-004` remains historical and was not rewritten after the fixture defect was found. `SYN-CH-006` established strongest-reasonable-baseline comparison only at constructed-evidence level.
+`SYN-CH-004` remains historical and was not rewritten. `SYN-CH-006` established strongest-reasonable-baseline comparison only at constructed-evidence level. `SYN-CH-007` establishes same-project deterministic retraceability only.
 
 ---
 
-## 2026-09-10 — Step 10: SYN-APP-001 first external application
+## 2026-09-10 — External application 1: RFC 3986
 
 ```text
-EXTERNAL_STANDARD: RFC 3986 / STD 66
 PRECOMMIT: 29ea45a
 RESULT: 6985246
 EXTERNAL_DOMAIN: Internet identifier syntax / URI generic syntax
-ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
 SCORE: 40/40 PASS
-TERMINAL: SYNTHESIS_ADMISSIBLE
-CONFORMANCE: CONFORMANT
-GAIN: NOT_ASSESSED
 ```
-
-External source supplied the composition grammar. Generic syntax was not upgraded to scheme-specific URI validity.
 
 ---
 
-## 2026-09-10 — Step 11: SYN-CH-007 deterministic retrace
+## 2026-09-10 — External application 2: BIPM SI unit composition
 
 ```text
-PRECOMMIT: 9bbcadf
-RESULT: 7256456
-RETRACE_TARGET: SYN-APP-001
-RECONSTRUCTED_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
-SCORE: 48/48 PASS
-REPRODUCIBILITY_LEVEL: deterministic_same_project
-INDEPENDENT_REPLICATION: not established
-```
-
-The immutable Protocol/RFC/precommit/result chain was retraced exactly. This fills a reproducibility category only at same-project deterministic level.
-
----
-
-## 2026-09-10 — Step 12: SYN-APP-002 physical-metrology external application
-
-Status: **46/46 PASS / second external Synthesis domain**
-
-External authority:
-
-```text
-BIPM — The International System of Units (SI Brochure)
-9th edition, version 4.01, updated 2026
-DOI: 10.59161/AUEZ1291
+PRECOMMIT: 46479ae
+RESULT: c504d53
 EXTERNAL_DOMAIN: physical metrology / SI unit composition
+SCORE: 46/46 PASS
 ```
+
+Preserved `SAME_DIMENSION != SAME_UNIT_SCALE`, prefixed-unit coherence distinctions, and mass-prefix legality without absorbing measurement/calibration claims.
+
+---
+
+## 2026-09-10 — Step 13: SYN-APP-003 physical connector assembly
+
+Status: **44/44 PASS / third external Synthesis domain**
+
+External authority lock:
+
+```text
+USB Type-C Cable and Connector Specification Release 2.0 (August 2019)
+Frozen subset:
+  Section 2.3.2 plug orientation / cable twist detection
+  Section 2.3.3 initial power/data relationship
+  Section 3.2 connector mating interfaces
+Supporting source:
+  USB-IF Type-C overview
+EXTERNAL_DOMAIN:
+  physical connector assembly / USB Type-C mating interface
+```
+
+The test explicitly remains version-specific to the frozen Release-2.0 mechanical subset. Newer USB Type-C releases exist, but no current-release certification or compliance claim is made.
 
 Precommit:
 
 ```text
-evidence/method_specific/synthesis/SYN-APP-002_precommit.md
-commit: 46479ae87b71f92a117c3dc215eb71537c8dea29
-blob: ac819ef86133ece054e54b24fec4f23f3d30c2dd
+evidence/method_specific/synthesis/SYN-APP-003_precommit.md
+commit: 4159872ad761f1fe06a784e1771a9b5ac994bff8
+blob: 0cfe2711c49e4a249751200dddaec357f2736ce9
 ```
 
 Result:
 
 ```text
-evidence/method_specific/synthesis/SYN-APP-002_SI-unit-composition.md
-commit: c504d53f65fabd7ed98098b2077ba4c4d1ac971d
-```
-
-Frozen source rules covered:
-
-```text
-derived units as products of powers of base units
-coherent derived unit factor = 1
-special-name equivalences N, Pa, J, W, C
-prefix factors as inseparable parts of unit symbols
-power propagation through a prefixed unit symbol
-prefixed-unit noncoherence
-compound-prefix prohibition
-kilogram/gram mass-prefix exception
+evidence/method_specific/synthesis/SYN-APP-003_USB-Type-C-physical-mating.md
+commit: 73faaa03bf3309160fae4e7f690a277c12c40540
 ```
 
 Execution:
 
 ```text
-U1 kg m s^-2 -> N             admissible / COHERENT
-U2 N m -> J                    admissible / COHERENT
-U3 J s^-1 -> W                 admissible / COHERENT
-U4 N m^-2 -> Pa                admissible / COHERENT
-U5 A s -> C                    admissible / COHERENT
-U6 kg m s^-1 -> N              rejected {H4}
-U7 cm^3 -> 10^-6 m^3           admissible / NONCOHERENT
-U8 cm^3 -> 10^-2 m^3           rejected {H4}
-U9 kN -> 10^3 N                admissible / NONCOHERENT
-U10 kN -> N                    rejected {H4}
-U11 mµm compound prefix        rejected {H2}; H3-H5 NOT_REACHED
-U12 µkg                        rejected {H2}; H3-H5 NOT_REACHED
+M1  plug->receptacle ORIENTATION_A        admissible
+M2  plug->receptacle ORIENTATION_B        admissible
+M3  invalid 90-degree insertion           rejected {H2}; H3-H5 NOT_REACHED
+M4  plug->plug direct                     rejected {H1}; H2-H5 NOT_REACHED
+M5  receptacle->receptacle direct         rejected {H1}; H2-H5 NOT_REACHED
+M6  C-to-C cable E1/E2 assignment         admissible; H5 PASS
+M7  C-to-C cable ends swapped             admissible; H5 PASS
+M8  physical mate -> Source/Sink claim    rejected {H4}
+M9  physical mate -> host/device claim    rejected {H4}
+M10 cable direction -> power-role claim   rejected {H4}; H5 PASS
 
-ADMISSIBLE_FAMILY: {U1,U2,U3,U4,U5,U7,U9}
+ADMISSIBLE_FAMILY: {M1,M2,M6,M7}
 TERMINAL: SYNTHESIS_ADMISSIBLE
 CONFORMANCE: CONFORMANT
 GAIN: NOT_ASSESSED
-SCORE: 46/46 PASS
+SCORE: 44/44 PASS
 ```
 
-Preserved distinctions:
+Key distinctions:
 
 ```text
-SAME_DIMENSION != SAME_UNIT_SCALE
-VALID_PREFIXED_SI_UNIT != COHERENT_SI_UNIT
-PREFIX_COMPONENT_ADMITTED != PREFIX_COMPOSITION_FORM_LEGAL
-SI_UNIT_COMPOSITION != PHYSICAL_QUANTITY_MEASUREMENT_VALIDITY
+TYPE_C_COMPONENT_ADMITTED != DIRECTLY_MATEABLE_WITH_ANY_TYPE_C_COMPONENT
+REVERSIBLE_PLUG_ORIENTATION != ARBITRARY_ROTATIONAL_SYMMETRY
+MECHANICAL_MATING != SOURCE_SINK_ROLE_ESTABLISHMENT
+MECHANICAL_MATING != HOST_DEVICE_ROLE_ESTABLISHMENT
+REVERSIBLE_CABLE_DIRECTION != POWER_ROLE_SYMMETRY
 ```
 
 Evidence effect:
 
 ```text
 DIRECT_SYNTHESIS_PILOTS_COMPLETED: remains 6
-EXTERNAL_SYNTHESIS_APPLICATIONS: 2
-EXTERNAL_SYNTHESIS_DOMAINS: 2
-EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 2
+EXTERNAL_SYNTHESIS_APPLICATIONS: 3
+EXTERNAL_SYNTHESIS_DOMAINS: 3
+EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 3
 REPRODUCIBILITY_CASES: remains 1
+INDEPENDENT_SYNTHESIS_VALIDATION: not established
+SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 ```
 
 Protocol pressure:
@@ -154,8 +140,8 @@ SHARED_CORE_REOPEN_REQUIRED: no
 METHOD_COLLAPSE_OR_SURVIVAL_DECISION_FROM_THIS_CASE: none
 ```
 
-No uncertainty, calibration, traceability, experimental-realization, physical-law, or instrument claim was inferred. The application outcome does not decide method survival, merger, absorption, or deletion.
+No USB-IF certification, USB Power Delivery, data-rate capability, signal-integrity, durability, insertion-force, or current Release-2.5 conformance claim was inferred.
 
 ### Next technical step
 
-Add a third materially different external domain with stronger component/interface or physical assembly constraints, then consider the first Synthesis maturity audit.
+Run the first separately precommitted Synthesis maturity audit. The audit must evaluate evidence architecture and unresolved limitations independently from raw pass counts, and it must not turn a pass/fail record into an automatic method survival/merger/deletion decision.
