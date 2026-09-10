@@ -222,6 +222,95 @@ METHOD_COLLAPSE_OR_SURVIVAL_DECISION_FROM_THIS_CASE: none
 
 A pass/fail result is evidence about the frozen application, not by itself a command to preserve, merge, absorb, or delete a method.
 
+---
+
+## 2026-09-10 — Step 11: SYN-CH-007 deterministic same-project retrace
+
+Status: **48/48 PASS / first dedicated Synthesis retrace**
+
+Precommit:
+
+```text
+evidence/method_specific/synthesis/SYN-CH-007_retrace-precommit.md
+commit: 9bbcadf95e02f08334d7f45801b62429f9245987
+blob: 0fb86f22b0a66c47ac4a4efe7baef3f8515e07cb
+```
+
+Result:
+
+```text
+evidence/method_specific/synthesis/SYN-CH-007_deterministic-retrace.md
+commit: 72564564081b5aa58255d733fa0a78c4b9cf4fbd
+```
+
+Frozen retrace chain:
+
+```text
+Protocol commit 8787b242cb6648c47396151dbac3aadc19e3d184
+SYN-APP-001 precommit commit 29ea45a1b9143dfda147b4987f005a4ff0313842
+SYN-APP-001 precommit blob b383fbc09b79f68e4f3bc2f46ed0037bf51a85e9
+SYN-APP-001 result commit 69852468a8493b4fddaa8a6ac61edf40335146d9
+RFC 3986 / STD 66 official source
+```
+
+Semantic reconstruction exactly reproduced:
+
+```text
+R1-R4 admissible
+R5 -> {H2}; H3-H4 NOT_REACHED
+R6 -> {H2}; H3-H4 NOT_REACHED
+R7 -> {H1}; H2 PASS; H3-H4 NOT_REACHED
+R8 -> {H4}
+R9 -> {H3}; H4 NOT_REACHED
+R10-R12 admissible
+ADMISSIBLE_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
+TERMINAL: SYNTHESIS_ADMISSIBLE
+CONFORMANCE: CONFORMANT
+GAIN: NOT_ASSESSED
+```
+
+Status/scope reconstruction also preserved:
+
+```text
+QUERY_ABSENT != QUERY_PRESENT_EMPTY
+FRAGMENT_ABSENT != FRAGMENT_PRESENT_EMPTY
+AUTHORITY_ABSENT != AUTHORITY_PRESENT_EMPTY
+GENERIC_PARSEABILITY_UNDER_DIFFERENT_DECOMPOSITION != SYNTHESIS_OF_DECLARED_COMPONENT_TUPLE
+RFC3986_GENERIC_SYNTAX_ADMISSIBLE != SCHEME_SPECIFIC_URI_VALIDITY
+GENERIC_SYNTACTIC_COMPOSITION != RESOURCE_RESOLUTION_SUCCESS
+GENERIC_SYNTACTIC_COMPOSITION != SECURITY_OR_TRUSTWORTHINESS
+```
+
+Scoring:
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 48
+PASSED: 48
+FAILED: 0
+RETRACE_VERDICT: PASS
+REPRODUCIBILITY_LEVEL: deterministic_same_project
+INDEPENDENT_REPLICATION: not established
+```
+
+Evidence effect:
+
+```text
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+DIRECT_SYNTHESIS_PILOTS_COMPLETED: remains 6
+EXTERNAL_SYNTHESIS_APPLICATIONS: remains 1
+```
+
+Protocol/method-independence discipline:
+
+```text
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+METHOD_COLLAPSE_OR_SURVIVAL_DECISION_FROM_THIS_RETRACE: none
+```
+
+A retrace outcome measures reproducibility of the frozen application. It does not itself decide method preservation, merger, absorption, or deletion.
+
 ### Next technical step
 
-Run a separately precommitted deterministic same-project retrace of `SYN-APP-001` from immutable source/precommit/result references. Then add a second materially different external domain before any maturity audit.
+Add a second materially different external Synthesis domain before any maturity audit. Prefer an externally sourced physical, engineering, scientific, legal, or other non-URI composition/assembly rule so external breadth is not obtained from repeated URI-syntax variants.
