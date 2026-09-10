@@ -10,9 +10,9 @@ Shared-core evidence, Design evidence, Transformation evidence, Aggregation evid
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
-DIRECT_SYNTHESIS_PILOTS: 1
+DIRECT_SYNTHESIS_PILOTS: 2
 POSITIVE_SYNTHESIS_CASES: 1
-NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 0
+NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
 BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 0
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 NO_GAIN_SYNTHESIS_CASES: 0
@@ -25,7 +25,7 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
 Protocol establishment does not increase the direct-pilot count.
-`SYN-CH-001` is the first direct Protocol-v0.1 constructed pilot.
+`SYN-CH-001` and `SYN-CH-002` are the first two direct Protocol-v0.1 constructed pilots.
 
 ## Protocol and planning artifacts
 
@@ -61,44 +61,60 @@ DIRECT_SYNTHESIS_PILOT_INCREMENT: 0
 
 ### `SYN-CH-001` — positive symbolic chain composition
 
-Precommit:
-
-- `SYN-CH-001_precommit.md` — commit `4eeba2a`.
-
-Result:
-
-- `SYN-CH-001_positive-chain-composition.md` — commit `71e5d5c`.
-
-Frozen fixture used six explicit three-component chain candidates under an order-sensitive supplied rule, Formation admission, and General Property `readiness` statuses.
-
-Result:
+Precommit `SYN-CH-001_precommit.md` — commit `4eeba2a`.
+Result `SYN-CH-001_positive-chain-composition.md` — commit `71e5d5c`.
 
 ```text
-K1 = (SRC ⊙ AD0) ⊙ SNK -> admissible
-K2 = (SRC ⊙ AD1) ⊙ SNK -> admissible
-K3 = (SRC ⊙ ADU) ⊙ SNK -> rejected {H3}
-K4 = (AD0 ⊙ SRC) ⊙ SNK -> rejected {H2}
-K5 = (SRC ⊙ SNK) ⊙ AD0 -> rejected {H2}
-K6 = (AD1 ⊙ SNK) ⊙ SRC -> rejected {H2}
+K1 -> admissible
+K2 -> admissible
+K3 -> rejected {H3}
+K4 -> rejected {H2}
+K5 -> rejected {H2}
+K6 -> rejected {H2}
 
 SYNTHESIS_ADMISSIBLE_FAMILY: {K1,K2}
 TERMINAL_SYNTHESIS_STATUS: SYNTHESIS_ADMISSIBLE
 SYNTHESIS_PROTOCOL_CONFORMANCE: CONFORMANT
 SYNTHESIS_METHOD_GAIN_STATUS: NOT_ASSESSED
 PRECOMMITTED_REQUIRED_CHECKS: 28/28 PASS
+```
+
+The case preserves `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED`, rejects interface-incompatible arrangements despite individual component admission, avoids automatic whole-Property lift, and makes no temporal process-feasibility claim.
+
+### `SYN-CH-002` — negative/failure terminal-status distinction
+
+Precommit `SYN-CH-002_precommit.md` — commit `09fc616`.
+Result `SYN-CH-002_terminal-failure-distinction.md` — commit `7dac87c`.
+
+Three frozen subcases produced:
+
+```text
+I: exhaustive all rejected
+   -> SYNTHESIS_INFEASIBLE / CONFORMANT / NOT_ASSESSED
+
+U: locally admissible U1 + non-exhaustive coverage
+   + UNIQUE_SYNTHESIZED_TARGET requested
+   -> SYNTHESIS_UNDERDETERMINED / CONFORMANT / NOT_ASSESSED
+
+B: required composition rule unavailable
+   -> SYNTHESIS_BLOCKED / CONFORMANT / NOT_ASSESSED
+
+PRECOMMITTED_REQUIRED_CHECKS: 36/36 PASS
 CHALLENGE_VERDICT: PASS
 ```
 
 The case directly preserves:
 
 ```text
-DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED
-INDIVIDUAL_COMPONENT_ADMISSIBILITY != AUTOMATIC_COMPOSABILITY
-COMPONENT_PROPERTY != WHOLE_PROPERTY
-STATIC_COMPOSITION_ORDER != TEMPORAL_ASSEMBLY_SEQUENCE
+REJECTED_UNDER_EXHAUSTIVE_COVERAGE
+!= INSUFFICIENT_COVERAGE_FOR_CLOSURE
+!= MISSING_REQUIRED_INPUT
+
+local admissibility
+!= requested output-level closure
 ```
 
-It does not establish baseline superiority, external applicability, reproducibility, independent validation, or method maturity.
+No Protocol-v0.1 revision was required by the case.
 
 ## Protocol-v0.1 core guards
 
@@ -127,8 +143,6 @@ PARTIAL_SYNTHESIS
 STATIC_COMPOSITION_ORDER
 != TEMPORAL_ASSEMBLY_SEQUENCE
 ```
-
-Protocol v0.1 also freezes the supplied composition-law profile, grouping/parenthesization policy, target equivalence/canonicalization rule, residual obligations, process scope, and conditional lineage/transition checks before closure claims.
 
 ## Direct-evidence case convention
 
@@ -159,12 +173,5 @@ These are evidence categories, not an automatic maturity certificate.
 
 ## Immediate next direct-evidence task
 
-Create a separate precommit for a negative/failure terminal-status challenge that distinguishes, without changing Protocol v0.1:
-
-```text
-SYNTHESIS_INFEASIBLE
-SYNTHESIS_UNDERDETERMINED
-SYNTHESIS_BLOCKED
-```
-
-The challenge should preserve exhaustive-versus-non-exhaustive composition coverage and missing-input blocking rather than collapsing all non-success into one failure state.
+Separately precommit a direct method-boundary challenge under Protocol v0.1.
+It should pressure at least hidden Design, Transformation, Aggregation, and Optimization handoffs and verify that Synthesis neither fabricates missing architecture nor absorbs neighboring-method verdicts.
