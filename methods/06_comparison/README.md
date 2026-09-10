@@ -1,6 +1,6 @@
 # 06. DSD Comparison / DSD 비교론
 
-Status: **Protocol v0.1 established / direct validation pending**
+Status: **Protocol v0.1 established / CMP-CH-001 positive direct challenge PASS / validation in progress**
 
 Task: compare two or more supplied structures without reducing comparison to final-output equality, and determine justified correspondence, preserved structure, divergence, strict-equivalence status, and earliest supported branching only within declared comparison/map/element coverage.
 
@@ -74,8 +74,6 @@ A resolved comparison may resolve to equivalence, correspondence, or justified n
 
 ## Protocol-v0.1 forced locks
 
-Boundary attacks forced explicit locks for:
-
 ```text
 MAP_PROPERTY_REQUIREMENT_PROFILE
 REVERSE_DIRECTION_OR_INVERSE_POLICY
@@ -87,18 +85,25 @@ LINEAGE_IDENTITY_CLAIM_POLICY
 LINEAGE_EVIDENCE_SOURCE_OR_HANDOFF
 ```
 
-This keeps map-family coverage separate from structural-element coverage, forward correspondence separate from reverse/inverse claims, supplied transformed representations separate from hidden Transformation, and similarity separate from lineage identity.
+## Direct Protocol-v0.1 evidence
 
-## Step-2 boundary result
+### CMP-CH-001 — positive relation-separation challenge
 
 ```text
-BOUNDARY_ATTACKS_RUN: 16
-PRESERVED_NO_REFINEMENT: 11
-PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
-BOUNDARY_COLLAPSE_FOUND: 0
-FUNDAMENTAL_INTERFACE_FAILURE: 0
-DIRECT_COMPARISON_PILOT_INCREMENT: 0
+PRECOMMIT: 16c4b15
+RESULT: c601bd2
+T1 -> STRICT_EQUIVALENT
+T2 -> DIRECT_CORRESPONDENCE, strict equivalence no
+T3 -> ENCODED_CORRESPONDENCE
+T4 -> aggregate equal + structural NONCORRESPONDENCE under frozen strict family
+ALL TERMINAL: COMPARISON_RESOLVED
+ALL CONFORMANCE: CONFORMANT
+ALL GAIN: NOT_ASSESSED
+SCORE: 40/40 PASS
+PROTOCOL_REVISION_REQUIRED: no
 ```
+
+The case simultaneously preserved bijective strict equivalence, weaker one-way direct correspondence, bridge-dependent encoded correspondence, and equal-aggregate/structurally-different separation. Map-family coverage and comparison-element coverage remained separate throughout.
 
 ## Method boundaries
 
@@ -130,8 +135,8 @@ Method gain is assessed only against a separately frozen competent baseline.
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
 PROTOCOL_CREATION_COMMIT: a1700d960e0b41dfe32bf85b6334448d9104100d
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-DIRECT_COMPARISON_PILOTS: 0
-POSITIVE_COMPARISON_CASES: 0
+DIRECT_COMPARISON_PILOTS: 1
+POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 0
 BOUNDARY_COMPARISON_CASES: 0
 NO_GAIN_COMPARISON_CASES: 0
@@ -140,13 +145,13 @@ REPRODUCIBILITY_CASES: 0
 EXTERNAL_COMPARISON_APPLICATIONS: 0
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
-CURRENT_COMPARISON_EVIDENCE_STATUS: validation_pending
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Protocol establishment is infrastructure and does not count as a direct pilot.
+Protocol establishment itself remains infrastructure and is not counted as a direct pilot.
 
 ## Next development step
 
-Precommit and execute `CMP-CH-001` positive direct challenge. It should jointly exercise strict equivalence with sufficient closure, weaker direct correspondence, encoded correspondence, aggregate collision without structural inflation, explicit map-property/element-coverage records, and three-ledger separation.
+Precommit and execute `CMP-CH-002` negative/failure challenge. It should distinguish `COMPARISON_UNDERDETERMINED`, `COMPARISON_BLOCKED`, and resolved `NONCORRESPONDENCE`, and pressure non-exhaustive map-family closure, partial element coverage, missing required bridge, and missing reverse/inverse evidence.
 
 Case success/failure does not decide method survival, merger, absorption, or deletion.
