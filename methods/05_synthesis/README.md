@@ -1,6 +1,6 @@
 # 05. DSD Synthesis / DSD 합성론
 
-Status: **Protocol v0.1 established / positive + negative/failure + boundary + NO_GAIN evidence present / validation in progress**
+Status: **Protocol v0.1 established / broader strongest-reasonable-baseline comparison PASS / validation in progress**
 
 Task: compose supplied admitted components, properties, or partial structures into a larger construction under an explicit composition rule while preserving the conditions under which composition is legitimate.
 
@@ -17,13 +17,14 @@ and what structure/relations/statuses are retained or lost?
 ## Executable protocol and lineage
 
 Current executable protocol: `PROTOCOL_v0.1.md`, creation commit `8787b24`.
-Historical planning artifacts remain preserved: `TASK_INTERFACE_v0.1-draft.md`, `BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`, `TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`, `PLANNING.md`, and `WORKLOG.md`.
 
 ```text
 TASK_INTERFACE_v0.1-draft.md
 + TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
 -> PROTOCOL_v0.1.md
 ```
+
+Historical planning artifacts and failed challenges remain preserved rather than rewritten.
 
 ## Core guards
 
@@ -75,70 +76,64 @@ Dynamics/domain process model: time-resolved assembly when claimed
 ```text
 SYN-CH-001
   positive
+  28/28 PASS
   PRECOMMIT 4eeba2a
   RESULT 71e5d5c
-  28/28 PASS
 
 SYN-CH-002
-  negative/failure terminal distinction
+  negative/failure distinction
+  36/36 PASS
   PRECOMMIT 09fc616
   RESULT 7dac87c
-  36/36 PASS
-  INFEASIBLE != UNDERDETERMINED != BLOCKED
 
 SYN-CH-003
   executable method-boundary
+  46/46 PASS
   PRECOMMIT 2eea8ae
   RESULT cb55dba
-  46/46 PASS
-  Design / Transformation / Aggregation / Optimization handoffs preserved
 
 SYN-CH-004
   first NO_GAIN baseline attempt
+  33/35 FAIL
+  FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
   PRECOMMIT 1c77a0e
   FIRST RESULT 29730a5
   POSTEXECUTION AUDIT fe55899
-  33/35 FAIL
-  FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
-  Protocol failure not inferred
 
 SYN-CH-005
-  corrected prospective NO_GAIN baseline challenge
+  corrected prospective NO_GAIN case
+  37/37 PASS
   PRECOMMIT 3c6f323
   RESULT f062d3f
-  37/37 PASS
   DSD family = B0 family = {R1,R2}
-  TERMINAL: SYNTHESIS_ADMISSIBLE
-  CONFORMANCE: CONFORMANT
-  GAIN: NO_GAIN
+  SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
+
+SYN-CH-006
+  broader strongest-reasonable-baseline comparison
+  52/52 PASS
+  PRECOMMIT 4a6c1fe
+  RESULT 8ad51b5
+  RAW DSD = B1 = {A1,A2,A3,A4}
+  CANONICAL DSD = B1 = {C0,C1}
+  SYNTHESIS_ADMISSIBLE / CONFORMANT / NO_GAIN
+  STRONGEST_REASONABLE_BASELINE_COMPARISON:
+    established_at_constructed_evidence_level
 ```
 
-The `SYN-CH-004` predecessor is intentionally preserved. Its Q5 fixture omitted the middle component's readiness record while expecting no H4 failure. `SYN-CH-005` repaired this prospectively under a new Case ID by freezing explicit readiness records before execution.
-
-The successful `SYN-CH-005` comparison established no measured DSD gain over `B0_TYPED_CHAIN_CHECKER` on the frozen dimensions:
-
-```text
-G1 status distinction       NOT_ESTABLISHED
-G2 failure traceability     NOT_ESTABLISHED
-G3 composition closure      NOT_ESTABLISHED
-G4 target distinctness      NOT_ESTABLISHED
-G5 retraceability           NOT_ESTABLISHED
-```
-
-`NO_GAIN` is a valid evidence result and is not treated as method failure.
+`SYN-CH-006` is materially broader than the first typed-chain baseline. It simultaneously exercises supplied associativity/grouping equivalence, explicit whole-Property lift, status distinctions, relation retention, formation effect, staged `NOT_REACHED` dependencies, and raw-versus-canonical closure. The competent `B1_TYPED_COMPOSITION_GRAPH_CHECKER` receives the same records and matches all frozen dimensions, so the correct comparative result remains `NO_GAIN`.
 
 ## Current evidence state
 
 ```text
 DEDICATED_SYNTHESIS_PROTOCOL: v0.1 established
-DIRECT_SYNTHESIS_PILOTS_COMPLETED: 5
+DIRECT_SYNTHESIS_PILOTS_COMPLETED: 6
 SUCCESSFUL_POSITIVE_SYNTHESIS_CASES: 1
 SUCCESSFUL_NEGATIVE_OR_FAILURE_SYNTHESIS_CASES: 1
 SUCCESSFUL_BOUNDARY_SYNTHESIS_CASES_UNDER_PROTOCOL: 1
 PRESERVED_FAILED_BASELINE_CHALLENGE_DESIGNS: 1
-SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 1
-SUCCESSFUL_BASELINE_COMPARISON_PASSES: 1
-STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
+SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 2
+SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
+STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_SYNTHESIS_APPLICATIONS: 0
@@ -147,8 +142,8 @@ SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-The evidence so far is constructed and does not establish external applicability, cross-domain generality, strongest-reasonable-baseline coverage, reproducibility, independent validation, practical superiority, or maturity.
+The evidence so far is still project-constructed. It does not establish external applicability, cross-domain generality, independent reproducibility, practical superiority, or maturity.
 
 ## Next development step
 
-Separately precommit and execute a broader strongest-reasonable-baseline comparison. Use a richer Synthesis task that activates multiple method-specific dimensions at once, preferably composition equivalence/grouping together with property-lift, relation-retention, partial-residual, or formation-effect distinctions. The baseline must receive the same information and a further `NO_GAIN` outcome must remain acceptable.
+Create and precommit the first external Synthesis application `SYN-APP-001`. Prefer a stable public source that supplies a real composition or assembly grammar, component/interface compatibility rules, or admissible construction forms. Keep source-level domain legitimacy separate from DSD protocol conformance, and leave method gain `NOT_ASSESSED` unless a fair baseline is independently justified.
