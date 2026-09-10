@@ -1,6 +1,6 @@
 # DSD Comparison Planning / DSD 비교론 기획
 
-Status: **Protocol v0.1 established / direct validation pending**  
+Status: **Protocol v0.1 established / CMP-CH-001 positive direct challenge complete / validation in progress**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -26,13 +26,11 @@ TASK_INTERFACE_v0.1-draft.md
 -> PROTOCOL_v0.1.md
 ```
 
-Executable `PROTOCOL_v0.1.md` was frozen at commit:
+Executable protocol commit:
 
 ```text
 a1700d960e0b41dfe32bf85b6334448d9104100d
 ```
-
-Earlier planning artifacts remain historical and are not rewritten.
 
 ## Core guards / 핵심 가드
 
@@ -81,24 +79,59 @@ R4 LINEAGE_IDENTITY_CLAIM_POLICY
 
 ## Step 4 / Executable Protocol v0.1
 
-Protocol v0.1 integrates the original interface and Amendment 001 into an executable `C1-C20` sequence.
+Protocol v0.1 integrates the original interface and Amendment 001 into an executable `C1-C20` sequence. Protocol freeze itself adds no direct Comparison pilot.
 
-Key operational additions:
+## Step 5 / CMP-CH-001 positive direct challenge
+
+Precommit and result:
 
 ```text
-map-property and inverse/direction lock
-map-family coverage separate from element coverage
-output-level closure requirements
-precomparison Transformation provenance gate
-first-branch earlier-stage closure gate
-aggregate-collision separation
-lineage-identity handoff gate
-three-ledger separation
-representative protocol-nonconformance conditions
-reproducibility record requirements
+PRECOMMIT: 16c4b15f93d66299a2a3890f436e1aff0076713c
+RESULT: c601bd20d4d5fc6ba7dd5d4cb20b4a80f66ec880
+SCORE: 40/40 PASS
 ```
 
-Protocol freeze itself adds no direct Comparison pilot.
+Frozen task family:
+
+```text
+T1 strict equivalence with sufficient closure
+T2 direct correspondence weaker than strict equivalence
+T3 encoded correspondence through supplied bridge
+T4 equal aggregate readout with structural non-equivalence
+```
+
+Execution:
+
+```text
+T1 -> STRICT_EQUIVALENT
+     COMPARISON_RESOLVED / CONFORMANT / NOT_ASSESSED
+
+T2 -> DIRECT_CORRESPONDENCE
+     strict equivalence = no
+     COMPARISON_RESOLVED / CONFORMANT / NOT_ASSESSED
+
+T3 -> ENCODED_CORRESPONDENCE
+     equivalent only through supplied encoding bridge
+     COMPARISON_RESOLVED / CONFORMANT / NOT_ASSESSED
+
+T4 -> aggregate readout equal
+     support cardinality 3 != 1
+     no bijection under frozen strict family
+     NONCORRESPONDENCE / strict equivalence = no
+     COMPARISON_RESOLVED / CONFORMANT / NOT_ASSESSED
+```
+
+The positive case preserved:
+
+```text
+STRICT_EQUIVALENT != DIRECT_CORRESPONDENCE
+DIRECT_CORRESPONDENCE != ENCODED_CORRESPONDENCE
+AGGREGATE_EQUALITY != STRUCTURAL_EQUIVALENCE
+INJECTIVE_DIRECT_CORRESPONDENCE != BIJECTIVE_EQUIVALENCE
+MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
+```
+
+No baseline was present, so gain remained `NOT_ASSESSED`.
 
 ## Output and status structure
 
@@ -130,8 +163,8 @@ TERMINAL:
 2. ✅ 16 pre-protocol boundary attacks.
 3. ✅ Boundary Amendment 001.
 4. ✅ Executable `Comparison Protocol v0.1` — commit `a1700d9`.
-5. **Next:** `CMP-CH-001` positive direct challenge.
-6. Negative/failure challenge.
+5. ✅ `CMP-CH-001` positive direct challenge — **40/40 PASS**.
+6. **Next:** negative/failure challenge.
 7. Direct method-boundary challenge.
 8. `NO_GAIN` comparison against a competent baseline.
 9. Strongest-reasonable-baseline comparison.
@@ -141,30 +174,14 @@ TERMINAL:
 13. Maturity audit after evidence architecture is materially populated.
 14. Independent-evaluator infrastructure only after protocol/evidence stability justifies it.
 
-## CMP-CH-001 target / 다음 직접 시험
-
-The first direct challenge should be separately precommitted and simultaneously test:
-
-```text
-1 strict-equivalence case with sufficient closure
-1 direct correspondence weaker than strict equivalence
-1 encoded correspondence
-1 aggregate collision with equal readout but structural difference
-explicit required map properties
-explicit map-family and element coverage
-terminal / conformance / gain ledger separation
-```
-
-No expected result may be altered after execution begins.
-
 ## Current evidence state / 현재 증거 상태
 
 ```text
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
 PROTOCOL_CREATION_COMMIT: a1700d960e0b41dfe32bf85b6334448d9104100d
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-DIRECT_COMPARISON_PILOTS: 0
-POSITIVE_COMPARISON_CASES: 0
+DIRECT_COMPARISON_PILOTS: 1
+POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 0
 BOUNDARY_COMPARISON_CASES: 0
 NO_GAIN_COMPARISON_CASES: 0
@@ -173,7 +190,7 @@ REPRODUCIBILITY_CASES: 0
 EXTERNAL_COMPARISON_APPLICATIONS: 0
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
-CURRENT_COMPARISON_EVIDENCE_STATUS: validation_pending
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 ```
 
 ## Recording rule / 기록 규칙
@@ -189,3 +206,7 @@ CURRENT_COMPARISON_EVIDENCE_STATUS: validation_pending
 - Method gain requires a frozen competent baseline.
 - Case success/failure does not decide method survival, merger, absorption, or deletion.
 - Later corrections are prospective under new artifact/version IDs rather than rewriting failed or superseded records.
+
+## Next / 다음
+
+Precommit `CMP-CH-002` negative/failure challenge. It should distinguish `COMPARISON_UNDERDETERMINED`, `COMPARISON_BLOCKED`, and resolved `NONCORRESPONDENCE`, while separately pressuring non-exhaustive map-family coverage, partial element coverage, missing claim-required bridge, and missing reverse/inverse evidence.
