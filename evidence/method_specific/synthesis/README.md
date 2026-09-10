@@ -1,6 +1,6 @@
 # DSD Synthesis Direct Evidence / DSD 합성론 직접 증거
 
-Status: **Protocol v0.1 established / first external application PASS / validation in progress**
+Status: **Protocol v0.1 established / first external application PASS / deterministic retrace PASS / validation in progress**
 
 This lane records evidence that directly tests **DSD Synthesis / DSD 합성론**. Shared-core or neighboring-method evidence may be referenced but does not automatically count as direct Synthesis validation.
 
@@ -17,16 +17,19 @@ SUCCESSFUL_NO_GAIN_SYNTHESIS_CASES: 2
 SUCCESSFUL_BASELINE_COMPARISON_PASSES: 2
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_SYNTHESIS_APPLICATIONS: 1
 EXTERNAL_SYNTHESIS_DOMAINS: 1
 EXTERNAL_SYNTHESIS_APPLICATION_PASSES: 1
 INDEPENDENT_SYNTHESIS_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
 SYNTHESIS_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Protocol establishment and the 16 pre-protocol attacks do not increase the direct-pilot count. A failed direct challenge remains a historical direct attempt but does not fill its successful evidence category. External applications are tracked separately from constructed direct pilots.
+Protocol establishment and the 16 pre-protocol attacks do not increase the direct-pilot count. A failed direct challenge remains a historical direct attempt but does not fill its successful evidence category. External applications and retrace records are tracked separately from constructed direct pilots.
 
 ## Protocol and planning artifacts
 
@@ -167,6 +170,25 @@ SCORE: 40/40 PASS
 
 This application uses an externally supplied generic composition grammar rather than a project-invented domain rule. It preserves `ABSENT != PRESENT_EMPTY` for authority/query/fragment states and rejects candidates that are generically parseable only under a different component decomposition. The scope remains RFC-3986 generic syntax only; no scheme-specific validity, dereference, security, or normalization claim is inferred.
 
+## Reproducibility / retrace evidence
+
+### SYN-CH-007 — deterministic same-project retrace of SYN-APP-001
+
+```text
+PRECOMMIT: 9bbcadf
+RESULT: 7256456
+RETRACE_TARGET: SYN-APP-001
+REPRODUCIBILITY_LEVEL: deterministic_same_project
+RECONSTRUCTED_FAMILY: {R1,R2,R3,R4,R10,R11,R12}
+TERMINAL: SYNTHESIS_ADMISSIBLE
+CONFORMANCE: CONFORMANT
+GAIN: NOT_ASSESSED
+SCORE: 48/48 PASS
+INDEPENDENT_REPLICATION: not established
+```
+
+The retrace reconstructed all twelve verdicts, failure sets and `NOT_REACHED` staging, optional-component presence distinctions, admissible-family closure, scope guards, and all three ledgers from the frozen RFC/task/protocol chain. It is not blinded or independent evidence.
+
 ## Protocol-v0.1 core guards
 
 ```text
@@ -183,7 +205,7 @@ STATIC_COMPOSITION_ORDER != TEMPORAL_ASSEMBLY_SEQUENCE
 ## Direct-evidence case convention
 
 ```text
-SYN-CH-###   constructed Synthesis challenges
+SYN-CH-###   constructed Synthesis challenges and dedicated retrace cases
 SYN-APP-###  external or independently generated Synthesis applications
 SYN-AUD-###  Synthesis-specific audit / maturity records
 SYN-IEP-###  independent evaluator packet infrastructure
@@ -197,4 +219,4 @@ A future promotion consideration should accumulate, at minimum: dedicated protoc
 
 ## Immediate next direct-evidence task
 
-Create a dedicated deterministic same-project retrace/reproducibility case against the immutable `SYN-APP-001` source/precommit/result chain. After that, add a second materially different external domain before any maturity audit.
+Add a second materially different external Synthesis domain before any maturity audit. Prefer a physical, engineering, scientific, legal, or other non-URI public standard whose composition legitimacy is externally supplied. A second external success or failure still does not itself determine method survival or merger.
