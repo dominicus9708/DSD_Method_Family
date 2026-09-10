@@ -26,7 +26,7 @@ supplied subjects
 -> correspondence/divergence profile
 ```
 
-Created `TASK_INTERFACE_v0.1-draft.md` with subject identity/stage/status records, comparison domain, map-family source and coverage, feature/relation/property/status preservation, strict-equivalence criteria, encoding/bridge rules, first-branch search basis, aggregate-collision handling, dynamic-lineage guard, output levels, relation classes, terminal statuses, and three-ledger separation.
+Created `TASK_INTERFACE_v0.1-draft.md`.
 
 ---
 
@@ -53,7 +53,7 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 DIRECT_COMPARISON_PILOT_INCREMENT: 0
 ```
 
-The five refinement-bearing attacks required four groups:
+Forced refinements:
 
 ```text
 R1 MAP_PROPERTY_REQUIREMENT_PROFILE
@@ -66,70 +66,103 @@ R4 LINEAGE_IDENTITY_CLAIM_POLICY
    LINEAGE_EVIDENCE_SOURCE_OR_HANDOFF
 ```
 
-Step-1 draft was preserved unchanged.
-
 ---
 
 ## 2026-09-10 — Planning Step 4: Protocol v0.1 freeze
 
 Status: **first executable Comparison protocol established**
 
-Created:
-
 ```text
 methods/06_comparison/PROTOCOL_v0.1.md
 commit a1700d960e0b41dfe32bf85b6334448d9104100d
 ```
 
-Lineage:
+Protocol v0.1 freezes a `C1-C20` executable sequence. Protocol creation adds no direct Comparison pilot.
+
+---
+
+## 2026-09-10 — Step 5: CMP-CH-001 positive direct challenge
+
+Status: **40/40 PASS**
+
+Precommit:
 
 ```text
-TASK_INTERFACE_v0.1-draft.md
-+ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
--> PROTOCOL_v0.1.md
+evidence/method_specific/comparison/CMP-CH-001_precommit.md
+commit 16c4b15f93d66299a2a3890f436e1aff0076713c
+blob 1c87d4261022a07175796bce16e794f9d0c77f31
 ```
 
-Protocol v0.1 freezes a `C1-C20` executable sequence covering:
+Result:
 
 ```text
-subjects / claim / scope / target resolution
-map-family source / direction / coverage
-required map properties and reverse/inverse policy
-claim-relevant structural-element coverage
-output-level closure requirements
-feature/relation/Property/status/equivalence rules
-encoding/bridge and precomparison transformation provenance
-first-branch search and earlier-stage closure
-aggregate collision without structural upgrade
-similarity vs lineage-identity separation
-terminal / conformance / gain ledgers
-limits / handoffs / reproducibility record
+evidence/method_specific/comparison/CMP-CH-001_positive-direct-comparison.md
+commit c601bd20d4d5fc6ba7dd5d4cb20b4a80f66ec880
 ```
 
-Key executable guards include:
+Four frozen task instances were executed:
 
 ```text
-FORWARD_MAP_SUCCESS != REVERSE_MAP_SUCCESS
-MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
-UNSUPPLIED_NORMALIZATION_OR_CONVERSION != COMPARISON_MAP
-FIRST_OBSERVED_DIFFERENCE != FIRST_JUSTIFIED_BRANCH_POINT
-AGGREGATE_EQUALITY != STRUCTURAL_EQUIVALENCE
-DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
-MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
+T1 -> STRICT_EQUIVALENT
+     bijection + forward/inverse relation preservation + Property-status preservation
+
+T2 -> DIRECT_CORRESPONDENCE
+     injective direct map with preserved mapped relation/status
+     y2 outside image
+     strict equivalence = no
+
+T3 -> ENCODED_CORRESPONDENCE
+     supplied bridge e: 0<->OFF, 1<->ON
+     bridge bijective and relation/status preserving
+     not relabeled DIRECT_CORRESPONDENCE
+
+T4 -> aggregate readout equal (4=4)
+     support cardinalities 3 vs 1
+     no bijection under frozen strict structural family
+     structural equivalence = no
+     NONCORRESPONDENCE under frozen strict family
+```
+
+Three-ledger result for all four:
+
+```text
+TERMINAL_COMPARISON_STATUS: COMPARISON_RESOLVED
+COMPARISON_PROTOCOL_CONFORMANCE: CONFORMANT
+COMPARISON_METHOD_GAIN_STATUS: NOT_ASSESSED
+```
+
+Precommitted score:
+
+```text
+A immutable/precommit discipline  8/8
+B T1 strict-equivalence           8/8
+C T2 weaker-direct                8/8
+D T3 encoded                      8/8
+E T4 aggregate-collision          8/8
+TOTAL                            40/40 PASS
 ```
 
 Evidence effect:
 
 ```text
-DEDICATED_COMPARISON_PROTOCOL: v0.1 established
-DIRECT_COMPARISON_PILOT_INCREMENT: 0
-DIRECT_COMPARISON_PILOTS: 0
-COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
-CURRENT_COMPARISON_EVIDENCE_STATUS: validation_pending
+DIRECT_COMPARISON_PILOTS: 1
+POSITIVE_COMPARISON_CASES: 1
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+METHOD_SURVIVAL_OR_MERGER_DECISION_FROM_THIS_CASE: none
 ```
 
-Protocol creation does not validate the method and does not decide method survival, merger, absorption, or deletion.
+The challenge preserved:
+
+```text
+STRICT_EQUIVALENT != DIRECT_CORRESPONDENCE
+DIRECT_CORRESPONDENCE != ENCODED_CORRESPONDENCE
+AGGREGATE_EQUALITY != STRUCTURAL_EQUIVALENCE
+INJECTIVE_DIRECT_CORRESPONDENCE != BIJECTIVE_EQUIVALENCE
+MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
+```
 
 ### Next
 
-Separately precommit `CMP-CH-001` before execution. The first direct positive challenge should jointly test strict equivalence with sufficient closure, weaker direct correspondence, encoded correspondence, aggregate collision without structural inflation, explicit map-property/element-coverage records, and three-ledger separation.
+Separately precommit `CMP-CH-002` negative/failure challenge. It should distinguish `COMPARISON_UNDERDETERMINED`, `COMPARISON_BLOCKED`, and resolved `NONCORRESPONDENCE`, including incomplete map-family/element/reverse evidence and missing claim-required bridge cases.
