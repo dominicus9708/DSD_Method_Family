@@ -67,12 +67,13 @@ Key Synthesis evidence includes `SYN-CH-001` through `SYN-CH-007`, three externa
 
 ### `comparison/` — DSD Comparison / DSD 비교론
 
-Planning opened `2026-09-10` after the Synthesis internal-development track reached the point where further high-value evidence requires an external evaluator.
+Planning opened `2026-09-10`; executable `PROTOCOL_v0.1.md` was established at commit `a1700d960e0b41dfe32bf85b6334448d9104100d` after 16 pre-protocol boundary attacks.
 
-Current Comparison planning state after Step 2:
+Current Comparison state:
 
 ```text
-DEDICATED_COMPARISON_PROTOCOL: not established
+DEDICATED_COMPARISON_PROTOCOL: v0.1 established
+PROTOCOL_CREATION_COMMIT: a1700d960e0b41dfe32bf85b6334448d9104100d
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
 BOUNDARY_PRESERVED_NO_REFINEMENT: 11
 BOUNDARY_PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
@@ -91,42 +92,12 @@ COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_pending
 ```
 
-Planning artifacts:
+Protocol lineage:
 
 ```text
 methods/06_comparison/TASK_INTERFACE_v0.1-draft.md
-methods/06_comparison/BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md
-methods/06_comparison/TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
-methods/06_comparison/PLANNING.md
-methods/06_comparison/WORKLOG.md
-evidence/method_specific/comparison/README.md
-```
-
-Step-2 result:
-
-```text
-BOUNDARY_ATTACKS_RUN: 16
-PRESERVED_NO_REFINEMENT: 11
-PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
-BOUNDARY_COLLAPSE_FOUND: 0
-FUNDAMENTAL_INTERFACE_FAILURE: 0
-DIRECT_COMPARISON_PILOT_INCREMENT: 0
-```
-
-Four non-breaking refinement groups were forced:
-
-```text
-R1 MAP_PROPERTY_REQUIREMENT_PROFILE
-   REVERSE_DIRECTION_OR_INVERSE_POLICY
-
-R2 COMPARISON_ELEMENT_COVERAGE
-   CLOSURE_REQUIREMENT_BY_OUTPUT_LEVEL
-
-R3 PRECOMPARISON_TRANSFORMATION_POLICY
-   REPRESENTATION_PROVENANCE
-
-R4 LINEAGE_IDENTITY_CLAIM_POLICY
-   LINEAGE_EVIDENCE_SOURCE_OR_HANDOFF
++ methods/06_comparison/TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+-> methods/06_comparison/PROTOCOL_v0.1.md
 ```
 
 Current Comparison guards:
@@ -146,7 +117,7 @@ DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
 MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 ```
 
-These planning records are not direct evidence. The next internal step is to integrate the Step-1 draft and Boundary Amendment 001 into the first executable `Comparison Protocol v0.1`.
+Protocol establishment is infrastructure and does not fill a direct-evidence category. The next Comparison event is a separately precommitted `CMP-CH-001` positive direct challenge.
 
 ## Promotion expectation / 성숙도 승격 기준
 
