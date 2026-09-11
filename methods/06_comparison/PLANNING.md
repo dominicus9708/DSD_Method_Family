@@ -1,22 +1,11 @@
 # DSD Comparison Planning / DSD 비교론 기획
 
-Status: **Protocol v0.1 established / CMP-CH-005 strongest-reasonable-baseline complete / validation in progress**  
+Status: **Protocol v0.1 established / Step 10 first external application complete / validation in progress**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
 
 Develop DSD Comparison as an independent method under **Field I: Structural Description & Understanding**. Comparison consumes two or more supplied subjects together with an explicit comparison scope, map/correspondence family, and preservation/equivalence criteria, then returns a justified correspondence/divergence profile without collapsing comparison into final-output equality.
-
-## Current source/interface lock / 현재 기준 잠금
-
-```text
-Formation Axiom System
-Property Axiom System
-Channel-Indexed Static Aggregation
-Structural Reorganization Dynamics
-DSD_INTERFACE_PROFILE.md
-METHOD_BOUNDARY_MATRIX.md
-```
 
 ## Protocol lineage / 프로토콜 계보
 
@@ -32,116 +21,6 @@ Executable protocol commit:
 a1700d960e0b41dfe32bf85b6334448d9104100d
 ```
 
-## Step 1-4 summary
-
-```text
-Step 1 task interface draft: complete
-Step 2 pre-protocol boundary attacks: 16
-Step 3 Boundary Amendment 001: complete
-Step 4 executable Protocol v0.1: complete
-```
-
-Boundary planning result:
-
-```text
-BOUNDARY_ATTACKS_RUN: 16
-PRESERVED_NO_REFINEMENT: 11
-PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
-BOUNDARY_COLLAPSE_FOUND: 0
-FUNDAMENTAL_INTERFACE_FAILURE: 0
-```
-
-## Step 5 / CMP-CH-001 positive direct challenge
-
-```text
-PRECOMMIT: 16c4b15
-RESULT: c601bd2
-SCORE: 40/40 PASS
-```
-
-## Step 6 / CMP-CH-002 negative/failure challenge
-
-```text
-PRECOMMIT: c852a68
-RESULT: ca2e91f
-SCORE: 48/48 PASS
-```
-
-## Step 7 / CMP-CH-003 direct method-boundary challenge
-
-```text
-PRECOMMIT: 68d330b
-RESULT: b4256d2
-SCORE: 48/48 PASS
-```
-
-Analysis, Classification, Transformation, Audit, and Provenance/Lineage handoffs remained explicit rather than being absorbed into Comparison.
-
-## Step 8 / CMP-CH-004 competent-baseline NO_GAIN
-
-```text
-PRECOMMIT: 0d96d6b
-RESULT: 4cacd55
-BASELINE: B0_TYPED_COMPARISON_LEDGER
-SCORE: 50/50 PASS
-GAIN: NO_GAIN
-```
-
-Five task classes tested strict equivalence, encoded correspondence, non-exhaustive map failure, aggregate collision, and missing-bridge blockage. B0 matched every frozen claim-relevant result.
-
-## Step 9 / CMP-CH-005 strongest-reasonable-baseline
-
-Precommit and result:
-
-```text
-PRECOMMIT: ad542304a184303c7898ef8506afe167735683c5
-RESULT: 61675b35e55a7ce288dc18a3afc773eeb135b180
-BASELINE: B1_STRONG_TYPED_COMPARISON_ENGINE
-SCORE: 60/60 PASS
-GAIN: NO_GAIN
-```
-
-The richer workload simultaneously activated:
-
-```text
-earliest justified first-branch closure
-later re-convergence without branch erasure
-forward direct correspondence vs strict-equivalence closure
-surjectivity/inverse-coverage discipline
-partial-vs-global comparison-element coverage
-uncovered-element preservation
-supplied representation/bridge provenance
-encoded correspondence without direct relabeling
-sampled dynamic-trajectory equivalence
-lineage identity gated by supplied lineage evidence
-```
-
-Task-level result:
-
-```text
-R1 -> PARTIAL_CORRESPONDENCE / FIRST_BRANCH S2 / RESOLVED
-R2 -> DIRECT_CORRESPONDENCE / strict equivalence no / RESOLVED
-R3 -> PARTIAL_CORRESPONDENCE / global equivalence unclosed / RESOLVED
-R4 -> ENCODED_CORRESPONDENCE / bridge provenance preserved / RESOLVED
-R5 -> sampled-trajectory STRICT_EQUIVALENT / DISTINCT_LINEAGES / RESOLVED
-```
-
-DSD and B1 matched all frozen claim-relevant outputs. Therefore:
-
-```text
-G1 FIRST_BRANCH_CLOSURE_GAIN: NOT_ESTABLISHED
-G2 DIRECTIONAL_MAP_AND_INVERSE_GAIN: NOT_ESTABLISHED
-G3 ELEMENT_COVERAGE_DISCIPLINE_GAIN: NOT_ESTABLISHED
-G4 BRIDGE_AND_REPRESENTATION_PROVENANCE_GAIN: NOT_ESTABLISHED
-G5 DYNAMIC_VS_LINEAGE_SEPARATION_GAIN: NOT_ESTABLISHED
-G6 STATUS_AND_RELATION_TRACE_GAIN: NOT_ESTABLISHED
-G7 TERMINAL_AND_RETRACEABILITY_GAIN: NOT_ESTABLISHED
-COMPARISON_METHOD_GAIN_STATUS: NO_GAIN
-STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
-```
-
-No Protocol-v0.1 revision or shared-core reopen was required.
-
 ## Development sequence / 개발 순서
 
 1. ✅ Comparison-specific task interface draft.
@@ -153,11 +32,83 @@ No Protocol-v0.1 revision or shared-core reopen was required.
 7. ✅ `CMP-CH-003` direct method-boundary challenge — **48/48 PASS**.
 8. ✅ `CMP-CH-004` competent-baseline `NO_GAIN` — **50/50 PASS / NO_GAIN**.
 9. ✅ `CMP-CH-005` strongest-reasonable-baseline — **60/60 PASS / NO_GAIN**.
-10. **Next:** first external application `CMP-APP-001`.
-11. Deterministic retrace/reproducibility record.
+10. ✅ `CMP-APP-001` first external application — Unicode normalization, **42/42 PASS**.
+11. **Next:** deterministic same-project retrace/reproducibility record.
 12. Additional materially different external domains.
 13. Maturity audit after evidence architecture is materially populated.
 14. Independent-evaluator infrastructure only after protocol/evidence stability justifies it.
+
+## Constructed evidence summary
+
+```text
+CMP-CH-001  40/40 PASS
+CMP-CH-002  48/48 PASS
+CMP-CH-003  48/48 PASS
+CMP-CH-004  50/50 PASS / NO_GAIN
+CMP-CH-005  60/60 PASS / NO_GAIN
+STRONGEST_REASONABLE_BASELINE_COMPARISON:
+  established_at_constructed_evidence_level
+```
+
+## Step 10 / CMP-APP-001 external application
+
+Source lock:
+
+```text
+Unicode Standard Annex #15: Unicode Normalization Forms
+Unicode version: 17.0.0
+Revision: 57
+Date: 2025-07-30
+```
+
+Evidence:
+
+```text
+PRECOMMIT: e1a109b9e4515336b4ee22c4d8ff216d4fd21705
+RESULT: b64cd882047b45c4caaaf27cbc414c0b9b44e2e6
+SCORE: 42/42 PASS
+```
+
+Frozen comparison criteria:
+
+```text
+BINARY_IDENTITY
+CANONICAL_EQUIVALENCE_VIA_NFC
+COMPATIBILITY_EQUIVALENCE_VIA_NFKC
+```
+
+Execution:
+
+```text
+U1 Ç vs C+cedilla / NFC canonical
+  -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
+
+U2 same pair / binary identity
+  -> NONCORRESPONDENCE / COMPARISON_RESOLVED
+
+U3 ① vs 1 / NFC canonical
+  -> NONCORRESPONDENCE / COMPARISON_RESOLVED
+
+U4 same pair / NFKC compatibility
+  -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
+
+U5 가 vs ᄀ+ᅡ / NFC canonical
+  -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
+
+U6 reordered combining marks / NFC canonical
+  -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
+```
+
+Preserved distinctions:
+
+```text
+RAW_BINARY_INEQUALITY != CANONICAL_NONCORRESPONDENCE
+CANONICAL_EQUIVALENCE != COMPATIBILITY_EQUIVALENCE
+SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
+NORMALIZATION_BRIDGE_DEPENDENCE != DIRECT_LITERAL_IDENTITY
+```
+
+All six runs were `CONFORMANT`. No independent baseline was supplied, so `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED`.
 
 ## Current evidence state / 현재 증거 상태
 
@@ -173,7 +124,9 @@ NO_GAIN_COMPARISON_CASES: 2
 BASELINE_COMPARISON_CASES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
-EXTERNAL_COMPARISON_APPLICATIONS: 0
+EXTERNAL_COMPARISON_APPLICATIONS: 1
+EXTERNAL_COMPARISON_DOMAINS: 1
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
@@ -182,19 +135,19 @@ CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 ## Recording rule / 기록 규칙
 
 - Protocol establishment is infrastructure, not direct evidence.
+- Constructed direct pilots and external applications remain separate evidence counters.
 - Shared-core or neighboring-method evidence does not automatically become Comparison validation.
+- Comparison criteria are frozen per task; the same pair may legitimately receive different verdicts under different criteria.
 - Aggregate equality does not become structural identity.
 - One map does not close an untested map family.
 - Map-family coverage and claim-relevant element coverage remain separate.
 - Precomparison transformations require provenance and remain Transformation operations.
 - First-branch claims require earlier-stage closure; later re-convergence does not erase an earlier justified branch.
 - Similar dynamic trajectories do not establish lineage identity.
-- Legitimate Comparison output may coexist with a neighboring-method handoff.
 - Method gain requires a frozen competent baseline.
-- `NO_GAIN` is a legitimate comparative result and is not evidence of method absorption or redundancy by itself.
+- `NO_GAIN` is legitimate and is not evidence of method absorption or redundancy by itself.
 - Case success/failure does not decide method survival, merger, absorption, or deletion.
-- Later corrections are prospective under new artifact/version IDs rather than rewriting failed or superseded records.
 
 ## Next / 다음
 
-Precommit `CMP-APP-001`, the first external Comparison application. Use a stable public source that supplies the compared records and a defensible external comparison criterion, rather than inventing both inside the project fixture. Keep source-level truth, Comparison protocol conformance, and method gain as separate ledgers.
+Precommit a deterministic same-project retrace of `CMP-APP-001`. Use only the frozen protocol, external-source lock, precommit, and result record. Reproduce all six relation classes, terminal states, criterion provenance, and scope exclusions without changing the task.
