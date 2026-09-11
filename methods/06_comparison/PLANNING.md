@@ -1,6 +1,6 @@
 # DSD Comparison Planning / DSD 비교론 기획
 
-Status: **Protocol v0.1 established / CMP-CH-001 through CMP-CH-003 complete / validation in progress**  
+Status: **Protocol v0.1 established / CMP-CH-001 through CMP-CH-004 complete / validation in progress**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -54,97 +54,92 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 ## Step 5 / CMP-CH-001 positive direct challenge
 
 ```text
-PRECOMMIT: 16c4b15f93d66299a2a3890f436e1aff0076713c
-RESULT: c601bd20d4d5fc6ba7dd5d4cb20b4a80f66ec880
+PRECOMMIT: 16c4b15
+RESULT: c601bd2
 SCORE: 40/40 PASS
 T1 -> STRICT_EQUIVALENT
 T2 -> DIRECT_CORRESPONDENCE / strict equivalence no
 T3 -> ENCODED_CORRESPONDENCE
 T4 -> aggregate equal + structural NONCORRESPONDENCE under frozen strict family
-ALL TERMINAL: COMPARISON_RESOLVED
-ALL CONFORMANCE: CONFORMANT
-ALL GAIN: NOT_ASSESSED
 ```
 
 ## Step 6 / CMP-CH-002 negative/failure challenge
 
 ```text
-PRECOMMIT: c852a688c3411c7d8568e2597262c4ec32a0355e
-RESULT: ca2e91f6a73d36561e77f699c3b221ada0f97dfc
+PRECOMMIT: c852a68
+RESULT: ca2e91f
 SCORE: 48/48 PASS
-N1 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
-N2 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
-N3 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
-N4 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
+N1 -> COMPARISON_UNDERDETERMINED
+N2 -> COMPARISON_UNDERDETERMINED
+N3 -> COMPARISON_BLOCKED
+N4 -> COMPARISON_UNDERDETERMINED
 N5 -> NONCORRESPONDENCE / COMPARISON_RESOLVED
-ALL CONFORMANCE: CONFORMANT
-ALL GAIN: NOT_ASSESSED
 ```
 
-Preserved distinctions:
-
-```text
-NONEXHAUSTIVE_MAP_FAILURE != RESOLVED_NONCORRESPONDENCE
-PARTIAL_ELEMENT_COVERAGE != STRICT_EQUIVALENCE
-MISSING_REQUIRED_BRIDGE != PROVEN_DIFFERENCE
-FORWARD_SUCCESS != VERIFIED_INVERSE_PRESERVATION
-COMPARISON_UNDERDETERMINED != COMPARISON_BLOCKED
-EXHAUSTIVE_ALL_MAP_FAILURE != NONEXHAUSTIVE_FAILURE_TO_FIND
-```
+Preserved distinctions include non-exhaustive failure versus resolved noncorrespondence, partial element coverage versus strict equivalence, missing bridge versus proven difference, and forward success versus verified inverse preservation.
 
 ## Step 7 / CMP-CH-003 direct method-boundary challenge
+
+```text
+PRECOMMIT: 68d330b
+RESULT: b4256d2
+SCORE: 48/48 PASS
+```
+
+```text
+Analysis -> visible STRICT_EQUIVALENT + ANALYSIS_REQUIRED
+Classification -> visible STRICT_EQUIVALENT + CLASSIFICATION_REQUIRED
+Transformation -> COMPARISON_BLOCKED + TRANSFORMATION_REQUIRED
+Audit -> resolved comparison profile + AUDIT_REQUIRED
+Provenance/Lineage -> snapshot STRICT_EQUIVALENT, lineage not_established + PROVENANCE_LINEAGE_REQUIRED
+```
+
+All subcases remained `CONFORMANT`; gain was `NOT_ASSESSED`.
+
+## Step 8 / CMP-CH-004 competent-baseline NO_GAIN
 
 Precommit and result:
 
 ```text
-PRECOMMIT: 68d330bc43b78591be2ef2c197d6a177302789aa
-RESULT: b4256d2a3c71d2a14ce9808668300ec3a879e646
-SCORE: 48/48 PASS
+PRECOMMIT: 0d96d6ba83e25f2e14dba47c309cb74da7c71bad
+RESULT: 4cacd55f73b2f4180ec8f11854d8dbe40974f536
+BASELINE: B0_TYPED_COMPARISON_LEDGER
+SCORE: 50/50 PASS
 ```
 
-Frozen neighboring boundaries and outcomes:
+Five frozen task classes:
 
 ```text
-B1 Analysis
-   visible structure -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
-   no hidden internal decomposition
-   HANDOFF: ANALYSIS_REQUIRED
-
-B2 Classification
-   visible structure -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
-   no taxonomy assignment
-   HANDOFF: CLASSIFICATION_REQUIRED
-
-B3 Transformation
-   incompatible supplied representations, no transform/bridge supplied
-   -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
-   no unsupplied normalization
-   HANDOFF: TRANSFORMATION_REQUIRED
-
-B4 Audit
-   input equal, final result equal, process trace different
-   -> COMPARISON_PROFILE / COMPARISON_RESOLVED
-   no conformance/pass-fail verdict
-   HANDOFF: AUDIT_REQUIRED
-
-B5 Provenance/Lineage
-   snapshot structure -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
-   lineage identity -> not_established
-   HANDOFF: PROVENANCE_LINEAGE_REQUIRED
+Q1 strict equivalence + typed status
+Q2 encoded correspondence + supplied bridge provenance
+Q3 non-exhaustive map failure + untested remainder
+Q4 aggregate collision + structural noncorrespondence
+Q5 missing claim-required bridge + blocked terminal
 ```
 
-Boundary distinctions preserved:
+DSD and B0 matched on every frozen task-level result:
 
 ```text
-COMPARISON_EQUIVALENCE != INTERNAL_DECOMPOSITION
-COMPARISON_RELATION != TAXONOMY_ASSIGNMENT
-COMPARISON_MAP != UNSUPPLIED_TRANSFORMATION
-TRACE_DIFFERENCE != AUDIT_CONFORMANCE_VERDICT
-STRUCTURAL_EQUIVALENCE != LINEAGE_IDENTITY
-LEGITIMATE_COMPARISON_RESULT + NEIGHBORING_HANDOFF != METHOD_BOUNDARY_FAILURE
+Q1 -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
+Q2 -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
+Q3 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
+Q4 -> NONCORRESPONDENCE / COMPARISON_RESOLVED
+Q5 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
 ```
 
-All five subcases were `CONFORMANT`; gain remained `NOT_ASSESSED`. Protocol v0.1 revision and shared-core reopen were not required.
+Gain ledger:
+
+```text
+G1 RELATION_CLASS_SEPARATION_GAIN: NOT_ESTABLISHED
+G2 STATUS_DISTINCTION_GAIN: NOT_ESTABLISHED
+G3 COVERAGE_AND_CLOSURE_GAIN: NOT_ESTABLISHED
+G4 BRIDGE_PROVENANCE_GAIN: NOT_ESTABLISHED
+G5 AGGREGATE_COLLISION_GAIN: NOT_ESTABLISHED
+G6 TERMINAL_AND_RETRACEABILITY_GAIN: NOT_ESTABLISHED
+COMPARISON_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+The baseline received the same claim-relevant records and was explicitly allowed to preserve every scored distinction. This filled the first successful Comparison `NO_GAIN` and competent-baseline categories without manufacturing superiority.
 
 ## Development sequence / 개발 순서
 
@@ -155,8 +150,8 @@ All five subcases were `CONFORMANT`; gain remained `NOT_ASSESSED`. Protocol v0.1
 5. ✅ `CMP-CH-001` positive direct challenge — **40/40 PASS**.
 6. ✅ `CMP-CH-002` negative/failure challenge — **48/48 PASS**.
 7. ✅ `CMP-CH-003` direct method-boundary challenge — **48/48 PASS**.
-8. **Next:** competent baseline `NO_GAIN` challenge.
-9. Strongest-reasonable-baseline comparison.
+8. ✅ `CMP-CH-004` competent-baseline `NO_GAIN` challenge — **50/50 PASS / NO_GAIN**.
+9. **Next:** strongest-reasonable-baseline comparison.
 10. First external application.
 11. Deterministic retrace/reproducibility record.
 12. Additional materially different external domains.
@@ -169,12 +164,13 @@ All five subcases were `CONFORMANT`; gain remained `NOT_ASSESSED`. Protocol v0.1
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
 PROTOCOL_CREATION_COMMIT: a1700d960e0b41dfe32bf85b6334448d9104100d
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-DIRECT_COMPARISON_PILOTS: 3
+DIRECT_COMPARISON_PILOTS: 4
 POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
 BOUNDARY_COMPARISON_CASES: 1
-NO_GAIN_COMPARISON_CASES: 0
-BASELINE_COMPARISON_CASES: 0
+NO_GAIN_COMPARISON_CASES: 1
+BASELINE_COMPARISON_CASES: 1
+STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_COMPARISON_APPLICATIONS: 0
 INDEPENDENT_COMPARISON_VALIDATION: not established
@@ -195,9 +191,10 @@ CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 - Legitimate Comparison output may coexist with a neighboring-method handoff.
 - A missing neighboring operation that is a prerequisite for substantive comparison may produce `COMPARISON_BLOCKED` without protocol nonconformance.
 - Method gain requires a frozen competent baseline.
+- `NO_GAIN` is a legitimate comparative result and is not evidence of method absorption or redundancy by itself.
 - Case success/failure does not decide method survival, merger, absorption, or deletion.
 - Later corrections are prospective under new artifact/version IDs rather than rewriting failed or superseded records.
 
 ## Next / 다음
 
-Precommit `CMP-CH-004` competent-baseline challenge. The baseline must receive the same claim-relevant subjects, maps, map/element coverage, bridge/provenance, Property/status, equivalence and terminal-state information. Do not weaken the baseline; an honest `NO_GAIN` result is acceptable.
+Precommit `CMP-CH-005` strongest-reasonable-baseline comparison. It must be materially richer than `CMP-CH-004`, activate first-branch closure, direction/inverse requirements, partial-versus-global element coverage, representation/bridge provenance, and possibly lineage-gated dynamic comparison, and give the strong baseline all claim-relevant information. Another honest `NO_GAIN` remains acceptable.
