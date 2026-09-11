@@ -57,7 +57,7 @@ U1 Ç vs C+cedilla / NFC canonical -> ENCODED / RESOLVED
 U2 same pair / binary identity -> NONCORRESPONDENCE / RESOLVED
 U3 ① vs 1 / NFC canonical -> NONCORRESPONDENCE / RESOLVED
 U4 same pair / NFKC compatibility -> ENCODED / RESOLVED
-U5 Hangul syllable vs jamo -> ENCODED / RESOLVED
+U5 가 vs ᄀ+ᅡ / NFC canonical -> ENCODED / RESOLVED
 U6 combining-mark ordering / NFC canonical -> ENCODED / RESOLVED
 ALL CONFORMANCE: CONFORMANT
 METHOD GAIN: NOT_ASSESSED
@@ -244,6 +244,91 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 This application is materially different from the Unicode case because no normalization transform or representation bridge is performed. The source itself supplies criterion-dependent validator comparison semantics.
 
+## 2026-09-11 — Step 13 CMP-APP-003 VIM metrological compatibility
+
+Status: **52/52 PASS**
+
+Precommit:
+
+```text
+evidence/method_specific/comparison/CMP-APP-003_precommit.md
+commit 446aae3861c485c62828bba5432bae73aa7a9a45
+blob 7aa6aa1b3aa2e75a233e2f39c2ca681448ddd2ae
+```
+
+Result:
+
+```text
+evidence/method_specific/comparison/CMP-APP-003_vim-metrological-compatibility.md
+commit 6dad36fd3583c33159643ba888f3a802ac1b1ff3
+```
+
+External source:
+
+```text
+JCGM 200:2012
+International Vocabulary of Metrology (VIM), 3rd edition
+Entry 2.47 — metrological compatibility of measurement results
+DOI 10.59161/JCGM200-2012
+```
+
+Execution:
+
+```text
+M1 compatible / k=2 -> DIRECT_CORRESPONDENCE / RESOLVED
+M2 same pair / k=1 -> NONCORRESPONDENCE / RESOLVED
+M3 exact threshold equality -> NONCORRESPONDENCE / RESOLVED
+M4 just inside threshold -> DIRECT_CORRESPONDENCE / RESOLVED
+M5 same central-value separation / small uncertainties -> NONCORRESPONDENCE / RESOLVED
+M6 same central-value separation / larger uncertainties -> DIRECT_CORRESPONDENCE / RESOLVED
+M7 zero central-value separation -> DIRECT_CORRESPONDENCE / RESOLVED
+M8 unknown claim-relevant correlation -> UNDETERMINED_CORRESPONDENCE / UNDERDETERMINED
+ALL CONFORMANCE: CONFORMANT
+METHOD GAIN: NOT_ASSESSED
+```
+
+Preserved criterion/closure discipline:
+
+```text
+METROLOGICAL_COMPATIBILITY != STRICT_STRUCTURAL_EQUIVALENCE
+METROLOGICAL_NONCOMPATIBILITY != PROOF_OF_DIFFERENT_PHYSICAL_OBJECT
+CENTRAL_VALUE_DIFFERENCE_ALONE != COMPATIBILITY_VERDICT
+SAME_PAIR + DIFFERENT_CHOSEN_MULTIPLE -> possibly different verdict
+THRESHOLD_EQUALITY != STRICT_SMALLER_THAN
+UNKNOWN_CORRELATION != ASSUME_UNCORRELATED
+UNDERDETERMINED != FAILURE
+```
+
+Precommitted score:
+
+```text
+A source / immutable precommit integrity       8/8
+B candidate relation + terminal verdicts      16/16
+C numerical / criterion discipline            12/12
+D scope / closure discipline                  10/10
+E evidence-count / interpretation discipline   6/6
+TOTAL                                          52/52 PASS
+```
+
+Evidence effect:
+
+```text
+DIRECT_COMPARISON_PILOTS: 5  # unchanged
+REPRODUCIBILITY_CASES: 1     # unchanged
+DEDICATED_RETRACE_PASSES: 1  # unchanged
+EXTERNAL_COMPARISON_APPLICATIONS: 3
+EXTERNAL_COMPARISON_DOMAINS: 3
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 3
+INDEPENDENT_REPLICATION: not established
+INDEPENDENT_COMPARISON_VALIDATION: not established
+COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+This application is materially different from both earlier external cases because the relation depends on quantitative uncertainty and correlation sufficiency. The correctly underdetermined M8 case is not counted as a run failure.
+
 ### Next
 
-Add a third materially different external Comparison domain before maturity audit.
+Run a separately precommitted first Comparison maturity audit. The audit itself must not add direct-pilot, external-application, or reproducibility counts.
