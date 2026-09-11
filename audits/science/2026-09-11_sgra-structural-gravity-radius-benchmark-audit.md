@@ -305,3 +305,68 @@ NOT YET CONFIRMED:
 4. Freeze the resulting parameter set.
 5. Apply without retuning to LMC X-3 / A0620-00 and then to M87*.
 6. Only after cross-target stability, compare the recovered radius scale with Schwarzschild.
+
+## 12. Threshold-factorization correction / 임계계수 분해 교정
+
+The follow-up audit
+
+```text
+audits/science/2026-09-11_structural-gravity-support-threshold-factorization-audit.md
+```
+
+clarifies the status of \(\Theta_X\).
+
+The quotient
+
+\[
+\Theta_X=\frac{|X|}{c_{\rm info}^2}
+\]
+
+is retained only as a dimensionless diagnostic candidate. The dynamic foundation supplies \(c_{\rm info}\) as a propagation upper bound; it does not supply a universal amplitude, energy, inertia, or support-capacity normalization.
+
+A downstream support-capacity specialization factorizes the previously opaque coefficient as
+
+\[
+\boxed{
+\Theta_*
+=\nu_{\rm kin}\eta_I\zeta^2
+}
+\]
+
+with
+
+\[
+\eta_I=\frac{\mu_I}{\mu_g},
+\qquad
+v_{\rm sup}=\zeta c_{\rm info}.
+\]
+
+The corresponding candidate radius is
+
+\[
+\boxed{
+R_{\rm crit}
+=\frac{K_gM}
+{\nu_{\rm kin}\eta_I\zeta^2c_{\rm info}^2}
+}.
+\]
+
+The value \(\Theta_*=1/2\) is recovered only conditionally from
+
+\[
+\nu_{\rm kin}=1/2,
+\qquad
+\eta_I=1,
+\qquad
+\zeta=1.
+\]
+
+Those three equalities are now separate audit targets and are not current DSD theorems.
+
+Therefore the first benchmark verdict remains open rather than being promoted to Schwarzschild recovery.
+
+Reproducibility:
+
+```bash
+python audits/science/2026-09-11_structural_gravity_support_threshold_factorization.py --mode all
+```
