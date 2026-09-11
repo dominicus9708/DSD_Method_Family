@@ -57,7 +57,7 @@ U1 Ç vs C+cedilla / NFC canonical -> ENCODED / RESOLVED
 U2 same pair / binary identity -> NONCORRESPONDENCE / RESOLVED
 U3 ① vs 1 / NFC canonical -> NONCORRESPONDENCE / RESOLVED
 U4 same pair / NFKC compatibility -> ENCODED / RESOLVED
-U5 가 vs ᄀ+ᅡ / NFC canonical -> ENCODED / RESOLVED
+U5 Hangul syllable vs jamo -> ENCODED / RESOLVED
 U6 combining-mark ordering / NFC canonical -> ENCODED / RESOLVED
 ALL CONFORMANCE: CONFORMANT
 METHOD GAIN: NOT_ASSESSED
@@ -161,6 +161,89 @@ RETRACE_FAIL != METHOD_DELETION_PROOF
 REPRODUCIBILITY != METHOD_GAIN
 ```
 
+## 2026-09-11 — Step 12 CMP-APP-002 HTTP ETag comparison semantics
+
+Status: **48/48 PASS**
+
+Precommit:
+
+```text
+evidence/method_specific/comparison/CMP-APP-002_precommit.md
+commit f77ddb2a384b15d6a1fe041c4be5c177c52b3623
+blob 7478867a0013cb94ae9a7e581a77548263cbe966
+```
+
+Result:
+
+```text
+evidence/method_specific/comparison/CMP-APP-002_http-etag-comparison.md
+commit fbba59a974482ff7469d7cec5b4ce63a85c2ae61
+```
+
+External source:
+
+```text
+RFC 9110 — HTTP Semantics
+June 2022
+§8.8.3.2 strong/weak entity-tag comparison
+§13.1.1 If-Match -> strong comparison
+§13.1.2 If-None-Match -> weak comparison
+```
+
+Execution:
+
+```text
+H1 W/"1" vs W/"1" / strong -> NONCORRESPONDENCE / RESOLVED
+H2 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
+H3 W/"1" vs "1" / strong -> NONCORRESPONDENCE / RESOLVED
+H4 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
+H5 "1" vs "1" / strong -> DIRECT_CORRESPONDENCE / RESOLVED
+H6 W/"1" vs W/"2" / weak -> NONCORRESPONDENCE / RESOLVED
+H7 If-Match context -> strong -> NONCORRESPONDENCE / RESOLVED
+H8 If-None-Match context -> weak -> DIRECT_CORRESPONDENCE / RESOLVED
+ALL CONFORMANCE: CONFORMANT
+METHOD GAIN: NOT_ASSESSED
+```
+
+Preserved criterion/context discipline:
+
+```text
+STRONG_MATCH != WEAK_MATCH_IN_GENERAL
+WEAK_MATCH != REPRESENTATION_IDENTITY
+OPAQUE_TAG_EQUALITY_ALONE != STRONG_MATCH_WHEN_WEAK_MARKER_PRESENT
+SAME_PAIR + DIFFERENT_HTTP_CRITERION -> possibly different verdict
+RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
+```
+
+Precommitted score:
+
+```text
+A source / immutable precommit integrity       8/8
+B candidate relation verdicts                 16/16
+C criterion and context provenance            10/10
+D scope / closure discipline                   8/8
+E evidence-count / interpretation discipline   6/6
+TOTAL                                          48/48 PASS
+```
+
+Evidence effect:
+
+```text
+DIRECT_COMPARISON_PILOTS: 5  # unchanged
+REPRODUCIBILITY_CASES: 1     # unchanged
+EXTERNAL_COMPARISON_APPLICATIONS: 2
+EXTERNAL_COMPARISON_DOMAINS: 2
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 2
+INDEPENDENT_REPLICATION: not established
+INDEPENDENT_COMPARISON_VALIDATION: not established
+COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+This application is materially different from the Unicode case because no normalization transform or representation bridge is performed. The source itself supplies criterion-dependent validator comparison semantics.
+
 ### Next
 
-Add materially different external Comparison domains before maturity audit.
+Add a third materially different external Comparison domain before maturity audit.
