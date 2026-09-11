@@ -1,6 +1,6 @@
 # 06. DSD Comparison / DSD 비교론
 
-Status: **Protocol v0.1 established / CMP-CH-001 through CMP-CH-005 complete / strongest-reasonable baseline established at constructed-evidence level / first external application PASS / validation in progress**
+Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / first external application PASS / deterministic same-project retrace PASS / validation in progress**
 
 Task: compare two or more supplied structures without reducing comparison to final-output equality, and determine justified correspondence, preserved structure, divergence, strict-equivalence status, and earliest supported branching only within declared comparison/map/element coverage.
 
@@ -52,6 +52,7 @@ TRACE_DIFFERENCE != AUDIT_CONFORMANCE_VERDICT
 STRUCTURAL_EQUIVALENCE != LINEAGE_IDENTITY
 NO_GAIN != METHOD_ABSORPTION_PROOF
 SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
+RETRACE_PASS != INDEPENDENT_REPLICATION
 ```
 
 ## Output / relation / terminal structure
@@ -93,7 +94,7 @@ LINEAGE_IDENTITY_CLAIM_POLICY
 LINEAGE_EVIDENCE_SOURCE_OR_HANDOFF
 ```
 
-## Direct Protocol-v0.1 evidence
+## Constructed Protocol-v0.1 evidence
 
 ```text
 CMP-CH-001  40/40 PASS  positive relation separation
@@ -136,6 +137,26 @@ METHOD GAIN: NOT_ASSESSED
 
 The external case preserves criterion provenance: binary identity, canonical equivalence, and compatibility equivalence are not collapsed. A relation class is not treated as intrinsic to a pair independently of the frozen comparison criterion.
 
+## Reproducibility evidence
+
+### CMP-CH-006 — deterministic same-project retrace of CMP-APP-001
+
+```text
+PRECOMMIT: ffd374f
+RESULT: 35d0a8d
+SCORE: 48/48 PASS
+REPRODUCIBILITY_LEVEL: deterministic_same_project
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+```
+
+The retrace reproduced all six candidate identities, frozen criteria, relation classes, terminals, conformance records, criterion provenance, and scope exclusions from the immutable project chain. It did not consult a new Unicode revision or introduce new source relations.
+
+```text
+INDEPENDENT_REPLICATION: not established
+INDEPENDENT_COMPARISON_VALIDATION: not established
+```
+
 ## Method boundaries
 
 ```text
@@ -171,19 +192,22 @@ BOUNDARY_COMPARISON_CASES: 1
 NO_GAIN_COMPARISON_CASES: 2
 BASELINE_COMPARISON_CASES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_COMPARISON_APPLICATIONS: 1
 EXTERNAL_COMPARISON_DOMAINS: 1
 EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
+INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 ```
 
-External application count is separate from constructed direct-pilot count.
+External application count is separate from constructed direct-pilot count, and same-project retrace is separate from independent replication.
 
 ## Next development step
 
-Run a deterministic same-project retrace of `CMP-APP-001` from the frozen protocol, precommit, external-source lock, and result. Reproduce all six criterion-specific correspondence classes, terminal states, and exclusions without reopening or rewriting the task.
+Add materially different external Comparison domains before the first maturity audit. The next external application should not merely repeat Unicode/string-normalization semantics and must again keep external-source truth, Comparison conformance, and method gain as separate ledgers.
 
-Case success/failure and comparative gain do not decide method survival, merger, absorption, or deletion.
+Case success/failure, retrace success, and comparative gain do not decide method survival, merger, absorption, or deletion.
