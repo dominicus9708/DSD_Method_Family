@@ -1,6 +1,6 @@
 # 06. DSD Comparison / DSD 비교론
 
-Status: **Protocol v0.1 established / CMP-CH-001 through CMP-CH-004 complete / validation in progress**
+Status: **Protocol v0.1 established / CMP-CH-001 through CMP-CH-005 complete / strongest-reasonable baseline established at constructed-evidence level / validation in progress**
 
 Task: compare two or more supplied structures without reducing comparison to final-output equality, and determine justified correspondence, preserved structure, divergence, strict-equivalence status, and earliest supported branching only within declared comparison/map/element coverage.
 
@@ -147,20 +147,39 @@ PROTOCOL_REVISION_REQUIRED: no
 PRECOMMIT: 0d96d6b
 RESULT: 4cacd55
 BASELINE: B0_TYPED_COMPARISON_LEDGER
-
 Q1 DSD = B0 -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
 Q2 DSD = B0 -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
 Q3 DSD = B0 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
 Q4 DSD = B0 -> NONCORRESPONDENCE / COMPARISON_RESOLVED
 Q5 DSD = B0 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
-
 G1-G6: NOT_ESTABLISHED
 COMPARISON_METHOD_GAIN_STATUS: NO_GAIN
 SCORE: 50/50 PASS
+```
+
+### CMP-CH-005 — strongest-reasonable-baseline comparison
+
+```text
+PRECOMMIT: ad54230
+RESULT: 61675b3
+BASELINE: B1_STRONG_TYPED_COMPARISON_ENGINE
+
+R1 -> PARTIAL_CORRESPONDENCE / FIRST_BRANCH S2 / RESOLVED
+R2 -> DIRECT_CORRESPONDENCE / strict equivalence no / RESOLVED
+R3 -> PARTIAL_CORRESPONDENCE / global equivalence unclosed / RESOLVED
+R4 -> ENCODED_CORRESPONDENCE / bridge provenance preserved / RESOLVED
+R5 -> sampled-trajectory STRICT_EQUIVALENT / DISTINCT_LINEAGES / RESOLVED
+
+DSD = B1 on all frozen claim-relevant dimensions
+G1-G7: NOT_ESTABLISHED
+COMPARISON_METHOD_GAIN_STATUS: NO_GAIN
+SCORE: 60/60 PASS
+STRONGEST_REASONABLE_BASELINE_COMPARISON:
+  established_at_constructed_evidence_level
 PROTOCOL_REVISION_REQUIRED: no
 ```
 
-The baseline received the same claim-relevant subjects, maps, coverage, Property/status records, bridge provenance, aggregate readouts, equivalence criteria, and terminal rules. It was explicitly permitted to preserve typed status, tested/untested map coverage, encoded correspondence, aggregate collision, blocked state, and retraceability. The correct result was therefore the first honest Comparison `NO_GAIN` rather than manufactured DSD superiority.
+The stronger baseline simultaneously preserved first-branch closure, directional/inverse requirements, partial-versus-global coverage, bridge/representation provenance, and dynamic-trajectory-versus-lineage separation. Another honest `NO_GAIN` is therefore the correct result.
 
 ## Method boundaries
 
@@ -176,11 +195,6 @@ Aggregation: admitted structure/data -> declared readout
 
 Comparison may consume neighboring-method outputs but does not absorb their operations or verdicts.
 
-```text
-LEGITIMATE_COMPARISON_RESULT + NEIGHBORING_HANDOFF
-!= METHOD_BOUNDARY_FAILURE
-```
-
 ## Three ledgers
 
 ```text
@@ -189,21 +203,19 @@ COMPARISON_PROTOCOL_CONFORMANCE
 COMPARISON_METHOD_GAIN_STATUS
 ```
 
-Method gain is assessed only against a separately frozen competent baseline.
-
 ## Current evidence state
 
 ```text
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
 PROTOCOL_CREATION_COMMIT: a1700d960e0b41dfe32bf85b6334448d9104100d
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 16
-DIRECT_COMPARISON_PILOTS: 4
+DIRECT_COMPARISON_PILOTS: 5
 POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
 BOUNDARY_COMPARISON_CASES: 1
-NO_GAIN_COMPARISON_CASES: 1
-BASELINE_COMPARISON_CASES: 1
-STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
+NO_GAIN_COMPARISON_CASES: 2
+BASELINE_COMPARISON_CASES: 2
+STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_COMPARISON_APPLICATIONS: 0
 INDEPENDENT_COMPARISON_VALIDATION: not established
@@ -215,6 +227,6 @@ Protocol establishment itself remains infrastructure and is not counted as a dir
 
 ## Next development step
 
-Precommit and execute `CMP-CH-005` strongest-reasonable-baseline comparison. It should be materially richer than `CMP-CH-004`, activating first-branch closure, direction/inverse requirements, partial-versus-global element coverage, representation/bridge provenance, and possibly lineage-gated dynamic comparison. The strong baseline must receive all claim-relevant information; another `NO_GAIN` remains acceptable.
+Precommit the first external Comparison application `CMP-APP-001` using a stable public source that supplies the compared records and a defensible external comparison criterion. Keep external-source validity distinct from DSD protocol conformance, and do not assess method gain without a separately justified baseline.
 
 Case success/failure and comparative gain do not decide method survival, merger, absorption, or deletion.
