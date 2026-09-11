@@ -1,6 +1,6 @@
 # DSD Classification Planning / DSD 분류론 기획
 
-Status: **development initiated / task-interface stage**  
+Status: **pre-protocol boundary stage completed / protocol next**  
 Date opened: **2026-09-12**
 
 ## Purpose / 목적
@@ -32,15 +32,18 @@ UNDEFINED != DEFINED_ZERO
 OUT_OF_SCOPE != UNCLASSIFIED
 BOUNDARY_CASE != CLASSIFICATION_FAILURE
 MULTI_CLASS_MEMBERSHIP != CRITERION_CONFLICT
+SCHEMA_STATUS_CLOSED != CLOSED_WORLD_COVERAGE_ESTABLISHED
+CRITERION_LIST != MEMBERSHIP_LOGIC
+PRE_GENERATION_SCHEMA != POST_GENERATION_SCHEMA
 ```
 
-A classification claim is valid only relative to a declared task resolution, criterion set, class-schema semantics, and evidence/provenance basis.
+A classification claim is valid only relative to a declared task resolution, criterion set, class-schema semantics, schema identity/version, evidence/provenance basis, and membership decision rule.
 
 ## Development sequence / 개발 순서
 
 1. ✅ Classification-specific Task Interface v0.1 draft.
-2. ⬜ Pre-protocol boundary attacks covering label leakage, missing-data collapse, aggregate collision, overlapping classes, open-world classes, hierarchy/partial-order assumptions, temporal class change, and criterion conflict.
-3. ⬜ Boundary Amendment 001 if the attacks expose missing interface obligations.
+2. ✅ Pre-protocol boundary attacks: 18 cases.
+3. ✅ Boundary Amendment 001: 6 non-breaking refinement groups.
 4. ⬜ Executable Classification Protocol v0.1.
 5. ⬜ Positive direct challenge.
 6. ⬜ Negative/failure-terminal challenge.
@@ -53,15 +56,39 @@ A classification claim is valid only relative to a declared task resolution, cri
 13. ⬜ Maturity audit under frozen axes.
 14. ⬜ Independent-evaluator infrastructure only if the accumulated evidence warrants it.
 
+## Boundary-attack result / 경계 공격 결과
+
+```text
+BOUNDARY_ATTACKS_RUN: 18
+PRESERVED_NO_REFINEMENT: 12
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 6
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+NONBREAKING_REFINEMENT_GROUPS: 6
+```
+
+Amendment 001 adds:
+
+```text
+R1 class-relation semantics and mutual-exclusion rules
+R2 schema identity/version plus coverage/closure evidence
+R3 equivalence closure requirement
+R4 generated-class provenance and schema-mutation policy
+R5 criterion-composition and decision rule
+R6 uncertainty/tolerance and boundary-decision semantics
+```
+
+The historical task-interface draft remains unchanged. The amendment is additional infrastructure and does not count as direct Classification evidence.
+
 ## Evidence discipline / 증거 규율
 
-- Task-interface and protocol construction are infrastructure, not direct method evidence.
+- Task-interface, boundary attack, amendment, and protocol construction are infrastructure, not direct method evidence.
 - Constructed challenges, external applications, reproducibility evidence, and maturity audits remain separate evidence classes.
 - A PASS, FAIL, `NO_GAIN`, boundary result, or underdetermined result does **not** decide method survival, merger, absorption, or deletion.
 - Shared-core support does not directly validate Classification.
 - External origin does not imply independent-evaluator validation.
 - Same-project retrace does not imply independent replication.
-- A classification baseline must receive the same frozen task, class schema, criterion source, and claim-relevant information as the DSD run.
+- A classification baseline must receive the same frozen task, schema/version, criterion source, membership logic, and claim-relevant information as the DSD run.
 
 ## DSD layer use / DSD 층위 사용
 
@@ -84,9 +111,13 @@ CLASSIFICATION_TASK_ID
 SUBJECT_SET
 TASK_SCOPE
 TARGET_RESOLUTION
+CLASS_SCHEMA_ID_AND_VERSION
 CLASS_SCHEMA_OR_GENERATION_POLICY
+SCHEMA_COVERAGE_CLAIM
 CLASS_CRITERIA
 CRITERION_SOURCE
+CRITERION_COMPOSITION_RULE
+DECISION_RULE
 FEATURE_BASIS_AND_PROVENANCE
 DSD_LAYERS_USED
 DOMAIN_BRIDGE_IF_ANY
@@ -98,13 +129,15 @@ MISSING_INFORMATION_RECORD
 LIMITS
 ```
 
-If a hierarchy, equivalence class, partial order, temporal class transition, aggregate criterion, or multi-label result is claimed, its additional obligations must be recorded explicitly.
+If a hierarchy, equivalence class, partial order, generated class, temporal class transition, aggregate criterion, uncertainty-sensitive boundary, or multi-label result is claimed, its additional obligations must be recorded explicitly.
 
 ## Current status / 현재 상태
 
 ```text
 DEDICATED_CLASSIFICATION_PROTOCOL: not established
-TASK_INTERFACE_DRAFT: v0.1 created
+TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
+BOUNDARY_AMENDMENT_001: established
 DIRECT_CLASSIFICATION_PILOTS: 0
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
 REPRODUCIBILITY_CASES: 0
@@ -115,4 +148,4 @@ CURRENT_CLASSIFICATION_EVIDENCE_STATUS: pre_validation
 
 ## Next / 다음
 
-Run the pre-protocol boundary-attack stage against the Task Interface v0.1 draft. The attack stage must be allowed to return non-destructive amendments, blocking defects, or no amendment; it must not be used to predetermine that Classification survives or should be removed.
+Build `PROTOCOL_v0.1.md` from the historical Task Interface v0.1 draft plus Boundary Amendment 001. The protocol must make the revised C1-C14 operation, terminal/nonterminal statuses, and validity gates executable without counting protocol construction as direct evidence.
