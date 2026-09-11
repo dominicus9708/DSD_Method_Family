@@ -1,6 +1,6 @@
 # DSD Comparison Direct Evidence / DSD 비교론 직접 증거
 
-Status: **Protocol v0.1 established / positive + negative-failure + direct-boundary challenges PASS / validation in progress**
+Status: **Protocol v0.1 established / positive + negative-failure + boundary + NO_GAIN baseline challenges PASS / validation in progress**
 
 This lane records evidence that directly tests **DSD Comparison / DSD 비교론**.
 
@@ -14,12 +14,13 @@ BOUNDARY_PRESERVED_NO_REFINEMENT: 11
 BOUNDARY_PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
 BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
-DIRECT_COMPARISON_PILOTS: 3
+DIRECT_COMPARISON_PILOTS: 4
 POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
 BOUNDARY_COMPARISON_CASES: 1
-NO_GAIN_COMPARISON_CASES: 0
-BASELINE_COMPARISON_CASES: 0
+NO_GAIN_COMPARISON_CASES: 1
+BASELINE_COMPARISON_CASES: 1
+STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_COMPARISON_APPLICATIONS: 0
 INDEPENDENT_COMPARISON_VALIDATION: not established
@@ -71,7 +72,6 @@ N4 forward map success, inverse evidence unverified -> COMPARISON_UNDERDETERMINE
 N5 exhaustive all-map failure -> NONCORRESPONDENCE / COMPARISON_RESOLVED
 ALL CONFORMANCE: CONFORMANT
 ALL GAIN: NOT_ASSESSED
-PROTOCOL_REVISION_REQUIRED: no
 ```
 
 ### CMP-CH-003 — direct method-boundary challenge
@@ -80,41 +80,40 @@ PROTOCOL_REVISION_REQUIRED: no
 PRECOMMIT: 68d330b
 RESULT: b4256d2
 SCORE: 48/48 PASS
-
-B1 Analysis
-  -> visible STRICT_EQUIVALENT / COMPARISON_RESOLVED
-  -> ANALYSIS_REQUIRED
-
-B2 Classification
-  -> visible STRICT_EQUIVALENT / COMPARISON_RESOLVED
-  -> CLASSIFICATION_REQUIRED
-
-B3 Transformation
-  -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
-  -> TRANSFORMATION_REQUIRED
-
-B4 Audit
-  -> input/result equality + process-trace difference / COMPARISON_RESOLVED
-  -> AUDIT_REQUIRED
-
-B5 Provenance/Lineage
-  -> snapshot STRICT_EQUIVALENT / COMPARISON_RESOLVED
-  -> lineage identity not_established
-  -> PROVENANCE_LINEAGE_REQUIRED
-
+Analysis -> visible STRICT_EQUIVALENT / RESOLVED + ANALYSIS_REQUIRED
+Classification -> visible STRICT_EQUIVALENT / RESOLVED + CLASSIFICATION_REQUIRED
+Transformation -> UNDETERMINED / BLOCKED + TRANSFORMATION_REQUIRED
+Audit -> resolved comparison profile + AUDIT_REQUIRED
+Provenance/Lineage -> snapshot STRICT_EQUIVALENT / RESOLVED; lineage not_established + PROVENANCE_LINEAGE_REQUIRED
 ALL CONFORMANCE: CONFORMANT
 ALL GAIN: NOT_ASSESSED
+```
+
+### CMP-CH-004 — competent-baseline NO_GAIN challenge
+
+```text
+PRECOMMIT: 0d96d6b
+RESULT: 4cacd55
+BASELINE: B0_TYPED_COMPARISON_LEDGER
+SCORE: 50/50 PASS
+
+Q1 DSD = B0 -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
+Q2 DSD = B0 -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
+Q3 DSD = B0 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
+Q4 DSD = B0 -> NONCORRESPONDENCE / COMPARISON_RESOLVED
+Q5 DSD = B0 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
+
+G1 RELATION_CLASS_SEPARATION_GAIN: NOT_ESTABLISHED
+G2 STATUS_DISTINCTION_GAIN: NOT_ESTABLISHED
+G3 COVERAGE_AND_CLOSURE_GAIN: NOT_ESTABLISHED
+G4 BRIDGE_PROVENANCE_GAIN: NOT_ESTABLISHED
+G5 AGGREGATE_COLLISION_GAIN: NOT_ESTABLISHED
+G6 TERMINAL_AND_RETRACEABILITY_GAIN: NOT_ESTABLISHED
+COMPARISON_METHOD_GAIN_STATUS: NO_GAIN
 PROTOCOL_REVISION_REQUIRED: no
 ```
 
-The case did not absorb internal Analysis, taxonomy assignment, unsupplied Transformation, Audit verdicts, or lineage identity. A legitimate Comparison result can coexist with an explicit neighboring-method handoff.
-
-Evidence increment:
-
-```text
-DIRECT_COMPARISON_PILOT_INCREMENT: +1
-BOUNDARY_COMPARISON_CASE_INCREMENT: +1
-```
+B0 was not weakened. It received the same claim-relevant subject, relation, Property/status, map, coverage, bridge, aggregate, equivalence, and terminal-rule records and was allowed to preserve all scored distinctions. This fills the first successful Comparison `NO_GAIN` and competent-baseline categories, but not the strongest-reasonable-baseline category.
 
 ## Protocol-v0.1 core guards
 
@@ -180,9 +179,10 @@ BOUNDARY_PASS != PERMANENT_METHOD_INDEPENDENCE
 CASE_PASS != METHOD_SURVIVAL_PROOF
 CASE_FAIL != METHOD_DELETION_PROOF
 NO_GAIN != METHOD_ABSORPTION_PROOF
+BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
 PROTOCOL_ESTABLISHED != METHOD_VALIDATED
 ```
 
 ## Immediate next task
 
-Precommit and execute `CMP-CH-004` competent-baseline challenge. The baseline must receive the same claim-relevant subjects, map family, map/element coverage, bridges, Property/status records, equivalence criteria, and terminal-state rules. Do not weaken it to manufacture a DSD advantage; a correct `NO_GAIN` is an acceptable result.
+Precommit and execute `CMP-CH-005` strongest-reasonable-baseline comparison. Activate materially richer dimensions than `CMP-CH-004`, especially first-branch closure, forward/reverse requirements, partial-vs-global element coverage, representation/bridge provenance, and potentially lineage-gated dynamic comparison. The baseline must receive all claim-relevant information and another honest `NO_GAIN` is acceptable.
