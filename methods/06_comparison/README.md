@@ -1,6 +1,6 @@
 # 06. DSD Comparison / DSD 비교론
 
-Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / three external domains PASS / deterministic same-project retrace PASS / maturity-audit ready**
+Status: **Protocol v0.1 established / method-protocol evidence maturity established after CMP-AUD-001 / validation in progress**
 
 Task: compare two or more supplied structures without reducing comparison to final-output equality, and determine justified correspondence, preserved structure, divergence, strict-equivalence status, and earliest supported branching only within declared comparison/map/element coverage.
 
@@ -123,24 +123,17 @@ PRECOMMIT: e1a109b
 RESULT: b64cd88
 SCORE: 42/42 PASS
 
-U1 Ç vs C+cedilla / NFC canonical
-  -> ENCODED_CORRESPONDENCE / RESOLVED
-U2 same pair / binary identity
-  -> NONCORRESPONDENCE / RESOLVED
-U3 ① vs 1 / NFC canonical
-  -> NONCORRESPONDENCE / RESOLVED
-U4 same pair / NFKC compatibility
-  -> ENCODED_CORRESPONDENCE / RESOLVED
-U5 가 vs ᄀ+ᅡ / NFC canonical
-  -> ENCODED_CORRESPONDENCE / RESOLVED
-U6 combining-mark reorder / NFC canonical
-  -> ENCODED_CORRESPONDENCE / RESOLVED
-
+U1 Ç vs C+cedilla / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
+U2 same pair / binary identity -> NONCORRESPONDENCE / RESOLVED
+U3 ① vs 1 / NFC canonical -> NONCORRESPONDENCE / RESOLVED
+U4 same pair / NFKC compatibility -> ENCODED_CORRESPONDENCE / RESOLVED
+U5 가 vs ᄀ+ᅡ / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
+U6 combining-mark reorder / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
 ALL CONFORMANCE: CONFORMANT
 METHOD GAIN: NOT_ASSESSED
 ```
 
-The external case preserves criterion provenance: binary identity, canonical equivalence, and compatibility equivalence are not collapsed. A relation class is not treated as intrinsic to a pair independently of the frozen comparison criterion.
+The external case preserves criterion provenance: binary identity, canonical equivalence, and compatibility equivalence are not collapsed.
 
 ### CMP-APP-002 — HTTP ETag comparison semantics
 
@@ -159,7 +152,6 @@ H5 "1" vs "1" / strong -> DIRECT_CORRESPONDENCE / RESOLVED
 H6 W/"1" vs W/"2" / weak -> NONCORRESPONDENCE / RESOLVED
 H7 If-Match context -> strong -> NONCORRESPONDENCE / RESOLVED
 H8 If-None-Match context -> weak -> DIRECT_CORRESPONDENCE / RESOLVED
-
 ALL CONFORMANCE: CONFORMANT
 METHOD GAIN: NOT_ASSESSED
 ```
@@ -182,12 +174,11 @@ M5 same value separation / small uncertainties -> NONCORRESPONDENCE / RESOLVED
 M6 same value separation / larger uncertainties -> DIRECT_CORRESPONDENCE / RESOLVED
 M7 zero value separation -> DIRECT_CORRESPONDENCE / RESOLVED
 M8 correlation required but unavailable -> UNDETERMINED_CORRESPONDENCE / UNDERDETERMINED
-
 ALL CONFORMANCE: CONFORMANT
 METHOD GAIN: NOT_ASSESSED
 ```
 
-This physical-metrology case preserves strict threshold semantics, uncertainty-dependent comparison, criterion-parameter provenance, and an unresolved correlation dependency rather than silently assuming uncorrelated measurements. Compatibility is not promoted to strict structural equivalence or physical-object identity.
+This physical-metrology case preserves strict threshold semantics, uncertainty-dependent comparison, criterion-parameter provenance, and an unresolved correlation dependency rather than silently assuming uncorrelated measurements.
 
 ## Reproducibility evidence
 
@@ -200,14 +191,46 @@ SCORE: 48/48 PASS
 REPRODUCIBILITY_LEVEL: deterministic_same_project
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
-```
-
-The retrace reproduced all six candidate identities, frozen criteria, relation classes, terminals, conformance records, criterion provenance, and scope exclusions from the immutable project chain. It did not consult a new Unicode revision or introduce new source relations.
-
-```text
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 ```
+
+The retrace reproduced all six candidate identities, frozen criteria, relation classes, terminals, conformance records, criterion provenance, and scope exclusions from the immutable project chain.
+
+## Maturity audit
+
+### CMP-AUD-001 — first Comparison maturity audit
+
+```text
+PRECOMMIT: 69315746b3ed5367aa56e087b96b8ea878a59376
+RESULT: afe4cc7d8a4efe2f7485768e0d9dc363010e34e2
+AUDIT EXECUTION: 28/28 PASS
+FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+COMPARISON_METHOD_MATURITY_CLASSIFICATION: established
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+```
+
+Axis summary:
+
+```text
+M1 PASS
+M2 PASS
+M3 PASS
+M4 PASS
+M5 CONDITIONAL_PASS
+M6 PASS
+M7 PASS
+M8 PASS
+M9 PASS
+M10 UNRESOLVED_BUT_BOUNDED
+M11 PASS
+M12 PASS
+M13 PASS
+M14 PASS
+M15 PASS
+```
+
+The audit adds no direct pilot, external application, or reproducibility case. `established` means method/protocol evidence maturity inside the current DSD method-family framework; it does not mean independent validation, independent replication, practical superiority, universal generality, or permanent method-registry survival.
 
 ## Method boundaries
 
@@ -252,16 +275,16 @@ EXTERNAL_COMPARISON_DOMAINS: 3
 EXTERNAL_COMPARISON_APPLICATION_PASSES: 3
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
-COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
+COMPARISON_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-The three external domains are materially distinct at the current evidence level: text-representation normalization, protocol validator comparison, and physical measurement-result compatibility. External application count remains separate from constructed direct-pilot count, and same-project retrace remains separate from independent replication.
+External application count remains separate from constructed direct-pilot count, and same-project retrace remains separate from independent replication.
 
 ## Next development step
 
-Run a separately precommitted first Comparison maturity audit. The audit must not increase direct-pilot, external-application, or reproducibility counts and must keep evidence maturity separate from independent validation, practical superiority, registry survival, merger, or absorption.
+The dominant unresolved axes after `CMP-AUD-001` are evaluator independence and independent replication. The next high-value step is preparation of `CMP-IEP-001` independent-evaluator infrastructure. Packet preparation is infrastructure only and must not be counted as validation before a genuinely separate frozen evaluator submission exists.
 
-Case success/failure, retrace success, and comparative gain do not decide method survival, merger, absorption, or deletion.
+Case success/failure, retrace success, comparative gain, and maturity promotion do not decide permanent method survival, merger, absorption, or deletion.
