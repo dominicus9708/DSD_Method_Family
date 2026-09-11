@@ -1,6 +1,6 @@
 # 06. DSD Comparison / DSD 비교론
 
-Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / two external domains PASS / deterministic same-project retrace PASS / validation in progress**
+Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / three external domains PASS / deterministic same-project retrace PASS / maturity-audit ready**
 
 Task: compare two or more supplied structures without reducing comparison to final-output equality, and determine justified correspondence, preserved structure, divergence, strict-equivalence status, and earliest supported branching only within declared comparison/map/element coverage.
 
@@ -55,6 +55,9 @@ SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
 RETRACE_PASS != INDEPENDENT_REPLICATION
 HTTP_MATCH != REPRESENTATION_IDENTITY
 RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
+METROLOGICAL_COMPATIBILITY != STRICT_STRUCTURAL_EQUIVALENCE
+METROLOGICAL_NONCOMPATIBILITY != PROOF_OF_DIFFERENT_PHYSICAL_OBJECT
+UNKNOWN_CORRELATION != ASSUME_UNCORRELATED
 ```
 
 ## Output / relation / terminal structure
@@ -163,6 +166,29 @@ METHOD GAIN: NOT_ASSESSED
 
 The HTTP case preserves externally supplied criterion provenance without performing normalization or a representation transform. Weak comparison match is not promoted to representation identity, and entity-tag match is not promoted to the whole conditional-request outcome.
 
+### CMP-APP-003 — VIM metrological compatibility
+
+```text
+SOURCE: JCGM 200:2012 VIM3, entry 2.47
+PRECOMMIT: 446aae3
+RESULT: 6dad36f
+SCORE: 52/52 PASS
+
+M1 compatible / k=2 -> DIRECT_CORRESPONDENCE / RESOLVED
+M2 same pair / k=1 -> NONCORRESPONDENCE / RESOLVED
+M3 exact threshold equality -> NONCORRESPONDENCE / RESOLVED
+M4 just inside threshold -> DIRECT_CORRESPONDENCE / RESOLVED
+M5 same value separation / small uncertainties -> NONCORRESPONDENCE / RESOLVED
+M6 same value separation / larger uncertainties -> DIRECT_CORRESPONDENCE / RESOLVED
+M7 zero value separation -> DIRECT_CORRESPONDENCE / RESOLVED
+M8 correlation required but unavailable -> UNDETERMINED_CORRESPONDENCE / UNDERDETERMINED
+
+ALL CONFORMANCE: CONFORMANT
+METHOD GAIN: NOT_ASSESSED
+```
+
+This physical-metrology case preserves strict threshold semantics, uncertainty-dependent comparison, criterion-parameter provenance, and an unresolved correlation dependency rather than silently assuming uncorrelated measurements. Compatibility is not promoted to strict structural equivalence or physical-object identity.
+
 ## Reproducibility evidence
 
 ### CMP-CH-006 — deterministic same-project retrace of CMP-APP-001
@@ -221,19 +247,21 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_le
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_COMPARISON_APPLICATIONS: 2
-EXTERNAL_COMPARISON_DOMAINS: 2
-EXTERNAL_COMPARISON_APPLICATION_PASSES: 2
+EXTERNAL_COMPARISON_APPLICATIONS: 3
+EXTERNAL_COMPARISON_DOMAINS: 3
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 3
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-External application count is separate from constructed direct-pilot count, and same-project retrace is separate from independent replication.
+The three external domains are materially distinct at the current evidence level: text-representation normalization, protocol validator comparison, and physical measurement-result compatibility. External application count remains separate from constructed direct-pilot count, and same-project retrace remains separate from independent replication.
 
 ## Next development step
 
-Add a third materially different external Comparison domain before the first maturity audit, preferably one not based on textual normalization or protocol tag matching. Keep external-source truth, Comparison conformance, and method gain as separate ledgers.
+Run a separately precommitted first Comparison maturity audit. The audit must not increase direct-pilot, external-application, or reproducibility counts and must keep evidence maturity separate from independent validation, practical superiority, registry survival, merger, or absorption.
 
 Case success/failure, retrace success, and comparative gain do not decide method survival, merger, absorption, or deletion.
