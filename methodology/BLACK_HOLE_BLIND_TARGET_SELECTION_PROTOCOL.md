@@ -103,6 +103,48 @@ A universal target requires either:
 
 Lineage compatibility itself does not determine the target spectrum.
 
+## Axis-crossing geometry rule
+
+When a realized-axis specialization is supplied, a pair of unoriented lines can contribute the geometric invariant
+
+\[
+s_{ab}=\operatorname{tr}(P_aP_b)=\cos^2\theta_{ab}.
+\]
+
+This is only a geometric/relational input. A support-pencil contribution still requires a constitutive map such as
+
+\[
+g=\beta F(s_{ab}).
+\]
+
+The geometry does not uniquely fix \(F\) or \(\beta\). Rotation-invariant examples such as
+
+\[
+F(s)=s,
+\qquad
+1-s,
+\qquad
+s(1-s),
+\qquad
+1
+\]
+
+produce different normalized support spectra for the same crossing angle.
+
+Therefore neither a 45-degree crossing, cyclic triadic closure, nor realized-axis rank is accepted as an independent half-coefficient selector unless a separate constitutive law fixes both the geometric input and the coupling normalization.
+
+The current rule is:
+
+\[
+\boxed{
+\text{axis geometry}
+\not\Rightarrow
+\text{support anisotropy}
+}
+\]
+
+without an explicit geometry-to-operator bridge.
+
 ## Acceptance criterion for a future half-coefficient result
 
 A result may be labeled `BLIND_HALF_RECOVERY_CANDIDATE` only if all are satisfied:
@@ -112,7 +154,8 @@ A result may be labeled `BLIND_HALF_RECOVERY_CANDIDATE` only if all are satisfie
 3. the target gives \(\Psi_*=1/2\) analytically or within a predeclared numerical tolerance;
 4. the result survives changes of source mass and internal profile without retuning;
 5. every constitutive bridge is explicitly identified;
-6. the same rule survives at least one independent target family before comparison to GR.
+6. the same rule survives at least one independent target family before comparison to GR;
+7. if axis geometry is used, both the geometric invariant and the geometry-to-coupling normalization are independently fixed rather than fitted.
 
 ## Current verdict
 
@@ -120,15 +163,18 @@ A result may be labeled `BLIND_HALF_RECOVERY_CANDIDATE` only if all are satisfie
 BLIND TARGET SELECTION STATUS:
 OPEN
 
-NEGATIVE RESULT:
-Natural fixed-trace determinant/entropy/coercivity extrema do not select one-half.
+NEGATIVE RESULTS:
+- natural fixed-trace determinant/entropy/coercivity extrema do not select one-half;
+- axis-crossing geometry alone does not select one-half;
+- triadic closure/rank alone does not determine the support pencil.
 
 NEW BOTTLENECK:
-Find an independently motivated normalized anisotropy constraint or equivalent target-selection law.
+Find an independently motivated combined constitutive invariant linking geometry/state data to the normalized support/load spectrum.
 ```
 
 ## Reproducibility
 
 ```bash
 python audits/science/2026-09-11_structural_gravity_blind_extremum_target_selection_audit.py --mode all
+python audits/science/2026-09-11_structural_gravity_axis_crossing_anisotropy_audit.py --mode all
 ```
