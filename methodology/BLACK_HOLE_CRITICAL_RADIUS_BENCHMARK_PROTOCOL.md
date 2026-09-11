@@ -224,3 +224,134 @@ R_{\rm crit}=\frac{K_gM}{\Theta_*c_{\rm info}^2}.
 This conditionally recovers the linear mass scaling required by Schwarzschild, but the absolute normalization, the critical threshold, and the relation between \(c_{\rm info}\) and \(c\) remain open.
 
 Therefore no independent Schwarzschild-radius derivation has yet been achieved.
+
+## 11. c_info normalization firewall / c_info 정규화 방화벽
+
+The dynamic foundation gives \(c_{\rm info}\) only as a finite propagation-speed upper bound. It does not by itself supply an amplitude scale, an energy scale, an inertial coefficient, a stiffness, a restoring coefficient, or a universal structural-support capacity.
+
+Therefore
+
+\[
+\Theta_X=\frac{|X|}{c_{\rm info}^2}
+\]
+
+must be treated as a dimensionless diagnostic candidate only. A physical support-failure condition requires a separate downstream capacity bridge.
+
+Do not infer \(\Theta_*=1/2\) merely from the presence of \(c_{\rm info}\).
+
+## 12. Support-threshold factorization / 지지 임계계수 분해
+
+A downstream support specialization may be written
+
+\[
+E_{\rm sup,max}
+=\nu_{\rm kin}\mu_Iv_{\rm sup}^2,
+\qquad
+v_{\rm sup}=\zeta c_{\rm info},
+\qquad
+0<\zeta\le1.
+\]
+
+Let
+
+\[
+\eta_I\equiv\frac{\mu_I}{\mu_g}.
+\]
+
+Then the support capacity per source-coupled carrier is
+
+\[
+C_{\rm sup}
+=\nu_{\rm kin}\eta_I\zeta^2c_{\rm info}^2.
+\]
+
+Matching the candidate structural load
+
+\[
+U_X(R)=K_g\frac{M}{R}
+\]
+
+to this capacity gives
+
+\[
+\boxed{\Theta_*=\nu_{\rm kin}\eta_I\zeta^2}
+\]
+
+and
+
+\[
+\boxed{
+R_{\rm crit}
+=\frac{K_gM}{\nu_{\rm kin}\eta_I\zeta^2c_{\rm info}^2}
+}.
+\]
+
+This factorization is a downstream candidate model, not a generic DSD theorem.
+
+The special value
+
+\[
+\Theta_*=\frac12
+\]
+
+is obtained conditionally only if
+
+\[
+\nu_{\rm kin}=\frac12,
+\qquad
+\eta_I=1,
+\qquad
+\zeta=1.
+\]
+
+These three equalities must be audited independently.
+
+## 13. Updated comparator identity / 갱신 비교식
+
+After the factorization is frozen, the Schwarzschild comparator gives
+
+\[
+\boxed{
+\frac{R_{\rm crit}}{R_S}
+=
+\frac{1}{2\nu_{\rm kin}\eta_I\zeta^2}
+\frac{K_g}{G}
+\left(\frac{c}{c_{\rm info}}\right)^2
+}.
+\]
+
+For the quadratic specialization \(\nu_{\rm kin}=1/2\),
+
+\[
+\boxed{
+\frac{R_{\rm crit}}{R_S}
+=
+\frac{K_g}{G}
+\left(\frac{c}{c_{\rm info}}\right)^2
+\frac{1}{\eta_I\zeta^2}
+}.
+\]
+
+Thus exact Schwarzschild closure is converted from one opaque coefficient into independently auditable bridge conditions.
+
+## 14. Factorization calculator / 분해 계산기
+
+Repository command:
+
+```bash
+python audits/science/2026-09-11_structural_gravity_support_threshold_factorization.py --mode all
+```
+
+Related audit:
+
+```text
+audits/science/2026-09-11_structural-gravity-support-threshold-factorization-audit.md
+```
+
+Current status:
+
+```text
+PASS_WITH_BOUNDARY / OPEN_COEFFICIENT
+```
+
+The calculator is a sensitivity/factorization audit. It does not fit the bridge factors to Sgr A*, the EHT ring, or the Schwarzschild coefficient.
