@@ -1,6 +1,6 @@
 # DSD Comparison Planning / DSD 비교론 기획
 
-Status: **Protocol v0.1 established / Step 11 deterministic same-project retrace complete / validation in progress**  
+Status: **Protocol v0.1 established / Step 12 second external domain complete / validation in progress**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -34,9 +34,10 @@ a1700d960e0b41dfe32bf85b6334448d9104100d
 9. ✅ `CMP-CH-005` strongest-reasonable-baseline — **60/60 PASS / NO_GAIN**.
 10. ✅ `CMP-APP-001` first external application — Unicode normalization, **42/42 PASS**.
 11. ✅ `CMP-CH-006` deterministic same-project retrace of CMP-APP-001 — **48/48 PASS**.
-12. **Next:** additional materially different external domains.
-13. Maturity audit after external breadth is materially populated.
-14. Independent-evaluator infrastructure only after protocol/evidence stability justifies it.
+12. ✅ `CMP-APP-002` second external domain — RFC 9110 HTTP ETag comparison semantics, **48/48 PASS**.
+13. **Next:** third materially different external Comparison domain.
+14. Maturity audit after external breadth reaches three materially different domains if no protocol-pressure defect appears.
+15. Independent-evaluator infrastructure only after maturity audit supports it.
 
 ## Constructed evidence summary
 
@@ -131,6 +132,67 @@ INDEPENDENT_COMPARISON_VALIDATION: not established
 
 The retrace did not increment constructed or external application counts and did not establish method gain or maturity.
 
+## Step 12 / CMP-APP-002 external application
+
+Source lock:
+
+```text
+RFC 9110 — HTTP Semantics
+Date: June 2022
+§8.8.3.2 Comparison
+§13.1.1 If-Match
+§13.1.2 If-None-Match
+```
+
+Evidence:
+
+```text
+PRECOMMIT: f77ddb2a384b15d6a1fe041c4be5c177c52b3623
+PRECOMMIT BLOB: 7478867a0013cb94ae9a7e581a77548263cbe966
+RESULT: fbba59a974482ff7469d7cec5b4ce63a85c2ae61
+SCORE: 48/48 PASS
+```
+
+Frozen criterion structure:
+
+```text
+STRONG_COMPARISON:
+  both tags not weak + identical opaque-tags
+
+WEAK_COMPARISON:
+  identical opaque-tags regardless of weak marking
+
+If-Match -> STRONG_COMPARISON
+If-None-Match -> WEAK_COMPARISON
+```
+
+Execution:
+
+```text
+H1 W/"1" vs W/"1" / strong -> NONCORRESPONDENCE / RESOLVED
+H2 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
+H3 W/"1" vs "1" / strong -> NONCORRESPONDENCE / RESOLVED
+H4 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
+H5 "1" vs "1" / strong -> DIRECT_CORRESPONDENCE / RESOLVED
+H6 W/"1" vs W/"2" / weak -> NONCORRESPONDENCE / RESOLVED
+H7 If-Match context -> strong -> NONCORRESPONDENCE / RESOLVED
+H8 If-None-Match context -> weak -> DIRECT_CORRESPONDENCE / RESOLVED
+ALL CONFORMANCE: CONFORMANT
+METHOD GAIN: NOT_ASSESSED
+```
+
+Preserved distinctions:
+
+```text
+STRONG_MATCH != WEAK_MATCH_IN_GENERAL
+WEAK_MATCH != REPRESENTATION_IDENTITY
+OPAQUE_TAG_EQUALITY_ALONE != STRONG_MATCH_WHEN_WEAK_MARKER_PRESENT
+SAME_PAIR + DIFFERENT_HTTP_CRITERION -> possibly different verdict
+RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
+```
+
+This is materially different from Unicode normalization because the standard supplies two direct validator comparison functions and context-dependent criterion selection without a normalization transform or representation bridge.
+
 ## Current evidence state / 현재 증거 상태
 
 ```text
@@ -147,9 +209,9 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_le
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_COMPARISON_APPLICATIONS: 1
-EXTERNAL_COMPARISON_DOMAINS: 1
-EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
+EXTERNAL_COMPARISON_APPLICATIONS: 2
+EXTERNAL_COMPARISON_DOMAINS: 2
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 2
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -171,8 +233,9 @@ CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 - Similar dynamic trajectories do not establish lineage identity.
 - Method gain requires a frozen competent baseline.
 - `NO_GAIN` is legitimate and is not evidence of method absorption or redundancy by itself.
+- External standard terminology such as HTTP "equivalent" is not automatically relabelled `STRICT_EQUIVALENT`; the frozen DSD output level controls the claim.
 - Case success/failure or retrace success does not decide method survival, merger, absorption, or deletion.
 
 ## Next / 다음
 
-Add at least one materially different external Comparison domain before the first maturity audit. Avoid another normalization/string-equivalence case; prefer an external domain with a distinct comparison criterion such as measurement tolerance, structural standard equivalence, or formal compatibility classes, while preserving source truth, Comparison conformance, and method gain as separate ledgers.
+Add a third external Comparison application from a materially different domain, preferably physical measurement tolerance, geometric/engineering standard compatibility, or another non-textual criterion system. If three-domain external breadth is obtained without new protocol pressure, proceed to the first Comparison maturity audit.
