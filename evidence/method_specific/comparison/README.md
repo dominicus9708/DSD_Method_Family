@@ -1,6 +1,6 @@
 # DSD Comparison Direct Evidence / DSD 비교론 직접 증거
 
-Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / two external domains PASS / deterministic same-project retrace PASS / validation in progress**
+Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / three external domains PASS / deterministic same-project retrace PASS / maturity-audit ready**
 
 This lane records evidence that directly tests **DSD Comparison / DSD 비교론**.
 
@@ -20,16 +20,18 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_le
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_COMPARISON_APPLICATIONS: 2
-EXTERNAL_COMPARISON_DOMAINS: 2
-EXTERNAL_COMPARISON_APPLICATION_PASSES: 2
+EXTERNAL_COMPARISON_APPLICATIONS: 3
+EXTERNAL_COMPARISON_DOMAINS: 3
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 3
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-Constructed direct-pilot counts, external-application counts, and reproducibility counts are separate.
+Constructed direct-pilot counts, external-application counts, reproducibility counts, and maturity-audit records remain separate.
 
 ## Protocol and constructed evidence
 
@@ -55,8 +57,6 @@ REVISION: 57
 SCORE: 42/42 PASS
 ```
 
-Frozen criteria and outputs:
-
 ```text
 U1 Ç vs C+cedilla / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
 U2 same pair / binary identity -> NONCORRESPONDENCE / RESOLVED
@@ -64,9 +64,9 @@ U3 ① vs 1 / NFC canonical -> NONCORRESPONDENCE / RESOLVED
 U4 same pair / NFKC compatibility -> ENCODED_CORRESPONDENCE / RESOLVED
 U5 가 vs ᄀ+ᅡ / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
 U6 reordered combining marks / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
+ALL CONFORMANCE: CONFORMANT
+METHOD GAIN: NOT_ASSESSED
 ```
-
-All six runs were `CONFORMANT`. `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED` because the external application did not include a separately justified independent baseline.
 
 Preserved criterion discipline:
 
@@ -76,8 +76,6 @@ CANONICAL_EQUIVALENCE != COMPATIBILITY_EQUIVALENCE
 SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
 NORMALIZATION_BRIDGE_DEPENDENCE != DIRECT_LITERAL_IDENTITY
 ```
-
-The application makes no locale-collation, grapheme-cluster, confusability, identifier-security, visual-rendering, or language-semantic claim.
 
 ## CMP-CH-006 — deterministic same-project retrace
 
@@ -90,18 +88,7 @@ SCORE: 48/48 PASS
 REPRODUCIBILITY_LEVEL: deterministic_same_project
 ```
 
-The retrace reproduced exactly:
-
-```text
-U1 ENCODED / canonical via NFC / RESOLVED / CONFORMANT
-U2 NONCORRESPONDENCE / binary identity / RESOLVED / CONFORMANT
-U3 NONCORRESPONDENCE / canonical via NFC / RESOLVED / CONFORMANT
-U4 ENCODED / compatibility via NFKC / RESOLVED / CONFORMANT
-U5 ENCODED / canonical via NFC / RESOLVED / CONFORMANT
-U6 ENCODED / canonical via NFC / RESOLVED / CONFORMANT
-```
-
-It also reproduced criterion provenance, scope exclusions, and `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED`. The historical result was used only after reconstruction for equality scoring.
+The retrace reproduced all six frozen Unicode candidates, criteria, relation classes, terminals, conformance records, criterion provenance, and scope exclusions.
 
 ```text
 REPRODUCIBILITY_CASES: 1
@@ -121,8 +108,6 @@ SECTIONS: 8.8.3.2, 13.1.1, 13.1.2
 SCORE: 48/48 PASS
 ```
 
-Frozen criterion structure and outputs:
-
 ```text
 H1 W/"1" vs W/"1" / strong -> NONCORRESPONDENCE / RESOLVED
 H2 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
@@ -132,9 +117,9 @@ H5 "1" vs "1" / strong -> DIRECT_CORRESPONDENCE / RESOLVED
 H6 W/"1" vs W/"2" / weak -> NONCORRESPONDENCE / RESOLVED
 H7 If-Match context -> strong -> NONCORRESPONDENCE / RESOLVED
 H8 If-None-Match context -> weak -> DIRECT_CORRESPONDENCE / RESOLVED
+ALL CONFORMANCE: CONFORMANT
+METHOD GAIN: NOT_ASSESSED
 ```
-
-All eight runs were `CONFORMANT`; `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED` because no separately justified independent baseline was included.
 
 Preserved HTTP criterion discipline:
 
@@ -143,12 +128,48 @@ STRONG_MATCH != WEAK_MATCH_IN_GENERAL
 WEAK_MATCH != REPRESENTATION_IDENTITY
 OPAQUE_TAG_EQUALITY_ALONE != STRONG_MATCH_WHEN_WEAK_MARKER_PRESENT
 SAME_PAIR + DIFFERENT_HTTP_CRITERION -> possibly different verdict
-IF_MATCH_CONTEXT -> STRONG_COMPARISON
-IF_NONE_MATCH_CONTEXT -> WEAK_COMPARISON
 RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
 ```
 
-This application does not claim request status, cache freshness outside the selected comparison rule, ETag generation correctness, resource identity, representation-byte identity, range validity, or application-level semantic equality.
+## CMP-APP-003 — JCGM VIM metrological compatibility
+
+```text
+PRECOMMIT: 446aae3
+PRECOMMIT_BLOB: 7aa6aa1
+RESULT: 6dad36f
+SOURCE: JCGM 200:2012 VIM3, entry 2.47
+DOI: 10.59161/JCGM200-2012
+SCORE: 52/52 PASS
+```
+
+Frozen criterion and outputs:
+
+```text
+M1 compatible / k=2 -> DIRECT_CORRESPONDENCE / RESOLVED
+M2 same pair / k=1 -> NONCORRESPONDENCE / RESOLVED
+M3 exact threshold equality -> NONCORRESPONDENCE / RESOLVED
+M4 just inside threshold -> DIRECT_CORRESPONDENCE / RESOLVED
+M5 same value separation / small uncertainties -> NONCORRESPONDENCE / RESOLVED
+M6 same value separation / larger uncertainties -> DIRECT_CORRESPONDENCE / RESOLVED
+M7 zero value separation -> DIRECT_CORRESPONDENCE / RESOLVED
+M8 claim-relevant correlation unavailable -> UNDETERMINED_CORRESPONDENCE / UNDERDETERMINED
+ALL CONFORMANCE: CONFORMANT
+METHOD GAIN: NOT_ASSESSED
+```
+
+Preserved metrology criterion discipline:
+
+```text
+METROLOGICAL_COMPATIBILITY != STRICT_STRUCTURAL_EQUIVALENCE
+METROLOGICAL_NONCOMPATIBILITY != PROOF_OF_DIFFERENT_PHYSICAL_OBJECT
+CENTRAL_VALUE_DIFFERENCE_ALONE != COMPATIBILITY_VERDICT
+SAME_PAIR + DIFFERENT_CHOSEN_MULTIPLE -> possibly different verdict
+THRESHOLD_EQUALITY != STRICT_SMALLER_THAN
+UNKNOWN_CORRELATION != ASSUME_UNCORRELATED
+UNDERDETERMINED != FAILURE
+```
+
+This application does not claim calibration correctness, instrument conformance, traceability-chain validity, true-value identity, causal diagnosis, or practical acceptance for a specific industry.
 
 ## Protocol-v0.1 core guards
 
@@ -167,6 +188,8 @@ MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
 RETRACE_PASS != INDEPENDENT_REPLICATION
 HTTP_MATCH != REPRESENTATION_IDENTITY
+METROLOGICAL_COMPATIBILITY != STRICT_STRUCTURAL_EQUIVALENCE
+UNKNOWN_CORRELATION != ASSUME_UNCORRELATED
 ```
 
 ## Evidence IDs
@@ -189,8 +212,9 @@ BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
 EXTERNAL_PASS != METHOD_GAIN_PROOF
 RETRACE_PASS != INDEPENDENT_REPLICATION
 PROTOCOL_ESTABLISHED != METHOD_VALIDATED
+THREE_EXTERNAL_DOMAINS != AUTOMATIC_MATURITY_PROMOTION
 ```
 
 ## Immediate next task
 
-Add a third materially different external Comparison domain before maturity audit. Prefer a non-textual and non-HTTP-tag criterion structure so external breadth reaches three distinct domains without merely repeating the same comparison pattern.
+Run a separately precommitted first Comparison maturity audit. The audit must evaluate current evidence rather than generate new direct validation and must preserve independent validation, practical superiority, registry survival, merger, and absorption as separate unresolved questions unless independently supported.
