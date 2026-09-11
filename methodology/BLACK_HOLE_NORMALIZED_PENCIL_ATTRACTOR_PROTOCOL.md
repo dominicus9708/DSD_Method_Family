@@ -124,16 +124,66 @@ PASS_WITH_BOUNDARY / COMMON_RELAXATION_TARGET_REQUIRED
 
 This is a viable specialization path, not yet a physical derivation of the black-hole universal coefficient.
 
-## 9. Next target
-The next audit must determine whether a common target \(B_*\) can be generated from DSD structural data without importing the Schwarzschild coefficient. Priority subquestions:
+## 9. Invariant compatibility / 불변량 호환성
+A common attractor is possible only if every exactly preserved invariant is compatible across all admitted source states.
 
-1. can normalized source-detail sectors be shown to decay under an independently motivated relaxation law;
-2. which invariants survive that flow and therefore constrain the possible target;
-3. whether the target minimum eigenvalue is unique and source-independent;
-4. whether transitions near local-collapse convergence preserve or reset the normalized target class.
+For an invariant family \(C_j[B]\), exact convergence to one target requires
 
-## 10. Reproduction
+\[
+C_j[B(S_1,0)]=C_j[B(S_2,0)]=C_j[B_*]
+\]
+
+for every \(C_j\) preserved through the entire regular epoch and transition chain.
+
+The control audit found:
+
+- the three radial-profile pencils share \(\operatorname{tr}B=2\);
+- they have different determinants, Frobenius norms, and spectra;
+- therefore exact determinant conservation or isospectral evolution would obstruct one common \(B_*\);
+- trace conservation alone does not obstruct a common target, but it does not determine the target spectrum uniquely.
+
+A trace-preserving isotropization of the controls gives
+
+\[
+B_*^{\rm iso}=I,
+\qquad
+\Psi_*=1,
+\]
+
+whereas a trace-preserving nonisotropic target can have
+
+\[
+B_*^{\rm aniso}=\operatorname{diag}(0.5,1.5),
+\qquad
+\Psi_*=0.5.
+\]
+
+Therefore a common trace or a generic tendency toward isotropy is insufficient to select the earlier \(1/2\) control value.
+
+Structural Reorganization Dynamics supplies no generic conservation law; conservation/redistribution is an additional model condition. The structural-gravity specialization must therefore classify each candidate invariant as conserved, redistributed, dissipative, or transition-reset.
+
+Current invariant-audit verdict:
+
+```text
+PASS_WITH_BOUNDARY / TARGET_SPECTRUM_UNIQUENESS_OPEN
+```
+
+## 10. Next target
+After mechanism and invariant audits, the unresolved problem is target selection itself.
+
+Test whether the actual structural-support/reorganization bridge independently selects:
+
+1. isotropic relaxation;
+2. a fixed anisotropic spectrum;
+3. a critical-coupling spectrum;
+4. a transition-selected spectrum;
+5. or no universal spectrum at all.
+
+The target minimum eigenvalue must be obtained without importing the Schwarzschild coefficient.
+
+## 11. Reproduction
 
 ```bash
 python audits/science/2026-09-11_structural_gravity_normalized_pencil_attractor_audit.py --mode all
+python audits/science/2026-09-11_structural_gravity_normalized_pencil_invariant_audit.py --mode all
 ```
