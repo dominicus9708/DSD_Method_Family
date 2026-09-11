@@ -1,6 +1,6 @@
 # DSD Comparison Direct Evidence / DSD 비교론 직접 증거
 
-Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / first external application PASS / validation in progress**
+Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / first external application PASS / deterministic same-project retrace PASS / validation in progress**
 
 This lane records evidence that directly tests **DSD Comparison / DSD 비교론**.
 
@@ -17,16 +17,19 @@ BOUNDARY_COMPARISON_CASES: 1
 NO_GAIN_COMPARISON_CASES: 2
 BASELINE_COMPARISON_CASES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_COMPARISON_APPLICATIONS: 1
 EXTERNAL_COMPARISON_DOMAINS: 1
 EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
+INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Constructed direct-pilot counts and external-application counts are separate.
+Constructed direct-pilot counts, external-application counts, and reproducibility counts are separate.
 
 ## Protocol and constructed evidence
 
@@ -55,23 +58,12 @@ SCORE: 42/42 PASS
 Frozen criteria and outputs:
 
 ```text
-U1 Ç vs C+cedilla / NFC canonical
-  -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
-
-U2 same pair / binary identity
-  -> NONCORRESPONDENCE / COMPARISON_RESOLVED
-
-U3 ① vs 1 / NFC canonical
-  -> NONCORRESPONDENCE / COMPARISON_RESOLVED
-
-U4 same pair / NFKC compatibility
-  -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
-
-U5 가 vs ᄀ+ᅡ / NFC canonical
-  -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
-
-U6 reordered combining marks / NFC canonical
-  -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
+U1 Ç vs C+cedilla / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
+U2 same pair / binary identity -> NONCORRESPONDENCE / RESOLVED
+U3 ① vs 1 / NFC canonical -> NONCORRESPONDENCE / RESOLVED
+U4 same pair / NFKC compatibility -> ENCODED_CORRESPONDENCE / RESOLVED
+U5 가 vs ᄀ+ᅡ / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
+U6 reordered combining marks / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
 ```
 
 All six runs were `CONFORMANT`. `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED` because the external application did not include a separately justified independent baseline.
@@ -86,6 +78,37 @@ NORMALIZATION_BRIDGE_DEPENDENCE != DIRECT_LITERAL_IDENTITY
 ```
 
 The application makes no locale-collation, grapheme-cluster, confusability, identifier-security, visual-rendering, or language-semantic claim.
+
+## CMP-CH-006 — deterministic same-project retrace
+
+```text
+RETRACE_TARGET: CMP-APP-001
+PRECOMMIT: ffd374f
+PRECOMMIT_BLOB: 80b6d0d
+RESULT: 35d0a8d
+SCORE: 48/48 PASS
+REPRODUCIBILITY_LEVEL: deterministic_same_project
+```
+
+The retrace reproduced exactly:
+
+```text
+U1 ENCODED / canonical via NFC / RESOLVED / CONFORMANT
+U2 NONCORRESPONDENCE / binary identity / RESOLVED / CONFORMANT
+U3 NONCORRESPONDENCE / canonical via NFC / RESOLVED / CONFORMANT
+U4 ENCODED / compatibility via NFKC / RESOLVED / CONFORMANT
+U5 ENCODED / canonical via NFC / RESOLVED / CONFORMANT
+U6 ENCODED / canonical via NFC / RESOLVED / CONFORMANT
+```
+
+It also reproduced criterion provenance, scope exclusions, and `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED`. The historical result was used only after reconstruction for equality scoring.
+
+```text
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+INDEPENDENT_REPLICATION: not established
+INDEPENDENT_COMPARISON_VALIDATION: not established
+```
 
 ## Protocol-v0.1 core guards
 
@@ -102,12 +125,13 @@ UNSUPPLIED_NORMALIZATION_OR_CONVERSION != COMPARISON_MAP
 DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
 MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
+RETRACE_PASS != INDEPENDENT_REPLICATION
 ```
 
 ## Evidence IDs
 
 ```text
-CMP-CH-###   constructed Comparison challenges
+CMP-CH-###   constructed Comparison challenges and dedicated retrace cases
 CMP-APP-###  external or independently generated Comparison applications
 CMP-AUD-###  Comparison-specific audit/maturity records
 CMP-IEP-###  independent-evaluator infrastructure
@@ -122,9 +146,10 @@ CASE_FAIL != METHOD_DELETION_PROOF
 NO_GAIN != METHOD_ABSORPTION_PROOF
 BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
 EXTERNAL_PASS != METHOD_GAIN_PROOF
+RETRACE_PASS != INDEPENDENT_REPLICATION
 PROTOCOL_ESTABLISHED != METHOD_VALIDATED
 ```
 
 ## Immediate next task
 
-Precommit and run a deterministic same-project retrace of `CMP-APP-001`. Reproduce all six criterion-specific relation classes, terminal states, criterion provenance, and scope exclusions from the frozen protocol/source/precommit/result chain without reopening the task.
+Add a materially different external Comparison application. Avoid merely repeating Unicode/string-normalization semantics; use a distinct external comparison structure before maturity audit.
