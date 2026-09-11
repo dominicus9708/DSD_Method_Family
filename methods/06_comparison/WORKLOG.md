@@ -82,9 +82,6 @@ T1 -> STRICT_EQUIVALENT
 T2 -> DIRECT_CORRESPONDENCE / strict equivalence no
 T3 -> ENCODED_CORRESPONDENCE
 T4 -> aggregate equal + structural NONCORRESPONDENCE
-ALL TERMINAL: COMPARISON_RESOLVED
-ALL CONFORMANCE: CONFORMANT
-ALL GAIN: NOT_ASSESSED
 ```
 
 Evidence effect:
@@ -140,16 +137,6 @@ B4 Audit -> resolved comparison profile + AUDIT_REQUIRED
 B5 Provenance/Lineage -> snapshot STRICT_EQUIVALENT / RESOLVED; lineage not_established + PROVENANCE_LINEAGE_REQUIRED
 ```
 
-Preserved method-boundary distinctions:
-
-```text
-COMPARISON_EQUIVALENCE != INTERNAL_DECOMPOSITION
-COMPARISON_RELATION != TAXONOMY_ASSIGNMENT
-COMPARISON_MAP != UNSUPPLIED_TRANSFORMATION
-TRACE_DIFFERENCE != AUDIT_CONFORMANCE_VERDICT
-STRUCTURAL_EQUIVALENCE != LINEAGE_IDENTITY
-```
-
 Evidence effect:
 
 ```text
@@ -165,97 +152,156 @@ METHOD_SURVIVAL_OR_MERGER_DECISION_FROM_THIS_CASE: none
 
 Status: **50/50 PASS / NO_GAIN**
 
-Precommit:
-
 ```text
-evidence/method_specific/comparison/CMP-CH-004_precommit.md
-commit 0d96d6ba83e25f2e14dba47c309cb74da7c71bad
-blob 1c5917a6b854321605ce1d22e63201f5cadb3c7f
+PRECOMMIT: 0d96d6ba83e25f2e14dba47c309cb74da7c71bad
+RESULT: 4cacd55f73b2f4180ec8f11854d8dbe40974f536
+BASELINE: B0_TYPED_COMPARISON_LEDGER
 ```
 
-Result:
-
 ```text
-evidence/method_specific/comparison/CMP-CH-004_competent-baseline-no-gain.md
-commit 4cacd55f73b2f4180ec8f11854d8dbe40974f536
-```
-
-Baseline:
-
-```text
-B0_TYPED_COMPARISON_LEDGER
-```
-
-B0 received the same claim-relevant subject, relation, Property/status, map, tested/untested, coverage, bridge, aggregate, equivalence, and terminal-rule records as DSD Comparison. It was explicitly allowed to preserve every scored distinction.
-
-Execution:
-
-```text
-Q1 DSD = B0
-  STRICT_EQUIVALENT / COMPARISON_RESOLVED
-
-Q2 DSD = B0
-  ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
-
-Q3 DSD = B0
-  UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
-
-Q4 DSD = B0
-  NONCORRESPONDENCE / COMPARISON_RESOLVED
-  aggregate equal != structural equivalence
-
-Q5 DSD = B0
-  UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
-```
-
-Gain ledger:
-
-```text
-G1 RELATION_CLASS_SEPARATION_GAIN: NOT_ESTABLISHED
-G2 STATUS_DISTINCTION_GAIN: NOT_ESTABLISHED
-G3 COVERAGE_AND_CLOSURE_GAIN: NOT_ESTABLISHED
-G4 BRIDGE_PROVENANCE_GAIN: NOT_ESTABLISHED
-G5 AGGREGATE_COLLISION_GAIN: NOT_ESTABLISHED
-G6 TERMINAL_AND_RETRACEABILITY_GAIN: NOT_ESTABLISHED
+Q1 DSD = B0 -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
+Q2 DSD = B0 -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
+Q3 DSD = B0 -> UNDETERMINED / COMPARISON_UNDERDETERMINED
+Q4 DSD = B0 -> NONCORRESPONDENCE / COMPARISON_RESOLVED
+Q5 DSD = B0 -> UNDETERMINED / COMPARISON_BLOCKED
+G1-G6: NOT_ESTABLISHED
 COMPARISON_METHOD_GAIN_STATUS: NO_GAIN
-```
-
-Precommitted score:
-
-```text
-A immutable/fairness                         8/8
-B DSD task execution                       15/15
-C B0 task execution                        15/15
-D comparative gain                          8/8
-E scope/protocol pressure                    4/4
-TOTAL                                      50/50 PASS
 ```
 
 Evidence effect:
 
 ```text
 DIRECT_COMPARISON_PILOTS: 4
-POSITIVE_COMPARISON_CASES: 1
-NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
-BOUNDARY_COMPARISON_CASES: 1
 NO_GAIN_COMPARISON_CASES: 1
 BASELINE_COMPARISON_CASES: 1
 STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
+```
+
+---
+
+## 2026-09-11 — Step 9: CMP-CH-005 strongest-reasonable-baseline comparison
+
+Status: **60/60 PASS / NO_GAIN**
+
+Precommit:
+
+```text
+evidence/method_specific/comparison/CMP-CH-005_precommit.md
+commit ad542304a184303c7898ef8506afe167735683c5
+blob cbefe2e0948a5b14343b8202fd2461192ce603df
+```
+
+Result:
+
+```text
+evidence/method_specific/comparison/CMP-CH-005_strongest-reasonable-baseline.md
+commit 61675b35e55a7ce288dc18a3afc773eeb135b180
+```
+
+Baseline:
+
+```text
+B1_STRONG_TYPED_COMPARISON_ENGINE
+```
+
+Activated simultaneously:
+
+```text
+earliest justified first branch + prior-stage closure
+later re-convergence without branch erasure
+forward direct correspondence vs bijective strict equivalence
+surjectivity/inverse requirements
+partial-vs-global comparison-element coverage
+uncovered-element preservation
+supplied representation bridge + provenance
+encoded correspondence without direct relabeling
+sampled dynamic trajectory equivalence
+lineage identity gated by supplied lineage evidence
+```
+
+Execution:
+
+```text
+R1 DSD = B1
+  PARTIAL_CORRESPONDENCE
+  FIRST_BRANCH_POINT: S2
+  earlier {S0,S1} closed
+  COMPARISON_RESOLVED
+
+R2 DSD = B1
+  DIRECT_CORRESPONDENCE
+  strict equivalence no
+  target remainder {b2}
+  COMPARISON_RESOLVED
+
+R3 DSD = B1
+  PARTIAL_CORRESPONDENCE
+  uncovered element {mode(u1)<->mode(v1)}
+  strict equivalence not_established
+  COMPARISON_RESOLVED
+
+R4 DSD = B1
+  ENCODED_CORRESPONDENCE
+  bridge provenance preserved
+  COMPARISON_RESOLVED
+
+R5 DSD = B1
+  sampled-trajectory STRICT_EQUIVALENT
+  lineage relation DISTINCT_LINEAGES
+  lineage identity no
+  COMPARISON_RESOLVED
+```
+
+Gain ledger:
+
+```text
+G1 FIRST_BRANCH_CLOSURE_GAIN: NOT_ESTABLISHED
+G2 DIRECTIONAL_MAP_AND_INVERSE_GAIN: NOT_ESTABLISHED
+G3 ELEMENT_COVERAGE_DISCIPLINE_GAIN: NOT_ESTABLISHED
+G4 BRIDGE_AND_REPRESENTATION_PROVENANCE_GAIN: NOT_ESTABLISHED
+G5 DYNAMIC_VS_LINEAGE_SEPARATION_GAIN: NOT_ESTABLISHED
+G6 STATUS_AND_RELATION_TRACE_GAIN: NOT_ESTABLISHED
+G7 TERMINAL_AND_RETRACEABILITY_GAIN: NOT_ESTABLISHED
+COMPARISON_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+Precommitted score:
+
+```text
+A immutable/fairness discipline       8/8
+B DSD execution                      18/18
+C B1 execution                       18/18
+D comparative gain                    9/9
+E scope/protocol pressure             7/7
+TOTAL                                60/60 PASS
+```
+
+Evidence effect:
+
+```text
+DIRECT_COMPARISON_PILOTS: 5
+POSITIVE_COMPARISON_CASES: 1
+NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
+BOUNDARY_COMPARISON_CASES: 1
+NO_GAIN_COMPARISON_CASES: 2
+BASELINE_COMPARISON_CASES: 2
+STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
+EXTERNAL_COMPARISON_APPLICATIONS: 0
+REPRODUCIBILITY_CASES: 0
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-Interpretation:
+Interpretation discipline:
 
 ```text
 NO_GAIN != METHOD_FAILURE
 NO_GAIN != METHOD_ABSORPTION_PROOF
 BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
+CASE_PASS != METHOD_SURVIVAL_PROOF
 ```
-
-A competent non-DSD ledger equipped with the same frozen semantics matched DSD on all six comparison-gain dimensions. The result is preserved as an honest successful `NO_GAIN`.
 
 ### Next
 
-Separately precommit `CMP-CH-005` strongest-reasonable-baseline comparison. Activate materially richer demands such as first-branch closure, forward/inverse directionality, partial-versus-global element coverage, representation/bridge provenance, and lineage-gated dynamic comparison. Give the baseline all claim-relevant information; another `NO_GAIN` remains acceptable.
+Precommit and execute the first external Comparison application `CMP-APP-001` from a stable public source that supplies the compared records and a defensible comparison criterion. External source truth, Comparison conformance, and method gain remain separate ledgers.
