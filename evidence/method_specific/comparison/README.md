@@ -1,8 +1,8 @@
 # DSD Comparison Direct Evidence / DSD 비교론 직접 증거
 
-Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / three external domains PASS / deterministic same-project retrace PASS / maturity-audit ready**
+Status: **Protocol v0.1 established / method-protocol evidence maturity established after CMP-AUD-001 / validation in progress**
 
-This lane records evidence that directly tests **DSD Comparison / DSD 비교론**.
+This lane records direct Comparison evidence and Comparison-specific audit meta-records. Maturity audits do not themselves increment direct-pilot, external-application, or reproducibility counts.
 
 ## Current development state
 
@@ -25,13 +25,11 @@ EXTERNAL_COMPARISON_DOMAINS: 3
 EXTERNAL_COMPARISON_APPLICATION_PASSES: 3
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
-COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
+COMPARISON_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
-
-Constructed direct-pilot counts, external-application counts, reproducibility counts, and maturity-audit records remain separate.
 
 ## Protocol and constructed evidence
 
@@ -42,134 +40,102 @@ CMP-CH-002: 48/48 PASS
 CMP-CH-003: 48/48 PASS
 CMP-CH-004: 50/50 PASS / NO_GAIN
 CMP-CH-005: 60/60 PASS / NO_GAIN
+  STRONGEST_REASONABLE_BASELINE_COMPARISON:
+    established_at_constructed_evidence_level
 ```
 
-`CMP-CH-005` established the strongest-reasonable-baseline category at constructed-evidence level. The strong baseline matched DSD on all frozen gain dimensions.
+The constructed corpus directly preserves positive relation classes, `RESOLVED`/`UNDERDETERMINED`/`BLOCKED` terminal distinction, neighboring-method handoffs, aggregate-vs-structure separation, map-family/element coverage separation, direction/inverse requirements, first-branch closure, bridge provenance, and honest `NO_GAIN` results.
 
-## CMP-APP-001 — Unicode normalization external application
+## Reproducibility evidence
 
 ```text
-PRECOMMIT: e1a109b
-RESULT: b64cd88
-SOURCE: Unicode Standard Annex #15
-UNICODE VERSION: 17.0.0
-REVISION: 57
-SCORE: 42/42 PASS
+CMP-CH-006
+  RETRACE TARGET: CMP-APP-001
+  PRECOMMIT: ffd374f
+  RESULT: 35d0a8d
+  SCORE: 48/48 PASS
+  REPRODUCIBILITY_LEVEL: deterministic_same_project
+  INDEPENDENT_REPLICATION: not established
 ```
+
+## External application evidence
 
 ```text
-U1 Ç vs C+cedilla / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
-U2 same pair / binary identity -> NONCORRESPONDENCE / RESOLVED
-U3 ① vs 1 / NFC canonical -> NONCORRESPONDENCE / RESOLVED
-U4 same pair / NFKC compatibility -> ENCODED_CORRESPONDENCE / RESOLVED
-U5 가 vs ᄀ+ᅡ / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
-U6 reordered combining marks / NFC canonical -> ENCODED_CORRESPONDENCE / RESOLVED
-ALL CONFORMANCE: CONFORMANT
-METHOD GAIN: NOT_ASSESSED
+CMP-APP-001
+  PRECOMMIT: e1a109b
+  RESULT: b64cd88
+  SOURCE: Unicode Standard Annex #15, Unicode 17.0.0 Revision 57
+  DOMAIN: text representation / normalization
+  SCORE: 42/42 PASS
+  METHOD GAIN: NOT_ASSESSED
+
+CMP-APP-002
+  PRECOMMIT: f77ddb2
+  RESULT: fbba59a
+  SOURCE: RFC 9110 §§8.8.3.2, 13.1.1, 13.1.2
+  DOMAIN: HTTP validator comparison semantics
+  SCORE: 48/48 PASS
+  METHOD GAIN: NOT_ASSESSED
+
+CMP-APP-003
+  PRECOMMIT: 446aae3
+  RESULT: 6dad36f
+  SOURCE: JCGM 200:2012 VIM3 entry 2.47
+  DOMAIN: physical metrology / measurement-result compatibility
+  SCORE: 52/52 PASS
+  METHOD GAIN: NOT_ASSESSED
 ```
 
-Preserved criterion discipline:
+The three external domains are materially distinct at the current evidence level: normalization-dependent equivalence, context-selected strong/weak validator comparison, and quantitative uncertainty/correlation-dependent metrological compatibility.
+
+## CMP-AUD-001 maturity audit
 
 ```text
-RAW_BINARY_INEQUALITY != CANONICAL_NONCORRESPONDENCE
-CANONICAL_EQUIVALENCE != COMPATIBILITY_EQUIVALENCE
-SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
-NORMALIZATION_BRIDGE_DEPENDENCE != DIRECT_LITERAL_IDENTITY
+PRECOMMIT:
+  69315746b3ed5367aa56e087b96b8ea878a59376
+RESULT:
+  afe4cc7d8a4efe2f7485768e0d9dc363010e34e2
+PRECOMMITTED_REQUIRED_CHECKS: 28
+PASSED: 28
+FAILED: 0
+AUDIT_EXECUTION_VERDICT: PASS
+FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+COMPARISON_METHOD_MATURITY_CLASSIFICATION: established
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 ```
 
-## CMP-CH-006 — deterministic same-project retrace
+Axis summary:
 
 ```text
-RETRACE_TARGET: CMP-APP-001
-PRECOMMIT: ffd374f
-PRECOMMIT_BLOB: 80b6d0d
-RESULT: 35d0a8d
-SCORE: 48/48 PASS
-REPRODUCIBILITY_LEVEL: deterministic_same_project
+M1 PASS
+M2 PASS
+M3 PASS
+M4 PASS
+M5 CONDITIONAL_PASS
+M6 PASS
+M7 PASS
+M8 PASS
+M9 PASS
+M10 UNRESOLVED_BUT_BOUNDED
+M11 PASS
+M12 PASS
+M13 PASS
+M14 PASS
+M15 PASS
 ```
 
-The retrace reproduced all six frozen Unicode candidates, criteria, relation classes, terminals, conformance records, criterion provenance, and scope exclusions.
+`CMP-AUD-001` is an Audit meta-record. It adds no Comparison direct pilot and does not change external-application or reproducibility counts.
+
+Maximum supported claim:
 
 ```text
-REPRODUCIBILITY_CASES: 1
-DEDICATED_RETRACE_PASSES: 1
-INDEPENDENT_REPLICATION: not established
-INDEPENDENT_COMPARISON_VALIDATION: not established
+ESTABLISHED_METHOD_PROTOCOL_EVIDENCE_MATURITY
+!= INDEPENDENT_COMPARISON_VALIDATION
+!= INDEPENDENT_REPLICATION
+!= PRACTICAL_SUPERIORITY
+!= UNIVERSAL_EXTERNAL_GENERALITY
+!= PERMANENT_METHOD_REGISTRY_SURVIVAL
 ```
-
-## CMP-APP-002 — RFC 9110 HTTP ETag comparison semantics
-
-```text
-PRECOMMIT: f77ddb2
-PRECOMMIT_BLOB: 7478867
-RESULT: fbba59a
-SOURCE: RFC 9110 — HTTP Semantics
-SECTIONS: 8.8.3.2, 13.1.1, 13.1.2
-SCORE: 48/48 PASS
-```
-
-```text
-H1 W/"1" vs W/"1" / strong -> NONCORRESPONDENCE / RESOLVED
-H2 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
-H3 W/"1" vs "1" / strong -> NONCORRESPONDENCE / RESOLVED
-H4 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
-H5 "1" vs "1" / strong -> DIRECT_CORRESPONDENCE / RESOLVED
-H6 W/"1" vs W/"2" / weak -> NONCORRESPONDENCE / RESOLVED
-H7 If-Match context -> strong -> NONCORRESPONDENCE / RESOLVED
-H8 If-None-Match context -> weak -> DIRECT_CORRESPONDENCE / RESOLVED
-ALL CONFORMANCE: CONFORMANT
-METHOD GAIN: NOT_ASSESSED
-```
-
-Preserved HTTP criterion discipline:
-
-```text
-STRONG_MATCH != WEAK_MATCH_IN_GENERAL
-WEAK_MATCH != REPRESENTATION_IDENTITY
-OPAQUE_TAG_EQUALITY_ALONE != STRONG_MATCH_WHEN_WEAK_MARKER_PRESENT
-SAME_PAIR + DIFFERENT_HTTP_CRITERION -> possibly different verdict
-RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
-```
-
-## CMP-APP-003 — JCGM VIM metrological compatibility
-
-```text
-PRECOMMIT: 446aae3
-PRECOMMIT_BLOB: 7aa6aa1
-RESULT: 6dad36f
-SOURCE: JCGM 200:2012 VIM3, entry 2.47
-DOI: 10.59161/JCGM200-2012
-SCORE: 52/52 PASS
-```
-
-Frozen criterion and outputs:
-
-```text
-M1 compatible / k=2 -> DIRECT_CORRESPONDENCE / RESOLVED
-M2 same pair / k=1 -> NONCORRESPONDENCE / RESOLVED
-M3 exact threshold equality -> NONCORRESPONDENCE / RESOLVED
-M4 just inside threshold -> DIRECT_CORRESPONDENCE / RESOLVED
-M5 same value separation / small uncertainties -> NONCORRESPONDENCE / RESOLVED
-M6 same value separation / larger uncertainties -> DIRECT_CORRESPONDENCE / RESOLVED
-M7 zero value separation -> DIRECT_CORRESPONDENCE / RESOLVED
-M8 claim-relevant correlation unavailable -> UNDETERMINED_CORRESPONDENCE / UNDERDETERMINED
-ALL CONFORMANCE: CONFORMANT
-METHOD GAIN: NOT_ASSESSED
-```
-
-Preserved metrology criterion discipline:
-
-```text
-METROLOGICAL_COMPATIBILITY != STRICT_STRUCTURAL_EQUIVALENCE
-METROLOGICAL_NONCOMPATIBILITY != PROOF_OF_DIFFERENT_PHYSICAL_OBJECT
-CENTRAL_VALUE_DIFFERENCE_ALONE != COMPATIBILITY_VERDICT
-SAME_PAIR + DIFFERENT_CHOSEN_MULTIPLE -> possibly different verdict
-THRESHOLD_EQUALITY != STRICT_SMALLER_THAN
-UNKNOWN_CORRELATION != ASSUME_UNCORRELATED
-UNDERDETERMINED != FAILURE
-```
-
-This application does not claim calibration correctness, instrument conformance, traceability-chain validity, true-value identity, causal diagnosis, or practical acceptance for a specific industry.
 
 ## Protocol-v0.1 core guards
 
@@ -212,9 +178,9 @@ BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
 EXTERNAL_PASS != METHOD_GAIN_PROOF
 RETRACE_PASS != INDEPENDENT_REPLICATION
 PROTOCOL_ESTABLISHED != METHOD_VALIDATED
-THREE_EXTERNAL_DOMAINS != AUTOMATIC_MATURITY_PROMOTION
+MATURITY_ESTABLISHED != INDEPENDENT_VALIDATION
 ```
 
 ## Immediate next task
 
-Run a separately precommitted first Comparison maturity audit. The audit must evaluate current evidence rather than generate new direct validation and must preserve independent validation, practical superiority, registry survival, merger, and absorption as separate unresolved questions unless independently supported.
+Prepare `CMP-IEP-001` independent-evaluator infrastructure. The evaluator-facing packet and hidden/reference material must remain separated, and infrastructure preparation must not be counted as independent validation before a genuinely separate frozen submission exists.
