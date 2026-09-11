@@ -1,6 +1,6 @@
 # DSD Comparison Direct Evidence / DSD 비교론 직접 증거
 
-Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / first external application PASS / deterministic same-project retrace PASS / validation in progress**
+Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / two external domains PASS / deterministic same-project retrace PASS / validation in progress**
 
 This lane records evidence that directly tests **DSD Comparison / DSD 비교론**.
 
@@ -20,9 +20,9 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_le
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_COMPARISON_APPLICATIONS: 1
-EXTERNAL_COMPARISON_DOMAINS: 1
-EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
+EXTERNAL_COMPARISON_APPLICATIONS: 2
+EXTERNAL_COMPARISON_DOMAINS: 2
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 2
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -110,6 +110,46 @@ INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 ```
 
+## CMP-APP-002 — RFC 9110 HTTP ETag comparison semantics
+
+```text
+PRECOMMIT: f77ddb2
+PRECOMMIT_BLOB: 7478867
+RESULT: fbba59a
+SOURCE: RFC 9110 — HTTP Semantics
+SECTIONS: 8.8.3.2, 13.1.1, 13.1.2
+SCORE: 48/48 PASS
+```
+
+Frozen criterion structure and outputs:
+
+```text
+H1 W/"1" vs W/"1" / strong -> NONCORRESPONDENCE / RESOLVED
+H2 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
+H3 W/"1" vs "1" / strong -> NONCORRESPONDENCE / RESOLVED
+H4 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
+H5 "1" vs "1" / strong -> DIRECT_CORRESPONDENCE / RESOLVED
+H6 W/"1" vs W/"2" / weak -> NONCORRESPONDENCE / RESOLVED
+H7 If-Match context -> strong -> NONCORRESPONDENCE / RESOLVED
+H8 If-None-Match context -> weak -> DIRECT_CORRESPONDENCE / RESOLVED
+```
+
+All eight runs were `CONFORMANT`; `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED` because no separately justified independent baseline was included.
+
+Preserved HTTP criterion discipline:
+
+```text
+STRONG_MATCH != WEAK_MATCH_IN_GENERAL
+WEAK_MATCH != REPRESENTATION_IDENTITY
+OPAQUE_TAG_EQUALITY_ALONE != STRONG_MATCH_WHEN_WEAK_MARKER_PRESENT
+SAME_PAIR + DIFFERENT_HTTP_CRITERION -> possibly different verdict
+IF_MATCH_CONTEXT -> STRONG_COMPARISON
+IF_NONE_MATCH_CONTEXT -> WEAK_COMPARISON
+RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
+```
+
+This application does not claim request status, cache freshness outside the selected comparison rule, ETag generation correctness, resource identity, representation-byte identity, range validity, or application-level semantic equality.
+
 ## Protocol-v0.1 core guards
 
 ```text
@@ -126,6 +166,7 @@ DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
 MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
 RETRACE_PASS != INDEPENDENT_REPLICATION
+HTTP_MATCH != REPRESENTATION_IDENTITY
 ```
 
 ## Evidence IDs
@@ -152,4 +193,4 @@ PROTOCOL_ESTABLISHED != METHOD_VALIDATED
 
 ## Immediate next task
 
-Add a materially different external Comparison application. Avoid merely repeating Unicode/string-normalization semantics; use a distinct external comparison structure before maturity audit.
+Add a third materially different external Comparison domain before maturity audit. Prefer a non-textual and non-HTTP-tag criterion structure so external breadth reaches three distinct domains without merely repeating the same comparison pattern.
