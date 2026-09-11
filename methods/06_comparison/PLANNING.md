@@ -1,6 +1,6 @@
 # DSD Comparison Planning / DSD 비교론 기획
 
-Status: **Protocol v0.1 established / Step 12 second external domain complete / validation in progress**  
+Status: **Protocol v0.1 established / Step 13 third external domain complete / maturity-audit ready**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -35,9 +35,9 @@ a1700d960e0b41dfe32bf85b6334448d9104100d
 10. ✅ `CMP-APP-001` first external application — Unicode normalization, **42/42 PASS**.
 11. ✅ `CMP-CH-006` deterministic same-project retrace of CMP-APP-001 — **48/48 PASS**.
 12. ✅ `CMP-APP-002` second external domain — RFC 9110 HTTP ETag comparison semantics, **48/48 PASS**.
-13. **Next:** third materially different external Comparison domain.
-14. Maturity audit after external breadth reaches three materially different domains if no protocol-pressure defect appears.
-15. Independent-evaluator infrastructure only after maturity audit supports it.
+13. ✅ `CMP-APP-003` third external domain — JCGM VIM metrological compatibility, **52/52 PASS**.
+14. **Next:** first separately precommitted Comparison maturity audit.
+15. Independent-evaluator infrastructure only if maturity audit supports it.
 
 ## Constructed evidence summary
 
@@ -193,6 +193,67 @@ RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
 
 This is materially different from Unicode normalization because the standard supplies two direct validator comparison functions and context-dependent criterion selection without a normalization transform or representation bridge.
 
+## Step 13 / CMP-APP-003 external application
+
+Source lock:
+
+```text
+JCGM 200:2012
+International Vocabulary of Metrology (VIM), 3rd edition
+Entry 2.47 — metrological compatibility of measurement results
+DOI: 10.59161/JCGM200-2012
+```
+
+Evidence:
+
+```text
+PRECOMMIT: 446aae3861c485c62828bba5432bae73aa7a9a45
+PRECOMMIT BLOB: 7aa6aa1b3aa2e75a233e2f39c2ca681448ddd2ae
+RESULT: 6dad36fd3583c33159643ba888f3a802ac1b1ff3
+SCORE: 52/52 PASS
+```
+
+Frozen criterion structure:
+
+```text
+compatibility when:
+  |x1 - x2| < k * u_delta
+
+for completely uncorrelated measurements:
+  u_delta = sqrt(u1^2 + u2^2)
+
+correlation affects u_delta and may prevent closure when unavailable.
+```
+
+Execution:
+
+```text
+M1 compatible / k=2 -> DIRECT_CORRESPONDENCE / RESOLVED
+M2 same pair / k=1 -> NONCORRESPONDENCE / RESOLVED
+M3 exact threshold equality -> NONCORRESPONDENCE / RESOLVED
+M4 just inside threshold -> DIRECT_CORRESPONDENCE / RESOLVED
+M5 same central-value separation / small uncertainties -> NONCORRESPONDENCE / RESOLVED
+M6 same central-value separation / larger uncertainties -> DIRECT_CORRESPONDENCE / RESOLVED
+M7 zero central-value separation -> DIRECT_CORRESPONDENCE / RESOLVED
+M8 correlation information unavailable -> UNDETERMINED_CORRESPONDENCE / UNDERDETERMINED
+ALL CONFORMANCE: CONFORMANT
+METHOD GAIN: NOT_ASSESSED
+```
+
+Preserved distinctions:
+
+```text
+METROLOGICAL_COMPATIBILITY != STRICT_STRUCTURAL_EQUIVALENCE
+METROLOGICAL_NONCOMPATIBILITY != PROOF_OF_DIFFERENT_PHYSICAL_OBJECT
+CENTRAL_VALUE_DIFFERENCE_ALONE != COMPATIBILITY_VERDICT
+SAME_PAIR + DIFFERENT_CHOSEN_MULTIPLE -> possibly different verdict
+THRESHOLD_EQUALITY != STRICT_SMALLER_THAN
+UNKNOWN_CORRELATION != ASSUME_UNCORRELATED
+UNDERDETERMINED != FAILURE
+```
+
+This third external domain is materially different from both Unicode and HTTP: its comparison outcome depends on measured values, standard uncertainties, a frozen multiplier, and correlation sufficiency rather than representation normalization or tag-comparison syntax.
+
 ## Current evidence state / 현재 증거 상태
 
 ```text
@@ -209,13 +270,15 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_le
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_COMPARISON_APPLICATIONS: 2
-EXTERNAL_COMPARISON_DOMAINS: 2
-EXTERNAL_COMPARISON_APPLICATION_PASSES: 2
+EXTERNAL_COMPARISON_APPLICATIONS: 3
+EXTERNAL_COMPARISON_DOMAINS: 3
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 3
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
 ## Recording rule / 기록 규칙
@@ -233,9 +296,10 @@ CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 - Similar dynamic trajectories do not establish lineage identity.
 - Method gain requires a frozen competent baseline.
 - `NO_GAIN` is legitimate and is not evidence of method absorption or redundancy by itself.
-- External standard terminology such as HTTP "equivalent" is not automatically relabelled `STRICT_EQUIVALENT`; the frozen DSD output level controls the claim.
+- External standard terminology is not automatically relabelled `STRICT_EQUIVALENT`; the frozen DSD output level controls the claim.
+- Missing claim-relevant correlation information is preserved as underdetermination rather than filled by an assumption.
 - Case success/failure or retrace success does not decide method survival, merger, absorption, or deletion.
 
 ## Next / 다음
 
-Add a third external Comparison application from a materially different domain, preferably physical measurement tolerance, geometric/engineering standard compatibility, or another non-textual criterion system. If three-domain external breadth is obtained without new protocol pressure, proceed to the first Comparison maturity audit.
+Run a separately precommitted Comparison maturity audit. The audit should test protocol stability, positive/negative/boundary/NO_GAIN coverage, strongest-reasonable-baseline status, reproducibility classification, three-domain external breadth, source fidelity, method-boundary preservation, and unresolved independent-validation limits. The audit itself must not increase direct evidence counts.
