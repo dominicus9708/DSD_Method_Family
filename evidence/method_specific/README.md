@@ -10,6 +10,7 @@ This folder records evidence that directly tests one of the **22 independent DSD
 - Failed challenge designs remain historical evidence of test pressure but do not fill successful validation categories.
 - A success or failure in one case does not by itself imply that a method must survive, merge, be absorbed, or be deleted. Method independence is assessed separately.
 - `NO_GAIN` or baseline matching does not by itself prove redundancy or absorption.
+- Same-project retrace does not establish independent replication.
 - Established method/protocol evidence maturity does not permanently freeze the method registry.
 
 ## Method-specific evidence lanes / 개별 증거 경로
@@ -52,7 +53,7 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 
 Executable `PROTOCOL_v0.1.md` was established at commit `a1700d960e0b41dfe32bf85b6334448d9104100d` after 16 pre-protocol boundary attacks.
 
-Current Comparison state after `CMP-APP-001`:
+Current Comparison state after `CMP-CH-006`:
 
 ```text
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
@@ -64,10 +65,13 @@ BOUNDARY_COMPARISON_CASES: 1
 NO_GAIN_COMPARISON_CASES: 2
 BASELINE_COMPARISON_CASES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_COMPARISON_APPLICATIONS: 1
 EXTERNAL_COMPARISON_DOMAINS: 1
 EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
+INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
@@ -98,6 +102,15 @@ CMP-APP-001
   ALL TERMINAL: COMPARISON_RESOLVED
   ALL CONFORMANCE: CONFORMANT
   METHOD GAIN: NOT_ASSESSED
+
+CMP-CH-006
+  RETRACE TARGET: CMP-APP-001
+  PRECOMMIT: ffd374f
+  RESULT: 35d0a8d
+  SCORE: 48/48 PASS
+  REPRODUCIBILITY_LEVEL: deterministic_same_project
+  all six candidate criteria/relation classes/terminals/conformance reproduced
+  INDEPENDENT_REPLICATION: not established
 ```
 
 Current Comparison guards include:
@@ -117,9 +130,10 @@ MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
 NO_GAIN != METHOD_ABSORPTION_PROOF
 BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
+RETRACE_PASS != INDEPENDENT_REPLICATION
 ```
 
-The next Comparison event is a deterministic same-project retrace of `CMP-APP-001`.
+The next Comparison event is an additional materially different external application before maturity audit.
 
 ## Promotion expectation / 성숙도 승격 기준
 
