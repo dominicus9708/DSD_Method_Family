@@ -66,7 +66,7 @@ METHOD GAIN: NOT_ASSESSED
 Evidence effect:
 
 ```text
-DIRECT_COMPARISON_PILOTS: 5  # unchanged
+DIRECT_COMPARISON_PILOTS: 5
 EXTERNAL_COMPARISON_APPLICATIONS: 1
 EXTERNAL_COMPARISON_DOMAINS: 1
 EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
@@ -122,72 +122,25 @@ U5 ENCODED_CORRESPONDENCE / canonical via NFC / RESOLVED / CONFORMANT
 U6 ENCODED_CORRESPONDENCE / canonical via NFC / RESOLVED / CONFORMANT
 ```
 
-Criterion provenance, raw-vs-normalized distinction, scope exclusions, and `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED` were reproduced. No first-branch, lineage, aggregate, or independent-baseline claim was added.
-
-Precommitted score:
-
-```text
-A immutable chain / source identity        8/8
-B candidate reconstruction               18/18
-C criterion / provenance reconstruction  10/10
-D ledger / scope equality                 7/7
-E reproducibility classification          5/5
-TOTAL                                    48/48 PASS
-```
-
-Evidence effect:
+Criterion provenance, raw-vs-normalized distinction, scope exclusions, and `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED` were reproduced.
 
 ```text
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-DIRECT_COMPARISON_PILOTS: 5  # unchanged
-EXTERNAL_COMPARISON_APPLICATIONS: 1  # unchanged
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
-COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
-CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
-PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
-```
-
-Interpretation discipline:
-
-```text
-RETRACE_PASS != INDEPENDENT_REPLICATION
-RETRACE_PASS != INDEPENDENT_VALIDATION
-RETRACE_PASS != METHOD_SURVIVAL_PROOF
-RETRACE_FAIL != METHOD_DELETION_PROOF
-REPRODUCIBILITY != METHOD_GAIN
 ```
 
 ## 2026-09-11 — Step 12 CMP-APP-002 HTTP ETag comparison semantics
 
 Status: **48/48 PASS**
 
-Precommit:
-
 ```text
-evidence/method_specific/comparison/CMP-APP-002_precommit.md
-commit f77ddb2a384b15d6a1fe041c4be5c177c52b3623
-blob 7478867a0013cb94ae9a7e581a77548263cbe966
-```
-
-Result:
-
-```text
-evidence/method_specific/comparison/CMP-APP-002_http-etag-comparison.md
-commit fbba59a974482ff7469d7cec5b4ce63a85c2ae61
-```
-
-External source:
-
-```text
-RFC 9110 — HTTP Semantics
-June 2022
-§8.8.3.2 strong/weak entity-tag comparison
-§13.1.1 If-Match -> strong comparison
-§13.1.2 If-None-Match -> weak comparison
+PRECOMMIT: f77ddb2a384b15d6a1fe041c4be5c177c52b3623
+PRECOMMIT BLOB: 7478867a0013cb94ae9a7e581a77548263cbe966
+RESULT: fbba59a974482ff7469d7cec5b4ce63a85c2ae61
+SOURCE: RFC 9110 — HTTP Semantics
 ```
 
 Execution:
@@ -215,61 +168,27 @@ SAME_PAIR + DIFFERENT_HTTP_CRITERION -> possibly different verdict
 RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
 ```
 
-Precommitted score:
-
-```text
-A source / immutable precommit integrity       8/8
-B candidate relation verdicts                 16/16
-C criterion and context provenance            10/10
-D scope / closure discipline                   8/8
-E evidence-count / interpretation discipline   6/6
-TOTAL                                          48/48 PASS
-```
-
 Evidence effect:
 
 ```text
-DIRECT_COMPARISON_PILOTS: 5  # unchanged
-REPRODUCIBILITY_CASES: 1     # unchanged
+DIRECT_COMPARISON_PILOTS: 5
+REPRODUCIBILITY_CASES: 1
 EXTERNAL_COMPARISON_APPLICATIONS: 2
 EXTERNAL_COMPARISON_DOMAINS: 2
 EXTERNAL_COMPARISON_APPLICATION_PASSES: 2
-INDEPENDENT_REPLICATION: not established
-INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
-PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
 ```
-
-This application is materially different from the Unicode case because no normalization transform or representation bridge is performed. The source itself supplies criterion-dependent validator comparison semantics.
 
 ## 2026-09-11 — Step 13 CMP-APP-003 VIM metrological compatibility
 
 Status: **52/52 PASS**
 
-Precommit:
-
 ```text
-evidence/method_specific/comparison/CMP-APP-003_precommit.md
-commit 446aae3861c485c62828bba5432bae73aa7a9a45
-blob 7aa6aa1b3aa2e75a233e2f39c2ca681448ddd2ae
-```
-
-Result:
-
-```text
-evidence/method_specific/comparison/CMP-APP-003_vim-metrological-compatibility.md
-commit 6dad36fd3583c33159643ba888f3a802ac1b1ff3
-```
-
-External source:
-
-```text
-JCGM 200:2012
-International Vocabulary of Metrology (VIM), 3rd edition
-Entry 2.47 — metrological compatibility of measurement results
-DOI 10.59161/JCGM200-2012
+PRECOMMIT: 446aae3861c485c62828bba5432bae73aa7a9a45
+PRECOMMIT BLOB: 7aa6aa1b3aa2e75a233e2f39c2ca681448ddd2ae
+RESULT: 6dad36fd3583c33159643ba888f3a802ac1b1ff3
+SOURCE: JCGM 200:2012 VIM3 entry 2.47
 ```
 
 Execution:
@@ -299,23 +218,12 @@ UNKNOWN_CORRELATION != ASSUME_UNCORRELATED
 UNDERDETERMINED != FAILURE
 ```
 
-Precommitted score:
-
-```text
-A source / immutable precommit integrity       8/8
-B candidate relation + terminal verdicts      16/16
-C numerical / criterion discipline            12/12
-D scope / closure discipline                  10/10
-E evidence-count / interpretation discipline   6/6
-TOTAL                                          52/52 PASS
-```
-
 Evidence effect:
 
 ```text
-DIRECT_COMPARISON_PILOTS: 5  # unchanged
-REPRODUCIBILITY_CASES: 1     # unchanged
-DEDICATED_RETRACE_PASSES: 1  # unchanged
+DIRECT_COMPARISON_PILOTS: 5
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
 EXTERNAL_COMPARISON_APPLICATIONS: 3
 EXTERNAL_COMPARISON_DOMAINS: 3
 EXTERNAL_COMPARISON_APPLICATION_PASSES: 3
@@ -327,8 +235,76 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-This application is materially different from both earlier external cases because the relation depends on quantitative uncertainty and correlation sufficiency. The correctly underdetermined M8 case is not counted as a run failure.
+## 2026-09-11 — Step 14 CMP-AUD-001 first maturity audit
+
+Precommit:
+
+```text
+evidence/method_specific/comparison/CMP-AUD-001_precommit.md
+commit 69315746b3ed5367aa56e087b96b8ea878a59376
+blob 1a1df45d6c8bb54e2e7ed9c63d7aaf03f139eab3
+```
+
+Result:
+
+```text
+evidence/method_specific/comparison/CMP-AUD-001_maturity-review.md
+commit afe4cc7d8a4efe2f7485768e0d9dc363010e34e2
+```
+
+Frozen maturity-axis result:
+
+```text
+M1  PASS
+M2  PASS
+M3  PASS
+M4  PASS
+M5  CONDITIONAL_PASS
+M6  PASS
+M7  PASS
+M8  PASS
+M9  PASS
+M10 UNRESOLVED_BUT_BOUNDED
+M11 PASS
+M12 PASS
+M13 PASS
+M14 PASS
+M15 PASS
+```
+
+Promotion decision:
+
+```text
+FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+COMPARISON_METHOD_MATURITY_CLASSIFICATION: established
+PROMOTION_TO_ESTABLISHED: SUPPORTED
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+Precommitted audit discipline:
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 28
+PASSED: 28
+FAILED: 0
+AUDIT_EXECUTION_VERDICT: PASS
+```
+
+The audit itself adds no direct Comparison pilot, no external application, and no reproducibility case.
+
+The strongest supported maturity statement remains bounded away from:
+
+```text
+independent validation
+independent replication
+broad inter-rater agreement
+measured practical superiority
+universal external generality
+permanent method-registry survival or irreducibility
+```
 
 ### Next
 
-Run a separately precommitted first Comparison maturity audit. The audit itself must not add direct-pilot, external-application, or reproducibility counts.
+Prepare `CMP-IEP-001` independent-evaluator infrastructure because M5 and M10 are now the dominant unresolved axes. Packet preparation alone is infrastructure and must not be counted as independent validation.
