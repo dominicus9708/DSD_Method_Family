@@ -45,75 +45,22 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON:
 
 Status: **42/42 PASS**
 
-Precommit:
-
 ```text
-evidence/method_specific/comparison/CMP-APP-001_precommit.md
-commit e1a109b9e4515336b4ee22c4d8ff216d4fd21705
-blob 640f2b5e7cf9b990a07a2e3db542b114d655122f
+PRECOMMIT: e1a109b9e4515336b4ee22c4d8ff216d4fd21705
+PRECOMMIT BLOB: 640f2b5e7cf9b990a07a2e3db542b114d655122f
+RESULT: b64cd882047b45c4caaaf27cbc414c0b9b44e2e6
+SOURCE: Unicode Standard Annex #15, Unicode 17.0.0 Revision 57
 ```
 
-Result:
-
 ```text
-evidence/method_specific/comparison/CMP-APP-001_unicode-normalization-comparison.md
-commit b64cd882047b45c4caaaf27cbc414c0b9b44e2e6
-```
-
-External source:
-
-```text
-Unicode Standard Annex #15: Unicode Normalization Forms
-Unicode 17.0.0
-Revision 57
-2025-07-30
-```
-
-Frozen criteria:
-
-```text
-BINARY_IDENTITY
-CANONICAL_EQUIVALENCE_VIA_NFC
-COMPATIBILITY_EQUIVALENCE_VIA_NFKC
-```
-
-Execution:
-
-```text
-U1 Ç vs C+cedilla / NFC canonical
-  -> ENCODED_CORRESPONDENCE / RESOLVED
-U2 same pair / binary identity
-  -> NONCORRESPONDENCE / RESOLVED
-U3 ① vs 1 / NFC canonical
-  -> NONCORRESPONDENCE / RESOLVED
-U4 same pair / NFKC compatibility
-  -> ENCODED_CORRESPONDENCE / RESOLVED
-U5 가 vs ᄀ+ᅡ / NFC canonical
-  -> ENCODED_CORRESPONDENCE / RESOLVED
-U6 combining-mark ordering / NFC canonical
-  -> ENCODED_CORRESPONDENCE / RESOLVED
-```
-
-All six DSD runs were `CONFORMANT`; method gain remained `NOT_ASSESSED` because no fair independent baseline was supplied.
-
-Key preservation:
-
-```text
-RAW_BINARY_INEQUALITY != CANONICAL_NONCORRESPONDENCE
-CANONICAL_EQUIVALENCE != COMPATIBILITY_EQUIVALENCE
-SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
-NORMALIZATION_BRIDGE_DEPENDENCE != DIRECT_LITERAL_IDENTITY
-```
-
-Precommitted score:
-
-```text
-A source/precommit integrity          8/8
-B candidate verdicts/terminals      12/12
-C criterion/provenance discipline   10/10
-D closure/protocol ledgers           6/6
-E external-scope discipline          6/6
-TOTAL                               42/42 PASS
+U1 Ç vs C+cedilla / NFC canonical -> ENCODED / RESOLVED
+U2 same pair / binary identity -> NONCORRESPONDENCE / RESOLVED
+U3 ① vs 1 / NFC canonical -> NONCORRESPONDENCE / RESOLVED
+U4 same pair / NFKC compatibility -> ENCODED / RESOLVED
+U5 가 vs ᄀ+ᅡ / NFC canonical -> ENCODED / RESOLVED
+U6 combining-mark ordering / NFC canonical -> ENCODED / RESOLVED
+ALL CONFORMANCE: CONFORMANT
+METHOD GAIN: NOT_ASSESSED
 ```
 
 Evidence effect:
@@ -126,8 +73,6 @@ EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
 REPRODUCIBILITY_CASES: 0
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
-PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
 Interpretation discipline remains:
@@ -138,6 +83,84 @@ EXTERNAL_PASS != METHOD_GAIN_PROOF
 CASE_FAIL != METHOD_DELETION_PROOF
 ```
 
+## 2026-09-11 — Step 11 CMP-CH-006 deterministic same-project retrace
+
+Status: **48/48 PASS**
+
+Precommit:
+
+```text
+evidence/method_specific/comparison/CMP-CH-006_retrace-precommit.md
+commit ffd374fb0b8bfd284b9cbd343d3dcf07ba9cfbe1
+blob 80b6d0df29da3eea2a8ca78184ba9787acb4899c
+```
+
+Result:
+
+```text
+evidence/method_specific/comparison/CMP-CH-006_deterministic-retrace.md
+commit 35d0a8d7a22c19593bae8f45843668f46d775a0a
+```
+
+Immutable target chain:
+
+```text
+PROTOCOL: a1700d960e0b41dfe32bf85b6334448d9104100d
+CMP-APP-001 PRECOMMIT: e1a109b9e4515336b4ee22c4d8ff216d4fd21705
+CMP-APP-001 PRECOMMIT BLOB: 640f2b5e7cf9b990a07a2e3db542b114d655122f
+CMP-APP-001 RESULT: b64cd882047b45c4caaaf27cbc414c0b9b44e2e6
+```
+
+Reconstructed exactly:
+
+```text
+U1 ENCODED_CORRESPONDENCE / canonical via NFC / RESOLVED / CONFORMANT
+U2 NONCORRESPONDENCE / binary identity / RESOLVED / CONFORMANT
+U3 NONCORRESPONDENCE / canonical via NFC / RESOLVED / CONFORMANT
+U4 ENCODED_CORRESPONDENCE / compatibility via NFKC / RESOLVED / CONFORMANT
+U5 ENCODED_CORRESPONDENCE / canonical via NFC / RESOLVED / CONFORMANT
+U6 ENCODED_CORRESPONDENCE / canonical via NFC / RESOLVED / CONFORMANT
+```
+
+Criterion provenance, raw-vs-normalized distinction, scope exclusions, and `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED` were reproduced. No first-branch, lineage, aggregate, or independent-baseline claim was added.
+
+Precommitted score:
+
+```text
+A immutable chain / source identity        8/8
+B candidate reconstruction               18/18
+C criterion / provenance reconstruction  10/10
+D ledger / scope equality                 7/7
+E reproducibility classification          5/5
+TOTAL                                    48/48 PASS
+```
+
+Evidence effect:
+
+```text
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
+DIRECT_COMPARISON_PILOTS: 5  # unchanged
+EXTERNAL_COMPARISON_APPLICATIONS: 1  # unchanged
+INDEPENDENT_REPLICATION: not established
+INDEPENDENT_COMPARISON_VALIDATION: not established
+COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
+CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+Interpretation discipline:
+
+```text
+RETRACE_PASS != INDEPENDENT_REPLICATION
+RETRACE_PASS != INDEPENDENT_VALIDATION
+RETRACE_PASS != METHOD_SURVIVAL_PROOF
+RETRACE_FAIL != METHOD_DELETION_PROOF
+REPRODUCIBILITY != METHOD_GAIN
+```
+
 ### Next
 
-Run a separately precommitted deterministic same-project retrace of `CMP-APP-001` using the frozen protocol, source lock, precommit, and result record.
+Add materially different external Comparison domains before maturity audit.
