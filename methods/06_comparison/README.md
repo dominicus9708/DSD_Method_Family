@@ -1,6 +1,6 @@
 # 06. DSD Comparison / DSD 비교론
 
-Status: **Protocol v0.1 established / CMP-CH-001 through CMP-CH-005 complete / strongest-reasonable baseline established at constructed-evidence level / validation in progress**
+Status: **Protocol v0.1 established / CMP-CH-001 through CMP-CH-005 complete / strongest-reasonable baseline established at constructed-evidence level / first external application PASS / validation in progress**
 
 Task: compare two or more supplied structures without reducing comparison to final-output equality, and determine justified correspondence, preserved structure, divergence, strict-equivalence status, and earliest supported branching only within declared comparison/map/element coverage.
 
@@ -51,6 +51,7 @@ COMPARISON_RELATION != TAXONOMY_ASSIGNMENT
 TRACE_DIFFERENCE != AUDIT_CONFORMANCE_VERDICT
 STRUCTURAL_EQUIVALENCE != LINEAGE_IDENTITY
 NO_GAIN != METHOD_ABSORPTION_PROOF
+SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
 ```
 
 ## Output / relation / terminal structure
@@ -94,92 +95,46 @@ LINEAGE_EVIDENCE_SOURCE_OR_HANDOFF
 
 ## Direct Protocol-v0.1 evidence
 
-### CMP-CH-001 — positive relation-separation challenge
+```text
+CMP-CH-001  40/40 PASS  positive relation separation
+CMP-CH-002  48/48 PASS  negative/failure terminal distinction
+CMP-CH-003  48/48 PASS  direct method-boundary
+CMP-CH-004  50/50 PASS / NO_GAIN  competent baseline
+CMP-CH-005  60/60 PASS / NO_GAIN  strongest-reasonable baseline
+```
+
+`CMP-CH-005` established `STRONGEST_REASONABLE_BASELINE_COMPARISON = established_at_constructed_evidence_level`; the strong baseline matched DSD on first-branch closure, direction/inverse discipline, element coverage, bridge provenance, dynamic-vs-lineage separation, and retraceability.
+
+## External application evidence
+
+### CMP-APP-001 — Unicode normalization comparison
 
 ```text
-PRECOMMIT: 16c4b15
-RESULT: c601bd2
-T1 -> STRICT_EQUIVALENT
-T2 -> DIRECT_CORRESPONDENCE, strict equivalence no
-T3 -> ENCODED_CORRESPONDENCE
-T4 -> aggregate equal + structural NONCORRESPONDENCE under frozen strict family
-ALL TERMINAL: COMPARISON_RESOLVED
+SOURCE: Unicode Standard Annex #15
+VERSION: Unicode 17.0.0
+REVISION: 57
+PRECOMMIT: e1a109b
+RESULT: b64cd88
+SCORE: 42/42 PASS
+
+U1 Ç vs C+cedilla / NFC canonical
+  -> ENCODED_CORRESPONDENCE / RESOLVED
+U2 same pair / binary identity
+  -> NONCORRESPONDENCE / RESOLVED
+U3 ① vs 1 / NFC canonical
+  -> NONCORRESPONDENCE / RESOLVED
+U4 same pair / NFKC compatibility
+  -> ENCODED_CORRESPONDENCE / RESOLVED
+U5 가 vs ᄀ+ᅡ / NFC canonical
+  -> ENCODED_CORRESPONDENCE / RESOLVED
+U6 combining-mark reorder / NFC canonical
+  -> ENCODED_CORRESPONDENCE / RESOLVED
+
 ALL CONFORMANCE: CONFORMANT
-ALL GAIN: NOT_ASSESSED
-SCORE: 40/40 PASS
+METHOD GAIN: NOT_ASSESSED
 ```
 
-### CMP-CH-002 — negative/failure terminal-state challenge
-
-```text
-PRECOMMIT: c852a68
-RESULT: ca2e91f
-N1 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
-N2 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
-N3 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
-N4 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
-N5 -> NONCORRESPONDENCE / COMPARISON_RESOLVED
-ALL CONFORMANCE: CONFORMANT
-ALL GAIN: NOT_ASSESSED
-SCORE: 48/48 PASS
-PROTOCOL_REVISION_REQUIRED: no
-```
-
-### CMP-CH-003 — direct method-boundary challenge
-
-```text
-PRECOMMIT: 68d330b
-RESULT: b4256d2
-Analysis -> STRICT_EQUIVALENT / COMPARISON_RESOLVED + ANALYSIS_REQUIRED
-Classification -> STRICT_EQUIVALENT / COMPARISON_RESOLVED + CLASSIFICATION_REQUIRED
-Transformation -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED + TRANSFORMATION_REQUIRED
-Audit -> COMPARISON_PROFILE / COMPARISON_RESOLVED + AUDIT_REQUIRED
-Provenance/Lineage -> snapshot STRICT_EQUIVALENT / COMPARISON_RESOLVED; lineage not_established + PROVENANCE_LINEAGE_REQUIRED
-ALL CONFORMANCE: CONFORMANT
-ALL GAIN: NOT_ASSESSED
-SCORE: 48/48 PASS
-PROTOCOL_REVISION_REQUIRED: no
-```
-
-### CMP-CH-004 — competent-baseline NO_GAIN challenge
-
-```text
-PRECOMMIT: 0d96d6b
-RESULT: 4cacd55
-BASELINE: B0_TYPED_COMPARISON_LEDGER
-Q1 DSD = B0 -> STRICT_EQUIVALENT / COMPARISON_RESOLVED
-Q2 DSD = B0 -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
-Q3 DSD = B0 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_UNDERDETERMINED
-Q4 DSD = B0 -> NONCORRESPONDENCE / COMPARISON_RESOLVED
-Q5 DSD = B0 -> UNDETERMINED_CORRESPONDENCE / COMPARISON_BLOCKED
-G1-G6: NOT_ESTABLISHED
-COMPARISON_METHOD_GAIN_STATUS: NO_GAIN
-SCORE: 50/50 PASS
-```
-
-### CMP-CH-005 — strongest-reasonable-baseline comparison
-
-```text
-PRECOMMIT: ad54230
-RESULT: 61675b3
-BASELINE: B1_STRONG_TYPED_COMPARISON_ENGINE
-
-R1 -> PARTIAL_CORRESPONDENCE / FIRST_BRANCH S2 / RESOLVED
-R2 -> DIRECT_CORRESPONDENCE / strict equivalence no / RESOLVED
-R3 -> PARTIAL_CORRESPONDENCE / global equivalence unclosed / RESOLVED
-R4 -> ENCODED_CORRESPONDENCE / bridge provenance preserved / RESOLVED
-R5 -> sampled-trajectory STRICT_EQUIVALENT / DISTINCT_LINEAGES / RESOLVED
-
-DSD = B1 on all frozen claim-relevant dimensions
-G1-G7: NOT_ESTABLISHED
-COMPARISON_METHOD_GAIN_STATUS: NO_GAIN
-SCORE: 60/60 PASS
-STRONGEST_REASONABLE_BASELINE_COMPARISON:
-  established_at_constructed_evidence_level
-PROTOCOL_REVISION_REQUIRED: no
-```
-
-The stronger baseline simultaneously preserved first-branch closure, directional/inverse requirements, partial-versus-global coverage, bridge/representation provenance, and dynamic-trajectory-versus-lineage separation. Another honest `NO_GAIN` is therefore the correct result.
+The external case preserves criterion provenance: binary identity, canonical equivalence, and compatibility equivalence are not collapsed. A relation class is not treated as intrinsic to a pair independently of the frozen comparison criterion.
 
 ## Method boundaries
 
@@ -217,16 +172,18 @@ NO_GAIN_COMPARISON_CASES: 2
 BASELINE_COMPARISON_CASES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
-EXTERNAL_COMPARISON_APPLICATIONS: 0
+EXTERNAL_COMPARISON_APPLICATIONS: 1
+EXTERNAL_COMPARISON_DOMAINS: 1
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Protocol establishment itself remains infrastructure and is not counted as a direct pilot.
+External application count is separate from constructed direct-pilot count.
 
 ## Next development step
 
-Precommit the first external Comparison application `CMP-APP-001` using a stable public source that supplies the compared records and a defensible external comparison criterion. Keep external-source validity distinct from DSD protocol conformance, and do not assess method gain without a separately justified baseline.
+Run a deterministic same-project retrace of `CMP-APP-001` from the frozen protocol, precommit, external-source lock, and result. Reproduce all six criterion-specific correspondence classes, terminal states, and exclusions without reopening or rewriting the task.
 
 Case success/failure and comparative gain do not decide method survival, merger, absorption, or deletion.
