@@ -53,7 +53,7 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 
 Executable `PROTOCOL_v0.1.md` was established at commit `a1700d960e0b41dfe32bf85b6334448d9104100d` after 16 pre-protocol boundary attacks.
 
-Current Comparison state after `CMP-APP-002`:
+Current Comparison state after `CMP-APP-003`:
 
 ```text
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
@@ -68,13 +68,15 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_le
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_COMPARISON_APPLICATIONS: 2
-EXTERNAL_COMPARISON_DOMAINS: 2
-EXTERNAL_COMPARISON_APPLICATION_PASSES: 2
+EXTERNAL_COMPARISON_APPLICATIONS: 3
+EXTERNAL_COMPARISON_DOMAINS: 3
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 3
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
 Comparison evidence:
@@ -129,6 +131,24 @@ CMP-APP-002
   ALL TERMINAL: COMPARISON_RESOLVED
   ALL CONFORMANCE: CONFORMANT
   METHOD GAIN: NOT_ASSESSED
+
+CMP-APP-003
+  PRECOMMIT: 446aae3
+  PRECOMMIT BLOB: 7aa6aa1
+  RESULT: 6dad36f
+  SOURCE: JCGM 200:2012 VIM3 entry 2.47
+  DOI: 10.59161/JCGM200-2012
+  SCORE: 52/52 PASS
+  M1 compatible / k=2 -> DIRECT_CORRESPONDENCE / RESOLVED
+  M2 same pair / k=1 -> NONCORRESPONDENCE / RESOLVED
+  M3 exact threshold equality -> NONCORRESPONDENCE / RESOLVED
+  M4 just inside threshold -> DIRECT_CORRESPONDENCE / RESOLVED
+  M5 small uncertainties -> NONCORRESPONDENCE / RESOLVED
+  M6 larger uncertainties -> DIRECT_CORRESPONDENCE / RESOLVED
+  M7 zero separation -> DIRECT_CORRESPONDENCE / RESOLVED
+  M8 correlation unavailable -> UNDETERMINED_CORRESPONDENCE / UNDERDETERMINED
+  ALL CONFORMANCE: CONFORMANT
+  METHOD GAIN: NOT_ASSESSED
 ```
 
 Current Comparison guards include:
@@ -151,10 +171,14 @@ BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
 RETRACE_PASS != INDEPENDENT_REPLICATION
 HTTP_MATCH != REPRESENTATION_IDENTITY
 RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
+METROLOGICAL_COMPATIBILITY != STRICT_STRUCTURAL_EQUIVALENCE
+METROLOGICAL_NONCOMPATIBILITY != PROOF_OF_DIFFERENT_PHYSICAL_OBJECT
+UNKNOWN_CORRELATION != ASSUME_UNCORRELATED
+UNDERDETERMINED != FAILURE
 ```
 
-The next Comparison event is a third materially different external application before maturity audit.
+The next Comparison event is a separately precommitted first maturity audit. The audit does not itself increase direct-pilot, external-application, or reproducibility counts.
 
 ## Promotion expectation / 성숙도 승격 기준
 
-A proposed/developing method should accumulate, at minimum, a dedicated method protocol; positive, negative/failure, boundary and `NO_GAIN` cases; reproducibility records; external or independently generated applications; and a strongest-reasonable-baseline comparison when applicable. These are evidence categories, not automatic promotion rules. Same-project retrace does not substitute for independent review, and external-application count does not establish practical superiority or method survival.
+A proposed/developing method should accumulate, at minimum, a dedicated method protocol; positive, negative/failure, boundary and `NO_GAIN` cases; reproducibility records; external or independently generated applications; and a strongest-reasonable-baseline comparison when applicable. These are evidence categories, not automatic promotion rules. Same-project retrace does not substitute for independent review, external-application count does not establish practical superiority or method survival, and three external domains do not automatically imply maturity promotion.
