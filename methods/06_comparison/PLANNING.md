@@ -1,6 +1,6 @@
 # DSD Comparison Planning / DSD 비교론 기획
 
-Status: **Protocol v0.1 established / Step 10 first external application complete / validation in progress**  
+Status: **Protocol v0.1 established / Step 11 deterministic same-project retrace complete / validation in progress**  
 Date opened: **2026-09-10**
 
 ## Purpose / 목적
@@ -33,9 +33,9 @@ a1700d960e0b41dfe32bf85b6334448d9104100d
 8. ✅ `CMP-CH-004` competent-baseline `NO_GAIN` — **50/50 PASS / NO_GAIN**.
 9. ✅ `CMP-CH-005` strongest-reasonable-baseline — **60/60 PASS / NO_GAIN**.
 10. ✅ `CMP-APP-001` first external application — Unicode normalization, **42/42 PASS**.
-11. **Next:** deterministic same-project retrace/reproducibility record.
-12. Additional materially different external domains.
-13. Maturity audit after evidence architecture is materially populated.
+11. ✅ `CMP-CH-006` deterministic same-project retrace of CMP-APP-001 — **48/48 PASS**.
+12. **Next:** additional materially different external domains.
+13. Maturity audit after external breadth is materially populated.
 14. Independent-evaluator infrastructure only after protocol/evidence stability justifies it.
 
 ## Constructed evidence summary
@@ -82,19 +82,14 @@ Execution:
 ```text
 U1 Ç vs C+cedilla / NFC canonical
   -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
-
 U2 same pair / binary identity
   -> NONCORRESPONDENCE / COMPARISON_RESOLVED
-
 U3 ① vs 1 / NFC canonical
   -> NONCORRESPONDENCE / COMPARISON_RESOLVED
-
 U4 same pair / NFKC compatibility
   -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
-
 U5 가 vs ᄀ+ᅡ / NFC canonical
   -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
-
 U6 reordered combining marks / NFC canonical
   -> ENCODED_CORRESPONDENCE / COMPARISON_RESOLVED
 ```
@@ -110,6 +105,32 @@ NORMALIZATION_BRIDGE_DEPENDENCE != DIRECT_LITERAL_IDENTITY
 
 All six runs were `CONFORMANT`. No independent baseline was supplied, so `COMPARISON_METHOD_GAIN_STATUS = NOT_ASSESSED`.
 
+## Step 11 / CMP-CH-006 deterministic same-project retrace
+
+Immutable retrace chain:
+
+```text
+PROTOCOL: a1700d960e0b41dfe32bf85b6334448d9104100d
+TARGET PRECOMMIT: e1a109b9e4515336b4ee22c4d8ff216d4fd21705
+TARGET PRECOMMIT BLOB: 640f2b5e7cf9b990a07a2e3db542b114d655122f
+TARGET RESULT: b64cd882047b45c4caaaf27cbc414c0b9b44e2e6
+RETRACE PRECOMMIT: ffd374fb0b8bfd284b9cbd343d3dcf07ba9cfbe1
+RETRACE RESULT: 35d0a8d7a22c19593bae8f45843668f46d775a0a
+SCORE: 48/48 PASS
+```
+
+The retrace reproduced all six candidate identities, code-point pairs, criterion assignments, relation classes, terminal states, conformance records, criterion provenance, and frozen scope exclusions.
+
+```text
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
+INDEPENDENT_REPLICATION: not established
+INDEPENDENT_COMPARISON_VALIDATION: not established
+```
+
+The retrace did not increment constructed or external application counts and did not establish method gain or maturity.
+
 ## Current evidence state / 현재 증거 상태
 
 ```text
@@ -123,10 +144,13 @@ BOUNDARY_COMPARISON_CASES: 1
 NO_GAIN_COMPARISON_CASES: 2
 BASELINE_COMPARISON_CASES: 2
 STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+DEDICATED_RETRACE_PASSES: 1
+REPRODUCIBILITY_LEVEL: deterministic_same_project
 EXTERNAL_COMPARISON_APPLICATIONS: 1
 EXTERNAL_COMPARISON_DOMAINS: 1
 EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
+INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
@@ -136,6 +160,7 @@ CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 
 - Protocol establishment is infrastructure, not direct evidence.
 - Constructed direct pilots and external applications remain separate evidence counters.
+- Same-project retrace is reproducibility evidence but is not independent replication.
 - Shared-core or neighboring-method evidence does not automatically become Comparison validation.
 - Comparison criteria are frozen per task; the same pair may legitimately receive different verdicts under different criteria.
 - Aggregate equality does not become structural identity.
@@ -146,8 +171,8 @@ CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 - Similar dynamic trajectories do not establish lineage identity.
 - Method gain requires a frozen competent baseline.
 - `NO_GAIN` is legitimate and is not evidence of method absorption or redundancy by itself.
-- Case success/failure does not decide method survival, merger, absorption, or deletion.
+- Case success/failure or retrace success does not decide method survival, merger, absorption, or deletion.
 
 ## Next / 다음
 
-Precommit a deterministic same-project retrace of `CMP-APP-001`. Use only the frozen protocol, external-source lock, precommit, and result record. Reproduce all six relation classes, terminal states, criterion provenance, and scope exclusions without changing the task.
+Add at least one materially different external Comparison domain before the first maturity audit. Avoid another normalization/string-equivalence case; prefer an external domain with a distinct comparison criterion such as measurement tolerance, structural standard equivalence, or formal compatibility classes, while preserving source truth, Comparison conformance, and method gain as separate ledgers.
