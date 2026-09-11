@@ -53,7 +53,7 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 
 Executable `PROTOCOL_v0.1.md` was established at commit `a1700d960e0b41dfe32bf85b6334448d9104100d` after 16 pre-protocol boundary attacks.
 
-Current Comparison state after `CMP-APP-003`:
+Current Comparison state after `CMP-AUD-001`:
 
 ```text
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
@@ -73,7 +73,7 @@ EXTERNAL_COMPARISON_DOMAINS: 3
 EXTERNAL_COMPARISON_APPLICATION_PASSES: 3
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
-COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
+COMPARISON_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_COMPARISON_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
@@ -90,95 +90,68 @@ CMP-CH-005  60/60 PASS / NO_GAIN
   STRONGEST_REASONABLE_BASELINE_COMPARISON:
     established_at_constructed_evidence_level
 
-CMP-APP-001
-  PRECOMMIT: e1a109b
-  RESULT: b64cd88
-  SOURCE: Unicode Standard Annex #15, Unicode 17.0.0 Revision 57
-  SCORE: 42/42 PASS
-  U1 canonical Ç vs C+cedilla -> ENCODED
-  U2 same pair binary criterion -> NONCORRESPONDENCE
-  U3 ① vs 1 canonical criterion -> NONCORRESPONDENCE
-  U4 same pair compatibility criterion -> ENCODED
-  U5 Hangul syllable vs jamo -> ENCODED
-  U6 combining-mark reorder -> ENCODED
-  ALL TERMINAL: COMPARISON_RESOLVED
-  ALL CONFORMANCE: CONFORMANT
-  METHOD GAIN: NOT_ASSESSED
-
 CMP-CH-006
   RETRACE TARGET: CMP-APP-001
-  PRECOMMIT: ffd374f
-  RESULT: 35d0a8d
-  SCORE: 48/48 PASS
+  48/48 PASS
   REPRODUCIBILITY_LEVEL: deterministic_same_project
-  all six candidate criteria/relation classes/terminals/conformance reproduced
   INDEPENDENT_REPLICATION: not established
 
+CMP-APP-001
+  SOURCE: Unicode Standard Annex #15, Unicode 17.0.0 Revision 57
+  DOMAIN: text representation / normalization
+  42/42 PASS
+
 CMP-APP-002
-  PRECOMMIT: f77ddb2
-  PRECOMMIT BLOB: 7478867
-  RESULT: fbba59a
-  SOURCE: RFC 9110 — HTTP Semantics §§8.8.3.2, 13.1.1, 13.1.2
-  SCORE: 48/48 PASS
-  H1 W/"1" vs W/"1" strong -> NONCORRESPONDENCE
-  H2 same pair weak -> DIRECT_CORRESPONDENCE
-  H3 W/"1" vs "1" strong -> NONCORRESPONDENCE
-  H4 same pair weak -> DIRECT_CORRESPONDENCE
-  H5 "1" vs "1" strong -> DIRECT_CORRESPONDENCE
-  H6 W/"1" vs W/"2" weak -> NONCORRESPONDENCE
-  H7 If-Match -> strong -> NONCORRESPONDENCE
-  H8 If-None-Match -> weak -> DIRECT_CORRESPONDENCE
-  ALL TERMINAL: COMPARISON_RESOLVED
-  ALL CONFORMANCE: CONFORMANT
-  METHOD GAIN: NOT_ASSESSED
+  SOURCE: RFC 9110 HTTP Semantics
+  DOMAIN: protocol validator comparison
+  48/48 PASS
 
 CMP-APP-003
-  PRECOMMIT: 446aae3
-  PRECOMMIT BLOB: 7aa6aa1
-  RESULT: 6dad36f
   SOURCE: JCGM 200:2012 VIM3 entry 2.47
-  DOI: 10.59161/JCGM200-2012
-  SCORE: 52/52 PASS
-  M1 compatible / k=2 -> DIRECT_CORRESPONDENCE / RESOLVED
-  M2 same pair / k=1 -> NONCORRESPONDENCE / RESOLVED
-  M3 exact threshold equality -> NONCORRESPONDENCE / RESOLVED
-  M4 just inside threshold -> DIRECT_CORRESPONDENCE / RESOLVED
-  M5 small uncertainties -> NONCORRESPONDENCE / RESOLVED
-  M6 larger uncertainties -> DIRECT_CORRESPONDENCE / RESOLVED
-  M7 zero separation -> DIRECT_CORRESPONDENCE / RESOLVED
-  M8 correlation unavailable -> UNDETERMINED_CORRESPONDENCE / UNDERDETERMINED
-  ALL CONFORMANCE: CONFORMANT
-  METHOD GAIN: NOT_ASSESSED
+  DOMAIN: physical metrology / measurement-result compatibility
+  52/52 PASS
+
+CMP-AUD-001
+  PRECOMMIT: 69315746b3ed5367aa56e087b96b8ea878a59376
+  RESULT: afe4cc7d8a4efe2f7485768e0d9dc363010e34e2
+  AUDIT EXECUTION: 28/28 PASS
+  FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+  COMPARISON_METHOD_MATURITY_CLASSIFICATION: established
 ```
 
-Current Comparison guards include:
+The three Comparison external domains are materially distinct at the current evidence level: Unicode normalization, HTTP strong/weak validator comparison, and uncertainty/correlation-dependent VIM metrological compatibility.
+
+`CMP-AUD-001` records:
+
+```text
+M5  reproducibility: CONDITIONAL_PASS
+M9  external breadth: PASS
+M10 independent/practical: UNRESOLVED_BUT_BOUNDED
+M11 protocol pressure: PASS
+M13 Comparison-specific closure discipline: PASS
+M15 registry separation: PASS
+```
+
+Comparison guards include:
 
 ```text
 AGGREGATE_EQUALITY != STRUCTURAL_EQUIVALENCE
 ONE_MAP_FAILURE != GLOBAL_NONCORRESPONDENCE
-EMBEDDING != STRICT_EQUIVALENCE
 FIRST_OBSERVED_DIFFERENCE != FIRST_JUSTIFIED_BRANCH_POINT
 PARTIAL_CORRESPONDENCE != GLOBAL_EQUIVALENCE
 ENCODING_REQUIRED_CORRESPONDENCE != DIRECT_CORRESPONDENCE
 FORWARD_MAP_SUCCESS != REVERSE_MAP_SUCCESS
 MAP_FAMILY_COVERAGE != COMPARISON_ELEMENT_COVERAGE
-UNSUPPLIED_NORMALIZATION_OR_CONVERSION != COMPARISON_MAP
-DYNAMIC_TRAJECTORY_SIMILARITY != SHARED_LINEAGE_OR_IDENTITY
 MISSING_COMPARISON_BRIDGE != PROVEN_STRUCTURAL_DIFFERENCE
 SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
 NO_GAIN != METHOD_ABSORPTION_PROOF
-BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
 RETRACE_PASS != INDEPENDENT_REPLICATION
-HTTP_MATCH != REPRESENTATION_IDENTITY
-RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
 METROLOGICAL_COMPATIBILITY != STRICT_STRUCTURAL_EQUIVALENCE
-METROLOGICAL_NONCOMPATIBILITY != PROOF_OF_DIFFERENT_PHYSICAL_OBJECT
 UNKNOWN_CORRELATION != ASSUME_UNCORRELATED
-UNDERDETERMINED != FAILURE
 ```
 
-The next Comparison event is a separately precommitted first maturity audit. The audit does not itself increase direct-pilot, external-application, or reproducibility counts.
+The next high-value Comparison event is independent-evaluator infrastructure `CMP-IEP-001`. Preparation is infrastructure only and does not establish independent validation.
 
 ## Promotion expectation / 성숙도 승격 기준
 
-A proposed/developing method should accumulate, at minimum, a dedicated method protocol; positive, negative/failure, boundary and `NO_GAIN` cases; reproducibility records; external or independently generated applications; and a strongest-reasonable-baseline comparison when applicable. These are evidence categories, not automatic promotion rules. Same-project retrace does not substitute for independent review, external-application count does not establish practical superiority or method survival, and three external domains do not automatically imply maturity promotion.
+A proposed/developing method should accumulate, at minimum, a dedicated method protocol; positive, negative/failure, boundary and `NO_GAIN` cases; reproducibility records; external or independently generated applications; and a strongest-reasonable-baseline comparison when applicable. These are evidence categories, not automatic promotion rules. Same-project retrace does not substitute for independent review, external-application count does not establish practical superiority or method survival, and an established maturity label does not imply independent validation or permanently freeze the method registry.
