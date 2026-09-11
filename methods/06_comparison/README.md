@@ -1,6 +1,6 @@
 # 06. DSD Comparison / DSD 비교론
 
-Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / first external application PASS / deterministic same-project retrace PASS / validation in progress**
+Status: **Protocol v0.1 established / strongest-reasonable baseline established at constructed-evidence level / two external domains PASS / deterministic same-project retrace PASS / validation in progress**
 
 Task: compare two or more supplied structures without reducing comparison to final-output equality, and determine justified correspondence, preserved structure, divergence, strict-equivalence status, and earliest supported branching only within declared comparison/map/element coverage.
 
@@ -53,6 +53,8 @@ STRUCTURAL_EQUIVALENCE != LINEAGE_IDENTITY
 NO_GAIN != METHOD_ABSORPTION_PROOF
 SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
 RETRACE_PASS != INDEPENDENT_REPLICATION
+HTTP_MATCH != REPRESENTATION_IDENTITY
+RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
 ```
 
 ## Output / relation / terminal structure
@@ -137,6 +139,30 @@ METHOD GAIN: NOT_ASSESSED
 
 The external case preserves criterion provenance: binary identity, canonical equivalence, and compatibility equivalence are not collapsed. A relation class is not treated as intrinsic to a pair independently of the frozen comparison criterion.
 
+### CMP-APP-002 — HTTP ETag comparison semantics
+
+```text
+SOURCE: RFC 9110 — HTTP Semantics
+SECTIONS: 8.8.3.2, 13.1.1, 13.1.2
+PRECOMMIT: f77ddb2
+RESULT: fbba59a
+SCORE: 48/48 PASS
+
+H1 W/"1" vs W/"1" / strong -> NONCORRESPONDENCE / RESOLVED
+H2 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
+H3 W/"1" vs "1" / strong -> NONCORRESPONDENCE / RESOLVED
+H4 same pair / weak -> DIRECT_CORRESPONDENCE / RESOLVED
+H5 "1" vs "1" / strong -> DIRECT_CORRESPONDENCE / RESOLVED
+H6 W/"1" vs W/"2" / weak -> NONCORRESPONDENCE / RESOLVED
+H7 If-Match context -> strong -> NONCORRESPONDENCE / RESOLVED
+H8 If-None-Match context -> weak -> DIRECT_CORRESPONDENCE / RESOLVED
+
+ALL CONFORMANCE: CONFORMANT
+METHOD GAIN: NOT_ASSESSED
+```
+
+The HTTP case preserves externally supplied criterion provenance without performing normalization or a representation transform. Weak comparison match is not promoted to representation identity, and entity-tag match is not promoted to the whole conditional-request outcome.
+
 ## Reproducibility evidence
 
 ### CMP-CH-006 — deterministic same-project retrace of CMP-APP-001
@@ -195,9 +221,9 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_le
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_COMPARISON_APPLICATIONS: 1
-EXTERNAL_COMPARISON_DOMAINS: 1
-EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
+EXTERNAL_COMPARISON_APPLICATIONS: 2
+EXTERNAL_COMPARISON_DOMAINS: 2
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 2
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -208,6 +234,6 @@ External application count is separate from constructed direct-pilot count, and 
 
 ## Next development step
 
-Add materially different external Comparison domains before the first maturity audit. The next external application should not merely repeat Unicode/string-normalization semantics and must again keep external-source truth, Comparison conformance, and method gain as separate ledgers.
+Add a third materially different external Comparison domain before the first maturity audit, preferably one not based on textual normalization or protocol tag matching. Keep external-source truth, Comparison conformance, and method gain as separate ledgers.
 
 Case success/failure, retrace success, and comparative gain do not decide method survival, merger, absorption, or deletion.
