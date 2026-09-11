@@ -9,6 +9,7 @@ This folder records evidence that directly tests one of the **22 independent DSD
 - Independent-evaluator packet preparation is infrastructure until an eligible external submission exists.
 - Failed challenge designs remain historical evidence of test pressure but do not fill successful validation categories.
 - A success or failure in one case does not by itself imply that a method must survive, merge, be absorbed, or be deleted. Method independence is assessed separately.
+- `NO_GAIN` or baseline matching does not by itself prove redundancy or absorption.
 - Established method/protocol evidence maturity does not permanently freeze the method registry.
 
 ## Method-specific evidence lanes / 개별 증거 경로
@@ -67,7 +68,7 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 
 Planning opened `2026-09-10`; executable `PROTOCOL_v0.1.md` was established at commit `a1700d960e0b41dfe32bf85b6334448d9104100d` after 16 pre-protocol boundary attacks.
 
-Current Comparison state after `CMP-CH-003`:
+Current Comparison state after `CMP-CH-004`:
 
 ```text
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
@@ -77,12 +78,13 @@ BOUNDARY_PRESERVED_NO_REFINEMENT: 11
 BOUNDARY_PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
 BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
-DIRECT_COMPARISON_PILOTS: 3
+DIRECT_COMPARISON_PILOTS: 4
 POSITIVE_COMPARISON_CASES: 1
 NEGATIVE_OR_FAILURE_COMPARISON_CASES: 1
 BOUNDARY_COMPARISON_CASES: 1
-NO_GAIN_COMPARISON_CASES: 0
-BASELINE_COMPARISON_CASES: 0
+NO_GAIN_COMPARISON_CASES: 1
+BASELINE_COMPARISON_CASES: 1
+STRONGEST_REASONABLE_BASELINE_COMPARISON: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_COMPARISON_APPLICATIONS: 0
 INDEPENDENT_COMPARISON_VALIDATION: not established
@@ -111,8 +113,6 @@ CMP-CH-002
   N3 missing required bridge -> COMPARISON_BLOCKED
   N4 forward success / inverse evidence unverified -> COMPARISON_UNDERDETERMINED
   N5 exhaustive all-map failure -> NONCORRESPONDENCE / COMPARISON_RESOLVED
-  ALL CONFORMANCE: CONFORMANT
-  ALL GAIN: NOT_ASSESSED
 
 CMP-CH-003
   PRECOMMIT: 68d330b
@@ -123,8 +123,19 @@ CMP-CH-003
   Transformation -> COMPARISON_BLOCKED + TRANSFORMATION_REQUIRED
   Audit -> resolved trace comparison + AUDIT_REQUIRED
   Provenance/Lineage -> snapshot STRICT_EQUIVALENT, lineage not established + PROVENANCE_LINEAGE_REQUIRED
-  ALL CONFORMANCE: CONFORMANT
-  ALL GAIN: NOT_ASSESSED
+
+CMP-CH-004
+  PRECOMMIT: 0d96d6b
+  RESULT: 4cacd55
+  SCORE: 50/50 PASS
+  BASELINE: B0_TYPED_COMPARISON_LEDGER
+  Q1 strict equivalence matched
+  Q2 encoded correspondence matched
+  Q3 non-exhaustive underdetermination matched
+  Q4 aggregate collision / structural noncorrespondence matched
+  Q5 missing-bridge blockage matched
+  G1-G6: NOT_ESTABLISHED
+  COMPARISON_METHOD_GAIN_STATUS: NO_GAIN
 ```
 
 Current Comparison guards include:
@@ -147,9 +158,11 @@ COMPARISON_EQUIVALENCE != INTERNAL_DECOMPOSITION
 COMPARISON_RELATION != TAXONOMY_ASSIGNMENT
 TRACE_DIFFERENCE != AUDIT_CONFORMANCE_VERDICT
 STRUCTURAL_EQUIVALENCE != LINEAGE_IDENTITY
+NO_GAIN != METHOD_ABSORPTION_PROOF
+BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
 ```
 
-The next Comparison event is a separately precommitted competent-baseline challenge `CMP-CH-004` in which `NO_GAIN` is explicitly acceptable.
+The next Comparison event is a separately precommitted `CMP-CH-005` strongest-reasonable-baseline comparison.
 
 ## Promotion expectation / 성숙도 승격 기준
 
