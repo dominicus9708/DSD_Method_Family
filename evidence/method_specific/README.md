@@ -53,7 +53,7 @@ CURRENT_SYNTHESIS_EVIDENCE_STATUS: validation_in_progress
 
 Executable `PROTOCOL_v0.1.md` was established at commit `a1700d960e0b41dfe32bf85b6334448d9104100d` after 16 pre-protocol boundary attacks.
 
-Current Comparison state after `CMP-CH-006`:
+Current Comparison state after `CMP-APP-002`:
 
 ```text
 DEDICATED_COMPARISON_PROTOCOL: v0.1 established
@@ -68,9 +68,9 @@ STRONGEST_REASONABLE_BASELINE_COMPARISON: established_at_constructed_evidence_le
 REPRODUCIBILITY_CASES: 1
 DEDICATED_RETRACE_PASSES: 1
 REPRODUCIBILITY_LEVEL: deterministic_same_project
-EXTERNAL_COMPARISON_APPLICATIONS: 1
-EXTERNAL_COMPARISON_DOMAINS: 1
-EXTERNAL_COMPARISON_APPLICATION_PASSES: 1
+EXTERNAL_COMPARISON_APPLICATIONS: 2
+EXTERNAL_COMPARISON_DOMAINS: 2
+EXTERNAL_COMPARISON_APPLICATION_PASSES: 2
 INDEPENDENT_REPLICATION: not established
 INDEPENDENT_COMPARISON_VALIDATION: not established
 COMPARISON_METHOD_MATURITY_CLASSIFICATION: proposed
@@ -111,6 +111,24 @@ CMP-CH-006
   REPRODUCIBILITY_LEVEL: deterministic_same_project
   all six candidate criteria/relation classes/terminals/conformance reproduced
   INDEPENDENT_REPLICATION: not established
+
+CMP-APP-002
+  PRECOMMIT: f77ddb2
+  PRECOMMIT BLOB: 7478867
+  RESULT: fbba59a
+  SOURCE: RFC 9110 — HTTP Semantics §§8.8.3.2, 13.1.1, 13.1.2
+  SCORE: 48/48 PASS
+  H1 W/"1" vs W/"1" strong -> NONCORRESPONDENCE
+  H2 same pair weak -> DIRECT_CORRESPONDENCE
+  H3 W/"1" vs "1" strong -> NONCORRESPONDENCE
+  H4 same pair weak -> DIRECT_CORRESPONDENCE
+  H5 "1" vs "1" strong -> DIRECT_CORRESPONDENCE
+  H6 W/"1" vs W/"2" weak -> NONCORRESPONDENCE
+  H7 If-Match -> strong -> NONCORRESPONDENCE
+  H8 If-None-Match -> weak -> DIRECT_CORRESPONDENCE
+  ALL TERMINAL: COMPARISON_RESOLVED
+  ALL CONFORMANCE: CONFORMANT
+  METHOD GAIN: NOT_ASSESSED
 ```
 
 Current Comparison guards include:
@@ -131,9 +149,11 @@ SAME_PAIR + DIFFERENT_CRITERION -> possibly different comparison verdict
 NO_GAIN != METHOD_ABSORPTION_PROOF
 BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
 RETRACE_PASS != INDEPENDENT_REPLICATION
+HTTP_MATCH != REPRESENTATION_IDENTITY
+RFC_COMPARISON_MATCH != WHOLE_REQUEST_PRECONDITION_RESULT
 ```
 
-The next Comparison event is an additional materially different external application before maturity audit.
+The next Comparison event is a third materially different external application before maturity audit.
 
 ## Promotion expectation / 성숙도 승격 기준
 
