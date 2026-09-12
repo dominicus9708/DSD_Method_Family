@@ -2,46 +2,63 @@
 
 Date: 2026-09-12
 
-Status: `PASS AS SAFE OVER-APPROXIMATION / NUMERICAL KERNEL EXECUTION STILL TO BE FROZEN`
+Status: `PASS / EXACT NEGATIVE RESULT / (R,PHASE) ALONE IS INSUFFICIENT`
 
 ## 1. Scope
 
-MATH-094 replaces macro-depth indexing by dyadic envelope resolution `R` and defines an address-forgotten phase danger set `D_R`.
+MATH-094 replaces macro-depth indexing by the MATH-093 dyadic-envelope resolution `R` and computes the address-forgotten phase danger set `D_R`.
 
-## 2. Resolution DAG
+## 2. Exact result
 
-Under MATH-093 every multi-edge updates `R'=R-h` exactly, with `h>=3`.  Therefore recursion in `R` is acyclic.  The first unresolved one-paid envelope satisfies `R<=69` from the first-cell source-window width and the minimum first-edge resolution.
+The executable exact interval recursion gives
 
-`PASS`.
+\[
+\boxed{D_R=(1/2,1)\quad\text{for every }R=0,\ldots,69.}
+\]
 
-## 3. Danger recursion
+Thus the phase-only danger kernel saturates completely.
 
-The recursion includes:
+## 3. DSD interpretation
 
-- preimages of `D_(R-h)` through every multi-edge `h<=R`;
-- terminal phase regions satisfying `c*rho*Omega < lambda(h-R)` for `h>R`.
+This is not a mathematical failure of the one-paid program.  It is an **insufficient-state result**.
 
-This is the correct phase-only necessary language after the dyadic envelope abstraction. `PASS`.
+The abstraction discarded both:
 
-## 4. One-sided information loss
+1. exact dyadic address/carry compatibility;
+2. accumulated positive penalty from earlier multi-edges.
 
-Two pieces of information are deliberately dropped:
-
-1. exact dyadic address compatibility;
-2. positive penalties already paid on earlier multi-edges.
-
-Both omissions can only add danger candidates, not remove actual ones.  Therefore exclusion of a phase from `D_R` is safe, while inclusion in `D_R` is not itself evidence of an actual dangerous path.
+Because both omissions enlarge the language, saturation means only that `(R,phase)` cannot distinguish safe actual paths from fictitious low-cost paths.
 
 `PASS`.
 
-## 5. Claim boundary
+## 4. Cross-check with MATH-088
 
-MATH-094 currently provides the exact recursion and executable generator, but the complete numerical interval table for `R=0..69` has not yet been frozen into a canonical certificate summary.
+MATH-088 already demonstrates that a phase-danger corridor can be entirely fictitious: at depth 17, 5,330,013 phase-danger edge attempts yield zero address-compatible danger edges.
 
-Therefore the correct status is structural reduction, not completed one-paid closure.
+Therefore MATH-094 saturation is consistent with, rather than contradictory to, the exact address results.
 
-## 6. Verdict
+## 5. State-minimality consequence
 
-`PASS AS SAFE OVER-APPROXIMATION`.
+A depth-free quotient must retain at least one additional state channel beyond `(R,Omega)`.
+Current exact candidates are:
 
-The next calculation should freeze the exact `D_R` interval table and intersect it with the actual first-macro states before restoring the MATH-092/090 address-carry channel.
+- accumulated current-phase penalty credit;
+- MATH-090 carry valuation;
+- MATH-092 normalized 2-adic address word.
+
+A quotient that drops all three is now explicitly rejected by counterexample/saturation.
+
+## 6. Prohibited upgrades
+
+Do not infer:
+
+- `D_R` full `=>` actual danger exists for every phase;
+- phase-only saturation `=>` Bellman strategy fails;
+- exact address is necessarily required in full uncompressed form;
+- MATH-094 `=>` any Collatz counterexample.
+
+## 7. Verdict
+
+`PASS AS A NEGATIVE MODEL-SELECTION RESULT`.
+
+The bare `(R,phase)` abstraction should be retired.  The next route is a product quotient coupling resolution with carry/address credit and, where useful, accumulated penalty.
