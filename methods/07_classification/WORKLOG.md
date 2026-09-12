@@ -286,3 +286,91 @@ The pass is one constructed same-project direct case. It does not establish exte
 ### Next
 
 Freeze and execute `CLS-CH-002`, the negative/failure-terminal challenge. It must test whether legitimate non-positive classification outcomes remain separated rather than being collapsed into one generic failure or negative-membership status.
+
+---
+
+## 2026-09-12 — Step 6 CLS-CH-002 negative/failure-terminal challenge
+
+Precommitted the seven-task challenge before execution.
+
+```text
+PRECOMMIT_FILE: evidence/method_specific/classification/CLS-CH-002_precommit.md
+PRECOMMIT_COMMIT: eef7ea276186c382953c3b207ffa6c7dc237f603
+PRECOMMIT_BLOB: a15719f5b7aebaf3b8df5c05f94f9b4f319ff464
+RESULT_FILE: evidence/method_specific/classification/CLS-CH-002_negative-failure-terminal-distinction.md
+RESULT_COMMIT: ba9ef338c95912ebec14d89f944ad54a640b7686
+```
+
+### Frozen task family
+
+The challenge forced Protocol v0.1 to distinguish seven different non-positive outcomes:
+
+```text
+N1 uncertainty crosses boundary -> BOUNDARY_CASE
+N2 partial substantive evaluation without closure -> UNDERDETERMINED
+N3 exclusive class predicates both satisfied -> CRITERION_CONFLICT
+N4 required semantic bridge absent before substantive evaluation -> BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
+N5 subject outside classification universe -> OUT_OF_SCOPE
+N6 no current class match under open schema -> OPEN_WORLD_NO_CURRENT_MATCH
+N7 admitted subject matches no class under closed registry -> UNCLASSIFIED_WITHIN_DECLARED_SCHEMA
+```
+
+No generic failure status was permitted, no competent baseline was used, and gain remained unassessed.
+
+### Execution result
+
+```text
+N1 -> BOUNDARY_CASE / CONFORMANT
+N2 -> UNDERDETERMINED / CONFORMANT
+N3 -> CRITERION_CONFLICT / CONFORMANT
+N4 -> BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION / CONFORMANT
+N5 -> OUT_OF_SCOPE / CONFORMANT
+N6 -> OPEN_WORLD_NO_CURRENT_MATCH / CONFORMANT
+N7 -> UNCLASSIFIED_WITHIN_DECLARED_SCHEMA / CONFORMANT
+
+VALIDITY_GATES: 14/14 PASS
+SEVEN_TASK_CHECKS: 28/28 PASS
+CROSS_TASK_DISTINCTION_CHECKS: 8/8 PASS
+TOTAL: 50/50 PASS
+```
+
+Preserved distinctions:
+
+```text
+BOUNDARY_CASE != UNDERDETERMINED
+UNDERDETERMINED != BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
+CRITERION_CONFLICT != CLASSIFIED_MULTI
+BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION != NEGATIVE_MEMBERSHIP
+OUT_OF_SCOPE != UNCLASSIFIED_WITHIN_DECLARED_SCHEMA
+OPEN_WORLD_NO_CURRENT_MATCH != UNCLASSIFIED_WITHIN_DECLARED_SCHEMA
+OPEN_WORLD_NO_CURRENT_MATCH != UNIVERSAL_NONMEMBERSHIP
+NONPOSITIVE_RESULT != PROTOCOL_NONCONFORMANCE
+```
+
+The raw code in N4 was not semantically guessed, the missing feature in N2 was not coerced to false, and the closed-registry claim in N7 was not extended into a claim that every universe member must match a class.
+
+```text
+CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+PROTOCOL_DEFECT_EXPOSED: no
+PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
+```
+
+### Evidence effect
+
+```text
+DIRECT_CLASSIFICATION_PILOTS: 2
+POSITIVE_DIRECT_CHALLENGES: 1
+NEGATIVE_FAILURE_CHALLENGES: 1
+METHOD_BOUNDARY_CHALLENGES: 0
+EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
+REPRODUCIBILITY_CASES: 0
+INDEPENDENT_CLASSIFICATION_VALIDATION: not established
+CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
+```
+
+This is still constructed same-project direct evidence. It does not establish external validity, independent validation, independent replication, superiority, universal status completeness, or permanent method independence.
+
+### Next
+
+Freeze and execute `CLS-CH-003`, a direct method-boundary challenge against Analysis, Comparison, Specification, and Diagnosis. The challenge must permit preservation, partial overlap, or exact collapse as possible results, and none of those outcomes may be treated automatically as a method-survival, merger, absorption, or deletion decision.
