@@ -1,6 +1,6 @@
 # DSD Classification Planning / DSD 분류론 기획
 
-Status: **Protocol v0.1 frozen / CLS-CH-001 positive direct challenge PASS / negative challenge next**  
+Status: **Protocol v0.1 frozen / CLS-CH-001 and CLS-CH-002 PASS / method-boundary challenge next**  
 Date opened: **2026-09-12**
 
 ## Purpose / 목적
@@ -47,7 +47,7 @@ A classification claim is valid only relative to a declared task resolution, cri
 3. ✅ Boundary Amendment 001: 6 non-breaking refinement groups.
 4. ✅ Executable Classification Protocol v0.1 frozen.
 5. ✅ Positive direct challenge — `CLS-CH-001`, 36/36 PASS.
-6. ⬜ Negative/failure-terminal challenge.
+6. ✅ Negative/failure-terminal challenge — `CLS-CH-002`, 50/50 PASS.
 7. ⬜ Direct method-boundary challenge against Analysis / Comparison / Specification / Diagnosis.
 8. ⬜ Competent-baseline `NO_GAIN` challenge.
 9. ⬜ Strongest-reasonable-baseline comparison.
@@ -165,6 +165,51 @@ PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
 
 This directly preserves `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED` even when a non-authoritative display field collides, while also preserving that two different values may share a class at a coarser frozen target resolution. One constructed pass does not establish general superiority or external validity.
 
+## CLS-CH-002 result / Negative-Failure Terminal Challenge
+
+The seven-task challenge was frozen before execution:
+
+```text
+PRECOMMIT_COMMIT: eef7ea276186c382953c3b207ffa6c7dc237f603
+PRECOMMIT_BLOB: a15719f5b7aebaf3b8df5c05f94f9b4f319ff464
+RESULT_COMMIT: ba9ef338c95912ebec14d89f944ad54a640b7686
+```
+
+Execution preserved the following status matrix:
+
+```text
+N1 -> BOUNDARY_CASE
+N2 -> UNDERDETERMINED
+N3 -> CRITERION_CONFLICT
+N4 -> BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
+N5 -> OUT_OF_SCOPE
+N6 -> OPEN_WORLD_NO_CURRENT_MATCH
+N7 -> UNCLASSIFIED_WITHIN_DECLARED_SCHEMA
+```
+
+Score:
+
+```text
+VALIDITY_GATES: 14/14 PASS
+SEVEN_TASK_CHECKS: 28/28 PASS
+CROSS_TASK_DISTINCTION_CHECKS: 8/8 PASS
+TOTAL: 50/50 PASS
+CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
+```
+
+The challenge directly established only the constructed-case distinction result. In particular:
+
+```text
+BOUNDARY_CASE != UNDERDETERMINED
+UNDERDETERMINED != BLOCKED
+CRITERION_CONFLICT != CLASSIFIED_MULTI
+OUT_OF_SCOPE != CLOSED_WORLD_UNCLASSIFIED
+OPEN_WORLD_NO_CURRENT_MATCH != CLOSED_WORLD_UNCLASSIFIED
+OPEN_WORLD_NO_CURRENT_MATCH != UNIVERSAL_NONMEMBERSHIP
+NONPOSITIVE_RESULT != PROTOCOL_NONCONFORMANCE
+```
+
 ## Evidence discipline / 증거 규율
 
 - Task-interface, boundary attack, amendment, and protocol construction are infrastructure, not direct method evidence.
@@ -223,9 +268,9 @@ DEDICATED_CLASSIFICATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_CLASSIFICATION_PILOTS: 1
+DIRECT_CLASSIFICATION_PILOTS: 2
 POSITIVE_DIRECT_CHALLENGES: 1
-NEGATIVE_FAILURE_CHALLENGES: 0
+NEGATIVE_FAILURE_CHALLENGES: 1
 METHOD_BOUNDARY_CHALLENGES: 0
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
 REPRODUCIBILITY_CASES: 0
@@ -236,4 +281,4 @@ CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
 
 ## Next / 다음
 
-Freeze `CLS-CH-002`, the negative/failure-terminal challenge, before execution. It must require the protocol to distinguish several legitimate non-positive states — including boundary, underdetermined, conflict, blocked, out-of-scope, open-world no-current-match, and closed-world unclassified where justified — rather than collapse them into one generic failure or negative-membership result. The fixture and success criteria must remain immutable after precommit.
+Freeze `CLS-CH-003`, a direct method-boundary challenge, before execution. It should test whether Classification remains operationally distinct from Analysis, Comparison, Specification, and Diagnosis under frozen inputs and outputs, while allowing the evidence to reveal partial overlap or exact collapse if one actually occurs. Any such result must be recorded as a boundary finding, not used as an automatic survival, merger, absorption, or deletion decision.
