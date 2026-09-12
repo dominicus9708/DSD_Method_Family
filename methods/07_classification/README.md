@@ -1,6 +1,6 @@
 # 07. DSD Classification / DSD 분류론
 
-Status: **Executable Protocol v0.1 frozen / positive direct challenge next**
+Status: **Protocol v0.1 frozen / CLS-CH-001 positive direct challenge PASS / negative challenge next**
 
 Task: classify supplied subjects by explicit class criteria and preserved formation, property, comparison, aggregate, transition, or other declared features rather than by labels alone.
 
@@ -23,6 +23,10 @@ Development files:
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - [`WORKLOG.md`](WORKLOG.md)
 
+Direct evidence:
+- [`CLS-CH-001 precommit`](../../evidence/method_specific/classification/CLS-CH-001_precommit.md)
+- [`CLS-CH-001 positive direct classification`](../../evidence/method_specific/classification/CLS-CH-001_positive-direct-classification.md)
+
 Protocol lineage:
 
 ```text
@@ -42,18 +46,36 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 BOUNDARY_AMENDMENT_001: established
 ```
 
+First direct challenge:
+
+```text
+CASE_ID: CLS-CH-001
+CASE_CLASS: positive_direct_classification_challenge
+PRECOMMIT_COMMIT: 2c5944b2830201c8d9bdbbc3d945bb6bfb6f772d
+RESULT_COMMIT: 8107d13f8b191199c202a324b8362e662ff6ab54
+SCORE: 36/36 PASS
+RESULT: PASS
+PROTOCOL_CONFORMANCE: CONFORMANT for all four subject results
+METHOD_GAIN: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
+```
+
+The case directly tested that `DEFINED_ZERO` and `APPLICABLE_BUT_UNDEFINED` remain distinct even when a non-authoritative display field is equal, while two different defined-nonzero values may share one class when the frozen target resolution classifies status rather than sign or magnitude.
+
 Current evidence state:
 
 ```text
 DEDICATED_CLASSIFICATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
-DIRECT_CLASSIFICATION_PILOTS: 0
-POSITIVE_DIRECT_CHALLENGES: 0
+DIRECT_CLASSIFICATION_PILOTS: 1
+POSITIVE_DIRECT_CHALLENGES: 1
+NEGATIVE_FAILURE_CHALLENGES: 0
+METHOD_BOUNDARY_CHALLENGES: 0
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
 REPRODUCIBILITY_CASES: 0
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
 CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
-CURRENT_CLASSIFICATION_EVIDENCE_STATUS: pre_validation
+CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Protocol establishment is infrastructure rather than direct method evidence. The next valid step is a pre-frozen positive direct challenge against Protocol v0.1. PASS, FAIL, `NO_GAIN`, boundary, or underdetermined results must remain separate from any method survival, merger, absorption, or deletion decision.
+One constructed positive case does not establish superiority, independent validation, external validity, or permanent method independence. The next valid step is a pre-frozen negative/failure-terminal challenge testing that non-positive states remain distinguishable rather than collapsing into one generic failure state. PASS, FAIL, `NO_GAIN`, boundary, or underdetermined results remain separate from any method survival, merger, absorption, or deletion decision.
