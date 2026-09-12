@@ -109,6 +109,99 @@ INDEPENDENT_CLASSIFICATION_VALIDATION: not established
 CURRENT_CLASSIFICATION_EVIDENCE_STATUS: pre_validation
 ```
 
+---
+
+## 2026-09-12 — Executable Classification Protocol v0.1 established
+
+Created and froze `PROTOCOL_v0.1.md`.
+
+### Protocol lineage
+
+```text
+TASK_INTERFACE_v0.1-draft.md
++ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+-> PROTOCOL_v0.1.md
+```
+
+The historical task-interface draft and amendment remain preserved. No retroactive rewrite was performed.
+
+### Protocol result
+
+Protocol v0.1 makes the following executable:
+
+```text
+schema identity/version and coverage semantics
+class relation / overlap / exclusion semantics
+criterion applicability, provenance, composition, and decision rules
+feature status and provenance preservation
+uncertainty/tolerance and boundary handling
+generated-class provenance and schema mutation
+special-claim obligations for equivalence, hierarchy/partial order, aggregates, dynamics, and multi-label cases
+validity gates G1-G14
+binding operation sequence C1-C14
+subject/result membership-status vocabulary
+protocol conformance ledger
+method-gain ledger
+reproducibility record
+protocol versioning
+```
+
+Membership statuses frozen in v0.1:
+
+```text
+CLASSIFIED_SINGLE
+CLASSIFIED_MULTI
+BOUNDARY_CASE
+UNDERDETERMINED
+UNCLASSIFIED_WITHIN_DECLARED_SCHEMA
+OUT_OF_SCOPE
+CRITERION_CONFLICT
+BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
+OPEN_WORLD_NO_CURRENT_MATCH
+```
+
+### Important separation
+
+Protocol v0.1 explicitly separates:
+
+```text
+subject/result status
+!= protocol conformance
+!= comparative method gain
+!= method survival/merger/absorption/deletion decision
+```
+
+Therefore a boundary, blocked, conflict, open-world-no-match, or underdetermined result may still be protocol-conformant.
+
+### Evidence accounting
+
+Protocol establishment is infrastructure only.
+
+```text
+DIRECT_CLASSIFICATION_PILOT_INCREMENT: 0
+EXTERNAL_APPLICATION_INCREMENT: 0
+REPRODUCIBILITY_INCREMENT: 0
+MATURITY_PROMOTION: none
+```
+
+### Current counters after Step 4
+
+```text
+DEDICATED_CLASSIFICATION_PROTOCOL: established v0.1
+TASK_INTERFACE_DRAFTS: 1
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
+BOUNDARY_AMENDMENT_001: established
+DIRECT_CLASSIFICATION_PILOTS: 0
+POSITIVE_DIRECT_CHALLENGES: 0
+NEGATIVE_FAILURE_CHALLENGES: 0
+METHOD_BOUNDARY_CHALLENGES: 0
+EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
+REPRODUCIBILITY_CASES: 0
+INDEPENDENT_CLASSIFICATION_VALIDATION: not established
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
+CURRENT_CLASSIFICATION_EVIDENCE_STATUS: pre_validation
+```
+
 ### Next
 
-Construct `PROTOCOL_v0.1.md` by integrating the historical task interface with Amendment 001. Protocol construction remains infrastructure and must not increment direct evidence.
+Freeze and execute the first positive direct challenge. The fixture and success criteria must be frozen before execution, and the run must be allowed to fail without rewriting Protocol v0.1 merely to obtain a PASS.
