@@ -1,6 +1,6 @@
 # 07. DSD Classification / DSD 분류론
 
-Status: **Protocol v0.1 frozen / CLS-CH-001 and CLS-CH-002 PASS / method-boundary challenge next**
+Status: **Protocol v0.1 frozen / CLS-CH-001~003 PASS / competent-baseline challenge next**
 
 Task: classify supplied subjects by explicit class criteria and preserved formation, property, comparison, aggregate, transition, or other declared features rather than by labels alone.
 
@@ -28,6 +28,8 @@ Direct evidence:
 - [`CLS-CH-001 positive direct classification`](../../evidence/method_specific/classification/CLS-CH-001_positive-direct-classification.md)
 - [`CLS-CH-002 precommit`](../../evidence/method_specific/classification/CLS-CH-002_precommit.md)
 - [`CLS-CH-002 negative/failure terminal distinction`](../../evidence/method_specific/classification/CLS-CH-002_negative-failure-terminal-distinction.md)
+- [`CLS-CH-003 precommit`](../../evidence/method_specific/classification/CLS-CH-003_precommit.md)
+- [`CLS-CH-003 direct method-boundary`](../../evidence/method_specific/classification/CLS-CH-003_direct-method-boundary.md)
 
 Protocol lineage:
 
@@ -92,15 +94,41 @@ UNCLASSIFIED_WITHIN_DECLARED_SCHEMA
 
 All seven executions were protocol-conformant because each result represented the strongest justified status under its frozen scope, evidence, closure, and decision rules. In particular, open-world no-match was not upgraded to universal nonmembership, out-of-scope was not relabeled unclassified, and a missing bridge was not guessed from a raw label.
 
+Third direct challenge:
+
+```text
+CASE_ID: CLS-CH-003
+CASE_CLASS: direct_method_boundary_challenge
+PRECOMMIT_COMMIT: 494711e72f9a9d025e59a66269e3af5c855a9e42
+PRECOMMIT_BLOB: 25d8be7f899d0cf6ff5e496f59d9c593e713dc41
+RESULT_COMMIT: 44b6095132dd9233ab85986af87d15c5f799b55d
+SCORE: 48/48 PASS
+RESULT: PASS
+METHOD_GAIN: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
+```
+
+The challenge used the same five-interface non-duplication rule for Analysis, Comparison, Specification, and Diagnosis:
+
+```text
+INPUTS
+OPERATION
+OUTPUTS
+FAILURE_OR_NO_GAIN_CRITERIA
+VALIDATION_STANDARD
+```
+
+It explicitly permitted `DISTINCT_AT_TASK_INTERFACE`, `PARTIAL_OVERLAP_NOT_COLLAPSE`, or `EXACT_COLLAPSE_CANDIDATE` and did not define PASS as survival. All four tested pairs resolved to `PARTIAL_OVERLAP_NOT_COLLAPSE`: they shared subjects, observations, status records, or handoff carriers, while operation, output, failure semantics, and validation targets remained materially different. No exact-collapse candidate was found in these frozen tasks, but this is not a permanent irreducibility finding.
+
 Current evidence state:
 
 ```text
 DEDICATED_CLASSIFICATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
-DIRECT_CLASSIFICATION_PILOTS: 2
+DIRECT_CLASSIFICATION_PILOTS: 3
 POSITIVE_DIRECT_CHALLENGES: 1
 NEGATIVE_FAILURE_CHALLENGES: 1
-METHOD_BOUNDARY_CHALLENGES: 0
+METHOD_BOUNDARY_CHALLENGES: 1
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
 REPRODUCIBILITY_CASES: 0
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
@@ -108,4 +136,4 @@ CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
 ```
 
-Two constructed same-project direct cases do not establish superiority, independent validation, external validity, or permanent method independence. The next valid step is a pre-frozen direct method-boundary challenge against neighboring methods, especially Analysis, Comparison, Specification, and Diagnosis. A boundary-preservation or boundary-collapse result must be recorded as evidence rather than converted into a survival, merger, absorption, or deletion decision.
+Three constructed same-project direct cases do not establish superiority, independent validation, external validity, permanent method independence, or a method-registry governance result. The next valid step is a pre-frozen competent-baseline challenge in which the baseline receives exactly the same task, schema/version, criteria, decision logic, subject evidence, and claim-relevant bridges. `NO_GAIN` must remain an allowed valid result and must not be treated as a merger, absorption, or deletion decision.
