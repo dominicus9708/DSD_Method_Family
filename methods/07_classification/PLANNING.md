@@ -1,6 +1,6 @@
 # DSD Classification Planning / DSD 분류론 기획
 
-Status: **Protocol v0.1 frozen / CLS-CH-001 and CLS-CH-002 PASS / method-boundary challenge next**  
+Status: **Protocol v0.1 frozen / CLS-CH-001~003 PASS / competent-baseline challenge next**  
 Date opened: **2026-09-12**
 
 ## Purpose / 목적
@@ -48,7 +48,7 @@ A classification claim is valid only relative to a declared task resolution, cri
 4. ✅ Executable Classification Protocol v0.1 frozen.
 5. ✅ Positive direct challenge — `CLS-CH-001`, 36/36 PASS.
 6. ✅ Negative/failure-terminal challenge — `CLS-CH-002`, 50/50 PASS.
-7. ⬜ Direct method-boundary challenge against Analysis / Comparison / Specification / Diagnosis.
+7. ✅ Direct method-boundary challenge against Analysis / Comparison / Specification / Diagnosis — `CLS-CH-003`, 48/48 PASS.
 8. ⬜ Competent-baseline `NO_GAIN` challenge.
 9. ⬜ Strongest-reasonable-baseline comparison.
 10. ⬜ First external application.
@@ -163,7 +163,7 @@ CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
 PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
 ```
 
-This directly preserves `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED` even when a non-authoritative display field collides, while also preserving that two different values may share a class at a coarser frozen target resolution. One constructed pass does not establish general superiority or external validity.
+This directly preserves `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED` even when a non-authoritative display field collides, while also preserving that two different values may share a class at a coarser frozen target resolution.
 
 ## CLS-CH-002 result / Negative-Failure Terminal Challenge
 
@@ -198,17 +198,51 @@ CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
 PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
 ```
 
-The challenge directly established only the constructed-case distinction result. In particular:
+## CLS-CH-003 result / Direct Method-Boundary Challenge
+
+The boundary challenge was frozen before execution and used the same five-interface test for all four neighboring methods:
 
 ```text
-BOUNDARY_CASE != UNDERDETERMINED
-UNDERDETERMINED != BLOCKED
-CRITERION_CONFLICT != CLASSIFIED_MULTI
-OUT_OF_SCOPE != CLOSED_WORLD_UNCLASSIFIED
-OPEN_WORLD_NO_CURRENT_MATCH != CLOSED_WORLD_UNCLASSIFIED
-OPEN_WORLD_NO_CURRENT_MATCH != UNIVERSAL_NONMEMBERSHIP
-NONPOSITIVE_RESULT != PROTOCOL_NONCONFORMANCE
+PRECOMMIT_COMMIT: 494711e72f9a9d025e59a66269e3af5c855a9e42
+PRECOMMIT_BLOB: 25d8be7f899d0cf6ff5e496f59d9c593e713dc41
+RESULT_COMMIT: 44b6095132dd9233ab85986af87d15c5f799b55d
+
+BOUNDARY_DIMENSIONS:
+  INPUTS
+  OPERATION
+  OUTPUTS
+  FAILURE_OR_NO_GAIN_CRITERIA
+  VALIDATION_STANDARD
 ```
+
+The precommit explicitly allowed:
+
+```text
+DISTINCT_AT_TASK_INTERFACE
+PARTIAL_OVERLAP_NOT_COLLAPSE
+EXACT_COLLAPSE_CANDIDATE
+```
+
+so PASS did not require method survival or non-collapse.
+
+Execution result:
+
+```text
+Analysis      -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Comparison    -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Specification -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Diagnosis     -> PARTIAL_OVERLAP_NOT_COLLAPSE
+
+EXACT_COLLAPSE_CANDIDATES_FOUND: 0/4
+IMMUTABILITY_CHECKS: 8/8 PASS
+FOUR_BOUNDARY_CHECK_FAMILIES: 32/32 PASS
+CROSS_BOUNDARY_GOVERNANCE: 8/8 PASS
+TOTAL: 48/48 PASS
+CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
+```
+
+The common pattern was that the methods may share subjects, observations, DSD status records, or direct handoff carriers, while their primary operation, output, failure semantics, and validation target remain materially different at the frozen task interfaces. This is a local boundary finding, not a permanent irreducibility or registry-governance result.
 
 ## Evidence discipline / 증거 규율
 
@@ -268,10 +302,10 @@ DEDICATED_CLASSIFICATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_CLASSIFICATION_PILOTS: 2
+DIRECT_CLASSIFICATION_PILOTS: 3
 POSITIVE_DIRECT_CHALLENGES: 1
 NEGATIVE_FAILURE_CHALLENGES: 1
-METHOD_BOUNDARY_CHALLENGES: 0
+METHOD_BOUNDARY_CHALLENGES: 1
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
 REPRODUCIBILITY_CASES: 0
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
@@ -281,4 +315,4 @@ CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
 
 ## Next / 다음
 
-Freeze `CLS-CH-003`, a direct method-boundary challenge, before execution. It should test whether Classification remains operationally distinct from Analysis, Comparison, Specification, and Diagnosis under frozen inputs and outputs, while allowing the evidence to reveal partial overlap or exact collapse if one actually occurs. Any such result must be recorded as a boundary finding, not used as an automatic survival, merger, absorption, or deletion decision.
+Freeze a competent-baseline challenge before execution. The baseline and DSD Classification must receive the same frozen task, schema/version, criterion source, membership logic, subject evidence, and claim-relevant bridges. The result may be `GAIN_ESTABLISHED` or `NO_GAIN`; neither result may be converted into an automatic method-survival, merger, absorption, or deletion decision.
