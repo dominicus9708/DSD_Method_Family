@@ -1,6 +1,6 @@
 # 07. DSD Classification / DSD 분류론
 
-Status: **pre-protocol boundary stage completed / Protocol v0.1 next**
+Status: **Executable Protocol v0.1 frozen / positive direct challenge next**
 
 Task: classify supplied subjects by explicit class criteria and preserved formation, property, comparison, aggregate, transition, or other declared features rather than by labels alone.
 
@@ -10,7 +10,7 @@ Typical outputs:
 - criterion-traceable class assignments and membership status;
 - classification criteria, feature provenance, and justification trace;
 - equivalence classes or partial-order groupings only when their relation obligations are established;
-- boundary, underdetermined, unclassified, blocked, and out-of-scope cases;
+- boundary, underdetermined, open-world-no-match, unclassified, blocked, and out-of-scope cases;
 - distinction between structural class and summary-statistic coincidence.
 
 Boundary: typology labels do not determine mathematics or semantics by name; every classification rule requires explicit criteria and a frozen membership decision rule. Pairwise similarity is not automatically equivalence-class membership, ordered labels are not automatically a partial order, aggregate equality is not automatically structural identity, a schema marked closed is not automatically proven exhaustive, and current class equality is not lineage identity.
@@ -20,7 +20,16 @@ Development files:
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
+- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - [`WORKLOG.md`](WORKLOG.md)
+
+Protocol lineage:
+
+```text
+TASK_INTERFACE_v0.1-draft.md
++ TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md
+-> PROTOCOL_v0.1.md
+```
 
 Boundary-stage result:
 
@@ -36,13 +45,15 @@ BOUNDARY_AMENDMENT_001: established
 Current evidence state:
 
 ```text
-DEDICATED_CLASSIFICATION_PROTOCOL: not established
+DEDICATED_CLASSIFICATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 DIRECT_CLASSIFICATION_PILOTS: 0
+POSITIVE_DIRECT_CHALLENGES: 0
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
 REPRODUCIBILITY_CASES: 0
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_CLASSIFICATION_EVIDENCE_STATUS: pre_validation
 ```
 
-Next: build executable `PROTOCOL_v0.1.md` from the historical Task Interface v0.1 draft plus Boundary Amendment 001. Protocol construction remains infrastructure and does not by itself validate the method or decide its survival, merger, absorption, or deletion.
+Protocol establishment is infrastructure rather than direct method evidence. The next valid step is a pre-frozen positive direct challenge against Protocol v0.1. PASS, FAIL, `NO_GAIN`, boundary, or underdetermined results must remain separate from any method survival, merger, absorption, or deletion decision.
