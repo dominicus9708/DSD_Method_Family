@@ -1,6 +1,6 @@
 # 07. DSD Classification / DSD 분류론
 
-Status: **Protocol v0.1 frozen / CLS-CH-001 positive direct challenge PASS / negative challenge next**
+Status: **Protocol v0.1 frozen / CLS-CH-001 and CLS-CH-002 PASS / method-boundary challenge next**
 
 Task: classify supplied subjects by explicit class criteria and preserved formation, property, comparison, aggregate, transition, or other declared features rather than by labels alone.
 
@@ -26,6 +26,8 @@ Development files:
 Direct evidence:
 - [`CLS-CH-001 precommit`](../../evidence/method_specific/classification/CLS-CH-001_precommit.md)
 - [`CLS-CH-001 positive direct classification`](../../evidence/method_specific/classification/CLS-CH-001_positive-direct-classification.md)
+- [`CLS-CH-002 precommit`](../../evidence/method_specific/classification/CLS-CH-002_precommit.md)
+- [`CLS-CH-002 negative/failure terminal distinction`](../../evidence/method_specific/classification/CLS-CH-002_negative-failure-terminal-distinction.md)
 
 Protocol lineage:
 
@@ -62,14 +64,42 @@ PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
 
 The case directly tested that `DEFINED_ZERO` and `APPLICABLE_BUT_UNDEFINED` remain distinct even when a non-authoritative display field is equal, while two different defined-nonzero values may share one class when the frozen target resolution classifies status rather than sign or magnitude.
 
+Second direct challenge:
+
+```text
+CASE_ID: CLS-CH-002
+CASE_CLASS: negative_failure_terminal_distinction
+PRECOMMIT_COMMIT: eef7ea276186c382953c3b207ffa6c7dc237f603
+PRECOMMIT_BLOB: a15719f5b7aebaf3b8df5c05f94f9b4f319ff464
+RESULT_COMMIT: ba9ef338c95912ebec14d89f944ad54a640b7686
+SCORE: 50/50 PASS
+RESULT: PASS
+METHOD_GAIN: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
+```
+
+It preserved seven distinct outcomes under frozen task semantics:
+
+```text
+BOUNDARY_CASE
+UNDERDETERMINED
+CRITERION_CONFLICT
+BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
+OUT_OF_SCOPE
+OPEN_WORLD_NO_CURRENT_MATCH
+UNCLASSIFIED_WITHIN_DECLARED_SCHEMA
+```
+
+All seven executions were protocol-conformant because each result represented the strongest justified status under its frozen scope, evidence, closure, and decision rules. In particular, open-world no-match was not upgraded to universal nonmembership, out-of-scope was not relabeled unclassified, and a missing bridge was not guessed from a raw label.
+
 Current evidence state:
 
 ```text
 DEDICATED_CLASSIFICATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
-DIRECT_CLASSIFICATION_PILOTS: 1
+DIRECT_CLASSIFICATION_PILOTS: 2
 POSITIVE_DIRECT_CHALLENGES: 1
-NEGATIVE_FAILURE_CHALLENGES: 0
+NEGATIVE_FAILURE_CHALLENGES: 1
 METHOD_BOUNDARY_CHALLENGES: 0
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
 REPRODUCIBILITY_CASES: 0
@@ -78,4 +108,4 @@ CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
 ```
 
-One constructed positive case does not establish superiority, independent validation, external validity, or permanent method independence. The next valid step is a pre-frozen negative/failure-terminal challenge testing that non-positive states remain distinguishable rather than collapsing into one generic failure state. PASS, FAIL, `NO_GAIN`, boundary, or underdetermined results remain separate from any method survival, merger, absorption, or deletion decision.
+Two constructed same-project direct cases do not establish superiority, independent validation, external validity, or permanent method independence. The next valid step is a pre-frozen direct method-boundary challenge against neighboring methods, especially Analysis, Comparison, Specification, and Diagnosis. A boundary-preservation or boundary-collapse result must be recorded as evidence rather than converted into a survival, merger, absorption, or deletion decision.
