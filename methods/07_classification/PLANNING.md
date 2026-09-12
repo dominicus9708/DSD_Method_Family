@@ -1,6 +1,6 @@
 # DSD Classification Planning / DSD 분류론 기획
 
-Status: **pre-protocol boundary stage completed / protocol next**  
+Status: **Executable Protocol v0.1 frozen / positive direct challenge next**  
 Date opened: **2026-09-12**
 
 ## Purpose / 목적
@@ -35,6 +35,7 @@ MULTI_CLASS_MEMBERSHIP != CRITERION_CONFLICT
 SCHEMA_STATUS_CLOSED != CLOSED_WORLD_COVERAGE_ESTABLISHED
 CRITERION_LIST != MEMBERSHIP_LOGIC
 PRE_GENERATION_SCHEMA != POST_GENERATION_SCHEMA
+NO_CURRENT_MATCH_IN_OPEN_SCHEMA != UNIVERSAL_NONMEMBERSHIP
 ```
 
 A classification claim is valid only relative to a declared task resolution, criterion set, class-schema semantics, schema identity/version, evidence/provenance basis, and membership decision rule.
@@ -44,7 +45,7 @@ A classification claim is valid only relative to a declared task resolution, cri
 1. ✅ Classification-specific Task Interface v0.1 draft.
 2. ✅ Pre-protocol boundary attacks: 18 cases.
 3. ✅ Boundary Amendment 001: 6 non-breaking refinement groups.
-4. ⬜ Executable Classification Protocol v0.1.
+4. ✅ Executable Classification Protocol v0.1 frozen.
 5. ⬜ Positive direct challenge.
 6. ⬜ Negative/failure-terminal challenge.
 7. ⬜ Direct method-boundary challenge against Analysis / Comparison / Specification / Diagnosis.
@@ -80,6 +81,44 @@ R6 uncertainty/tolerance and boundary-decision semantics
 
 The historical task-interface draft remains unchanged. The amendment is additional infrastructure and does not count as direct Classification evidence.
 
+## Protocol v0.1 result / 프로토콜 v0.1 결과
+
+`PROTOCOL_v0.1.md` prospectively integrates the historical Task Interface v0.1 draft and Boundary Amendment 001.
+
+The protocol freezes:
+
+```text
+schema identity/version and coverage semantics
+class-to-class relation and mutual-exclusion semantics
+criterion source, applicability, composition, and decision semantics
+feature status/provenance and uncertainty/boundary handling
+generated-class provenance and schema mutation
+special obligations for equivalence, hierarchy/partial order, aggregation, time dependence, and multi-label results
+membership-status vocabulary
+validity gates G1-G14
+binding operation sequence C1-C14
+protocol conformance ledger
+method-gain ledger
+reproducibility record
+protocol versioning rule
+```
+
+The membership-status vocabulary is:
+
+```text
+CLASSIFIED_SINGLE
+CLASSIFIED_MULTI
+BOUNDARY_CASE
+UNDERDETERMINED
+UNCLASSIFIED_WITHIN_DECLARED_SCHEMA
+OUT_OF_SCOPE
+CRITERION_CONFLICT
+BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
+OPEN_WORLD_NO_CURRENT_MATCH
+```
+
+Protocol v0.1 distinguishes subject/result status from protocol conformance. A boundary, blocked, conflict, open-world-no-match, or underdetermined outcome can be protocol-conformant when it correctly preserves the task limits.
+
 ## Evidence discipline / 증거 규율
 
 - Task-interface, boundary attack, amendment, and protocol construction are infrastructure, not direct method evidence.
@@ -104,29 +143,29 @@ No unused DSD layer is activated merely to make the classification record more e
 
 ## Minimum Classification result / 최소 산출물
 
-A valid run must record at least:
+A Protocol-v0.1 run must record at least:
 
 ```text
 CLASSIFICATION_TASK_ID
-SUBJECT_SET
+SUBJECT_ID
 TASK_SCOPE
 TARGET_RESOLUTION
-CLASS_SCHEMA_ID_AND_VERSION
-CLASS_SCHEMA_OR_GENERATION_POLICY
-SCHEMA_COVERAGE_CLAIM
-CLASS_CRITERIA
-CRITERION_SOURCE
-CRITERION_COMPOSITION_RULE
-DECISION_RULE
-FEATURE_BASIS_AND_PROVENANCE
-DSD_LAYERS_USED
-DOMAIN_BRIDGE_IF_ANY
-CLASS_ASSIGNMENTS
+CLASS_SCHEMA_ID_AND_VERSION_USED
+SCHEMA_COVERAGE_AND_CLOSURE_RECORD
+CLASS_ASSIGNMENT_OR_ASSIGNMENTS
 MEMBERSHIP_STATUS
+CRITERIA_SATISFIED
+CRITERIA_NOT_SATISFIED
+CRITERIA_UNRESOLVED
+CRITERION_COMPOSITION_RESULT
+DECISION_RULE_RESULT
+FEATURES_USED_WITH_PROVENANCE
+FEATURE_STATUS_RECORD
+UNCERTAINTY_OR_BOUNDARY_RECORD
 JUSTIFICATION_TRACE
-BOUNDARY_OR_UNDERDETERMINED_CASES
-MISSING_INFORMATION_RECORD
 LIMITS
+PROTOCOL_CONFORMANCE
+REPRODUCIBILITY_RECORD
 ```
 
 If a hierarchy, equivalence class, partial order, generated class, temporal class transition, aggregate criterion, uncertainty-sensitive boundary, or multi-label result is claimed, its additional obligations must be recorded explicitly.
@@ -134,18 +173,21 @@ If a hierarchy, equivalence class, partial order, generated class, temporal clas
 ## Current status / 현재 상태
 
 ```text
-DEDICATED_CLASSIFICATION_PROTOCOL: not established
+DEDICATED_CLASSIFICATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
 DIRECT_CLASSIFICATION_PILOTS: 0
+POSITIVE_DIRECT_CHALLENGES: 0
+NEGATIVE_FAILURE_CHALLENGES: 0
+METHOD_BOUNDARY_CHALLENGES: 0
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
 REPRODUCIBILITY_CASES: 0
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
-CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: proposed/developing
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_CLASSIFICATION_EVIDENCE_STATUS: pre_validation
 ```
 
 ## Next / 다음
 
-Build `PROTOCOL_v0.1.md` from the historical Task Interface v0.1 draft plus Boundary Amendment 001. The protocol must make the revised C1-C14 operation, terminal/nonterminal statuses, and validity gates executable without counting protocol construction as direct evidence.
+Freeze the first positive direct challenge before execution. It should require a justified terminal classification while also testing at least one claim-relevant distinction that a label-only or status-collapsing classifier could lose. The challenge result may be PASS or FAIL; the fixture and success criteria must not be altered after execution begins.
