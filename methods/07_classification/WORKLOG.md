@@ -202,6 +202,87 @@ CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_CLASSIFICATION_EVIDENCE_STATUS: pre_validation
 ```
 
+---
+
+## 2026-09-12 — Step 5 CLS-CH-001 positive direct challenge
+
+Precommitted the challenge before execution.
+
+```text
+PRECOMMIT_FILE: evidence/method_specific/classification/CLS-CH-001_precommit.md
+PRECOMMIT_COMMIT: 2c5944b2830201c8d9bdbbc3d945bb6bfb6f772d
+PRECOMMIT_BLOB: 057df677e6337625b53f14c89b4d744a782c468e
+RESULT_FILE: evidence/method_specific/classification/CLS-CH-001_positive-direct-classification.md
+RESULT_COMMIT: 8107d13f8b191199c202a324b8362e662ff6ab54
+```
+
+### Frozen task
+
+Constructed schema `CLS001-SCHEMA-v1` classified one applicable Property `q` at the q-status resolution:
+
+```text
+C-Z iff q_status == DEFINED_ZERO
+C-N iff q_status == DEFINED_NONZERO
+C-U iff q_status == APPLICABLE_BUT_UNDEFINED
+```
+
+The schema was frozen as disjoint and closed only inside a deliberately restricted fixture universe `U001` admitting exactly those three statuses.
+
+The subject set intentionally pressured two different distinctions:
+
+```text
+S1 DEFINED_ZERO / q=0 / legacy_display_q=0
+S2 APPLICABLE_BUT_UNDEFINED / no numeric q / legacy_display_q=0
+
+S3 DEFINED_NONZERO / q=+7
+S4 DEFINED_NONZERO / q=-3
+```
+
+Thus equal display output could not replace typed status, while unequal nonzero values could still share one class because the target resolution was status-only.
+
+### Execution result
+
+```text
+S1 -> C-Z / CLASSIFIED_SINGLE / CONFORMANT
+S2 -> C-U / CLASSIFIED_SINGLE / CONFORMANT
+S3 -> C-N / CLASSIFIED_SINGLE / CONFORMANT
+S4 -> C-N / CLASSIFIED_SINGLE / CONFORMANT
+
+VALIDITY_GATES: 14/14 PASS
+SUBJECT_LEVEL_CHECKS: 16/16 PASS
+GLOBAL_DISTINCTION_CHECKS: 6/6 PASS
+TOTAL: 36/36 PASS
+```
+
+Preserved distinctions:
+
+```text
+DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED
+EQUAL_LEGACY_DISPLAY != EQUAL_TYPED_STATUS
+COMMON_CLASS != EQUAL_VALUE
+COMMON_CLASS != OBJECT_IDENTITY
+```
+
+No hidden label semantics, criteria, bridge, transformation, lineage, diagnosis, aggregation reconstruction, or audit verdict was introduced.
+
+```text
+CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED_BY_THIS_CASE: no
+```
+
+### Evidence effect
+
+```text
+DIRECT_CLASSIFICATION_PILOTS: 1
+POSITIVE_DIRECT_CHALLENGES: 1
+NEGATIVE_FAILURE_CHALLENGES: 0
+METHOD_BOUNDARY_CHALLENGES: 0
+CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
+```
+
+The pass is one constructed same-project direct case. It does not establish external validity, independent validation, independent replication, superiority, or permanent method independence.
+
 ### Next
 
-Freeze and execute the first positive direct challenge. The fixture and success criteria must be frozen before execution, and the run must be allowed to fail without rewriting Protocol v0.1 merely to obtain a PASS.
+Freeze and execute `CLS-CH-002`, the negative/failure-terminal challenge. It must test whether legitimate non-positive classification outcomes remain separated rather than being collapsed into one generic failure or negative-membership status.
