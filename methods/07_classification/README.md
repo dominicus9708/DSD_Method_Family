@@ -1,6 +1,6 @@
 # 07. DSD Classification / DSD 분류론
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / CLS-APP-002 60/60 PASS / CLS-APP-003 60/60 PASS / frozen-axis maturity audit next**
+Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001~003 completed / CLS-AUD-001 28/28 PASS / maturity established / independent-evaluator infrastructure next**
 
 Task: classify supplied subjects by explicit class criteria and preserved formation, property, comparison, aggregate, transition, or other declared features rather than by labels alone.
 
@@ -24,7 +24,7 @@ Boundary: labels do not determine mathematical or semantic properties by name. E
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - [`WORKLOG.md`](WORKLOG.md)
 
-## Direct, external, and reproducibility evidence
+## Direct, external, reproducibility, and audit evidence
 
 - [`CLS-CH-001 precommit`](../../evidence/method_specific/classification/CLS-CH-001_precommit.md)
 - [`CLS-CH-001 positive direct classification`](../../evidence/method_specific/classification/CLS-CH-001_positive-direct-classification.md)
@@ -44,6 +44,8 @@ Boundary: labels do not determine mathematical or semantic properties by name. E
 - [`CLS-APP-002 NIST security-impact categorization`](../../evidence/method_specific/classification/CLS-APP-002_nist-security-impact-categorization.md)
 - [`CLS-APP-003 precommit`](../../evidence/method_specific/classification/CLS-APP-003_precommit.md)
 - [`CLS-APP-003 UNESCO World Heritage property types`](../../evidence/method_specific/classification/CLS-APP-003_unesco-world-heritage-property-types.md)
+- [`CLS-AUD-001 precommit`](../../evidence/method_specific/classification/CLS-AUD-001_precommit.md)
+- [`CLS-AUD-001 maturity review`](../../evidence/method_specific/classification/CLS-AUD-001_maturity-review.md)
 
 ## Protocol lineage
 
@@ -166,6 +168,41 @@ TOTAL: 60/60 PASS
 
 Fujisan remained cultural at the frozen property-type resolution despite its mountain/stratovolcano physical form because the decision used UNESCO criterion-family membership rather than name or appearance.
 
+## CLS-AUD-001 — frozen-axis maturity audit
+
+The audit froze fifteen maturity axes before scoring and used only pre-audit evidence. Axis results were:
+
+```text
+M1  PASS
+M2  PASS
+M3  PASS
+M4  PASS
+M5  CONDITIONAL_PASS
+M6  PASS
+M7  PASS
+M8  PASS
+M9  PASS
+M10 UNRESOLVED_BUT_BOUNDED
+M11 PASS
+M12 PASS
+M13 PASS
+M14 PASS
+M15 PASS
+```
+
+Audit execution and maturity decision:
+
+```text
+AUDIT_EXECUTION_SCORE: 28/28 PASS
+FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: established
+CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The established label is limited to method/protocol evidence maturity under the current project framework. Independent validation, independent replication, measured practical superiority, universal cross-domain generality, and permanent registry survival remain unestablished.
+
 ## Core guards
 
 ```text
@@ -209,7 +246,8 @@ EXTERNAL_CLASSIFICATION_APPLICATIONS: 3
 EXTERNAL_CLASSIFICATION_DOMAINS: 3
 REPRODUCIBILITY_CASES: 1
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
-CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
+INDEPENDENT_REPLICATION: not established
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
@@ -219,4 +257,4 @@ Current evidence does not establish independent validation, universal cross-doma
 
 ## Next development step
 
-Precommit and execute the **frozen-axis Classification maturity audit**. The audit must evaluate accumulated evidence under predeclared axes rather than promote maturity by chronology or case count alone.
+Prepare `CLS-IEP-001`, the **independent-evaluator infrastructure package**. The package may freeze reviewer instructions, an artifact manifest and hashes, a minimally cued or blind execution rule where feasible, a submission template, and a result-return schema. Preparing or sending the package does not itself increment independent-validation or independent-replication counters; those remain unchanged until an external evaluator actually executes and returns a frozen result.
