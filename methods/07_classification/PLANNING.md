@@ -1,11 +1,11 @@
 # DSD Classification Planning / DSD 분류론 기획
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~005 PASS / CLS-CH-004~005 NO_GAIN / first external application next**  
+Status: **Protocol v0.1 frozen / CLS-CH-001~005 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / deterministic retrace next**  
 Date opened: **2026-09-12**
 
 ## Purpose / 목적
 
-Develop **DSD Classification / DSD 분류론** as an independent method under **Field I. Structural Description & Understanding**.
+Develop **DSD Classification / DSD 분류론** as an independent method under **Field I: Structural Description & Understanding**.
 
 Classification receives one or more supplied subjects together with a declared classification scope, class schema or class-generation policy, class-relevant criteria, feature provenance, and any required DSD/domain bridge. It returns criterion-traceable class assignments, boundary or underdetermined cases, and class-relation structure without inferring mathematical or semantic properties from labels alone.
 
@@ -45,7 +45,7 @@ A classification claim is valid only relative to a declared task resolution, cri
 7. ✅ Direct method-boundary challenge — `CLS-CH-003`, 48/48 PASS.
 8. ✅ Competent-baseline challenge — `CLS-CH-004`, 50/50 PASS / `NO_GAIN`.
 9. ✅ Strongest-reasonable-baseline comparison — `CLS-CH-005`, 60/60 PASS / `NO_GAIN`.
-10. ⬜ First external application.
+10. ✅ First external application — `CLS-APP-001`, 50/50 PASS.
 11. ⬜ Deterministic same-project retrace.
 12. ⬜ Additional materially different external domains.
 13. ⬜ Maturity audit under frozen axes.
@@ -62,18 +62,7 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 NONBREAKING_REFINEMENT_GROUPS: 6
 ```
 
-Amendment 001 added:
-
-```text
-R1 CLASS_RELATION_SEMANTICS + MUTUAL_EXCLUSION_RULES
-R2 CLASS_SCHEMA_ID_AND_VERSION + SCHEMA_COVERAGE_CLAIM + CLOSED_SCHEMA_CLOSURE_EVIDENCE
-R3 EQUIVALENCE_CLOSURE_REQUIREMENT
-R4 GENERATED_CLASS_PROVENANCE + CLASS_GENERATION_FREEZE_OR_MUTATION_POLICY + GENERATION_STOP_OR_CLOSURE_POLICY
-R5 CRITERION_COMPOSITION_RULE + DECISION_RULE
-R6 FEATURE_UNCERTAINTY_OR_TOLERANCE_POLICY + BOUNDARY_DECISION_SEMANTICS
-```
-
-Historical task-interface and amendment records remain unchanged.
+Amendment 001 added class-relation semantics, schema identity/version and closure evidence, equivalence closure, generated-class provenance/schema mutation, criterion composition/decision rules, and uncertainty/boundary semantics. Historical task-interface and amendment records remain unchanged.
 
 ## Protocol v0.1 / 실행 프로토콜
 
@@ -93,7 +82,7 @@ BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
 OPEN_WORLD_NO_CURRENT_MATCH
 ```
 
-## Direct constructed evidence / 직접 구성 증거
+## Constructed evidence / 구성 증거
 
 ```text
 CLS-CH-001  36/36 PASS
@@ -103,62 +92,71 @@ CLS-CH-004  50/50 PASS / NO_GAIN
 CLS-CH-005  60/60 PASS / NO_GAIN
 ```
 
-`CLS-CH-001` established one constructed typed-status classification case. `CLS-CH-002` preserved seven distinct non-positive result states. `CLS-CH-003` tested the Classification boundary against Analysis, Comparison, Specification, and Diagnosis and found four local `PARTIAL_OVERLAP_NOT_COLLAPSE` results with no exact-collapse candidate in the frozen tasks.
+`CLS-CH-001` tested typed-status classification. `CLS-CH-002` preserved seven distinct non-positive result states. `CLS-CH-003` tested the Classification boundary against Analysis, Comparison, Specification, and Diagnosis and found four local `PARTIAL_OVERLAP_NOT_COLLAPSE` results with no exact-collapse candidate in the frozen tasks.
 
-### CLS-CH-004 — competent baseline
+`CLS-CH-004` used `B0_TYPED_RULE_CLASSIFIER` and returned `NO_GAIN` when the equally informed baseline matched typed-status, overlap, open-world, boundary, bridge, and retraceability behavior.
+
+`CLS-CH-005` used `B1_STRONG_TYPED_CLASSIFICATION_ENGINE` and tested generated/versioned schemas, veto and k-of-n composition, aggregate collision/noninjectivity, history-dependent temporal classification with lineage separation, and equivalence closure. DSD and B1 matched every frozen result.
 
 ```text
-PRECOMMIT_COMMIT: 737761726107b67d2dc66da3559d69f11c1d91d6
-PRECOMMIT_BLOB: 9e5f3cb2c32ac2be3fc7b9880cdb56231e2baac1
-RESULT_COMMIT: 61f938e541153b441f913d32cd2dc95f596eb16d
-BASELINE: B0_TYPED_RULE_CLASSIFIER
 CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
-SCORE: 50/50 PASS
-PROTOCOL_REVISION_REQUIRED: no
+SCORE: 60/60 PASS
+STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
 ```
 
-The competent baseline matched DSD on typed status, legitimate multi-membership, open-world no-match, uncertainty-boundary handling, missing-bridge blockage, and retraceability when given the same semantics.
-
-### CLS-CH-005 — strongest-reasonable baseline
+## CLS-APP-001 — first external application
 
 Precommit and result:
 
 ```text
-PRECOMMIT_COMMIT: cbe3ef209dd1434e2b2f7973753071ef6087d31e
-PRECOMMIT_BLOB: 507f41efae1e0788ecc321f06239247269d10374
-RESULT_COMMIT: 929810d333fefee81841348a492ca3963f80d7ce
-BASELINE: B1_STRONG_TYPED_CLASSIFICATION_ENGINE
+PRECOMMIT_COMMIT: 795f6570405a48840495a59851b82d6eb5044b7a
+PRECOMMIT_BLOB: b8f0589db5c2e5b8a7e5f43e9ee97a6279c85656
+RESULT_COMMIT: e0b086609c1af676aca84f371d615f0f3ad42e9b
+EXTERNAL_DOMAIN: HTTP semantics / HTTP status-code response classes
 ```
 
-The stronger task family covered:
+Frozen public sources:
 
 ```text
-R1 generated class + schema v1->v2 + no retroactive membership
-R2 veto + k-of-n criterion composition
-R3 aggregate collision + noninjectivity + reconstruction limit
-R4 history-dependent temporal class + lineage separation
-R5 equivalence-class closure + non-authoritative similarity rejection
+RFC 9110 Section 15
+IANA Hypertext Transfer Protocol (HTTP) Status Code Registry
 ```
 
-DSD and B1 matched on every frozen task-level result. Gain evaluation:
+The externally fixed criterion was the first-digit HTTP response class. Six external records produced:
 
 ```text
-G1 SCHEMA_VERSION_AND_GENERATION_GAIN: NOT_ESTABLISHED
-G2 CRITERION_COMPOSITION_GAIN: NOT_ESTABLISHED
-G3 AGGREGATE_INFORMATION_LOSS_GAIN: NOT_ESTABLISHED
-G4 TEMPORAL_HISTORY_AND_LINEAGE_SEPARATION_GAIN: NOT_ESTABLISHED
-G5 EQUIVALENCE_CLOSURE_GAIN: NOT_ESTABLISHED
-G6 STATUS_SCHEMA_AND_RELATION_TRACE_GAIN: NOT_ESTABLISHED
-G7 TERMINAL_AND_RETRACEABILITY_GAIN: NOT_ESTABLISHED
+103 Early Hints                     -> HTTP-1XX-INFORMATIONAL / CLASSIFIED_SINGLE
+204 No Content                      -> HTTP-2XX-SUCCESSFUL    / CLASSIFIED_SINGLE
+304 Not Modified                    -> HTTP-3XX-REDIRECTION   / CLASSIFIED_SINGLE
+418 (Unused)                        -> HTTP-4XX-CLIENT-ERROR  / CLASSIFIED_SINGLE
+511 Network Authentication Required -> HTTP-5XX-SERVER-ERROR  / CLASSIFIED_SINGLE
+471 unrecognized / IANA unassigned  -> HTTP-4XX-CLIENT-ERROR  / CLASSIFIED_SINGLE
+```
 
-CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
-SCORE: 60/60 PASS
-STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
+The execution preserved:
+
+```text
+STATUS_DESCRIPTION != CLASS_CRITERION
+REGISTRY_ASSIGNED != RESPONSE_CLASS_MEMBER
+REGISTRY_UNASSIGNED != CLASSLESS
+LAST_TWO_DIGITS != CLASS_CRITERION
+UNRECOGNIZED_STATUS != NO_RESPONSE_CLASS
+```
+
+Result:
+
+```text
+SOURCE/PRECOMMIT/IMMUTABILITY: 10/10 PASS
+DSD CLASSIFICATION EXECUTION: 18/18 PASS
+EXTERNAL SOURCE CORRECTNESS/PROVENANCE: 14/14 PASS
+SCOPE/EVIDENCE DISCIPLINE: 8/8 PASS
+TOTAL: 50/50 PASS
+CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-The constructed strongest-baseline result shows only that a strong equally informed non-DSD engine can match the frozen Classification outputs and discipline. It does not establish method redundancy, failure, absorption, merger, or deletion.
+This is the first external Classification application and first external Classification domain. External origin is not independent evaluator validation.
 
 ## Evidence discipline / 증거 규율
 
@@ -184,7 +182,8 @@ METHOD_BOUNDARY_CHALLENGES: 1
 NO_GAIN_CLASSIFICATION_CASES: 2
 BASELINE_CLASSIFICATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
-EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
+EXTERNAL_CLASSIFICATION_APPLICATIONS: 1
+EXTERNAL_CLASSIFICATION_DOMAINS: 1
 REPRODUCIBILITY_CASES: 0
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
 CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
@@ -195,4 +194,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next / 다음
 
-Precommit and execute `CLS-APP-001`, the first external Classification application. It must use a stable public source that supplies an externally anchored class schema or criterion and a real source-backed subject record. The project must not invent both the classes and the evidence. Source/version provenance, external-domain correctness, and DSD protocol conformance must be recorded on separate ledgers.
+Precommit and execute `CLS-CH-006`, a deterministic same-project retrace. It must select a previously executed Classification case, reuse the original frozen protocol/task/source records, and reproduce the same task-level result, distinction ledger, and protocol-conformance status without changing the original evidence. A successful retrace increments same-project reproducibility only and must not be represented as independent replication.
