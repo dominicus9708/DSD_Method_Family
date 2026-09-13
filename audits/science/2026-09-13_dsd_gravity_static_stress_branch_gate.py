@@ -11,6 +11,8 @@ M_SUN = 1.98847e30
 
 BUCHDAHL_LAMBDA = 9.0 / 8.0
 CENTRAL_DEC_LAMBDA = 4.0 / 3.0
+ANDREASSON_DEC_COMPACTNESS = 48.0 / 49.0
+ANDREASSON_DEC_LAMBDA = 49.0 / 48.0
 
 
 @dataclass(frozen=True)
@@ -159,6 +161,14 @@ def audit(mass_msun: float) -> list[tuple[str, bool, str]]:
         "R<=r_s is not misclassified as an ordinary static horizonless stellar branch",
     ))
 
+    checks.append((
+        "ANDREASSON_DEC_STATIC_ANISOTROPIC_BOUND_STAYS_OUTSIDE_HORIZON",
+        ANDREASSON_DEC_COMPACTNESS < 1.0
+        and math.isclose(1.0 / ANDREASSON_DEC_COMPACTNESS, ANDREASSON_DEC_LAMBDA, rel_tol=1e-15)
+        and ANDREASSON_DEC_LAMBDA > 1.0,
+        "under the cited static spherical GR assumptions plus DEC, 2M/R<=48/49 implies R/r_s>=49/48>1",
+    ))
+
     state = StaticControlState(mass_msun, 1.5)
     r = 0.8 * state.radius_m
     m = state.mass_kg * (r / state.radius_m)**3
@@ -201,6 +211,8 @@ def print_table(mass_msun: float) -> None:
     print(f"mass_msun={mass_msun:.12g}")
     base = StaticControlState(mass_msun, 1.0)
     print(f"schwarzschild_radius_km={base.r_s_m/1000.0:.12g}")
+    print(f"andreasson_DEC_static_bound_compactness={ANDREASSON_DEC_COMPACTNESS:.12g}")
+    print(f"andreasson_DEC_static_bound_lambda={ANDREASSON_DEC_LAMBDA:.12g}")
     print()
     print("Constant-density isotropic control")
     print("lambda   R_km              rho_bar_kg_m3      p_c/epsilon        classification")
@@ -221,8 +233,8 @@ def print_table(mass_msun: float) -> None:
     print("Boundary")
     print("- The constant-density interior-Schwarzschild model is only a control witness.")
     print("- Its incompressible EOS is not accepted as a causal physical core model.")
-    print("- Static isotropic failure does not close anisotropic or dynamical finite-3D branches.")
-    print("- Anisotropic support requires an explicit constitutive law for p_t-p_r.")
+    print("- Under the cited Andreasson static spherical assumptions plus DEC, anisotropy still cannot reach the horizon: R/r_s >= 49/48.")
+    print("- More general anisotropic models require explicit constitutive and energy-condition choices; anisotropy is not a free tuning parameter.")
     print("- R<=r_s must be studied with a horizon-penetrating/dynamical formulation, not by extending this static control.")
     print("- No DSD rank collapse or physical information destruction is inferred.")
     print()
