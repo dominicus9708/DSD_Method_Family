@@ -2,7 +2,7 @@
 
 Date: 2026-09-13
 
-Status: **PASS_WITH_BOUNDARY / STATIC_ISOTROPIC_CONTROL_CLOSED / ANISOTROPIC_AND_DYNAMIC_BRANCHES_OPEN**
+Status: **PASS_WITH_BOUNDARY / STATIC_HORIZON_APPROACH_BLOCKED_UNDER_TESTED_STANDARD_CONDITIONS / DYNAMIC_BRANCH_REQUIRED**
 
 ## Purpose
 
@@ -132,11 +132,39 @@ Therefore \(M\) and \(R\) alone do not determine the configuration. A constituti
 
 or equivalent additional matter structure is required.
 
-The audit script explicitly verifies that two states with the same local \(\rho\) and \(p_r\), but different \(\Delta\), have different required radial pressure gradients.
+The audit script explicitly verifies that two states with the same local \(\rho\) and \(p_r\), but different \(\Delta\), have different required radial pressure gradients. Anisotropy therefore cannot be used as a free parameter merely to force a desired radius.
 
-This is why anisotropy cannot be used as a free parameter merely to force a desired radius.
+### Static anisotropic DEC bound
 
-A relevant standard-GR compactness result is H. Andreasson, *Sharp bounds on 2m/r of general spherically symmetric static objects*, arXiv:gr-qc/0702137. It shows that compactness bounds depend on explicit inequalities imposed on radial and tangential pressures. Hence anisotropy relaxes the isotropic assumptions but does not remove the need for physical constitutive restrictions.
+H. Andreasson, *Sharp bounds on 2m/r of general spherically symmetric static objects*, arXiv:gr-qc/0702137, proves that for static spherically symmetric objects satisfying its stated assumptions
+
+\[
+p_r+2p_t\le \Omega\rho,
+\]
+
+one has
+
+\[
+\frac{2m}{r}
+\le
+\frac{(1+2\Omega)^2-1}{(1+2\Omega)^2}.
+\]
+
+The paper notes that a model with nonnegative radial pressure satisfying the dominant energy condition obeys the hypotheses with \(\Omega=3\). Thus
+
+\[
+\frac{2M}{R}\le\frac{48}{49},
+\]
+
+or, restoring \(r_s=2GM/c^2\),
+
+\[
+\boxed{\frac{R}{r_s}\ge\frac{49}{48}\simeq1.0208333>1.}
+\]
+
+Therefore allowing static anisotropy does **not** reach the horizon while retaining those assumptions and the DEC. This is stronger for the present purpose than merely observing that the generalized TOV equation contains an anisotropy term.
+
+It does not rule out every imaginable anisotropic stress tensor: a model that violates the theorem's hypotheses must be audited separately rather than treated as automatically admissible.
 
 ## Horizon boundary
 
@@ -148,7 +176,7 @@ The ordinary static stellar TOV control contains the factor
 
 The present audit therefore does **not** extend the ordinary static horizonless-star control through \(R\le r_s\).
 
-This does not prove that a finite three-dimensional successor core is impossible. It means only that the next stage for
+This does not prove that a finite three-dimensional successor core is impossible. It means that the next stage for
 
 \[
 0<R_{\rm core}\le r_s
@@ -161,7 +189,7 @@ must use a horizon-penetrating and genuinely dynamical formulation, or another e
 The following implications are rejected:
 
 \[
-\text{static isotropic branch fails}
+\text{static branch fails}
 \not\Rightarrow
 \text{finite 3D support fails},
 \]
@@ -184,18 +212,19 @@ The new re-formed-core branch remains open only if its stress-energy and transit
 
 ## Audit result
 
-Script result: **12/12 PASS**.
+Script result: **13/13 PASS**.
 
 Closed at this stage:
 - ordinary constant-density isotropic static control as a candidate route toward the horizon;
 - silent continuation of that control through the Buchdahl singularity;
+- static anisotropic horizon approach under the cited Andreasson assumptions plus DEC;
 - treating anisotropy as an unconstrained tuning parameter;
 - inferring dimensional collapse from static-branch failure.
 
 Still open:
-- constitutively closed anisotropic finite-3D configurations outside the horizon;
+- static anisotropic models that explicitly depart from one or more of those hypotheses, subject to separate physical audit;
 - dynamical finite-3D successor-core evolution toward and through horizon formation;
-- whether any causal, energy-condition-controlled re-formed stress-energy branch admits a nonzero minimum core radius.
+- whether any causal, energy-condition-controlled re-formed stress-energy branch admits a nonzero minimum core radius dynamically.
 
 ## Next step — BH-RB-009
 
