@@ -374,3 +374,189 @@ This is still constructed same-project direct evidence. It does not establish ex
 ### Next
 
 Freeze and execute `CLS-CH-003`, a direct method-boundary challenge against Analysis, Comparison, Specification, and Diagnosis. The challenge must permit preservation, partial overlap, or exact collapse as possible results, and none of those outcomes may be treated automatically as a method-survival, merger, absorption, or deletion decision.
+
+---
+
+## 2026-09-13 — Step 7 CLS-CH-003 direct method-boundary challenge
+
+Precommitted `CLS-CH-003` before execution and applied the same five-interface test to Analysis, Comparison, Specification, and Diagnosis.
+
+```text
+PRECOMMIT_FILE: evidence/method_specific/classification/CLS-CH-003_precommit.md
+PRECOMMIT_COMMIT: 494711e72f9a9d025e59a66269e3af5c855a9e42
+PRECOMMIT_BLOB: 25d8be7f899d0cf6ff5e496f59d9c593e713dc41
+RESULT_FILE: evidence/method_specific/classification/CLS-CH-003_direct-method-boundary.md
+RESULT_COMMIT: 44b6095132dd9233ab85986af87d15c5f799b55d
+```
+
+Frozen boundary dimensions:
+
+```text
+INPUTS
+OPERATION
+OUTPUTS
+FAILURE_OR_NO_GAIN_CRITERIA
+VALIDATION_STANDARD
+```
+
+The precommit allowed `DISTINCT_AT_TASK_INTERFACE`, `PARTIAL_OVERLAP_NOT_COLLAPSE`, and `EXACT_COLLAPSE_CANDIDATE` as possible findings.
+
+### Execution result
+
+```text
+Analysis      -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Comparison    -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Specification -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Diagnosis     -> PARTIAL_OVERLAP_NOT_COLLAPSE
+EXACT_COLLAPSE_CANDIDATES_FOUND: 0/4
+TOTAL: 48/48 PASS
+CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED: no
+```
+
+This is a local boundary result only. Shared subjects, observations, status records, and handoff carriers did not imply identical operation, output, failure semantics, or validation target.
+
+### Evidence effect
+
+```text
+DIRECT_CLASSIFICATION_PILOTS: 3
+METHOD_BOUNDARY_CHALLENGES: 1
+CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
+```
+
+### Next
+
+Run the competent-baseline challenge without weakening the baseline. A fair `NO_GAIN` result must remain admissible.
+
+---
+
+## 2026-09-13 — Step 8 CLS-CH-004 competent-baseline challenge
+
+Precommitted and executed `CLS-CH-004` against `B0_TYPED_RULE_CLASSIFIER`.
+
+```text
+PRECOMMIT_FILE: evidence/method_specific/classification/CLS-CH-004_precommit.md
+PRECOMMIT_COMMIT: 737761726107b67d2dc66da3559d69f11c1d91d6
+PRECOMMIT_BLOB: 9e5f3cb2c32ac2be3fc7b9880cdb56231e2baac1
+RESULT_FILE: evidence/method_specific/classification/CLS-CH-004_competent-baseline-no-gain.md
+RESULT_COMMIT: 61f938e541153b441f913d32cd2dc95f596eb16d
+```
+
+The baseline received the same typed status, schema/version, coverage/closure, criterion, decision, overlap/exclusion, uncertainty, bridge, and terminal semantics as DSD Classification.
+
+### Execution result
+
+```text
+Q1 typed status -> DSD/B0 C-U / CLASSIFIED_SINGLE
+Q2 overlap -> DSD/B0 {K-A,K-B} / CLASSIFIED_MULTI
+Q3 open world -> DSD/B0 OPEN_WORLD_NO_CURRENT_MATCH
+Q4 uncertainty -> DSD/B0 BOUNDARY_CASE
+Q5 missing bridge -> DSD/B0 BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
+
+SCORE: 50/50 PASS
+CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
+PROTOCOL_REVISION_REQUIRED: no
+```
+
+All six gain dimensions were `NOT_ESTABLISHED` because B0 matched the claim-relevant distinctions and retained sufficient retrace records.
+
+### Evidence effect
+
+```text
+DIRECT_CLASSIFICATION_PILOTS: 4
+NO_GAIN_CLASSIFICATION_CASES: 1
+BASELINE_CLASSIFICATION_CASES: 1
+STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: not established
+```
+
+`NO_GAIN` was not converted into method failure, merger, absorption, deletion, or redundancy evidence.
+
+### Next
+
+Run a materially stronger baseline challenge covering obligations not exhausted by the competent baseline.
+
+---
+
+## 2026-09-13 — Step 9 CLS-CH-005 strongest-reasonable-baseline challenge
+
+Precommitted `CLS-CH-005` before execution.
+
+```text
+PRECOMMIT_FILE: evidence/method_specific/classification/CLS-CH-005_precommit.md
+PRECOMMIT_COMMIT: cbe3ef209dd1434e2b2f7973753071ef6087d31e
+PRECOMMIT_BLOB: 507f41efae1e0788ecc321f06239247269d10374
+RESULT_FILE: evidence/method_specific/classification/CLS-CH-005_strongest-reasonable-baseline.md
+RESULT_COMMIT: 929810d333fefee81841348a492ca3963f80d7ce
+BASELINE: B1_STRONG_TYPED_CLASSIFICATION_ENGINE
+```
+
+The frozen task family added five materially richer pressures:
+
+```text
+R1 generated class + prospective schema v1->v2 transition + no retroactivity
+R2 conjunction/veto + k-of-n criterion composition
+R3 aggregate collision + noninjectivity + reconstruction limit
+R4 history-dependent temporal classification + lineage separation
+R5 equivalence-class closure + similarity non-authority
+```
+
+### Execution result
+
+```text
+R1 DSD/B1:
+  v1 OPEN_WORLD_NO_CURRENT_MATCH
+  generate K-GEN-BLUE -> schema v2
+  v2 K-GEN-BLUE / CLASSIFIED_SINGLE
+  no retroactive v1 membership
+
+R2 DSD/B1:
+  K-ELIGIBLE vetoed
+  K-REVIEW / CLASSIFIED_SINGLE
+
+R3 DSD/B1:
+  A3 K-ZERO-SUPPORT / CLASSIFIED_SINGLE
+  B3 K-EQUAL-SPLIT / CLASSIFIED_SINGLE
+  equal aggregate retained as noninjective collision
+
+R4 DSD/B1:
+  A4 K-RECOVERED / CLASSIFIED_SINGLE
+  B4 K-STABLE / CLASSIFIED_SINGLE
+  current-state equality != temporal class or lineage identity
+
+R5 DSD/B1:
+  equivalence classes {E1,E2}, {E3,E4}
+  reflexive/symmetric/transitive closure PASS
+  legacy similarity not used as membership criterion
+
+SCORE: 60/60 PASS
+CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
+STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+All seven gain dimensions were `NOT_ESTABLISHED` because B1 preserved the same schema-generation, composition, aggregate-information-loss, temporal/lineage, equivalence-closure, trace, and terminal distinctions.
+
+### Current counters after Step 9
+
+```text
+DIRECT_CLASSIFICATION_PILOTS: 5
+POSITIVE_DIRECT_CHALLENGES: 1
+NEGATIVE_FAILURE_CHALLENGES: 1
+METHOD_BOUNDARY_CHALLENGES: 1
+NO_GAIN_CLASSIFICATION_CASES: 2
+BASELINE_CLASSIFICATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
+EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
+REPRODUCIBILITY_CASES: 0
+INDEPENDENT_CLASSIFICATION_VALIDATION: not established
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
+CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
+```
+
+The result establishes only the strongest-reasonable-baseline category at constructed-evidence level. It does not establish external applicability, independent validation, practical superiority, maturity, permanent independence, or redundancy.
+
+### Next
+
+Precommit and execute `CLS-APP-001`, the first external Classification application, using a stable public source that supplies an externally anchored class schema or classification criterion and a real source-backed subject record. Keep external-domain correctness separate from DSD protocol conformance.
