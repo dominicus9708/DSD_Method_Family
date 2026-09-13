@@ -1,6 +1,6 @@
 # DSD Classification Planning / DSD 분류론 기획
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / CLS-APP-002 60/60 PASS / one more non-cyber external domain before maturity audit**  
+Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001~003 completed / frozen-axis maturity audit next**  
 Date opened: **2026-09-12**
 
 ## Purpose / 목적
@@ -32,6 +32,8 @@ AGGREGATE_EQUALITY != STRUCTURAL_CLASS_IDENTITY
 NO_GAIN != METHOD_ABSORPTION_PROOF
 SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 SECURITY_CATEGORY_VECTOR != OVERALL_SYSTEM_IMPACT_CLASS
+PROPERTY_NAME_OR_PHYSICAL_APPEARANCE != PROPERTY_TYPE_CRITERION
+PROPERTY_TYPE_CLASSIFICATION != INSCRIPTION_ELIGIBILITY_DECISION
 ```
 
 A classification claim is valid only relative to a declared task resolution, criterion set, class-schema semantics, schema identity/version, evidence/provenance basis, membership decision rule, and claim-relevant closure/bridge record.
@@ -49,7 +51,7 @@ A classification claim is valid only relative to a declared task resolution, cri
 9. ✅ Strongest-reasonable-baseline comparison — `CLS-CH-005`, 60/60 PASS / `NO_GAIN`.
 10. ✅ First external application — `CLS-APP-001`, 50/50 PASS.
 11. ✅ Deterministic same-project retrace — `CLS-CH-006`, 48/48 PASS.
-12. 🟨 Additional materially different external domains — `CLS-APP-002` 60/60 PASS; one non-cyber domain remains before audit.
+12. ✅ Additional materially different external domains — `CLS-APP-002`, 60/60 PASS; `CLS-APP-003`, 60/60 PASS. Three external domains total.
 13. ⬜ Maturity audit under frozen axes.
 14. ⬜ Independent-evaluator infrastructure only if the accumulated evidence warrants it.
 
@@ -110,7 +112,6 @@ STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidenc
 
 ```text
 PRECOMMIT_COMMIT: 795f6570405a48840495a59851b82d6eb5044b7a
-PRECOMMIT_BLOB: b8f0589db5c2e5b8a7e5f43e9ee97a6279c85656
 RESULT_COMMIT: e0b086609c1af676aca84f371d615f0f3ad42e9b
 EXTERNAL_DOMAIN: HTTP semantics / HTTP status-code response classes
 TOTAL: 50/50 PASS
@@ -122,7 +123,6 @@ The run preserved description/registry status separately from the RFC first-digi
 
 ```text
 PRECOMMIT_COMMIT: 011df55acbe1a989d138757e6c80c78da5e787a4
-PRECOMMIT_BLOB: e707ed6fa0a53897f44da1f1b0664861904e177b
 RESULT_COMMIT: e8fed125199d0285ad8f439cf3ab97fb78e4ec8b
 RETRACE_TARGET: CLS-APP-001
 TOTAL: 48/48 PASS
@@ -135,37 +135,39 @@ This is artifact-based same-project reproducibility only, not blind or independe
 
 ```text
 PRECOMMIT_COMMIT: 7949bd6819a4db1f2548db2e0b53a9f5315c30c5
-PRECOMMIT_BLOB: 61b226244c3b1fc4fb87514578996b6f730704eb
 RESULT_COMMIT: 5ee5567ba2f8d35a60dd24673f3aca7ad06adba8
 EXTERNAL_DOMAIN: information-security impact categorization
 SOURCE: NIST FIPS 199 + FIPS 200
 TOTAL: 60/60 PASS
 ```
 
-The application moved beyond a single numeric range rule and exercised a multi-axis/state-aware external classification structure:
+The application exercised a multi-axis/state-aware external classification structure and preserved vector/scalar, information-type/system-level `NA`, source-object identity, and initial/final adjusted-state distinctions.
+
+## CLS-APP-003 — UNESCO World Heritage property types
 
 ```text
-I1 contract information             -> (MODERATE, MODERATE, LOW)
-I2 acquisition administrative       -> (LOW, LOW, LOW)
-I3 SCADA sensor data                -> (NA, HIGH, HIGH)
-I4 SCADA administrative             -> (LOW, LOW, LOW)
-S1 acquisition system               -> (MODERATE, MODERATE, LOW) -> MODERATE-IMPACT SYSTEM
-S2 SCADA initial                    -> (LOW, HIGH, HIGH) -> HIGH-IMPACT SYSTEM
-S3 SCADA final adjusted             -> (MODERATE, HIGH, HIGH) -> HIGH-IMPACT SYSTEM
+PRECOMMIT_COMMIT: fcab24281ed71b2a714e09cba3e3a269af4d5056
+PRECOMMIT_BLOB: 0cc7a58fd6e77b7d9cc646cb18219c03211bd837
+RESULT_COMMIT: a1a881e1a341d8b51c3220b6aec87ff68ea52d91
+EXTERNAL_DOMAIN: cultural-natural heritage property-type classification
+SOURCE: UNESCO World Heritage Centre criteria framework + official property records
+TOTAL: 60/60 PASS
 ```
 
-It preserved:
+Frozen property results:
 
 ```text
-SECURITY_CATEGORY_VECTOR != OVERALL_SYSTEM_IMPACT_CLASS
-SAME_OVERALL_IMPACT != SAME_SECURITY_CATEGORY_VECTOR
-SAME_SECURITY_CATEGORY_VECTOR != SAME_OBJECT_IDENTITY
-INFORMATION_TYPE_NA_ALLOWED != SYSTEM_NA_ALLOWED
-INITIAL_SYSTEM_CATEGORY != FINAL_ADJUSTED_SYSTEM_CATEGORY
-DOCUMENTED_ADJUSTMENT != POST_HOC_REPAIR
+Taj Mahal {(i)}
+  -> CULTURAL_WORLD_HERITAGE_PROPERTY
+Fujisan {(iii),(vi)}
+  -> CULTURAL_WORLD_HERITAGE_PROPERTY
+Great Barrier Reef {(vii),(viii),(ix),(x)}
+  -> NATURAL_WORLD_HERITAGE_PROPERTY
+Historic Sanctuary of Machu Picchu {(i),(iii),(vii),(ix)}
+  -> MIXED_WORLD_HERITAGE_PROPERTY
 ```
 
-No protocol revision or shared-core reopen was required. External origin is still not independent evaluator validation.
+The run used symbolic criterion-family membership rather than numeric ranges, name semantics, or physical appearance. Fujisan remained cultural at the frozen target resolution even though it is physically a mountain/stratovolcano.
 
 ## Evidence discipline / 증거 규율
 
@@ -191,8 +193,8 @@ METHOD_BOUNDARY_CHALLENGES: 1
 NO_GAIN_CLASSIFICATION_CASES: 2
 BASELINE_CLASSIFICATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
-EXTERNAL_CLASSIFICATION_APPLICATIONS: 2
-EXTERNAL_CLASSIFICATION_DOMAINS: 2
+EXTERNAL_CLASSIFICATION_APPLICATIONS: 3
+EXTERNAL_CLASSIFICATION_DOMAINS: 3
 REPRODUCIBILITY_CASES: 1
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
 CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
@@ -203,4 +205,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next / 다음
 
-Precommit and execute `CLS-APP-003` in a materially different **non-cybersecurity** external domain with a distinct classification structure. After that, run the frozen-axis Classification maturity audit rather than promoting maturity by chronology alone.
+Precommit and execute the **frozen-axis Classification maturity audit**. The maturity decision must be based on frozen evidence axes rather than chronology or raw case count. Any promotion, hold, or remediation outcome must remain separate from claims of independent validation, superiority, permanent method independence, or method survival.
