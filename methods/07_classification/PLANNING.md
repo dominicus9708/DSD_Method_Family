@@ -1,6 +1,6 @@
 # DSD Classification Planning / DSD 분류론 기획
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~005 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / deterministic retrace next**  
+Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / additional external domains next**  
 Date opened: **2026-09-12**
 
 ## Purpose / 목적
@@ -30,6 +30,7 @@ PRE_GENERATION_SCHEMA != POST_GENERATION_SCHEMA
 NO_CURRENT_MATCH_IN_OPEN_SCHEMA != UNIVERSAL_NONMEMBERSHIP
 AGGREGATE_EQUALITY != STRUCTURAL_CLASS_IDENTITY
 NO_GAIN != METHOD_ABSORPTION_PROOF
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 ```
 
 A classification claim is valid only relative to a declared task resolution, criterion set, class-schema semantics, schema identity/version, evidence/provenance basis, membership decision rule, and claim-relevant closure/bridge record.
@@ -46,7 +47,7 @@ A classification claim is valid only relative to a declared task resolution, cri
 8. ✅ Competent-baseline challenge — `CLS-CH-004`, 50/50 PASS / `NO_GAIN`.
 9. ✅ Strongest-reasonable-baseline comparison — `CLS-CH-005`, 60/60 PASS / `NO_GAIN`.
 10. ✅ First external application — `CLS-APP-001`, 50/50 PASS.
-11. ⬜ Deterministic same-project retrace.
+11. ✅ Deterministic same-project retrace — `CLS-CH-006`, 48/48 PASS.
 12. ⬜ Additional materially different external domains.
 13. ⬜ Maturity audit under frozen axes.
 14. ⬜ Independent-evaluator infrastructure only if the accumulated evidence warrants it.
@@ -158,6 +159,44 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 This is the first external Classification application and first external Classification domain. External origin is not independent evaluator validation.
 
+## CLS-CH-006 — deterministic same-project retrace
+
+Precommit and result:
+
+```text
+PRECOMMIT_COMMIT: 011df55acbe1a989d138757e6c80c78da5e787a4
+PRECOMMIT_BLOB: e707ed6fa0a53897f44da1f1b0664861904e177b
+RESULT_COMMIT: e8fed125199d0285ad8f439cf3ab97fb78e4ec8b
+RETRACE_TARGET: CLS-APP-001
+```
+
+The retrace used the immutable Classification Protocol v0.1 commit plus the original `CLS-APP-001` precommit as the derivation record, with the immutable original result used as the post-reconstruction comparison target. No live RFC/IANA lookup was used as a repair mechanism.
+
+Reconstructed outputs:
+
+```text
+103 -> HTTP-1XX-INFORMATIONAL / CLASSIFIED_SINGLE / CONFORMANT
+204 -> HTTP-2XX-SUCCESSFUL    / CLASSIFIED_SINGLE / CONFORMANT
+304 -> HTTP-3XX-REDIRECTION   / CLASSIFIED_SINGLE / CONFORMANT
+418 -> HTTP-4XX-CLIENT-ERROR  / CLASSIFIED_SINGLE / CONFORMANT
+511 -> HTTP-5XX-SERVER-ERROR  / CLASSIFIED_SINGLE / CONFORMANT
+471 -> HTTP-4XX-CLIENT-ERROR  / CLASSIFIED_SINGLE / CONFORMANT
+```
+
+Result:
+
+```text
+ARTIFACT_LOCK_IMMUTABILITY: 10/10 PASS
+SIX_SUBJECT_RECONSTRUCTION: 24/24 PASS
+DISTINCTION_PROVENANCE_RECONSTRUCTION: 8/8 PASS
+EVIDENCE_DISCIPLINE: 6/6 PASS
+TOTAL: 48/48 PASS
+REPRODUCIBILITY_CASES: 1
+REPRODUCIBILITY_CLASS: deterministic_same_project_retrace
+```
+
+This is artifact-based same-project reproducibility only. It is not blind or independent replication and does not establish independent validation.
+
 ## Evidence discipline / 증거 규율
 
 - Task-interface, boundary attack, amendment, and protocol construction are infrastructure, not direct method evidence.
@@ -184,7 +223,7 @@ BASELINE_CLASSIFICATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 1
 EXTERNAL_CLASSIFICATION_DOMAINS: 1
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
 CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
@@ -194,4 +233,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next / 다음
 
-Precommit and execute `CLS-CH-006`, a deterministic same-project retrace. It must select a previously executed Classification case, reuse the original frozen protocol/task/source records, and reproduce the same task-level result, distinction ledger, and protocol-conformance status without changing the original evidence. A successful retrace increments same-project reproducibility only and must not be represented as independent replication.
+Proceed to additional Classification applications in materially different external domains. Each application must be separately precommitted, use an externally anchored schema or criterion plus external subject evidence, and keep source correctness, DSD protocol conformance, and evaluator independence on separate ledgers. After enough domain-diverse applications exist, run the frozen-axis maturity audit rather than promoting maturity by chronology alone.
