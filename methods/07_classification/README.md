@@ -1,6 +1,6 @@
 # 07. DSD Classification / DSD 분류론
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / CLS-APP-002 60/60 PASS / additional non-cyber external domain next**
+Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / CLS-APP-002 60/60 PASS / CLS-APP-003 60/60 PASS / frozen-axis maturity audit next**
 
 Task: classify supplied subjects by explicit class criteria and preserved formation, property, comparison, aggregate, transition, or other declared features rather than by labels alone.
 
@@ -42,6 +42,8 @@ Boundary: labels do not determine mathematical or semantic properties by name. E
 - [`CLS-CH-006 deterministic same-project retrace`](../../evidence/method_specific/classification/CLS-CH-006_deterministic-same-project-retrace.md)
 - [`CLS-APP-002 precommit`](../../evidence/method_specific/classification/CLS-APP-002_precommit.md)
 - [`CLS-APP-002 NIST security-impact categorization`](../../evidence/method_specific/classification/CLS-APP-002_nist-security-impact-categorization.md)
+- [`CLS-APP-003 precommit`](../../evidence/method_specific/classification/CLS-APP-003_precommit.md)
+- [`CLS-APP-003 UNESCO World Heritage property types`](../../evidence/method_specific/classification/CLS-APP-003_unesco-world-heritage-property-types.md)
 
 ## Protocol lineage
 
@@ -72,49 +74,19 @@ CLS-CH-004  50/50 PASS / NO_GAIN  competent baseline
 CLS-CH-005  60/60 PASS / NO_GAIN  strongest-reasonable baseline at constructed-evidence level
 ```
 
-`CLS-CH-001` preserved `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED` despite an equal non-authoritative display value and preserved that unequal nonzero values may share a class at a coarser frozen status resolution.
-
-`CLS-CH-002` separately preserved `BOUNDARY_CASE`, `UNDERDETERMINED`, `CRITERION_CONFLICT`, `BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION`, `OUT_OF_SCOPE`, `OPEN_WORLD_NO_CURRENT_MATCH`, and `UNCLASSIFIED_WITHIN_DECLARED_SCHEMA`.
-
 `CLS-CH-003` compared Classification with Analysis, Comparison, Specification, and Diagnosis under the same five-interface non-duplication test. All four frozen pairs resolved to `PARTIAL_OVERLAP_NOT_COLLAPSE`; no exact-collapse candidate was found in those tasks. This is a local boundary result, not permanent irreducibility.
 
-## CLS-CH-004 — competent baseline
+## CLS-CH-004 / CLS-CH-005 — fair baselines
 
-Baseline `B0_TYPED_RULE_CLASSIFIER` received the same claim-relevant information as DSD Classification and matched the frozen results for typed status, overlapping membership, open-world no-match, uncertainty boundary, and missing semantic bridge.
-
-```text
-CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
-SCORE: 50/50 PASS
-```
-
-## CLS-CH-005 — strongest-reasonable baseline
-
-Baseline `B1_STRONG_TYPED_CLASSIFICATION_ENGINE` received the same schema/version, generated-class policy, criterion-composition logic, aggregate support/information-loss record, time/history/lineage record, equivalence relation/closure scope, and terminal semantics as DSD Classification.
+`B0_TYPED_RULE_CLASSIFIER` and `B1_STRONG_TYPED_CLASSIFICATION_ENGINE` received the same claim-relevant information as DSD Classification. Both matched the frozen tasks, producing valid `NO_GAIN` results rather than forced superiority claims.
 
 ```text
-CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
-SCORE: 60/60 PASS
+CLS-CH-004: 50/50 PASS / NO_GAIN
+CLS-CH-005: 60/60 PASS / NO_GAIN
 STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
 ```
 
-The strong baseline match is a valid comparative result, not method-failure, merger, absorption, deletion, or permanent-redundancy evidence.
-
-## CLS-APP-001 — first external application
-
-External domain:
-
-```text
-HTTP semantics / HTTP status-code response classes
-```
-
-Frozen public sources:
-
-```text
-RFC 9110 Section 15 — Status Codes
-IANA Hypertext Transfer Protocol (HTTP) Status Code Registry
-```
-
-The external criterion is the RFC 9110 first-digit class rule. Six source-backed records were classified:
+## CLS-APP-001 — HTTP response classes
 
 ```text
 103 Early Hints                     -> HTTP-1XX-INFORMATIONAL
@@ -123,78 +95,24 @@ The external criterion is the RFC 9110 first-digit class rule. Six source-backed
 418 (Unused)                        -> HTTP-4XX-CLIENT-ERROR
 511 Network Authentication Required -> HTTP-5XX-SERVER-ERROR
 471 unrecognized / IANA unassigned  -> HTTP-4XX-CLIENT-ERROR
-```
-
-The run preserved:
-
-```text
-STATUS_DESCRIPTION != CLASS_CRITERION
-REGISTRY_ASSIGNED != RESPONSE_CLASS_MEMBER
-REGISTRY_UNASSIGNED != CLASSLESS
-LAST_TWO_DIGITS != CLASS_CRITERION
-UNRECOGNIZED_STATUS != NO_RESPONSE_CLASS
-```
-
-Result:
-
-```text
 SCORE: 50/50 PASS
-EXTERNAL_CLASSIFICATION_APPLICATIONS: 1
-EXTERNAL_CLASSIFICATION_DOMAINS: 1
-CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
-PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-External origin is not independent evaluator validation.
+The run preserved `REGISTRY_UNASSIGNED != CLASSLESS` and kept response-class membership separate from description and registry-assignment status.
 
 ## CLS-CH-006 — deterministic same-project retrace
 
-Retrace target:
+Using the immutable Protocol + `CLS-APP-001` precommit task record without live-source repair, all six classifications and claim-relevant distinctions were reconstructed.
 
 ```text
-CLS-APP-001
-```
-
-Frozen artifact chain:
-
-```text
-P0 Protocol commit: c20be5f2507a766998ac346aeed2fcef8a045afc
-P1 APP-001 precommit: 795f6570405a48840495a59851b82d6eb5044b7a
-P2 APP-001 result: e0b086609c1af676aca84f371d615f0f3ad42e9b
-CLS-CH-006 precommit: 011df55acbe1a989d138757e6c80c78da5e787a4
-```
-
-Using the frozen P0+P1 task record without live-source repair, all six subject classifications, membership statuses, conformance records, and claim-relevant distinctions were reconstructed and matched immutable P2.
-
-```text
-ARTIFACT_LOCK_IMMUTABILITY: 10/10 PASS
-SIX_SUBJECT_RECONSTRUCTION: 24/24 PASS
-DISTINCTION_PROVENANCE_RECONSTRUCTION: 8/8 PASS
-EVIDENCE_DISCIPLINE: 6/6 PASS
 TOTAL: 48/48 PASS
 REPRODUCIBILITY_CASES: 1
 REPRODUCIBILITY_CLASS: deterministic_same_project_retrace
 ```
 
-`SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION`. The retrace does not establish independent validation, gain, superiority, maturity, or permanent method independence.
+`SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION`.
 
 ## CLS-APP-002 — NIST security-impact categorization
-
-External domain:
-
-```text
-information-security impact categorization
-```
-
-Frozen standards:
-
-```text
-NIST FIPS 199 — security-category vectors and objective-wise system high-water mark
-NIST FIPS 200 — LOW / MODERATE / HIGH overall system impact classification
-```
-
-The application preserved four external information-type profiles and three system/state records:
 
 ```text
 I1 contract information             -> (MODERATE, MODERATE, LOW)
@@ -204,36 +122,49 @@ I4 SCADA administrative             -> (LOW, LOW, LOW)
 S1 acquisition system               -> (MODERATE, MODERATE, LOW) -> MODERATE-IMPACT SYSTEM
 S2 SCADA initial                    -> (LOW, HIGH, HIGH) -> HIGH-IMPACT SYSTEM
 S3 SCADA final adjusted             -> (MODERATE, HIGH, HIGH) -> HIGH-IMPACT SYSTEM
+TOTAL: 60/60 PASS
 ```
 
-Preserved distinctions include:
+The run preserved vector/scalar, information-type/system-level `NA`, source identity, and initial/final adjusted-state distinctions.
+
+## CLS-APP-003 — UNESCO World Heritage property types
+
+Frozen external rule:
 
 ```text
-SECURITY_CATEGORY_VECTOR != OVERALL_SYSTEM_IMPACT_CLASS
-SAME_OVERALL_IMPACT != SAME_SECURITY_CATEGORY_VECTOR
-SAME_SECURITY_CATEGORY_VECTOR != SAME_OBJECT_IDENTITY
-INFORMATION_TYPE_NA_ALLOWED != SYSTEM_NA_ALLOWED
-INITIAL_SYSTEM_CATEGORY != FINAL_ADJUSTED_SYSTEM_CATEGORY
-DOCUMENTED_ADJUSTMENT != POST_HOC_REPAIR
+criteria (i)-(vi) only   -> CULTURAL_WORLD_HERITAGE_PROPERTY
+criteria (vii)-(x) only  -> NATURAL_WORLD_HERITAGE_PROPERTY
+criteria from both       -> MIXED_WORLD_HERITAGE_PROPERTY
+```
+
+Four official UNESCO property records produced:
+
+```text
+Taj Mahal {(i)}
+  -> CULTURAL_WORLD_HERITAGE_PROPERTY
+
+Fujisan {(iii),(vi)}
+  -> CULTURAL_WORLD_HERITAGE_PROPERTY
+
+Great Barrier Reef {(vii),(viii),(ix),(x)}
+  -> NATURAL_WORLD_HERITAGE_PROPERTY
+
+Historic Sanctuary of Machu Picchu {(i),(iii),(vii),(ix)}
+  -> MIXED_WORLD_HERITAGE_PROPERTY
 ```
 
 Result:
 
 ```text
 SOURCE/PRECOMMIT/IMMUTABILITY: 10/10 PASS
-INFORMATION_TYPE_PROFILE_PRESERVATION: 12/12 PASS
-SYSTEM_RECONSTRUCTION_AND_ADJUSTMENT: 18/18 PASS
-OVERALL_IMPACT_AND_DISTINCTIONS: 12/12 PASS
-SCOPE/EVIDENCE_DISCIPLINE: 8/8 PASS
+CRITERIA-SET PRESERVATION: 16/16 PASS
+PROPERTY-TYPE CLASSIFICATION: 16/16 PASS
+CROSS-CASE DISTINCTIONS / ANTI-LEAKAGE: 10/10 PASS
+SCOPE/EVIDENCE DISCIPLINE: 8/8 PASS
 TOTAL: 60/60 PASS
-EXTERNAL_CLASSIFICATION_APPLICATIONS: 2
-EXTERNAL_CLASSIFICATION_DOMAINS: 2
-CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
-PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-This adds a multi-axis/state-aware external task. External origin remains distinct from independent evaluator validation.
+Fujisan remained cultural at the frozen property-type resolution despite its mountain/stratovolcano physical form because the decision used UNESCO criterion-family membership rather than name or appearance.
 
 ## Core guards
 
@@ -256,6 +187,8 @@ AGGREGATE_EQUALITY != STRUCTURAL_CLASS_IDENTITY
 NO_GAIN != METHOD_ABSORPTION_PROOF
 SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 SECURITY_CATEGORY_VECTOR != OVERALL_SYSTEM_IMPACT_CLASS
+PROPERTY_NAME_OR_PHYSICAL_APPEARANCE != PROPERTY_TYPE_CRITERION
+PROPERTY_TYPE_CLASSIFICATION != INSCRIPTION_ELIGIBILITY_DECISION
 ```
 
 ## Current evidence state
@@ -272,8 +205,8 @@ METHOD_BOUNDARY_CHALLENGES: 1
 NO_GAIN_CLASSIFICATION_CASES: 2
 BASELINE_CLASSIFICATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
-EXTERNAL_CLASSIFICATION_APPLICATIONS: 2
-EXTERNAL_CLASSIFICATION_DOMAINS: 2
+EXTERNAL_CLASSIFICATION_APPLICATIONS: 3
+EXTERNAL_CLASSIFICATION_DOMAINS: 3
 REPRODUCIBILITY_CASES: 1
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
 CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
@@ -286,4 +219,4 @@ Current evidence does not establish independent validation, universal cross-doma
 
 ## Next development step
 
-Precommit and execute `CLS-APP-003` in a materially different **non-cybersecurity** external domain with a distinct classification structure. After that, run the frozen-axis Classification maturity audit rather than promoting maturity by chronology alone.
+Precommit and execute the **frozen-axis Classification maturity audit**. The audit must evaluate accumulated evidence under predeclared axes rather than promote maturity by chronology or case count alone.
