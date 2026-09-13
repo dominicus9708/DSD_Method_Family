@@ -1,6 +1,6 @@
 # DSD Classification Planning / DSD 분류론 기획
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~004 PASS / CLS-CH-004 NO_GAIN / strongest-reasonable-baseline challenge next**  
+Status: **Protocol v0.1 frozen / CLS-CH-001~005 PASS / CLS-CH-004~005 NO_GAIN / first external application next**  
 Date opened: **2026-09-12**
 
 ## Purpose / 목적
@@ -28,6 +28,7 @@ SCHEMA_STATUS_CLOSED != CLOSED_WORLD_COVERAGE_ESTABLISHED
 CRITERION_LIST != MEMBERSHIP_LOGIC
 PRE_GENERATION_SCHEMA != POST_GENERATION_SCHEMA
 NO_CURRENT_MATCH_IN_OPEN_SCHEMA != UNIVERSAL_NONMEMBERSHIP
+AGGREGATE_EQUALITY != STRUCTURAL_CLASS_IDENTITY
 NO_GAIN != METHOD_ABSORPTION_PROOF
 ```
 
@@ -43,7 +44,7 @@ A classification claim is valid only relative to a declared task resolution, cri
 6. ✅ Negative/failure-terminal challenge — `CLS-CH-002`, 50/50 PASS.
 7. ✅ Direct method-boundary challenge — `CLS-CH-003`, 48/48 PASS.
 8. ✅ Competent-baseline challenge — `CLS-CH-004`, 50/50 PASS / `NO_GAIN`.
-9. ⬜ Strongest-reasonable-baseline comparison.
+9. ✅ Strongest-reasonable-baseline comparison — `CLS-CH-005`, 60/60 PASS / `NO_GAIN`.
 10. ⬜ First external application.
 11. ⬜ Deterministic same-project retrace.
 12. ⬜ Additional materially different external domains.
@@ -76,24 +77,9 @@ Historical task-interface and amendment records remain unchanged.
 
 ## Protocol v0.1 / 실행 프로토콜
 
-`PROTOCOL_v0.1.md` prospectively integrates the Task Interface and Amendment 001 and freezes:
+`PROTOCOL_v0.1.md` prospectively integrates the Task Interface and Amendment 001 and freezes schema/version and coverage semantics, class relation/overlap/exclusion semantics, criterion applicability/provenance/composition/decision rules, feature status/provenance and uncertainty/boundary handling, generated-class provenance/schema mutation, special obligations for equivalence/hierarchy/aggregation/time dependence/multi-label output, membership-status vocabulary, validity gates G1-G14, operation sequence C1-C14, protocol-conformance ledger, method-gain ledger, and reproducibility record.
 
-```text
-schema identity/version and coverage semantics
-class relation / overlap / exclusion semantics
-criterion applicability, provenance, composition, and decision rules
-feature status/provenance and uncertainty/boundary handling
-generated-class provenance and schema mutation
-special obligations for equivalence, hierarchy/partial order, aggregation, time dependence, and multi-label output
-membership-status vocabulary
-validity gates G1-G14
-binding operation sequence C1-C14
-protocol-conformance ledger
-method-gain ledger
-reproducibility record
-```
-
-Membership statuses:
+Membership statuses remain:
 
 ```text
 CLASSIFIED_SINGLE
@@ -109,103 +95,70 @@ OPEN_WORLD_NO_CURRENT_MATCH
 
 ## Direct constructed evidence / 직접 구성 증거
 
-### CLS-CH-001
-
 ```text
-SCORE: 36/36 PASS
-S1 -> C-Z / CLASSIFIED_SINGLE
-S2 -> C-U / CLASSIFIED_SINGLE
-S3 -> C-N / CLASSIFIED_SINGLE
-S4 -> C-N / CLASSIFIED_SINGLE
-METHOD_GAIN: NOT_ASSESSED
-PROTOCOL_REVISION_REQUIRED: no
+CLS-CH-001  36/36 PASS
+CLS-CH-002  50/50 PASS
+CLS-CH-003  48/48 PASS
+CLS-CH-004  50/50 PASS / NO_GAIN
+CLS-CH-005  60/60 PASS / NO_GAIN
 ```
 
-Preserved typed status rather than non-authoritative display coincidence.
-
-### CLS-CH-002
-
-```text
-SCORE: 50/50 PASS
-N1 -> BOUNDARY_CASE
-N2 -> UNDERDETERMINED
-N3 -> CRITERION_CONFLICT
-N4 -> BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
-N5 -> OUT_OF_SCOPE
-N6 -> OPEN_WORLD_NO_CURRENT_MATCH
-N7 -> UNCLASSIFIED_WITHIN_DECLARED_SCHEMA
-METHOD_GAIN: NOT_ASSESSED
-PROTOCOL_REVISION_REQUIRED: no
-```
-
-Preserved distinct non-positive outcomes rather than collapsing them into generic failure or negative membership.
-
-### CLS-CH-003
-
-Frozen five-interface boundary dimensions:
-
-```text
-INPUTS
-OPERATION
-OUTPUTS
-FAILURE_OR_NO_GAIN_CRITERIA
-VALIDATION_STANDARD
-```
-
-Execution:
-
-```text
-Analysis      -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Comparison    -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Specification -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Diagnosis     -> PARTIAL_OVERLAP_NOT_COLLAPSE
-EXACT_COLLAPSE_CANDIDATES_FOUND: 0/4
-SCORE: 48/48 PASS
-METHOD_GAIN: NOT_ASSESSED
-PROTOCOL_REVISION_REQUIRED: no
-```
-
-The result establishes only a local tested-interface boundary finding.
+`CLS-CH-001` established one constructed typed-status classification case. `CLS-CH-002` preserved seven distinct non-positive result states. `CLS-CH-003` tested the Classification boundary against Analysis, Comparison, Specification, and Diagnosis and found four local `PARTIAL_OVERLAP_NOT_COLLAPSE` results with no exact-collapse candidate in the frozen tasks.
 
 ### CLS-CH-004 — competent baseline
-
-Precommit:
 
 ```text
 PRECOMMIT_COMMIT: 737761726107b67d2dc66da3559d69f11c1d91d6
 PRECOMMIT_BLOB: 9e5f3cb2c32ac2be3fc7b9880cdb56231e2baac1
 RESULT_COMMIT: 61f938e541153b441f913d32cd2dc95f596eb16d
 BASELINE: B0_TYPED_RULE_CLASSIFIER
-```
-
-The baseline received the same task, subjects, typed status information, schema IDs/versions, coverage claims, class criteria, criterion composition, membership decision rules, overlap/exclusion semantics, uncertainty policy, closure evidence, and bridge records.
-
-Frozen task-level results:
-
-```text
-Q1 DSD/B0 -> C-U / CLASSIFIED_SINGLE
-Q2 DSD/B0 -> {K-A,K-B} / CLASSIFIED_MULTI
-Q3 DSD/B0 -> OPEN_WORLD_NO_CURRENT_MATCH
-Q4 DSD/B0 -> BOUNDARY_CASE
-Q5 DSD/B0 -> BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
-```
-
-Gain evaluation:
-
-```text
-G1 STATUS_DISTINCTION_GAIN: NOT_ESTABLISHED
-G2 OVERLAP_AND_CONFLICT_SEPARATION_GAIN: NOT_ESTABLISHED
-G3 SCHEMA_COVERAGE_AND_CLOSURE_GAIN: NOT_ESTABLISHED
-G4 UNCERTAINTY_AND_BOUNDARY_GAIN: NOT_ESTABLISHED
-G5 BRIDGE_AND_BLOCKAGE_GAIN: NOT_ESTABLISHED
-G6 TRACEABILITY_GAIN: NOT_ESTABLISHED
-
 CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
 SCORE: 50/50 PASS
 PROTOCOL_REVISION_REQUIRED: no
 ```
 
-`NO_GAIN` is retained as a successful comparative outcome because the competent baseline matched DSD on the frozen task dimensions. It is not converted into method failure, merger, absorption, deletion, or permanent redundancy.
+The competent baseline matched DSD on typed status, legitimate multi-membership, open-world no-match, uncertainty-boundary handling, missing-bridge blockage, and retraceability when given the same semantics.
+
+### CLS-CH-005 — strongest-reasonable baseline
+
+Precommit and result:
+
+```text
+PRECOMMIT_COMMIT: cbe3ef209dd1434e2b2f7973753071ef6087d31e
+PRECOMMIT_BLOB: 507f41efae1e0788ecc321f06239247269d10374
+RESULT_COMMIT: 929810d333fefee81841348a492ca3963f80d7ce
+BASELINE: B1_STRONG_TYPED_CLASSIFICATION_ENGINE
+```
+
+The stronger task family covered:
+
+```text
+R1 generated class + schema v1->v2 + no retroactive membership
+R2 veto + k-of-n criterion composition
+R3 aggregate collision + noninjectivity + reconstruction limit
+R4 history-dependent temporal class + lineage separation
+R5 equivalence-class closure + non-authoritative similarity rejection
+```
+
+DSD and B1 matched on every frozen task-level result. Gain evaluation:
+
+```text
+G1 SCHEMA_VERSION_AND_GENERATION_GAIN: NOT_ESTABLISHED
+G2 CRITERION_COMPOSITION_GAIN: NOT_ESTABLISHED
+G3 AGGREGATE_INFORMATION_LOSS_GAIN: NOT_ESTABLISHED
+G4 TEMPORAL_HISTORY_AND_LINEAGE_SEPARATION_GAIN: NOT_ESTABLISHED
+G5 EQUIVALENCE_CLOSURE_GAIN: NOT_ESTABLISHED
+G6 STATUS_SCHEMA_AND_RELATION_TRACE_GAIN: NOT_ESTABLISHED
+G7 TERMINAL_AND_RETRACEABILITY_GAIN: NOT_ESTABLISHED
+
+CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
+SCORE: 60/60 PASS
+STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The constructed strongest-baseline result shows only that a strong equally informed non-DSD engine can match the frozen Classification outputs and discipline. It does not establish method redundancy, failure, absorption, merger, or deletion.
 
 ## Evidence discipline / 증거 규율
 
@@ -224,13 +177,13 @@ DEDICATED_CLASSIFICATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_CLASSIFICATION_PILOTS: 4
+DIRECT_CLASSIFICATION_PILOTS: 5
 POSITIVE_DIRECT_CHALLENGES: 1
 NEGATIVE_FAILURE_CHALLENGES: 1
 METHOD_BOUNDARY_CHALLENGES: 1
-NO_GAIN_CLASSIFICATION_CASES: 1
-BASELINE_CLASSIFICATION_CASES: 1
-STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: not established
+NO_GAIN_CLASSIFICATION_CASES: 2
+BASELINE_CLASSIFICATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
 REPRODUCIBILITY_CASES: 0
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
@@ -242,4 +195,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next / 다음
 
-Freeze and execute `CLS-CH-005`, a strongest-reasonable-baseline challenge. The baseline must be materially richer than `B0_TYPED_RULE_CLASSIFIER` and receive all claim-relevant information. The task family should pressure interactions among multiple stable obligations—such as schema/coverage closure, criterion composition, uncertainty, generated or versioned schema semantics, aggregate information-loss controls, or time-sensitive classification—without adding irrelevant complexity merely to favor DSD. `GAIN_ESTABLISHED`, `NO_GAIN`, or a bounded failure must all remain admissible outcomes under the frozen scoring rule.
+Precommit and execute `CLS-APP-001`, the first external Classification application. It must use a stable public source that supplies an externally anchored class schema or criterion and a real source-backed subject record. The project must not invent both the classes and the evidence. Source/version provenance, external-domain correctness, and DSD protocol conformance must be recorded on separate ledgers.
