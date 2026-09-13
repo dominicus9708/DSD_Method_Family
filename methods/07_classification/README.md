@@ -1,6 +1,6 @@
 # 07. DSD Classification / DSD 분류론
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / additional external domains next**
+Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / CLS-APP-002 60/60 PASS / additional non-cyber external domain next**
 
 Task: classify supplied subjects by explicit class criteria and preserved formation, property, comparison, aggregate, transition, or other declared features rather than by labels alone.
 
@@ -40,6 +40,8 @@ Boundary: labels do not determine mathematical or semantic properties by name. E
 - [`CLS-APP-001 HTTP status classification`](../../evidence/method_specific/classification/CLS-APP-001_http-status-classification.md)
 - [`CLS-CH-006 precommit`](../../evidence/method_specific/classification/CLS-CH-006_precommit.md)
 - [`CLS-CH-006 deterministic same-project retrace`](../../evidence/method_specific/classification/CLS-CH-006_deterministic-same-project-retrace.md)
+- [`CLS-APP-002 precommit`](../../evidence/method_specific/classification/CLS-APP-002_precommit.md)
+- [`CLS-APP-002 NIST security-impact categorization`](../../evidence/method_specific/classification/CLS-APP-002_nist-security-impact-categorization.md)
 
 ## Protocol lineage
 
@@ -177,6 +179,62 @@ REPRODUCIBILITY_CLASS: deterministic_same_project_retrace
 
 `SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION`. The retrace does not establish independent validation, gain, superiority, maturity, or permanent method independence.
 
+## CLS-APP-002 — NIST security-impact categorization
+
+External domain:
+
+```text
+information-security impact categorization
+```
+
+Frozen standards:
+
+```text
+NIST FIPS 199 — security-category vectors and objective-wise system high-water mark
+NIST FIPS 200 — LOW / MODERATE / HIGH overall system impact classification
+```
+
+The application preserved four external information-type profiles and three system/state records:
+
+```text
+I1 contract information             -> (MODERATE, MODERATE, LOW)
+I2 acquisition administrative       -> (LOW, LOW, LOW)
+I3 SCADA sensor data                -> (NA, HIGH, HIGH)
+I4 SCADA administrative             -> (LOW, LOW, LOW)
+S1 acquisition system               -> (MODERATE, MODERATE, LOW) -> MODERATE-IMPACT SYSTEM
+S2 SCADA initial                    -> (LOW, HIGH, HIGH) -> HIGH-IMPACT SYSTEM
+S3 SCADA final adjusted             -> (MODERATE, HIGH, HIGH) -> HIGH-IMPACT SYSTEM
+```
+
+Preserved distinctions include:
+
+```text
+SECURITY_CATEGORY_VECTOR != OVERALL_SYSTEM_IMPACT_CLASS
+SAME_OVERALL_IMPACT != SAME_SECURITY_CATEGORY_VECTOR
+SAME_SECURITY_CATEGORY_VECTOR != SAME_OBJECT_IDENTITY
+INFORMATION_TYPE_NA_ALLOWED != SYSTEM_NA_ALLOWED
+INITIAL_SYSTEM_CATEGORY != FINAL_ADJUSTED_SYSTEM_CATEGORY
+DOCUMENTED_ADJUSTMENT != POST_HOC_REPAIR
+```
+
+Result:
+
+```text
+SOURCE/PRECOMMIT/IMMUTABILITY: 10/10 PASS
+INFORMATION_TYPE_PROFILE_PRESERVATION: 12/12 PASS
+SYSTEM_RECONSTRUCTION_AND_ADJUSTMENT: 18/18 PASS
+OVERALL_IMPACT_AND_DISTINCTIONS: 12/12 PASS
+SCOPE/EVIDENCE_DISCIPLINE: 8/8 PASS
+TOTAL: 60/60 PASS
+EXTERNAL_CLASSIFICATION_APPLICATIONS: 2
+EXTERNAL_CLASSIFICATION_DOMAINS: 2
+CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+This adds a multi-axis/state-aware external task. External origin remains distinct from independent evaluator validation.
+
 ## Core guards
 
 ```text
@@ -197,6 +255,7 @@ NO_CURRENT_MATCH_IN_OPEN_SCHEMA != UNIVERSAL_NONMEMBERSHIP
 AGGREGATE_EQUALITY != STRUCTURAL_CLASS_IDENTITY
 NO_GAIN != METHOD_ABSORPTION_PROOF
 SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+SECURITY_CATEGORY_VECTOR != OVERALL_SYSTEM_IMPACT_CLASS
 ```
 
 ## Current evidence state
@@ -213,8 +272,8 @@ METHOD_BOUNDARY_CHALLENGES: 1
 NO_GAIN_CLASSIFICATION_CASES: 2
 BASELINE_CLASSIFICATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
-EXTERNAL_CLASSIFICATION_APPLICATIONS: 1
-EXTERNAL_CLASSIFICATION_DOMAINS: 1
+EXTERNAL_CLASSIFICATION_APPLICATIONS: 2
+EXTERNAL_CLASSIFICATION_DOMAINS: 2
 REPRODUCIBILITY_CASES: 1
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
 CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
@@ -223,8 +282,8 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-Current evidence does not establish independent validation, cross-domain generality, measured practical benefit, permanent method independence, or registry survival.
+Current evidence does not establish independent validation, universal cross-domain generality, measured practical benefit, permanent method independence, or registry survival.
 
 ## Next development step
 
-Precommit and execute Classification applications in materially different external domains. Each external case must have an externally anchored schema or criterion and external subject evidence, remain separately precommitted, and keep external-domain correctness, DSD protocol conformance, and evaluator independence on separate ledgers.
+Precommit and execute `CLS-APP-003` in a materially different **non-cybersecurity** external domain with a distinct classification structure. After that, run the frozen-axis Classification maturity audit rather than promoting maturity by chronology alone.
