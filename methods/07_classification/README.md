@@ -1,6 +1,6 @@
 # 07. DSD Classification / DSD 분류론
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~005 PASS / CLS-CH-004~005 NO_GAIN / first external application next**
+Status: **Protocol v0.1 frozen / CLS-CH-001~005 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / deterministic retrace next**
 
 Task: classify supplied subjects by explicit class criteria and preserved formation, property, comparison, aggregate, transition, or other declared features rather than by labels alone.
 
@@ -24,7 +24,7 @@ Boundary: labels do not determine mathematical or semantic properties by name. E
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - [`WORKLOG.md`](WORKLOG.md)
 
-## Direct evidence
+## Direct and external evidence
 
 - [`CLS-CH-001 precommit`](../../evidence/method_specific/classification/CLS-CH-001_precommit.md)
 - [`CLS-CH-001 positive direct classification`](../../evidence/method_specific/classification/CLS-CH-001_positive-direct-classification.md)
@@ -36,6 +36,8 @@ Boundary: labels do not determine mathematical or semantic properties by name. E
 - [`CLS-CH-004 competent-baseline NO_GAIN`](../../evidence/method_specific/classification/CLS-CH-004_competent-baseline-no-gain.md)
 - [`CLS-CH-005 precommit`](../../evidence/method_specific/classification/CLS-CH-005_precommit.md)
 - [`CLS-CH-005 strongest-reasonable-baseline`](../../evidence/method_specific/classification/CLS-CH-005_strongest-reasonable-baseline.md)
+- [`CLS-APP-001 precommit`](../../evidence/method_specific/classification/CLS-APP-001_precommit.md)
+- [`CLS-APP-001 HTTP status classification`](../../evidence/method_specific/classification/CLS-APP-001_http-status-classification.md)
 
 ## Protocol lineage
 
@@ -83,54 +85,64 @@ SCORE: 50/50 PASS
 
 ## CLS-CH-005 — strongest-reasonable baseline
 
-Baseline:
+Baseline `B1_STRONG_TYPED_CLASSIFICATION_ENGINE` received the same schema/version, generated-class policy, criterion-composition logic, aggregate support/information-loss record, time/history/lineage record, equivalence relation/closure scope, and terminal semantics as DSD Classification.
 
 ```text
-B1_STRONG_TYPED_CLASSIFICATION_ENGINE
-```
-
-B1 received the same schema/version, generated-class policy, criterion-composition logic, aggregate support/information-loss record, time/history/lineage record, equivalence relation/closure scope, and terminal semantics as DSD Classification.
-
-Frozen task-level results matched:
-
-```text
-R1 DSD/B1 -> v1 OPEN_WORLD_NO_CURRENT_MATCH
-              generate K-GEN-BLUE -> v2 CLASSIFIED_SINGLE
-              no retroactive v1 membership
-
-R2 DSD/B1 -> K-REVIEW / CLASSIFIED_SINGLE
-              K-ELIGIBLE vetoed
-
-R3 DSD/B1 -> A3 K-ZERO-SUPPORT
-              B3 K-EQUAL-SPLIT
-              equal aggregate retained as noninjective collision
-
-R4 DSD/B1 -> A4 K-RECOVERED
-              B4 K-STABLE
-              current-state equality != temporal class or lineage identity
-
-R5 DSD/B1 -> equivalence classes {E1,E2}, {E3,E4}
-              reflexive/symmetric/transitive closure PASS
-              legacy similarity ignored as non-authoritative
-```
-
-Gain axes:
-
-```text
-G1 SCHEMA_VERSION_AND_GENERATION_GAIN: NOT_ESTABLISHED
-G2 CRITERION_COMPOSITION_GAIN: NOT_ESTABLISHED
-G3 AGGREGATE_INFORMATION_LOSS_GAIN: NOT_ESTABLISHED
-G4 TEMPORAL_HISTORY_AND_LINEAGE_SEPARATION_GAIN: NOT_ESTABLISHED
-G5 EQUIVALENCE_CLOSURE_GAIN: NOT_ESTABLISHED
-G6 STATUS_SCHEMA_AND_RELATION_TRACE_GAIN: NOT_ESTABLISHED
-G7 TERMINAL_AND_RETRACEABILITY_GAIN: NOT_ESTABLISHED
-
 CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
 SCORE: 60/60 PASS
 STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
 ```
 
 The strong baseline match is a valid comparative result, not method-failure, merger, absorption, deletion, or permanent-redundancy evidence.
+
+## CLS-APP-001 — first external application
+
+External domain:
+
+```text
+HTTP semantics / HTTP status-code response classes
+```
+
+Frozen public sources:
+
+```text
+RFC 9110 Section 15 — Status Codes
+IANA Hypertext Transfer Protocol (HTTP) Status Code Registry
+```
+
+The external criterion is the RFC 9110 first-digit class rule. Six source-backed records were classified:
+
+```text
+103 Early Hints                     -> HTTP-1XX-INFORMATIONAL
+204 No Content                      -> HTTP-2XX-SUCCESSFUL
+304 Not Modified                    -> HTTP-3XX-REDIRECTION
+418 (Unused)                        -> HTTP-4XX-CLIENT-ERROR
+511 Network Authentication Required -> HTTP-5XX-SERVER-ERROR
+471 unrecognized / IANA unassigned  -> HTTP-4XX-CLIENT-ERROR
+```
+
+The run preserved:
+
+```text
+STATUS_DESCRIPTION != CLASS_CRITERION
+REGISTRY_ASSIGNED != RESPONSE_CLASS_MEMBER
+REGISTRY_UNASSIGNED != CLASSLESS
+LAST_TWO_DIGITS != CLASS_CRITERION
+UNRECOGNIZED_STATUS != NO_RESPONSE_CLASS
+```
+
+Result:
+
+```text
+SCORE: 50/50 PASS
+EXTERNAL_CLASSIFICATION_APPLICATIONS: 1
+EXTERNAL_CLASSIFICATION_DOMAINS: 1
+CLASSIFICATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+External origin is not independent evaluator validation.
 
 ## Core guards
 
@@ -167,7 +179,8 @@ METHOD_BOUNDARY_CHALLENGES: 1
 NO_GAIN_CLASSIFICATION_CASES: 2
 BASELINE_CLASSIFICATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
-EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
+EXTERNAL_CLASSIFICATION_APPLICATIONS: 1
+EXTERNAL_CLASSIFICATION_DOMAINS: 1
 REPRODUCIBILITY_CASES: 0
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
 CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
@@ -176,8 +189,8 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-Constructed same-project evidence does not establish independent validation, external validity, measured practical benefit, permanent method independence, or registry survival.
+Current evidence does not establish independent validation, cross-domain generality, measured practical benefit, permanent method independence, or registry survival.
 
 ## Next development step
 
-Precommit and execute `CLS-APP-001`, the first external Classification application. It must use a stable public source that supplies a real externally anchored class schema or classification criterion rather than inventing both the categories and evidence inside the project fixture. Source/version provenance and external-domain validity must remain separate from DSD-internal protocol conformance.
+Precommit and execute `CLS-CH-006`, a deterministic same-project retrace against a previously executed Classification case. The retrace must reuse the original frozen protocol/task/source records without changing them and test whether the same outputs, distinctions, and conformance ledger can be reconstructed. A successful retrace counts only as same-project reproducibility evidence, not independent replication.
