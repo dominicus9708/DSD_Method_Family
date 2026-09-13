@@ -1,6 +1,6 @@
 # DSD Classification Planning / DSD 분류론 기획
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001~003 completed / frozen-axis maturity audit next**  
+Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001~003 completed / CLS-AUD-001 28/28 PASS / maturity established / CLS-IEP-001 next**  
 Date opened: **2026-09-12**
 
 ## Purpose / 목적
@@ -52,25 +52,22 @@ A classification claim is valid only relative to a declared task resolution, cri
 10. ✅ First external application — `CLS-APP-001`, 50/50 PASS.
 11. ✅ Deterministic same-project retrace — `CLS-CH-006`, 48/48 PASS.
 12. ✅ Additional materially different external domains — `CLS-APP-002`, 60/60 PASS; `CLS-APP-003`, 60/60 PASS. Three external domains total.
-13. ⬜ Maturity audit under frozen axes.
-14. ⬜ Independent-evaluator infrastructure only if the accumulated evidence warrants it.
-
-## Boundary-attack result / 경계 공격 결과
-
-```text
-BOUNDARY_ATTACKS_RUN: 18
-PRESERVED_NO_REFINEMENT: 12
-PRESERVED_WITH_NONBREAKING_REFINEMENT: 6
-BOUNDARY_COLLAPSE_FOUND: 0
-FUNDAMENTAL_INTERFACE_FAILURE: 0
-NONBREAKING_REFINEMENT_GROUPS: 6
-```
-
-Amendment 001 added class-relation semantics, schema identity/version and closure evidence, equivalence closure, generated-class provenance/schema mutation, criterion composition/decision rules, and uncertainty/boundary semantics. Historical task-interface and amendment records remain unchanged.
+13. ✅ Frozen-axis maturity audit — `CLS-AUD-001`, audit execution 28/28 PASS, `PROMOTE_ESTABLISHED`.
+14. 🟨 Independent-evaluator infrastructure — `CLS-IEP-001` is the next development step; infrastructure preparation does not itself establish independent validation.
 
 ## Protocol v0.1 / 실행 프로토콜
 
 `PROTOCOL_v0.1.md` prospectively integrates the Task Interface and Amendment 001 and freezes schema/version and coverage semantics, class relation/overlap/exclusion semantics, criterion applicability/provenance/composition/decision rules, feature status/provenance and uncertainty/boundary handling, generated-class provenance/schema mutation, special obligations for equivalence/hierarchy/aggregation/time dependence/multi-label output, membership-status vocabulary, validity gates G1-G14, operation sequence C1-C14, protocol-conformance ledger, method-gain ledger, and reproducibility record.
+
+```text
+PROTOCOL_COMMIT: c20be5f2507a766998ac346aeed2fcef8a045afc
+PROTOCOL_BLOB: 822e145025f3e30ac6b3af3c2093c7bab494bb01
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
+PRESERVED_NO_REFINEMENT: 12
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 6
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+```
 
 Membership statuses remain:
 
@@ -86,7 +83,7 @@ BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
 OPEN_WORLD_NO_CURRENT_MATCH
 ```
 
-## Constructed evidence / 구성 증거
+## Evidence summary / 증거 요약
 
 ```text
 CLS-CH-001  36/36 PASS
@@ -94,90 +91,88 @@ CLS-CH-002  50/50 PASS
 CLS-CH-003  48/48 PASS
 CLS-CH-004  50/50 PASS / NO_GAIN
 CLS-CH-005  60/60 PASS / NO_GAIN
+CLS-APP-001 50/50 PASS
+CLS-CH-006  48/48 PASS / deterministic same-project retrace
+CLS-APP-002 60/60 PASS
+CLS-APP-003 60/60 PASS
+CLS-AUD-001 28/28 audit execution PASS / PROMOTE_ESTABLISHED
 ```
 
-`CLS-CH-001` tested typed-status classification. `CLS-CH-002` preserved seven distinct non-positive result states. `CLS-CH-003` tested the Classification boundary against Analysis, Comparison, Specification, and Diagnosis and found four local `PARTIAL_OVERLAP_NOT_COLLAPSE` results with no exact-collapse candidate in the frozen tasks.
+`CLS-CH-003` found four local `PARTIAL_OVERLAP_NOT_COLLAPSE` results against Analysis, Comparison, Specification, and Diagnosis, with no exact-collapse candidate in the frozen tasks. This is operational boundary evidence, not permanent registry irreducibility.
 
-`CLS-CH-004` used `B0_TYPED_RULE_CLASSIFIER` and returned `NO_GAIN` when the equally informed baseline matched typed-status, overlap, open-world, boundary, bridge, and retraceability behavior.
+`CLS-CH-004` and `CLS-CH-005` used fair baselines given the same claim-relevant information. Both returned `NO_GAIN`; the stronger B1 comparison established the strongest-reasonable-baseline category at constructed-evidence level without claiming DSD superiority.
 
-`CLS-CH-005` used `B1_STRONG_TYPED_CLASSIFICATION_ENGINE` and tested generated/versioned schemas, veto and k-of-n composition, aggregate collision/noninjectivity, history-dependent temporal classification with lineage separation, and equivalence closure. DSD and B1 matched every frozen result.
+`CLS-CH-006` deterministically reconstructed `CLS-APP-001` from its immutable artifact chain. It is same-project reproducibility only, not independent replication.
+
+The three external applications cover materially different classification structures:
 
 ```text
-CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
-SCORE: 60/60 PASS
-STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
+CLS-APP-001
+  RFC 9110 + IANA
+  disjoint integer response classes + registry-status separation
+
+CLS-APP-002
+  NIST FIPS 199 + FIPS 200
+  multi-axis vector + high-water mark + scalar impact class + documented state adjustment
+
+CLS-APP-003
+  UNESCO World Heritage Centre
+  symbolic criterion-set family membership -> cultural / natural / mixed
 ```
 
-## CLS-APP-001 — first external application
+## CLS-AUD-001 — frozen-axis maturity audit
 
 ```text
-PRECOMMIT_COMMIT: 795f6570405a48840495a59851b82d6eb5044b7a
-RESULT_COMMIT: e0b086609c1af676aca84f371d615f0f3ad42e9b
-EXTERNAL_DOMAIN: HTTP semantics / HTTP status-code response classes
-TOTAL: 50/50 PASS
+PRECOMMIT_COMMIT: 15b83cba9eea43d374477a88a5f4bab302524e2e
+PRECOMMIT_BLOB: 02b7bb2bf2c778629108a7f34cd1e727195a9abf
+RESULT_COMMIT: e0f6deb4e0ade4a8138e0de67c1327cca92eebc5
+AUDIT_ID: DSD-AUDIT-20260914-CLASSIFICATION-001
 ```
 
-The run preserved description/registry status separately from the RFC first-digit response-class criterion. `471` remained IANA-unassigned in the frozen registry record while retaining 4xx class-level handling.
-
-## CLS-CH-006 — deterministic same-project retrace
+Frozen maturity-axis results:
 
 ```text
-PRECOMMIT_COMMIT: 011df55acbe1a989d138757e6c80c78da5e787a4
-RESULT_COMMIT: e8fed125199d0285ad8f439cf3ab97fb78e4ec8b
-RETRACE_TARGET: CLS-APP-001
-TOTAL: 48/48 PASS
-REPRODUCIBILITY_CASES: 1
+M1  dedicated executable protocol                               PASS
+M2  positive / negative / terminal discrimination               PASS
+M3  neighboring-method boundary discrimination                  PASS
+M4  NO_GAIN preservation                                        PASS
+M5  reproducibility / retraceability                             CONDITIONAL_PASS
+M6  external application origin                                 PASS
+M7  strongest-reasonable-baseline comparison                    PASS
+M8  external source fidelity and criterion / bridge discipline  PASS
+M9  established-level evidence breadth                          PASS
+M10 independent / practical-performance evidence                UNRESOLVED_BUT_BOUNDED
+M11 protocol pressure / unresolved core defect                  PASS
+M12 maximum-supported-claim discipline                          PASS
+M13 classification schema / coverage / status / decision        PASS
+M14 historical / anti-post-hoc preservation                     PASS
+M15 method-survival / merger-separation discipline              PASS
 ```
 
-This is artifact-based same-project reproducibility only, not blind or independent replication.
-
-## CLS-APP-002 — NIST security-impact categorization
+Final audit result:
 
 ```text
-PRECOMMIT_COMMIT: 7949bd6819a4db1f2548db2e0b53a9f5315c30c5
-RESULT_COMMIT: 5ee5567ba2f8d35a60dd24673f3aca7ad06adba8
-EXTERNAL_DOMAIN: information-security impact categorization
-SOURCE: NIST FIPS 199 + FIPS 200
-TOTAL: 60/60 PASS
+PRECOMMITTED_REQUIRED_CHECKS: 28
+AUDIT_EXECUTION_SCORE: 28/28 PASS
+FINAL_MATURITY_DECISION: PROMOTE_ESTABLISHED
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: established
+CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-The application exercised a multi-axis/state-aware external classification structure and preserved vector/scalar, information-type/system-level `NA`, source-object identity, and initial/final adjusted-state distinctions.
-
-## CLS-APP-003 — UNESCO World Heritage property types
-
-```text
-PRECOMMIT_COMMIT: fcab24281ed71b2a714e09cba3e3a269af4d5056
-PRECOMMIT_BLOB: 0cc7a58fd6e77b7d9cc646cb18219c03211bd837
-RESULT_COMMIT: a1a881e1a341d8b51c3220b6aec87ff68ea52d91
-EXTERNAL_DOMAIN: cultural-natural heritage property-type classification
-SOURCE: UNESCO World Heritage Centre criteria framework + official property records
-TOTAL: 60/60 PASS
-```
-
-Frozen property results:
-
-```text
-Taj Mahal {(i)}
-  -> CULTURAL_WORLD_HERITAGE_PROPERTY
-Fujisan {(iii),(vi)}
-  -> CULTURAL_WORLD_HERITAGE_PROPERTY
-Great Barrier Reef {(vii),(viii),(ix),(x)}
-  -> NATURAL_WORLD_HERITAGE_PROPERTY
-Historic Sanctuary of Machu Picchu {(i),(iii),(vii),(ix)}
-  -> MIXED_WORLD_HERITAGE_PROPERTY
-```
-
-The run used symbolic criterion-family membership rather than numeric ranges, name semantics, or physical appearance. Fujisan remained cultural at the frozen target resolution even though it is physically a mountain/stratovolcano.
+The `established` label is restricted to method/protocol evidence maturity under the current DSD method-family framework. It does not establish independent validation, independent replication, broad inter-rater agreement, practical superiority, universal cross-domain generality, permanent method independence, or permanent registry survival.
 
 ## Evidence discipline / 증거 규율
 
 - Task-interface, boundary attack, amendment, and protocol construction are infrastructure, not direct method evidence.
-- Constructed challenges, external applications, reproducibility evidence, and maturity audits remain separate evidence classes.
-- PASS, FAIL, `NO_GAIN`, boundary, and underdetermined results remain evidence and do not vote on method survival.
+- Constructed challenges, external applications, reproducibility evidence, maturity audits, and independent evaluations remain separate evidence classes.
+- PASS, FAIL, `NO_GAIN`, boundary, and underdetermined results do not vote on method survival.
 - Shared-core support does not automatically validate Classification.
 - External case origin does not imply independent evaluator validation.
 - Same-project retrace does not imply independent replication.
 - A baseline must receive the same claim-relevant task information as the DSD run.
+- Maturity promotion does not freeze the 22-method registry.
 
 ## Current status / 현재 상태
 
@@ -197,7 +192,9 @@ EXTERNAL_CLASSIFICATION_APPLICATIONS: 3
 EXTERNAL_CLASSIFICATION_DOMAINS: 3
 REPRODUCIBILITY_CASES: 1
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
-CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
+INDEPENDENT_REPLICATION: not established
+MEASURED_PRACTICAL_SUPERIORITY: not established
+CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: established
 CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
@@ -205,4 +202,12 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next / 다음
 
-Precommit and execute the **frozen-axis Classification maturity audit**. The maturity decision must be based on frozen evidence axes rather than chronology or raw case count. Any promotion, hold, or remediation outcome must remain separate from claims of independent validation, superiority, permanent method independence, or method survival.
+Prepare `CLS-IEP-001`, the **independent-evaluator infrastructure package**. Freeze reviewer instructions, artifact manifest/hashes, minimally cued or blind execution rules where feasible, submission template, and result-return schema. Preserve:
+
+```text
+EVALUATOR_INFRASTRUCTURE_PREPARED != INDEPENDENT_VALIDATION
+SUBMISSION_SENT != INDEPENDENT_REPLICATION
+INDEPENDENT_RESULT_REQUIRED_BEFORE_STATUS_INCREMENT
+```
+
+No independent-validation or independent-replication counter is incremented until an external evaluator actually executes and returns a frozen result.
