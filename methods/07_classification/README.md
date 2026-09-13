@@ -1,6 +1,6 @@
 # 07. DSD Classification / DSD 분류론
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~004 PASS / CLS-CH-004 NO_GAIN / strongest-reasonable-baseline challenge next**
+Status: **Protocol v0.1 frozen / CLS-CH-001~005 PASS / CLS-CH-004~005 NO_GAIN / first external application next**
 
 Task: classify supplied subjects by explicit class criteria and preserved formation, property, comparison, aggregate, transition, or other declared features rather than by labels alone.
 
@@ -34,6 +34,8 @@ Boundary: labels do not determine mathematical or semantic properties by name. E
 - [`CLS-CH-003 direct method-boundary`](../../evidence/method_specific/classification/CLS-CH-003_direct-method-boundary.md)
 - [`CLS-CH-004 precommit`](../../evidence/method_specific/classification/CLS-CH-004_precommit.md)
 - [`CLS-CH-004 competent-baseline NO_GAIN`](../../evidence/method_specific/classification/CLS-CH-004_competent-baseline-no-gain.md)
+- [`CLS-CH-005 precommit`](../../evidence/method_specific/classification/CLS-CH-005_precommit.md)
+- [`CLS-CH-005 strongest-reasonable-baseline`](../../evidence/method_specific/classification/CLS-CH-005_strongest-reasonable-baseline.md)
 
 ## Protocol lineage
 
@@ -61,6 +63,7 @@ CLS-CH-001  36/36 PASS  positive typed-status classification
 CLS-CH-002  50/50 PASS  negative/failure-terminal distinction
 CLS-CH-003  48/48 PASS  direct method-boundary challenge
 CLS-CH-004  50/50 PASS / NO_GAIN  competent baseline
+CLS-CH-005  60/60 PASS / NO_GAIN  strongest-reasonable baseline at constructed-evidence level
 ```
 
 `CLS-CH-001` preserved `DEFINED_ZERO != APPLICABLE_BUT_UNDEFINED` despite an equal non-authoritative display value and preserved that unequal nonzero values may share a class at a coarser frozen status resolution.
@@ -71,38 +74,63 @@ CLS-CH-004  50/50 PASS / NO_GAIN  competent baseline
 
 ## CLS-CH-004 — competent baseline
 
+Baseline `B0_TYPED_RULE_CLASSIFIER` received the same claim-relevant information as DSD Classification and matched the frozen results for typed status, overlapping membership, open-world no-match, uncertainty boundary, and missing semantic bridge.
+
+```text
+CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
+SCORE: 50/50 PASS
+```
+
+## CLS-CH-005 — strongest-reasonable baseline
+
 Baseline:
 
 ```text
-B0_TYPED_RULE_CLASSIFIER
+B1_STRONG_TYPED_CLASSIFICATION_ENGINE
 ```
 
-B0 received exactly the same subject evidence, typed status records, schema IDs/versions, coverage claims, class criteria, composition/decision rules, overlap/exclusion semantics, uncertainty policy, closure evidence, bridge requirements, and terminal-status rules as DSD Classification.
+B1 received the same schema/version, generated-class policy, criterion-composition logic, aggregate support/information-loss record, time/history/lineage record, equivalence relation/closure scope, and terminal semantics as DSD Classification.
 
-Five frozen tasks produced identical task-level results:
+Frozen task-level results matched:
 
 ```text
-Q1 DSD/B0 -> C-U / CLASSIFIED_SINGLE
-Q2 DSD/B0 -> {K-A,K-B} / CLASSIFIED_MULTI
-Q3 DSD/B0 -> OPEN_WORLD_NO_CURRENT_MATCH
-Q4 DSD/B0 -> BOUNDARY_CASE
-Q5 DSD/B0 -> BLOCKED_BY_MISSING_BRIDGE_OR_INFORMATION
+R1 DSD/B1 -> v1 OPEN_WORLD_NO_CURRENT_MATCH
+              generate K-GEN-BLUE -> v2 CLASSIFIED_SINGLE
+              no retroactive v1 membership
+
+R2 DSD/B1 -> K-REVIEW / CLASSIFIED_SINGLE
+              K-ELIGIBLE vetoed
+
+R3 DSD/B1 -> A3 K-ZERO-SUPPORT
+              B3 K-EQUAL-SPLIT
+              equal aggregate retained as noninjective collision
+
+R4 DSD/B1 -> A4 K-RECOVERED
+              B4 K-STABLE
+              current-state equality != temporal class or lineage identity
+
+R5 DSD/B1 -> equivalence classes {E1,E2}, {E3,E4}
+              reflexive/symmetric/transitive closure PASS
+              legacy similarity ignored as non-authoritative
 ```
 
 Gain axes:
 
 ```text
-G1 STATUS_DISTINCTION_GAIN: NOT_ESTABLISHED
-G2 OVERLAP_AND_CONFLICT_SEPARATION_GAIN: NOT_ESTABLISHED
-G3 SCHEMA_COVERAGE_AND_CLOSURE_GAIN: NOT_ESTABLISHED
-G4 UNCERTAINTY_AND_BOUNDARY_GAIN: NOT_ESTABLISHED
-G5 BRIDGE_AND_BLOCKAGE_GAIN: NOT_ESTABLISHED
-G6 TRACEABILITY_GAIN: NOT_ESTABLISHED
+G1 SCHEMA_VERSION_AND_GENERATION_GAIN: NOT_ESTABLISHED
+G2 CRITERION_COMPOSITION_GAIN: NOT_ESTABLISHED
+G3 AGGREGATE_INFORMATION_LOSS_GAIN: NOT_ESTABLISHED
+G4 TEMPORAL_HISTORY_AND_LINEAGE_SEPARATION_GAIN: NOT_ESTABLISHED
+G5 EQUIVALENCE_CLOSURE_GAIN: NOT_ESTABLISHED
+G6 STATUS_SCHEMA_AND_RELATION_TRACE_GAIN: NOT_ESTABLISHED
+G7 TERMINAL_AND_RETRACEABILITY_GAIN: NOT_ESTABLISHED
 
 CLASSIFICATION_METHOD_GAIN_STATUS: NO_GAIN
+SCORE: 60/60 PASS
+STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
 ```
 
-A competent typed rule classifier supplied with the same semantics matched DSD on these frozen dimensions. This is a valid comparative result and does not constitute method failure, merger evidence, absorption evidence, deletion evidence, or permanent redundancy.
+The strong baseline match is a valid comparative result, not method-failure, merger, absorption, deletion, or permanent-redundancy evidence.
 
 ## Core guards
 
@@ -119,7 +147,9 @@ BOUNDARY_CASE != CLASSIFICATION_FAILURE
 MULTI_CLASS_MEMBERSHIP != CRITERION_CONFLICT
 SCHEMA_STATUS_CLOSED != CLOSED_WORLD_COVERAGE_ESTABLISHED
 CRITERION_LIST != MEMBERSHIP_LOGIC
+PRE_GENERATION_SCHEMA != POST_GENERATION_SCHEMA
 NO_CURRENT_MATCH_IN_OPEN_SCHEMA != UNIVERSAL_NONMEMBERSHIP
+AGGREGATE_EQUALITY != STRUCTURAL_CLASS_IDENTITY
 NO_GAIN != METHOD_ABSORPTION_PROOF
 ```
 
@@ -130,13 +160,13 @@ DEDICATED_CLASSIFICATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_CLASSIFICATION_PILOTS: 4
+DIRECT_CLASSIFICATION_PILOTS: 5
 POSITIVE_DIRECT_CHALLENGES: 1
 NEGATIVE_FAILURE_CHALLENGES: 1
 METHOD_BOUNDARY_CHALLENGES: 1
-NO_GAIN_CLASSIFICATION_CASES: 1
-BASELINE_CLASSIFICATION_CASES: 1
-STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: not established
+NO_GAIN_CLASSIFICATION_CASES: 2
+BASELINE_CLASSIFICATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 0
 REPRODUCIBILITY_CASES: 0
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
@@ -150,4 +180,4 @@ Constructed same-project evidence does not establish independent validation, ext
 
 ## Next development step
 
-Precommit and execute `CLS-CH-005`, a **strongest-reasonable-baseline** challenge with a materially richer baseline and a more demanding task family than `B0_TYPED_RULE_CLASSIFIER`. The strong baseline must again receive all claim-relevant information and may legitimately produce another `NO_GAIN`. The next challenge should pressure interactions among schema/coverage closure, criterion composition, uncertainty, generated or versioned schema semantics, aggregate-information-loss controls, and/or time-sensitive classification without adding unused complexity merely to favor DSD.
+Precommit and execute `CLS-APP-001`, the first external Classification application. It must use a stable public source that supplies a real externally anchored class schema or classification criterion rather than inventing both the categories and evidence inside the project fixture. Source/version provenance and external-domain validity must remain separate from DSD-internal protocol conformance.
