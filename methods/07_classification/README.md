@@ -1,6 +1,6 @@
 # 07. DSD Classification / DSD 분류론
 
-Status: **Protocol v0.1 frozen / CLS-CH-001~005 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / deterministic retrace next**
+Status: **Protocol v0.1 frozen / CLS-CH-001~006 PASS / CLS-CH-004~005 NO_GAIN / CLS-APP-001 50/50 PASS / additional external domains next**
 
 Task: classify supplied subjects by explicit class criteria and preserved formation, property, comparison, aggregate, transition, or other declared features rather than by labels alone.
 
@@ -24,7 +24,7 @@ Boundary: labels do not determine mathematical or semantic properties by name. E
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - [`WORKLOG.md`](WORKLOG.md)
 
-## Direct and external evidence
+## Direct, external, and reproducibility evidence
 
 - [`CLS-CH-001 precommit`](../../evidence/method_specific/classification/CLS-CH-001_precommit.md)
 - [`CLS-CH-001 positive direct classification`](../../evidence/method_specific/classification/CLS-CH-001_positive-direct-classification.md)
@@ -38,6 +38,8 @@ Boundary: labels do not determine mathematical or semantic properties by name. E
 - [`CLS-CH-005 strongest-reasonable-baseline`](../../evidence/method_specific/classification/CLS-CH-005_strongest-reasonable-baseline.md)
 - [`CLS-APP-001 precommit`](../../evidence/method_specific/classification/CLS-APP-001_precommit.md)
 - [`CLS-APP-001 HTTP status classification`](../../evidence/method_specific/classification/CLS-APP-001_http-status-classification.md)
+- [`CLS-CH-006 precommit`](../../evidence/method_specific/classification/CLS-CH-006_precommit.md)
+- [`CLS-CH-006 deterministic same-project retrace`](../../evidence/method_specific/classification/CLS-CH-006_deterministic-same-project-retrace.md)
 
 ## Protocol lineage
 
@@ -144,6 +146,37 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 External origin is not independent evaluator validation.
 
+## CLS-CH-006 — deterministic same-project retrace
+
+Retrace target:
+
+```text
+CLS-APP-001
+```
+
+Frozen artifact chain:
+
+```text
+P0 Protocol commit: c20be5f2507a766998ac346aeed2fcef8a045afc
+P1 APP-001 precommit: 795f6570405a48840495a59851b82d6eb5044b7a
+P2 APP-001 result: e0b086609c1af676aca84f371d615f0f3ad42e9b
+CLS-CH-006 precommit: 011df55acbe1a989d138757e6c80c78da5e787a4
+```
+
+Using the frozen P0+P1 task record without live-source repair, all six subject classifications, membership statuses, conformance records, and claim-relevant distinctions were reconstructed and matched immutable P2.
+
+```text
+ARTIFACT_LOCK_IMMUTABILITY: 10/10 PASS
+SIX_SUBJECT_RECONSTRUCTION: 24/24 PASS
+DISTINCTION_PROVENANCE_RECONSTRUCTION: 8/8 PASS
+EVIDENCE_DISCIPLINE: 6/6 PASS
+TOTAL: 48/48 PASS
+REPRODUCIBILITY_CASES: 1
+REPRODUCIBILITY_CLASS: deterministic_same_project_retrace
+```
+
+`SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION`. The retrace does not establish independent validation, gain, superiority, maturity, or permanent method independence.
+
 ## Core guards
 
 ```text
@@ -163,6 +196,7 @@ PRE_GENERATION_SCHEMA != POST_GENERATION_SCHEMA
 NO_CURRENT_MATCH_IN_OPEN_SCHEMA != UNIVERSAL_NONMEMBERSHIP
 AGGREGATE_EQUALITY != STRUCTURAL_CLASS_IDENTITY
 NO_GAIN != METHOD_ABSORPTION_PROOF
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 ```
 
 ## Current evidence state
@@ -181,7 +215,7 @@ BASELINE_CLASSIFICATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_CLASSIFICATION: established_at_constructed_evidence_level
 EXTERNAL_CLASSIFICATION_APPLICATIONS: 1
 EXTERNAL_CLASSIFICATION_DOMAINS: 1
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
 INDEPENDENT_CLASSIFICATION_VALIDATION: not established
 CLASSIFICATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_CLASSIFICATION_EVIDENCE_STATUS: validation_in_progress
@@ -193,4 +227,4 @@ Current evidence does not establish independent validation, cross-domain general
 
 ## Next development step
 
-Precommit and execute `CLS-CH-006`, a deterministic same-project retrace against a previously executed Classification case. The retrace must reuse the original frozen protocol/task/source records without changing them and test whether the same outputs, distinctions, and conformance ledger can be reconstructed. A successful retrace counts only as same-project reproducibility evidence, not independent replication.
+Precommit and execute Classification applications in materially different external domains. Each external case must have an externally anchored schema or criterion and external subject evidence, remain separately precommitted, and keep external-domain correctness, DSD protocol conformance, and evaluator independence on separate ledgers.
