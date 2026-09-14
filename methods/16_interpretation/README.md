@@ -1,6 +1,6 @@
 # 16. DSD Interpretation / DSD 해석론
 
-Status: **Protocol v0.1 internally established / positive, negative, and direct method-boundary constructed evidence established / external validation deferred**
+Status: **Protocol v0.1 internally established / positive, negative, method-boundary, and competent-baseline constructed evidence established / external validation deferred**
 
 Task: separate source material, source identity/version/witness, contextual prerequisites, translation/normalization choices, interpretive bridges, and resulting readings so that supported alternatives can be preserved without treating one representation, commentary, later reception, or preferred conclusion as the source itself.
 
@@ -40,6 +40,8 @@ Task Interface
 - [`INT-CH-003 negative/ambiguity/blocked terminal`](../../evidence/method_specific/interpretation/INT-CH-003_negative-ambiguity-blocked-terminal.md)
 - [`INT-CH-004 precommit`](../../evidence/method_specific/interpretation/INT-CH-004_precommit.md)
 - [`INT-CH-004 direct method-boundary`](../../evidence/method_specific/interpretation/INT-CH-004_direct-method-boundary.md)
+- [`INT-CH-005 precommit`](../../evidence/method_specific/interpretation/INT-CH-005_precommit.md)
+- [`INT-CH-005 competent-baseline NO_GAIN`](../../evidence/method_specific/interpretation/INT-CH-005_competent-baseline-no-gain.md)
 
 ## Protocol lineage
 
@@ -82,22 +84,15 @@ TERMINAL_INTERPRETATION_STATUS: INTERPRETATION_RESOLVED_SINGLE
 INTERPRETATION_PROTOCOL_CONFORMANCE: CONFORMANT
 ```
 
-The preserved failure is evidence of precommit discipline, not a Protocol-v0.1 defect.
-
-`INT-CH-003` pressured legitimate non-single/non-positive terminals under a separately frozen constructed task family:
+`INT-CH-003` pressured legitimate non-single/non-positive terminals:
 
 ```text
 INT-CH-003: 50/50 PASS
-N1 legitimate plurality
-  -> INTERPRETATION_RESOLVED_MULTI
-N2 temporal order / unresolved causality
-  -> INTERPRETATION_UNDERDETERMINED
-N3 missing semantic codebook bridge
-  -> INTERPRETATION_BLOCKED
-N4 source silence on requested key distinction
-  -> INTERPRETATION_UNDERDETERMINED
-N5 request outside frozen interpretive scope
-  -> INTERPRETATION_OUT_OF_SCOPE
+N1 legitimate plurality -> INTERPRETATION_RESOLVED_MULTI
+N2 temporal order / unresolved causality -> INTERPRETATION_UNDERDETERMINED
+N3 missing semantic codebook bridge -> INTERPRETATION_BLOCKED
+N4 source silence on requested key distinction -> INTERPRETATION_UNDERDETERMINED
+N5 request outside frozen interpretive scope -> INTERPRETATION_OUT_OF_SCOPE
 ```
 
 `INT-CH-004` directly compared Interpretation with five neighboring methods under the same five-interface rule:
@@ -112,7 +107,21 @@ Audit          -> PARTIAL_OVERLAP_NOT_COLLAPSE
 EXACT_COLLAPSE_CANDIDATES_FOUND: 0/5
 ```
 
-The finding is local to the frozen fixtures. Shared source records, metadata, readings, reconstruction handoffs, or execution traces do not erase material task-interface differences, but this does not prove permanent irreducibility or registry survival.
+`INT-CH-005` compared Interpretation with a fair competent non-DSD baseline supplied with the same claim-relevant information:
+
+```text
+INT-CH-005: 50/50 PASS / NO_GAIN
+BASELINE: B0_SOURCE_CONTEXT_READING_EVALUATOR
+G1 SOURCE_ROLE_SEPARATION_GAIN: NOT_ESTABLISHED
+G2 BRIDGE_DISCIPLINE_GAIN: NOT_ESTABLISHED
+G3 MULTI_READING_GAIN: NOT_ESTABLISHED
+G4 SILENCE_AND_BLOCKAGE_GAIN: NOT_ESTABLISHED
+G5 CLAIM_STRENGTH_GAIN: NOT_ESTABLISHED
+G6 TRACEABILITY_GAIN: NOT_ESTABLISHED
+INTERPRETATION_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass. The boundary finding is local to the frozen fixtures. The competent-baseline match likewise does not establish permanent redundancy, merger, absorption, deletion, or method failure.
 
 ## Core guards
 
@@ -137,6 +146,8 @@ STRUCTURAL_DECOMPOSITION != INTERPRETIVE_SUPPORT
 READING_COMPARISON != SOURCE_SUPPORT
 AUDIT_CONFORMANCE_VERDICT != INTERPRETIVE_READING
 NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
 ```
 
 ## Output and terminal structure
@@ -182,14 +193,15 @@ DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 3
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 4
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
 NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
 METHOD_BOUNDARY_INTERPRETATION_CASES: 1
-BASELINE_INTERPRETATION_CASES: 0
-NO_GAIN_INTERPRETATION_CASES: 0
+BASELINE_INTERPRETATION_CASES: 1
+NO_GAIN_INTERPRETATION_CASES: 1
+STRONGEST_REASONABLE_BASELINE_INTERPRETATION: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
@@ -207,4 +219,4 @@ The previously noted Sunzi / *The Art of War* reinterpretation remains a future 
 
 ## Next development step
 
-Precommit and execute a fair competent baseline challenge. The baseline must receive exactly the same claim-relevant source/context/bridge/reading-policy information as DSD Interpretation, and `NO_GAIN` must remain an admissible result. External validation remains deferred until the internal standardization sequence is complete.
+Precommit and execute `INT-CH-006`, the strongest-reasonable-baseline challenge. It should use a materially richer baseline and pressure witness/version conflict, translation/normalization choice, reconstruction-handoff provenance, temporal/context scope, and claim-strength interactions while giving the baseline all claim-relevant information. Another `NO_GAIN` remains admissible. External validation remains deferred until the internal standardization sequence is complete.
