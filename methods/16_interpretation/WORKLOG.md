@@ -166,16 +166,78 @@ EMPTY_CONTEXT_SET != MISSING_CONTEXT_RECORD
 NOT_APPLICABLE_TRANSFORMATION != UNRECORDED_TRANSFORMATION
 ```
 
+## Step 6 — INT-CH-003 negative/ambiguity/blocked-terminal challenge
+
+```text
+PRECOMMIT_COMMIT: f7185dcfdc03781841c563fa85a689f040e923fc
+PRECOMMIT_BLOB: 10b8c2a4bf3b777538c990ea035f1fe5333397bb
+RESULT_COMMIT: 83629425b9f1f8480f694e5294c26cff57f4ba1a
+```
+
+Execution:
+
+```text
+N1 legitimate plurality -> INTERPRETATION_RESOLVED_MULTI
+N2 temporal/causal distinction -> INTERPRETATION_UNDERDETERMINED
+N3 missing codebook bridge -> INTERPRETATION_BLOCKED
+N4 source silence on key -> INTERPRETATION_UNDERDETERMINED
+N5 authorial private emotional state outside scope -> INTERPRETATION_OUT_OF_SCOPE
+TOTAL: 50/50 PASS
+INTERPRETATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+Preserved boundaries include:
+
+```text
+MULTIPLE_SUPPORTED_READINGS != INTERPRETATION_UNDERDETERMINED
+TEMPORAL_ORDER != CAUSAL_INTERPRETATION
+SOURCE_SILENCE != NEGATIVE_CLAIM
+NOT_SUPPORTED != FALSE
+INTERPRETATION_BLOCKED != INTERPRETATION_UNDERDETERMINED
+OUT_OF_SCOPE != BLOCKED
+```
+
+## Step 7 — INT-CH-004 direct method-boundary challenge
+
+A prospective precommit froze the same five-interface boundary test for Analysis, Comparison, Provenance, Reconstruction, and Audit.
+
+```text
+PRECOMMIT_COMMIT: fb2657f37a1e9f784337f4502000a66d10f69334
+PRECOMMIT_BLOB: b8f982bacd70b3acd330e97c88f58f60b0374698
+RESULT_COMMIT: 18ec887f43ae2b29807814354c928e835f1b143a
+```
+
+Execution:
+
+```text
+Analysis       -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Comparison     -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Provenance     -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Reconstruction -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Audit          -> PARTIAL_OVERLAP_NOT_COLLAPSE
+EXACT_COLLAPSE_CANDIDATES_FOUND: 0/5
+TOTAL: 58/58 PASS
+INTERPRETATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+Shared carriers and handoffs did not erase material differences in operation, output, failure semantics, or validation target. The result is local constructed boundary evidence, not a permanent method-survival or non-merger decision.
+
 ## Current counters
 
 ```text
 DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 1
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 3
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
+NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
+METHOD_BOUNDARY_INTERPRETATION_CASES: 1
 BASELINE_INTERPRETATION_CASES: 0
 NO_GAIN_INTERPRETATION_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -183,8 +245,10 @@ EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
 INTERPRETATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_INTERPRETATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
 ## Next
 
-Precommit and execute the negative/ambiguity/blocked-terminal challenge. Keep it constructed and internal; external corpus validation remains deferred.
+Precommit and execute a fair competent baseline challenge. The baseline must receive the same claim-relevant source/context/bridge/reading-policy information as DSD Interpretation. `NO_GAIN` is an admissible result. External validation remains deferred until internal standardization is complete.
