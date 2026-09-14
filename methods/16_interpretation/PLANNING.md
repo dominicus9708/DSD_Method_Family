@@ -1,6 +1,6 @@
 # DSD Interpretation Planning / DSD 해석론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative, method-boundary, and competent-baseline constructed challenges established / external validation deferred**  
+Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative, method-boundary, competent-baseline, and strongest-reasonable-baseline constructed challenges established / external validation deferred**  
 Date opened: **2026-09-14**
 
 ## Purpose / 목적
@@ -43,6 +43,11 @@ SOURCE_GAP != LICENSE_TO_FILL
 CURRENT_READING != AUTHORIAL_INTENT
 SUMMARY_COINCIDENCE != SOURCE_EQUIVALENCE
 PROVENANCE_IDENTITY != INTERPRETIVE_EQUIVALENCE
+RECONSTRUCTED_CONTENT != OBSERVED_SOURCE_CONTENT
+SAME_WORDING != SAME_MEANING_ACROSS_CONTEXT
+OBLIGATION != OCCURRENCE
+OBLIGATION != PREDICTION
+CONDITIONAL_RULE != CAUSAL_SUFFICIENCY_PROOF
 ```
 
 ## Internal development sequence
@@ -54,8 +59,8 @@ PROVENANCE_IDENTITY != INTERPRETIVE_EQUIVALENCE
 5. ✅ Positive constructed challenge established prospectively: `INT-CH-001` preserved as 38/40 `CHALLENGE_DESIGN_DEFECT`; corrected `INT-CH-002` 44/44 PASS.
 6. ✅ Negative/ambiguity/blocked-terminal challenge — `INT-CH-003`, 50/50 PASS.
 7. ✅ Direct method-boundary challenge — `INT-CH-004`, 58/58 PASS; Analysis, Comparison, Provenance, Reconstruction, Audit all `PARTIAL_OVERLAP_NOT_COLLAPSE`.
-8. 🟨 Baseline comparison — competent `INT-CH-005` 50/50 PASS / `NO_GAIN` complete; strongest-reasonable `INT-CH-006` pending. `NO_GAIN` remains admissible.
-9. ⬜ Deterministic same-project retrace.
+8. ✅ Baseline comparison — competent `INT-CH-005` 50/50 PASS / `NO_GAIN`; strongest-reasonable `INT-CH-006` 60/60 PASS / `NO_GAIN`; strongest-reasonable-baseline category established at constructed-evidence level.
+9. 🟨 Deterministic same-project retrace.
 10. ⬜ Frozen-axis internal maturity/standardization audit.
 11. ⏸ External applications deferred until internal standardization is complete.
 
@@ -122,17 +127,25 @@ INT-CH-005
   precommit blob: bb981156c3665b0dc1e8abf8f6bceb18bda40217
   result commit: 5f288620e29090d9860a504006b9fcc0e8afc7c7
   50/50 PASS / NO_GAIN
-  G1 SOURCE_ROLE_SEPARATION_GAIN: NOT_ESTABLISHED
-  G2 BRIDGE_DISCIPLINE_GAIN: NOT_ESTABLISHED
-  G3 MULTI_READING_GAIN: NOT_ESTABLISHED
-  G4 SILENCE_AND_BLOCKAGE_GAIN: NOT_ESTABLISHED
-  G5 CLAIM_STRENGTH_GAIN: NOT_ESTABLISHED
-  G6 TRACEABILITY_GAIN: NOT_ESTABLISHED
+  G1-G6: NOT_ESTABLISHED
+
+INT-CH-006
+  baseline: B1_STRONG_SOURCE_CONTEXT_INTERPRETATION_ENGINE
+  protocol commit: 40110a8a779f0ac6ff93ede6414544b8ec548fdf
+  precommit commit: fca5d6a9a8c4c3ca8a890ad1c028225868e3fa84
+  precommit blob: da1b2218acccd15063326382f92faa561f6b4edf
+  result commit: cc7a12c9c3098813701841cab20dd7a630c2f5ff
+  60/60 PASS / NO_GAIN
+  R1 witness/version conflict -> RESOLVED_MULTI / same
+  R2 competing normalization mappings -> RESOLVED_MULTI / same
+  R3 reconstruction handoff -> RESOLVED_MULTI / same
+  R4 time-indexed context -> RESOLVED_MULTI / same
+  R5 obligation/occurrence/prediction/causation -> RESOLVED_SINGLE / same
+  G1-G7: NOT_ESTABLISHED
+  STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
 ```
 
-The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass.
-
-`INT-CH-003` established internal terminal separation for legitimate plurality, unresolved causal interpretation, missing semantic bridge, source silence, and out-of-scope requests. `INT-CH-004` established local operational boundary separation across the frozen five-interface test. `INT-CH-005` established that a competent non-DSD source/context reading evaluator supplied with the same claim-relevant semantics can match DSD Interpretation on the frozen competent-baseline dimensions. None of these cases used any external corpus.
+The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass. `INT-CH-005` and `INT-CH-006` preserve `NO_GAIN` as valid comparative evidence rather than treating baseline matching as a method failure or automatic merger/deletion result. None of these cases used any external corpus.
 
 ```text
 NO_GAIN != METHOD_FAILURE
@@ -148,15 +161,15 @@ DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 5
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 4
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 6
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 5
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
 NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
 METHOD_BOUNDARY_INTERPRETATION_CASES: 1
-BASELINE_INTERPRETATION_CASES: 1
-NO_GAIN_INTERPRETATION_CASES: 1
-STRONGEST_REASONABLE_BASELINE_INTERPRETATION: not established
+BASELINE_INTERPRETATION_CASES: 2
+NO_GAIN_INTERPRETATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
@@ -168,4 +181,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Freeze and execute `INT-CH-006`, a materially richer strongest-reasonable-baseline challenge. It should stress witness/version conflict, translation or normalization choice, reconstruction-handoff provenance, temporal/context scope, and claim-strength interactions while giving the baseline exactly the same claim-relevant information as DSD Interpretation. Another `NO_GAIN` remains admissible. Sunzi / *The Art of War* and all other external corpus validation remain deferred until internal standardization is complete.
+Freeze and execute a deterministic same-project retrace from immutable Interpretation artifacts. The retrace must reconstruct the selected prior result without changing protocol, task, source/context, bridge, transformation, handoff, or verdict records. A successful retrace increments only `REPRODUCIBILITY_CASES`; it does not establish independent replication or external validity. Sunzi / *The Art of War* and all other external corpus validation remain deferred until internal standardization is complete.
