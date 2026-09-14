@@ -1,6 +1,6 @@
 # 16. DSD Interpretation / DSD 해석론
 
-Status: **Protocol v0.1 internally established / positive constructed evidence established / external validation deferred**
+Status: **Protocol v0.1 internally established / positive and negative constructed evidence established / external validation deferred**
 
 Task: separate source material, source identity/version/witness, contextual prerequisites, translation/normalization choices, interpretive bridges, and resulting readings so that supported alternatives can be preserved without treating one representation, commentary, later reception, or preferred conclusion as the source itself.
 
@@ -36,6 +36,8 @@ Task Interface
 - [`INT-CH-001 challenge-design defect`](../../evidence/method_specific/interpretation/INT-CH-001_positive-challenge-design-defect.md)
 - [`INT-CH-002 corrected precommit`](../../evidence/method_specific/interpretation/INT-CH-002_precommit.md)
 - [`INT-CH-002 corrected positive interpretation`](../../evidence/method_specific/interpretation/INT-CH-002_corrected-positive-interpretation.md)
+- [`INT-CH-003 precommit`](../../evidence/method_specific/interpretation/INT-CH-003_precommit.md)
+- [`INT-CH-003 negative/ambiguity/blocked terminal`](../../evidence/method_specific/interpretation/INT-CH-003_negative-ambiguity-blocked-terminal.md)
 
 ## Protocol lineage
 
@@ -55,7 +57,7 @@ BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
 ```
 
-## First constructed evidence lineage
+## Constructed evidence lineage
 
 `INT-CH-001` was intentionally preserved as a failed challenge design rather than repaired post hoc:
 
@@ -79,6 +81,38 @@ INTERPRETATION_PROTOCOL_CONFORMANCE: CONFORMANT
 ```
 
 The preserved failure is evidence of precommit discipline, not a Protocol-v0.1 defect.
+
+`INT-CH-003` then pressured legitimate non-single/non-positive terminals under a separately frozen constructed task family:
+
+```text
+INT-CH-003: 50/50 PASS
+N1 legitimate plurality
+  -> INTERPRETATION_RESOLVED_MULTI
+N2 temporal order / unresolved causality
+  -> INTERPRETATION_UNDERDETERMINED
+N3 missing semantic codebook bridge
+  -> INTERPRETATION_BLOCKED
+N4 source silence on requested key distinction
+  -> INTERPRETATION_UNDERDETERMINED
+N5 request outside frozen interpretive scope
+  -> INTERPRETATION_OUT_OF_SCOPE
+```
+
+Preserved distinctions include:
+
+```text
+MULTIPLE_SUPPORTED_READINGS != INTERPRETATION_UNDERDETERMINED
+AMBIGUITY != CONTRADICTION
+TEMPORAL_ORDER != CAUSAL_INTERPRETATION
+MISSING_BRIDGE != NEGATIVE_READING
+SOURCE_SILENCE != NEGATIVE_CLAIM
+NOT_SUPPORTED != FALSE
+INTERPRETATION_BLOCKED != INTERPRETATION_UNDERDETERMINED
+OUT_OF_SCOPE != BLOCKED
+OUT_OF_SCOPE != UNDERDETERMINED
+```
+
+No Protocol-v0.1 defect or shared-core reopen requirement was exposed.
 
 ## Core guards
 
@@ -145,11 +179,11 @@ DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 1
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 2
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
+NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
-NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 0
 METHOD_BOUNDARY_INTERPRETATION_CASES: 0
 BASELINE_INTERPRETATION_CASES: 0
 NO_GAIN_INTERPRETATION_CASES: 0
@@ -158,6 +192,8 @@ EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
 INTERPRETATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_INTERPRETATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
 Protocol construction and boundary refinement are infrastructure, not direct method validation.
@@ -168,4 +204,4 @@ The previously noted Sunzi / *The Art of War* reinterpretation remains a future 
 
 ## Next development step
 
-Precommit and execute the negative/ambiguity/blocked-terminal Interpretation challenge. It must remain entirely constructed and internal.
+Precommit and execute `INT-CH-004`, the direct method-boundary challenge against Analysis, Comparison, Provenance, Reconstruction, and Audit. It must remain entirely constructed and internal.
