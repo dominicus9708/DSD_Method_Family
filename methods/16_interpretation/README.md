@@ -1,6 +1,6 @@
 # 16. DSD Interpretation / DSD 해석론
 
-Status: **Protocol v0.1 internally established / positive, negative, method-boundary, and competent-baseline constructed evidence established / external validation deferred**
+Status: **Protocol v0.1 internally established / positive, negative, method-boundary, competent-baseline, and strongest-reasonable-baseline constructed evidence established / external validation deferred**
 
 Task: separate source material, source identity/version/witness, contextual prerequisites, translation/normalization choices, interpretive bridges, and resulting readings so that supported alternatives can be preserved without treating one representation, commentary, later reception, or preferred conclusion as the source itself.
 
@@ -42,6 +42,8 @@ Task Interface
 - [`INT-CH-004 direct method-boundary`](../../evidence/method_specific/interpretation/INT-CH-004_direct-method-boundary.md)
 - [`INT-CH-005 precommit`](../../evidence/method_specific/interpretation/INT-CH-005_precommit.md)
 - [`INT-CH-005 competent-baseline NO_GAIN`](../../evidence/method_specific/interpretation/INT-CH-005_competent-baseline-no-gain.md)
+- [`INT-CH-006 precommit`](../../evidence/method_specific/interpretation/INT-CH-006_precommit.md)
+- [`INT-CH-006 strongest-reasonable-baseline NO_GAIN`](../../evidence/method_specific/interpretation/INT-CH-006_strongest-reasonable-baseline.md)
 
 ## Protocol lineage
 
@@ -107,21 +109,29 @@ Audit          -> PARTIAL_OVERLAP_NOT_COLLAPSE
 EXACT_COLLAPSE_CANDIDATES_FOUND: 0/5
 ```
 
-`INT-CH-005` compared Interpretation with a fair competent non-DSD baseline supplied with the same claim-relevant information:
+`INT-CH-005` compared Interpretation with a fair competent baseline:
 
 ```text
 INT-CH-005: 50/50 PASS / NO_GAIN
 BASELINE: B0_SOURCE_CONTEXT_READING_EVALUATOR
-G1 SOURCE_ROLE_SEPARATION_GAIN: NOT_ESTABLISHED
-G2 BRIDGE_DISCIPLINE_GAIN: NOT_ESTABLISHED
-G3 MULTI_READING_GAIN: NOT_ESTABLISHED
-G4 SILENCE_AND_BLOCKAGE_GAIN: NOT_ESTABLISHED
-G5 CLAIM_STRENGTH_GAIN: NOT_ESTABLISHED
-G6 TRACEABILITY_GAIN: NOT_ESTABLISHED
-INTERPRETATION_METHOD_GAIN_STATUS: NO_GAIN
+G1-G6: NOT_ESTABLISHED
 ```
 
-The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass. The boundary finding is local to the frozen fixtures. The competent-baseline match likewise does not establish permanent redundancy, merger, absorption, deletion, or method failure.
+`INT-CH-006` then used a materially stronger baseline and a richer fixture family:
+
+```text
+INT-CH-006: 60/60 PASS / NO_GAIN
+BASELINE: B1_STRONG_SOURCE_CONTEXT_INTERPRETATION_ENGINE
+R1 witness/version conflict -> RESOLVED_MULTI / same
+R2 competing normalization mappings -> RESOLVED_MULTI / same
+R3 reconstruction handoff -> RESOLVED_MULTI / same
+R4 time-indexed context change -> RESOLVED_MULTI / same
+R5 obligation/occurrence/prediction/causation -> RESOLVED_SINGLE / same
+G1-G7: NOT_ESTABLISHED
+STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
+```
+
+The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass. The boundary finding is local to the frozen fixtures. Baseline matches do not establish permanent redundancy, merger, absorption, deletion, or method failure.
 
 ## Core guards
 
@@ -145,6 +155,9 @@ RECONSTRUCTED_CONTENT != OBSERVED_SOURCE_CONTENT
 STRUCTURAL_DECOMPOSITION != INTERPRETIVE_SUPPORT
 READING_COMPARISON != SOURCE_SUPPORT
 AUDIT_CONFORMANCE_VERDICT != INTERPRETIVE_READING
+OBLIGATION != OCCURRENCE
+OBLIGATION != PREDICTION
+CONDITIONAL_RULE != CAUSAL_SUFFICIENCY_PROOF
 NO_GAIN != METHOD_FAILURE
 NO_GAIN != METHOD_ABSORPTION_PROOF
 NO_GAIN != METHOD_MERGER_PROOF
@@ -193,15 +206,15 @@ DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 5
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 4
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 6
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 5
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
 NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
 METHOD_BOUNDARY_INTERPRETATION_CASES: 1
-BASELINE_INTERPRETATION_CASES: 1
-NO_GAIN_INTERPRETATION_CASES: 1
-STRONGEST_REASONABLE_BASELINE_INTERPRETATION: not established
+BASELINE_INTERPRETATION_CASES: 2
+NO_GAIN_INTERPRETATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
@@ -219,4 +232,4 @@ The previously noted Sunzi / *The Art of War* reinterpretation remains a future 
 
 ## Next development step
 
-Precommit and execute `INT-CH-006`, the strongest-reasonable-baseline challenge. It should use a materially richer baseline and pressure witness/version conflict, translation/normalization choice, reconstruction-handoff provenance, temporal/context scope, and claim-strength interactions while giving the baseline all claim-relevant information. Another `NO_GAIN` remains admissible. External validation remains deferred until the internal standardization sequence is complete.
+Precommit and execute a deterministic same-project retrace from frozen Interpretation artifacts. A successful retrace may increment `REPRODUCIBILITY_CASES` only; it does not establish independent replication, independent validation, or external validity. External validation remains deferred until the internal standardization sequence is complete.
