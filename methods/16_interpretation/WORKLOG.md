@@ -179,7 +179,7 @@ Execution:
 ```text
 N1 legitimate plurality -> INTERPRETATION_RESOLVED_MULTI
 N2 temporal/causal distinction -> INTERPRETATION_UNDERDETERMINED
-N3 missing codebook bridge -> INTERPRETATION_BLOCKED
+N3 missing semantic codebook bridge -> INTERPRETATION_BLOCKED
 N4 source silence on key -> INTERPRETATION_UNDERDETERMINED
 N5 authorial private emotional state outside scope -> INTERPRETATION_OUT_OF_SCOPE
 TOTAL: 50/50 PASS
@@ -262,21 +262,59 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 The competent baseline match is a valid result and is not interpreted as method failure, absorption, merger, deletion, or permanent redundancy.
 
+## Step 8B — INT-CH-006 strongest-reasonable-baseline NO_GAIN challenge
+
+A materially stronger baseline `B1_STRONG_SOURCE_CONTEXT_INTERPRETATION_ENGINE` was frozen with the same witness/version, transformation, reconstruction-handoff, temporal-context, bridge, reading-policy, claim-strength, and provenance information as DSD Interpretation.
+
+```text
+PROTOCOL_COMMIT: 40110a8a779f0ac6ff93ede6414544b8ec548fdf
+PROTOCOL_BLOB: dc3c3a46ba170b3b7565a59a7113c473fb02b463
+PRECOMMIT_COMMIT: fca5d6a9a8c4c3ca8a890ad1c028225868e3fa84
+PRECOMMIT_BLOB: da1b2218acccd15063326382f92faa561f6b4edf
+RESULT_COMMIT: cc7a12c9c3098813701841cab20dd7a630c2f5ff
+```
+
+Execution:
+
+```text
+R1 witness/version conflict -> DSD/B1 same / INTERPRETATION_RESOLVED_MULTI
+R2 competing normalization mappings -> DSD/B1 same / INTERPRETATION_RESOLVED_MULTI
+R3 reconstruction handoff -> DSD/B1 same / INTERPRETATION_RESOLVED_MULTI
+R4 time-indexed context change -> DSD/B1 same / INTERPRETATION_RESOLVED_MULTI
+R5 obligation/occurrence/prediction/causation -> DSD/B1 same / INTERPRETATION_RESOLVED_SINGLE
+
+G1 WITNESS_VERSION_CONFLICT_GAIN: NOT_ESTABLISHED
+G2 TRANSFORMATION_PROVENANCE_GAIN: NOT_ESTABLISHED
+G3 RECONSTRUCTION_HANDOFF_GAIN: NOT_ESTABLISHED
+G4 TEMPORAL_CONTEXT_SCOPE_GAIN: NOT_ESTABLISHED
+G5 CLAIM_STRENGTH_INTERACTION_GAIN: NOT_ESTABLISHED
+G6 AMBIGUITY_AND_NO_HIDDEN_HARMONIZATION_GAIN: NOT_ESTABLISHED
+G7 TRACEABILITY_GAIN: NOT_ESTABLISHED
+
+INTERPRETATION_METHOD_GAIN_STATUS: NO_GAIN
+STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
+TOTAL: 60/60 PASS
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The stronger baseline also matched. This establishes only strongest-reasonable-baseline coverage at the constructed-evidence level, not DSD superiority, external applicability, independent validation, or practical superiority.
+
 ## Current counters
 
 ```text
 DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 5
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 4
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 6
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 5
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
 NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
 METHOD_BOUNDARY_INTERPRETATION_CASES: 1
-BASELINE_INTERPRETATION_CASES: 1
-NO_GAIN_INTERPRETATION_CASES: 1
-STRONGEST_REASONABLE_BASELINE_INTERPRETATION: not established
+BASELINE_INTERPRETATION_CASES: 2
+NO_GAIN_INTERPRETATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
@@ -288,4 +326,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Precommit and execute `INT-CH-006`, the strongest-reasonable-baseline challenge. The stronger fixture should stress witness/version conflict, translation or normalization choices, reconstruction-handoff provenance, temporal/context scope, and claim-strength interactions while giving the baseline all claim-relevant information. Another `NO_GAIN` remains admissible. External validation remains deferred until internal standardization is complete.
+Precommit and execute a deterministic same-project retrace from frozen Interpretation artifacts. A successful retrace increments only `REPRODUCIBILITY_CASES`; it does not establish independent replication. External validation remains deferred until internal standardization is complete.
