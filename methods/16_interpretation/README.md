@@ -1,6 +1,6 @@
 # 16. DSD Interpretation / DSD 해석론
 
-Status: **Protocol v0.1 internally established / positive and negative constructed evidence established / external validation deferred**
+Status: **Protocol v0.1 internally established / positive, negative, and direct method-boundary constructed evidence established / external validation deferred**
 
 Task: separate source material, source identity/version/witness, contextual prerequisites, translation/normalization choices, interpretive bridges, and resulting readings so that supported alternatives can be preserved without treating one representation, commentary, later reception, or preferred conclusion as the source itself.
 
@@ -38,6 +38,8 @@ Task Interface
 - [`INT-CH-002 corrected positive interpretation`](../../evidence/method_specific/interpretation/INT-CH-002_corrected-positive-interpretation.md)
 - [`INT-CH-003 precommit`](../../evidence/method_specific/interpretation/INT-CH-003_precommit.md)
 - [`INT-CH-003 negative/ambiguity/blocked terminal`](../../evidence/method_specific/interpretation/INT-CH-003_negative-ambiguity-blocked-terminal.md)
+- [`INT-CH-004 precommit`](../../evidence/method_specific/interpretation/INT-CH-004_precommit.md)
+- [`INT-CH-004 direct method-boundary`](../../evidence/method_specific/interpretation/INT-CH-004_direct-method-boundary.md)
 
 ## Protocol lineage
 
@@ -82,7 +84,7 @@ INTERPRETATION_PROTOCOL_CONFORMANCE: CONFORMANT
 
 The preserved failure is evidence of precommit discipline, not a Protocol-v0.1 defect.
 
-`INT-CH-003` then pressured legitimate non-single/non-positive terminals under a separately frozen constructed task family:
+`INT-CH-003` pressured legitimate non-single/non-positive terminals under a separately frozen constructed task family:
 
 ```text
 INT-CH-003: 50/50 PASS
@@ -98,21 +100,19 @@ N5 request outside frozen interpretive scope
   -> INTERPRETATION_OUT_OF_SCOPE
 ```
 
-Preserved distinctions include:
+`INT-CH-004` directly compared Interpretation with five neighboring methods under the same five-interface rule:
 
 ```text
-MULTIPLE_SUPPORTED_READINGS != INTERPRETATION_UNDERDETERMINED
-AMBIGUITY != CONTRADICTION
-TEMPORAL_ORDER != CAUSAL_INTERPRETATION
-MISSING_BRIDGE != NEGATIVE_READING
-SOURCE_SILENCE != NEGATIVE_CLAIM
-NOT_SUPPORTED != FALSE
-INTERPRETATION_BLOCKED != INTERPRETATION_UNDERDETERMINED
-OUT_OF_SCOPE != BLOCKED
-OUT_OF_SCOPE != UNDERDETERMINED
+INT-CH-004: 58/58 PASS
+Analysis       -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Comparison     -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Provenance     -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Reconstruction -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Audit          -> PARTIAL_OVERLAP_NOT_COLLAPSE
+EXACT_COLLAPSE_CANDIDATES_FOUND: 0/5
 ```
 
-No Protocol-v0.1 defect or shared-core reopen requirement was exposed.
+The finding is local to the frozen fixtures. Shared source records, metadata, readings, reconstruction handoffs, or execution traces do not erase material task-interface differences, but this does not prove permanent irreducibility or registry survival.
 
 ## Core guards
 
@@ -133,6 +133,9 @@ SAME_WORDING != SAME_MEANING_ACROSS_CONTEXT
 SUMMARY_COINCIDENCE != SOURCE_EQUIVALENCE
 PROVENANCE_IDENTITY != INTERPRETIVE_EQUIVALENCE
 RECONSTRUCTED_CONTENT != OBSERVED_SOURCE_CONTENT
+STRUCTURAL_DECOMPOSITION != INTERPRETIVE_SUPPORT
+READING_COMPARISON != SOURCE_SUPPORT
+AUDIT_CONFORMANCE_VERDICT != INTERPRETIVE_READING
 NO_GAIN != METHOD_FAILURE
 ```
 
@@ -179,12 +182,12 @@ DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 2
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 3
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
 NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
-METHOD_BOUNDARY_INTERPRETATION_CASES: 0
+METHOD_BOUNDARY_INTERPRETATION_CASES: 1
 BASELINE_INTERPRETATION_CASES: 0
 NO_GAIN_INTERPRETATION_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -204,4 +207,4 @@ The previously noted Sunzi / *The Art of War* reinterpretation remains a future 
 
 ## Next development step
 
-Precommit and execute `INT-CH-004`, the direct method-boundary challenge against Analysis, Comparison, Provenance, Reconstruction, and Audit. It must remain entirely constructed and internal.
+Precommit and execute a fair competent baseline challenge. The baseline must receive exactly the same claim-relevant source/context/bridge/reading-policy information as DSD Interpretation, and `NO_GAIN` must remain an admissible result. External validation remains deferred until the internal standardization sequence is complete.
