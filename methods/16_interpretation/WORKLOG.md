@@ -108,22 +108,83 @@ RECONSTRUCTED_CONTENT != OBSERVED_SOURCE_CONTENT
 NO_GAIN != METHOD_FAILURE
 ```
 
-Current counters:
+## Step 5A — INT-CH-001 first positive attempt preserved as failure
+
+Precommit:
+
+```text
+PRECOMMIT_COMMIT: f932971c1144f1a2fd49db5927a8765e498e6e51
+PRECOMMIT_BLOB: 7a18e74b35aebbfe0768407aa274560384ce46d5
+```
+
+Substantive candidate-reading results matched the intended fixture, but the precommit omitted explicit freezes required by Protocol v0.1:
+
+```text
+G5 FAIL — CONTEXT_SET / CONTEXT_PROVENANCE not explicitly frozen
+G9 FAIL — AMBIGUITY_POLICY / CONFLICT_POLICY not explicitly frozen
+```
+
+```text
+SCORE: 38/40 FAIL
+FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
+PROTOCOL_DEFECT_EXPOSED: no
+PROTOCOL_REVISION_REQUIRED: no
+```
+
+The case was not repaired in place.
+
+## Step 5B — INT-CH-002 corrected positive challenge
+
+A new prospective precommit explicitly froze the missing context, ambiguity/conflict, missing-source, claim-strength, and optional-handoff records.
+
+```text
+PRECOMMIT_COMMIT: 28ebd74146372c9d60557a51669775140c616946
+PRECOMMIT_BLOB: 982fc81b706665f5c768936a36de2174d6b7a84a
+RESULT_COMMIT: a46560a5289489b3efefd84cd841e09555fdbf7f
+```
+
+Execution:
+
+```text
+R1 -> SUPPORTED / BRIDGE_DEPENDENT_INTERPRETATION
+R2 -> NOT_SUPPORTED_WITHIN_DECLARED_SOURCE_SET
+R3 -> NOT_SUPPORTED_WITHIN_DECLARED_SOURCE_SET
+SUPPORTED_READING_SET: {R1}
+TERMINAL_INTERPRETATION_STATUS: INTERPRETATION_RESOLVED_SINGLE
+INTERPRETATION_PROTOCOL_CONFORMANCE: CONFORMANT
+VALIDITY_GATES: 14/14 PASS
+TOTAL: 44/44 PASS
+```
+
+The case preserves:
+
+```text
+PERMISSION != PREDICTION
+PERMISSION != OBLIGATION
+NECESSARY_CONDITION != SUFFICIENT_CONDITION
+EMPTY_CONTEXT_SET != MISSING_CONTEXT_RECORD
+NOT_APPLICABLE_TRANSFORMATION != UNRECORDED_TRANSFORMATION
+```
+
+## Current counters
 
 ```text
 DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS: 0
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 1
+SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
+PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
 BASELINE_INTERPRETATION_CASES: 0
 NO_GAIN_INTERPRETATION_CASES: 0
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
 INTERPRETATION_METHOD_MATURITY_CLASSIFICATION: developing
-CURRENT_INTERPRETATION_EVIDENCE_STATUS: pre_validation
+CURRENT_INTERPRETATION_EVIDENCE_STATUS: validation_in_progress
 ```
 
 ## Next
 
-Precommit and execute `INT-CH-001`, the first positive constructed Interpretation challenge. Keep the fixture internal/constructed. Do not use Sunzi or another external corpus yet.
+Precommit and execute the negative/ambiguity/blocked-terminal challenge. Keep it constructed and internal; external corpus validation remains deferred.
