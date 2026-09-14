@@ -1,6 +1,6 @@
 # DSD Interpretation Planning / DSD 해석론 기획
 
-Status: **internal standardization in progress / external validation deferred by project policy**  
+Status: **internal standardization in progress / Protocol v0.1 frozen / positive constructed challenge established / external validation deferred**  
 Date opened: **2026-09-14**
 
 ## Purpose / 목적
@@ -51,7 +51,7 @@ PROVENANCE_IDENTITY != INTERPRETIVE_EQUIVALENCE
 2. ✅ Pre-protocol boundary attack — 18 cases.
 3. ✅ Boundary Amendment 001 — seven non-breaking refinement groups.
 4. ✅ Executable Interpretation Protocol v0.1 frozen.
-5. ⬜ Positive direct interpretation challenge.
+5. ✅ Positive constructed challenge established prospectively: `INT-CH-001` preserved as 38/40 `CHALLENGE_DESIGN_DEFECT`; corrected `INT-CH-002` 44/44 PASS.
 6. ⬜ Negative/ambiguity/blocked-terminal challenge.
 7. ⬜ Direct method-boundary challenge.
 8. ⬜ Competent/strongest-reasonable baseline comparison; `NO_GAIN` admissible.
@@ -74,6 +74,27 @@ Audit           : prior process/result -> conformance/defect retrace
 
 Interpretation may consume outputs from these methods only through explicit handoffs. It does not silently perform their operations.
 
+## Positive challenge lineage
+
+```text
+INT-CH-001
+  38/40 FAIL
+  FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
+  failed locks: explicit CONTEXT_SET/CONTEXT_PROVENANCE and AMBIGUITY/CONFLICT policy freeze
+  PROTOCOL_DEFECT_EXPOSED: no
+
+INT-CH-002
+  corrected prospective precommit
+  44/44 PASS
+  R1 -> SUPPORTED / BRIDGE_DEPENDENT_INTERPRETATION
+  R2 -> NOT_SUPPORTED_WITHIN_DECLARED_SOURCE_SET
+  R3 -> NOT_SUPPORTED_WITHIN_DECLARED_SOURCE_SET
+  TERMINAL: INTERPRETATION_RESOLVED_SINGLE
+  CONFORMANCE: CONFORMANT
+```
+
+The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass.
+
 ## Current state
 
 ```text
@@ -81,16 +102,19 @@ DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS: 0
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 1
+SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
+PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
 BASELINE_INTERPRETATION_CASES: 0
 NO_GAIN_INTERPRETATION_CASES: 0
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
 INTERPRETATION_METHOD_MATURITY_CLASSIFICATION: developing
-CURRENT_INTERPRETATION_EVIDENCE_STATUS: pre_validation
+CURRENT_INTERPRETATION_EVIDENCE_STATUS: validation_in_progress
 ```
 
 ## Next
 
-Freeze and execute the first positive constructed Interpretation challenge under Protocol v0.1. External sources such as Sunzi remain deferred until the internal protocol and constructed evidence chain are standardized.
+Freeze and execute the negative/ambiguity/blocked-terminal challenge. It must remain entirely constructed and internal and must not open the Sunzi or any other external corpus yet.
