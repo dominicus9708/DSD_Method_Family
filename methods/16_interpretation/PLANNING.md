@@ -1,6 +1,6 @@
 # DSD Interpretation Planning / DSD 해석론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative, and direct method-boundary constructed challenges established / external validation deferred**  
+Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative, method-boundary, and competent-baseline constructed challenges established / external validation deferred**  
 Date opened: **2026-09-14**
 
 ## Purpose / 목적
@@ -54,7 +54,7 @@ PROVENANCE_IDENTITY != INTERPRETIVE_EQUIVALENCE
 5. ✅ Positive constructed challenge established prospectively: `INT-CH-001` preserved as 38/40 `CHALLENGE_DESIGN_DEFECT`; corrected `INT-CH-002` 44/44 PASS.
 6. ✅ Negative/ambiguity/blocked-terminal challenge — `INT-CH-003`, 50/50 PASS.
 7. ✅ Direct method-boundary challenge — `INT-CH-004`, 58/58 PASS; Analysis, Comparison, Provenance, Reconstruction, Audit all `PARTIAL_OVERLAP_NOT_COLLAPSE`.
-8. 🟨 Competent/strongest-reasonable baseline comparison; `NO_GAIN` admissible.
+8. 🟨 Baseline comparison — competent `INT-CH-005` 50/50 PASS / `NO_GAIN` complete; strongest-reasonable `INT-CH-006` pending. `NO_GAIN` remains admissible.
 9. ⬜ Deterministic same-project retrace.
 10. ⬜ Frozen-axis internal maturity/standardization audit.
 11. ⏸ External applications deferred until internal standardization is complete.
@@ -114,11 +114,32 @@ INT-CH-004
   Reconstruction -> PARTIAL_OVERLAP_NOT_COLLAPSE
   Audit          -> PARTIAL_OVERLAP_NOT_COLLAPSE
   EXACT_COLLAPSE_CANDIDATES_FOUND: 0/5
+
+INT-CH-005
+  baseline: B0_SOURCE_CONTEXT_READING_EVALUATOR
+  protocol commit: 40110a8a779f0ac6ff93ede6414544b8ec548fdf
+  precommit commit: 633a6312f324c5700efe9caa4654a8d976995378
+  precommit blob: bb981156c3665b0dc1e8abf8f6bceb18bda40217
+  result commit: 5f288620e29090d9860a504006b9fcc0e8afc7c7
+  50/50 PASS / NO_GAIN
+  G1 SOURCE_ROLE_SEPARATION_GAIN: NOT_ESTABLISHED
+  G2 BRIDGE_DISCIPLINE_GAIN: NOT_ESTABLISHED
+  G3 MULTI_READING_GAIN: NOT_ESTABLISHED
+  G4 SILENCE_AND_BLOCKAGE_GAIN: NOT_ESTABLISHED
+  G5 CLAIM_STRENGTH_GAIN: NOT_ESTABLISHED
+  G6 TRACEABILITY_GAIN: NOT_ESTABLISHED
 ```
 
 The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass.
 
-`INT-CH-003` established internal terminal separation for legitimate plurality, unresolved causal interpretation, missing semantic bridge, source silence, and out-of-scope requests. `INT-CH-004` established local operational boundary separation across the frozen five-interface test. Neither case used any external corpus.
+`INT-CH-003` established internal terminal separation for legitimate plurality, unresolved causal interpretation, missing semantic bridge, source silence, and out-of-scope requests. `INT-CH-004` established local operational boundary separation across the frozen five-interface test. `INT-CH-005` established that a competent non-DSD source/context reading evaluator supplied with the same claim-relevant semantics can match DSD Interpretation on the frozen competent-baseline dimensions. None of these cases used any external corpus.
+
+```text
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+BASELINE_MATCH != PERMANENT_REDUNDANCY
+```
 
 ## Current state
 
@@ -127,14 +148,15 @@ DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 3
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 4
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
 NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
 METHOD_BOUNDARY_INTERPRETATION_CASES: 1
-BASELINE_INTERPRETATION_CASES: 0
-NO_GAIN_INTERPRETATION_CASES: 0
+BASELINE_INTERPRETATION_CASES: 1
+NO_GAIN_INTERPRETATION_CASES: 1
+STRONGEST_REASONABLE_BASELINE_INTERPRETATION: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
@@ -146,4 +168,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Freeze and execute a fair competent baseline challenge. The baseline must receive exactly the same claim-relevant source records, source roles, context, bridges, reading-generation policy, ambiguity/conflict policy, requested output, and claim-strength rules as DSD Interpretation. `NO_GAIN` remains an admissible result. Sunzi / *The Art of War* and all other external corpus validation remain deferred until internal standardization is complete.
+Freeze and execute `INT-CH-006`, a materially richer strongest-reasonable-baseline challenge. It should stress witness/version conflict, translation or normalization choice, reconstruction-handoff provenance, temporal/context scope, and claim-strength interactions while giving the baseline exactly the same claim-relevant information as DSD Interpretation. Another `NO_GAIN` remains admissible. Sunzi / *The Art of War* and all other external corpus validation remain deferred until internal standardization is complete.
