@@ -1,6 +1,6 @@
 # DSD Interpretation Planning / DSD 해석론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive constructed challenge established / external validation deferred**  
+Status: **internal standardization in progress / Protocol v0.1 frozen / positive and negative constructed challenges established / external validation deferred**  
 Date opened: **2026-09-14**
 
 ## Purpose / 목적
@@ -52,7 +52,7 @@ PROVENANCE_IDENTITY != INTERPRETIVE_EQUIVALENCE
 3. ✅ Boundary Amendment 001 — seven non-breaking refinement groups.
 4. ✅ Executable Interpretation Protocol v0.1 frozen.
 5. ✅ Positive constructed challenge established prospectively: `INT-CH-001` preserved as 38/40 `CHALLENGE_DESIGN_DEFECT`; corrected `INT-CH-002` 44/44 PASS.
-6. ⬜ Negative/ambiguity/blocked-terminal challenge.
+6. ✅ Negative/ambiguity/blocked-terminal challenge — `INT-CH-003`, 50/50 PASS.
 7. ⬜ Direct method-boundary challenge.
 8. ⬜ Competent/strongest-reasonable baseline comparison; `NO_GAIN` admissible.
 9. ⬜ Deterministic same-project retrace.
@@ -74,7 +74,7 @@ Audit           : prior process/result -> conformance/defect retrace
 
 Interpretation may consume outputs from these methods only through explicit handoffs. It does not silently perform their operations.
 
-## Positive challenge lineage
+## Constructed challenge lineage
 
 ```text
 INT-CH-001
@@ -91,9 +91,22 @@ INT-CH-002
   R3 -> NOT_SUPPORTED_WITHIN_DECLARED_SOURCE_SET
   TERMINAL: INTERPRETATION_RESOLVED_SINGLE
   CONFORMANCE: CONFORMANT
+
+INT-CH-003
+  precommit commit: f7185dcfdc03781841c563fa85a689f040e923fc
+  precommit blob: 10b8c2a4bf3b777538c990ea035f1fe5333397bb
+  result commit: 83629425b9f1f8480f694e5294c26cff57f4ba1a
+  50/50 PASS
+  N1 -> INTERPRETATION_RESOLVED_MULTI
+  N2 -> INTERPRETATION_UNDERDETERMINED
+  N3 -> INTERPRETATION_BLOCKED
+  N4 -> INTERPRETATION_UNDERDETERMINED
+  N5 -> INTERPRETATION_OUT_OF_SCOPE
 ```
 
 The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass.
+
+`INT-CH-003` established internal terminal separation for legitimate plurality, unresolved causal interpretation, missing semantic bridge, source silence, and out-of-scope requests. It did not use any external corpus.
 
 ## Current state
 
@@ -102,10 +115,12 @@ DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 1
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 2
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
+NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
+METHOD_BOUNDARY_INTERPRETATION_CASES: 0
 BASELINE_INTERPRETATION_CASES: 0
 NO_GAIN_INTERPRETATION_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -113,8 +128,10 @@ EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
 INTERPRETATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_INTERPRETATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
 ## Next
 
-Freeze and execute the negative/ambiguity/blocked-terminal challenge. It must remain entirely constructed and internal and must not open the Sunzi or any other external corpus yet.
+Freeze and execute `INT-CH-004`, a direct method-boundary challenge against Analysis, Comparison, Provenance, Reconstruction, and Audit. It must remain entirely constructed and internal. Sunzi / *The Art of War* and all other external corpus validation remain deferred until internal standardization is complete.
