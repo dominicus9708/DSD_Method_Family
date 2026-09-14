@@ -1,6 +1,6 @@
 # DSD Interpretation Planning / DSD 해석론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive and negative constructed challenges established / external validation deferred**  
+Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative, and direct method-boundary constructed challenges established / external validation deferred**  
 Date opened: **2026-09-14**
 
 ## Purpose / 목적
@@ -53,8 +53,8 @@ PROVENANCE_IDENTITY != INTERPRETIVE_EQUIVALENCE
 4. ✅ Executable Interpretation Protocol v0.1 frozen.
 5. ✅ Positive constructed challenge established prospectively: `INT-CH-001` preserved as 38/40 `CHALLENGE_DESIGN_DEFECT`; corrected `INT-CH-002` 44/44 PASS.
 6. ✅ Negative/ambiguity/blocked-terminal challenge — `INT-CH-003`, 50/50 PASS.
-7. ⬜ Direct method-boundary challenge.
-8. ⬜ Competent/strongest-reasonable baseline comparison; `NO_GAIN` admissible.
+7. ✅ Direct method-boundary challenge — `INT-CH-004`, 58/58 PASS; Analysis, Comparison, Provenance, Reconstruction, Audit all `PARTIAL_OVERLAP_NOT_COLLAPSE`.
+8. 🟨 Competent/strongest-reasonable baseline comparison; `NO_GAIN` admissible.
 9. ⬜ Deterministic same-project retrace.
 10. ⬜ Frozen-axis internal maturity/standardization audit.
 11. ⏸ External applications deferred until internal standardization is complete.
@@ -102,11 +102,23 @@ INT-CH-003
   N3 -> INTERPRETATION_BLOCKED
   N4 -> INTERPRETATION_UNDERDETERMINED
   N5 -> INTERPRETATION_OUT_OF_SCOPE
+
+INT-CH-004
+  precommit commit: fb2657f37a1e9f784337f4502000a66d10f69334
+  precommit blob: b8f982bacd70b3acd330e97c88f58f60b0374698
+  result commit: 18ec887f43ae2b29807814354c928e835f1b143a
+  58/58 PASS
+  Analysis       -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  Comparison     -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  Provenance     -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  Reconstruction -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  Audit          -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  EXACT_COLLAPSE_CANDIDATES_FOUND: 0/5
 ```
 
 The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass.
 
-`INT-CH-003` established internal terminal separation for legitimate plurality, unresolved causal interpretation, missing semantic bridge, source silence, and out-of-scope requests. It did not use any external corpus.
+`INT-CH-003` established internal terminal separation for legitimate plurality, unresolved causal interpretation, missing semantic bridge, source silence, and out-of-scope requests. `INT-CH-004` established local operational boundary separation across the frozen five-interface test. Neither case used any external corpus.
 
 ## Current state
 
@@ -115,12 +127,12 @@ DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 2
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 3
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
 NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
-METHOD_BOUNDARY_INTERPRETATION_CASES: 0
+METHOD_BOUNDARY_INTERPRETATION_CASES: 1
 BASELINE_INTERPRETATION_CASES: 0
 NO_GAIN_INTERPRETATION_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -134,4 +146,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Freeze and execute `INT-CH-004`, a direct method-boundary challenge against Analysis, Comparison, Provenance, Reconstruction, and Audit. It must remain entirely constructed and internal. Sunzi / *The Art of War* and all other external corpus validation remain deferred until internal standardization is complete.
+Freeze and execute a fair competent baseline challenge. The baseline must receive exactly the same claim-relevant source records, source roles, context, bridges, reading-generation policy, ambiguity/conflict policy, requested output, and claim-strength rules as DSD Interpretation. `NO_GAIN` remains an admissible result. Sunzi / *The Art of War* and all other external corpus validation remain deferred until internal standardization is complete.
