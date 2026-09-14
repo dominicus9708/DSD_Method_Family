@@ -226,20 +226,57 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 Shared carriers and handoffs did not erase material differences in operation, output, failure semantics, or validation target. The result is local constructed boundary evidence, not a permanent method-survival or non-merger decision.
 
+## Step 8A — INT-CH-005 competent-baseline NO_GAIN challenge
+
+A fair non-DSD baseline `B0_SOURCE_CONTEXT_READING_EVALUATOR` was prospectively frozen with exactly the same claim-relevant source/context/bridge/reading-policy information as DSD Interpretation.
+
+```text
+PROTOCOL_COMMIT: 40110a8a779f0ac6ff93ede6414544b8ec548fdf
+PROTOCOL_BLOB: dc3c3a46ba170b3b7565a59a7113c473fb02b463
+PRECOMMIT_COMMIT: 633a6312f324c5700efe9caa4654a8d976995378
+PRECOMMIT_BLOB: bb981156c3665b0dc1e8abf8f6bceb18bda40217
+RESULT_COMMIT: 5f288620e29090d9860a504006b9fcc0e8afc7c7
+```
+
+Execution:
+
+```text
+Q1 bridge-dependent necessity -> DSD/B0 same / INTERPRETATION_RESOLVED_SINGLE
+Q2 legitimate plurality -> DSD/B0 same / INTERPRETATION_RESOLVED_MULTI
+Q3 source silence -> DSD/B0 same / INTERPRETATION_UNDERDETERMINED
+Q4 missing bridge -> DSD/B0 same / INTERPRETATION_BLOCKED
+Q5 original context vs later reception -> DSD/B0 same / INTERPRETATION_RESOLVED_SINGLE
+
+G1 SOURCE_ROLE_SEPARATION_GAIN: NOT_ESTABLISHED
+G2 BRIDGE_DISCIPLINE_GAIN: NOT_ESTABLISHED
+G3 MULTI_READING_GAIN: NOT_ESTABLISHED
+G4 SILENCE_AND_BLOCKAGE_GAIN: NOT_ESTABLISHED
+G5 CLAIM_STRENGTH_GAIN: NOT_ESTABLISHED
+G6 TRACEABILITY_GAIN: NOT_ESTABLISHED
+
+INTERPRETATION_METHOD_GAIN_STATUS: NO_GAIN
+TOTAL: 50/50 PASS
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The competent baseline match is a valid result and is not interpreted as method failure, absorption, merger, deletion, or permanent redundancy.
+
 ## Current counters
 
 ```text
 DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
-DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 3
+DIRECT_INTERPRETATION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_INTERPRETATION_PILOTS: 4
 SUCCESSFUL_POSITIVE_INTERPRETATION_CASES: 1
 NEGATIVE_OR_FAILURE_INTERPRETATION_CASES: 1
 PRESERVED_FAILED_CHALLENGE_DESIGNS: 1
 METHOD_BOUNDARY_INTERPRETATION_CASES: 1
-BASELINE_INTERPRETATION_CASES: 0
-NO_GAIN_INTERPRETATION_CASES: 0
+BASELINE_INTERPRETATION_CASES: 1
+NO_GAIN_INTERPRETATION_CASES: 1
+STRONGEST_REASONABLE_BASELINE_INTERPRETATION: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
@@ -251,4 +288,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Precommit and execute a fair competent baseline challenge. The baseline must receive the same claim-relevant source/context/bridge/reading-policy information as DSD Interpretation. `NO_GAIN` is an admissible result. External validation remains deferred until internal standardization is complete.
+Precommit and execute `INT-CH-006`, the strongest-reasonable-baseline challenge. The stronger fixture should stress witness/version conflict, translation or normalization choices, reconstruction-handoff provenance, temporal/context scope, and claim-strength interactions while giving the baseline all claim-relevant information. Another `NO_GAIN` remains admissible. External validation remains deferred until internal standardization is complete.
