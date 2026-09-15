@@ -1,6 +1,6 @@
 # 16. DSD Interpretation / DSD 해석론
 
-Status: **Protocol v0.1 internally established / positive, negative, method-boundary, competent-baseline, and strongest-reasonable-baseline constructed evidence established / external validation deferred**
+Status: **Protocol v0.1 internally established / positive, negative, method-boundary, competent-baseline, strongest-reasonable-baseline, and deterministic same-project retrace constructed evidence established / external validation deferred**
 
 Task: separate source material, source identity/version/witness, contextual prerequisites, translation/normalization choices, interpretive bridges, and resulting readings so that supported alternatives can be preserved without treating one representation, commentary, later reception, or preferred conclusion as the source itself.
 
@@ -44,6 +44,8 @@ Task Interface
 - [`INT-CH-005 competent-baseline NO_GAIN`](../../evidence/method_specific/interpretation/INT-CH-005_competent-baseline-no-gain.md)
 - [`INT-CH-006 precommit`](../../evidence/method_specific/interpretation/INT-CH-006_precommit.md)
 - [`INT-CH-006 strongest-reasonable-baseline NO_GAIN`](../../evidence/method_specific/interpretation/INT-CH-006_strongest-reasonable-baseline.md)
+- [`INT-CH-007 precommit`](../../evidence/method_specific/interpretation/INT-CH-007_precommit.md)
+- [`INT-CH-007 deterministic same-project retrace`](../../evidence/method_specific/interpretation/INT-CH-007_deterministic-same-project-retrace.md)
 
 ## Protocol lineage
 
@@ -131,7 +133,19 @@ G1-G7: NOT_ESTABLISHED
 STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
 ```
 
-The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass. The boundary finding is local to the frozen fixtures. Baseline matches do not establish permanent redundancy, merger, absorption, deletion, or method failure.
+`INT-CH-007` retraced the claim-relevant DSD outputs of `INT-CH-006` using the frozen Protocol-v0.1 plus its immutable precommit as the derivation basis and the historical result only as comparison target:
+
+```text
+INT-CH-007: 56/56 PASS
+RETRACE_TARGET: INT-CH-006
+R1-R5 claim-relevant outputs: exact match
+TERMINAL_STATUS_MATCH: 5/5
+CONFORMANCE_MATCH: 5/5
+POST_HOC_CORRECTIONS_AFTER_COMPARISON: 0
+REPRODUCIBILITY_CASES: 1
+```
+
+The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass. The boundary finding is local to the frozen fixtures. Baseline matches do not establish permanent redundancy, merger, absorption, deletion, or method failure. The same-project retrace is documentary and does not establish independent replication.
 
 ## Core guards
 
@@ -161,6 +175,8 @@ CONDITIONAL_RULE != CAUSAL_SUFFICIENCY_PROOF
 NO_GAIN != METHOD_FAILURE
 NO_GAIN != METHOD_ABSORPTION_PROOF
 NO_GAIN != METHOD_MERGER_PROOF
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 ```
 
 ## Output and terminal structure
@@ -215,9 +231,10 @@ METHOD_BOUNDARY_INTERPRETATION_CASES: 1
 BASELINE_INTERPRETATION_CASES: 2
 NO_GAIN_INTERPRETATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
 EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
 INTERPRETATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_INTERPRETATION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
@@ -232,4 +249,4 @@ The previously noted Sunzi / *The Art of War* reinterpretation remains a future 
 
 ## Next development step
 
-Precommit and execute a deterministic same-project retrace from frozen Interpretation artifacts. A successful retrace may increment `REPRODUCIBILITY_CASES` only; it does not establish independent replication, independent validation, or external validity. External validation remains deferred until the internal standardization sequence is complete.
+Precommit and execute a frozen-axis internal maturity / standardization audit. The audit must allow `PROMOTE_INTERNAL_STANDARD`, `HOLD_DEVELOPING`, and `REMEDIATE` as genuine prospective outcomes. External validation remains deferred until the internal audit is complete.
