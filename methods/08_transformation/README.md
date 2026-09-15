@@ -1,6 +1,6 @@
 # 08. DSD Transformation / DSD 변환론
 
-Status: **Protocol v0.1 internally established / first positive constructed challenge passed / external validation deferred**
+Status: **Protocol v0.1 internally established / positive and negative-terminal constructed challenges passed / external validation deferred**
 
 Task: move a supplied object, record, structure, model, schema, or regime representation into a declared target representation through an explicit transformation map or bridge while recording what is preserved, transformed under declared equivalence, merged, split, omitted, added, unresolved, or rendered non-reconstructible.
 
@@ -32,6 +32,8 @@ Task Interface
 
 - [`TRN-CH-001 precommit`](../../evidence/method_specific/transformation/TRN-CH-001_precommit.md)
 - [`TRN-CH-001 positive constructed transformation`](../../evidence/method_specific/transformation/TRN-CH-001_positive-constructed-transformation.md)
+- [`TRN-CH-002 precommit`](../../evidence/method_specific/transformation/TRN-CH-002_precommit.md)
+- [`TRN-CH-002 negative/loss/blockage transformation`](../../evidence/method_specific/transformation/TRN-CH-002_negative-loss-blockage.md)
 
 ## Protocol lineage
 
@@ -82,6 +84,11 @@ TARGET_ADDITION != SOURCE_PRESERVATION
 CHAIN_ENDPOINT_MATCH != LOSSLESS_INTERMEDIATE_CHAIN
 PARTIAL_MAP != TOTAL_MAP
 TARGET_VALUE_EXISTENCE != SOURCE_DERIVABILITY
+DECLARED_LOSS != METHOD_FAILURE
+MISSING_REQUIRED_BRIDGE != NEGATIVE_SOURCE_VALUE
+UNRESOLVED_MAP_VERSION != LICENSE_TO_CHOOSE_POST_HOC
+BLOCKED != UNDERDETERMINED
+PARTIAL != COMPLETED_WITH_DECLARED_LOSS
 ```
 
 ## TRN-CH-001 positive constructed result
@@ -106,7 +113,33 @@ TRANSFORMATION_PROTOCOL_CONFORMANCE: CONFORMANT
 TRANSFORMATION_METHOD_GAIN_STATUS: NOT_ASSESSED
 ```
 
-The result establishes one positive constructed execution only. It does not establish external applicability, method superiority, independent validation, or global bijectivity.
+## TRN-CH-002 negative/loss/blockage result
+
+The second direct fixture forced four distinct non-preserving/non-complete outcomes without collapsing them into generic failure:
+
+```text
+TRN-CH-002: 56/56 PASS
+
+L1 many-to-one merge + omission
+  -> TRANSFORMATION_COMPLETED_WITH_DECLARED_LOSS
+  -> NONINVERTIBLE_DUE_TO_COLLISION_OR_LOSS
+
+L2 missing required timezone bridge
+  -> TRANSFORMATION_BLOCKED
+
+L3 mixed in-domain/out-of-domain batch
+  -> TRANSFORMATION_PARTIAL
+
+L4 unresolved claim-relevant map version
+  -> TRANSFORMATION_UNDERDETERMINED
+
+all four:
+  TRANSFORMATION_PROTOCOL_CONFORMANCE: CONFORMANT
+```
+
+The case preserved `OMISSION != MISSING_SOURCE_VALUE`, `OUTSIDE_DECLARED_DOMAIN != OMITTED_BY_TRANSFORMATION`, target-default provenance, and the distinction between blocked and underdetermined terminals.
+
+Neither direct case establishes external applicability, method superiority, or independent validation.
 
 ## Output structure
 
@@ -160,10 +193,10 @@ DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 1
-SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 1
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 2
 SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
-NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 0
+NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 1
 METHOD_BOUNDARY_TRANSFORMATION_CASES: 0
 BASELINE_TRANSFORMATION_CASES: 0
 NO_GAIN_TRANSFORMATION_CASES: 0
@@ -180,4 +213,4 @@ Protocol construction is infrastructure, not direct method validation.
 
 ## Next development step
 
-Precommit and execute a negative/loss/blockage Transformation challenge. Pressure many-to-one collision, omission, target-default/source-derived confusion, incomplete applicability, and a non-preserving or blocked terminal. External validation remains deferred until the full internal-standardization sequence is complete.
+Precommit and execute a direct Transformation method-boundary challenge against Design, Synthesis, Aggregation, Compression, Comparison, Interpretation, and Computation. Shared maps, targets, summaries, or computed values must not be treated as exact method collapse merely because artifacts overlap. External validation remains deferred until the full internal-standardization sequence is complete.
