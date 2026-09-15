@@ -1,4 +1,4 @@
-# BH-RB-022 — trapped self-bound dynamic no-go gate
+# BH-RB-023 — trapped self-bound dynamic no-go gate
 
 ## Status
 
@@ -301,7 +301,7 @@ This does **not** eliminate the finite successor-core research branch.  It ident
 
 ## Next gate
 
-BH-RB-023 should therefore stop trying to obtain \(R_{\min}\) from positive-pressure EOS stiffness alone and audit the **minimal compactness-reversal mechanism**.
+BH-RB-024 should therefore stop trying to obtain \(R_{\min}\) from positive-pressure EOS stiffness alone and audit the **minimal compactness-reversal mechanism**.
 
 The primary comparison branches are:
 
