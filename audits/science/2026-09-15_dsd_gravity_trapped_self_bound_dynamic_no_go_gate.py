@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""BH-RB-022: trapped self-bound dynamic no-go gate.
+"""BH-RB-023: trapped self-bound dynamic no-go gate.
 
 Scope
 -----
