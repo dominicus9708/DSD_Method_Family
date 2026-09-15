@@ -1,7 +1,8 @@
 # DSD Interpretation Planning / DSD 해석론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / constructed positive, negative, method-boundary, baseline, and deterministic retrace evidence established / external validation deferred**  
-Date opened: **2026-09-14**
+Status: **internal standardization complete / Protocol v0.1 internally standardized / external validation queued**  
+Date opened: **2026-09-14**  
+Internal standardization completed: **2026-09-16**
 
 ## Purpose / 목적
 
@@ -11,7 +12,7 @@ Interpretation receives a declared source set, source roles and versions, an int
 
 ## Project sequencing rule / 현재 개발 순서 규칙
 
-The remaining proposed methods are developed **internally first**. External-domain validation is deferred until each target method reaches an internally standardized protocol/evidence baseline.
+The remaining proposed methods are developed **internally first**. External-domain validation is performed later, after the internal standardization lane has been closed for each target method.
 
 ```text
 INTERNAL_TASK_INTERFACE
@@ -21,10 +22,8 @@ INTERNAL_TASK_INTERFACE
 -> CONSTRUCTED POSITIVE / NEGATIVE / BOUNDARY / NO_GAIN CASES
 -> SAME-PROJECT RETRACE
 -> INTERNAL MATURITY / STANDARDIZATION AUDIT
--> only then external validation lane
+-> external validation lane later
 ```
-
-No external application is counted during the internal-establishment phase.
 
 ## Core distinctions / 핵심 구분
 
@@ -50,6 +49,7 @@ OBLIGATION != PREDICTION
 CONDITIONAL_RULE != CAUSAL_SUFFICIENCY_PROOF
 SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+INTERNALLY_STANDARDIZED_METHOD != EXTERNALLY_VALIDATED_METHOD
 ```
 
 ## Internal development sequence
@@ -63,8 +63,8 @@ DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 7. ✅ Direct method-boundary challenge — `INT-CH-004`, 58/58 PASS; Analysis, Comparison, Provenance, Reconstruction, Audit all `PARTIAL_OVERLAP_NOT_COLLAPSE`.
 8. ✅ Baseline comparison — competent `INT-CH-005` 50/50 PASS / `NO_GAIN`; strongest-reasonable `INT-CH-006` 60/60 PASS / `NO_GAIN`; strongest-reasonable-baseline category established at constructed-evidence level.
 9. ✅ Deterministic same-project retrace — `INT-CH-007`, 56/56 PASS; `REPRODUCIBILITY_CASES: 1`; no independent-replication claim.
-10. 🟨 Frozen-axis internal maturity/standardization audit.
-11. ⏸ External applications deferred until internal standardization is complete.
+10. ✅ Frozen-axis internal maturity/standardization audit — `INT-AUD-001`, 28/28 audit checks PASS, `PROMOTE_INTERNAL_STANDARD`.
+11. ⏸ External applications queued for the later external-validation phase.
 
 ## Method boundaries
 
@@ -79,7 +79,7 @@ Reconstruction  : partial observations -> reconstructed missing/latent structure
 Audit           : prior process/result -> conformance/defect retrace
 ```
 
-Interpretation may consume outputs from these methods only through explicit handoffs. It does not silently perform their operations.
+Interpretation may consume neighboring-method outputs only through explicit handoffs. It does not silently perform their operations.
 
 ## Constructed challenge lineage
 
@@ -87,7 +87,6 @@ Interpretation may consume outputs from these methods only through explicit hand
 INT-CH-001
   38/40 FAIL
   FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
-  failed locks: explicit CONTEXT_SET/CONTEXT_PROVENANCE and AMBIGUITY/CONFLICT policy freeze
   PROTOCOL_DEFECT_EXPOSED: no
 
 INT-CH-002
@@ -109,37 +108,57 @@ INT-CH-005
 
 INT-CH-006
   baseline: B1_STRONG_SOURCE_CONTEXT_INTERPRETATION_ENGINE
-  precommit commit: fca5d6a9a8c4c3ca8a890ad1c028225868e3fa84
-  result commit: cc7a12c9c3098813701841cab20dd7a630c2f5ff
   60/60 PASS / NO_GAIN
   STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
 
 INT-CH-007
   retrace target: INT-CH-006
-  precommit commit: a3725f65e531e8f38620fb687c8d70e14991bc35
-  precommit blob: 140bea76a151c4859668ed51e063e74dff275d5b
-  result commit: bb0bfefbcc33a89a558d73f6f4602fec3ab929b8
   56/56 PASS
-  R1-R5 claim-relevant outputs: exact match
   TERMINAL_STATUS_MATCH: 5/5
   CONFORMANCE_MATCH: 5/5
   POST_HOC_CORRECTIONS_AFTER_COMPARISON: 0
 ```
 
-The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass. `INT-CH-005` and `INT-CH-006` preserve `NO_GAIN` as valid comparative evidence. `INT-CH-007` is documentary same-project retrace evidence only and is not independent replication. None of these cases used any external corpus.
+## INT-AUD-001
 
 ```text
-NO_GAIN != METHOD_FAILURE
-NO_GAIN != METHOD_ABSORPTION_PROOF
-NO_GAIN != METHOD_MERGER_PROOF
-BASELINE_MATCH != PERMANENT_REDUNDANCY
-SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+AUDIT_ID: DSD-AUDIT-20260916-INTERPRETATION-001
+PRECOMMIT_COMMIT: 2c5214892dab6cf48266dcd00868d2c1421a31a8
+RESULT_COMMIT: 7d13d96a5d3d2535d50d1e3e87127c9c30a395cd
+PRECOMMITTED_REQUIRED_CHECKS: 28
+PASSED: 28
+FAILED: 0
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+INTERPRETATION_INTERNAL_STANDARDIZATION_STATUS: established
 ```
+
+Frozen axis result summary:
+
+```text
+M1 PASS
+M2 PASS
+M3 PASS
+M4 PASS
+M5 CONDITIONAL_PASS
+M6 PASS
+M7 PASS
+M8 PASS
+M9 PASS
+M10 PASS
+M11 PASS
+M12 PRESENT_NONFATAL
+M13 PASS
+M14 DEFERRED_BY_SEQUENCE
+M15 PASS
+```
+
+`M12 PRESENT_NONFATAL` preserves the historical `INT-CH-001` challenge-design defect without treating it as a Protocol-v0.1 core contradiction. `M14 DEFERRED_BY_SEQUENCE` records that external and independent validation have intentionally not begun.
 
 ## Current state
 
 ```text
 DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
+INTERPRETATION_INTERNAL_STANDARDIZATION_STATUS: established
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
@@ -162,6 +181,8 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
+The broader maturity field remains `developing`; internal standardization is the narrower completed claim.
+
 ## Next
 
-Precommit and execute a frozen-axis internal maturity / standardization audit. The audit must prospectively allow `PROMOTE_INTERNAL_STANDARD`, `HOLD_DEVELOPING`, and `REMEDIATE`; success counts, NO_GAIN evidence, the preserved challenge-design defect, same-project retrace limits, and the absence of external/independent validation must all remain visible. Sunzi / *The Art of War* and all other external corpus validation remain deferred until the internal audit is complete.
+Close Interpretation internal construction by default. Queue Sunzi / *The Art of War* and other external corpora for the later external-validation phase. Continue current project work with the next not-yet-internally-standardized DSD method.
