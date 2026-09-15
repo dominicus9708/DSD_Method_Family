@@ -1,14 +1,14 @@
 # 16. DSD Interpretation / DSD 해석론
 
-Status: **Protocol v0.1 internally established / positive, negative, method-boundary, competent-baseline, strongest-reasonable-baseline, and deterministic same-project retrace constructed evidence established / external validation deferred**
+Status: **Protocol v0.1 internally standardized / frozen-axis internal audit passed / external validation queued and not yet opened**
 
 Task: separate source material, source identity/version/witness, contextual prerequisites, translation/normalization choices, interpretive bridges, and resulting readings so that supported alternatives can be preserved without treating one representation, commentary, later reception, or preferred conclusion as the source itself.
 
 Primary DSD sources: Formation/Property distinctions; explicit bridges; Provenance/Lineage only through handoffs; Static Aggregation only when summaries are claim-relevant; Dynamics only when temporal sequence materially affects interpretation.
 
-## Current internal-standardization policy
+## Current sequencing policy
 
-The remaining proposed DSD methods are being established internally before opening external-domain validation.
+The remaining proposed DSD methods are established internally before external-domain validation is opened method by method.
 
 ```text
 Task Interface
@@ -20,6 +20,8 @@ Task Interface
 -> internal maturity/standardization audit
 -> external validation later
 ```
+
+For Interpretation, the internal lane is now complete at Protocol v0.1.
 
 ## Development files
 
@@ -47,6 +49,11 @@ Task Interface
 - [`INT-CH-007 precommit`](../../evidence/method_specific/interpretation/INT-CH-007_precommit.md)
 - [`INT-CH-007 deterministic same-project retrace`](../../evidence/method_specific/interpretation/INT-CH-007_deterministic-same-project-retrace.md)
 
+## Audit meta-records
+
+- [`INT-AUD-001 precommit`](../../evidence/method_specific/interpretation/INT-AUD-001_precommit.md)
+- [`INT-AUD-001 internal-standardization review`](../../evidence/method_specific/interpretation/INT-AUD-001_internal-standardization-review.md)
+
 ## Protocol lineage
 
 ```text
@@ -67,85 +74,52 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 ## Constructed evidence lineage
 
-`INT-CH-001` was intentionally preserved as a failed challenge design rather than repaired post hoc:
-
 ```text
-INT-CH-001: 38/40 FAIL
-FAILURE_CLASS: CHALLENGE_DESIGN_DEFECT
-G5 FAIL: context set/provenance not explicitly frozen
-G9 FAIL: ambiguity/conflict policy not explicitly frozen
-PROTOCOL_DEFECT_EXPOSED: no
+INT-CH-001: 38/40 FAIL / CHALLENGE_DESIGN_DEFECT preserved
+INT-CH-002: 44/44 PASS / corrected positive prospective case
+INT-CH-003: 50/50 PASS / plurality, underdetermined, blocked, out-of-scope terminals
+INT-CH-004: 58/58 PASS / five neighboring methods all PARTIAL_OVERLAP_NOT_COLLAPSE
+INT-CH-005: 50/50 PASS / NO_GAIN against competent B0
+INT-CH-006: 60/60 PASS / NO_GAIN against strongest-reasonable B1
+INT-CH-007: 56/56 PASS / deterministic same-project retrace
 ```
 
-A new prospective precommit corrected those lock omissions.
+`INT-CH-001` remains failed rather than being repaired post hoc. Both baseline matches remain `NO_GAIN`. The retrace remains documentary same-project evidence rather than independent replication.
+
+## INT-AUD-001 internal-standardization result
+
+The audit precommitted 15 axes and 28 audit checks before scoring. Execution result:
 
 ```text
-INT-CH-002: 44/44 PASS
-R1 -> SUPPORTED / BRIDGE_DEPENDENT_INTERPRETATION
-R2 -> NOT_SUPPORTED_WITHIN_DECLARED_SOURCE_SET
-R3 -> NOT_SUPPORTED_WITHIN_DECLARED_SOURCE_SET
-TERMINAL_INTERPRETATION_STATUS: INTERPRETATION_RESOLVED_SINGLE
-INTERPRETATION_PROTOCOL_CONFORMANCE: CONFORMANT
+PRECOMMITTED_REQUIRED_CHECKS: 28
+PASSED: 28
+FAILED: 0
+AUDIT_EXECUTION_VERDICT: PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+INTERPRETATION_INTERNAL_STANDARDIZATION_STATUS: established
 ```
 
-`INT-CH-003` pressured legitimate non-single/non-positive terminals:
+Axis summary:
 
 ```text
-INT-CH-003: 50/50 PASS
-N1 legitimate plurality -> INTERPRETATION_RESOLVED_MULTI
-N2 temporal order / unresolved causality -> INTERPRETATION_UNDERDETERMINED
-N3 missing semantic codebook bridge -> INTERPRETATION_BLOCKED
-N4 source silence on requested key distinction -> INTERPRETATION_UNDERDETERMINED
-N5 request outside frozen interpretive scope -> INTERPRETATION_OUT_OF_SCOPE
+M1  dedicated executable protocol                                  PASS
+M2  positive/plurality/negative-terminal discrimination            PASS
+M3  neighboring-method boundary discrimination                     PASS
+M4  fair baseline and NO_GAIN preservation                         PASS
+M5  reproducibility/retraceability                                 CONDITIONAL_PASS
+M6  strongest-reasonable-baseline comparison                       PASS
+M7  precommit/historical anti-post-hoc discipline                  PASS
+M8  source identity/role/witness/version discipline                PASS
+M9  transformation/context/bridge/handoff provenance               PASS
+M10 claim-strength/ambiguity/terminal-status discipline            PASS
+M11 internal evidence breadth                                      PASS
+M12 protocol pressure/unresolved core defect                       PRESENT_NONFATAL
+M13 maximum-supported-claim discipline                             PASS
+M14 external/independent evidence state                            DEFERRED_BY_SEQUENCE
+M15 method-survival/merger-separation discipline                   PASS
 ```
 
-`INT-CH-004` directly compared Interpretation with five neighboring methods under the same five-interface rule:
-
-```text
-INT-CH-004: 58/58 PASS
-Analysis       -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Comparison     -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Provenance     -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Reconstruction -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Audit          -> PARTIAL_OVERLAP_NOT_COLLAPSE
-EXACT_COLLAPSE_CANDIDATES_FOUND: 0/5
-```
-
-`INT-CH-005` compared Interpretation with a fair competent baseline:
-
-```text
-INT-CH-005: 50/50 PASS / NO_GAIN
-BASELINE: B0_SOURCE_CONTEXT_READING_EVALUATOR
-G1-G6: NOT_ESTABLISHED
-```
-
-`INT-CH-006` then used a materially stronger baseline and a richer fixture family:
-
-```text
-INT-CH-006: 60/60 PASS / NO_GAIN
-BASELINE: B1_STRONG_SOURCE_CONTEXT_INTERPRETATION_ENGINE
-R1 witness/version conflict -> RESOLVED_MULTI / same
-R2 competing normalization mappings -> RESOLVED_MULTI / same
-R3 reconstruction handoff -> RESOLVED_MULTI / same
-R4 time-indexed context change -> RESOLVED_MULTI / same
-R5 obligation/occurrence/prediction/causation -> RESOLVED_SINGLE / same
-G1-G7: NOT_ESTABLISHED
-STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
-```
-
-`INT-CH-007` retraced the claim-relevant DSD outputs of `INT-CH-006` using the frozen Protocol-v0.1 plus its immutable precommit as the derivation basis and the historical result only as comparison target:
-
-```text
-INT-CH-007: 56/56 PASS
-RETRACE_TARGET: INT-CH-006
-R1-R5 claim-relevant outputs: exact match
-TERMINAL_STATUS_MATCH: 5/5
-CONFORMANCE_MATCH: 5/5
-POST_HOC_CORRECTIONS_AFTER_COMPARISON: 0
-REPRODUCIBILITY_CASES: 1
-```
-
-The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass. The boundary finding is local to the frozen fixtures. Baseline matches do not establish permanent redundancy, merger, absorption, deletion, or method failure. The same-project retrace is documentary and does not establish independent replication.
+The `PRESENT_NONFATAL` result preserves `INT-CH-001` as a real historical challenge-design defect without misclassifying it as a Protocol-v0.1 core contradiction.
 
 ## Core guards
 
@@ -177,6 +151,7 @@ NO_GAIN != METHOD_ABSORPTION_PROOF
 NO_GAIN != METHOD_MERGER_PROOF
 SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+INTERNALLY_STANDARDIZED_METHOD != EXTERNALLY_VALIDATED_METHOD
 ```
 
 ## Output and terminal structure
@@ -198,7 +173,7 @@ TERMINAL_INTERPRETATION_STATUS:
   INTERPRETATION_OUT_OF_SCOPE
 ```
 
-A multi-reading result is not automatically failure or underdetermination. When the evidence closes the question only to a plurality of supported readings, `INTERPRETATION_RESOLVED_MULTI` is legitimate.
+A multi-reading result is not automatically failure or underdetermination.
 
 ## Method boundaries
 
@@ -219,6 +194,7 @@ Shared carriers do not imply identical operations. Interpretation may consume ne
 
 ```text
 DEDICATED_INTERPRETATION_PROTOCOL: established v0.1
+INTERPRETATION_INTERNAL_STANDARDIZATION_STATUS: established
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
@@ -241,12 +217,12 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-Protocol construction and boundary refinement are infrastructure, not direct method validation.
+The broader maturity field remains `developing` because external and independent validation have not yet been performed. This does not undo the narrower `INTERPRETATION_INTERNAL_STANDARDIZATION_STATUS: established` claim.
 
 ## External case policy
 
-The previously noted Sunzi / *The Art of War* reinterpretation remains a future humanities benchmark, but it is intentionally deferred until internal standardization is complete. Textual criticism, philology, military history, legal interpretation, scientific interpretation, and other domain standards remain external to DSD Interpretation.
+Sunzi / *The Art of War* remains a future humanities benchmark. Textual criticism, philology, military history, legal interpretation, scientific interpretation, and other domain standards remain external to DSD Interpretation.
 
 ## Next development step
 
-Precommit and execute a frozen-axis internal maturity / standardization audit. The audit must allow `PROMOTE_INTERNAL_STANDARD`, `HOLD_DEVELOPING`, and `REMEDIATE` as genuine prospective outcomes. External validation remains deferred until the internal audit is complete.
+The Interpretation internal-standardization lane is closed at Protocol v0.1 unless future contradiction reopens it. External validation is queued for the later external-validation phase; current project work proceeds to the next not-yet-internally-standardized DSD method.
