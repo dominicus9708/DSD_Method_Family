@@ -101,22 +101,69 @@ CHAIN_ENDPOINT_MATCH != LOSSLESS_INTERMEDIATE_CHAIN
 PARTIAL_MAP != TOTAL_MAP
 ```
 
+## Step 5 — TRN-CH-001 positive constructed challenge
+
+A prospective precommit froze one deterministic source-to-target transformation with four claim-relevant source carriers and one target-only default.
+
+```text
+PRECOMMIT_COMMIT: 74eeb35287bd90b1306d746835d22996d4e07c2f
+PRECOMMIT_BLOB: e45b6695406df35e1afbd7b861de40b0772f76f8
+RESULT_COMMIT: 426635e33fca0b19f9fed2a4c8ea040c2f7489b7
+```
+
+Execution:
+
+```text
+record_id      -> ONE_TO_ONE / PRESERVED_EXACT
+temperature_c  -> ONE_TO_ONE / PRESERVED_UNDER_DECLARED_EQUIVALENCE
+offset_pair    -> ONE_TO_MANY_SPLIT / SPLIT_IN_TARGET / exact reconstruction
+retry_count    -> ONE_TO_ONE / PRESERVED_EXACT / DEFINED_ZERO preserved
+schema_marker  -> TARGET_ADDED / TARGET_ADDED_NOT_SOURCE_DERIVED / DEFAULT_VALUE
+
+TARGET_RECORD:
+  record_id: R-017
+  temperature_k: 298.15
+  offset_x: 3
+  offset_y: -2
+  retry_count: 0
+  schema_marker: T_POS_V1
+
+MANY_TO_ONE_COLLISIONS: 0
+CLAIM_RELEVANT_SOURCE_OMISSIONS: 0
+CLAIM_RELEVANT_INFORMATION_LOSS: none
+REVERSIBILITY_STATUS: LEFT_INVERTIBLE_ON_DECLARED_DOMAIN
+GLOBAL_BIJECTIVITY_CLAIM: not made
+VALIDITY_GATES: 14/14 PASS
+TOTAL: 48/48 PASS
+TERMINAL_TRANSFORMATION_STATUS: TRANSFORMATION_COMPLETED_PRESERVING
+TRANSFORMATION_PROTOCOL_CONFORMANCE: CONFORMANT
+TRANSFORMATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The case preserved `DEFINED_ZERO != MISSING`, kept the target default explicitly non-source-derived, and did not infer global bijectivity from a successful forward/reconstruction check.
+
 ## Current counters
 
 ```text
 DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 0
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 1
+SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
+NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 0
+METHOD_BOUNDARY_TRANSFORMATION_CASES: 0
 BASELINE_TRANSFORMATION_CASES: 0
 NO_GAIN_TRANSFORMATION_CASES: 0
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_TRANSFORMATION_APPLICATIONS: 0
 INDEPENDENT_TRANSFORMATION_VALIDATION: not established
 TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_TRANSFORMATION_EVIDENCE_STATUS: pre_validation
+CURRENT_TRANSFORMATION_EVIDENCE_STATUS: validation_in_progress
 ```
 
 ## Next
 
-Precommit and execute `TRN-CH-001` positive constructed Transformation challenge. External validation remains deferred.
+Precommit and execute a negative/loss/blockage Transformation challenge. Pressure many-to-one collision, omission, target-default/source-derived confusion, incomplete applicability, and a non-preserving or blocked terminal. External validation remains deferred.
