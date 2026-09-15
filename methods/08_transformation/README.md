@@ -1,6 +1,6 @@
 # 08. DSD Transformation / DSD 변환론
 
-Status: **Protocol v0.1 internally established / constructed validation not yet started / external validation deferred**
+Status: **Protocol v0.1 internally established / first positive constructed challenge passed / external validation deferred**
 
 Task: move a supplied object, record, structure, model, schema, or regime representation into a declared target representation through an explicit transformation map or bridge while recording what is preserved, transformed under declared equivalence, merged, split, omitted, added, unresolved, or rendered non-reconstructible.
 
@@ -27,6 +27,11 @@ Task Interface
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - [`WORKLOG.md`](WORKLOG.md)
+
+## Direct evidence
+
+- [`TRN-CH-001 precommit`](../../evidence/method_specific/transformation/TRN-CH-001_precommit.md)
+- [`TRN-CH-001 positive constructed transformation`](../../evidence/method_specific/transformation/TRN-CH-001_positive-constructed-transformation.md)
 
 ## Protocol lineage
 
@@ -78,6 +83,30 @@ CHAIN_ENDPOINT_MATCH != LOSSLESS_INTERMEDIATE_CHAIN
 PARTIAL_MAP != TOTAL_MAP
 TARGET_VALUE_EXISTENCE != SOURCE_DERIVABILITY
 ```
+
+## TRN-CH-001 positive constructed result
+
+The first direct fixture used a fully frozen deterministic map with exact preservation, declared-equivalence preservation, one-to-many splitting, defined-zero preservation, and one target-only default.
+
+```text
+TRN-CH-001: 48/48 PASS
+VALIDITY_GATES: 14/14 PASS
+
+record_id      -> PRESERVED_EXACT
+temperature_c  -> PRESERVED_UNDER_DECLARED_EQUIVALENCE
+offset_pair    -> SPLIT_IN_TARGET / exact reconstruction
+retry_count    -> PRESERVED_EXACT / DEFINED_ZERO preserved
+schema_marker  -> TARGET_ADDED_NOT_SOURCE_DERIVED / DEFAULT_VALUE
+
+CLAIM_RELEVANT_INFORMATION_LOSS: none
+REVERSIBILITY_STATUS: LEFT_INVERTIBLE_ON_DECLARED_DOMAIN
+GLOBAL_BIJECTIVITY_CLAIM: not made
+TERMINAL_TRANSFORMATION_STATUS: TRANSFORMATION_COMPLETED_PRESERVING
+TRANSFORMATION_PROTOCOL_CONFORMANCE: CONFORMANT
+TRANSFORMATION_METHOD_GAIN_STATUS: NOT_ASSESSED
+```
+
+The result establishes one positive constructed execution only. It does not establish external applicability, method superiority, independent validation, or global bijectivity.
 
 ## Output structure
 
@@ -131,14 +160,18 @@ DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 0
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 1
+SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
+NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 0
+METHOD_BOUNDARY_TRANSFORMATION_CASES: 0
 BASELINE_TRANSFORMATION_CASES: 0
 NO_GAIN_TRANSFORMATION_CASES: 0
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_TRANSFORMATION_APPLICATIONS: 0
 INDEPENDENT_TRANSFORMATION_VALIDATION: not established
 TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_TRANSFORMATION_EVIDENCE_STATUS: pre_validation
+CURRENT_TRANSFORMATION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
@@ -147,4 +180,4 @@ Protocol construction is infrastructure, not direct method validation.
 
 ## Next development step
 
-Precommit and execute the first positive constructed Transformation challenge under Protocol v0.1. External validation remains deferred until the full internal-standardization sequence is complete.
+Precommit and execute a negative/loss/blockage Transformation challenge. Pressure many-to-one collision, omission, target-default/source-derived confusion, incomplete applicability, and a non-preserving or blocked terminal. External validation remains deferred until the full internal-standardization sequence is complete.
