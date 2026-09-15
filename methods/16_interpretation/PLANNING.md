@@ -1,6 +1,6 @@
 # DSD Interpretation Planning / DSD 해석론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative, method-boundary, competent-baseline, and strongest-reasonable-baseline constructed challenges established / external validation deferred**  
+Status: **internal standardization in progress / Protocol v0.1 frozen / constructed positive, negative, method-boundary, baseline, and deterministic retrace evidence established / external validation deferred**  
 Date opened: **2026-09-14**
 
 ## Purpose / 목적
@@ -48,6 +48,8 @@ SAME_WORDING != SAME_MEANING_ACROSS_CONTEXT
 OBLIGATION != OCCURRENCE
 OBLIGATION != PREDICTION
 CONDITIONAL_RULE != CAUSAL_SUFFICIENCY_PROOF
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 ```
 
 ## Internal development sequence
@@ -56,12 +58,12 @@ CONDITIONAL_RULE != CAUSAL_SUFFICIENCY_PROOF
 2. ✅ Pre-protocol boundary attack — 18 cases.
 3. ✅ Boundary Amendment 001 — seven non-breaking refinement groups.
 4. ✅ Executable Interpretation Protocol v0.1 frozen.
-5. ✅ Positive constructed challenge established prospectively: `INT-CH-001` preserved as 38/40 `CHALLENGE_DESIGN_DEFECT`; corrected `INT-CH-002` 44/44 PASS.
+5. ✅ Positive constructed challenge — `INT-CH-001` preserved as 38/40 `CHALLENGE_DESIGN_DEFECT`; corrected `INT-CH-002` 44/44 PASS.
 6. ✅ Negative/ambiguity/blocked-terminal challenge — `INT-CH-003`, 50/50 PASS.
 7. ✅ Direct method-boundary challenge — `INT-CH-004`, 58/58 PASS; Analysis, Comparison, Provenance, Reconstruction, Audit all `PARTIAL_OVERLAP_NOT_COLLAPSE`.
 8. ✅ Baseline comparison — competent `INT-CH-005` 50/50 PASS / `NO_GAIN`; strongest-reasonable `INT-CH-006` 60/60 PASS / `NO_GAIN`; strongest-reasonable-baseline category established at constructed-evidence level.
-9. 🟨 Deterministic same-project retrace.
-10. ⬜ Frozen-axis internal maturity/standardization audit.
+9. ✅ Deterministic same-project retrace — `INT-CH-007`, 56/56 PASS; `REPRODUCIBILITY_CASES: 1`; no independent-replication claim.
+10. 🟨 Frozen-axis internal maturity/standardization audit.
 11. ⏸ External applications deferred until internal standardization is complete.
 
 ## Method boundaries
@@ -89,69 +91,49 @@ INT-CH-001
   PROTOCOL_DEFECT_EXPOSED: no
 
 INT-CH-002
-  corrected prospective precommit
   44/44 PASS
-  R1 -> SUPPORTED / BRIDGE_DEPENDENT_INTERPRETATION
-  R2 -> NOT_SUPPORTED_WITHIN_DECLARED_SOURCE_SET
-  R3 -> NOT_SUPPORTED_WITHIN_DECLARED_SOURCE_SET
-  TERMINAL: INTERPRETATION_RESOLVED_SINGLE
-  CONFORMANCE: CONFORMANT
+  corrected positive prospective execution
 
 INT-CH-003
-  precommit commit: f7185dcfdc03781841c563fa85a689f040e923fc
-  precommit blob: 10b8c2a4bf3b777538c990ea035f1fe5333397bb
-  result commit: 83629425b9f1f8480f694e5294c26cff57f4ba1a
   50/50 PASS
-  N1 -> INTERPRETATION_RESOLVED_MULTI
-  N2 -> INTERPRETATION_UNDERDETERMINED
-  N3 -> INTERPRETATION_BLOCKED
-  N4 -> INTERPRETATION_UNDERDETERMINED
-  N5 -> INTERPRETATION_OUT_OF_SCOPE
+  legitimate plurality / underdetermined / blocked / out-of-scope terminals preserved
 
 INT-CH-004
-  precommit commit: fb2657f37a1e9f784337f4502000a66d10f69334
-  precommit blob: b8f982bacd70b3acd330e97c88f58f60b0374698
-  result commit: 18ec887f43ae2b29807814354c928e835f1b143a
   58/58 PASS
-  Analysis       -> PARTIAL_OVERLAP_NOT_COLLAPSE
-  Comparison     -> PARTIAL_OVERLAP_NOT_COLLAPSE
-  Provenance     -> PARTIAL_OVERLAP_NOT_COLLAPSE
-  Reconstruction -> PARTIAL_OVERLAP_NOT_COLLAPSE
-  Audit          -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  five neighboring methods -> PARTIAL_OVERLAP_NOT_COLLAPSE
   EXACT_COLLAPSE_CANDIDATES_FOUND: 0/5
 
 INT-CH-005
   baseline: B0_SOURCE_CONTEXT_READING_EVALUATOR
-  protocol commit: 40110a8a779f0ac6ff93ede6414544b8ec548fdf
-  precommit commit: 633a6312f324c5700efe9caa4654a8d976995378
-  precommit blob: bb981156c3665b0dc1e8abf8f6bceb18bda40217
-  result commit: 5f288620e29090d9860a504006b9fcc0e8afc7c7
   50/50 PASS / NO_GAIN
-  G1-G6: NOT_ESTABLISHED
 
 INT-CH-006
   baseline: B1_STRONG_SOURCE_CONTEXT_INTERPRETATION_ENGINE
-  protocol commit: 40110a8a779f0ac6ff93ede6414544b8ec548fdf
   precommit commit: fca5d6a9a8c4c3ca8a890ad1c028225868e3fa84
-  precommit blob: da1b2218acccd15063326382f92faa561f6b4edf
   result commit: cc7a12c9c3098813701841cab20dd7a630c2f5ff
   60/60 PASS / NO_GAIN
-  R1 witness/version conflict -> RESOLVED_MULTI / same
-  R2 competing normalization mappings -> RESOLVED_MULTI / same
-  R3 reconstruction handoff -> RESOLVED_MULTI / same
-  R4 time-indexed context -> RESOLVED_MULTI / same
-  R5 obligation/occurrence/prediction/causation -> RESOLVED_SINGLE / same
-  G1-G7: NOT_ESTABLISHED
   STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
+
+INT-CH-007
+  retrace target: INT-CH-006
+  precommit commit: a3725f65e531e8f38620fb687c8d70e14991bc35
+  precommit blob: 140bea76a151c4859668ed51e063e74dff275d5b
+  result commit: bb0bfefbcc33a89a558d73f6f4602fec3ab929b8
+  56/56 PASS
+  R1-R5 claim-relevant outputs: exact match
+  TERMINAL_STATUS_MATCH: 5/5
+  CONFORMANCE_MATCH: 5/5
+  POST_HOC_CORRECTIONS_AFTER_COMPARISON: 0
 ```
 
-The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass. `INT-CH-005` and `INT-CH-006` preserve `NO_GAIN` as valid comparative evidence rather than treating baseline matching as a method failure or automatic merger/deletion result. None of these cases used any external corpus.
+The failed first attempt remains evidence of precommit discipline and is not rewritten into a pass. `INT-CH-005` and `INT-CH-006` preserve `NO_GAIN` as valid comparative evidence. `INT-CH-007` is documentary same-project retrace evidence only and is not independent replication. None of these cases used any external corpus.
 
 ```text
 NO_GAIN != METHOD_FAILURE
 NO_GAIN != METHOD_ABSORPTION_PROOF
 NO_GAIN != METHOD_MERGER_PROOF
 BASELINE_MATCH != PERMANENT_REDUNDANCY
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 ```
 
 ## Current state
@@ -170,9 +152,10 @@ METHOD_BOUNDARY_INTERPRETATION_CASES: 1
 BASELINE_INTERPRETATION_CASES: 2
 NO_GAIN_INTERPRETATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_INTERPRETATION: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
 EXTERNAL_INTERPRETATION_APPLICATIONS: 0
 INDEPENDENT_INTERPRETATION_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
 INTERPRETATION_METHOD_MATURITY_CLASSIFICATION: developing
 CURRENT_INTERPRETATION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
@@ -181,4 +164,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Freeze and execute a deterministic same-project retrace from immutable Interpretation artifacts. The retrace must reconstruct the selected prior result without changing protocol, task, source/context, bridge, transformation, handoff, or verdict records. A successful retrace increments only `REPRODUCIBILITY_CASES`; it does not establish independent replication or external validity. Sunzi / *The Art of War* and all other external corpus validation remain deferred until internal standardization is complete.
+Precommit and execute a frozen-axis internal maturity / standardization audit. The audit must prospectively allow `PROMOTE_INTERNAL_STANDARD`, `HOLD_DEVELOPING`, and `REMEDIATE`; success counts, NO_GAIN evidence, the preserved challenge-design defect, same-project retrace limits, and the absence of external/independent validation must all remain visible. Sunzi / *The Art of War* and all other external corpus validation remain deferred until the internal audit is complete.
