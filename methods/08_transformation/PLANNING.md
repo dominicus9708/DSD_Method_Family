@@ -1,6 +1,6 @@
 # DSD Transformation Planning / DSD 변환론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative-terminal, and method-boundary constructed evidence established / external validation deferred**  
+Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative-terminal, method-boundary, and competent-baseline evidence established / external validation deferred**  
 Date opened: **2026-09-16**
 
 ## Purpose / 목적
@@ -48,6 +48,9 @@ SHARED_ARTIFACT != SAME_METHOD
 SHARED_FORMULA != SAME_METHOD
 HANDOFF_COMPATIBILITY != METHOD_COLLAPSE
 SAME_NUMERIC_RESULT != SAME_OUTPUT_CONTRACT
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
 ```
 
 ## Internal development sequence
@@ -59,10 +62,11 @@ SAME_NUMERIC_RESULT != SAME_OUTPUT_CONTRACT
 5. ✅ Positive constructed challenge — `TRN-CH-001`, 48/48 PASS.
 6. ✅ Negative/loss/blockage terminal challenge — `TRN-CH-002`, 56/56 PASS.
 7. ✅ Direct method-boundary challenge — `TRN-CH-003`, 60/60 PASS; 0/7 exact-collapse candidates in the frozen fixture.
-8. 🟨 Competent baseline challenge next; strongest-reasonable baseline follows.
-9. ⬜ Deterministic same-project retrace.
-10. ⬜ Frozen-axis internal standardization audit.
-11. ⏸ External applications deferred.
+8. ✅ Competent baseline challenge — `TRN-CH-004`, 50/50 PASS / `NO_GAIN`.
+9. 🟨 Strongest-reasonable baseline challenge next.
+10. ⬜ Deterministic same-project retrace.
+11. ⬜ Frozen-axis internal standardization audit.
+12. ⏸ External applications deferred.
 
 ## Direct-evidence summary
 
@@ -86,9 +90,18 @@ TRN-CH-003: 60/60 PASS
   Interpretation -> PARTIAL_OVERLAP_NOT_COLLAPSE
   Computation    -> PARTIAL_OVERLAP_NOT_COLLAPSE
   EXACT_COLLAPSE_CANDIDATES_FOUND: 0/7
+
+TRN-CH-004: 50/50 PASS / NO_GAIN
+  Q1 -> COMPLETED_PRESERVING
+  Q2 -> COMPLETED_WITH_DECLARED_LOSS
+  Q3 -> BLOCKED
+  Q4 -> PARTIAL
+  Q5 -> UNDERDETERMINED
+  DSD/B0 terminal match: 5/5
+  G1-G6: all NOT_ESTABLISHED
 ```
 
-The method-boundary result is fixture-bounded. It is not permanent irreducibility or a survival vote.
+The method-boundary result is fixture-bounded. It is not permanent irreducibility or a survival vote. The competent-baseline match is valid `NO_GAIN`, not failure or merger evidence.
 
 ## Method boundaries
 
@@ -112,13 +125,14 @@ DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 3
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 4
 SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
 NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 1
 METHOD_BOUNDARY_TRANSFORMATION_CASES: 1
-BASELINE_TRANSFORMATION_CASES: 0
-NO_GAIN_TRANSFORMATION_CASES: 0
+BASELINE_TRANSFORMATION_CASES: 1
+NO_GAIN_TRANSFORMATION_CASES: 1
+STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_TRANSFORMATION_APPLICATIONS: 0
 INDEPENDENT_TRANSFORMATION_VALIDATION: not established
@@ -128,4 +142,4 @@ CURRENT_TRANSFORMATION_EVIDENCE_STATUS: validation_in_progress
 
 ## Next
 
-Precommit and execute a fair competent-baseline Transformation challenge. Give the baseline the same frozen source/target/map/status/loss/reconstruction information. A baseline match must be recorded as `NO_GAIN`, not repaired into an artificial DSD advantage. No external corpus or external standard is to be used.
+Precommit and execute a materially richer strongest-reasonable-baseline Transformation challenge. Give the stronger baseline the same frozen information while stressing transformation chains/intermediate loss, temporal or schema-version migration, stochastic or choice semantics, target enrichment provenance, and claim-scoped reconstruction/reversibility. Another `NO_GAIN` must remain admissible. No external corpus or standard is to be used.
