@@ -108,8 +108,6 @@ No global bijectivity or method-gain claim was made.
 
 ## Step 6 — TRN-CH-002 negative/loss/blockage challenge
 
-A separate prospective precommit froze four distinct failure/loss surfaces before execution.
-
 ```text
 PRECOMMIT_COMMIT: f1b0f82639b15d083c24e3f406095aab0ab4ef91
 PRECOMMIT_BLOB: f0bd6fe3b0686fe5650be1d911aed14e412f4d06
@@ -134,23 +132,56 @@ L4 unresolved claim-relevant map version
   -> TRANSFORMATION_UNDERDETERMINED
 ```
 
-All four were protocol-conformant because the protocol recorded the supplied limitation rather than silently repairing it.
+No protocol revision or shared-core reopen was required.
 
-Preserved distinctions:
+## Step 7 — TRN-CH-003 direct method-boundary challenge
+
+A prospective precommit fixed seven neighboring methods, five exact-collapse axes, and four permitted boundary labels before execution.
 
 ```text
-DECLARED_LOSS != METHOD_FAILURE
-MANY_TO_ONE_MERGE != PRESERVATION
-OMISSION != MISSING_SOURCE_VALUE
-TARGET_DEFAULT != SOURCE_DERIVED_VALUE
-OUTSIDE_DECLARED_DOMAIN != OMITTED_BY_TRANSFORMATION
-MISSING_REQUIRED_BRIDGE != NEGATIVE_SOURCE_VALUE
-UNRESOLVED_MAP_VERSION != LICENSE_TO_CHOOSE_POST_HOC
-BLOCKED != UNDERDETERMINED
-PARTIAL != COMPLETED_WITH_DECLARED_LOSS
+PRECOMMIT_COMMIT: 677a3c021dd32360c1aa999ad1f936d327b3624c
+PRECOMMIT_BLOB: e80db5aea586ca6bdb2e13ceab842b1faa06ef09
+RESULT_COMMIT: 04e0188c6aa4980b1a28010781f6980a1b53138f
+TOTAL: 60/60 PASS
 ```
 
-No protocol revision or shared-core reopen was required.
+Boundary result:
+
+```text
+Design         -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Synthesis      -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Aggregation    -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Compression    -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Comparison     -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Interpretation -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Computation    -> PARTIAL_OVERLAP_NOT_COLLAPSE
+
+EXACT_COLLAPSE_CANDIDATES_FOUND: 0/7
+INSUFFICIENT_BOUNDARY_JUDGMENTS: 0/7
+```
+
+The decision used only:
+
+```text
+A1 REQUIRED_INPUT_CONTRACT
+A2 PRIMARY_OPERATION
+A3 PRIMARY_OUTPUT_CONTRACT
+A4 FAILURE_OR_LIMIT_SEMANTICS
+A5 VALIDATION_STANDARD
+```
+
+Preserved guards:
+
+```text
+SHARED_ARTIFACT != SAME_METHOD
+SHARED_FORMULA != SAME_METHOD
+HANDOFF_COMPATIBILITY != METHOD_COLLAPSE
+SAME_NUMERIC_RESULT != SAME_OUTPUT_CONTRACT
+CASE_PASS != METHOD_SURVIVAL_PROOF
+BOUNDARY_DIFFERENCE != PERMANENT_IRREDUCIBILITY
+```
+
+No protocol revision or shared-core reopen was required. The result is fixture-bounded and is not a permanent irreducibility claim.
 
 ## Current counters
 
@@ -158,11 +189,11 @@ No protocol revision or shared-core reopen was required.
 DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 2
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 3
 SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
 NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 1
-METHOD_BOUNDARY_TRANSFORMATION_CASES: 0
+METHOD_BOUNDARY_TRANSFORMATION_CASES: 1
 BASELINE_TRANSFORMATION_CASES: 0
 NO_GAIN_TRANSFORMATION_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -176,4 +207,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Precommit and execute a direct method-boundary challenge against Design, Synthesis, Aggregation, Compression, Comparison, Interpretation, and Computation. External validation remains deferred.
+Precommit and execute a fair competent-baseline Transformation challenge. The baseline receives the same source/target/map/status/loss/reconstruction information and may match DSD Transformation. If it matches, record `NO_GAIN` without reinterpretation. External validation remains deferred.
