@@ -1,6 +1,6 @@
 # DSD Transformation Planning / DSD 변환론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive and negative-terminal constructed evidence established / external validation deferred**  
+Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative-terminal, and method-boundary constructed evidence established / external validation deferred**  
 Date opened: **2026-09-16**
 
 ## Purpose / 목적
@@ -44,6 +44,10 @@ MISSING_REQUIRED_BRIDGE != NEGATIVE_SOURCE_VALUE
 UNRESOLVED_MAP_VERSION != LICENSE_TO_CHOOSE_POST_HOC
 BLOCKED != UNDERDETERMINED
 PARTIAL != COMPLETED_WITH_DECLARED_LOSS
+SHARED_ARTIFACT != SAME_METHOD
+SHARED_FORMULA != SAME_METHOD
+HANDOFF_COMPATIBILITY != METHOD_COLLAPSE
+SAME_NUMERIC_RESULT != SAME_OUTPUT_CONTRACT
 ```
 
 ## Internal development sequence
@@ -53,9 +57,9 @@ PARTIAL != COMPLETED_WITH_DECLARED_LOSS
 3. ✅ Boundary Amendment 001 — eight non-breaking refinement groups.
 4. ✅ Executable Transformation Protocol v0.1 frozen.
 5. ✅ Positive constructed challenge — `TRN-CH-001`, 48/48 PASS.
-6. ✅ Negative/loss/blockage terminal challenge — `TRN-CH-002`, 56/56 PASS; declared loss, blocked, partial, and underdetermined terminals remained distinct.
-7. 🟨 Direct method-boundary challenge next.
-8. ⬜ Competent and strongest-reasonable baseline challenges.
+6. ✅ Negative/loss/blockage terminal challenge — `TRN-CH-002`, 56/56 PASS.
+7. ✅ Direct method-boundary challenge — `TRN-CH-003`, 60/60 PASS; 0/7 exact-collapse candidates in the frozen fixture.
+8. 🟨 Competent baseline challenge next; strongest-reasonable baseline follows.
 9. ⬜ Deterministic same-project retrace.
 10. ⬜ Frozen-axis internal standardization audit.
 11. ⏸ External applications deferred.
@@ -72,20 +76,19 @@ TRN-CH-002: 56/56 PASS
   L2 -> TRANSFORMATION_BLOCKED
   L3 -> TRANSFORMATION_PARTIAL
   L4 -> TRANSFORMATION_UNDERDETERMINED
+
+TRN-CH-003: 60/60 PASS
+  Design         -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  Synthesis      -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  Aggregation    -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  Compression    -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  Comparison     -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  Interpretation -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  Computation    -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  EXACT_COLLAPSE_CANDIDATES_FOUND: 0/7
 ```
 
-`TRN-CH-002` additionally preserves:
-
-```text
-MANY_TO_ONE_MERGE != PRESERVATION
-OMISSION != MISSING_SOURCE_VALUE
-TARGET_DEFAULT != SOURCE_DERIVED_VALUE
-OUTSIDE_DECLARED_DOMAIN != OMITTED_BY_TRANSFORMATION
-MISSING_BRIDGE != NEGATIVE_SOURCE_VALUE
-UNRESOLVED_MAP_VERSION != POST_HOC_VERSION_SELECTION
-```
-
-Neither direct case establishes method gain or external applicability.
+The method-boundary result is fixture-bounded. It is not permanent irreducibility or a survival vote.
 
 ## Method boundaries
 
@@ -109,11 +112,11 @@ DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 2
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 3
 SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
 NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 1
-METHOD_BOUNDARY_TRANSFORMATION_CASES: 0
+METHOD_BOUNDARY_TRANSFORMATION_CASES: 1
 BASELINE_TRANSFORMATION_CASES: 0
 NO_GAIN_TRANSFORMATION_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -125,4 +128,4 @@ CURRENT_TRANSFORMATION_EVIDENCE_STATUS: validation_in_progress
 
 ## Next
 
-Precommit and execute a direct Transformation method-boundary challenge against Design, Synthesis, Aggregation, Compression, Comparison, Interpretation, and Computation. The challenge must distinguish overlapping artifacts from exact operation collapse and must remain wholly internal/constructed.
+Precommit and execute a fair competent-baseline Transformation challenge. Give the baseline the same frozen source/target/map/status/loss/reconstruction information. A baseline match must be recorded as `NO_GAIN`, not repaired into an artificial DSD advantage. No external corpus or external standard is to be used.
