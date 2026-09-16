@@ -183,19 +183,64 @@ BOUNDARY_DIFFERENCE != PERMANENT_IRREDUCIBILITY
 
 No protocol revision or shared-core reopen was required. The result is fixture-bounded and is not a permanent irreducibility claim.
 
+## Step 8 — TRN-CH-004 competent-baseline NO_GAIN challenge
+
+A prospective precommit fixed five constructed tasks, a competent non-DSD baseline, equal input access, six gain criteria, and a 50-check scoring plan before execution.
+
+```text
+PRECOMMIT_COMMIT: 5cb4e429c9dffd6f584a7023ec68a768e90ccdb9
+PRECOMMIT_BLOB: 034d1ba35e29474c4439ede2d2e21e2a83a73aff
+RESULT_COMMIT: 3a4c4ddfd5578c52857f7c92fcc98d1bdbd1af20
+TOTAL: 50/50 PASS
+TRANSFORMATION_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+Task-level comparison:
+
+```text
+Q1 DSD/B0 -> TRANSFORMATION_COMPLETED_PRESERVING
+Q2 DSD/B0 -> TRANSFORMATION_COMPLETED_WITH_DECLARED_LOSS
+Q3 DSD/B0 -> TRANSFORMATION_BLOCKED
+Q4 DSD/B0 -> TRANSFORMATION_PARTIAL
+Q5 DSD/B0 -> TRANSFORMATION_UNDERDETERMINED
+```
+
+Gain axes:
+
+```text
+G1 STATUS_DISTINCTION_GAIN: NOT_ESTABLISHED
+G2 CARRIER_RELATION_AND_LOSS_GAIN: NOT_ESTABLISHED
+G3 TARGET_ADDITION_PROVENANCE_GAIN: NOT_ESTABLISHED
+G4 RECONSTRUCTION_REVERSIBILITY_GAIN: NOT_ESTABLISHED
+G5 TERMINAL_STATE_DISCIPLINE_GAIN: NOT_ESTABLISHED
+G6 TRACEABILITY_GAIN: NOT_ESTABLISHED
+```
+
+The baseline retained `DEFINED_ZERO != MISSING`, target-default provenance, merge/omission loss, bounded reversibility, missing-bridge blockage, domain applicability, and unresolved-map-version discipline from the same frozen inputs.
+
+```text
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+BASELINE_MATCH != PERMANENT_REDUNDANCY
+```
+
+No protocol revision or shared-core reopen was required.
+
 ## Current counters
 
 ```text
 DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 3
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 4
 SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
 NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 1
 METHOD_BOUNDARY_TRANSFORMATION_CASES: 1
-BASELINE_TRANSFORMATION_CASES: 0
-NO_GAIN_TRANSFORMATION_CASES: 0
+BASELINE_TRANSFORMATION_CASES: 1
+NO_GAIN_TRANSFORMATION_CASES: 1
+STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_TRANSFORMATION_APPLICATIONS: 0
 INDEPENDENT_TRANSFORMATION_VALIDATION: not established
@@ -207,4 +252,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Precommit and execute a fair competent-baseline Transformation challenge. The baseline receives the same source/target/map/status/loss/reconstruction information and may match DSD Transformation. If it matches, record `NO_GAIN` without reinterpretation. External validation remains deferred.
+Precommit and execute a materially richer strongest-reasonable-baseline Transformation challenge. The stronger baseline receives the same frozen information and must be allowed to match DSD. Stress composed chains/intermediate loss, temporal/schema-version migration, stochastic or choice semantics, target enrichment provenance, and claim-scoped reconstruction/reversibility. External validation remains deferred.
