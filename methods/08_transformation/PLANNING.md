@@ -1,7 +1,8 @@
 # DSD Transformation Planning / DSD 변환론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative-terminal, method-boundary, competent-baseline, strongest-reasonable-baseline, and deterministic-retrace evidence established / external validation deferred**  
-Date opened: **2026-09-16**
+Status: **Protocol v0.1 internally standardized / remediation complete / external validation queued and not yet opened**  
+Date opened: **2026-09-16**  
+Internal standardization completed: **2026-09-18**
 
 ## Purpose / 목적
 
@@ -20,7 +21,7 @@ Task Interface
 -> external validation later
 ```
 
-External-domain validation is intentionally deferred until internal standardization is complete.
+External-domain validation remains deferred until the project-wide internal-standardization phase is closed.
 
 ## Core distinctions
 
@@ -52,11 +53,15 @@ SAME_RAW_CODE != SAME_SEMANTICS_ACROSS_SCHEMA_VERSIONS
 REALIZED_OUTPUT != FULL_STOCHASTIC_TRANSFORMATION_SEMANTICS
 TARGET_VALUE_EXISTENCE != SOURCE_DERIVABILITY
 CLAIM_SCOPED_RECONSTRUCTION != FULL_SOURCE_INVERSE
+TASK_OUT_OF_SCOPE != CARRIER_OUT_OF_SCOPE
+TRANSFORMATION_OUT_OF_SCOPE != TRANSFORMATION_BLOCKED
+TRANSFORMATION_OUT_OF_SCOPE != TRANSFORMATION_PARTIAL
 NO_GAIN != METHOD_FAILURE
 NO_GAIN != METHOD_MERGER_PROOF
 NO_GAIN != METHOD_ABSORPTION_PROOF
 SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+INTERNALLY_STANDARDIZED_METHOD != EXTERNALLY_VALIDATED_METHOD
 ```
 
 ## Internal development sequence
@@ -71,8 +76,10 @@ DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 8. ✅ Competent baseline challenge — `TRN-CH-004`, 50/50 PASS / `NO_GAIN`.
 9. ✅ Strongest-reasonable baseline challenge — `TRN-CH-005`, 60/60 PASS / `NO_GAIN`; strongest-reasonable-baseline category established at constructed-evidence level.
 10. ✅ Deterministic same-project retrace — `TRN-CH-006`, 56/56 PASS; `REPRODUCIBILITY_CASES: 1`; no independent-replication claim.
-11. 🟨 Frozen-axis internal standardization audit.
-12. ⏸ External applications deferred.
+11. ✅ First frozen-axis audit — `TRN-AUD-001`, audit discipline 28/28 PASS but `HOLD_DEVELOPING` because task-level `TRANSFORMATION_OUT_OF_SCOPE` had no direct execution case.
+12. ✅ Prospective remediation — `TRN-CH-007`, 36/36 PASS; task-level out-of-scope terminal directly exercised and distinguished from blocked, partial, and carrier-level scope.
+13. ✅ Frozen-axis reaudit — `TRN-AUD-002`, 28/28 audit checks PASS / `PROMOTE_INTERNAL_STANDARD`.
+14. ⏸ External applications deferred.
 
 ## Direct-evidence summary
 
@@ -88,43 +95,45 @@ TRN-CH-002: 56/56 PASS
   L4 -> TRANSFORMATION_UNDERDETERMINED
 
 TRN-CH-003: 60/60 PASS
-  Design         -> PARTIAL_OVERLAP_NOT_COLLAPSE
-  Synthesis      -> PARTIAL_OVERLAP_NOT_COLLAPSE
-  Aggregation    -> PARTIAL_OVERLAP_NOT_COLLAPSE
-  Compression    -> PARTIAL_OVERLAP_NOT_COLLAPSE
-  Comparison     -> PARTIAL_OVERLAP_NOT_COLLAPSE
-  Interpretation -> PARTIAL_OVERLAP_NOT_COLLAPSE
-  Computation    -> PARTIAL_OVERLAP_NOT_COLLAPSE
+  seven neighboring methods -> PARTIAL_OVERLAP_NOT_COLLAPSE
   EXACT_COLLAPSE_CANDIDATES_FOUND: 0/7
 
 TRN-CH-004: 50/50 PASS / NO_GAIN
-  Q1 -> COMPLETED_PRESERVING
-  Q2 -> COMPLETED_WITH_DECLARED_LOSS
-  Q3 -> BLOCKED
-  Q4 -> PARTIAL
-  Q5 -> UNDERDETERMINED
   DSD/B0 terminal match: 5/5
   G1-G6: all NOT_ESTABLISHED
 
 TRN-CH-005: 60/60 PASS / NO_GAIN
-  R1 chain/intermediate loss + re-enrichment -> COMPLETED_WITH_DECLARED_LOSS / same
-  R2 version-scoped migration -> COMPLETED_PRESERVING / same
-  R3 stochastic route addition -> COMPLETED_PRESERVING / same
-  R4 external target enrichment -> COMPLETED_PRESERVING / same
-  R5 claim-scoped preservation + full-source noninvertibility -> COMPLETED_PRESERVING / same
+  chain loss / version migration / stochastic semantics / enrichment / scoped inverse pressures
   G1-G7: all NOT_ESTABLISHED
   STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: established_at_constructed_evidence_level
 
 TRN-CH-006: 56/56 PASS
-  retrace target: TRN-CH-005
+  deterministic same-project retrace
   R1-R5 CLAIM_RELEVANT_OUTPUT_MATCH: 5/5
-  TERMINAL_STATUS_MATCH: all frozen scopes PASS
-  CONFORMANCE_MATCH: all frozen scopes PASS
-  POST_HOC_CORRECTIONS_AFTER_COMPARISON: 0
   REPRODUCIBILITY_CASES: 1
+
+TRN-AUD-001:
+  AUDIT_EXECUTION: 28/28 PASS
+  M2: INSUFFICIENT
+  FINAL_DECISION: HOLD_DEVELOPING
+
+TRN-CH-007: 36/36 PASS
+  O1 -> TRANSFORMATION_OUT_OF_SCOPE
+  O2 -> TRANSFORMATION_BLOCKED
+  O3 -> TRANSFORMATION_PARTIAL
+  TASK_LEVEL_OUT_OF_SCOPE_TERMINAL_COVERAGE: established_once
+
+TRN-AUD-002:
+  AUDIT_EXECUTION: 28/28 PASS
+  M1-M4 PASS
+  M5 CONDITIONAL_PASS
+  M6-M13 PASS
+  M14 DEFERRED_BY_SEQUENCE
+  M15 PASS
+  FINAL_DECISION: PROMOTE_INTERNAL_STANDARD
 ```
 
-The method-boundary result is fixture-bounded. Baseline matches are valid `NO_GAIN`, not failure, merger, absorption, deletion, or permanent-redundancy evidence. The retrace is same-project artifact reproducibility only and is not independent replication.
+`TRN-AUD-001` remains a historical hold; it was not repaired in place. `TRN-CH-007` and `TRN-AUD-002` are new prospective records.
 
 ## Method boundaries
 
@@ -139,34 +148,37 @@ Interpretation : source/context -> source-grounded reading
 Computation    : supplied formal inputs/rules -> computed result
 ```
 
-Transformation may consume outputs from neighboring methods only through explicit handoffs. Shared maps or target records do not erase operation boundaries.
+Transformation may consume neighboring-method outputs only through explicit handoffs. Shared maps or target records do not erase operation boundaries.
 
 ## Current state
 
 ```text
 DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
+TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: established
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 5
-SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 5
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 6
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 6
 SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
-NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 1
+NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 2
 METHOD_BOUNDARY_TRANSFORMATION_CASES: 1
 BASELINE_TRANSFORMATION_CASES: 2
 NO_GAIN_TRANSFORMATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 1
 SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+TASK_LEVEL_OUT_OF_SCOPE_TERMINAL_COVERAGE: established_once
 EXTERNAL_TRANSFORMATION_APPLICATIONS: 0
 INDEPENDENT_TRANSFORMATION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
-TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: developing
 CURRENT_TRANSFORMATION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
+The narrow internal-standardization claim is established. External/independent maturity remains unestablished.
+
 ## Next
 
-Prospectively freeze and execute the Transformation frozen-axis internal maturity / standardization audit. The audit must judge only predeclared internal axes and must preserve external applicability and independent validation as deferred rather than treating them as already established.
+Close Transformation internal construction at Protocol v0.1 unless future contradiction reopens it. Do not begin external Transformation validation yet. Continue current project work with the next not-yet-internally-standardized DSD method.
