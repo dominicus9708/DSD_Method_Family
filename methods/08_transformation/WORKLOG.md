@@ -282,25 +282,158 @@ ARTIFACT_CONSISTENCY != EXTERNAL_VALIDATION
 
 No protocol revision or shared-core reopen was required.
 
-## Current counters
+## Step 11A — TRN-AUD-001 frozen-axis internal standardization audit
+
+The first audit was prospectively frozen before scoring.
+
+```text
+AUDIT_ID: DSD-AUDIT-20260918-TRANSFORMATION-001
+AUDIT_PRECOMMIT_COMMIT: 2e869dba4dbc95fdac80a75e946202491221bbc4
+AUDIT_PRECOMMIT_BLOB: 198c82e6c84f507606e79a65361df47b1d76e7de
+AUDIT_RESULT_COMMIT: 305f92a010a0751cff69af8cc8a179e0d9702364
+AUDIT_EXECUTION: 28/28 PASS
+```
+
+Axis result:
+
+```text
+M1  PASS
+M2  INSUFFICIENT
+M3  PASS
+M4  PASS
+M5  CONDITIONAL_PASS
+M6  PASS
+M7  PASS
+M8  PASS
+M9  PASS
+M10 PASS
+M11 PASS
+M12 PASS
+M13 PASS
+M14 DEFERRED_BY_SEQUENCE
+M15 PASS
+```
+
+`M2` was insufficient because Protocol v0.1 declared `TRANSFORMATION_OUT_OF_SCOPE` but no prior task-level constructed case had terminated in that state. Carrier-level `OUT_OF_SCOPE_FOR_TRANSFORMATION` in `TRN-CH-005 R5` was explicitly not accepted as a substitute.
+
+```text
+FINAL_INTERNAL_STANDARDIZATION_DECISION: HOLD_DEVELOPING
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The hold was preserved as a real evidence gap rather than weakened away.
+
+## Step 11B — TRN-CH-007 out-of-scope terminal remediation
+
+A new prospective Challenge ID was created instead of modifying the first audit or earlier challenges.
+
+```text
+PRECOMMIT_COMMIT: f709792218caa2ee3004fc64ec4fb1c516c01fe7
+PRECOMMIT_BLOB: 78180d3f7747362f9cb09ed4bd9603533c7594fc
+RESULT_COMMIT: 3c7b5b65e4cc44aa575cb97f859ddf4f5e7041ba
+TOTAL: 36/36 PASS
+```
+
+Terminal controls:
+
+```text
+O1 entire task outside declared map domain
+  -> TRANSFORMATION_OUT_OF_SCOPE
+  -> CONFORMANT
+
+O2 in-domain task with missing required bridge
+  -> TRANSFORMATION_BLOCKED
+  -> CONFORMANT
+
+O3 mixed in-domain / out-of-domain batch
+  -> TRANSFORMATION_PARTIAL
+  -> CONFORMANT
+```
+
+Preserved:
+
+```text
+TASK_OUT_OF_SCOPE != CARRIER_OUT_OF_SCOPE
+TRANSFORMATION_OUT_OF_SCOPE != TRANSFORMATION_BLOCKED
+TRANSFORMATION_OUT_OF_SCOPE != TRANSFORMATION_PARTIAL
+```
+
+Evidence counters changed only as prospectively permitted:
+
+```text
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 6
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 6
+NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 2
+TASK_LEVEL_OUT_OF_SCOPE_TERMINAL_COVERAGE: established_once
+```
+
+## Step 11C — TRN-AUD-002 frozen-axis internal standardization reaudit
+
+A new audit ID retained the exact M1-M15 axes and the strict six-terminal M2 criterion.
+
+```text
+AUDIT_ID: DSD-AUDIT-20260918-TRANSFORMATION-002
+REAUDIT_PRECOMMIT_COMMIT: a1be5eeb2bde5a8f689f6c315df872154d501c8f
+REAUDIT_PRECOMMIT_BLOB: 264c7c3cd77d85d3636ba80d2de545014d3fe8bf
+REAUDIT_RESULT_COMMIT: 13d9aed76d3faeab186e3c79fb3c256a451f7428
+PRECOMMITTED_REQUIRED_CHECKS: 28
+PASSED: 28
+FAILED: 0
+```
+
+Axis result:
+
+```text
+M1  PASS
+M2  PASS
+M3  PASS
+M4  PASS
+M5  CONDITIONAL_PASS
+M6  PASS
+M7  PASS
+M8  PASS
+M9  PASS
+M10 PASS
+M11 PASS
+M12 PASS
+M13 PASS
+M14 DEFERRED_BY_SEQUENCE
+M15 PASS
+```
+
+The original M2 criterion was satisfied without weakening it because all six Protocol-v0.1 task-level terminals now have direct constructed execution evidence.
+
+Final decision:
+
+```text
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: established
+```
+
+The audit meta-record changed no direct evidence counter.
+
+## Current counters and status
 
 ```text
 DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
+TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: established
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 5
-SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 5
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 6
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 6
 SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
-NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 1
+NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 2
 METHOD_BOUNDARY_TRANSFORMATION_CASES: 1
 BASELINE_TRANSFORMATION_CASES: 2
 NO_GAIN_TRANSFORMATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+TASK_LEVEL_OUT_OF_SCOPE_TERMINAL_COVERAGE: established_once
 EXTERNAL_TRANSFORMATION_APPLICATIONS: 0
 INDEPENDENT_TRANSFORMATION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
-TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: developing
 CURRENT_TRANSFORMATION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
@@ -308,4 +441,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Prospectively precommit and execute the frozen-axis Transformation internal maturity / standardization audit. External applicability and independent validation remain deferred and must not be credited by the internal audit.
+Close Transformation internal construction at Protocol v0.1 unless future contradiction reopens it. External Transformation validation remains queued for the later validation phase. Current project work proceeds to the next not-yet-internally-standardized DSD method.
