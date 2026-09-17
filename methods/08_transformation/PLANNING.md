@@ -1,6 +1,6 @@
 # DSD Transformation Planning / DSD 변환론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative-terminal, method-boundary, competent-baseline, and strongest-reasonable-baseline evidence established / external validation deferred**  
+Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative-terminal, method-boundary, competent-baseline, strongest-reasonable-baseline, and deterministic-retrace evidence established / external validation deferred**  
 Date opened: **2026-09-16**
 
 ## Purpose / 목적
@@ -55,6 +55,8 @@ CLAIM_SCOPED_RECONSTRUCTION != FULL_SOURCE_INVERSE
 NO_GAIN != METHOD_FAILURE
 NO_GAIN != METHOD_MERGER_PROOF
 NO_GAIN != METHOD_ABSORPTION_PROOF
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 ```
 
 ## Internal development sequence
@@ -68,8 +70,8 @@ NO_GAIN != METHOD_ABSORPTION_PROOF
 7. ✅ Direct method-boundary challenge — `TRN-CH-003`, 60/60 PASS; 0/7 exact-collapse candidates in the frozen fixture.
 8. ✅ Competent baseline challenge — `TRN-CH-004`, 50/50 PASS / `NO_GAIN`.
 9. ✅ Strongest-reasonable baseline challenge — `TRN-CH-005`, 60/60 PASS / `NO_GAIN`; strongest-reasonable-baseline category established at constructed-evidence level.
-10. 🟨 Deterministic same-project retrace.
-11. ⬜ Frozen-axis internal standardization audit.
+10. ✅ Deterministic same-project retrace — `TRN-CH-006`, 56/56 PASS; `REPRODUCIBILITY_CASES: 1`; no independent-replication claim.
+11. 🟨 Frozen-axis internal standardization audit.
 12. ⏸ External applications deferred.
 
 ## Direct-evidence summary
@@ -112,9 +114,17 @@ TRN-CH-005: 60/60 PASS / NO_GAIN
   R5 claim-scoped preservation + full-source noninvertibility -> COMPLETED_PRESERVING / same
   G1-G7: all NOT_ESTABLISHED
   STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: established_at_constructed_evidence_level
+
+TRN-CH-006: 56/56 PASS
+  retrace target: TRN-CH-005
+  R1-R5 CLAIM_RELEVANT_OUTPUT_MATCH: 5/5
+  TERMINAL_STATUS_MATCH: all frozen scopes PASS
+  CONFORMANCE_MATCH: all frozen scopes PASS
+  POST_HOC_CORRECTIONS_AFTER_COMPARISON: 0
+  REPRODUCIBILITY_CASES: 1
 ```
 
-The method-boundary result is fixture-bounded. Baseline matches are valid `NO_GAIN`, not failure, merger, absorption, deletion, or permanent-redundancy evidence.
+The method-boundary result is fixture-bounded. Baseline matches are valid `NO_GAIN`, not failure, merger, absorption, deletion, or permanent-redundancy evidence. The retrace is same-project artifact reproducibility only and is not independent replication.
 
 ## Method boundaries
 
@@ -146,9 +156,11 @@ METHOD_BOUNDARY_TRANSFORMATION_CASES: 1
 BASELINE_TRANSFORMATION_CASES: 2
 NO_GAIN_TRANSFORMATION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 EXTERNAL_TRANSFORMATION_APPLICATIONS: 0
 INDEPENDENT_TRANSFORMATION_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
 TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: developing
 CURRENT_TRANSFORMATION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
@@ -157,4 +169,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Precommit and execute a deterministic same-project retrace from immutable Transformation artifacts. The retrace must reconstruct the selected prior result without changing protocol, task, source/target, maps, versions, chain stages, stochastic policy, enrichment provenance, carrier scope, or verdict records. A successful same-project retrace increments only `REPRODUCIBILITY_CASES`; it is not independent replication or external validation.
+Prospectively freeze and execute the Transformation frozen-axis internal maturity / standardization audit. The audit must judge only predeclared internal axes and must preserve external applicability and independent validation as deferred rather than treating them as already established.
