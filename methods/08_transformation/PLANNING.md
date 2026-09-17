@@ -1,6 +1,6 @@
 # DSD Transformation Planning / DSD 변환론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative-terminal, method-boundary, and competent-baseline evidence established / external validation deferred**  
+Status: **internal standardization in progress / Protocol v0.1 frozen / positive, negative-terminal, method-boundary, competent-baseline, and strongest-reasonable-baseline evidence established / external validation deferred**  
 Date opened: **2026-09-16**
 
 ## Purpose / 목적
@@ -48,6 +48,10 @@ SHARED_ARTIFACT != SAME_METHOD
 SHARED_FORMULA != SAME_METHOD
 HANDOFF_COMPATIBILITY != METHOD_COLLAPSE
 SAME_NUMERIC_RESULT != SAME_OUTPUT_CONTRACT
+SAME_RAW_CODE != SAME_SEMANTICS_ACROSS_SCHEMA_VERSIONS
+REALIZED_OUTPUT != FULL_STOCHASTIC_TRANSFORMATION_SEMANTICS
+TARGET_VALUE_EXISTENCE != SOURCE_DERIVABILITY
+CLAIM_SCOPED_RECONSTRUCTION != FULL_SOURCE_INVERSE
 NO_GAIN != METHOD_FAILURE
 NO_GAIN != METHOD_MERGER_PROOF
 NO_GAIN != METHOD_ABSORPTION_PROOF
@@ -63,8 +67,8 @@ NO_GAIN != METHOD_ABSORPTION_PROOF
 6. ✅ Negative/loss/blockage terminal challenge — `TRN-CH-002`, 56/56 PASS.
 7. ✅ Direct method-boundary challenge — `TRN-CH-003`, 60/60 PASS; 0/7 exact-collapse candidates in the frozen fixture.
 8. ✅ Competent baseline challenge — `TRN-CH-004`, 50/50 PASS / `NO_GAIN`.
-9. 🟨 Strongest-reasonable baseline challenge next.
-10. ⬜ Deterministic same-project retrace.
+9. ✅ Strongest-reasonable baseline challenge — `TRN-CH-005`, 60/60 PASS / `NO_GAIN`; strongest-reasonable-baseline category established at constructed-evidence level.
+10. 🟨 Deterministic same-project retrace.
 11. ⬜ Frozen-axis internal standardization audit.
 12. ⏸ External applications deferred.
 
@@ -99,9 +103,18 @@ TRN-CH-004: 50/50 PASS / NO_GAIN
   Q5 -> UNDERDETERMINED
   DSD/B0 terminal match: 5/5
   G1-G6: all NOT_ESTABLISHED
+
+TRN-CH-005: 60/60 PASS / NO_GAIN
+  R1 chain/intermediate loss + re-enrichment -> COMPLETED_WITH_DECLARED_LOSS / same
+  R2 version-scoped migration -> COMPLETED_PRESERVING / same
+  R3 stochastic route addition -> COMPLETED_PRESERVING / same
+  R4 external target enrichment -> COMPLETED_PRESERVING / same
+  R5 claim-scoped preservation + full-source noninvertibility -> COMPLETED_PRESERVING / same
+  G1-G7: all NOT_ESTABLISHED
+  STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: established_at_constructed_evidence_level
 ```
 
-The method-boundary result is fixture-bounded. It is not permanent irreducibility or a survival vote. The competent-baseline match is valid `NO_GAIN`, not failure or merger evidence.
+The method-boundary result is fixture-bounded. Baseline matches are valid `NO_GAIN`, not failure, merger, absorption, deletion, or permanent-redundancy evidence.
 
 ## Method boundaries
 
@@ -125,21 +138,23 @@ DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 4
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 5
 SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
 NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 1
 METHOD_BOUNDARY_TRANSFORMATION_CASES: 1
-BASELINE_TRANSFORMATION_CASES: 1
-NO_GAIN_TRANSFORMATION_CASES: 1
-STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: not established
+BASELINE_TRANSFORMATION_CASES: 2
+NO_GAIN_TRANSFORMATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_TRANSFORMATION_APPLICATIONS: 0
 INDEPENDENT_TRANSFORMATION_VALIDATION: not established
 TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: developing
 CURRENT_TRANSFORMATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
 ## Next
 
-Precommit and execute a materially richer strongest-reasonable-baseline Transformation challenge. Give the stronger baseline the same frozen information while stressing transformation chains/intermediate loss, temporal or schema-version migration, stochastic or choice semantics, target enrichment provenance, and claim-scoped reconstruction/reversibility. Another `NO_GAIN` must remain admissible. No external corpus or standard is to be used.
+Precommit and execute a deterministic same-project retrace from immutable Transformation artifacts. The retrace must reconstruct the selected prior result without changing protocol, task, source/target, maps, versions, chain stages, stochastic policy, enrichment provenance, carrier scope, or verdict records. A successful same-project retrace increments only `REPRODUCIBILITY_CASES`; it is not independent replication or external validation.
