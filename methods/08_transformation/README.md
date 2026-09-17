@@ -1,6 +1,6 @@
 # 08. DSD Transformation / DSD 변환론
 
-Status: **Protocol v0.1 internally established / positive, negative-terminal, method-boundary, and competent-baseline constructed challenges passed / external validation deferred**
+Status: **Protocol v0.1 internally standardized / remediation reaudit passed / external validation queued and not yet opened**
 
 Task: move a supplied object, record, structure, model, schema, or regime representation into a declared target representation through an explicit transformation map or bridge while recording what is preserved, transformed under declared equivalence, merged, split, omitted, added, unresolved, or rendered non-reconstructible.
 
@@ -18,6 +18,8 @@ Task Interface
 -> frozen-axis internal standardization audit
 -> external validation later
 ```
+
+The internal lane is now complete at Protocol v0.1. External validation remains deferred under the project-wide internal-first sequencing rule.
 
 ## Development files
 
@@ -38,6 +40,19 @@ Task Interface
 - [`TRN-CH-003 direct method-boundary challenge`](../../evidence/method_specific/transformation/TRN-CH-003_method-boundary.md)
 - [`TRN-CH-004 precommit`](../../evidence/method_specific/transformation/TRN-CH-004_precommit.md)
 - [`TRN-CH-004 competent-baseline NO_GAIN challenge`](../../evidence/method_specific/transformation/TRN-CH-004_competent-baseline-no-gain.md)
+- [`TRN-CH-005 precommit`](../../evidence/method_specific/transformation/TRN-CH-005_precommit.md)
+- [`TRN-CH-005 strongest-reasonable-baseline NO_GAIN`](../../evidence/method_specific/transformation/TRN-CH-005_strongest-reasonable-baseline.md)
+- [`TRN-CH-006 precommit`](../../evidence/method_specific/transformation/TRN-CH-006_precommit.md)
+- [`TRN-CH-006 deterministic same-project retrace`](../../evidence/method_specific/transformation/TRN-CH-006_deterministic-same-project-retrace.md)
+- [`TRN-CH-007 precommit`](../../evidence/method_specific/transformation/TRN-CH-007_precommit.md)
+- [`TRN-CH-007 out-of-scope terminal remediation`](../../evidence/method_specific/transformation/TRN-CH-007_out-of-scope-terminal.md)
+
+## Audit meta-records
+
+- [`TRN-AUD-001 precommit`](../../evidence/method_specific/transformation/TRN-AUD-001_precommit.md)
+- [`TRN-AUD-001 internal-standardization hold`](../../evidence/method_specific/transformation/TRN-AUD-001_internal-standardization-review.md)
+- [`TRN-AUD-002 precommit`](../../evidence/method_specific/transformation/TRN-AUD-002_precommit.md)
+- [`TRN-AUD-002 internal-standardization reaudit`](../../evidence/method_specific/transformation/TRN-AUD-002_internal-standardization-review.md)
 
 ## Protocol lineage
 
@@ -57,7 +72,7 @@ BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
 ```
 
-Eight refinements are now binding:
+Eight refinements are binding:
 
 ```text
 R1 map identity/version/domain/codomain/applicability
@@ -97,101 +112,81 @@ SHARED_ARTIFACT != SAME_METHOD
 SHARED_FORMULA != SAME_METHOD
 HANDOFF_COMPATIBILITY != METHOD_COLLAPSE
 SAME_NUMERIC_RESULT != SAME_OUTPUT_CONTRACT
+SAME_RAW_CODE != SAME_SEMANTICS_ACROSS_SCHEMA_VERSIONS
+REALIZED_OUTPUT != FULL_STOCHASTIC_TRANSFORMATION_SEMANTICS
+TARGET_ENRICHMENT != SOURCE_PRESERVATION
+CLAIM_SCOPED_RECONSTRUCTION != FULL_SOURCE_INVERSE
+TASK_OUT_OF_SCOPE != CARRIER_OUT_OF_SCOPE
+TRANSFORMATION_OUT_OF_SCOPE != TRANSFORMATION_BLOCKED
+TRANSFORMATION_OUT_OF_SCOPE != TRANSFORMATION_PARTIAL
 NO_GAIN != METHOD_FAILURE
 NO_GAIN != METHOD_MERGER_PROOF
 NO_GAIN != METHOD_ABSORPTION_PROOF
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+INTERNALLY_STANDARDIZED_METHOD != EXTERNALLY_VALIDATED_METHOD
 ```
 
-## TRN-CH-001 positive constructed result
+## Constructed evidence lineage
 
 ```text
 TRN-CH-001: 48/48 PASS
-VALIDITY_GATES: 14/14 PASS
+  -> TRANSFORMATION_COMPLETED_PRESERVING
 
-record_id      -> PRESERVED_EXACT
-temperature_c  -> PRESERVED_UNDER_DECLARED_EQUIVALENCE
-offset_pair    -> SPLIT_IN_TARGET / exact reconstruction
-retry_count    -> PRESERVED_EXACT / DEFINED_ZERO preserved
-schema_marker  -> TARGET_ADDED_NOT_SOURCE_DERIVED / DEFAULT_VALUE
-
-CLAIM_RELEVANT_INFORMATION_LOSS: none
-REVERSIBILITY_STATUS: LEFT_INVERTIBLE_ON_DECLARED_DOMAIN
-GLOBAL_BIJECTIVITY_CLAIM: not made
-TERMINAL_TRANSFORMATION_STATUS: TRANSFORMATION_COMPLETED_PRESERVING
-TRANSFORMATION_PROTOCOL_CONFORMANCE: CONFORMANT
-TRANSFORMATION_METHOD_GAIN_STATUS: NOT_ASSESSED
-```
-
-## TRN-CH-002 negative/loss/blockage result
-
-```text
 TRN-CH-002: 56/56 PASS
+  -> COMPLETED_WITH_DECLARED_LOSS / BLOCKED / PARTIAL / UNDERDETERMINED
 
-L1 many-to-one merge + omission
-  -> TRANSFORMATION_COMPLETED_WITH_DECLARED_LOSS
-  -> NONINVERTIBLE_DUE_TO_COLLISION_OR_LOSS
-
-L2 missing required timezone bridge
-  -> TRANSFORMATION_BLOCKED
-
-L3 mixed in-domain/out-of-domain batch
-  -> TRANSFORMATION_PARTIAL
-
-L4 unresolved claim-relevant map version
-  -> TRANSFORMATION_UNDERDETERMINED
-
-all four:
-  TRANSFORMATION_PROTOCOL_CONFORMANCE: CONFORMANT
-```
-
-## TRN-CH-003 direct method-boundary result
-
-Seven neighboring methods were compared under the same five frozen axes: required input contract, primary operation, primary output contract, failure/limit semantics, and validation standard.
-
-```text
 TRN-CH-003: 60/60 PASS
+  -> seven neighboring methods all PARTIAL_OVERLAP_NOT_COLLAPSE
+  -> exact-collapse candidates 0/7
 
-Design         -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Synthesis      -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Aggregation    -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Compression    -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Comparison     -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Interpretation -> PARTIAL_OVERLAP_NOT_COLLAPSE
-Computation    -> PARTIAL_OVERLAP_NOT_COLLAPSE
+TRN-CH-004: 50/50 PASS / NO_GAIN
+  -> competent baseline terminal match 5/5
 
-EXACT_COLLAPSE_CANDIDATES_FOUND: 0/7
-INSUFFICIENT_BOUNDARY_JUDGMENTS: 0/7
+TRN-CH-005: 60/60 PASS / NO_GAIN
+  -> strongest-reasonable baseline matched chain/version/stochastic/enrichment/reconstruction pressures
+  -> STRONGEST_REASONABLE_BASELINE_TRANSFORMATION established_at_constructed_evidence_level
+
+TRN-CH-006: 56/56 PASS
+  -> deterministic same-project retrace
+  -> R1-R5 claim-relevant output match 5/5
+  -> REPRODUCIBILITY_CASES: 1
+
+TRN-AUD-001:
+  -> audit discipline 28/28 PASS
+  -> M2 INSUFFICIENT because TRANSFORMATION_OUT_OF_SCOPE lacked direct task-level execution
+  -> HOLD_DEVELOPING
+
+TRN-CH-007: 36/36 PASS
+  O1 -> TRANSFORMATION_OUT_OF_SCOPE
+  O2 -> TRANSFORMATION_BLOCKED
+  O3 -> TRANSFORMATION_PARTIAL
+  TASK_LEVEL_OUT_OF_SCOPE_TERMINAL_COVERAGE: established_once
+
+TRN-AUD-002:
+  -> audit discipline 28/28 PASS
+  -> M1-M4 PASS
+  -> M5 CONDITIONAL_PASS
+  -> M6-M13 PASS
+  -> M14 DEFERRED_BY_SEQUENCE
+  -> M15 PASS
+  -> PROMOTE_INTERNAL_STANDARD
 ```
 
-This is fixture-bounded and does not establish permanent irreducibility or registry survival.
+`TRN-AUD-001` remains a real historical hold. It was not retroactively rewritten. `TRN-CH-007` and `TRN-AUD-002` remedied and reassessed the missing evidence prospectively.
 
-## TRN-CH-004 competent-baseline result
-
-A competent non-DSD evaluator received exactly the same source/target/map/domain/status/loss/reconstruction information. Five frozen tasks covered preserving transformation, declared loss, missing bridge, partial applicability, and unresolved map-version identity.
+## Terminal structure and direct coverage
 
 ```text
-TRN-CH-004: 50/50 PASS / NO_GAIN
-BASELINE: B0_SCHEMA_MAP_LEDGER_EVALUATOR
-
-Q1 -> TRANSFORMATION_COMPLETED_PRESERVING
-Q2 -> TRANSFORMATION_COMPLETED_WITH_DECLARED_LOSS
-Q3 -> TRANSFORMATION_BLOCKED
-Q4 -> TRANSFORMATION_PARTIAL
-Q5 -> TRANSFORMATION_UNDERDETERMINED
-
-DSD TERMINALS == B0 TERMINALS: 5/5
-G1 STATUS_DISTINCTION_GAIN: NOT_ESTABLISHED
-G2 CARRIER_RELATION_AND_LOSS_GAIN: NOT_ESTABLISHED
-G3 TARGET_ADDITION_PROVENANCE_GAIN: NOT_ESTABLISHED
-G4 RECONSTRUCTION_REVERSIBILITY_GAIN: NOT_ESTABLISHED
-G5 TERMINAL_STATE_DISCIPLINE_GAIN: NOT_ESTABLISHED
-G6 TRACEABILITY_GAIN: NOT_ESTABLISHED
-TRANSFORMATION_METHOD_GAIN_STATUS: NO_GAIN
+TRANSFORMATION_COMPLETED_PRESERVING
+TRANSFORMATION_COMPLETED_WITH_DECLARED_LOSS
+TRANSFORMATION_PARTIAL
+TRANSFORMATION_BLOCKED
+TRANSFORMATION_OUT_OF_SCOPE
+TRANSFORMATION_UNDERDETERMINED
 ```
 
-`NO_GAIN` is preserved as valid comparative evidence. It is not merger, absorption, deletion, or permanent-redundancy evidence.
-
-No direct case family establishes external applicability, method superiority, or independent validation.
+All six Protocol-v0.1 task-level terminals now have direct constructed execution coverage. A lossy, partial, blocked, out-of-scope, or underdetermined result may still be protocol-conformant when its cause matches the frozen task state.
 
 ## Output structure
 
@@ -209,19 +204,6 @@ TERMINAL_TRANSFORMATION_STATUS
 TRANSFORMATION_PROTOCOL_CONFORMANCE
 TRANSFORMATION_METHOD_GAIN_STATUS
 ```
-
-Terminal states:
-
-```text
-TRANSFORMATION_COMPLETED_PRESERVING
-TRANSFORMATION_COMPLETED_WITH_DECLARED_LOSS
-TRANSFORMATION_PARTIAL
-TRANSFORMATION_BLOCKED
-TRANSFORMATION_OUT_OF_SCOPE
-TRANSFORMATION_UNDERDETERMINED
-```
-
-A declared-loss, partial, blocked, or underdetermined result can still be protocol-conformant.
 
 ## Method boundaries
 
@@ -242,28 +224,31 @@ Shared maps or target records do not imply identical methods. Neighboring output
 
 ```text
 DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
+TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: established
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 4
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 6
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 6
 SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
-NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 1
+NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 2
 METHOD_BOUNDARY_TRANSFORMATION_CASES: 1
-BASELINE_TRANSFORMATION_CASES: 1
-NO_GAIN_TRANSFORMATION_CASES: 1
-STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: not established
-REPRODUCIBILITY_CASES: 0
+BASELINE_TRANSFORMATION_CASES: 2
+NO_GAIN_TRANSFORMATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+TASK_LEVEL_OUT_OF_SCOPE_TERMINAL_COVERAGE: established_once
 EXTERNAL_TRANSFORMATION_APPLICATIONS: 0
 INDEPENDENT_TRANSFORMATION_VALIDATION: not established
-TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: developing
+INDEPENDENT_REPLICATION: not established
 CURRENT_TRANSFORMATION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-Protocol construction is infrastructure, not direct method validation.
+Internal standardization is the narrow completed claim. External applicability, independent validation, independent replication, practical superiority, and permanent registry survival remain unestablished.
 
 ## Next development step
 
-Precommit and execute a materially richer strongest-reasonable-baseline Transformation challenge. Stress composed transformation chains and intermediate-stage loss, temporal/schema-version migration, stochastic or choice semantics, target enrichment provenance, and claim-scoped reversibility while giving the baseline all claim-relevant information. Another `NO_GAIN` remains admissible. External validation remains deferred until the full internal-standardization sequence is complete.
+Close the Transformation internal-standardization lane at Protocol v0.1 unless future contradiction reopens it. External Transformation validation remains queued for the later validation phase. Current project work proceeds to the next not-yet-internally-standardized DSD method.
