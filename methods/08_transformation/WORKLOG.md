@@ -183,7 +183,7 @@ BOUNDARY_DIFFERENCE != PERMANENT_IRREDUCIBILITY
 
 No protocol revision or shared-core reopen was required. The result is fixture-bounded and is not a permanent irreducibility claim.
 
-## Step 8 — TRN-CH-004 competent-baseline NO_GAIN challenge
+## Step 8A — TRN-CH-004 competent-baseline NO_GAIN challenge
 
 A prospective precommit fixed five constructed tasks, a competent non-DSD baseline, equal input access, six gain criteria, and a 50-check scoring plan before execution.
 
@@ -227,23 +227,79 @@ BASELINE_MATCH != PERMANENT_REDUNDANCY
 
 No protocol revision or shared-core reopen was required.
 
+## Step 8B — TRN-CH-005 strongest-reasonable-baseline NO_GAIN challenge
+
+A materially stronger non-DSD baseline received the same frozen source/target/map/version/domain/carrier/status/chain/stochastic/enrichment/reconstruction records.
+
+```text
+PRECOMMIT_COMMIT: c344e983c7b24a74ee7d1a9f1e36dfd14794dc64
+PRECOMMIT_BLOB: 67147ab9f486d268a3ba34396d8ad3a9fcf50502
+RESULT_COMMIT: b05d24a861bfa2146e9522da968c29c6018468d3
+RESULT_BLOB: 28bd10b14a5cb600a4a8e047852eea3f4a10dad3
+TOTAL: 60/60 PASS
+TRANSFORMATION_METHOD_GAIN_STATUS: NO_GAIN
+STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: established_at_constructed_evidence_level
+```
+
+The challenge preserved intermediate chain loss despite endpoint coincidence, schema-version semantics, stochastic support/seed/realization, external target enrichment provenance, and claim-scoped reconstruction versus full-source noninvertibility. `G1-G7` were all `NOT_ESTABLISHED` because the strong baseline matched the claim-relevant outputs.
+
+## Step 10 — TRN-CH-006 deterministic same-project retrace
+
+`TRN-CH-005` was selected as the immutable retrace target. Reconstruction used Protocol v0.1 plus the frozen `TRN-CH-005` precommit; the prior result was used only as the post-reconstruction comparison target.
+
+```text
+P0_PROTOCOL_COMMIT: b5e292ff89b1a2529a9f1fde98ad13d9af692e90
+P0_PROTOCOL_BLOB: f78393c188c513acb30a10f1b180d598138cea61
+P1_TRN_CH_005_PRECOMMIT_COMMIT: c344e983c7b24a74ee7d1a9f1e36dfd14794dc64
+P1_TRN_CH_005_PRECOMMIT_BLOB: 67147ab9f486d268a3ba34396d8ad3a9fcf50502
+P2_TRN_CH_005_RESULT_COMMIT: b05d24a861bfa2146e9522da968c29c6018468d3
+P2_TRN_CH_005_RESULT_BLOB: 28bd10b14a5cb600a4a8e047852eea3f4a10dad3
+RETRACE_PRECOMMIT_COMMIT: 4114664c0a837cf9c382e901e166d1071c2080ed
+RETRACE_PRECOMMIT_BLOB: a5eaa70ba1eb52f6a0f2f2e3f56ba5ce70760ca9
+RETRACE_RESULT_COMMIT: 38975091f7b919921ddca1f2c233325e2f28cb18
+RESULT_BLOB: e003eb57c5435a425caf309998e4c44854ca13b8
+```
+
+Execution:
+
+```text
+R1-R5 CLAIM_RELEVANT_OUTPUT_MATCH: 5/5
+TERMINAL_STATUS_MATCH: all frozen scopes PASS
+CONFORMANCE_MATCH: all frozen scopes PASS
+POST_HOC_CORRECTIONS_AFTER_COMPARISON: 0
+TOTAL: 56/56 PASS
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+```
+
+The retrace preserves:
+
+```text
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+EXPECTED_OUTPUT_RETRACE != BLIND_REDERIVATION
+ARTIFACT_CONSISTENCY != EXTERNAL_VALIDATION
+```
+
+No protocol revision or shared-core reopen was required.
+
 ## Current counters
 
 ```text
 DEDICATED_TRANSFORMATION_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
-DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 4
+DIRECT_TRANSFORMATION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_TRANSFORMATION_PILOTS: 5
 SUCCESSFUL_POSITIVE_TRANSFORMATION_CASES: 1
 NEGATIVE_OR_FAILURE_TRANSFORMATION_CASES: 1
 METHOD_BOUNDARY_TRANSFORMATION_CASES: 1
-BASELINE_TRANSFORMATION_CASES: 1
-NO_GAIN_TRANSFORMATION_CASES: 1
-STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: not established
-REPRODUCIBILITY_CASES: 0
+BASELINE_TRANSFORMATION_CASES: 2
+NO_GAIN_TRANSFORMATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_TRANSFORMATION: established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 1
 EXTERNAL_TRANSFORMATION_APPLICATIONS: 0
 INDEPENDENT_TRANSFORMATION_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
 TRANSFORMATION_INTERNAL_STANDARDIZATION_STATUS: developing
 CURRENT_TRANSFORMATION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
@@ -252,4 +308,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Precommit and execute a materially richer strongest-reasonable-baseline Transformation challenge. The stronger baseline receives the same frozen information and must be allowed to match DSD. Stress composed chains/intermediate loss, temporal/schema-version migration, stochastic or choice semantics, target enrichment provenance, and claim-scoped reconstruction/reversibility. External validation remains deferred.
+Prospectively precommit and execute the frozen-axis Transformation internal maturity / standardization audit. External applicability and independent validation remain deferred and must not be credited by the internal audit.
