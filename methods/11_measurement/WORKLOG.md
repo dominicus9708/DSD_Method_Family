@@ -219,3 +219,90 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Run a separately precommitted competent non-DSD baseline comparison with equal information access.
+
+---
+
+## Step 8 — MSR-CH-004 competent non-DSD baseline
+
+The baseline was frozen prospectively before execution.
+
+```text
+PRECOMMIT_COMMIT: 5c3d2c3dbe941d324d8ff1a44990044e2c228a54
+PRECOMMIT_BLOB:   1a24d6d80a44a0b56b5cb4af684a75c599010ffc
+RESULT_COMMIT:    061e49a4c3173f90c41b38b8c4a87c1cc3ca5082
+RESULT_BLOB:      6e8dcedc97bd1ba6c44aac7bba4a16db11da587d
+
+BASELINE_ID:
+  B0_GENERIC_DISTINGUISHABILITY_LEDGER
+
+TOTAL: 60/60 PASS
+MEASUREMENT_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+Equal information was supplied to DSD Measurement and B0:
+
+```text
+alternatives / required pairs / scope
+candidate identities / applicability / statuses
+outcome maps / bridge records
+decision rules
+joint policy
+collision / injectivity / reconstruction sidecars
+regime records
+observed-result availability
+```
+
+Five frozen fixture families matched claim-relevant outputs:
+
+```text
+Q1 joint sufficiency + defined zero + aggregate collision -> MATCH
+Q2 complete information but nondiscriminating -> MATCH
+Q3 blocked + inapplicable -> MATCH
+Q4 competing admissible bridges -> MATCH
+Q5 explicit scope mismatch -> MATCH
+```
+
+All six gain axes:
+
+```text
+G1 discrimination-classification advantage -> BASELINE_MATCH
+G2 typed-status preservation advantage -> BASELINE_MATCH
+G3 joint-plan sufficiency advantage -> BASELINE_MATCH
+G4 information-loss/reconstruction-limit advantage -> BASELINE_MATCH
+G5 negative-terminal semantic advantage -> BASELINE_MATCH
+G6 selection-versus-observed-result discipline advantage -> BASELINE_MATCH
+```
+
+Therefore:
+
+```text
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+```
+
+Current counters:
+
+```text
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 4
+POSITIVE_MEASUREMENT_CASES: 1
+NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
+METHOD_BOUNDARY_MEASUREMENT_CASES: 1
+BASELINE_MEASUREMENT_CASES: 1
+NO_GAIN_MEASUREMENT_CASES: 1
+STRONGEST_REASONABLE_BASELINE_MEASUREMENT: not established
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_MEASUREMENT_APPLICATIONS: 0
+INDEPENDENT_MEASUREMENT_VALIDATION: not established
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_MEASUREMENT_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Run a separately precommitted strongest-reasonable non-DSD baseline comparison under equal information access.
