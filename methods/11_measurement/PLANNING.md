@@ -1,6 +1,6 @@
 # DSD Measurement Planning / DSD 측정론 기획
 
-Status: **Measurement Protocol v0.1 frozen / direct validation next / external validation deferred**  
+Status: **Measurement Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / negative-terminal challenge next / external validation deferred**  
 Date opened: **2026-09-18**  
 Protocol frozen: **2026-09-19**
 
@@ -9,28 +9,6 @@ Protocol frozen: **2026-09-19**
 Develop DSD Measurement as a method for determining which supplied or proposed observations/readouts can distinguish declared structural alternatives at a declared resolution, while preserving applicability, status, provenance, information-loss, uncertainty/decision semantics, and temporal-scope limits.
 
 DSD Measurement does not itself build instruments, perform domain-specific metrology, generate missing predictions, infer causes from readouts, or fabricate observed results.
-
-## Source-derived constraints retained
-
-```text
-Formation:
-  stage-aware structural differences and first-branching information may locate where alternatives differ,
-  but do not by themselves guarantee a discriminating readout.
-
-Property:
-  undeclared / profile-unavailable / inapplicable / prerequisite-unsatisfied /
-  applicable-but-undefined / defined-zero / defined-nonzero remain distinct.
-
-Static Aggregation:
-  equal aggregate/readout values do not imply equal support or reconstruct component structure
-  without explicit injectivity/reconstruction support.
-
-Dynamics:
-  a difference cannot be used as locally available measurement evidence before a supplied
-  distinguishability-support record makes it available at the declared location/time.
-```
-
-These are predecessor constraints, not a domain-specific measurement theory.
 
 ## Project sequencing rule
 
@@ -51,8 +29,8 @@ Task Interface
 2. ✅ Pre-protocol boundary attack — 18 constructed internal cases.
 3. ✅ Boundary Amendment 001 — R1-R8 prospectively adopted.
 4. ✅ Executable Measurement Protocol v0.1.
-5. 🟨 Positive constructed challenge.
-6. ⬜ Negative / blocked / insufficient / out-of-scope challenge.
+5. ✅ Positive constructed challenge — `MSR-CH-001`, 48/48 PASS.
+6. 🟨 Negative / blocked / insufficient / out-of-scope challenge.
 7. ⬜ Direct method-boundary challenge.
 8. ⬜ Competent baseline challenge.
 9. ⬜ Strongest-reasonable baseline challenge.
@@ -73,30 +51,50 @@ VALIDITY_GATES: G1-G14
 BINDING_OPERATION: M1-M14
 ```
 
+## MSR-CH-001 result
+
+```text
+PRECOMMIT_COMMIT: bfe3898ce181f8b2d8bcf0cffe153e947d75b486
+PRECOMMIT_BLOB:   cedf69207c5b183ce6474573f2a96f80f50df51e
+
+RESULT_COMMIT: e6169700a24715141a41c7c15cf7c827293f885d
+RESULT_BLOB:   e9bcdb6ab1f37bd8c4106e894b68d521456c31bb
+
+TOTAL: 48/48 PASS
+CONFORMANCE: CONFORMANT
+PLAN_TERMINAL: MEASUREMENT_PLAN_SUFFICIENT
+METHOD_GAIN: NOT_ASSESSED
+```
+
+The first direct case established only constructed internal execution evidence. It did not establish external validity or comparative gain.
+
 ## Current counters
 
 ```text
 DEDICATED_MEASUREMENT_PROTOCOL: established v0.1
-TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
-DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 0
-SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 0
-POSITIVE_MEASUREMENT_CASES: 0
+
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 1
+POSITIVE_MEASUREMENT_CASES: 1
 NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 0
 METHOD_BOUNDARY_MEASUREMENT_CASES: 0
+
 BASELINE_MEASUREMENT_CASES: 0
 NO_GAIN_MEASUREMENT_CASES: 0
 STRONGEST_REASONABLE_BASELINE_MEASUREMENT: not established
 REPRODUCIBILITY_CASES: 0
+
 EXTERNAL_MEASUREMENT_APPLICATIONS: 0
 INDEPENDENT_MEASUREMENT_VALIDATION: not established
+
 MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_MEASUREMENT_EVIDENCE_STATUS: protocol_frozen_pre_validation
+CURRENT_MEASUREMENT_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
 ## Next
 
-Create a prospective precommit for the first positive constructed Measurement challenge. It should require actual use of the frozen pairwise/joint rules rather than merely restating the protocol. External validation remains deferred.
+Create a separate prospective precommit for the negative-terminal challenge. The case should directly exercise distinct `MEASUREMENT_PLAN_INSUFFICIENT`, `MEASUREMENT_PLAN_BLOCKED`, `MEASUREMENT_PLAN_OUT_OF_SCOPE`, and `MEASUREMENT_PLAN_UNDERDETERMINED` outcomes without changing Protocol v0.1.
