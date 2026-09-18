@@ -28,7 +28,7 @@ The fields are organizational categories only and do not merge their member meth
 
 ### IV. Evidence & Lineage / 증거·계보
 - **Measurement / DSD 측정론** — [`11_measurement/`](11_measurement/)
-- **Provenance / DSD 출처·유래 추적론** — [`09_provenance_lineage/provenance/`](09_provenance_lineage/provenance/)
+- **Tracking / DSD 추적론** — [`09_provenance_lineage/provenance/`](09_provenance_lineage/provenance/)
 - **Lineage / DSD 계보론** — [`09_provenance_lineage/lineage/`](09_provenance_lineage/lineage/)
 
 ### V. Reduction & Representation / 축약·표현
@@ -56,7 +56,9 @@ A method remains independent when its task interface differs materially in **inp
 
 The current boundary audit found **no exact duplicate among the 22 methods**. Sharing DSD layers or operators is not enough to merge methods.
 
-The main wording refinement is DSD Analysis: in new method-family records, Analysis means **single-target structural decomposition and structural re-expression**. Cross-target comparison, criterion-based class assignment, and source/context interpretation are attributed to Comparison, Classification, and Interpretation respectively. Historical Analysis records are not retroactively rewritten.
+The main wording refinement is DSD Analysis: in new method-family records, Analysis means **single-target structural decomposition and structural re-expression**. Cross-target comparison, criterion-based class assignment, and source/context interpretation are attributed to Comparison, Classification, and Interpretation respectively.
+
+The former **Provenance / DSD 출처·유래 추적론** label is broadened to **Tracking / DSD 추적론**. Origin/derivation provenance remains a Tracking subcase, while Tracking also covers explicit version, transformation, process/stage, location/container, custody/responsibility, status, reference/dependency, and evidence-link traces. Tracking does not by itself establish truth, causality, legal responsibility, or Lineage identity. Historical Analysis records are not retroactively rewritten.
 
 A case may combine methods from several fields, but every method result must remain separately identifiable and auditable.
 
@@ -82,7 +84,7 @@ A shared rule is **not** evidence that all receiving methods are directly valida
 The earlier 01–18 path layout is preserved so that existing links and records do not break.
 The following compound directories are **legacy compatibility wrappers only and are not counted as methods**:
 
-- `09_provenance_lineage/` → Provenance + Lineage
+- `09_provenance_lineage/` → Tracking + Lineage (legacy nested path `provenance/` retained for compatibility)
 - `10_aggregation_compression/` → Aggregation + Compression
 - `12_computation_optimization/` → Computation + Optimization
 - `15_diagnosis_reconstruction/` → Diagnosis + Reconstruction
