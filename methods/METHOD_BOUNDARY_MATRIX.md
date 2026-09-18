@@ -39,7 +39,7 @@ Historical Analysis records may contain several of these operations together. Th
 | I. Structural Description & Understanding | Analysis / Comparison / Classification / Interpretation | one-target decomposition and re-expression / cross-target preserved-difference judgment / criterion-based class assignment / source-context-bridge reading |
 | II. Criteria & Validation | Specification / Audit | declare requirements / retrace and evaluate performed work against scope, evidence, procedure, and standards |
 | III. Construction & Transformation | Design / Synthesis / Transformation | construct target from goals and constraints / compose admitted parts under a composition rule / map source to target representation or regime while recording preservation and loss |
-| IV. Evidence & Lineage | Measurement / Provenance / Lineage | determine discriminating observations / trace origin and derivation / determine predecessor-successor relation across change |
+| IV. Evidence & Lineage | Measurement / Tracking / Lineage | determine discriminating observations / trace declared origin, version, transformation, process, location, responsibility, status, reference, and evidence links / determine predecessor-successor relation across change |
 | V. Reduction & Representation | Aggregation / Compression | construct a declared readout / reduce representation while preserving declared downstream distinctions |
 | VI. Inverse Inference & Reconstruction | Diagnosis / Reconstruction | infer compatible present hidden states or causes / infer compatible prior, omitted, damaged, compressed, or lost structures and histories |
 | VII. Computation & Selection | Computation / Optimization | determine what must be evaluated and what may be omitted / choose among admissible alternatives under objective and constraints |
@@ -63,9 +63,9 @@ Synthesis is a parts-to-whole construction under an explicit composition rule. T
 
 Measurement asks which observations can discriminate relevant alternatives. Diagnosis uses observations to narrow compatible current hidden-state or cause hypotheses.
 
-### Provenance vs Lineage vs Reconstruction
+### Tracking vs Lineage vs Reconstruction
 
-Provenance records supported origin/derivation chains. Lineage records successor identity across change. Reconstruction infers admissible hidden or lost past structures from incomplete evidence. A reconstructed origin is not automatically provenance; a provenance chain is not automatically lineage.
+Tracking records supported trace links across a declared scope, including origin/derivation, versions, transformations, process stages, locations/containers, custody/responsibility, status, references/dependencies, and evidence links. Lineage determines predecessor/successor identity across change. Reconstruction infers admissible hidden or lost past structures from incomplete evidence. A reconstructed link is not automatically an established Tracking link, and a tracked chain is not automatically Lineage identity.
 
 ### Aggregation vs Compression vs Transformation
 
