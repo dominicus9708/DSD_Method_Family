@@ -1,21 +1,21 @@
 # DSD Measurement Planning / DSD 측정론 기획
 
-Status: **internal standardization started / Task Interface v0.1 drafted / pre-protocol boundary attack completed / protocol not yet frozen / external validation deferred**  
-Date opened: **2026-09-18**
+Status: **Measurement Protocol v0.1 frozen / direct validation next / external validation deferred**  
+Date opened: **2026-09-18**  
+Protocol frozen: **2026-09-19**
 
 ## Purpose / 목적
 
-Develop DSD Measurement as a method for determining which supplied or proposed observations/readouts can distinguish declared structural alternatives at a declared resolution, while preserving applicability, status, provenance, information-loss, and temporal-scope limits.
+Develop DSD Measurement as a method for determining which supplied or proposed observations/readouts can distinguish declared structural alternatives at a declared resolution, while preserving applicability, status, provenance, information-loss, uncertainty/decision semantics, and temporal-scope limits.
 
-DSD Measurement does not itself build instruments, perform domain-specific metrology, generate missing predictions, or infer causes from observed values.
+DSD Measurement does not itself build instruments, perform domain-specific metrology, generate missing predictions, infer causes from readouts, or fabricate observed results.
 
 ## Source-derived constraints retained
 
-The internal interface is constrained by the current DSD source stack:
-
 ```text
 Formation:
-  stage-aware structural differences and first-branching information may locate where alternatives differ.
+  stage-aware structural differences and first-branching information may locate where alternatives differ,
+  but do not by themselves guarantee a discriminating readout.
 
 Property:
   undeclared / profile-unavailable / inapplicable / prerequisite-unsatisfied /
@@ -23,14 +23,14 @@ Property:
 
 Static Aggregation:
   equal aggregate/readout values do not imply equal support or reconstruct component structure
-  without an injective/reconstruction condition.
+  without explicit injectivity/reconstruction support.
 
 Dynamics:
-  a perturbation or identity-relevant difference cannot be used as an available local discriminator
-  before its declared distinguishability support reaches the measurement location/time.
+  a difference cannot be used as locally available measurement evidence before a supplied
+  distinguishability-support record makes it available at the declared location/time.
 ```
 
-These are predecessor constraints. They do not supply a domain-specific measurement theory.
+These are predecessor constraints, not a domain-specific measurement theory.
 
 ## Project sequencing rule
 
@@ -49,9 +49,9 @@ Task Interface
 
 1. ✅ Task Interface v0.1 draft.
 2. ✅ Pre-protocol boundary attack — 18 constructed internal cases.
-3. 🟨 Boundary Amendment 001.
-4. ⬜ Executable Measurement Protocol v0.1.
-5. ⬜ Positive constructed challenge.
+3. ✅ Boundary Amendment 001 — R1-R8 prospectively adopted.
+4. ✅ Executable Measurement Protocol v0.1.
+5. 🟨 Positive constructed challenge.
 6. ⬜ Negative / blocked / insufficient / out-of-scope challenge.
 7. ⬜ Direct method-boundary challenge.
 8. ⬜ Competent baseline challenge.
@@ -60,26 +60,43 @@ Task Interface
 11. ⬜ Frozen-axis internal standardization audit.
 12. ⏸ External applications deferred.
 
-## Boundary-attack summary
+## Frozen protocol identity
 
 ```text
-BOUNDARY_ATTACKS_RUN: 18
-PRESERVED_NO_REFINEMENT: 9
-PRESERVED_WITH_NONBREAKING_REFINEMENT: 9
-BOUNDARY_COLLAPSE_FOUND: 0
-FUNDAMENTAL_INTERFACE_FAILURE: 0
+AMENDMENT_COMMIT: 7f09baa7e2bb2701b4f01471abbbd443d226a78a
+AMENDMENT_BLOB:   1ac7933fc19d95e9070432de99deb5a0fd1d382c
 
-REFINEMENT_GROUPS_FORCED:
-  R1 discrimination question / alternative set / declared resolution
-  R2 measurement identity / typing / domain / unit / status
-  R3 measurement-to-claim bridge / provenance / proxy status
-  R4 single and joint distinguishability / outcome-partition ledger
-  R5 readout information loss / injectivity / reconstruction limits
-  R6 tolerance / uncertainty / threshold semantics
-  R7 temporal / regime / dynamic distinguishability scope
-  R8 neighboring-method handoffs / evidence-vs-result separation
+PROTOCOL_COMMIT: 70af7c3ddc618be34d0ff76fcc1ce63c895fc950
+PROTOCOL_BLOB:   bc24a5e72adaf4a1b1e64203bd14b3e781810331
+
+VALIDITY_GATES: G1-G14
+BINDING_OPERATION: M1-M14
+```
+
+## Current counters
+
+```text
+DEDICATED_MEASUREMENT_PROTOCOL: established v0.1
+TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
+BOUNDARY_AMENDMENT_001: established
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 0
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 0
+POSITIVE_MEASUREMENT_CASES: 0
+NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 0
+METHOD_BOUNDARY_MEASUREMENT_CASES: 0
+BASELINE_MEASUREMENT_CASES: 0
+NO_GAIN_MEASUREMENT_CASES: 0
+STRONGEST_REASONABLE_BASELINE_MEASUREMENT: not established
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_MEASUREMENT_APPLICATIONS: 0
+INDEPENDENT_MEASUREMENT_VALIDATION: not established
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_MEASUREMENT_EVIDENCE_STATUS: protocol_frozen_pre_validation
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
 ## Next
 
-Create Boundary Amendment 001 prospectively from R1-R8. Do not rewrite the historical Task Interface draft in place. External validation remains deferred.
+Create a prospective precommit for the first positive constructed Measurement challenge. It should require actual use of the frozen pairwise/joint rules rather than merely restating the protocol. External validation remains deferred.
