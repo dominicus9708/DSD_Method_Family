@@ -1,6 +1,6 @@
 # 11. DSD Measurement / DSD 측정론
 
-Status: **Measurement Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / all candidate statuses and plan terminals directly exercised / method-boundary challenge next / external validation deferred**
+Status: **Measurement Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / MSR-CH-003 72/72 PASS / competent baseline next / external validation deferred**
 
 Task: determine which supplied or proposed observations/readouts can distinguish declared structural alternatives at a declared resolution, while preserving applicability, typed status, provenance, information-loss, decision-rule, and temporal-scope limits.
 
@@ -144,11 +144,11 @@ DEDICATED_MEASUREMENT_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 2
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 3
 POSITIVE_MEASUREMENT_CASES: 1
 NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
-METHOD_BOUNDARY_MEASUREMENT_CASES: 0
+METHOD_BOUNDARY_MEASUREMENT_CASES: 1
 
 ALL_SEVEN_CANDIDATE_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SIX_PLAN_TERMINALS_DIRECTLY_EXERCISED: yes
@@ -167,6 +167,28 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
+## MSR-CH-003 — direct method-boundary challenge
+
+- [Precommit](../../evidence/method_specific/measurement/MSR-CH-003_precommit.md)
+- [Result](../../evidence/method_specific/measurement/MSR-CH-003_method-boundary.md)
+
+```text
+PRECOMMIT_COMMIT: 30fe7177a23034cc99bf9fb31ed36938571429ae
+PRECOMMIT_BLOB:   c561318e51817f300bb11bbe46b2a2469270ebd2
+RESULT_COMMIT:    dee0fe8ad16b39bb2f358c3f9d04828a8287b24d
+RESULT_BLOB:      b90fc4d1c40141414a918a9dfb6b8a54064ada90
+
+TOTAL: 72/72 PASS
+BOUNDARY_PAIRS_TESTED: 10
+EXACT_COLLAPSE_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 10
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
+Boundaries tested: Specification, Design, Aggregation, Compression, Comparison, Diagnosis, Prediction, Simulation, Tracking, Audit.
+
+This is fixture-bounded method-boundary evidence only. It does not establish permanent method independence.
+
 ## Next
 
-Prospectively precommit and execute the direct method-boundary challenge against neighboring methods under fair shared-artifact conditions. The result may establish fixture-bounded separation or overlap only; it must not be promoted to permanent method survival or merger proof. External validation remains deferred.
+Prospectively precommit and execute a competent non-DSD baseline comparison under equal information access. Preserve `NO_GAIN` if the baseline reproduces the same claim-relevant outputs. External validation remains deferred.
