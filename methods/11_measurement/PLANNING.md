@@ -1,6 +1,6 @@
 # DSD Measurement Planning / DSD 측정론 기획
 
-Status: **Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / direct method-boundary challenge next / external validation deferred**  
+Status: **Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / MSR-CH-003 72/72 PASS / competent baseline next / external validation deferred**  
 Date opened: **2026-09-18**  
 Protocol frozen: **2026-09-19**
 
@@ -29,8 +29,8 @@ Task Interface
 4. ✅ Executable Measurement Protocol v0.1.
 5. ✅ Positive constructed challenge — `MSR-CH-001`, 48/48 PASS.
 6. ✅ Negative-terminal coverage challenge — `MSR-CH-002`, 60/60 PASS.
-7. 🟨 Direct method-boundary challenge.
-8. ⬜ Competent baseline challenge.
+7. ✅ Direct method-boundary challenge — `MSR-CH-003`, 72/72 PASS.
+8. 🟨 Competent baseline challenge.
 9. ⬜ Strongest-reasonable baseline challenge.
 10. ⬜ Deterministic same-project retrace.
 11. ⬜ Frozen-axis internal standardization audit.
@@ -82,11 +82,11 @@ DEDICATED_MEASUREMENT_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 2
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 3
 POSITIVE_MEASUREMENT_CASES: 1
 NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
-METHOD_BOUNDARY_MEASUREMENT_CASES: 0
+METHOD_BOUNDARY_MEASUREMENT_CASES: 1
 
 BASELINE_MEASUREMENT_CASES: 0
 NO_GAIN_MEASUREMENT_CASES: 0
@@ -102,6 +102,20 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
+## MSR-CH-003
+
+```text
+PRECOMMIT_COMMIT: 30fe7177a23034cc99bf9fb31ed36938571429ae
+PRECOMMIT_BLOB:   c561318e51817f300bb11bbe46b2a2469270ebd2
+RESULT_COMMIT:    dee0fe8ad16b39bb2f358c3f9d04828a8287b24d
+RESULT_BLOB:      b90fc4d1c40141414a918a9dfb6b8a54064ada90
+TOTAL: 72/72 PASS
+BOUNDARY_PAIRS_TESTED: 10
+EXACT_COLLAPSE_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 10
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
 ## Next
 
-Create a prospective method-boundary precommit. Use fair shared artifacts so that neighboring methods have access to the same inputs. Test whether Measurement's binding operation is distinguishable from Specification, Design, Aggregation/Compression, Comparison, Diagnosis, Prediction/Simulation, Provenance, and Audit without claiming permanent method survival.
+Create a prospective competent non-DSD baseline precommit. Baseline and DSD Measurement must receive the same alternatives, candidate readouts, status records, bridges, thresholds, joint policy, provenance, and loss/reconstruction sidecars.
