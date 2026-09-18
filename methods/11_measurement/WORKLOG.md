@@ -142,3 +142,80 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Run a separately precommitted direct method-boundary challenge under fair shared-artifact conditions. Boundary evidence is fixture-bounded and must not be promoted to permanent method survival or merger claims.
+
+
+---
+
+## Step 7 — MSR-CH-003 direct method-boundary challenge
+
+Prospective precommit was frozen before execution.
+
+```text
+PRECOMMIT_COMMIT: 30fe7177a23034cc99bf9fb31ed36938571429ae
+PRECOMMIT_BLOB:   c561318e51817f300bb11bbe46b2a2469270ebd2
+RESULT_COMMIT:    dee0fe8ad16b39bb2f358c3f9d04828a8287b24d
+RESULT_BLOB:      b90fc4d1c40141414a918a9dfb6b8a54064ada90
+TOTAL: 72/72 PASS
+```
+
+Fair shared-artifact boundaries:
+
+```text
+Specification -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Design -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Aggregation -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Compression -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Comparison -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Diagnosis -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Prediction -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Simulation -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Tracking -> PARTIAL_OVERLAP_NOT_COLLAPSE
+Audit -> PARTIAL_OVERLAP_NOT_COLLAPSE
+
+BOUNDARY_PAIRS_TESTED: 10
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
+Important preserved distinctions:
+
+```text
+SPECIFICATION_REQUIREMENT != MEASUREMENT_RESULT
+DESIGN_ADMISSIBILITY != MEASUREMENT_SUFFICIENCY
+AGGREGATE_VALUE != DISCRIMINATION_VERDICT
+COMPRESSION_SUCCESS != MEASUREMENT_SUFFICIENCY
+COMPARISON_DIFFERENCE_MATRIX != MEASUREMENT_TERMINAL
+MEASUREMENT_SUFFICIENCY != DIAGNOSIS
+PREDICTION_OUTPUT != MEASUREMENT_TERMINAL
+SIMULATION_TRAJECTORY != MEASUREMENT_TERMINAL
+TRACKING_TRACE != MEASUREMENT_RESULT
+MEASUREMENT_RESULT != AUDIT_VERDICT
+```
+
+Audit was treated sequentially: the completed Measurement result was handed to Audit only after Measurement execution, preserving `no Measurement-only output preloaded as neighbor input`.
+
+This challenge is fixture-bounded. It does not establish permanent method independence or neighboring-method invalidity.
+
+## Current counters
+
+```text
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 3
+POSITIVE_MEASUREMENT_CASES: 1
+NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
+METHOD_BOUNDARY_MEASUREMENT_CASES: 1
+BASELINE_MEASUREMENT_CASES: 0
+NO_GAIN_MEASUREMENT_CASES: 0
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_MEASUREMENT_APPLICATIONS: 0
+INDEPENDENT_MEASUREMENT_VALIDATION: not established
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_MEASUREMENT_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Run a separately precommitted competent non-DSD baseline comparison with equal information access.
