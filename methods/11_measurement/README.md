@@ -1,6 +1,6 @@
 # 11. DSD Measurement / DSD 측정론
 
-Status: **Measurement Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / MSR-CH-003 72/72 PASS / competent baseline next / external validation deferred**
+Status: **Measurement Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / MSR-CH-003 72/72 PASS / MSR-CH-004 60/60 PASS with NO_GAIN / strongest-reasonable baseline next / external validation deferred**
 
 Task: determine which supplied or proposed observations/readouts can distinguish declared structural alternatives at a declared resolution, while preserving applicability, typed status, provenance, information-loss, decision-rule, and temporal-scope limits.
 
@@ -144,8 +144,8 @@ DEDICATED_MEASUREMENT_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 3
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 4
 POSITIVE_MEASUREMENT_CASES: 1
 NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
 METHOD_BOUNDARY_MEASUREMENT_CASES: 1
@@ -153,8 +153,8 @@ METHOD_BOUNDARY_MEASUREMENT_CASES: 1
 ALL_SEVEN_CANDIDATE_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SIX_PLAN_TERMINALS_DIRECTLY_EXERCISED: yes
 
-BASELINE_MEASUREMENT_CASES: 0
-NO_GAIN_MEASUREMENT_CASES: 0
+BASELINE_MEASUREMENT_CASES: 1
+NO_GAIN_MEASUREMENT_CASES: 1
 STRONGEST_REASONABLE_BASELINE_MEASUREMENT: not established
 
 REPRODUCIBILITY_CASES: 0
@@ -189,6 +189,35 @@ Boundaries tested: Specification, Design, Aggregation, Compression, Comparison, 
 
 This is fixture-bounded method-boundary evidence only. It does not establish permanent method independence.
 
+## MSR-CH-004 — competent non-DSD baseline
+
+- [Precommit](../../evidence/method_specific/measurement/MSR-CH-004_precommit.md)
+- [Result](../../evidence/method_specific/measurement/MSR-CH-004_competent-baseline.md)
+
+```text
+PRECOMMIT_COMMIT: 5c3d2c3dbe941d324d8ff1a44990044e2c228a54
+PRECOMMIT_BLOB:   1a24d6d80a44a0b56b5cb4af684a75c599010ffc
+RESULT_COMMIT:    061e49a4c3173f90c41b38b8c4a87c1cc3ca5082
+RESULT_BLOB:      6e8dcedc97bd1ba6c44aac7bba4a16db11da587d
+
+BASELINE_ID: B0_GENERIC_DISTINGUISHABILITY_LEDGER
+TOTAL: 60/60 PASS
+MEASUREMENT_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+The competent generic baseline received equal claim-relevant information and reproduced the frozen Measurement outputs across joint sufficiency, defined-zero preservation, information-loss/reconstruction sidecars, insufficiency, blockage/inapplicability, underdetermination, and scope mismatch.
+
+```text
+G1 discrimination classification: BASELINE_MATCH
+G2 typed-status preservation: BASELINE_MATCH
+G3 joint-plan sufficiency: BASELINE_MATCH
+G4 information-loss / reconstruction limits: BASELINE_MATCH
+G5 negative-terminal semantics: BASELINE_MATCH
+G6 selection-vs-observed-result discipline: BASELINE_MATCH
+```
+
+`NO_GAIN` is preserved as a valid comparative result and does not imply method deletion, merger, absorption, or permanent redundancy.
+
 ## Next
 
-Prospectively precommit and execute a competent non-DSD baseline comparison under equal information access. Preserve `NO_GAIN` if the baseline reproduces the same claim-relevant outputs. External validation remains deferred.
+Prospectively precommit and execute the strongest-reasonable non-DSD baseline challenge. The stronger baseline should integrate status-aware decision tables, joint-plan search, information-loss sidecars, scope/version control, ambiguity handling, and bounded claim reporting under equal information access. External validation remains deferred.
