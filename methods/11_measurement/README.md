@@ -1,6 +1,6 @@
 # 11. DSD Measurement / DSD 측정론
 
-Status: **Measurement Protocol v0.1 frozen / first positive constructed challenge passed 48/48 / internal validation in progress / external validation deferred**
+Status: **Measurement Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / all candidate statuses and plan terminals directly exercised / method-boundary challenge next / external validation deferred**
 
 Task: determine which supplied or proposed observations/readouts can distinguish declared structural alternatives at a declared resolution, while preserving applicability, typed status, provenance, information-loss, decision-rule, and temporal-scope limits.
 
@@ -44,7 +44,9 @@ PROTOCOL_COMMIT: 70af7c3ddc618be34d0ff76fcc1ce63c895fc950
 PROTOCOL_BLOB:   bc24a5e72adaf4a1b1e64203bd14b3e781810331
 ```
 
-## First direct evidence — MSR-CH-001
+## Direct evidence
+
+### MSR-CH-001 — positive constructed
 
 - [Precommit](../../evidence/method_specific/measurement/MSR-CH-001_precommit.md)
 - [Result](../../evidence/method_specific/measurement/MSR-CH-001_positive-constructed.md)
@@ -52,81 +54,104 @@ PROTOCOL_BLOB:   bc24a5e72adaf4a1b1e64203bd14b3e781810331
 ```text
 PRECOMMIT_COMMIT: bfe3898ce181f8b2d8bcf0cffe153e947d75b486
 PRECOMMIT_BLOB:   cedf69207c5b183ce6474573f2a96f80f50df51e
-
-RESULT_COMMIT: e6169700a24715141a41c7c15cf7c827293f885d
-RESULT_BLOB:   e9bcdb6ab1f37bd8c4106e894b68d521456c31bb
+RESULT_COMMIT:    e6169700a24715141a41c7c15cf7c827293f885d
+RESULT_BLOB:      e9bcdb6ab1f37bd8c4106e894b68d521456c31bb
 
 TOTAL: 48/48 PASS
-MEASUREMENT_PROTOCOL_CONFORMANCE: CONFORMANT
-MEASUREMENT_METHOD_GAIN_STATUS: NOT_ASSESSED
-MEASUREMENT_PLAN_TERMINAL_STATUS: MEASUREMENT_PLAN_SUFFICIENT
+PLAN_TERMINAL: MEASUREMENT_PLAN_SUFFICIENT
+CONFORMANCE: CONFORMANT
+METHOD_GAIN: NOT_ASSESSED
 ```
 
-The case directly exercised:
+### MSR-CH-002 — negative-terminal coverage
+
+- [Precommit](../../evidence/method_specific/measurement/MSR-CH-002_precommit.md)
+- [Result](../../evidence/method_specific/measurement/MSR-CH-002_negative-terminal-coverage.md)
 
 ```text
-DEFINED_ZERO preservation
-pairwise partial discrimination
-joint-plan sufficiency
-aggregate collision / noninjectivity
-specific-pair discrimination despite global noninjectivity
-reconstruction limits
-prospectively frozen decision rules
-typed Aggregation handoff
-measurement selection != observed result
+PRECOMMIT_COMMIT: 5b06e49b39a41eb20c06b473a26bd90fea7e2cc6
+PRECOMMIT_BLOB:   a145467b141c58d7a8f5388487ed8175d34dde2a
+RESULT_COMMIT:    50e9661c3e64a3830387436ffab9d5dc55d207bc
+RESULT_BLOB:      af57702457c727789a83a67ee8460d6d803de1bc
+
+TOTAL: 60/60 PASS
+CONFORMANCE: CONFORMANT
+METHOD_GAIN: NOT_ASSESSED
 ```
 
-Frozen candidate result:
+Subcases:
 
 ```text
-m_X   -> MEASUREMENT_PARTIALLY_DISCRIMINATES
-m_Y   -> MEASUREMENT_PARTIALLY_DISCRIMINATES
-m_AGG -> MEASUREMENT_PARTIALLY_DISCRIMINATES
-
-joint {m_X,m_Y}
--> discriminates all three required pairs
--> MEASUREMENT_PLAN_SUFFICIENT
+N1 -> MEASUREMENT_PLAN_PARTIALLY_SUFFICIENT
+N2 -> MEASUREMENT_PLAN_INSUFFICIENT
+N3 -> MEASUREMENT_PLAN_BLOCKED
+N4 -> MEASUREMENT_PLAN_OUT_OF_SCOPE
+N5 -> MEASUREMENT_PLAN_UNDERDETERMINED
 ```
 
-No observed experimental value or true alternative was created by the case.
-
-## Core guards
+Together with MSR-CH-001:
 
 ```text
-MEASURABLE != DISCRIMINATING
-DEFINED_ZERO != MISSING
-UNDEFINED != ZERO
+ALL_SIX_PLAN_TERMINALS_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_CANDIDATE_STATUSES_DIRECTLY_EXERCISED: yes
+```
+
+Candidate-status direct coverage:
+
+```text
+MEASUREMENT_DISCRIMINATES_AT_DECLARED_RESOLUTION
+MEASUREMENT_PARTIALLY_DISCRIMINATES
+MEASUREMENT_NONDISCRIMINATING
+MEASUREMENT_BLOCKED_BY_MISSING_BRIDGE_OR_PREREQUISITE
+MEASUREMENT_INAPPLICABLE
+MEASUREMENT_OUT_OF_SCOPE
+MEASUREMENT_UNDERDETERMINED
+```
+
+Plan-terminal direct coverage:
+
+```text
+MEASUREMENT_PLAN_SUFFICIENT
+MEASUREMENT_PLAN_PARTIALLY_SUFFICIENT
+MEASUREMENT_PLAN_INSUFFICIENT
+MEASUREMENT_PLAN_BLOCKED
+MEASUREMENT_PLAN_OUT_OF_SCOPE
+MEASUREMENT_PLAN_UNDERDETERMINED
+```
+
+## Preserved terminal distinctions
+
+```text
+PARTIALLY_SUFFICIENT != SUFFICIENT
+INSUFFICIENT != BLOCKED
+BLOCKED != UNDERDETERMINED
+OUT_OF_SCOPE != INAPPLICABLE
 INAPPLICABLE != NEGATIVE_RESULT
-EQUAL_READOUT != EQUAL_STRUCTURE
-EQUAL_AGGREGATE != EQUAL_SUPPORT
-NONINJECTIVE_READOUT != RECONSTRUCTIVE_MEASUREMENT
-GLOBAL_NONINJECTIVITY != FAILURE_TO_DISCRIMINATE_A_DECLARED_PAIR
-DISCRIMINATING_READOUT != FULL_STRUCTURE_RECONSTRUCTION
-SINGLE_MEASUREMENT_INSUFFICIENCY != JOINT_MEASUREMENT_INSUFFICIENCY
-JOINT_SUFFICIENCY != SINGLE_MEASUREMENT_SUFFICIENCY
-AVAILABLE_MEASUREMENT != OBSERVED_RESULT
-MEASUREMENT_SELECTION != EXPERIMENTAL_EXECUTION
-PROXY_MEASUREMENT != DIRECT_STRUCTURE_OBSERVATION
-NOT_YET_DISTINGUISHABLE != NEGATIVE_EVIDENCE
-FIRST_BRANCHING_LOCATION != AUTOMATIC_READOUT_AVAILABILITY
-MISSING_PREDICTION_HANDOFF != NEGATIVE_PREDICTION
-POST_HOC_THRESHOLD != PROSPECTIVE_DECISION_RULE
-NO_GAIN != METHOD_FAILURE
+NONDISCRIMINATING != MISSING_DATA
+UNDERDETERMINED != LICENSE_TO_CHOOSE_POST_HOC
+
+CONFORMANT_NEGATIVE_TERMINAL != METHOD_FAILURE
+CONFORMANT_NEGATIVE_TERMINAL != METHOD_DELETION_PROOF
+CONFORMANT_NEGATIVE_TERMINAL != METHOD_MERGER_PROOF
 ```
+
+A successful direct pilot means the frozen protocol executed conformantly against a precommitted fixture. It does not imply a positive plan terminal.
 
 ## Current evidence state
 
 ```text
 DEDICATED_MEASUREMENT_PROTOCOL: established v0.1
-TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
-PRE_PROTOCOL_BOUNDARY_ATTACKS: 18 completed
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 1
-SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 1
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 2
 POSITIVE_MEASUREMENT_CASES: 1
-NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 0
+NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
 METHOD_BOUNDARY_MEASUREMENT_CASES: 0
+
+ALL_SEVEN_CANDIDATE_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SIX_PLAN_TERMINALS_DIRECTLY_EXERCISED: yes
 
 BASELINE_MEASUREMENT_CASES: 0
 NO_GAIN_MEASUREMENT_CASES: 0
@@ -144,4 +169,4 @@ SHARED_CORE_REOPEN_REQUIRED: no
 
 ## Next
 
-Prospectively precommit and execute a negative / blocked / insufficient / out-of-scope Measurement challenge. Protocol-compliant negative terminals must be preserved as valid method evidence rather than treated as failure. External validation remains deferred.
+Prospectively precommit and execute the direct method-boundary challenge against neighboring methods under fair shared-artifact conditions. The result may establish fixture-bounded separation or overlap only; it must not be promoted to permanent method survival or merger proof. External validation remains deferred.
