@@ -1,6 +1,6 @@
 # DSD Measurement Planning / DSD 측정론 기획
 
-Status: **Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / MSR-CH-003 72/72 PASS / competent baseline next / external validation deferred**  
+Status: **Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / MSR-CH-003 72/72 PASS / MSR-CH-004 60/60 PASS with NO_GAIN / strongest-reasonable baseline next / external validation deferred**  
 Date opened: **2026-09-18**  
 Protocol frozen: **2026-09-19**
 
@@ -30,8 +30,8 @@ Task Interface
 5. ✅ Positive constructed challenge — `MSR-CH-001`, 48/48 PASS.
 6. ✅ Negative-terminal coverage challenge — `MSR-CH-002`, 60/60 PASS.
 7. ✅ Direct method-boundary challenge — `MSR-CH-003`, 72/72 PASS.
-8. 🟨 Competent baseline challenge.
-9. ⬜ Strongest-reasonable baseline challenge.
+8. ✅ Competent baseline challenge — `MSR-CH-004`, 60/60 PASS / NO_GAIN.
+9. 🟨 Strongest-reasonable baseline challenge.
 10. ⬜ Deterministic same-project retrace.
 11. ⬜ Frozen-axis internal standardization audit.
 12. ⏸ External applications deferred.
@@ -82,14 +82,14 @@ DEDICATED_MEASUREMENT_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 3
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 4
 POSITIVE_MEASUREMENT_CASES: 1
 NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
 METHOD_BOUNDARY_MEASUREMENT_CASES: 1
 
-BASELINE_MEASUREMENT_CASES: 0
-NO_GAIN_MEASUREMENT_CASES: 0
+BASELINE_MEASUREMENT_CASES: 1
+NO_GAIN_MEASUREMENT_CASES: 1
 STRONGEST_REASONABLE_BASELINE_MEASUREMENT: not established
 REPRODUCIBILITY_CASES: 0
 
@@ -116,6 +116,19 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 10
 BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
 ```
 
+## MSR-CH-004
+
+```text
+PRECOMMIT_COMMIT: 5c3d2c3dbe941d324d8ff1a44990044e2c228a54
+PRECOMMIT_BLOB:   1a24d6d80a44a0b56b5cb4af684a75c599010ffc
+RESULT_COMMIT:    061e49a4c3173f90c41b38b8c4a87c1cc3ca5082
+RESULT_BLOB:      6e8dcedc97bd1ba6c44aac7bba4a16db11da587d
+BASELINE_ID: B0_GENERIC_DISTINGUISHABILITY_LEDGER
+TOTAL: 60/60 PASS
+MEASUREMENT_METHOD_GAIN_STATUS: NO_GAIN
+GAIN_AXES_BASELINE_MATCH: 6/6
+```
+
 ## Next
 
-Create a prospective competent non-DSD baseline precommit. Baseline and DSD Measurement must receive the same alternatives, candidate readouts, status records, bridges, thresholds, joint policy, provenance, and loss/reconstruction sidecars.
+Create a prospective strongest-reasonable baseline precommit. Give the stronger baseline equal information and permit one integrated non-DSD evaluator to handle typed status, pairwise/joint discrimination, plan search, loss/reconstruction sidecars, scope/version rules, ambiguity, and maximum-claim bounding.
