@@ -1,6 +1,6 @@
 # 11. DSD Measurement / DSD 측정론
 
-Status: **Measurement Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / MSR-CH-003 72/72 PASS / MSR-CH-004 60/60 PASS with NO_GAIN / strongest-reasonable baseline next / external validation deferred**
+Status: **Measurement Protocol v0.1 frozen / CH001 48/48 / CH002 60/60 / CH003 72/72 / CH004 60/60 NO_GAIN / CH005 64/64 NO_GAIN / deterministic retrace next / external validation deferred**
 
 Task: determine which supplied or proposed observations/readouts can distinguish declared structural alternatives at a declared resolution, while preserving applicability, typed status, provenance, information-loss, decision-rule, and temporal-scope limits.
 
@@ -144,8 +144,8 @@ DEDICATED_MEASUREMENT_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 4
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 5
 POSITIVE_MEASUREMENT_CASES: 1
 NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
 METHOD_BOUNDARY_MEASUREMENT_CASES: 1
@@ -153,9 +153,9 @@ METHOD_BOUNDARY_MEASUREMENT_CASES: 1
 ALL_SEVEN_CANDIDATE_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SIX_PLAN_TERMINALS_DIRECTLY_EXERCISED: yes
 
-BASELINE_MEASUREMENT_CASES: 1
-NO_GAIN_MEASUREMENT_CASES: 1
-STRONGEST_REASONABLE_BASELINE_MEASUREMENT: not established
+BASELINE_MEASUREMENT_CASES: 2
+NO_GAIN_MEASUREMENT_CASES: 2
+STRONGEST_REASONABLE_BASELINE_MEASUREMENT: established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_MEASUREMENT_APPLICATIONS: 0
@@ -218,6 +218,38 @@ G6 selection-vs-observed-result discipline: BASELINE_MATCH
 
 `NO_GAIN` is preserved as a valid comparative result and does not imply method deletion, merger, absorption, or permanent redundancy.
 
+## MSR-CH-005 — strongest-reasonable non-DSD baseline
+
+- [Precommit](../../evidence/method_specific/measurement/MSR-CH-005_precommit.md)
+- [Result](../../evidence/method_specific/measurement/MSR-CH-005_strongest-reasonable-baseline.md)
+
+```text
+PRECOMMIT_COMMIT: 7722081d8b3612fd1c151aac63f7482c6cb882b7
+PRECOMMIT_BLOB:   5465898b17847ed627cb48fe98c678c77a4e7b4d
+RESULT_COMMIT:    5a9c018d4a2b3b9ddf16fffee2fe36460d03b6b1
+RESULT_BLOB:      6e29b6918b230dab50e36b06717dd0e369185856
+
+BASELINE_ID: B1_STRONG_DISTINGUISHABILITY_ENGINE
+TOTAL: 64/64 PASS
+MEASUREMENT_METHOD_GAIN_STATUS: NO_GAIN
+STRONGEST_REASONABLE_BASELINE_MEASUREMENT:
+  established_at_constructed_evidence_level
+```
+
+The stronger baseline matched all seven precommitted gain axes across version-scoped decision semantics, dynamic support availability, mixed candidate quality and plan search, proxy/aggregate loss/reconstruction limits, competing bridge versions, bounded claims, and traceability.
+
+```text
+G1 VERSION_SCOPE_GAIN: BASELINE_MATCH
+G2 DYNAMIC_AVAILABILITY_GAIN: BASELINE_MATCH
+G3 PLAN_AND_REDUNDANCY_GAIN: BASELINE_MATCH
+G4 PROXY_LOSS_RECONSTRUCTION_GAIN: BASELINE_MATCH
+G5 AMBIGUITY_GAIN: BASELINE_MATCH
+G6 BOUNDED_CLAIM_GAIN: BASELINE_MATCH
+G7 TRACEABILITY_GAIN: BASELINE_MATCH
+```
+
+B1's extra finite plan-search competence is acknowledged but does not make Measurement Protocol v0.1 nonconformant, because optimization/search is not its frozen binding task.
+
 ## Next
 
-Prospectively precommit and execute the strongest-reasonable non-DSD baseline challenge. The stronger baseline should integrate status-aware decision tables, joint-plan search, information-loss sidecars, scope/version control, ambiguity handling, and bounded claim reporting under equal information access. External validation remains deferred.
+Prospectively precommit and execute deterministic same-project retrace from immutable Measurement artifacts. A successful retrace may establish only same-project artifact consistency/reproducibility evidence, not independent replication or external validity.
