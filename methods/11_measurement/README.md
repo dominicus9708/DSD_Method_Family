@@ -1,6 +1,6 @@
 # 11. DSD Measurement / DSD 측정론
 
-Status: **Measurement Protocol v0.1 frozen / CH001 48/48 / CH002 60/60 / CH003 72/72 / CH004 60/60 NO_GAIN / CH005 64/64 NO_GAIN / deterministic retrace next / external validation deferred**
+Status: **Measurement Protocol v0.1 frozen / CH001-CH005 complete / MSR-CH-006 deterministic retrace 56/56 PASS / internal standardization audit next / external validation deferred**
 
 Task: determine which supplied or proposed observations/readouts can distinguish declared structural alternatives at a declared resolution, while preserving applicability, typed status, provenance, information-loss, decision-rule, and temporal-scope limits.
 
@@ -157,7 +157,8 @@ BASELINE_MEASUREMENT_CASES: 2
 NO_GAIN_MEASUREMENT_CASES: 2
 STRONGEST_REASONABLE_BASELINE_MEASUREMENT: established_at_constructed_evidence_level
 
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 EXTERNAL_MEASUREMENT_APPLICATIONS: 0
 INDEPENDENT_MEASUREMENT_VALIDATION: not established
 
@@ -250,6 +251,35 @@ G7 TRACEABILITY_GAIN: BASELINE_MATCH
 
 B1's extra finite plan-search competence is acknowledged but does not make Measurement Protocol v0.1 nonconformant, because optimization/search is not its frozen binding task.
 
+## MSR-CH-006 — deterministic same-project retrace
+
+- [Precommit](../../evidence/method_specific/measurement/MSR-CH-006_precommit.md)
+- [Reconstructed ledger](../../evidence/method_specific/measurement/MSR-CH-006_reconstructed-ledger.md)
+- [Result](../../evidence/method_specific/measurement/MSR-CH-006_deterministic-retrace.md)
+
+```text
+PRECOMMIT_COMMIT:      25d32656d5aa50f5f4c3f15b0fa042d27e5f47a1
+PRECOMMIT_BLOB:        a6a31c2a036638fa0c844fb3b4f22af6ccb86dac
+RECONSTRUCTION_COMMIT: 7f9f6c93934dfbc7733d90189570feed3e6381d4
+RECONSTRUCTION_BLOB:   0aab658db1c9d8975bef4151371587b264742b19
+RESULT_COMMIT:         b80f7e9018ae3b6f3668af92cc69b78cdc85ab2d
+RESULT_BLOB:           0c40ddcf76edc72d5d3468ad133e7d528518aad0
+
+TOTAL: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+REPRODUCIBILITY_CASES: 1
+```
+
+The reconstruction ledger was frozen from Protocol v0.1 + MSR-CH-005 precommit before the MSR-CH-005 result artifact was opened for comparison.
+
+```text
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+RETRACE_PASS != EXTERNAL_APPLICABILITY
+```
+
 ## Next
 
-Prospectively precommit and execute deterministic same-project retrace from immutable Measurement artifacts. A successful retrace may establish only same-project artifact consistency/reproducibility evidence, not independent replication or external validity.
+Prospectively precommit and execute the frozen-axis internal standardization audit. The audit may promote Measurement Protocol v0.1 to internal-standard status, hold it as developing, or return it for protocol revision. External validation remains deferred.
