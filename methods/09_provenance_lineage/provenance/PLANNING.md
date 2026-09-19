@@ -1,6 +1,6 @@
 # DSD Tracking Planning / DSD 추적론 기획
 
-Status: **internal standardization in progress / Task Interface v0.1 drafted / pre-protocol boundary attack 18 cases completed / protocol not yet frozen / external validation deferred**  
+Status: **internal standardization in progress / Boundary Amendment 001 established / Tracking Protocol v0.1 frozen / positive constructed challenge next / external validation deferred**  
 Date opened: **2026-09-20**  
 Legacy path ID: `09A`  
 Legacy directory: `methods/09_provenance_lineage/provenance/`
@@ -29,9 +29,9 @@ Task Interface
 1. ✅ Tracking scope broadened from Provenance while preserving legacy path compatibility.
 2. ✅ Task Interface v0.1 historical draft.
 3. ✅ Pre-protocol boundary attack — 18 constructed internal cases.
-4. 🟨 Boundary Amendment 001.
-5. ⬜ Executable Tracking Protocol v0.1.
-6. ⬜ Positive constructed challenge.
+4. ✅ Boundary Amendment 001 — R1-R8 prospectively adopted.
+5. ✅ Executable Tracking Protocol v0.1 — frozen.
+6. 🟨 Positive constructed challenge.
 7. ⬜ Negative / gap / conflict / out-of-scope challenge.
 8. ⬜ Direct method-boundary challenge.
 9. ⬜ Competent non-DSD baseline challenge.
@@ -43,7 +43,7 @@ Task Interface
 ## Current counters
 
 ```text
-DEDICATED_TRACKING_PROTOCOL: not established
+DEDICATED_TRACKING_PROTOCOL: established v0.1
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
@@ -52,7 +52,7 @@ PRESERVED_WITH_NONBREAKING_REFINEMENT: 10
 BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
 
-BOUNDARY_AMENDMENT_001: not yet established
+BOUNDARY_AMENDMENT_001: established
 
 DIRECT_TRACKING_PILOTS_ATTEMPTED: 0
 SUCCESSFUL_DIRECT_TRACKING_PILOTS: 0
@@ -70,9 +70,9 @@ INDEPENDENT_TRACKING_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
 TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_TRACKING_EVIDENCE_STATUS: pre_validation
+CURRENT_TRACKING_EVIDENCE_STATUS: protocol_frozen_pre_validation
 
-PROTOCOL_REVISION_REQUIRED: not applicable before freeze
+PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
@@ -108,8 +108,20 @@ TRACKING_RECORDS_AGGREGATE_HANDOFF
 != TRACKING_RECONSTRUCTS_LOST_SUPPORT
 ```
 
+## Frozen protocol identity
+
+```text
+AMENDMENT_COMMIT: 086c537b1312838500f6d188f32e7c643bde990b
+AMENDMENT_BLOB:   846a195f1e18c1fd1b9824638d98e10fc837f10e
+PROTOCOL_COMMIT:  a0d979325c11919fecaa4d8eab129477a365af87
+PROTOCOL_BLOB:    72e9cc8576ae87e088bdf2f8ebb3d7016c2894c1
+
+VALIDITY_GATES: G1-G14
+BINDING_OPERATION: T1-T14
+```
+
+Protocol v0.1 contains typed node/link/evidence registers, graph topology, nine link statuses, six trace terminals, completion semantics, neighboring-method handoffs, conformance, gain, and maximum-claim discipline.
+
 ## Next
 
-Create Boundary Amendment 001 prospectively from R1-R8 without rewriting the historical Task Interface. Then freeze executable Tracking Protocol v0.1.
-
-External validation remains deferred.
+Prospectively precommit and execute the first positive constructed Tracking challenge. External validation remains deferred.
