@@ -385,3 +385,86 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute deterministic same-project retrace from immutable Measurement artifacts.
+
+---
+
+## Step 10 — MSR-CH-006 deterministic same-project retrace
+
+The retrace was prospectively precommitted.
+
+```text
+PRECOMMIT_COMMIT: 25d32656d5aa50f5f4c3f15b0fa042d27e5f47a1
+PRECOMMIT_BLOB:   a6a31c2a036638fa0c844fb3b4f22af6ccb86dac
+```
+
+Retrace discipline:
+
+```text
+P0 = Measurement Protocol v0.1
+P1 = MSR-CH-005 precommit
+P2 = MSR-CH-005 result, comparison target only
+```
+
+The DSD reconstruction was first generated from `P0 + P1` and frozen as a separate artifact.
+
+```text
+RECONSTRUCTION_COMMIT: 7f9f6c93934dfbc7733d90189570feed3e6381d4
+RECONSTRUCTION_BLOB:   0aab658db1c9d8975bef4151371587b264742b19
+
+P2_USED_IN_DERIVATION: no
+```
+
+Only after this freeze was P2 opened and compared.
+
+```text
+RESULT_COMMIT: b80f7e9018ae3b6f3668af92cc69b78cdc85ab2d
+RESULT_BLOB:   0c40ddcf76edc72d5d3468ad133e7d528518aad0
+
+R1 version-scoped semantics -> exact match
+R2 dynamic support -> exact match
+R3 mixed candidate quality -> exact match
+R4 proxy/collision/reconstruction -> exact match
+R5 competing bridge ambiguity -> exact match
+
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+TOTAL: 56/56 PASS
+```
+
+Evidence interpretation:
+
+```text
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+RETRACE_PASS != EXTERNAL_APPLICABILITY
+```
+
+Current counters:
+
+```text
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 5
+POSITIVE_MEASUREMENT_CASES: 1
+NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
+METHOD_BOUNDARY_MEASUREMENT_CASES: 1
+BASELINE_MEASUREMENT_CASES: 2
+NO_GAIN_MEASUREMENT_CASES: 2
+STRONGEST_REASONABLE_BASELINE_MEASUREMENT:
+  established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+EXTERNAL_MEASUREMENT_APPLICATIONS: 0
+INDEPENDENT_MEASUREMENT_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_MEASUREMENT_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Proceed to the frozen-axis internal standardization audit.
