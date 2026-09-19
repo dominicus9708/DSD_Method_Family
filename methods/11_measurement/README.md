@@ -1,6 +1,6 @@
 # 11. DSD Measurement / DSD 측정론
 
-Status: **Measurement Protocol v0.1 frozen / CH001-CH005 complete / MSR-CH-006 deterministic retrace 56/56 PASS / internal standardization audit next / external validation deferred**
+Status: **Measurement Protocol v0.1 internally standardized / MSR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / external validation deferred**
 
 Task: determine which supplied or proposed observations/readouts can distinguish declared structural alternatives at a declared resolution, while preserving applicability, typed status, provenance, information-loss, decision-rule, and temporal-scope limits.
 
@@ -162,7 +162,7 @@ SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 EXTERNAL_MEASUREMENT_APPLICATIONS: 0
 INDEPENDENT_MEASUREMENT_VALIDATION: not established
 
-MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS: developing
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_MEASUREMENT_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
@@ -280,6 +280,50 @@ DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 RETRACE_PASS != EXTERNAL_APPLICABILITY
 ```
 
+## MSR-AUD-001 — frozen-axis internal standardization audit
+
+- [Precommit](../../evidence/method_specific/measurement/MSR-AUD-001_precommit.md)
+- [Result](../../evidence/method_specific/measurement/MSR-AUD-001_internal-standardization-review.md)
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 9bfd96f80470f93143941aa72e8930bc3d41ffcf
+AUDIT_PRECOMMIT_BLOB:   2432957d745ee67a953307eb03f93f18c7a70320
+AUDIT_RESULT_COMMIT:    92c9fa2c4d20a9b13845d994521324dc27e7fc0d
+AUDIT_RESULT_BLOB:      080656e47ecb285da74417f9edd57b8b350b35ba
+
+PRECOMMITTED_REQUIRED_CHECKS: 28
+PASSED: 28
+FAILED: 0
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS:
+  established
+```
+
+Frozen axis results:
+
+```text
+M1  PASS
+M2  PASS
+M3  PASS
+M4  PASS
+M5  CONDITIONAL_PASS
+M6  PASS
+M7  PASS
+M8  PASS
+M9  PASS
+M10 PASS
+M11 PASS
+M12 PASS
+M13 PASS
+M14 DEFERRED_BY_SEQUENCE
+M15 PASS
+```
+
+The audit changes no direct-evidence counters. Same-project retrace remains non-independent, and external validation remains queued.
+
 ## Next
 
-Prospectively precommit and execute the frozen-axis internal standardization audit. The audit may promote Measurement Protocol v0.1 to internal-standard status, hold it as developing, or return it for protocol revision. External validation remains deferred.
+Close Measurement internal construction at Protocol v0.1 unless a future contradiction reopens it. Continue with the next not-yet-internally-standardized DSD method. External Measurement validation remains deferred until the later project-wide validation phase.
