@@ -306,3 +306,82 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Run a separately precommitted strongest-reasonable non-DSD baseline comparison under equal information access.
+
+---
+
+## Step 9 — MSR-CH-005 strongest-reasonable non-DSD baseline
+
+Prospective precommit was frozen before execution.
+
+```text
+PRECOMMIT_COMMIT: 7722081d8b3612fd1c151aac63f7482c6cb882b7
+PRECOMMIT_BLOB:   5465898b17847ed627cb48fe98c678c77a4e7b4d
+RESULT_COMMIT:    5a9c018d4a2b3b9ddf16fffee2fe36460d03b6b1
+RESULT_BLOB:      6e29b6918b230dab50e36b06717dd0e369185856
+
+BASELINE_ID:
+  B1_STRONG_DISTINGUISHABILITY_ENGINE
+
+TOTAL: 64/64 PASS
+MEASUREMENT_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+Strong subcases:
+
+```text
+R1 version-scoped decision semantics -> BASELINE_MATCH
+R2 dynamic support availability -> BASELINE_MATCH
+R3 mixed candidate quality + finite plan search -> BASELINE_MATCH
+R4 proxy + aggregate collision + reconstruction bounds -> BASELINE_MATCH
+R5 competing bridge versions -> BASELINE_MATCH
+```
+
+All seven gain axes were `BASELINE_MATCH`.
+
+```text
+G1 VERSION_SCOPE_GAIN: BASELINE_MATCH
+G2 DYNAMIC_AVAILABILITY_GAIN: BASELINE_MATCH
+G3 PLAN_AND_REDUNDANCY_GAIN: BASELINE_MATCH
+G4 PROXY_LOSS_RECONSTRUCTION_GAIN: BASELINE_MATCH
+G5 AMBIGUITY_GAIN: BASELINE_MATCH
+G6 BOUNDED_CLAIM_GAIN: BASELINE_MATCH
+G7 TRACEABILITY_GAIN: BASELINE_MATCH
+```
+
+B1's extra finite subset search was allowed and recorded as extra comparator competence; it was not treated as Measurement Protocol failure because plan optimization/search is outside the frozen Measurement binding task.
+
+```text
+STRONGEST_REASONABLE_BASELINE_MEASUREMENT:
+  established_at_constructed_evidence_level
+
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != METHOD_DELETION_PROOF
+BASELINE_MATCH != PERMANENT_METHOD_REDUNDANCY
+```
+
+Current counters:
+
+```text
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 5
+POSITIVE_MEASUREMENT_CASES: 1
+NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
+METHOD_BOUNDARY_MEASUREMENT_CASES: 1
+BASELINE_MEASUREMENT_CASES: 2
+NO_GAIN_MEASUREMENT_CASES: 2
+STRONGEST_REASONABLE_BASELINE_MEASUREMENT:
+  established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_MEASUREMENT_APPLICATIONS: 0
+INDEPENDENT_MEASUREMENT_VALIDATION: not established
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_MEASUREMENT_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute deterministic same-project retrace from immutable Measurement artifacts.
