@@ -1,6 +1,6 @@
 # DSD Measurement Planning / DSD 측정론 기획
 
-Status: **Protocol v0.1 frozen / MSR-CH-001 48/48 PASS / MSR-CH-002 60/60 PASS / MSR-CH-003 72/72 PASS / MSR-CH-004 60/60 PASS with NO_GAIN / strongest-reasonable baseline next / external validation deferred**  
+Status: **Protocol v0.1 frozen / CH001-CH005 complete / strongest-reasonable baseline established at constructed-evidence level / deterministic retrace next / external validation deferred**  
 Date opened: **2026-09-18**  
 Protocol frozen: **2026-09-19**
 
@@ -31,8 +31,8 @@ Task Interface
 6. ✅ Negative-terminal coverage challenge — `MSR-CH-002`, 60/60 PASS.
 7. ✅ Direct method-boundary challenge — `MSR-CH-003`, 72/72 PASS.
 8. ✅ Competent baseline challenge — `MSR-CH-004`, 60/60 PASS / NO_GAIN.
-9. 🟨 Strongest-reasonable baseline challenge.
-10. ⬜ Deterministic same-project retrace.
+9. ✅ Strongest-reasonable baseline challenge — `MSR-CH-005`, 64/64 PASS / NO_GAIN.
+10. 🟨 Deterministic same-project retrace.
 11. ⬜ Frozen-axis internal standardization audit.
 12. ⏸ External applications deferred.
 
@@ -82,15 +82,15 @@ DEDICATED_MEASUREMENT_PROTOCOL: established v0.1
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 4
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 5
 POSITIVE_MEASUREMENT_CASES: 1
 NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
 METHOD_BOUNDARY_MEASUREMENT_CASES: 1
 
-BASELINE_MEASUREMENT_CASES: 1
-NO_GAIN_MEASUREMENT_CASES: 1
-STRONGEST_REASONABLE_BASELINE_MEASUREMENT: not established
+BASELINE_MEASUREMENT_CASES: 2
+NO_GAIN_MEASUREMENT_CASES: 2
+STRONGEST_REASONABLE_BASELINE_MEASUREMENT: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 
 EXTERNAL_MEASUREMENT_APPLICATIONS: 0
@@ -129,6 +129,21 @@ MEASUREMENT_METHOD_GAIN_STATUS: NO_GAIN
 GAIN_AXES_BASELINE_MATCH: 6/6
 ```
 
+## MSR-CH-005
+
+```text
+PRECOMMIT_COMMIT: 7722081d8b3612fd1c151aac63f7482c6cb882b7
+PRECOMMIT_BLOB:   5465898b17847ed627cb48fe98c678c77a4e7b4d
+RESULT_COMMIT:    5a9c018d4a2b3b9ddf16fffee2fe36460d03b6b1
+RESULT_BLOB:      6e29b6918b230dab50e36b06717dd0e369185856
+BASELINE_ID: B1_STRONG_DISTINGUISHABILITY_ENGINE
+TOTAL: 64/64 PASS
+GAIN_AXES_BASELINE_MATCH: 7/7
+MEASUREMENT_METHOD_GAIN_STATUS: NO_GAIN
+STRONGEST_REASONABLE_BASELINE_MEASUREMENT:
+  established_at_constructed_evidence_level
+```
+
 ## Next
 
-Create a prospective strongest-reasonable baseline precommit. Give the stronger baseline equal information and permit one integrated non-DSD evaluator to handle typed status, pairwise/joint discrimination, plan search, loss/reconstruction sidecars, scope/version rules, ambiguity, and maximum-claim bounding.
+Create a prospective deterministic same-project retrace precommit using immutable Protocol v0.1 and frozen CH001-CH005 artifacts. A successful retrace increments only reproducibility evidence and does not establish independent replication.
