@@ -1,11 +1,72 @@
 # DSD Tracking / DSD 추적론
 
-Status: **developing**  
+Status: **internal standardization in progress / Task Interface v0.1 drafted / pre-protocol boundary attack 18 cases completed / protocol not yet frozen / external validation deferred**  
 Legacy path ID: `09A`  
 Legacy path: `methods/09_provenance_lineage/provenance/`  
 Former Korean label: **DSD 출처·유래 추적론**  
 Former English compatibility label: **Provenance**  
 Higher field: **IV. Evidence & Lineage / 증거·계보**
+
+
+## Internal-standardization files
+
+- [`PLANNING.md`](PLANNING.md)
+- [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
+- [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
+- [`WORKLOG.md`](WORKLOG.md)
+
+## Internal-standardization sequence
+
+```text
+Task Interface
+-> pre-protocol boundary attack
+-> Boundary Amendment
+-> executable Protocol
+-> constructed positive / negative / boundary / NO_GAIN cases
+-> deterministic same-project retrace
+-> frozen-axis internal standardization audit
+-> external validation later
+```
+
+## Current internal state
+
+```text
+DEDICATED_TRACKING_PROTOCOL: not established
+TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
+PRESERVED_NO_REFINEMENT: 8
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 10
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+
+BOUNDARY_AMENDMENT_001: not yet established
+
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 0
+BASELINE_TRACKING_CASES: 0
+NO_GAIN_TRACKING_CASES: 0
+REPRODUCIBILITY_CASES: 0
+
+EXTERNAL_TRACKING_APPLICATIONS: 0
+INDEPENDENT_TRACKING_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+
+TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_TRACKING_EVIDENCE_STATUS: pre_validation
+```
+
+## Pre-protocol refinement groups
+
+```text
+R1 task / target / scope / dimension / completion lock
+R2 node identity / version / type / domain / status discipline
+R3 link relation / direction / schema-version discipline
+R4 evidence support / provenance ledger
+R5 graph structure / branching / merging / cycles / multi-source
+R6 missing / negative / ambiguous / conflicting / blocked / out-of-scope
+R7 temporal / process / location / custody / ownership / responsibility / causality
+R8 neighboring-method handoffs / reconstructed-vs-established trace
+```
 
 ## Task
 
@@ -143,3 +204,11 @@ It does **not** automatically establish:
 - conformance/audit success.
 
 The legacy directory name `provenance/` is retained only for path compatibility. New method-family records should use **Tracking / DSD 추적론** as the method name and treat **Provenance** as a narrower historical/origin-tracking subcase.
+
+## Next
+
+Create `TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md` prospectively from R1-R8 without rewriting the historical Task Interface.
+
+Then freeze executable Tracking Protocol v0.1.
+
+External validation remains deferred.
