@@ -1,6 +1,6 @@
 # DSD Measurement Planning / DSD 측정론 기획
 
-Status: **Protocol v0.1 frozen / CH001-CH005 complete / strongest-reasonable baseline established at constructed-evidence level / deterministic retrace next / external validation deferred**  
+Status: **Protocol v0.1 frozen / CH001-CH006 complete / deterministic same-project retrace established once / frozen-axis internal standardization audit next / external validation deferred**  
 Date opened: **2026-09-18**  
 Protocol frozen: **2026-09-19**
 
@@ -32,8 +32,8 @@ Task Interface
 7. ✅ Direct method-boundary challenge — `MSR-CH-003`, 72/72 PASS.
 8. ✅ Competent baseline challenge — `MSR-CH-004`, 60/60 PASS / NO_GAIN.
 9. ✅ Strongest-reasonable baseline challenge — `MSR-CH-005`, 64/64 PASS / NO_GAIN.
-10. 🟨 Deterministic same-project retrace.
-11. ⬜ Frozen-axis internal standardization audit.
+10. ✅ Deterministic same-project retrace — `MSR-CH-006`, 56/56 PASS.
+11. 🟨 Frozen-axis internal standardization audit.
 12. ⏸ External applications deferred.
 
 ## Frozen protocol identity
@@ -91,7 +91,8 @@ METHOD_BOUNDARY_MEASUREMENT_CASES: 1
 BASELINE_MEASUREMENT_CASES: 2
 NO_GAIN_MEASUREMENT_CASES: 2
 STRONGEST_REASONABLE_BASELINE_MEASUREMENT: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 
 EXTERNAL_MEASUREMENT_APPLICATIONS: 0
 INDEPENDENT_MEASUREMENT_VALIDATION: not established
@@ -144,6 +145,23 @@ STRONGEST_REASONABLE_BASELINE_MEASUREMENT:
   established_at_constructed_evidence_level
 ```
 
+## MSR-CH-006
+
+```text
+PRECOMMIT_COMMIT:      25d32656d5aa50f5f4c3f15b0fa042d27e5f47a1
+PRECOMMIT_BLOB:        a6a31c2a036638fa0c844fb3b4f22af6ccb86dac
+RECONSTRUCTION_COMMIT: 7f9f6c93934dfbc7733d90189570feed3e6381d4
+RECONSTRUCTION_BLOB:   0aab658db1c9d8975bef4151371587b264742b19
+RESULT_COMMIT:         b80f7e9018ae3b6f3668af92cc69b78cdc85ab2d
+RESULT_BLOB:           0c40ddcf76edc72d5d3468ad133e7d528518aad0
+
+TOTAL: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+REPRODUCIBILITY_CASES: 1
+```
+
 ## Next
 
-Create a prospective deterministic same-project retrace precommit using immutable Protocol v0.1 and frozen CH001-CH005 artifacts. A successful retrace increments only reproducibility evidence and does not establish independent replication.
+Create a prospective frozen-axis internal standardization audit precommit. The audit must use the frozen protocol and CH001-CH006 evidence without changing axes after inspection.
