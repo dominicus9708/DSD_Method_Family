@@ -468,3 +468,100 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Proceed to the frozen-axis internal standardization audit.
+
+---
+
+## Step 11 — MSR-AUD-001 frozen-axis internal standardization audit
+
+Audit axes and promotion criteria were prospectively frozen before scoring.
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 9bfd96f80470f93143941aa72e8930bc3d41ffcf
+AUDIT_PRECOMMIT_BLOB:   2432957d745ee67a953307eb03f93f18c7a70320
+
+AUDIT_RESULT_COMMIT:    92c9fa2c4d20a9b13845d994521324dc27e7fc0d
+AUDIT_RESULT_BLOB:      080656e47ecb285da74417f9edd57b8b350b35ba
+```
+
+Axis result:
+
+```text
+M1  PASS
+M2  PASS
+M3  PASS
+M4  PASS
+M5  CONDITIONAL_PASS
+M6  PASS
+M7  PASS
+M8  PASS
+M9  PASS
+M10 PASS
+M11 PASS
+M12 PASS
+M13 PASS
+M14 DEFERRED_BY_SEQUENCE
+M15 PASS
+```
+
+Audit discipline:
+
+```text
+PRECOMMITTED_REQUIRED_CHECKS: 28
+PASSED: 28
+FAILED: 0
+AUDIT_EXECUTION_VERDICT: PASS
+```
+
+Final internal decision:
+
+```text
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS:
+  established
+```
+
+The audit meta-record does not increment direct pilots, baseline cases, NO_GAIN cases, reproducibility cases, or external applications.
+
+Final internal evidence state:
+
+```text
+DEDICATED_MEASUREMENT_PROTOCOL: established v0.1
+DIRECT_MEASUREMENT_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_MEASUREMENT_PILOTS: 5
+POSITIVE_MEASUREMENT_CASES: 1
+NEGATIVE_OR_FAILURE_MEASUREMENT_CASES: 1
+METHOD_BOUNDARY_MEASUREMENT_CASES: 1
+ALL_SEVEN_CANDIDATE_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SIX_PLAN_TERMINALS_DIRECTLY_EXERCISED: yes
+BASELINE_MEASUREMENT_CASES: 2
+NO_GAIN_MEASUREMENT_CASES: 2
+STRONGEST_REASONABLE_BASELINE_MEASUREMENT:
+  established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+EXTERNAL_MEASUREMENT_APPLICATIONS: 0
+INDEPENDENT_MEASUREMENT_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+CURRENT_MEASUREMENT_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+Important limits:
+
+```text
+NO_GAIN != METHOD_FAILURE
+FIXTURE_NONCOLLAPSE != PERMANENT_IRREDUCIBILITY
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+INTERNAL_STANDARD != EXTERNAL_VALIDATION
+```
+
+## Next
+
+Measurement internal construction is closed at Protocol v0.1 unless future contradiction reopens it. Continue to the next not-yet-internally-standardized DSD method under the internal-first sequence.
