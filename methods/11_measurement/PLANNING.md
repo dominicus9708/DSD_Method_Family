@@ -1,6 +1,6 @@
 # DSD Measurement Planning / DSD 측정론 기획
 
-Status: **Protocol v0.1 frozen / CH001-CH006 complete / deterministic same-project retrace established once / frozen-axis internal standardization audit next / external validation deferred**  
+Status: **Protocol v0.1 internally standardized / MSR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / external validation deferred**  
 Date opened: **2026-09-18**  
 Protocol frozen: **2026-09-19**
 
@@ -33,7 +33,7 @@ Task Interface
 8. ✅ Competent baseline challenge — `MSR-CH-004`, 60/60 PASS / NO_GAIN.
 9. ✅ Strongest-reasonable baseline challenge — `MSR-CH-005`, 64/64 PASS / NO_GAIN.
 10. ✅ Deterministic same-project retrace — `MSR-CH-006`, 56/56 PASS.
-11. 🟨 Frozen-axis internal standardization audit.
+11. ✅ Frozen-axis internal standardization audit — `MSR-AUD-001`, 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
 12. ⏸ External applications deferred.
 
 ## Frozen protocol identity
@@ -97,7 +97,7 @@ SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 EXTERNAL_MEASUREMENT_APPLICATIONS: 0
 INDEPENDENT_MEASUREMENT_VALIDATION: not established
 
-MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS: developing
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_MEASUREMENT_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
@@ -162,6 +162,26 @@ SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 REPRODUCIBILITY_CASES: 1
 ```
 
+## MSR-AUD-001
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 9bfd96f80470f93143941aa72e8930bc3d41ffcf
+AUDIT_PRECOMMIT_BLOB:   2432957d745ee67a953307eb03f93f18c7a70320
+AUDIT_RESULT_COMMIT:    92c9fa2c4d20a9b13845d994521324dc27e7fc0d
+AUDIT_RESULT_BLOB:      080656e47ecb285da74417f9edd57b8b350b35ba
+
+AUDIT_EXECUTION_VERDICT: PASS
+PRECOMMITTED_REQUIRED_CHECKS: 28
+PASSED: 28
+FAILED: 0
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+MEASUREMENT_INTERNAL_STANDARDIZATION_STATUS:
+  established
+```
+
 ## Next
 
-Create a prospective frozen-axis internal standardization audit precommit. The audit must use the frozen protocol and CH001-CH006 evidence without changing axes after inspection.
+Measurement internal construction is closed at Protocol v0.1 unless future contradiction reopens it. Continue with the next not-yet-internally-standardized method. External validation stays deferred.
