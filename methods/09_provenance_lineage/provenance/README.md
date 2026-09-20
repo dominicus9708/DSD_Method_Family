@@ -1,6 +1,6 @@
 # DSD Tracking / DSD 추적론
 
-Status: **internal standardization in progress / Boundary Amendment 001 established / Tracking Protocol v0.1 frozen / first positive constructed challenge next / external validation deferred**  
+Status: **internal standardization in progress / Tracking Protocol v0.1 frozen / TRK-CH-001 positive constructed 56/56 PASS / negative challenge next / external validation deferred**  
 Legacy path ID: `09A`  
 Legacy path: `methods/09_provenance_lineage/provenance/`  
 Former Korean label: **DSD 출처·유래 추적론**  
@@ -44,7 +44,11 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_TRACKING_PILOTS_ATTEMPTED: 0
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 1
+POSITIVE_TRACKING_CASES: 1
+NEGATIVE_OR_FAILURE_TRACKING_CASES: 0
+METHOD_BOUNDARY_TRACKING_CASES: 0
 BASELINE_TRACKING_CASES: 0
 NO_GAIN_TRACKING_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -54,7 +58,7 @@ INDEPENDENT_TRACKING_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
 TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_TRACKING_EVIDENCE_STATUS: protocol_frozen_pre_validation
+CURRENT_TRACKING_EVIDENCE_STATUS: validation_in_progress
 ```
 
 ## Pre-protocol refinement groups
@@ -228,8 +232,27 @@ TRACKING_LINK_BLOCKED
 
 without rewriting the historical Task Interface.
 
+## TRK-CH-001 — positive constructed Tracking challenge
+
+- [Precommit](../../../evidence/method_specific/tracking/TRK-CH-001_precommit.md)
+- [Result](../../../evidence/method_specific/tracking/TRK-CH-001_positive-constructed.md)
+
+```text
+PRECOMMIT_COMMIT: 296ed60f2962a4fc7d93dd7cd36dfe75af3c662c
+PRECOMMIT_BLOB:   abddc44d571b99434990ee5d6f52b91ac59a5664
+RESULT_COMMIT:    1054ae30fcfba557088bb28cbe825c837762478e
+RESULT_BLOB:      eb86349f7a3d525a8aab7174a1612116276a32ee
+
+TOTAL: 56/56 PASS
+TRACKING_TRACE_TERMINAL_STATUS: TRACKING_TRACE_COMPLETE
+TRACKING_PROTOCOL_CONFORMANCE: CONFORMANT
+TRACKING_METHOD_GAIN_STATUS: NOT_ASSESSED
+```
+
+The positive fixture simultaneously exercised origin/source, version/edit, Transformation handoff, branching, many-source package inclusion, dependency fan-in, location/container, custody, reference path, and evidence provenance without promoting trace continuity to Lineage identity or process order to causality.
+
 ## Next
 
-Prospectively precommit and execute the first positive constructed Tracking challenge under frozen Protocol v0.1.
+Prospectively precommit and execute the negative/gap/conflict/blocked/out-of-scope/underdetermined Tracking challenge.
 
 External validation remains deferred.
