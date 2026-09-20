@@ -1,6 +1,6 @@
 # DSD Tracking Planning / DSD 추적론 기획
 
-Status: **internal standardization in progress / TRK-CH-001 56/56 PASS / TRK-CH-002 64/64 PASS / TRK-CH-003 72/72 PASS / fixture-bounded separation established / competent baseline next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-004 competent baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next / external validation deferred**  
 Date opened: **2026-09-20**  
 Legacy path ID: `09A`  
 Legacy directory: `methods/09_provenance_lineage/provenance/`
@@ -34,8 +34,8 @@ Task Interface
 6. ✅ Positive constructed challenge — `TRK-CH-001`, 56/56 PASS.
 7. ✅ Negative / gap / conflict / out-of-scope challenge — `TRK-CH-002`, 64/64 PASS.
 8. ✅ Direct method-boundary challenge — `TRK-CH-003`, 72/72 PASS / fixture-bounded separation.
-9. 🟨 Competent non-DSD baseline challenge.
-10. ⬜ Strongest-reasonable baseline challenge.
+9. ✅ Competent non-DSD baseline challenge — `TRK-CH-004`, 64/64 PASS / NO_GAIN.
+10. 🟨 Strongest-reasonable baseline challenge.
 11. ⬜ Deterministic same-project retrace.
 12. ⬜ Frozen-axis internal standardization audit.
 13. ⏸ External applications deferred.
@@ -54,13 +54,13 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_TRACKING_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_TRACKING_PILOTS: 3
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 4
 POSITIVE_TRACKING_CASES: 1
 NEGATIVE_OR_FAILURE_TRACKING_CASES: 1
 METHOD_BOUNDARY_TRACKING_CASES: 1
-BASELINE_TRACKING_CASES: 0
-NO_GAIN_TRACKING_CASES: 0
+BASELINE_TRACKING_CASES: 1
+NO_GAIN_TRACKING_CASES: 1
 
 STRONGEST_REASONABLE_BASELINE_TRACKING: not established
 REPRODUCIBILITY_CASES: 0
@@ -162,6 +162,20 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 10
 BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
 ```
 
+## TRK-CH-004
+
+```text
+PRECOMMIT_COMMIT: def62998c5f52c1e8d00c51dd8dfad4630c93e04
+PRECOMMIT_BLOB:   fd321cb2c883c7e28383eedc89f631c31ef4b894
+RESULT_COMMIT:    86f55716146a6e52d9cbc2d1b3895de3376f34f4
+RESULT_BLOB:      6377255145183e3b2212b1d824a282bc7d22255e
+TOTAL: 64/64 PASS
+TRACKING_METHOD_GAIN_STATUS: NO_GAIN
+TRK-CH-004_CONFORMANCE: CONFORMANT
+```
+
+All six frozen gain axes were `BASELINE_MATCH`.
+
 ## Next
 
-Create a prospective competent non-DSD Tracking baseline challenge under equal information access. A fair comparator may match the Tracking output and produce `NO_GAIN`. External validation remains deferred.
+Create a prospective strongest-reasonable non-DSD Tracking baseline challenge. The comparator may integrate version-aware schemas, graph topology, sidecars, competing semantics, and bounded maximum-claim reporting. External validation remains deferred.
