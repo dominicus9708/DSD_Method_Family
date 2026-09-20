@@ -1,6 +1,6 @@
 # DSD Tracking Planning / DSD 추적론 기획
 
-Status: **internal standardization in progress / TRK-CH-001 56/56 PASS / negative challenge next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-001 56/56 PASS / TRK-CH-002 64/64 PASS / link+terminal enum coverage complete / method-boundary challenge next / external validation deferred**  
 Date opened: **2026-09-20**  
 Legacy path ID: `09A`  
 Legacy directory: `methods/09_provenance_lineage/provenance/`
@@ -32,8 +32,8 @@ Task Interface
 4. ✅ Boundary Amendment 001 — R1-R8 prospectively adopted.
 5. ✅ Executable Tracking Protocol v0.1 — frozen.
 6. ✅ Positive constructed challenge — `TRK-CH-001`, 56/56 PASS.
-7. 🟨 Negative / gap / conflict / out-of-scope challenge.
-8. ⬜ Direct method-boundary challenge.
+7. ✅ Negative / gap / conflict / out-of-scope challenge — `TRK-CH-002`, 64/64 PASS.
+8. 🟨 Direct method-boundary challenge.
 9. ⬜ Competent non-DSD baseline challenge.
 10. ⬜ Strongest-reasonable baseline challenge.
 11. ⬜ Deterministic same-project retrace.
@@ -54,10 +54,10 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_TRACKING_PILOTS_ATTEMPTED: 1
-SUCCESSFUL_DIRECT_TRACKING_PILOTS: 1
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 2
 POSITIVE_TRACKING_CASES: 1
-NEGATIVE_OR_FAILURE_TRACKING_CASES: 0
+NEGATIVE_OR_FAILURE_TRACKING_CASES: 1
 METHOD_BOUNDARY_TRACKING_CASES: 0
 BASELINE_TRACKING_CASES: 0
 NO_GAIN_TRACKING_CASES: 0
@@ -134,6 +134,19 @@ TRACKING_TRACE_TERMINAL_STATUS: TRACKING_TRACE_COMPLETE
 TRACKING_PROTOCOL_CONFORMANCE: CONFORMANT
 ```
 
+## TRK-CH-002
+
+```text
+PRECOMMIT_COMMIT: bf5ecb9f0ea21e391301bc4de2a0635c6cacb853
+PRECOMMIT_BLOB:   6181f8a53dd89a00164a128a3689f33c2ba7df60
+RESULT_COMMIT:    84143bdb315c6859a68fe9e3dcd3296a04dd8614
+RESULT_BLOB:      b6a445187a82214751deb3b70da995932ccdc9e1
+TOTAL: 64/64 PASS
+ALL_NINE_LINK_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SIX_TRACE_TERMINALS_DIRECTLY_EXERCISED: yes
+TRK-CH-002_CONFORMANCE: CONFORMANT
+```
+
 ## Next
 
-Create a prospective negative Tracking challenge precommit that directly exercises missing, explicitly negated, ambiguous, conflicting, blocked, inapplicable, out-of-scope, and underdetermined link semantics plus the non-COMPLETE trace terminals. External validation remains deferred.
+Create a prospective direct method-boundary challenge against neighboring methods. The goal is fixture-bounded separation under fair shared-artifact access, not permanent method survival. External validation remains deferred.
