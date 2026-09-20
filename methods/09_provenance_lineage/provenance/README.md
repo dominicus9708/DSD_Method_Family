@@ -1,6 +1,6 @@
 # DSD Tracking / DSD 추적론
 
-Status: **internal standardization in progress / TRK-CH-001 56/56 PASS / TRK-CH-002 64/64 PASS / TRK-CH-003 72/72 PASS / fixture-bounded separation established / competent baseline next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-004 competent baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next / external validation deferred**  
 Legacy path ID: `09A`  
 Legacy path: `methods/09_provenance_lineage/provenance/`  
 Former Korean label: **DSD 출처·유래 추적론**  
@@ -44,15 +44,15 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_TRACKING_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_TRACKING_PILOTS: 3
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 4
 POSITIVE_TRACKING_CASES: 1
 NEGATIVE_OR_FAILURE_TRACKING_CASES: 1
 ALL_NINE_LINK_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SIX_TRACE_TERMINALS_DIRECTLY_EXERCISED: yes
 METHOD_BOUNDARY_TRACKING_CASES: 1
-BASELINE_TRACKING_CASES: 0
-NO_GAIN_TRACKING_CASES: 0
+BASELINE_TRACKING_CASES: 1
+NO_GAIN_TRACKING_CASES: 1
 REPRODUCIBILITY_CASES: 0
 
 EXTERNAL_TRACKING_APPLICATIONS: 0
@@ -323,10 +323,34 @@ FIXTURE_BOUNDED_SEPARATION != PERMANENT_METHOD_INDEPENDENCE
 FIXTURE_NONCOLLAPSE != PERMANENT_IRREDUCIBILITY
 ```
 
+## TRK-CH-004 — competent non-DSD baseline
+
+- [Precommit](../../../evidence/method_specific/tracking/TRK-CH-004_precommit.md)
+- [Result](../../../evidence/method_specific/tracking/TRK-CH-004_competent-baseline.md)
+
+```text
+PRECOMMIT_COMMIT: def62998c5f52c1e8d00c51dd8dfad4630c93e04
+PRECOMMIT_BLOB:   fd321cb2c883c7e28383eedc89f631c31ef4b894
+RESULT_COMMIT:    86f55716146a6e52d9cbc2d1b3895de3376f34f4
+RESULT_BLOB:      6377255145183e3b2212b1d824a282bc7d22255e
+
+TOTAL: 64/64 PASS
+TRACKING_METHOD_GAIN_STATUS: NO_GAIN
+TRK-CH-004_CONFORMANCE: CONFORMANT
+```
+
+All six precommitted gain axes were `BASELINE_MATCH`.
+
+```text
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+```
+
 ## Next
 
-Prospectively precommit and execute a competent non-DSD Tracking baseline challenge under equal information access.
-
-The baseline may legitimately produce `NO_GAIN`.
+Prospectively precommit and execute the strongest-reasonable non-DSD Tracking baseline challenge.
 
 External validation remains deferred.
