@@ -1,6 +1,6 @@
 # DSD Tracking / DSD 추적론
 
-Status: **internal standardization in progress / TRK-CH-001 56/56 PASS / TRK-CH-002 64/64 PASS / all 9 link statuses + all 6 trace terminals directly exercised / method-boundary challenge next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-001 56/56 PASS / TRK-CH-002 64/64 PASS / TRK-CH-003 72/72 PASS / fixture-bounded separation established / competent baseline next / external validation deferred**  
 Legacy path ID: `09A`  
 Legacy path: `methods/09_provenance_lineage/provenance/`  
 Former Korean label: **DSD 출처·유래 추적론**  
@@ -44,11 +44,13 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_TRACKING_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_TRACKING_PILOTS: 2
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 3
 POSITIVE_TRACKING_CASES: 1
 NEGATIVE_OR_FAILURE_TRACKING_CASES: 1
-METHOD_BOUNDARY_TRACKING_CASES: 0
+ALL_NINE_LINK_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SIX_TRACE_TERMINALS_DIRECTLY_EXERCISED: yes
+METHOD_BOUNDARY_TRACKING_CASES: 1
 BASELINE_TRACKING_CASES: 0
 NO_GAIN_TRACKING_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -280,8 +282,51 @@ INAPPLICABLE != OUT_OF_SCOPE
 OUT_OF_SCOPE != FALSE
 ```
 
+## TRK-CH-003 — direct method-boundary challenge
+
+- [Precommit](../../../evidence/method_specific/tracking/TRK-CH-003_precommit.md)
+- [Result](../../../evidence/method_specific/tracking/TRK-CH-003_method-boundary.md)
+
+```text
+PRECOMMIT_COMMIT: 8e289432301f2d8d9a294c8c5e4e66310b17a376
+PRECOMMIT_BLOB:   62353ce322882706369212b6ad34bd8e04489c0c
+RESULT_COMMIT:    bc59d86171bc8d04092ad218b85e663822046cbe
+RESULT_BLOB:      5969689a932a21f9fbe570b0b20cde049aa96eb7
+
+TOTAL: 72/72 PASS
+BOUNDARY_PAIRS_TESTED: 10
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 10
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
+Tested neighbors:
+
+```text
+Lineage
+Reconstruction
+Transformation
+Audit
+Interpretation
+Measurement
+Aggregation
+Compression
+Comparison
+Analysis
+```
+
+This result is fixture-bounded only.
+
+```text
+FIXTURE_BOUNDED_SEPARATION != PERMANENT_METHOD_INDEPENDENCE
+FIXTURE_NONCOLLAPSE != PERMANENT_IRREDUCIBILITY
+```
+
 ## Next
 
-Prospectively precommit and execute the direct method-boundary challenge against neighboring methods under fair shared-artifact access.
+Prospectively precommit and execute a competent non-DSD Tracking baseline challenge under equal information access.
+
+The baseline may legitimately produce `NO_GAIN`.
 
 External validation remains deferred.
