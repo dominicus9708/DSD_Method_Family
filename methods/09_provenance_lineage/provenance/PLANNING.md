@@ -1,6 +1,6 @@
 # DSD Tracking Planning / DSD 추적론 기획
 
-Status: **internal standardization in progress / Boundary Amendment 001 established / Tracking Protocol v0.1 frozen / positive constructed challenge next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-001 56/56 PASS / negative challenge next / external validation deferred**  
 Date opened: **2026-09-20**  
 Legacy path ID: `09A`  
 Legacy directory: `methods/09_provenance_lineage/provenance/`
@@ -31,8 +31,8 @@ Task Interface
 3. ✅ Pre-protocol boundary attack — 18 constructed internal cases.
 4. ✅ Boundary Amendment 001 — R1-R8 prospectively adopted.
 5. ✅ Executable Tracking Protocol v0.1 — frozen.
-6. 🟨 Positive constructed challenge.
-7. ⬜ Negative / gap / conflict / out-of-scope challenge.
+6. ✅ Positive constructed challenge — `TRK-CH-001`, 56/56 PASS.
+7. 🟨 Negative / gap / conflict / out-of-scope challenge.
 8. ⬜ Direct method-boundary challenge.
 9. ⬜ Competent non-DSD baseline challenge.
 10. ⬜ Strongest-reasonable baseline challenge.
@@ -54,9 +54,9 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_TRACKING_PILOTS_ATTEMPTED: 0
-SUCCESSFUL_DIRECT_TRACKING_PILOTS: 0
-POSITIVE_TRACKING_CASES: 0
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 1
+POSITIVE_TRACKING_CASES: 1
 NEGATIVE_OR_FAILURE_TRACKING_CASES: 0
 METHOD_BOUNDARY_TRACKING_CASES: 0
 BASELINE_TRACKING_CASES: 0
@@ -70,7 +70,7 @@ INDEPENDENT_TRACKING_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
 TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_TRACKING_EVIDENCE_STATUS: protocol_frozen_pre_validation
+CURRENT_TRACKING_EVIDENCE_STATUS: validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
@@ -122,6 +122,18 @@ BINDING_OPERATION: T1-T14
 
 Protocol v0.1 contains typed node/link/evidence registers, graph topology, nine link statuses, six trace terminals, completion semantics, neighboring-method handoffs, conformance, gain, and maximum-claim discipline.
 
+## TRK-CH-001
+
+```text
+PRECOMMIT_COMMIT: 296ed60f2962a4fc7d93dd7cd36dfe75af3c662c
+PRECOMMIT_BLOB:   abddc44d571b99434990ee5d6f52b91ac59a5664
+RESULT_COMMIT:    1054ae30fcfba557088bb28cbe825c837762478e
+RESULT_BLOB:      eb86349f7a3d525a8aab7174a1612116276a32ee
+TOTAL: 56/56 PASS
+TRACKING_TRACE_TERMINAL_STATUS: TRACKING_TRACE_COMPLETE
+TRACKING_PROTOCOL_CONFORMANCE: CONFORMANT
+```
+
 ## Next
 
-Prospectively precommit and execute the first positive constructed Tracking challenge. External validation remains deferred.
+Create a prospective negative Tracking challenge precommit that directly exercises missing, explicitly negated, ambiguous, conflicting, blocked, inapplicable, out-of-scope, and underdetermined link semantics plus the non-COMPLETE trace terminals. External validation remains deferred.
