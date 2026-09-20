@@ -1,6 +1,6 @@
 # DSD Tracking Planning / DSD 추적론 기획
 
-Status: **internal standardization in progress / TRK-CH-001 56/56 PASS / TRK-CH-002 64/64 PASS / link+terminal enum coverage complete / method-boundary challenge next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-001 56/56 PASS / TRK-CH-002 64/64 PASS / TRK-CH-003 72/72 PASS / fixture-bounded separation established / competent baseline next / external validation deferred**  
 Date opened: **2026-09-20**  
 Legacy path ID: `09A`  
 Legacy directory: `methods/09_provenance_lineage/provenance/`
@@ -33,8 +33,8 @@ Task Interface
 5. ✅ Executable Tracking Protocol v0.1 — frozen.
 6. ✅ Positive constructed challenge — `TRK-CH-001`, 56/56 PASS.
 7. ✅ Negative / gap / conflict / out-of-scope challenge — `TRK-CH-002`, 64/64 PASS.
-8. 🟨 Direct method-boundary challenge.
-9. ⬜ Competent non-DSD baseline challenge.
+8. ✅ Direct method-boundary challenge — `TRK-CH-003`, 72/72 PASS / fixture-bounded separation.
+9. 🟨 Competent non-DSD baseline challenge.
 10. ⬜ Strongest-reasonable baseline challenge.
 11. ⬜ Deterministic same-project retrace.
 12. ⬜ Frozen-axis internal standardization audit.
@@ -54,11 +54,11 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_TRACKING_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_TRACKING_PILOTS: 2
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 3
 POSITIVE_TRACKING_CASES: 1
 NEGATIVE_OR_FAILURE_TRACKING_CASES: 1
-METHOD_BOUNDARY_TRACKING_CASES: 0
+METHOD_BOUNDARY_TRACKING_CASES: 1
 BASELINE_TRACKING_CASES: 0
 NO_GAIN_TRACKING_CASES: 0
 
@@ -147,6 +147,21 @@ ALL_SIX_TRACE_TERMINALS_DIRECTLY_EXERCISED: yes
 TRK-CH-002_CONFORMANCE: CONFORMANT
 ```
 
+## TRK-CH-003
+
+```text
+PRECOMMIT_COMMIT: 8e289432301f2d8d9a294c8c5e4e66310b17a376
+PRECOMMIT_BLOB:   62353ce322882706369212b6ad34bd8e04489c0c
+RESULT_COMMIT:    bc59d86171bc8d04092ad218b85e663822046cbe
+RESULT_BLOB:      5969689a932a21f9fbe570b0b20cde049aa96eb7
+TOTAL: 72/72 PASS
+BOUNDARY_PAIRS_TESTED: 10
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 10
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
 ## Next
 
-Create a prospective direct method-boundary challenge against neighboring methods. The goal is fixture-bounded separation under fair shared-artifact access, not permanent method survival. External validation remains deferred.
+Create a prospective competent non-DSD Tracking baseline challenge under equal information access. A fair comparator may match the Tracking output and produce `NO_GAIN`. External validation remains deferred.
