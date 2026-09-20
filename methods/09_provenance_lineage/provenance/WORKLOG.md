@@ -523,3 +523,101 @@ FIXTURE_NONCOLLAPSE != PERMANENT_IRREDUCIBILITY
 ## Next
 
 Proceed to a separately precommitted competent non-DSD Tracking baseline challenge under equal information access.
+
+---
+
+## Step 8 — TRK-CH-004 competent non-DSD baseline
+
+Prospective precommit:
+
+```text
+PRECOMMIT_COMMIT: def62998c5f52c1e8d00c51dd8dfad4630c93e04
+PRECOMMIT_BLOB:   fd321cb2c883c7e28383eedc89f631c31ef4b894
+
+RESULT_COMMIT:    86f55716146a6e52d9cbc2d1b3895de3376f34f4
+RESULT_BLOB:      6377255145183e3b2212b1d824a282bc7d22255e
+
+TOTAL: 64/64 PASS
+TRACKING_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+Baseline:
+
+```text
+B0_GENERIC_TYPED_TRACE_LEDGER
+```
+
+Equal-information access was preserved.
+
+B0 matched the claim-relevant outputs for:
+
+```text
+typed link classification
+branch/merge graph topology
+direct-edge vs reachability discipline
+evidence/provenance separation
+explicit negation vs missing
+missing vs blocked
+ambiguity
+conflict
+inapplicability
+scope mismatch
+schema underdetermination
+bounded trace terminals
+no-overclaim guards
+```
+
+Gain axes:
+
+```text
+G1 typed trace-link classification advantage -> BASELINE_MATCH
+G2 graph topology / direct-edge discipline advantage -> BASELINE_MATCH
+G3 evidence-versus-relation provenance advantage -> BASELINE_MATCH
+G4 gap / ambiguity / conflict / blockage semantic advantage -> BASELINE_MATCH
+G5 scope / schema / terminal discipline advantage -> BASELINE_MATCH
+G6 overclaim-boundary advantage -> BASELINE_MATCH
+```
+
+Preserved:
+
+```text
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+```
+
+Counter update:
+
+```text
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 4
+
+POSITIVE_TRACKING_CASES: 1
+NEGATIVE_OR_FAILURE_TRACKING_CASES: 1
+METHOD_BOUNDARY_TRACKING_CASES: 1
+
+BASELINE_TRACKING_CASES: 1
+NO_GAIN_TRACKING_CASES: 1
+
+ALL_NINE_LINK_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SIX_TRACE_TERMINALS_DIRECTLY_EXERCISED: yes
+
+STRONGEST_REASONABLE_BASELINE_TRACKING: not established
+REPRODUCIBILITY_CASES: 0
+
+EXTERNAL_TRACKING_APPLICATIONS: 0
+INDEPENDENT_TRACKING_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+
+TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_TRACKING_EVIDENCE_STATUS: validation_in_progress
+
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Proceed to a separately precommitted strongest-reasonable non-DSD Tracking baseline challenge.
