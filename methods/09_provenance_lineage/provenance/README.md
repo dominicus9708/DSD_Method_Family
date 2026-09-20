@@ -1,6 +1,6 @@
 # DSD Tracking / DSD 추적론
 
-Status: **internal standardization in progress / Tracking Protocol v0.1 frozen / TRK-CH-001 positive constructed 56/56 PASS / negative challenge next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-001 56/56 PASS / TRK-CH-002 64/64 PASS / all 9 link statuses + all 6 trace terminals directly exercised / method-boundary challenge next / external validation deferred**  
 Legacy path ID: `09A`  
 Legacy path: `methods/09_provenance_lineage/provenance/`  
 Former Korean label: **DSD 출처·유래 추적론**  
@@ -44,10 +44,10 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_TRACKING_PILOTS_ATTEMPTED: 1
-SUCCESSFUL_DIRECT_TRACKING_PILOTS: 1
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 2
 POSITIVE_TRACKING_CASES: 1
-NEGATIVE_OR_FAILURE_TRACKING_CASES: 0
+NEGATIVE_OR_FAILURE_TRACKING_CASES: 1
 METHOD_BOUNDARY_TRACKING_CASES: 0
 BASELINE_TRACKING_CASES: 0
 NO_GAIN_TRACKING_CASES: 0
@@ -251,8 +251,37 @@ TRACKING_METHOD_GAIN_STATUS: NOT_ASSESSED
 
 The positive fixture simultaneously exercised origin/source, version/edit, Transformation handoff, branching, many-source package inclusion, dependency fan-in, location/container, custody, reference path, and evidence provenance without promoting trace continuity to Lineage identity or process order to causality.
 
+## TRK-CH-002 — negative / unresolved terminal coverage
+
+- [Precommit](../../../evidence/method_specific/tracking/TRK-CH-002_precommit.md)
+- [Result](../../../evidence/method_specific/tracking/TRK-CH-002_negative-terminal-coverage.md)
+
+```text
+PRECOMMIT_COMMIT: bf5ecb9f0ea21e391301bc4de2a0635c6cacb853
+PRECOMMIT_BLOB:   6181f8a53dd89a00164a128a3689f33c2ba7df60
+RESULT_COMMIT:    84143bdb315c6859a68fe9e3dcd3296a04dd8614
+RESULT_BLOB:      b6a445187a82214751deb3b70da995932ccdc9e1
+
+TOTAL: 64/64 PASS
+ALL_NINE_LINK_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SIX_TRACE_TERMINALS_DIRECTLY_EXERCISED: yes
+TRK-CH-002_CONFORMANCE: CONFORMANT
+```
+
+Directly exercised negative/unresolved link semantics include explicit negation, missing, ambiguity, conflict, blockage, inapplicability, out-of-scope status, and underdetermination.
+
+```text
+EXPLICITLY_NEGATED != MISSING
+MISSING != BLOCKED
+AMBIGUOUS != CONFLICTING
+AMBIGUOUS != UNDERDETERMINED
+CONFLICTING != UNDERDETERMINED
+INAPPLICABLE != OUT_OF_SCOPE
+OUT_OF_SCOPE != FALSE
+```
+
 ## Next
 
-Prospectively precommit and execute the negative/gap/conflict/blocked/out-of-scope/underdetermined Tracking challenge.
+Prospectively precommit and execute the direct method-boundary challenge against neighboring methods under fair shared-artifact access.
 
 External validation remains deferred.
