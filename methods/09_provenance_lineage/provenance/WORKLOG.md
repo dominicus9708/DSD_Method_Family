@@ -198,3 +198,115 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit the first positive constructed Tracking challenge.
+
+---
+
+## Step 5 — TRK-CH-001 positive constructed challenge
+
+The first direct Tracking pilot was prospectively frozen before execution.
+
+```text
+PRECOMMIT_COMMIT: 296ed60f2962a4fc7d93dd7cd36dfe75af3c662c
+PRECOMMIT_BLOB:   abddc44d571b99434990ee5d6f52b91ac59a5664
+RESULT_COMMIT:    1054ae30fcfba557088bb28cbe825c837762478e
+RESULT_BLOB:      eb86349f7a3d525a8aab7174a1612116276a32ee
+TOTAL: 56/56 PASS
+```
+
+The frozen fixture simultaneously exercised:
+
+```text
+origin/source
+version/edit
+Transformation handoff
+process/stage
+one-to-many branching
+many-source package inclusion
+dependency fan-in
+location/container
+custody
+reference path
+evidence/support provenance
+```
+
+All required Q1-Q12 relations were directly supported:
+
+```text
+Q1-Q12:
+  TRACKING_LINK_ESTABLISHED
+```
+
+The graph preserved:
+
+```text
+PDF_EXPORT -> COPY_A
+PDF_EXPORT -> COPY_B
+
+COPY_A -> PKG_FINAL
+REF_TABLE -> PKG_FINAL
+
+PKG_FINAL DEPENDS_ON COPY_A
+PKG_FINAL DEPENDS_ON REF_TABLE
+
+PKG_FINAL REFERENCES DOC_DRAFT_V2
+DOC_DRAFT_V2 REFERENCES REF_TABLE
+```
+
+No unsupported direct `PKG_FINAL REFERENCES REF_TABLE` edge was created.
+
+Preserved boundaries:
+
+```text
+PATH_REACHABILITY != DIRECT_TRACE_LINK
+TRACE_CONTINUITY != LINEAGE_IDENTITY
+BRANCHING_TRACE != LINEAGE_BRANCHING_WITHOUT_HANDOFF
+MERGING_TRACE != LINEAGE_MERGER_WITHOUT_HANDOFF
+TRACE_OF_TRANSFORMATION != TRANSFORMATION_CORRECTNESS
+CUSTODY_RELATION != OWNERSHIP_RELATION
+OWNERSHIP_RELATION != RESPONSIBILITY_RELATION
+PROCESS_ORDER != CAUSAL_LINK
+TRACE_RECORD != AUDIT_VERDICT
+```
+
+Protocol result:
+
+```text
+TRACKING_TRACE_TERMINAL_STATUS:
+  TRACKING_TRACE_COMPLETE
+
+TRACKING_PROTOCOL_CONFORMANCE:
+  CONFORMANT
+
+TRACKING_METHOD_GAIN_STATUS:
+  NOT_ASSESSED
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+```
+
+Counter update:
+
+```text
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 1
+POSITIVE_TRACKING_CASES: 1
+NEGATIVE_OR_FAILURE_TRACKING_CASES: 0
+METHOD_BOUNDARY_TRACKING_CASES: 0
+BASELINE_TRACKING_CASES: 0
+NO_GAIN_TRACKING_CASES: 0
+REPRODUCIBILITY_CASES: 0
+
+EXTERNAL_TRACKING_APPLICATIONS: 0
+INDEPENDENT_TRACKING_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+
+TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_TRACKING_EVIDENCE_STATUS: validation_in_progress
+```
+
+## Next
+
+Run a separately precommitted negative/gap/conflict/blocked/out-of-scope/underdetermined Tracking challenge.
