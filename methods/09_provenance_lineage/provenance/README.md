@@ -1,6 +1,6 @@
 # DSD Tracking / DSD 추적론
 
-Status: **internal standardization in progress / TRK-CH-004 competent baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-005 preserved fixture failure 68/72 / TRK-CH-005B corrected strongest baseline 72/72 PASS / NO_GAIN / deterministic retrace next / external validation deferred**  
 Legacy path ID: `09A`  
 Legacy path: `methods/09_provenance_lineage/provenance/`  
 Former Korean label: **DSD 출처·유래 추적론**  
@@ -44,15 +44,16 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_TRACKING_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_TRACKING_PILOTS: 4
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 5
 POSITIVE_TRACKING_CASES: 1
 NEGATIVE_OR_FAILURE_TRACKING_CASES: 1
 ALL_NINE_LINK_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SIX_TRACE_TERMINALS_DIRECTLY_EXERCISED: yes
 METHOD_BOUNDARY_TRACKING_CASES: 1
-BASELINE_TRACKING_CASES: 1
-NO_GAIN_TRACKING_CASES: 1
+BASELINE_TRACKING_CASES: 2
+NO_GAIN_TRACKING_CASES: 2
+STRONGEST_REASONABLE_BASELINE_TRACKING: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 
 EXTERNAL_TRACKING_APPLICATIONS: 0
@@ -349,8 +350,60 @@ NO_GAIN != METHOD_ABSORPTION_PROOF
 NO_GAIN != PERMANENT_REDUNDANCY
 ```
 
+## TRK-CH-005 — preserved fixture-expectation failure
+
+- [Precommit](../../../evidence/method_specific/tracking/TRK-CH-005_precommit.md)
+- [Result](../../../evidence/method_specific/tracking/TRK-CH-005_strongest-reasonable-baseline.md)
+
+```text
+PRECOMMIT_COMMIT: b410f63882fd311c24033e4527899023474ce7bc
+PRECOMMIT_BLOB:   fc408e2ee33a422964ed1c966d4a2e7edfce421b
+RESULT_COMMIT:    89b7f183c1bb567c1c133221f91feddf9d7e85c9
+RESULT_BLOB:      b98f1ae00e9817d4379793abefe9b2d107d10d19
+
+TOTAL: 68/72
+CHALLENGE_RESULT: FAIL_PRECOMMIT_FIXTURE_EXPECTATION
+PROTOCOL_REVISION_REQUIRED: no
+```
+
+The failed expectation incorrectly treated `does not establish DEPENDS_ON` as an explicit negative dependency record.
+
+```text
+NOT_ESTABLISHED != EXPLICITLY_NEGATED
+MISSING_LINK != NEGATIVE_LINK
+```
+
+The historical failure is preserved and was not used to advance canonical counters.
+
+## TRK-CH-005B — corrected strongest-reasonable baseline
+
+- [Corrective precommit](../../../evidence/method_specific/tracking/TRK-CH-005B_precommit.md)
+- [Result](../../../evidence/method_specific/tracking/TRK-CH-005B_strongest-reasonable-baseline.md)
+
+```text
+PRECOMMIT_COMMIT: d69b2e68d835854c1483fdcb6c87a61a81953ebe
+PRECOMMIT_BLOB:   21c233dc9914e8327f587fe38973df13624f287a
+RESULT_COMMIT:    82d01f10595a30bdce17fd9d5defc60f35bba730
+RESULT_BLOB:      c447e772b5aafbdf0a712b8a370e077990e6c7d8
+
+TOTAL: 72/72 PASS
+TRACKING_METHOD_GAIN_STATUS: NO_GAIN
+STRONGEST_REASONABLE_BASELINE_TRACKING:
+  established_at_constructed_evidence_level
+```
+
+All seven frozen gain axes were `BASELINE_MATCH`.
+
+```text
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+```
+
 ## Next
 
-Prospectively precommit and execute the strongest-reasonable non-DSD Tracking baseline challenge.
+Prospectively precommit and execute deterministic same-project retrace from immutable Protocol v0.1 and TRK-CH-005B artifacts.
 
 External validation remains deferred.
