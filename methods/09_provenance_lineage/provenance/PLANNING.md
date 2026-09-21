@@ -1,6 +1,6 @@
 # DSD Tracking Planning / DSD 추적론 기획
 
-Status: **internal standardization in progress / TRK-CH-004 competent baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-005 preserved 68/72 fixture failure / TRK-CH-005B corrected strongest baseline 72/72 PASS / NO_GAIN / deterministic retrace next / external validation deferred**  
 Date opened: **2026-09-20**  
 Legacy path ID: `09A`  
 Legacy directory: `methods/09_provenance_lineage/provenance/`
@@ -35,8 +35,8 @@ Task Interface
 7. ✅ Negative / gap / conflict / out-of-scope challenge — `TRK-CH-002`, 64/64 PASS.
 8. ✅ Direct method-boundary challenge — `TRK-CH-003`, 72/72 PASS / fixture-bounded separation.
 9. ✅ Competent non-DSD baseline challenge — `TRK-CH-004`, 64/64 PASS / NO_GAIN.
-10. 🟨 Strongest-reasonable baseline challenge.
-11. ⬜ Deterministic same-project retrace.
+10. ✅ Strongest-reasonable baseline challenge — `TRK-CH-005` preserved 68/72 fixture failure; corrected `TRK-CH-005B` 72/72 PASS / NO_GAIN.
+11. 🟨 Deterministic same-project retrace.
 12. ⬜ Frozen-axis internal standardization audit.
 13. ⏸ External applications deferred.
 
@@ -54,15 +54,15 @@ FUNDAMENTAL_INTERFACE_FAILURE: 0
 
 BOUNDARY_AMENDMENT_001: established
 
-DIRECT_TRACKING_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_TRACKING_PILOTS: 4
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 5
 POSITIVE_TRACKING_CASES: 1
 NEGATIVE_OR_FAILURE_TRACKING_CASES: 1
 METHOD_BOUNDARY_TRACKING_CASES: 1
-BASELINE_TRACKING_CASES: 1
-NO_GAIN_TRACKING_CASES: 1
+BASELINE_TRACKING_CASES: 2
+NO_GAIN_TRACKING_CASES: 2
 
-STRONGEST_REASONABLE_BASELINE_TRACKING: not established
+STRONGEST_REASONABLE_BASELINE_TRACKING: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 
 EXTERNAL_TRACKING_APPLICATIONS: 0
@@ -176,6 +176,30 @@ TRK-CH-004_CONFORMANCE: CONFORMANT
 
 All six frozen gain axes were `BASELINE_MATCH`.
 
+## TRK-CH-005 — preserved failure
+
+```text
+PRECOMMIT_COMMIT: b410f63882fd311c24033e4527899023474ce7bc
+PRECOMMIT_BLOB:   fc408e2ee33a422964ed1c966d4a2e7edfce421b
+RESULT_COMMIT:    89b7f183c1bb567c1c133221f91feddf9d7e85c9
+RESULT_BLOB:      b98f1ae00e9817d4379793abefe9b2d107d10d19
+TOTAL: 68/72
+CHALLENGE_RESULT: FAIL_PRECOMMIT_FIXTURE_EXPECTATION
+```
+
+## TRK-CH-005B — corrected strongest baseline
+
+```text
+PRECOMMIT_COMMIT: d69b2e68d835854c1483fdcb6c87a61a81953ebe
+PRECOMMIT_BLOB:   21c233dc9914e8327f587fe38973df13624f287a
+RESULT_COMMIT:    82d01f10595a30bdce17fd9d5defc60f35bba730
+RESULT_BLOB:      c447e772b5aafbdf0a712b8a370e077990e6c7d8
+TOTAL: 72/72 PASS
+TRACKING_METHOD_GAIN_STATUS: NO_GAIN
+STRONGEST_REASONABLE_BASELINE_TRACKING:
+  established_at_constructed_evidence_level
+```
+
 ## Next
 
-Create a prospective strongest-reasonable non-DSD Tracking baseline challenge. The comparator may integrate version-aware schemas, graph topology, sidecars, competing semantics, and bounded maximum-claim reporting. External validation remains deferred.
+Create a prospective deterministic same-project retrace. The retrace must reconstruct the CH005B claim-relevant ledger before opening the frozen result comparison. External validation remains deferred.
