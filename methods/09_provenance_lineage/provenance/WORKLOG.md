@@ -750,3 +750,90 @@ SAME_PROJECT_BASELINE != EXTERNAL_VALIDATION
 ## Next
 
 Prospectively precommit deterministic same-project retrace from immutable Protocol v0.1 and TRK-CH-005B artifacts.
+
+---
+
+## Step 11 — TRK-CH-006 deterministic same-project retrace
+
+A prospective retrace precommit froze the artifact chain:
+
+```text
+P0 Tracking Protocol v0.1
+P1 TRK-CH-005 original precommit
+P1B TRK-CH-005B corrective precommit
+P2 TRK-CH-005B result comparison target
+```
+
+The reconstruction ledger was committed as a separate artifact before the formal comparison step.
+
+```text
+PRECOMMIT_COMMIT: 5afb654a259869ecf0caf1c2458d57648bdad391
+PRECOMMIT_BLOB:   abe172c341954795c3e2394399a0bbaa3d7ca783
+
+LEDGER_COMMIT:    397d7edef430fc788ed7a94f76891edf97d5ef3b
+LEDGER_BLOB:      7b77f98f7a0536f50aebee056112752f750abdbb
+
+RESULT_COMMIT:    4a27d27ff61fb5ba6df9d3e99f71d6b82a906f37
+RESULT_BLOB:      ef20412a8edcf23d5602ce6a323752af760ee461
+
+TOTAL: 56/56 PASS
+```
+
+Exact comparison summary:
+
+```text
+R1: exact match
+R2: exact match
+R3: exact match
+R4: exact match
+R5: exact match
+
+BOUNDED_CLAIM_RECORD: exact match
+CONFORMANCE_RECORD: exact match
+DISTINCTION_LEDGER: exact match
+
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+```
+
+The retrace preserved the earlier CH005 fixture failure as historical evidence.
+
+It did not erase or rewrite that failure.
+
+Counter update:
+
+```text
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 5
+BASELINE_TRACKING_CASES: 2
+NO_GAIN_TRACKING_CASES: 2
+
+STRONGEST_REASONABLE_BASELINE_TRACKING:
+  established_at_constructed_evidence_level
+
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+EXTERNAL_TRACKING_APPLICATIONS: 0
+INDEPENDENT_TRACKING_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+
+TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_TRACKING_EVIDENCE_STATUS: validation_in_progress
+
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+Scope:
+
+```text
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+RETRACE_PASS != EXTERNAL_APPLICABILITY
+```
+
+## Next
+
+Proceed to a prospective frozen-axis internal standardization audit.
