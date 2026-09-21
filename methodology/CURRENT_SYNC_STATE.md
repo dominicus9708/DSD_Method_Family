@@ -4,6 +4,7 @@ Synchronized: **2026-09-22 KST**
 Repository: `dominicus9708/DSD_Method_Family`  
 Method-state source commit before this synchronization record: `5d9475708718780a3038451290b25e1f9c0b0fe1`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
+Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
 This file is the current cross-surface restoration/synchronization checkpoint for the DSD Method Family.
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
