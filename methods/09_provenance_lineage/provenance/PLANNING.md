@@ -1,6 +1,6 @@
 # DSD Tracking Planning / DSD 추적론 기획
 
-Status: **internal standardization in progress / TRK-CH-005 preserved 68/72 fixture failure / TRK-CH-005B corrected strongest baseline 72/72 PASS / NO_GAIN / deterministic retrace next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-006 deterministic same-project retrace 56/56 PASS / frozen-axis internal standardization audit next / external validation deferred**  
 Date opened: **2026-09-20**  
 Legacy path ID: `09A`  
 Legacy directory: `methods/09_provenance_lineage/provenance/`
@@ -36,8 +36,8 @@ Task Interface
 8. ✅ Direct method-boundary challenge — `TRK-CH-003`, 72/72 PASS / fixture-bounded separation.
 9. ✅ Competent non-DSD baseline challenge — `TRK-CH-004`, 64/64 PASS / NO_GAIN.
 10. ✅ Strongest-reasonable baseline challenge — `TRK-CH-005` preserved 68/72 fixture failure; corrected `TRK-CH-005B` 72/72 PASS / NO_GAIN.
-11. 🟨 Deterministic same-project retrace.
-12. ⬜ Frozen-axis internal standardization audit.
+11. ✅ Deterministic same-project retrace — `TRK-CH-006`, 56/56 PASS / same-project only.
+12. 🟨 Frozen-axis internal standardization audit.
 13. ⏸ External applications deferred.
 
 ## Current counters
@@ -63,7 +63,8 @@ BASELINE_TRACKING_CASES: 2
 NO_GAIN_TRACKING_CASES: 2
 
 STRONGEST_REASONABLE_BASELINE_TRACKING: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 
 EXTERNAL_TRACKING_APPLICATIONS: 0
 INDEPENDENT_TRACKING_VALIDATION: not established
@@ -200,6 +201,21 @@ STRONGEST_REASONABLE_BASELINE_TRACKING:
   established_at_constructed_evidence_level
 ```
 
+## TRK-CH-006
+
+```text
+PRECOMMIT_COMMIT: 5afb654a259869ecf0caf1c2458d57648bdad391
+PRECOMMIT_BLOB:   abe172c341954795c3e2394399a0bbaa3d7ca783
+LEDGER_COMMIT:    397d7edef430fc788ed7a94f76891edf97d5ef3b
+LEDGER_BLOB:      7b77f98f7a0536f50aebee056112752f750abdbb
+RESULT_COMMIT:    4a27d27ff61fb5ba6df9d3e99f71d6b82a906f37
+RESULT_BLOB:      ef20412a8edcf23d5602ce6a323752af760ee461
+TOTAL: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+```
+
 ## Next
 
-Create a prospective deterministic same-project retrace. The retrace must reconstruct the CH005B claim-relevant ledger before opening the frozen result comparison. External validation remains deferred.
+Create a prospective frozen-axis internal standardization audit. The audit may promote Tracking Protocol v0.1 to internal-standard status, hold it as developing, or return it for revision. External validation remains deferred.
