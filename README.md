@@ -6,6 +6,12 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 이 저장소는 **DSD 방법군**의 전개와 분야별 적용을 기록합니다.
 기존 DSD 분석론에서 확장되었으며, 분석론·감사·도전·방법론·프로토콜·과거 기록은 외형적 통일을 위해 소급 재작성하지 않습니다.
 
+## Current synchronization checkpoint / 현재 동기화 체크포인트
+
+- [`methodology/CURRENT_SYNC_STATE.md`](methodology/CURRENT_SYNC_STATE.md) — Notion·GitHub·프로젝트 채팅을 교차 복원한 2026-09-22 현재 상태 체크포인트.
+- Canonical Notion sync page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
+- The checkpoint does not replace method-specific protocols, precommits, evidence, audits, or historical worklogs.
+
 ## Current architecture / 현재 구조
 
 ```text
