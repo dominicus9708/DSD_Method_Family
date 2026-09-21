@@ -1,6 +1,6 @@
 # DSD Tracking / DSD 추적론
 
-Status: **internal standardization in progress / TRK-CH-005 preserved fixture failure 68/72 / TRK-CH-005B corrected strongest baseline 72/72 PASS / NO_GAIN / deterministic retrace next / external validation deferred**  
+Status: **internal standardization in progress / TRK-CH-006 deterministic same-project retrace 56/56 PASS / internal standardization audit next / external validation deferred**  
 Legacy path ID: `09A`  
 Legacy path: `methods/09_provenance_lineage/provenance/`  
 Former Korean label: **DSD 출처·유래 추적론**  
@@ -54,7 +54,8 @@ METHOD_BOUNDARY_TRACKING_CASES: 1
 BASELINE_TRACKING_CASES: 2
 NO_GAIN_TRACKING_CASES: 2
 STRONGEST_REASONABLE_BASELINE_TRACKING: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 
 EXTERNAL_TRACKING_APPLICATIONS: 0
 INDEPENDENT_TRACKING_VALIDATION: not established
@@ -402,8 +403,40 @@ NO_GAIN != METHOD_ABSORPTION_PROOF
 NO_GAIN != PERMANENT_REDUNDANCY
 ```
 
+## TRK-CH-006 — deterministic same-project retrace
+
+- [Precommit](../../../evidence/method_specific/tracking/TRK-CH-006_precommit.md)
+- [Reconstruction ledger](../../../evidence/method_specific/tracking/TRK-CH-006_reconstruction-ledger.md)
+- [Result](../../../evidence/method_specific/tracking/TRK-CH-006_deterministic-retrace.md)
+
+```text
+PRECOMMIT_COMMIT: 5afb654a259869ecf0caf1c2458d57648bdad391
+PRECOMMIT_BLOB:   abe172c341954795c3e2394399a0bbaa3d7ca783
+
+LEDGER_COMMIT:    397d7edef430fc788ed7a94f76891edf97d5ef3b
+LEDGER_BLOB:      7b77f98f7a0536f50aebee056112752f750abdbb
+
+RESULT_COMMIT:    4a27d27ff61fb5ba6df9d3e99f71d6b82a906f37
+RESULT_BLOB:      ef20412a8edcf23d5602ce6a323752af760ee461
+
+TOTAL: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+```
+
+The reconstruction ledger was frozen before the formal comparison step against the TRK-CH-005B result target.
+
+This is same-project artifact consistency evidence, not blind or independent replication.
+
+```text
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+RETRACE_PASS != EXTERNAL_APPLICABILITY
+```
+
 ## Next
 
-Prospectively precommit and execute deterministic same-project retrace from immutable Protocol v0.1 and TRK-CH-005B artifacts.
+Prospectively precommit and execute the frozen-axis internal standardization audit.
 
 External validation remains deferred.
