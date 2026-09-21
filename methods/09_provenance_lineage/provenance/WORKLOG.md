@@ -621,3 +621,132 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Proceed to a separately precommitted strongest-reasonable non-DSD Tracking baseline challenge.
+
+---
+
+## Step 9 — TRK-CH-005 strongest-reasonable baseline: preserved fixture failure
+
+```text
+PRECOMMIT_COMMIT: b410f63882fd311c24033e4527899023474ce7bc
+PRECOMMIT_BLOB:   fc408e2ee33a422964ed1c966d4a2e7edfce421b
+
+RESULT_COMMIT:    89b7f183c1bb567c1c133221f91feddf9d7e85c9
+RESULT_BLOB:      b98f1ae00e9817d4379793abefe9b2d107d10d19
+
+TOTAL: 68/72
+FAILED: 4
+CHALLENGE_RESULT:
+  FAIL_PRECOMMIT_FIXTURE_EXPECTATION
+```
+
+Failure location:
+
+```text
+R1-t1:
+  REL-v2 says "USES" means REFERENCES
+  and does not establish DEPENDS_ON.
+
+Frozen precommit incorrectly expected:
+  EXPLICITLY_NEGATED / COMPLETE
+
+Protocol-conformant result:
+  MISSING / PARTIAL
+```
+
+Preserved:
+
+```text
+NOT_ESTABLISHED != EXPLICITLY_NEGATED
+MISSING_LINK != NEGATIVE_LINK
+```
+
+The failure exposed no Tracking Protocol defect.
+
+```text
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+FIXTURE_PRECOMMIT_CORRECTION_REQUIRED: yes
+```
+
+The failed artifact remains historical and did not advance canonical counters under its frozen counter rule.
+
+## Step 10 — TRK-CH-005B corrected strongest-reasonable baseline
+
+A new prospective corrective precommit changed only the R1-t1 expected status/terminal.
+
+```text
+CORRECTIVE_PRECOMMIT_COMMIT: d69b2e68d835854c1483fdcb6c87a61a81953ebe
+CORRECTIVE_PRECOMMIT_BLOB:   21c233dc9914e8327f587fe38973df13624f287a
+
+RESULT_COMMIT:               82d01f10595a30bdce17fd9d5defc60f35bba730
+RESULT_BLOB:                 c447e772b5aafbdf0a712b8a370e077990e6c7d8
+
+TOTAL: 72/72 PASS
+TRACKING_METHOD_GAIN_STATUS: NO_GAIN
+```
+
+Corrected R1-t1:
+
+```text
+Tracking:
+  TRACKING_LINK_MISSING
+  TRACKING_TRACE_PARTIAL
+
+B1:
+  B1_ABSENT_REQUIRED_LINK
+  B1_TRACE_PARTIAL
+```
+
+All seven gain axes:
+
+```text
+G1 VERSION_AND_SCHEMA_GAIN -> BASELINE_MATCH
+G2 GRAPH_TOPOLOGY_GAIN -> BASELINE_MATCH
+G3 RECONSTRUCTION_LINEAGE_BOUNDARY_GAIN -> BASELINE_MATCH
+G4 TEMPORAL_RELATION_GAIN -> BASELINE_MATCH
+G5 LOSS_AND_UNRESOLVED_GAIN -> BASELINE_MATCH
+G6 BOUNDED_MAXIMUM_CLAIM_GAIN -> BASELINE_MATCH
+G7 TRACEABILITY_GAIN -> BASELINE_MATCH
+```
+
+Current canonical counters:
+
+```text
+DIRECT_TRACKING_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_TRACKING_PILOTS: 5
+
+POSITIVE_TRACKING_CASES: 1
+NEGATIVE_OR_FAILURE_TRACKING_CASES: 1
+METHOD_BOUNDARY_TRACKING_CASES: 1
+
+BASELINE_TRACKING_CASES: 2
+NO_GAIN_TRACKING_CASES: 2
+
+STRONGEST_REASONABLE_BASELINE_TRACKING:
+  established_at_constructed_evidence_level
+
+ALL_NINE_LINK_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SIX_TRACE_TERMINALS_DIRECTLY_EXERCISED: yes
+
+REPRODUCIBILITY_CASES: 0
+
+EXTERNAL_TRACKING_APPLICATIONS: 0
+INDEPENDENT_TRACKING_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+
+TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_TRACKING_EVIDENCE_STATUS: validation_in_progress
+
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+```text
+NO_GAIN != METHOD_FAILURE
+FAILED_FIXTURE != METHOD_FAILURE
+SAME_PROJECT_BASELINE != EXTERNAL_VALIDATION
+```
+
+## Next
+
+Prospectively precommit deterministic same-project retrace from immutable Protocol v0.1 and TRK-CH-005B artifacts.
