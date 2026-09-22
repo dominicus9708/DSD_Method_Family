@@ -50,7 +50,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Comparison | Protocol v0.1 established; maturity established after CMP-AUD-001; validation in progress |
 | Classification | Protocol v0.1 frozen; maturity established; independent-evaluator infrastructure next |
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
-| Tracking | internal standardization in progress; frozen-axis internal standardization audit next |
+| Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | developing |
 | Aggregation | developing |
 | Compression | proposed/developing |
@@ -99,7 +99,7 @@ evidence/CURRENT_EVIDENCE_APPLICABILITY_MATRIX.md
 `EVIDENCE_SCOPE_CLASS` and `CASE_ORIGIN` remain separate.
 Historical Analysis and Audit evidence is preserved in its original scope; reusable lessons may support shared rules without retroactively validating another method.
 
-## 5. Active development front — Tracking / DSD 추적론
+## 5. Recently closed internal-standardization front — Tracking / DSD 추적론
 
 Canonical current name: **Tracking / DSD 추적론**.  
 Legacy path retained: `methods/09_provenance_lineage/provenance/`.  
@@ -127,14 +127,41 @@ SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 EXTERNAL_TRACKING_APPLICATIONS: 0
 INDEPENDENT_TRACKING_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
-TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
+TRACKING_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_TRACKING_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-**Next canonical step:** prospectively precommit and execute the frozen-axis internal standardization audit.
-External Tracking validation remains deferred until the internal-standardization lane is closed.
+TRK-AUD-001 was prospectively precommitted and executed:
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 22a0fea4a321bbf47189aaf7737839c1b03e6eb9
+AUDIT_PRECOMMIT_BLOB: 3a6041fd6a168170ebd2d8d4ba090edc6a4cfa2a
+AUDIT_RESULT_COMMIT: 66c2f2cbabb3fcba6f17dce688ee03041cfe6e20
+AUDIT_CHECKS: 28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+```
+
+Tracking external validation remains deferred as a separate evidence phase.
+
+### Active next method — Lineage / DSD 계보론
+
+Current status before development: **developing**.
+
+The next canonical sequence is:
+
+```text
+Task Interface
+-> pre-protocol boundary attack
+-> Boundary Amendment if required
+-> executable Protocol
+-> positive / negative / boundary / NO_GAIN
+-> strongest-reasonable baseline
+-> deterministic same-project retrace
+-> frozen-axis internal standardization audit
+-> external validation later
+```
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -173,5 +200,4 @@ When surfaces differ, preserve history and reconcile by explicit version/commit/
 
 The current family-wide priority is **method-specific protocol/evidence maturation**, not adding more shared-core labels.
 
-At this synchronization point, the active next work item is the Tracking frozen-axis internal standardization audit.
-After a method's internal-standardization lane is closed, external-domain and independent validation remain separate evidence stages.
+At this synchronization point, Tracking's internal-standardization lane is closed at Protocol v0.1. The active next work item is DSD Lineage internal construction, beginning with its Task Interface and pre-protocol boundary attack. External-domain and independent validation remain separate evidence stages.
