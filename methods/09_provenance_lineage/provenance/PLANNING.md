@@ -1,6 +1,6 @@
 # DSD Tracking Planning / DSD 추적론 기획
 
-Status: **internal standardization in progress / TRK-CH-006 deterministic same-project retrace 56/56 PASS / frozen-axis internal standardization audit next / external validation deferred**  
+Status: **internal standardization complete / TRK-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / external validation deferred**  
 Date opened: **2026-09-20**  
 Legacy path ID: `09A`  
 Legacy directory: `methods/09_provenance_lineage/provenance/`
@@ -37,7 +37,7 @@ Task Interface
 9. ✅ Competent non-DSD baseline challenge — `TRK-CH-004`, 64/64 PASS / NO_GAIN.
 10. ✅ Strongest-reasonable baseline challenge — `TRK-CH-005` preserved 68/72 fixture failure; corrected `TRK-CH-005B` 72/72 PASS / NO_GAIN.
 11. ✅ Deterministic same-project retrace — `TRK-CH-006`, 56/56 PASS / same-project only.
-12. 🟨 Frozen-axis internal standardization audit.
+12. ✅ Frozen-axis internal standardization audit — `TRK-AUD-001`, 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
 13. ⏸ External applications deferred.
 
 ## Current counters
@@ -70,7 +70,7 @@ EXTERNAL_TRACKING_APPLICATIONS: 0
 INDEPENDENT_TRACKING_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
-TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
+TRACKING_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_TRACKING_EVIDENCE_STATUS: validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED: no
