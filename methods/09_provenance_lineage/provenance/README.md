@@ -1,6 +1,6 @@
 # DSD Tracking / DSD 추적론
 
-Status: **internal standardization in progress / TRK-CH-006 deterministic same-project retrace 56/56 PASS / internal standardization audit next / external validation deferred**  
+Status: **Tracking Protocol v0.1 internally standardized / TRK-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / external validation deferred**  
 Legacy path ID: `09A`  
 Legacy path: `methods/09_provenance_lineage/provenance/`  
 Former Korean label: **DSD 출처·유래 추적론**  
@@ -16,6 +16,8 @@ Higher field: **IV. Evidence & Lineage / 증거·계보**
 - [`WORKLOG.md`](WORKLOG.md)
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
+- [`TRK-AUD-001 precommit`](../../../evidence/method_specific/tracking/TRK-AUD-001_precommit.md)
+- [`TRK-AUD-001 result`](../../../evidence/method_specific/tracking/TRK-AUD-001_internal-standardization-review.md)
 
 ## Internal-standardization sequence
 
@@ -61,7 +63,7 @@ EXTERNAL_TRACKING_APPLICATIONS: 0
 INDEPENDENT_TRACKING_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
-TRACKING_INTERNAL_STANDARDIZATION_STATUS: developing
+TRACKING_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_TRACKING_EVIDENCE_STATUS: validation_in_progress
 ```
 
@@ -435,8 +437,54 @@ DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 RETRACE_PASS != EXTERNAL_APPLICABILITY
 ```
 
+## TRK-AUD-001 — frozen-axis internal standardization audit
+
+- [Precommit](../../../evidence/method_specific/tracking/TRK-AUD-001_precommit.md)
+- [Result](../../../evidence/method_specific/tracking/TRK-AUD-001_internal-standardization-review.md)
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 22a0fea4a321bbf47189aaf7737839c1b03e6eb9
+AUDIT_PRECOMMIT_BLOB:   3a6041fd6a168170ebd2d8d4ba090edc6a4cfa2a
+
+AUDIT_RESULT_COMMIT:    66c2f2cbabb3fcba6f17dce688ee03041cfe6e20
+
+PRECOMMITTED_REQUIRED_CHECKS: 28
+PASSED: 28
+FAILED: 0
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+TRACKING_INTERNAL_STANDARDIZATION_STATUS:
+  established
+```
+
+Frozen method-axis results:
+
+```text
+M1 PASS
+M2 PASS
+M3 PASS
+M4 PASS
+M5 CONDITIONAL_PASS
+M6 PASS
+M7 PASS
+M8 PASS
+M9 PASS
+M10 PASS
+M11 PASS
+M12 PASS
+M13 PASS
+M14 DEFERRED_BY_SEQUENCE
+M15 PASS
+```
+
+The audit preserved the original TRK-CH-005 68/72 fixture expectation failure and both NO_GAIN results. Internal promotion does not establish external applicability, independent validation, independent replication, or DSD-specific comparative gain.
+
 ## Next
 
-Prospectively precommit and execute the frozen-axis internal standardization audit.
+Tracking internal construction is closed at Protocol v0.1 unless a later contradiction reopens it.
 
-External validation remains deferred.
+Proceed to **DSD Lineage / DSD 계보론** as the next not-yet-internally-standardized method.
+
+Tracking external validation remains queued as a separate later evidence phase.
