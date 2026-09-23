@@ -137,7 +137,6 @@ No shared-core reopening is required.
 ## Current state
 
 ```text
-DEDICATED_LINEAGE_PROTOCOL: not established
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
