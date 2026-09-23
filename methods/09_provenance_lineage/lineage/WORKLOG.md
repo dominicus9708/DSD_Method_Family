@@ -243,3 +243,93 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute the first positive constructed Lineage challenge.
+
+
+---
+
+## Step 6 — LIN-CH-001 positive constructed challenge
+
+Prospective precommit:
+
+```text
+PRECOMMIT_COMMIT:
+  0d797ac8321d2ed9b79e98d0890cc5bf721b25a4
+PRECOMMIT_BLOB:
+  f9f31a9c7cdb5692ba06e1d01750a02dc9984c3c
+
+RESULT_COMMIT:
+  0b455a95c46225182c4fa2627766334fd507480f
+RESULT_BLOB:
+  a53dedb60cee339d75d792ecccd72a5ff7e30d64
+
+PRECOMMITTED_REQUIRED_CHECKS: 64
+PASSED: 64
+FAILED: 0
+```
+
+The fixture used three ordered times:
+
+```text
+t0 -> t1:
+  one fixed-background regular epoch
+  canonical channel lineage
+
+t1 -> t2:
+  formation-level transition
+  explicit supplied channel/component lineage
+
+t0 -> t2:
+  explicit direct long-interval lineage
+```
+
+Branching was preserved:
+
+```text
+cB -> {cB2,cC2}
+b1 -> {b2,c2}
+```
+
+The frozen identity-bearing family changed cardinality from 2 to 3 while bidirectional coverage still passed for every required ordered pair.
+
+```text
+STATE_SUCCESSION(t0,t1): established
+STATE_SUCCESSION(t1,t2): established
+STATE_SUCCESSION(t0,t2): established
+INTERVAL_IDENTITY_PRESERVATION: established
+
+LINEAGE_FAMILY_COHERENCE_STATUS:
+  LINEAGE_FAMILY_COHERENT
+
+LINEAGE_TASK_TERMINAL_STATUS:
+  LINEAGE_TASK_ESTABLISHED
+
+LINEAGE_PROTOCOL_CONFORMANCE:
+  LINEAGE_PROTOCOL_CONFORMANT
+
+LINEAGE_METHOD_GAIN_STATUS:
+  LINEAGE_METHOD_GAIN_NOT_ASSESSED
+```
+
+Tracking continuity and reduced readouts were retained only as sidecars and were not used as identity criteria.
+
+Counter update:
+
+```text
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 1
+POSITIVE_LINEAGE_CASES: 1
+BASELINE_LINEAGE_CASES: 0
+NO_GAIN_LINEAGE_CASES: 0
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_LINEAGE_APPLICATIONS: 0
+INDEPENDENT_LINEAGE_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_LINEAGE_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute a negative / unresolved-terminal Lineage challenge covering the remaining successor-status and task-terminal families.
