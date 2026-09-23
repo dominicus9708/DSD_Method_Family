@@ -1,6 +1,6 @@
 # DSD Lineage Planning / DSD 계보론 기획
 
-Status: **internal standardization in progress / Task Interface v0.1 + 18 pre-protocol boundary attacks complete / Boundary Amendment 001 next**  
+Status: **internal standardization in progress / Boundary Amendment 001 established / executable Protocol v0.1 frozen / positive challenge next**  
 Date opened: **2026-09-23**  
 Legacy path ID: `09B`  
 Path: `methods/09_provenance_lineage/lineage/`
@@ -30,9 +30,9 @@ Task Interface
 1. ✅ Lineage scope recovered from current Method Family registry and Dynamics source.
 2. ✅ Task Interface v0.1 historical draft established.
 3. ✅ Pre-protocol boundary attack — 18 constructed internal cases.
-4. 🟨 Boundary Amendment 001 — required by 5 nonbreaking refinements.
-5. ⏸ Executable Lineage Protocol v0.1.
-6. ⏸ Positive constructed challenge.
+4. ✅ Boundary Amendment 001 — 8/8 prospective refinement groups adopted.
+5. ✅ Executable Lineage Protocol v0.1 — frozen.
+6. 🟨 Positive constructed challenge.
 7. ⏸ Negative / unresolved terminal challenge.
 8. ⏸ Direct method-boundary challenge.
 9. ⏸ Competent non-DSD baseline.
@@ -53,7 +53,12 @@ PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
 BOUNDARY_COLLAPSE_FOUND: 0
 FUNDAMENTAL_INTERFACE_FAILURE: 0
 
-BOUNDARY_AMENDMENT_001: not yet established
+BOUNDARY_AMENDMENT_001: established
+REFINEMENT_GROUPS_ADOPTED: 8/8
+
+DEDICATED_LINEAGE_PROTOCOL: established v0.1
+VALIDITY_GATES: G1-G16
+BINDING_OPERATION: T1-T16
 
 DIRECT_LINEAGE_PILOTS_ATTEMPTED: 0
 SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 0
@@ -67,9 +72,9 @@ INDEPENDENT_LINEAGE_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
 LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_LINEAGE_EVIDENCE_STATUS: pre_protocol_boundary_attack_complete
+CURRENT_LINEAGE_EVIDENCE_STATUS: protocol_frozen
 
-PROTOCOL_REVISION_REQUIRED: not applicable pre-protocol
+PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
@@ -123,8 +128,26 @@ self-time/composition-coherence failure consequence
 task-terminal precedence
 ```
 
+## Amendment and protocol freeze
+
+```text
+AMENDMENT_COMMIT:
+  a448ac1ab49faddb97968ff5987d3c75ac77b6e0
+AMENDMENT_BLOB:
+  35568d0a27a8537347600efff87064b6b4ad177f
+
+PROTOCOL_COMMIT:
+  f69f364985d604d2c883b14b2efa18535a6bbf6e
+PROTOCOL_BLOB:
+  0ef686f3987b590e67e07b9ee5e4861c31e6e1ef
+
+REFINEMENT_GROUPS_ADOPTED: 8/8
+VALIDITY_GATES: G1-G16
+BINDING_OPERATION: T1-T16
+```
+
+Protocol v0.1 freezes the methodology-level execution semantics without modifying the source Dynamics lineage definitions.
+
 ## Next
 
-Establish **Lineage Task Interface Boundary Amendment 001** prospectively.
-
-Do not freeze Protocol v0.1 before that amendment is committed.
+Prospectively precommit the first positive constructed Lineage challenge, then execute it against frozen Protocol v0.1.
