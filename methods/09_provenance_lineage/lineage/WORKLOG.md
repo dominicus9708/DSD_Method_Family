@@ -155,3 +155,91 @@ SHARED_CORE_REOPEN_REQUIRED: no
 Create **Task Interface Boundary Amendment 001** prospectively.
 
 Only after the amendment is frozen may executable Lineage Protocol v0.1 be written.
+
+
+---
+
+## Step 4 — Boundary Amendment 001
+
+Five boundary-attack refinements were adopted prospectively as eight binding refinement groups.
+
+```text
+AMENDMENT_COMMIT:
+  a448ac1ab49faddb97968ff5987d3c75ac77b6e0
+AMENDMENT_BLOB:
+  35568d0a27a8537347600efff87064b6b4ad177f
+
+BOUNDARY_AMENDMENT_001: established
+REFINEMENT_GROUPS_ADOPTED: 8/8
+PROTOCOL_FREEZE_AUTHORIZED: yes
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The amendment locks:
+
+```text
+identity-bearing-family ID/version/provenance/selection
+predecessor/successor identity/type/formation discipline
+fixed-background canonical versus transition lineage
+family coherence and direct-long-interval separation
+auxiliary-lineage and state-coverage discipline
+branch/merge versus optional stronger constraints
+exact successor-status semantics
+neighboring-method / diagnostic non-substitution
+```
+
+## Step 5 — executable Lineage Protocol v0.1 frozen
+
+```text
+PROTOCOL_COMMIT:
+  f69f364985d604d2c883b14b2efa18535a6bbf6e
+PROTOCOL_BLOB:
+  0ef686f3987b590e67e07b9ee5e4861c31e6e1ef
+
+DEDICATED_LINEAGE_PROTOCOL: established v0.1
+VALIDITY_GATES: G1-G16
+BINDING_OPERATION: T1-T16
+```
+
+The protocol freezes:
+
+```text
+claim-level gate
+fixed-background canonical-lineage gate
+transition-lineage gate
+channel/component lineage ledgers
+family coherence
+identity-bearing-family precommit
+bidirectional state coverage
+interval identity preservation
+branch/merge handling
+optional uniqueness/bijection/cardinality constraints
+nine successor statuses
+seven task terminals with precedence
+neighboring-method handoffs
+secondary-diagnostic sidecar
+protocol conformance
+method-gain status
+maximum-supported-claim record
+```
+
+Current counters remain zero for direct validation cases.
+
+```text
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 0
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 0
+BASELINE_LINEAGE_CASES: 0
+NO_GAIN_LINEAGE_CASES: 0
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_LINEAGE_APPLICATIONS: 0
+INDEPENDENT_LINEAGE_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_LINEAGE_EVIDENCE_STATUS: protocol_frozen
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute the first positive constructed Lineage challenge.
