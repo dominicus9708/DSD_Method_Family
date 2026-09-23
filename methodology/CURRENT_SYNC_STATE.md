@@ -1,6 +1,6 @@
 # DSD Method Family — Current Sync State
 
-Synchronized: **2026-09-22 KST**  
+Synchronized: **2026-09-23 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
 Method-state source commit before this synchronization record: `5d9475708718780a3038451290b25e1f9c0b0fe1`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
@@ -51,7 +51,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Classification | Protocol v0.1 frozen; maturity established; independent-evaluator infrastructure next |
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
-| Lineage | developing |
+| Lineage | internal standardization in progress; Task Interface v0.1 + 18 pre-protocol boundary attacks complete; Boundary Amendment 001 next |
 | Aggregation | developing |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
@@ -145,23 +145,47 @@ FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
 
 Tracking external validation remains deferred as a separate evidence phase.
 
-### Active next method — Lineage / DSD 계보론
+### Active method — Lineage / DSD 계보론
 
-Current status before development: **developing**.
-
-The next canonical sequence is:
+Current state:
 
 ```text
-Task Interface
--> pre-protocol boundary attack
--> Boundary Amendment if required
--> executable Protocol
--> positive / negative / boundary / NO_GAIN
--> strongest-reasonable baseline
--> deterministic same-project retrace
--> frozen-axis internal standardization audit
--> external validation later
+TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
+
+TASK_INTERFACE_COMMIT:
+  e233916530e8824427411d070ba0881160648618
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
+
+BOUNDARY_ATTACK_COMMIT:
+  3a8e860b7ea04eb321bb10c99922b224a58ff3dd
+
+PRESERVED_NO_REFINEMENT: 13
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
+
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+
+BOUNDARY_AMENDMENT_001: not yet established
+DEDICATED_LINEAGE_PROTOCOL: not established
+
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_LINEAGE_EVIDENCE_STATUS: pre_protocol_boundary_attack_complete
+
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
+
+The five prospective refinements concern:
+
+```text
+identity-bearing-family identity/version/provenance and selection lock
+explicit lineage-family coherence status
+NOT_ESTABLISHED versus BLOCKED semantics
+required auxiliary-lineage absence
+self-time/composition-coherence consequences and task-terminal precedence
+```
+
+**Next canonical step:** establish Lineage Task Interface Boundary Amendment 001 prospectively, then freeze executable Protocol v0.1.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -200,4 +224,4 @@ When surfaces differ, preserve history and reconcile by explicit version/commit/
 
 The current family-wide priority is **method-specific protocol/evidence maturation**, not adding more shared-core labels.
 
-At this synchronization point, Tracking's internal-standardization lane is closed at Protocol v0.1. The active next work item is DSD Lineage internal construction, beginning with its Task Interface and pre-protocol boundary attack. External-domain and independent validation remain separate evidence stages.
+At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Task Interface v0.1 and its 18-case pre-protocol boundary attack are complete. The active next work item is Lineage Boundary Amendment 001; executable Protocol v0.1 must not be frozen before that amendment. External-domain and independent validation remain separate evidence stages.
