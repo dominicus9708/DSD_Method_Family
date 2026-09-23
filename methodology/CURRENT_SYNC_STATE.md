@@ -51,7 +51,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Classification | Protocol v0.1 frozen; maturity established; independent-evaluator infrastructure next |
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
-| Lineage | Protocol v0.1 frozen; Boundary Amendment 001 established; positive constructed challenge next |
+| Lineage | Protocol v0.1 frozen; LIN-CH-001 64/64 PASS; negative-unresolved challenge next |
 | Aggregation | developing |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
@@ -179,7 +179,7 @@ VALIDITY_GATES: G1-G16
 BINDING_OPERATION: T1-T16
 
 LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_LINEAGE_EVIDENCE_STATUS: protocol_frozen
+CURRENT_LINEAGE_EVIDENCE_STATUS: validation_in_progress
 
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
@@ -194,7 +194,30 @@ required auxiliary-lineage absence
 self-time/composition-coherence consequences and task-terminal precedence
 ```
 
-**Next canonical step:** prospectively precommit and execute the first positive constructed Lineage challenge against frozen Protocol v0.1.
+LIN-CH-001 was prospectively precommitted and executed:
+
+```text
+PRECOMMIT_COMMIT: 0d797ac8321d2ed9b79e98d0890cc5bf721b25a4
+PRECOMMIT_BLOB: f9f31a9c7cdb5692ba06e1d01750a02dc9984c3c
+RESULT_COMMIT: 0b455a95c46225182c4fa2627766334fd507480f
+RESULT_BLOB: a53dedb60cee339d75d792ecccd72a5ff7e30d64
+CHECKS: 64/64 PASS
+TASK_TERMINAL: LINEAGE_TASK_ESTABLISHED
+PROTOCOL_CONFORMANCE: LINEAGE_PROTOCOL_CONFORMANT
+```
+
+Current direct counters:
+
+```text
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 1
+POSITIVE_LINEAGE_CASES: 1
+BASELINE_LINEAGE_CASES: 0
+NO_GAIN_LINEAGE_CASES: 0
+REPRODUCIBILITY_CASES: 0
+```
+
+**Next canonical step:** prospectively precommit and execute the negative / unresolved-terminal Lineage challenge.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -233,4 +256,4 @@ When surfaces differ, preserve history and reconcile by explicit version/commit/
 
 The current family-wide priority is **method-specific protocol/evidence maturation**, not adding more shared-core labels.
 
-At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The active next work item is the first prospectively precommitted positive constructed Lineage challenge. External-domain and independent validation remain separate evidence stages.
+At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The first positive constructed Lineage challenge is complete at 64/64 PASS. The active next work item is the prospectively precommitted negative / unresolved-terminal Lineage challenge. External-domain and independent validation remain separate evidence stages.
