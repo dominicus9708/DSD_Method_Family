@@ -1,6 +1,6 @@
 # DSD Lineage / DSD 계보론
 
-Status: **internal standardization in progress / Task Interface v0.1 + 18 pre-protocol boundary attacks complete / Boundary Amendment 001 next**  
+Status: **Lineage Protocol v0.1 frozen / Boundary Amendment 001 established / positive constructed challenge next**  
 Legacy path ID: `09B`  
 Higher field: **IV. Evidence & Lineage / 증거·계보**
 
@@ -10,6 +10,8 @@ Higher field: **IV. Evidence & Lineage / 증거·계보**
 - [`WORKLOG.md`](WORKLOG.md)
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
+- [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
+- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 
 ## Task
 
@@ -139,7 +141,12 @@ DEDICATED_LINEAGE_PROTOCOL: not established
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
-BOUNDARY_AMENDMENT_001: not yet established
+BOUNDARY_AMENDMENT_001: established
+REFINEMENT_GROUPS_ADOPTED: 8/8
+
+DEDICATED_LINEAGE_PROTOCOL: established v0.1
+VALIDITY_GATES: G1-G16
+BINDING_OPERATION: T1-T16
 
 DIRECT_LINEAGE_PILOTS_ATTEMPTED: 0
 SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 0
@@ -152,13 +159,35 @@ INDEPENDENT_LINEAGE_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
 LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_LINEAGE_EVIDENCE_STATUS: pre_protocol_boundary_attack_complete
+CURRENT_LINEAGE_EVIDENCE_STATUS: protocol_frozen
 
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
+## Boundary Amendment 001 and frozen protocol
+
+```text
+AMENDMENT_COMMIT:
+  a448ac1ab49faddb97968ff5987d3c75ac77b6e0
+AMENDMENT_BLOB:
+  35568d0a27a8537347600efff87064b6b4ad177f
+
+PROTOCOL_COMMIT:
+  f69f364985d604d2c883b14b2efa18535a6bbf6e
+PROTOCOL_BLOB:
+  0ef686f3987b590e67e07b9ee5e4861c31e6e1ef
+
+REFINEMENT_GROUPS_ADOPTED: 8/8
+VALIDITY_GATES: G1-G16
+BINDING_OPERATION: T1-T16
+```
+
+The amendment prospectively locks identity-bearing-family provenance, family-coherence status, NOT_ESTABLISHED versus BLOCKED semantics, required auxiliary-lineage handling, and task-terminal precedence.
+
+Protocol v0.1 is now the frozen executable internal protocol for constructed validation.
+
 ## Next
 
-Establish **Lineage Task Interface Boundary Amendment 001** prospectively.
+Prospectively precommit and execute the first **positive constructed Lineage challenge**.
 
-Do not freeze executable Protocol v0.1 before that amendment is committed.
+External validation remains deferred.
