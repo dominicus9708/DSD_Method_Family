@@ -1,6 +1,6 @@
 # DSD Lineage Planning / DSD 계보론 기획
 
-Status: **internal standardization in progress / LIN-CH-001 64/64 PASS + LIN-CH-002 80/80 PASS / direct method-boundary challenge next**  
+Status: **internal standardization in progress / LIN-CH-003 direct boundary 72/72 PASS / competent baseline next**  
 Date opened: **2026-09-23**  
 Legacy path ID: `09B`  
 Path: `methods/09_provenance_lineage/lineage/`
@@ -34,8 +34,8 @@ Task Interface
 5. ✅ Executable Lineage Protocol v0.1 — frozen.
 6. ✅ Positive constructed challenge — `LIN-CH-001`, 64/64 PASS.
 7. ✅ Negative / unresolved terminal challenge — `LIN-CH-002`, 80/80 PASS.
-8. 🟨 Direct method-boundary challenge.
-9. ⏸ Competent non-DSD baseline.
+8. ✅ Direct method-boundary challenge — `LIN-CH-003`, 72/72 PASS.
+9. 🟨 Competent non-DSD baseline.
 10. ⏸ Strongest-reasonable baseline.
 11. ⏸ Deterministic same-project retrace.
 12. ⏸ Frozen-axis internal standardization audit.
@@ -59,10 +59,17 @@ DEDICATED_LINEAGE_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G16
 BINDING_OPERATION: T1-T16
 
-DIRECT_LINEAGE_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 2
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 3
 POSITIVE_LINEAGE_CASES: 1
 NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
+METHOD_BOUNDARY_LINEAGE_CASES: 1
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 8
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
+DYNAMICS_SOURCE_LAYER_BOUNDARY_TESTS: 1
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 
@@ -188,6 +195,27 @@ ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 
 The ten-subcase challenge preserved all frozen negative/unresolved distinctions without protocol revision.
 
+## LIN-CH-003
+
+```text
+PRECOMMIT_COMMIT: 7c68b63a0643b50fab49443c126955f0035d97a7
+PRECOMMIT_BLOB: 7488e670a50ee08ca739b6e37ce78781c8b04b83
+RESULT_COMMIT: cc86daab1c8e0643e878159c913836bfe1e5aa38
+RESULT_BLOB: ea3a94a1e6c572ea51efa719fd9450bd5c83c433
+
+PRECOMMITTED_REQUIRED_CHECKS: 72
+PASSED: 72
+FAILED: 0
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 8
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
+```
+
+The result is explicitly fixture-bounded and does not claim permanent method irreducibility.
+
 ## Next
 
-Prospectively precommit and execute the direct neighboring-method boundary challenge.
+Prospectively precommit and execute the competent non-DSD baseline challenge.
