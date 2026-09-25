@@ -1,6 +1,6 @@
 # DSD Lineage Planning / DSD 계보론 기획
 
-Status: **internal standardization in progress / LIN-CH-001 positive challenge 64/64 PASS / negative-unresolved challenge next**  
+Status: **internal standardization in progress / LIN-CH-001 64/64 PASS + LIN-CH-002 80/80 PASS / direct method-boundary challenge next**  
 Date opened: **2026-09-23**  
 Legacy path ID: `09B`  
 Path: `methods/09_provenance_lineage/lineage/`
@@ -33,8 +33,8 @@ Task Interface
 4. ✅ Boundary Amendment 001 — 8/8 prospective refinement groups adopted.
 5. ✅ Executable Lineage Protocol v0.1 — frozen.
 6. ✅ Positive constructed challenge — `LIN-CH-001`, 64/64 PASS.
-7. 🟨 Negative / unresolved terminal challenge.
-8. ⏸ Direct method-boundary challenge.
+7. ✅ Negative / unresolved terminal challenge — `LIN-CH-002`, 80/80 PASS.
+8. 🟨 Direct method-boundary challenge.
 9. ⏸ Competent non-DSD baseline.
 10. ⏸ Strongest-reasonable baseline.
 11. ⏸ Deterministic same-project retrace.
@@ -59,9 +59,12 @@ DEDICATED_LINEAGE_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G16
 BINDING_OPERATION: T1-T16
 
-DIRECT_LINEAGE_PILOTS_ATTEMPTED: 1
-SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 1
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 2
 POSITIVE_LINEAGE_CASES: 1
+NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
+ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 
 BASELINE_LINEAGE_CASES: 0
 NO_GAIN_LINEAGE_CASES: 0
@@ -167,6 +170,24 @@ LINEAGE_METHOD_GAIN_STATUS: LINEAGE_METHOD_GAIN_NOT_ASSESSED
 
 The fixture exercised canonical fixed-background lineage, explicit transition lineage, branching, family coherence, direct-long-interval separation, bidirectional state coverage, and interval identity preservation.
 
+## LIN-CH-002
+
+```text
+PRECOMMIT_COMMIT: 169021711ea5069f1e63246efdd2ddfafbb3067a
+PRECOMMIT_BLOB: d5537721f9dc55291f61569ad57eaa7e6b844a5b
+RESULT_COMMIT: bce8356317ca8b1411eee7b518f1c993864b6fa6
+RESULT_BLOB: 3a40361b1c589e6a206bcbd4a6baa38054e6f075
+
+PRECOMMITTED_REQUIRED_CHECKS: 80
+PASSED: 80
+FAILED: 0
+
+ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
+```
+
+The ten-subcase challenge preserved all frozen negative/unresolved distinctions without protocol revision.
+
 ## Next
 
-Prospectively precommit and execute the negative / unresolved-terminal Lineage challenge.
+Prospectively precommit and execute the direct neighboring-method boundary challenge.
