@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-25 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `5d9475708718780a3038451290b25e1f9c0b0fe1`  
+Method-state source commit before this synchronization record: `bdd617895576f4ccf1151a9dff6787a81ee76ca6`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -51,7 +51,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Classification | Protocol v0.1 frozen; maturity established; independent-evaluator infrastructure next |
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
-| Lineage | Protocol v0.1 frozen; LIN-CH-004 64/64 PASS / NO_GAIN; LIN-CH-005 72/72 PASS / NO_GAIN; strongest reasonable baseline established at constructed-evidence level; deterministic retrace next |
+| Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Aggregation | developing |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
@@ -178,7 +178,7 @@ PROTOCOL_BLOB: 0ef686f3987b590e67e07b9ee5e4861c31e6e1ef
 VALIDITY_GATES: G1-G16
 BINDING_OPERATION: T1-T16
 
-LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_LINEAGE_EVIDENCE_STATUS: validation_in_progress
 
 SHARED_CORE_REOPEN_REQUIRED: no
@@ -225,7 +225,10 @@ ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 BASELINE_LINEAGE_CASES: 2
 NO_GAIN_LINEAGE_CASES: 2
 STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
 ```
 
 LIN-CH-002 was prospectively precommitted and executed:
@@ -277,7 +280,34 @@ GAIN_STATUS: NO_GAIN
 STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
 ```
 
-**Next canonical step:** prospectively precommit and execute a deterministic same-project Lineage retrace.
+LIN-CH-006 deterministic same-project retrace:
+
+```text
+PRECOMMIT_COMMIT: eaae98831363f9c4cdf4ad90fb6219e7362dbd85
+PRECOMMIT_BLOB: ae4a04ecf9273141cccbb7055cbcad416ae9d4cd
+RECONSTRUCTION_LEDGER_COMMIT: f60f70c1b970ce8c10eaecf7b4430ed57c0f3d8e
+RECONSTRUCTION_LEDGER_BLOB: d2cd0f3f86ead187a45e8e3a8ac724322ea9467d
+RESULT_COMMIT: cfdf96d2db01631f19ea8f83f8ce815e7e06857b
+RESULT_BLOB: 51464ada941925e2adef5bd98ee2f511fda8f10c
+CHECKS: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+```
+
+LIN-AUD-001 frozen-axis internal standardization audit:
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 041f0f3129cd6925fbde683738028be431847cb7
+AUDIT_PRECOMMIT_BLOB: a341a35a683d8d3d8276c0109862aec4d6293936
+AUDIT_RESULT_COMMIT: 4fbc33e79dbac603a4cddbc356e105d2c6189eba
+AUDIT_RESULT_BLOB: ed186ab0ff00e79e30972f40a4c1365cedfa8cd1
+AUDIT_CHECKS: 28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: established
+```
+
+**Next canonical phase:** external applications and/or independent validation infrastructure, kept separate from the closed internal-standardization lane.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -316,4 +346,4 @@ When surfaces differ, preserve history and reconcile by explicit version/commit/
 
 The current family-wide priority is **method-specific protocol/evidence maturation**, not adding more shared-core labels.
 
-At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The positive, negative/unresolved, and direct-boundary challenges remain complete. The competent baseline is complete at 64/64 PASS / NO_GAIN, and the strongest-reasonable baseline is complete at 72/72 PASS / NO_GAIN with strongest-reasonable status established at the constructed-evidence level. The active next work item is a prospectively precommitted deterministic same-project Lineage retrace. External-domain and independent validation remain separate evidence stages.
+At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The positive, negative/unresolved, boundary, competent-baseline, and strongest-reasonable-baseline challenges remain complete. LIN-CH-006 deterministically retraced the strongest-baseline Lineage-side outputs at 56/56 PASS with zero claim-relevant mismatches and zero post-comparison corrections. LIN-AUD-001 then passed 28/28 and promoted Lineage Protocol v0.1 to project-internal standard status. The Lineage internal-standardization lane is closed; external applications and independent validation remain separate later evidence phases. External-domain and independent validation remain separate evidence stages.
