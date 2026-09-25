@@ -1,6 +1,6 @@
 # DSD Aggregation Planning / DSD 집계론 기획
 
-Status: **internal standardization in progress / AGG-CH-001 64/64 PASS + AGG-CH-002 80/80 PASS / direct boundary challenge next**
+Status: **internal standardization in progress / AGG-CH-001~003 PASS / competent baseline next**
 Date opened: **2026-09-25**
 Legacy path ID: `10A`
 Path: `methods/10_aggregation_compression/aggregation/`
@@ -120,7 +120,7 @@ source and registry recovery
 3. ✅ Pre-protocol boundary attack — 18 cases; 13 preserved / 5 nonbreaking refinements.
 4. ✅ Boundary Amendment 001 — 5/5 refinement groups adopted.
 5. ✅ Executable Aggregation Protocol v0.1 — frozen.
-6. 🟨 Positive / negative / boundary cases — AGG-CH-001 positive 64/64 PASS; AGG-CH-002 negative/unresolved 80/80 PASS; direct boundary challenge next.
+6. ✅ Positive / negative / boundary cases — AGG-CH-001 64/64 PASS; AGG-CH-002 80/80 PASS; AGG-CH-003 72/72 PASS.
 7. ⏸ Competent and strongest-reasonable baselines.
 8. ⏸ Deterministic same-project retrace.
 9. ⏸ Frozen-axis internal standardization audit.
@@ -178,7 +178,22 @@ ALL_SEVEN_AGGREGATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
   yes
 
 METHOD_BOUNDARY_AGGREGATION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  8
+
+EXACT_COLLAPSE_PAIRS:
   0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  8
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
 
 BASELINE_AGGREGATION_CASES:
   0
@@ -250,6 +265,20 @@ CHECKS: 80/80 PASS
 ALL_SEVEN_AGGREGATION_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 ```
 
+## AGG-CH-003
+
+```text
+PRECOMMIT_COMMIT: e3de5052e01db87185a6fe1d3d2885ba3336e23c
+PRECOMMIT_BLOB: 367f455914bd2eb22329408972542e479e5b45e9
+RESULT_COMMIT: 9c0d8ef548b5059289da85e8bc6eaa18e250ee80
+RESULT_BLOB: d47f45884576ebb5cda4fc8967abff5bc484406a
+CHECKS: 72/72 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 8
+EXACT_COLLAPSE_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
 ## Next
 
-Prospectively precommit and execute the direct neighboring-method Aggregation boundary challenge.
+Prospectively precommit and execute the competent non-DSD Aggregation baseline challenge.
