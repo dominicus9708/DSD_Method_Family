@@ -1,6 +1,6 @@
 # DSD Lineage / DSD 계보론
 
-Status: **Lineage Protocol v0.1 frozen / LIN-CH-001 positive constructed challenge 64/64 PASS / negative-unresolved challenge next**  
+Status: **Lineage Protocol v0.1 frozen / LIN-CH-001 64/64 PASS + LIN-CH-002 80/80 PASS / direct method-boundary challenge next**  
 Legacy path ID: `09B`  
 Higher field: **IV. Evidence & Lineage / 증거·계보**
 
@@ -14,6 +14,8 @@ Higher field: **IV. Evidence & Lineage / 증거·계보**
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - [`LIN-CH-001 precommit`](../../../evidence/method_specific/lineage/LIN-CH-001_precommit.md)
 - [`LIN-CH-001 result`](../../../evidence/method_specific/lineage/LIN-CH-001_positive-constructed.md)
+- [`LIN-CH-002 precommit`](../../../evidence/method_specific/lineage/LIN-CH-002_precommit.md)
+- [`LIN-CH-002 result`](../../../evidence/method_specific/lineage/LIN-CH-002_negative-unresolved.md)
 
 ## Task
 
@@ -149,9 +151,12 @@ DEDICATED_LINEAGE_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G16
 BINDING_OPERATION: T1-T16
 
-DIRECT_LINEAGE_PILOTS_ATTEMPTED: 1
-SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 1
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 2
 POSITIVE_LINEAGE_CASES: 1
+NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
+ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 BASELINE_LINEAGE_CASES: 0
 NO_GAIN_LINEAGE_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -217,8 +222,34 @@ LINEAGE_METHOD_GAIN_STATUS:
 
 The constructed fixture combined one fixed-background regular segment with one explicit formation-transition segment, preserved branching, satisfied channel/component coherence, passed bidirectional identity-bearing state coverage for all required ordered time pairs, and established interval Lineage identity without using Tracking continuity or reduced readouts as identity criteria.
 
+## LIN-CH-002 — negative / unresolved-terminal challenge
+
+```text
+PRECOMMIT_COMMIT:
+  169021711ea5069f1e63246efdd2ddfafbb3067a
+PRECOMMIT_BLOB:
+  d5537721f9dc55291f61569ad57eaa7e6b844a5b
+
+RESULT_COMMIT:
+  bce8356317ca8b1411eee7b518f1c993864b6fa6
+RESULT_BLOB:
+  3a40361b1c589e6a206bcbd4a6baa38054e6f075
+
+PRECOMMITTED_REQUIRED_CHECKS: 80
+PASSED: 80
+FAILED: 0
+
+ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+```
+
+The challenge directly separated explicit negation, evaluable non-establishment, ambiguity, conflict, blockage, inapplicability, out-of-scope, underdetermination, partial completion, and evaluable family incoherence while preserving protocol conformance.
+
 ## Next
 
-Prospectively precommit and execute a **negative / unresolved-terminal Lineage challenge**.
+Prospectively precommit and execute the **direct neighboring-method boundary challenge** under fair shared-artifact access.
 
 External validation remains deferred.
