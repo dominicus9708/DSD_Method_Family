@@ -51,7 +51,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Classification | Protocol v0.1 frozen; maturity established; independent-evaluator infrastructure next |
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
-| Lineage | Protocol v0.1 frozen; LIN-CH-001 64/64 PASS; LIN-CH-002 80/80 PASS; direct method-boundary challenge next |
+| Lineage | Protocol v0.1 frozen; LIN-CH-001 64/64 PASS; LIN-CH-002 80/80 PASS; LIN-CH-003 72/72 PASS; competent baseline next |
 | Aggregation | developing |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
@@ -209,10 +209,17 @@ PROTOCOL_CONFORMANCE: LINEAGE_PROTOCOL_CONFORMANT
 Current direct counters:
 
 ```text
-DIRECT_LINEAGE_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 2
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 3
 POSITIVE_LINEAGE_CASES: 1
 NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
+METHOD_BOUNDARY_LINEAGE_CASES: 1
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 8
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
+DYNAMICS_SOURCE_LAYER_BOUNDARY_TESTS: 1
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 BASELINE_LINEAGE_CASES: 0
@@ -232,7 +239,21 @@ ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 ```
 
-**Next canonical step:** prospectively precommit and execute the direct neighboring-method boundary challenge under fair shared-artifact access.
+LIN-CH-003 was prospectively precommitted and executed:
+
+```text
+PRECOMMIT_COMMIT: 7c68b63a0643b50fab49443c126955f0035d97a7
+PRECOMMIT_BLOB: 7488e670a50ee08ca739b6e37ce78781c8b04b83
+RESULT_COMMIT: cc86daab1c8e0643e878159c913836bfe1e5aa38
+RESULT_BLOB: ea3a94a1e6c572ea51efa719fd9450bd5c83c433
+CHECKS: 72/72 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 8
+EXACT_COLLAPSE_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
+```
+
+**Next canonical step:** prospectively precommit and execute a competent non-DSD baseline challenge.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -271,4 +292,4 @@ When surfaces differ, preserve history and reconcile by explicit version/commit/
 
 The current family-wide priority is **method-specific protocol/evidence maturation**, not adding more shared-core labels.
 
-At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The first positive constructed Lineage challenge is complete at 64/64 PASS, and the negative / unresolved-terminal challenge is complete at 80/80 PASS. The active next work item is the prospectively precommitted direct neighboring-method boundary challenge. External-domain and independent validation remain separate evidence stages.
+At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The positive constructed challenge is complete at 64/64 PASS, the negative / unresolved-terminal challenge at 80/80 PASS, and the direct neighboring-method boundary challenge at 72/72 PASS. The active next work item is a prospectively precommitted competent non-DSD baseline challenge. External-domain and independent validation remain separate evidence stages.
