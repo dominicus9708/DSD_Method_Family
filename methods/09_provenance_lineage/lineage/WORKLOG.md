@@ -333,3 +333,85 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute a negative / unresolved-terminal Lineage challenge covering the remaining successor-status and task-terminal families.
+
+
+---
+
+## Step 7 — LIN-CH-002 negative / unresolved-terminal challenge
+
+Prospective precommit and result:
+
+```text
+PRECOMMIT_COMMIT:
+  169021711ea5069f1e63246efdd2ddfafbb3067a
+PRECOMMIT_BLOB:
+  d5537721f9dc55291f61569ad57eaa7e6b844a5b
+
+RESULT_COMMIT:
+  bce8356317ca8b1411eee7b518f1c993864b6fa6
+RESULT_BLOB:
+  3a40361b1c589e6a206bcbd4a6baa38054e6f075
+
+PRECOMMITTED_REQUIRED_CHECKS: 80
+PASSED: 80
+FAILED: 0
+```
+
+Ten independent subcases directly exercised:
+
+```text
+EXPLICITLY_NEGATED
+NOT_ESTABLISHED
+AMBIGUOUS
+CONFLICTING
+BLOCKED
+INAPPLICABLE
+OUT_OF_SCOPE
+UNDERDETERMINED
+PARTIAL
+INCOHERENT_FAMILY
+```
+
+Direct successor-status coverage is now complete across LIN-CH-001 and LIN-CH-002:
+
+```text
+ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
+```
+
+Key distinctions preserved:
+
+```text
+EXPLICITLY_NEGATED != NOT_ESTABLISHED
+NOT_ESTABLISHED != BLOCKED
+AMBIGUOUS != UNDERDETERMINED
+CONFLICTING != UNDERDETERMINED
+INAPPLICABLE != OUT_OF_SCOPE
+INCOHERENT != BLOCKED
+PARTIAL != rescue for a single failed state-succession proposition
+```
+
+All ten subcases remained `LINEAGE_PROTOCOL_CONFORMANT`.
+
+Counter update:
+
+```text
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 2
+POSITIVE_LINEAGE_CASES: 1
+NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
+BASELINE_LINEAGE_CASES: 0
+NO_GAIN_LINEAGE_CASES: 0
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_LINEAGE_APPLICATIONS: 0
+INDEPENDENT_LINEAGE_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_LINEAGE_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute the direct neighboring-method boundary challenge under fair shared-artifact access.
