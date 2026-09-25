@@ -1,6 +1,6 @@
 # DSD Lineage / DSD 계보론
 
-Status: **Lineage Protocol v0.1 frozen / LIN-CH-001 64/64 PASS + LIN-CH-002 80/80 PASS + LIN-CH-003 72/72 PASS / competent baseline next**  
+Status: **Lineage Protocol v0.1 frozen / LIN-CH-004 64/64 PASS NO_GAIN + LIN-CH-005 72/72 PASS NO_GAIN / deterministic retrace next**  
 Legacy path ID: `09B`  
 Higher field: **IV. Evidence & Lineage / 증거·계보**
 
@@ -18,6 +18,10 @@ Higher field: **IV. Evidence & Lineage / 증거·계보**
 - [`LIN-CH-002 result`](../../../evidence/method_specific/lineage/LIN-CH-002_negative-unresolved.md)
 - [`LIN-CH-003 precommit`](../../../evidence/method_specific/lineage/LIN-CH-003_precommit.md)
 - [`LIN-CH-003 result`](../../../evidence/method_specific/lineage/LIN-CH-003_direct-method-boundary.md)
+- [`LIN-CH-004 precommit`](../../../evidence/method_specific/lineage/LIN-CH-004_precommit.md)
+- [`LIN-CH-004 result`](../../../evidence/method_specific/lineage/LIN-CH-004_competent-baseline-no-gain.md)
+- [`LIN-CH-005 precommit`](../../../evidence/method_specific/lineage/LIN-CH-005_precommit.md)
+- [`LIN-CH-005 result`](../../../evidence/method_specific/lineage/LIN-CH-005_strongest-reasonable-baseline.md)
 
 ## Task
 
@@ -153,8 +157,8 @@ DEDICATED_LINEAGE_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G16
 BINDING_OPERATION: T1-T16
 
-DIRECT_LINEAGE_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 3
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 5
 POSITIVE_LINEAGE_CASES: 1
 NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
 METHOD_BOUNDARY_LINEAGE_CASES: 1
@@ -166,8 +170,9 @@ DYNAMICS_SOURCE_LAYER_BOUNDARY_TESTS: 1
 SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
-BASELINE_LINEAGE_CASES: 0
-NO_GAIN_LINEAGE_CASES: 0
+BASELINE_LINEAGE_CASES: 2
+NO_GAIN_LINEAGE_CASES: 2
+STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 
 EXTERNAL_LINEAGE_APPLICATIONS: 0
@@ -291,10 +296,53 @@ The fair shared-artifact fixture separated Lineage from Tracking, Reconstruction
 
 This is fixture-bounded separation only, not permanent irreducibility or method superiority.
 
+## LIN-CH-004 — competent non-DSD baseline
+
+```text
+PRECOMMIT_COMMIT:
+  20d6dacf04f6a87b276af23bc7d4468b937a4850
+PRECOMMIT_BLOB:
+  0ac9e959500192f28177112de68361ccd8a29270
+
+RESULT_COMMIT:
+  0c2f048ddfce4191be38826d33f5ee2b1f342750
+RESULT_BLOB:
+  39dca881b4f8b726226779f13e44d7f44846daf4
+
+CHECKS: 64/64 PASS
+LINEAGE_METHOD_GAIN_STATUS:
+  LINEAGE_METHOD_GAIN_NO_GAIN
+```
+
+A competent generic typed succession evaluator received equal claim-relevant information and matched all six frozen gain axes.
+
+## LIN-CH-005 — strongest-reasonable non-DSD baseline
+
+```text
+PRECOMMIT_COMMIT:
+  d0c5b6c6d060c30a85856f93cbd53d4dc341515a
+PRECOMMIT_BLOB:
+  91dc9f6aeab1a1b101354b0ebbb2c4ae0eb123e1
+
+RESULT_COMMIT:
+  628d1f31de6060d943666f76cd05990423f35add
+RESULT_BLOB:
+  b2d0bca6e270d61dc378a2950876da935df8db48
+
+CHECKS: 72/72 PASS
+LINEAGE_METHOD_GAIN_STATUS:
+  LINEAGE_METHOD_GAIN_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_LINEAGE:
+  established_at_constructed_evidence_level
+```
+
+The materially stronger baseline matched versioned identity rules, branch/merge policy separation, prerequisite dependency closure, relation-algebra coherence, unresolved/conflict handling, bounded claims, and deterministic ledger requirements.
+
+`NO_GAIN` remains a bounded performance result and is not merger, deletion, absorption, or redundancy evidence.
+
 ## Next
 
-Prospectively precommit and execute a **competent non-DSD baseline Lineage challenge**.
-
-A valid `NO_GAIN` result remains acceptable.
+Prospectively precommit and execute a **deterministic same-project Lineage retrace**.
 
 External validation remains deferred.
