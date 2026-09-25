@@ -1,6 +1,6 @@
 # DSD Aggregation / DSD 집계론
 
-Status: **Protocol v0.1 frozen / AGG-CH-001 positive constructed 64/64 PASS / negative-unresolved challenge next**
+Status: **Protocol v0.1 frozen / AGG-CH-001 64/64 PASS + AGG-CH-002 80/80 PASS / direct neighboring-method boundary next**
 Legacy path ID: `10A`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -14,6 +14,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - [`AGG-CH-001 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-001_precommit.md)
 - [`AGG-CH-001 result`](../../../evidence/method_specific/aggregation/AGG-CH-001_positive-constructed.md)
+- [`AGG-CH-002 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-002_precommit.md)
+- [`AGG-CH-002 result`](../../../evidence/method_specific/aggregation/AGG-CH-002_negative-unresolved-terminal.md)
 
 ## Task
 
@@ -178,16 +180,19 @@ DEDICATED_AGGREGATION_PROTOCOL:
   established v0.1
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
-  1
+  2
 
 POSITIVE_AGGREGATION_CASES:
   1
 
 NEGATIVE_OR_UNRESOLVED_AGGREGATION_CASES:
-  0
+  1
+
+ALL_SEVEN_AGGREGATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 METHOD_BOUNDARY_AGGREGATION_CASES:
   0
@@ -250,6 +255,30 @@ PROTOCOL_CONFORMANCE:
 
 The fixture simultaneously exercised formation-side finite aggregation, typed-property aggregation, defined-zero versus absence/undefined status preservation, multi-input property typing, combined-coordinate separation, support/status sidecars, and separate normalized-average postprocessing.
 
+## AGG-CH-002 — negative / unresolved-terminal challenge
+
+```text
+PRECOMMIT_COMMIT:
+  fab528f6bfa8bba634a8246ceba855e3bb02acb2
+
+PRECOMMIT_BLOB:
+  3ffd3d30a3a2c62f7864044887fb4809603df400
+
+RESULT_COMMIT:
+  bd3fea660c022f7141762f643e0f55d315b1b571
+
+RESULT_BLOB:
+  916da4ab3b5d05393b4081aa9af6a62f65d2e114
+
+CHECKS:
+  80/80 PASS
+
+ALL_SEVEN_AGGREGATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+```
+
+AGG-CH-002 directly exercised NOT_ESTABLISHED, BLOCKED, CONFLICTING, OUT_OF_SCOPE, UNDERDETERMINED, PARTIAL, plus declared-class injectivity and collision distinctions.
+
 ## Next
 
-Prospectively precommit and execute the negative / unresolved-terminal Aggregation challenge.
+Prospectively precommit and execute the direct neighboring-method Aggregation boundary challenge.
