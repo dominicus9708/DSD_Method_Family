@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-25 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `6d2e002da71cd853d7fff1adc4c10bbae6a2bc6d`  
+Method-state source commit before this synchronization record: `60d72d8894f415e7aac5c8bee51875e5cbda6ae8`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -52,7 +52,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Aggregation | Protocol v0.1 frozen; pre-protocol boundary attack 18 cases complete; Boundary Amendment 001 5/5 adopted; positive constructed challenge next |
+| Aggregation | Protocol v0.1 frozen; AGG-CH-001 positive constructed 64/64 PASS; validation in progress; negative-unresolved challenge next |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
@@ -372,16 +372,25 @@ BINDING_OPERATION:
   T1-T16
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  0
+  1
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
+  1
+
+POSITIVE_AGGREGATION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_AGGREGATION_CASES:
+  0
+
+METHOD_BOUNDARY_AGGREGATION_CASES:
   0
 
 AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_AGGREGATION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED:
   no
@@ -413,7 +422,19 @@ FIXED_SUPPORT_INJECTIVITY != VARIABLE_SUPPORT_RECONSTRUCTION
 STATIC_ANALYTIC_STABILITY != DYNAMICAL_STABILITY
 ```
 
-**Next canonical step:** prospectively precommit and execute the first positive constructed Aggregation challenge.
+AGG-CH-001 positive constructed challenge:
+
+```text
+PRECOMMIT_COMMIT: 00e4afd77d7f10855f6c4d62eacbeaa154c3a2ce
+PRECOMMIT_BLOB: a59810b90b2b93a0e3b63ba7f23dc59178bef566
+RESULT_COMMIT: 21b54077a7fe48f690b7528b2ad0025d6b8a1325
+RESULT_BLOB: 7e5d071936d52655886a8a91141785cf7ed580f9
+CHECKS: 64/64 PASS
+TASK_TERMINAL: AGGREGATION_TASK_ESTABLISHED
+PROTOCOL_CONFORMANCE: AGGREGATION_PROTOCOL_CONFORMANT
+```
+
+**Next canonical step:** prospectively precommit and execute the negative / unresolved-terminal Aggregation challenge.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -454,4 +475,4 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-The active internal-standardization front is now **Aggregation / DSD 집계론**. Its source scope and Task Interface v0.1 draft were recovered from the Channel-Indexed Static Aggregation line. Eighteen pre-protocol boundary attacks preserved the method boundary with five nonbreaking execution-semantic refinements, Boundary Amendment 001 adopted all five, and executable Aggregation Protocol v0.1 is now frozen. The next canonical work item is the first prospectively precommitted positive constructed Aggregation challenge.
+The active internal-standardization front is **Aggregation / DSD 집계론**. Its source scope, Task Interface v0.1, 18-case pre-protocol boundary attack, Boundary Amendment 001, and executable Protocol v0.1 are frozen. AGG-CH-001 then passed 64/64 on a positive combined-static fixture while preserving defined-zero/absence, undefined/zero, multi-input typing, coordinate separation, support sidecars, and postprocessing boundaries. The next canonical work item is a prospectively precommitted negative / unresolved-terminal Aggregation challenge.
