@@ -1,6 +1,6 @@
 # DSD Aggregation Planning / DSD 집계론 기획
 
-Status: **internal standardization in progress / AGG-CH-001 64/64 PASS / negative-unresolved challenge next**
+Status: **internal standardization in progress / AGG-CH-001 64/64 PASS + AGG-CH-002 80/80 PASS / direct boundary challenge next**
 Date opened: **2026-09-25**
 Legacy path ID: `10A`
 Path: `methods/10_aggregation_compression/aggregation/`
@@ -120,7 +120,7 @@ source and registry recovery
 3. ✅ Pre-protocol boundary attack — 18 cases; 13 preserved / 5 nonbreaking refinements.
 4. ✅ Boundary Amendment 001 — 5/5 refinement groups adopted.
 5. ✅ Executable Aggregation Protocol v0.1 — frozen.
-6. 🟨 Positive / negative / boundary cases — AGG-CH-001 positive 64/64 PASS.
+6. 🟨 Positive / negative / boundary cases — AGG-CH-001 positive 64/64 PASS; AGG-CH-002 negative/unresolved 80/80 PASS; direct boundary challenge next.
 7. ⏸ Competent and strongest-reasonable baselines.
 8. ⏸ Deterministic same-project retrace.
 9. ⏸ Frozen-axis internal standardization audit.
@@ -163,16 +163,19 @@ BINDING_OPERATION:
   T1-T16
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
-  1
+  2
 
 POSITIVE_AGGREGATION_CASES:
   1
 
 NEGATIVE_OR_UNRESOLVED_AGGREGATION_CASES:
-  0
+  1
+
+ALL_SEVEN_AGGREGATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 METHOD_BOUNDARY_AGGREGATION_CASES:
   0
@@ -236,6 +239,17 @@ TASK_TERMINAL: AGGREGATION_TASK_ESTABLISHED
 PROTOCOL_CONFORMANCE: AGGREGATION_PROTOCOL_CONFORMANT
 ```
 
+## AGG-CH-002
+
+```text
+PRECOMMIT_COMMIT: fab528f6bfa8bba634a8246ceba855e3bb02acb2
+PRECOMMIT_BLOB: 3ffd3d30a3a2c62f7864044887fb4809603df400
+RESULT_COMMIT: bd3fea660c022f7141762f643e0f55d315b1b571
+RESULT_BLOB: 916da4ab3b5d05393b4081aa9af6a62f65d2e114
+CHECKS: 80/80 PASS
+ALL_SEVEN_AGGREGATION_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
+```
+
 ## Next
 
-Prospectively precommit and execute the negative / unresolved-terminal Aggregation challenge.
+Prospectively precommit and execute the direct neighboring-method Aggregation boundary challenge.
