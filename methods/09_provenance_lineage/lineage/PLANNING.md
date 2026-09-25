@@ -1,6 +1,6 @@
 # DSD Lineage Planning / DSD 계보론 기획
 
-Status: **internal standardization in progress / LIN-CH-004 64/64 PASS NO_GAIN + LIN-CH-005 72/72 PASS NO_GAIN / deterministic retrace next**  
+Status: **internal standardization established / LIN-CH-006 56/56 PASS / LIN-AUD-001 28/28 PASS / external validation later**  
 Date opened: **2026-09-23**  
 Legacy path ID: `09B`  
 Path: `methods/09_provenance_lineage/lineage/`
@@ -37,9 +37,9 @@ Task Interface
 8. ✅ Direct method-boundary challenge — `LIN-CH-003`, 72/72 PASS.
 9. ✅ Competent non-DSD baseline — `LIN-CH-004`, 64/64 PASS / NO_GAIN.
 10. ✅ Strongest-reasonable baseline — `LIN-CH-005`, 72/72 PASS / NO_GAIN.
-11. 🟨 Deterministic same-project retrace.
-12. ⏸ Frozen-axis internal standardization audit.
-13. ⏸ External applications / independent validation.
+11. ✅ Deterministic same-project retrace — `LIN-CH-006`, 56/56 PASS.
+12. ✅ Frozen-axis internal standardization audit — `LIN-AUD-001`, 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
+13. ⏸ External applications / independent validation — separate later evidence phase.
 
 ## Current counters
 
@@ -76,13 +76,16 @@ ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 BASELINE_LINEAGE_CASES: 2
 NO_GAIN_LINEAGE_CASES: 2
 STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
 
 EXTERNAL_LINEAGE_APPLICATIONS: 0
 INDEPENDENT_LINEAGE_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
-LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_LINEAGE_EVIDENCE_STATUS: validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED: no
@@ -240,6 +243,32 @@ GAIN_STATUS: NO_GAIN
 STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
 ```
 
+## LIN-CH-006
+
+```text
+PRECOMMIT_COMMIT: eaae98831363f9c4cdf4ad90fb6219e7362dbd85
+PRECOMMIT_BLOB: ae4a04ecf9273141cccbb7055cbcad416ae9d4cd
+RECONSTRUCTION_LEDGER_COMMIT: f60f70c1b970ce8c10eaecf7b4430ed57c0f3d8e
+RECONSTRUCTION_LEDGER_BLOB: d2cd0f3f86ead187a45e8e3a8ac724322ea9467d
+RESULT_COMMIT: cfdf96d2db01631f19ea8f83f8ce815e7e06857b
+RESULT_BLOB: 51464ada941925e2adef5bd98ee2f511fda8f10c
+CHECKS: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+```
+
+## LIN-AUD-001
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 041f0f3129cd6925fbde683738028be431847cb7
+AUDIT_PRECOMMIT_BLOB: a341a35a683d8d3d8276c0109862aec4d6293936
+AUDIT_RESULT_COMMIT: 4fbc33e79dbac603a4cddbc356e105d2c6189eba
+AUDIT_RESULT_BLOB: ed186ab0ff00e79e30972f40a4c1365cedfa8cd1
+AUDIT_CHECKS: 28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: established
+```
+
 ## Next
 
-Prospectively precommit and execute the deterministic same-project Lineage retrace.
+Internal standardization is closed. External applications / independent validation remain a separate later evidence phase.
