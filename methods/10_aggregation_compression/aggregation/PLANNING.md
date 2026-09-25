@@ -1,6 +1,6 @@
 # DSD Aggregation Planning / DSD 집계론 기획
 
-Status: **internal standardization in progress / Protocol v0.1 frozen / positive constructed challenge next**
+Status: **internal standardization in progress / AGG-CH-001 64/64 PASS / negative-unresolved challenge next**
 Date opened: **2026-09-25**
 Legacy path ID: `10A`
 Path: `methods/10_aggregation_compression/aggregation/`
@@ -120,7 +120,7 @@ source and registry recovery
 3. ✅ Pre-protocol boundary attack — 18 cases; 13 preserved / 5 nonbreaking refinements.
 4. ✅ Boundary Amendment 001 — 5/5 refinement groups adopted.
 5. ✅ Executable Aggregation Protocol v0.1 — frozen.
-6. ⏸ Positive / negative / boundary cases.
+6. 🟨 Positive / negative / boundary cases — AGG-CH-001 positive 64/64 PASS.
 7. ⏸ Competent and strongest-reasonable baselines.
 8. ⏸ Deterministic same-project retrace.
 9. ⏸ Frozen-axis internal standardization audit.
@@ -163,9 +163,18 @@ BINDING_OPERATION:
   T1-T16
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  0
+  1
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
+  1
+
+POSITIVE_AGGREGATION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_AGGREGATION_CASES:
+  0
+
+METHOD_BOUNDARY_AGGREGATION_CASES:
   0
 
 BASELINE_AGGREGATION_CASES:
@@ -190,7 +199,7 @@ AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_AGGREGATION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED:
   no
@@ -215,6 +224,18 @@ PROTOCOL_COMMIT: 85b4263ad47cd10acd2230add542f381bd5d6a05
 PROTOCOL_BLOB: 5ac926aa40594126b42dac99762ff33fe87450f1
 ```
 
+## AGG-CH-001
+
+```text
+PRECOMMIT_COMMIT: 00e4afd77d7f10855f6c4d62eacbeaa154c3a2ce
+PRECOMMIT_BLOB: a59810b90b2b93a0e3b63ba7f23dc59178bef566
+RESULT_COMMIT: 21b54077a7fe48f690b7528b2ad0025d6b8a1325
+RESULT_BLOB: 7e5d071936d52655886a8a91141785cf7ed580f9
+CHECKS: 64/64 PASS
+TASK_TERMINAL: AGGREGATION_TASK_ESTABLISHED
+PROTOCOL_CONFORMANCE: AGGREGATION_PROTOCOL_CONFORMANT
+```
+
 ## Next
 
-Prospectively precommit and execute the first positive constructed Aggregation challenge.
+Prospectively precommit and execute the negative / unresolved-terminal Aggregation challenge.
