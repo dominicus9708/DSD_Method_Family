@@ -614,3 +614,108 @@ Prospectively precommit and execute a deterministic same-project Lineage retrace
 ```text
 SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
 ```
+
+
+---
+
+## Step 11 — LIN-CH-006 deterministic same-project retrace
+
+```text
+PRECOMMIT_COMMIT:
+  eaae98831363f9c4cdf4ad90fb6219e7362dbd85
+PRECOMMIT_BLOB:
+  ae4a04ecf9273141cccbb7055cbcad416ae9d4cd
+
+RECONSTRUCTION_LEDGER_COMMIT:
+  f60f70c1b970ce8c10eaecf7b4430ed57c0f3d8e
+RECONSTRUCTION_LEDGER_BLOB:
+  d2cd0f3f86ead187a45e8e3a8ac724322ea9467d
+
+RESULT_COMMIT:
+  cfdf96d2db01631f19ea8f83f8ce815e7e06857b
+RESULT_BLOB:
+  51464ada941925e2adef5bd98ee2f511fda8f10c
+
+TOTAL_REQUIRED_CHECKS: 56
+PASSED: 56
+FAILED: 0
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+```
+
+The reconstruction ledger was frozen before formal comparison against the LIN-CH-005 result.
+
+It reconstructed versioned identity semantics, branch/merge and optional constraints, prerequisite blockage, relation-algebra coherence, and conflict/underdetermination/sidecar boundaries from the immutable Protocol + LIN-CH-005 precommit chain.
+
+```text
+SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+```
+
+## Step 12 — LIN-AUD-001 frozen-axis internal standardization audit
+
+```text
+AUDIT_PRECOMMIT_COMMIT:
+  041f0f3129cd6925fbde683738028be431847cb7
+AUDIT_PRECOMMIT_BLOB:
+  a341a35a683d8d3d8276c0109862aec4d6293936
+
+AUDIT_RESULT_COMMIT:
+  4fbc33e79dbac603a4cddbc356e105d2c6189eba
+AUDIT_RESULT_BLOB:
+  ed186ab0ff00e79e30972f40a4c1365cedfa8cd1
+
+AUDIT_EXECUTION_SCORE: 28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS:
+  established
+```
+
+Frozen axis result:
+
+```text
+M1  PASS
+M2  PASS
+M3  PASS
+M4  PASS
+M5  PASS
+M6  PASS
+M7  CONDITIONAL_PASS
+M8  PASS
+M9  PASS
+M10 PASS
+M11 PASS
+M12 PASS
+M13 PASS
+M14 DEFERRED_BY_SEQUENCE
+M15 PASS
+```
+
+M7 is conditional because the retrace is same-project, not independent replication. M14 is deferred because external applications and independent validation remain a separate later phase.
+
+Final frozen state:
+
+```text
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 5
+BASELINE_LINEAGE_CASES: 2
+NO_GAIN_LINEAGE_CASES: 2
+STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+EXTERNAL_LINEAGE_APPLICATIONS: 0
+INDEPENDENT_LINEAGE_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: established
+CURRENT_LINEAGE_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+The Lineage internal-standardization lane is closed. External applications and independent validation remain separate future evidence phases.
