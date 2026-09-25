@@ -469,3 +469,92 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute the competent non-DSD Aggregation baseline challenge.
+
+
+---
+
+## Step 9 — AGG-CH-004 competent non-DSD baseline
+
+```text
+BASELINE_ID:
+  B0_GENERIC_TYPED_AGGREGATION_EVALUATOR
+
+PRECOMMIT_COMMIT:
+  e1152eae067817b0798b8e7618fad2362fd35b5f
+
+PRECOMMIT_BLOB:
+  f7b36207895160e1318c447b0e7528b518788e11
+
+RESULT_COMMIT:
+  d8563684d9bb9fb3d3456488cbf68fa9d64b6906
+
+RESULT_BLOB:
+  42c6500ba434c93bb6b3f43dd6f25857c3d158a0
+
+CHECKS:
+  64/64 PASS
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+GAIN_STATUS:
+  AGGREGATION_METHOD_GAIN_NO_GAIN
+```
+
+Frozen gain axes:
+
+```text
+G1 typed-status and support-preservation:
+  BASELINE_MATCH
+
+G2 finite/countable domain and convergence discipline:
+  BASELINE_MATCH
+
+G3 coordinate/postprocessing separation:
+  BASELINE_MATCH
+
+G4 collision / declared-class injectivity / reconstruction scope:
+  BASELINE_MATCH
+
+G5 negative/unresolved terminal semantics:
+  BASELINE_MATCH
+
+G6 bounded-claim / neighboring-sidecar overclaim prevention:
+  BASELINE_MATCH
+```
+
+Meaning:
+
+```text
+NO_GAIN:
+  no claim-relevant DSD performance advantage was established
+  against this competent constructed baseline under equal information
+
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+```
+
+Current counters:
+
+```text
+DIRECT_AGGREGATION_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_AGGREGATION_PILOTS: 4
+POSITIVE_AGGREGATION_CASES: 1
+NEGATIVE_OR_UNRESOLVED_AGGREGATION_CASES: 1
+METHOD_BOUNDARY_AGGREGATION_CASES: 1
+BASELINE_AGGREGATION_CASES: 1
+NO_GAIN_AGGREGATION_CASES: 1
+STRONGEST_REASONABLE_BASELINE_AGGREGATION: not established
+REPRODUCIBILITY_CASES: 0
+AGGREGATION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_AGGREGATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute the strongest-reasonable non-DSD Aggregation baseline challenge.
