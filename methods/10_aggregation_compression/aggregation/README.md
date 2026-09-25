@@ -1,6 +1,6 @@
 # DSD Aggregation / DSD 집계론
 
-Status: **Protocol v0.1 frozen / pre-protocol boundary attack 18 cases complete / positive constructed challenge next**
+Status: **Protocol v0.1 frozen / AGG-CH-001 positive constructed 64/64 PASS / negative-unresolved challenge next**
 Legacy path ID: `10A`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -12,6 +12,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
+- [`AGG-CH-001 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-001_precommit.md)
+- [`AGG-CH-001 result`](../../../evidence/method_specific/aggregation/AGG-CH-001_positive-constructed.md)
 
 ## Task
 
@@ -176,9 +178,18 @@ DEDICATED_AGGREGATION_PROTOCOL:
   established v0.1
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  0
+  1
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
+  1
+
+POSITIVE_AGGREGATION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_AGGREGATION_CASES:
+  0
+
+METHOD_BOUNDARY_AGGREGATION_CASES:
   0
 
 BASELINE_AGGREGATION_CASES:
@@ -203,7 +214,7 @@ AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_AGGREGATION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED:
   no
@@ -212,6 +223,33 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 ```
 
+## AGG-CH-001 — positive constructed challenge
+
+```text
+PRECOMMIT_COMMIT:
+  00e4afd77d7f10855f6c4d62eacbeaa154c3a2ce
+
+PRECOMMIT_BLOB:
+  a59810b90b2b93a0e3b63ba7f23dc59178bef566
+
+RESULT_COMMIT:
+  21b54077a7fe48f690b7528b2ad0025d6b8a1325
+
+RESULT_BLOB:
+  7e5d071936d52655886a8a91141785cf7ed580f9
+
+CHECKS:
+  64/64 PASS
+
+TASK_TERMINAL:
+  AGGREGATION_TASK_ESTABLISHED
+
+PROTOCOL_CONFORMANCE:
+  AGGREGATION_PROTOCOL_CONFORMANT
+```
+
+The fixture simultaneously exercised formation-side finite aggregation, typed-property aggregation, defined-zero versus absence/undefined status preservation, multi-input property typing, combined-coordinate separation, support/status sidecars, and separate normalized-average postprocessing.
+
 ## Next
 
-Prospectively precommit and execute the first positive constructed Aggregation challenge.
+Prospectively precommit and execute the negative / unresolved-terminal Aggregation challenge.
