@@ -504,3 +504,113 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute a competent non-DSD baseline Lineage challenge. A fair `NO_GAIN` result is acceptable and must not be converted into a method-deletion argument.
+
+
+---
+
+## Step 9 — LIN-CH-004 competent non-DSD baseline
+
+```text
+PRECOMMIT_COMMIT:
+  20d6dacf04f6a87b276af23bc7d4468b937a4850
+PRECOMMIT_BLOB:
+  0ac9e959500192f28177112de68361ccd8a29270
+
+RESULT_COMMIT:
+  0c2f048ddfce4191be38826d33f5ee2b1f342750
+RESULT_BLOB:
+  39dca881b4f8b726226779f13e44d7f44846daf4
+
+TOTAL_REQUIRED_CHECKS: 64
+PASSED: 64
+FAILED: 0
+LINEAGE_METHOD_GAIN_STATUS: LINEAGE_METHOD_GAIN_NO_GAIN
+```
+
+Baseline:
+
+```text
+B0_GENERIC_TYPED_SUCCESSION_EVALUATOR
+```
+
+B0 received equal claim-relevant information and matched all six gain axes covering identity/type locks, stable-registry versus transition rules, family coherence, state coverage/branching, status/terminal semantics, and overclaim boundaries.
+
+```text
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+```
+
+## Step 10 — LIN-CH-005 strongest-reasonable baseline
+
+```text
+PRECOMMIT_COMMIT:
+  d0c5b6c6d060c30a85856f93cbd53d4dc341515a
+PRECOMMIT_BLOB:
+  91dc9f6aeab1a1b101354b0ebbb2c4ae0eb123e1
+
+RESULT_COMMIT:
+  628d1f31de6060d943666f76cd05990423f35add
+RESULT_BLOB:
+  b2d0bca6e270d61dc378a2950876da935df8db48
+
+TOTAL_REQUIRED_CHECKS: 72
+PASSED: 72
+FAILED: 0
+LINEAGE_METHOD_GAIN_STATUS: LINEAGE_METHOD_GAIN_NO_GAIN
+STRONGEST_REASONABLE_BASELINE_LINEAGE:
+  established_at_constructed_evidence_level
+```
+
+Baseline:
+
+```text
+B1_STRONG_TEMPORAL_IDENTITY_ENGINE
+```
+
+B1 was materially stronger than B0 and matched Lineage on:
+
+```text
+versioned identity rules
+non-retroactivity
+typed temporal multigraphs
+branch/merge plus optional policy profiles
+prerequisite dependency closure
+relation-algebra coherence
+direct-versus-composed lineage separation
+conflict/underdetermination precedence
+neighboring-sidecar non-substitution
+bounded maximum claims
+deterministic ledgers and rerun manifests
+```
+
+Current counters:
+
+```text
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 5
+POSITIVE_LINEAGE_CASES: 1
+NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
+METHOD_BOUNDARY_LINEAGE_CASES: 1
+BASELINE_LINEAGE_CASES: 2
+NO_GAIN_LINEAGE_CASES: 2
+STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_LINEAGE_APPLICATIONS: 0
+INDEPENDENT_LINEAGE_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_LINEAGE_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute a deterministic same-project Lineage retrace.
+
+```text
+SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
+```
