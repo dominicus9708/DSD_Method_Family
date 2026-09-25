@@ -1,6 +1,6 @@
 # DSD Lineage / DSD 계보론
 
-Status: **Lineage Protocol v0.1 frozen / LIN-CH-001 64/64 PASS + LIN-CH-002 80/80 PASS / direct method-boundary challenge next**  
+Status: **Lineage Protocol v0.1 frozen / LIN-CH-001 64/64 PASS + LIN-CH-002 80/80 PASS + LIN-CH-003 72/72 PASS / competent baseline next**  
 Legacy path ID: `09B`  
 Higher field: **IV. Evidence & Lineage / 증거·계보**
 
@@ -16,6 +16,8 @@ Higher field: **IV. Evidence & Lineage / 증거·계보**
 - [`LIN-CH-001 result`](../../../evidence/method_specific/lineage/LIN-CH-001_positive-constructed.md)
 - [`LIN-CH-002 precommit`](../../../evidence/method_specific/lineage/LIN-CH-002_precommit.md)
 - [`LIN-CH-002 result`](../../../evidence/method_specific/lineage/LIN-CH-002_negative-unresolved.md)
+- [`LIN-CH-003 precommit`](../../../evidence/method_specific/lineage/LIN-CH-003_precommit.md)
+- [`LIN-CH-003 result`](../../../evidence/method_specific/lineage/LIN-CH-003_direct-method-boundary.md)
 
 ## Task
 
@@ -151,10 +153,17 @@ DEDICATED_LINEAGE_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G16
 BINDING_OPERATION: T1-T16
 
-DIRECT_LINEAGE_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 2
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 3
 POSITIVE_LINEAGE_CASES: 1
 NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
+METHOD_BOUNDARY_LINEAGE_CASES: 1
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 8
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
+DYNAMICS_SOURCE_LAYER_BOUNDARY_TESTS: 1
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 BASELINE_LINEAGE_CASES: 0
@@ -248,8 +257,44 @@ ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED:
 
 The challenge directly separated explicit negation, evaluable non-establishment, ambiguity, conflict, blockage, inapplicability, out-of-scope, underdetermination, partial completion, and evaluable family incoherence while preserving protocol conformance.
 
+## LIN-CH-003 — direct neighboring-method boundary challenge
+
+```text
+PRECOMMIT_COMMIT:
+  7c68b63a0643b50fab49443c126955f0035d97a7
+PRECOMMIT_BLOB:
+  7488e670a50ee08ca739b6e37ce78781c8b04b83
+
+RESULT_COMMIT:
+  cc86daab1c8e0643e878159c913836bfe1e5aa38
+RESULT_BLOB:
+  ea3a94a1e6c572ea51efa719fd9450bd5c83c433
+
+PRECOMMITTED_REQUIRED_CHECKS: 72
+PASSED: 72
+FAILED: 0
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 8
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
+
+DYNAMICS_SOURCE_LAYER_BOUNDARY_TESTS: 1
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+
+BOUNDARY_STATUS:
+  FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
+The fair shared-artifact fixture separated Lineage from Tracking, Reconstruction, Transformation, Comparison, Classification, Aggregation, Compression, and Audit across input/operation/output/failure/validation interfaces. Dynamics remained a foundational source-layer handoff rather than an exact method collapse.
+
+This is fixture-bounded separation only, not permanent irreducibility or method superiority.
+
 ## Next
 
-Prospectively precommit and execute the **direct neighboring-method boundary challenge** under fair shared-artifact access.
+Prospectively precommit and execute a **competent non-DSD baseline Lineage challenge**.
+
+A valid `NO_GAIN` result remains acceptable.
 
 External validation remains deferred.
