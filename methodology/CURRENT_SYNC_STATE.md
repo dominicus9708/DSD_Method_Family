@@ -1,6 +1,6 @@
 # DSD Method Family — Current Sync State
 
-Synchronized: **2026-09-23 KST**  
+Synchronized: **2026-09-25 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
 Method-state source commit before this synchronization record: `5d9475708718780a3038451290b25e1f9c0b0fe1`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
@@ -51,7 +51,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Classification | Protocol v0.1 frozen; maturity established; independent-evaluator infrastructure next |
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
-| Lineage | Protocol v0.1 frozen; LIN-CH-001 64/64 PASS; negative-unresolved challenge next |
+| Lineage | Protocol v0.1 frozen; LIN-CH-001 64/64 PASS; LIN-CH-002 80/80 PASS; direct method-boundary challenge next |
 | Aggregation | developing |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
@@ -209,15 +209,30 @@ PROTOCOL_CONFORMANCE: LINEAGE_PROTOCOL_CONFORMANT
 Current direct counters:
 
 ```text
-DIRECT_LINEAGE_PILOTS_ATTEMPTED: 1
-SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 1
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 2
 POSITIVE_LINEAGE_CASES: 1
+NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
+ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 BASELINE_LINEAGE_CASES: 0
 NO_GAIN_LINEAGE_CASES: 0
 REPRODUCIBILITY_CASES: 0
 ```
 
-**Next canonical step:** prospectively precommit and execute the negative / unresolved-terminal Lineage challenge.
+LIN-CH-002 was prospectively precommitted and executed:
+
+```text
+PRECOMMIT_COMMIT: 169021711ea5069f1e63246efdd2ddfafbb3067a
+PRECOMMIT_BLOB: d5537721f9dc55291f61569ad57eaa7e6b844a5b
+RESULT_COMMIT: bce8356317ca8b1411eee7b518f1c993864b6fa6
+RESULT_BLOB: 3a40361b1c589e6a206bcbd4a6baa38054e6f075
+CHECKS: 80/80 PASS
+ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
+```
+
+**Next canonical step:** prospectively precommit and execute the direct neighboring-method boundary challenge under fair shared-artifact access.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -256,4 +271,4 @@ When surfaces differ, preserve history and reconcile by explicit version/commit/
 
 The current family-wide priority is **method-specific protocol/evidence maturation**, not adding more shared-core labels.
 
-At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The first positive constructed Lineage challenge is complete at 64/64 PASS. The active next work item is the prospectively precommitted negative / unresolved-terminal Lineage challenge. External-domain and independent validation remain separate evidence stages.
+At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The first positive constructed Lineage challenge is complete at 64/64 PASS, and the negative / unresolved-terminal challenge is complete at 80/80 PASS. The active next work item is the prospectively precommitted direct neighboring-method boundary challenge. External-domain and independent validation remain separate evidence stages.
