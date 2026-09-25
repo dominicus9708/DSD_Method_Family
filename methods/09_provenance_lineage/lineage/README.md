@@ -1,6 +1,6 @@
 # DSD Lineage / DSD 계보론
 
-Status: **Lineage Protocol v0.1 frozen / LIN-CH-004 64/64 PASS NO_GAIN + LIN-CH-005 72/72 PASS NO_GAIN / deterministic retrace next**  
+Status: **Lineage Protocol v0.1 internally standardized / LIN-CH-006 56/56 PASS deterministic retrace / LIN-AUD-001 28/28 PASS / external validation deferred**  
 Legacy path ID: `09B`  
 Higher field: **IV. Evidence & Lineage / 증거·계보**
 
@@ -22,6 +22,11 @@ Higher field: **IV. Evidence & Lineage / 증거·계보**
 - [`LIN-CH-004 result`](../../../evidence/method_specific/lineage/LIN-CH-004_competent-baseline-no-gain.md)
 - [`LIN-CH-005 precommit`](../../../evidence/method_specific/lineage/LIN-CH-005_precommit.md)
 - [`LIN-CH-005 result`](../../../evidence/method_specific/lineage/LIN-CH-005_strongest-reasonable-baseline.md)
+- [`LIN-CH-006 precommit`](../../../evidence/method_specific/lineage/LIN-CH-006_precommit.md)
+- [`LIN-CH-006 reconstruction ledger`](../../../evidence/method_specific/lineage/LIN-CH-006_reconstruction-ledger.md)
+- [`LIN-CH-006 result`](../../../evidence/method_specific/lineage/LIN-CH-006_deterministic-same-project-retrace.md)
+- [`LIN-AUD-001 precommit`](../../../evidence/method_specific/lineage/LIN-AUD-001_precommit.md)
+- [`LIN-AUD-001 result`](../../../evidence/method_specific/lineage/LIN-AUD-001_internal-standardization-review.md)
 
 ## Task
 
@@ -173,13 +178,16 @@ ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 BASELINE_LINEAGE_CASES: 2
 NO_GAIN_LINEAGE_CASES: 2
 STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
 
 EXTERNAL_LINEAGE_APPLICATIONS: 0
 INDEPENDENT_LINEAGE_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
-LINEAGE_INTERNAL_STANDARDIZATION_STATUS: developing
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_LINEAGE_EVIDENCE_STATUS: validation_in_progress
 
 SHARED_CORE_REOPEN_REQUIRED: no
@@ -341,8 +349,69 @@ The materially stronger baseline matched versioned identity rules, branch/merge 
 
 `NO_GAIN` remains a bounded performance result and is not merger, deletion, absorption, or redundancy evidence.
 
+## LIN-CH-006 — deterministic same-project retrace
+
+```text
+PRECOMMIT_COMMIT:
+  eaae98831363f9c4cdf4ad90fb6219e7362dbd85
+PRECOMMIT_BLOB:
+  ae4a04ecf9273141cccbb7055cbcad416ae9d4cd
+
+RECONSTRUCTION_LEDGER_COMMIT:
+  f60f70c1b970ce8c10eaecf7b4430ed57c0f3d8e
+RECONSTRUCTION_LEDGER_BLOB:
+  d2cd0f3f86ead187a45e8e3a8ac724322ea9467d
+
+RESULT_COMMIT:
+  cfdf96d2db01631f19ea8f83f8ce815e7e06857b
+RESULT_BLOB:
+  51464ada941925e2adef5bd98ee2f511fda8f10c
+
+CHECKS: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+```
+
+The retrace regenerated the Lineage-side outputs of LIN-CH-005 from the frozen Protocol + precommit artifact chain before formal comparison with the result artifact.
+
+```text
+SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
+```
+
+## LIN-AUD-001 — frozen-axis internal standardization audit
+
+```text
+AUDIT_PRECOMMIT_COMMIT:
+  041f0f3129cd6925fbde683738028be431847cb7
+AUDIT_PRECOMMIT_BLOB:
+  a341a35a683d8d3d8276c0109862aec4d6293936
+
+AUDIT_RESULT_COMMIT:
+  4fbc33e79dbac603a4cddbc356e105d2c6189eba
+AUDIT_RESULT_BLOB:
+  ed186ab0ff00e79e30972f40a4c1365cedfa8cd1
+
+AUDIT_CHECKS: 28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+LINEAGE_INTERNAL_STANDARDIZATION_STATUS:
+  established
+```
+
+Audit-axis exceptions remain explicitly bounded:
+
+```text
+M7 retraceability:
+  CONDITIONAL_PASS
+
+M14 external / independent evidence:
+  DEFERRED_BY_SEQUENCE
+```
+
 ## Next
 
-Prospectively precommit and execute a **deterministic same-project Lineage retrace**.
+The Lineage internal-standardization lane is closed at Protocol v0.1.
 
-External validation remains deferred.
+External applications and independent validation remain a separate later evidence phase.
