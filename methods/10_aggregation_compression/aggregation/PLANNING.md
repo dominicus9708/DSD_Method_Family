@@ -1,6 +1,6 @@
 # DSD Aggregation Planning / DSD 집계론 기획
 
-Status: **internal standardization in progress / AGG-CH-001~003 PASS / competent baseline next**
+Status: **internal standardization in progress / AGG-CH-004 competent baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
 Date opened: **2026-09-25**
 Legacy path ID: `10A`
 Path: `methods/10_aggregation_compression/aggregation/`
@@ -121,7 +121,7 @@ source and registry recovery
 4. ✅ Boundary Amendment 001 — 5/5 refinement groups adopted.
 5. ✅ Executable Aggregation Protocol v0.1 — frozen.
 6. ✅ Positive / negative / boundary cases — AGG-CH-001 64/64 PASS; AGG-CH-002 80/80 PASS; AGG-CH-003 72/72 PASS.
-7. ⏸ Competent and strongest-reasonable baselines.
+7. 🟨 Competent and strongest-reasonable baselines — AGG-CH-004 competent baseline 64/64 PASS / NO_GAIN; strongest-reasonable baseline next.
 8. ⏸ Deterministic same-project retrace.
 9. ⏸ Frozen-axis internal standardization audit.
 10. ⏸ External applications / independent validation.
@@ -163,10 +163,10 @@ BINDING_OPERATION:
   T1-T16
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  2
+  4
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
-  2
+  4
 
 POSITIVE_AGGREGATION_CASES:
   1
@@ -196,10 +196,13 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_AGGREGATION_CASES:
-  0
+  1
 
 NO_GAIN_AGGREGATION_CASES:
-  0
+  1
+
+STRONGEST_REASONABLE_BASELINE_AGGREGATION:
+  not established
 
 REPRODUCIBILITY_CASES:
   0
@@ -279,6 +282,19 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
 BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
 ```
 
+## AGG-CH-004
+
+```text
+BASELINE_ID: B0_GENERIC_TYPED_AGGREGATION_EVALUATOR
+PRECOMMIT_COMMIT: e1152eae067817b0798b8e7618fad2362fd35b5f
+PRECOMMIT_BLOB: f7b36207895160e1318c447b0e7528b518788e11
+RESULT_COMMIT: d8563684d9bb9fb3d3456488cbf68fa9d64b6906
+RESULT_BLOB: 42c6500ba434c93bb6b3f43dd6f25857c3d158a0
+CHECKS: 64/64 PASS
+GAIN_STATUS: AGGREGATION_METHOD_GAIN_NO_GAIN
+GAIN_AXES: 6/6 BASELINE_MATCH
+```
+
 ## Next
 
-Prospectively precommit and execute the competent non-DSD Aggregation baseline challenge.
+Prospectively precommit and execute the strongest-reasonable non-DSD Aggregation baseline challenge.
