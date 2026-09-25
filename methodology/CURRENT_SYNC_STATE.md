@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-25 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `bdd617895576f4ccf1151a9dff6787a81ee76ca6`  
+Method-state source commit before this synchronization record: `6d2e002da71cd853d7fff1adc4c10bbae6a2bc6d`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -52,7 +52,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Aggregation | developing |
+| Aggregation | Protocol v0.1 frozen; pre-protocol boundary attack 18 cases complete; Boundary Amendment 001 5/5 adopted; positive constructed challenge next |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
@@ -145,7 +145,7 @@ FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
 
 Tracking external validation remains deferred as a separate evidence phase.
 
-### Active method — Lineage / DSD 계보론
+### Recently closed internal-standardization front — Lineage / DSD 계보론
 
 Current state:
 
@@ -309,6 +309,112 @@ LINEAGE_INTERNAL_STANDARDIZATION_STATUS: established
 
 **Next canonical phase:** external applications and/or independent validation infrastructure, kept separate from the closed internal-standardization lane.
 
+### Active method — Aggregation / DSD 집계론
+
+Current state:
+
+```text
+TASK_INTERFACE_DRAFT:
+  v0.1 historical draft preserved
+
+TASK_INTERFACE_COMMIT:
+  58287d8b4d200c55860c5029281699de0750a5d4
+
+TASK_INTERFACE_BLOB:
+  0eb42ab35703b4ac684ddd0fa477289dd944a3f0
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+BOUNDARY_ATTACK_COMMIT:
+  59eefe5347b8509c097ee69ec488fcfe808849e9
+
+BOUNDARY_ATTACK_BLOB:
+  5deb99c973c8c89b4aead5d588d88b525daa534c
+
+PRESERVED_NO_REFINEMENT:
+  13
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  5
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  5/5
+
+AMENDMENT_COMMIT:
+  a327688f71e336cd458490dda1c6a786ee59be4c
+
+AMENDMENT_BLOB:
+  7bbbb7837de21d4628e9b4bf36f6ac725198ddab
+
+DEDICATED_AGGREGATION_PROTOCOL:
+  established v0.1
+
+PROTOCOL_COMMIT:
+  85b4263ad47cd10acd2230add542f381bd5d6a05
+
+PROTOCOL_BLOB:
+  5ac926aa40594126b42dac99762ff33fe87450f1
+
+VALIDITY_GATES:
+  G1-G16
+
+BINDING_OPERATION:
+  T1-T16
+
+DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
+  0
+
+SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
+  0
+
+AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_AGGREGATION_EVIDENCE_STATUS:
+  protocol_frozen
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+```
+
+The five adopted execution refinements concern:
+
+```text
+required support/status-sidecar failure semantics
+injectivity-scope lock
+reconstruction-scope class
+cross-coordinate reconstruction condition
+task-terminal precedence
+```
+
+The source-derived method boundary preserves:
+
+```text
+DEFINED_ZERO != ABSENCE
+UNDEFINED != ZERO
+DIRECT_FINITE_SUM != NORMALIZED_AVERAGE
+FINITE_CORE != COUNTABLE_EXTENSION
+PROPERTY_AGGREGATE != FORMATION_COMPOSITE
+AGGREGATE_EQUALITY != SUPPORT_EQUALITY
+FIXED_SUPPORT_INJECTIVITY != VARIABLE_SUPPORT_RECONSTRUCTION
+STATIC_ANALYTIC_STABILITY != DYNAMICAL_STABILITY
+```
+
+**Next canonical step:** prospectively precommit and execute the first positive constructed Aggregation challenge.
+
 ## 6. Historical-preservation and verdict discipline
 
 Do not retroactively rewrite historical evidence for cosmetic consistency.
@@ -346,4 +452,6 @@ When surfaces differ, preserve history and reconcile by explicit version/commit/
 
 The current family-wide priority is **method-specific protocol/evidence maturation**, not adding more shared-core labels.
 
-At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The positive, negative/unresolved, boundary, competent-baseline, and strongest-reasonable-baseline challenges remain complete. LIN-CH-006 deterministically retraced the strongest-baseline Lineage-side outputs at 56/56 PASS with zero claim-relevant mismatches and zero post-comparison corrections. LIN-AUD-001 then passed 28/28 and promoted Lineage Protocol v0.1 to project-internal standard status. The Lineage internal-standardization lane is closed; external applications and independent validation remain separate later evidence phases. External-domain and independent validation remain separate evidence stages.
+At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
+
+The active internal-standardization front is now **Aggregation / DSD 집계론**. Its source scope and Task Interface v0.1 draft were recovered from the Channel-Indexed Static Aggregation line. Eighteen pre-protocol boundary attacks preserved the method boundary with five nonbreaking execution-semantic refinements, Boundary Amendment 001 adopted all five, and executable Aggregation Protocol v0.1 is now frozen. The next canonical work item is the first prospectively precommitted positive constructed Aggregation challenge.
