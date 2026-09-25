@@ -51,7 +51,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Classification | Protocol v0.1 frozen; maturity established; independent-evaluator infrastructure next |
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
-| Lineage | Protocol v0.1 frozen; LIN-CH-001 64/64 PASS; LIN-CH-002 80/80 PASS; LIN-CH-003 72/72 PASS; competent baseline next |
+| Lineage | Protocol v0.1 frozen; LIN-CH-004 64/64 PASS / NO_GAIN; LIN-CH-005 72/72 PASS / NO_GAIN; strongest reasonable baseline established at constructed-evidence level; deterministic retrace next |
 | Aggregation | developing |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
@@ -209,8 +209,8 @@ PROTOCOL_CONFORMANCE: LINEAGE_PROTOCOL_CONFORMANT
 Current direct counters:
 
 ```text
-DIRECT_LINEAGE_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 3
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 5
 POSITIVE_LINEAGE_CASES: 1
 NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
 METHOD_BOUNDARY_LINEAGE_CASES: 1
@@ -222,8 +222,9 @@ DYNAMICS_SOURCE_LAYER_BOUNDARY_TESTS: 1
 SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
-BASELINE_LINEAGE_CASES: 0
-NO_GAIN_LINEAGE_CASES: 0
+BASELINE_LINEAGE_CASES: 2
+NO_GAIN_LINEAGE_CASES: 2
+STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 ```
 
@@ -253,7 +254,30 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
 SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 ```
 
-**Next canonical step:** prospectively precommit and execute a competent non-DSD baseline challenge.
+LIN-CH-004 competent baseline:
+
+```text
+PRECOMMIT_COMMIT: 20d6dacf04f6a87b276af23bc7d4468b937a4850
+PRECOMMIT_BLOB: 0ac9e959500192f28177112de68361ccd8a29270
+RESULT_COMMIT: 0c2f048ddfce4191be38826d33f5ee2b1f342750
+RESULT_BLOB: 39dca881b4f8b726226779f13e44d7f44846daf4
+CHECKS: 64/64 PASS
+GAIN_STATUS: NO_GAIN
+```
+
+LIN-CH-005 strongest-reasonable baseline:
+
+```text
+PRECOMMIT_COMMIT: d0c5b6c6d060c30a85856f93cbd53d4dc341515a
+PRECOMMIT_BLOB: 91dc9f6aeab1a1b101354b0ebbb2c4ae0eb123e1
+RESULT_COMMIT: 628d1f31de6060d943666f76cd05990423f35add
+RESULT_BLOB: b2d0bca6e270d61dc378a2950876da935df8db48
+CHECKS: 72/72 PASS
+GAIN_STATUS: NO_GAIN
+STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
+```
+
+**Next canonical step:** prospectively precommit and execute a deterministic same-project Lineage retrace.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -292,4 +316,4 @@ When surfaces differ, preserve history and reconcile by explicit version/commit/
 
 The current family-wide priority is **method-specific protocol/evidence maturation**, not adding more shared-core labels.
 
-At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The positive constructed challenge is complete at 64/64 PASS, the negative / unresolved-terminal challenge at 80/80 PASS, and the direct neighboring-method boundary challenge at 72/72 PASS. The active next work item is a prospectively precommitted competent non-DSD baseline challenge. External-domain and independent validation remain separate evidence stages.
+At this synchronization point, Tracking's internal-standardization lane remains closed at Protocol v0.1. DSD Lineage Boundary Amendment 001 is established and executable Lineage Protocol v0.1 is frozen. The positive, negative/unresolved, and direct-boundary challenges remain complete. The competent baseline is complete at 64/64 PASS / NO_GAIN, and the strongest-reasonable baseline is complete at 72/72 PASS / NO_GAIN with strongest-reasonable status established at the constructed-evidence level. The active next work item is a prospectively precommitted deterministic same-project Lineage retrace. External-domain and independent validation remain separate evidence stages.
