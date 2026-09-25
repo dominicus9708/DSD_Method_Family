@@ -385,3 +385,87 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute the direct neighboring-method boundary challenge for Aggregation.
+
+
+---
+
+## Step 8 — AGG-CH-003 direct neighboring-method boundary
+
+```text
+PRECOMMIT_COMMIT:
+  e3de5052e01db87185a6fe1d3d2885ba3336e23c
+
+PRECOMMIT_BLOB:
+  367f455914bd2eb22329408972542e479e5b45e9
+
+RESULT_COMMIT:
+  9c0d8ef548b5059289da85e8bc6eaa18e250ee80
+
+RESULT_BLOB:
+  d47f45884576ebb5cda4fc8967abff5bc484406a
+
+CHECKS:
+  72/72 PASS
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  8
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  8
+
+BOUNDARY_STATUS:
+  FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
+Pairs:
+
+```text
+Aggregation / Compression
+Aggregation / Reconstruction
+Aggregation / Measurement
+Aggregation / Comparison
+Aggregation / Classification
+Aggregation / Tracking
+Aggregation / Lineage
+Aggregation / Audit
+```
+
+All eight retained distinct operation, output, failure/NO_GAIN, and validation contracts despite overlapping inputs and sidecars.
+
+Preserved:
+
+```text
+FIXTURE_BOUNDED_SEPARATION != PERMANENT_METHOD_IRREDUCIBILITY
+PARTIAL_OVERLAP_NOT_COLLAPSE != METHOD_SUPERIORITY
+```
+
+Current counters:
+
+```text
+DIRECT_AGGREGATION_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_AGGREGATION_PILOTS: 3
+POSITIVE_AGGREGATION_CASES: 1
+NEGATIVE_OR_UNRESOLVED_AGGREGATION_CASES: 1
+METHOD_BOUNDARY_AGGREGATION_CASES: 1
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 8
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
+BASELINE_AGGREGATION_CASES: 0
+NO_GAIN_AGGREGATION_CASES: 0
+REPRODUCIBILITY_CASES: 0
+AGGREGATION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_AGGREGATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute the competent non-DSD Aggregation baseline challenge.
