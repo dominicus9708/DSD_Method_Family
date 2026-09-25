@@ -1,6 +1,6 @@
 # DSD Lineage Planning / DSD 계보론 기획
 
-Status: **internal standardization in progress / LIN-CH-003 direct boundary 72/72 PASS / competent baseline next**  
+Status: **internal standardization in progress / LIN-CH-004 64/64 PASS NO_GAIN + LIN-CH-005 72/72 PASS NO_GAIN / deterministic retrace next**  
 Date opened: **2026-09-23**  
 Legacy path ID: `09B`  
 Path: `methods/09_provenance_lineage/lineage/`
@@ -35,9 +35,9 @@ Task Interface
 6. ✅ Positive constructed challenge — `LIN-CH-001`, 64/64 PASS.
 7. ✅ Negative / unresolved terminal challenge — `LIN-CH-002`, 80/80 PASS.
 8. ✅ Direct method-boundary challenge — `LIN-CH-003`, 72/72 PASS.
-9. 🟨 Competent non-DSD baseline.
-10. ⏸ Strongest-reasonable baseline.
-11. ⏸ Deterministic same-project retrace.
+9. ✅ Competent non-DSD baseline — `LIN-CH-004`, 64/64 PASS / NO_GAIN.
+10. ✅ Strongest-reasonable baseline — `LIN-CH-005`, 72/72 PASS / NO_GAIN.
+11. 🟨 Deterministic same-project retrace.
 12. ⏸ Frozen-axis internal standardization audit.
 13. ⏸ External applications / independent validation.
 
@@ -59,8 +59,8 @@ DEDICATED_LINEAGE_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G16
 BINDING_OPERATION: T1-T16
 
-DIRECT_LINEAGE_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 3
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 5
 POSITIVE_LINEAGE_CASES: 1
 NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
 METHOD_BOUNDARY_LINEAGE_CASES: 1
@@ -73,8 +73,9 @@ SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 ALL_NINE_LINEAGE_SUCCESSOR_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_LINEAGE_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 
-BASELINE_LINEAGE_CASES: 0
-NO_GAIN_LINEAGE_CASES: 0
+BASELINE_LINEAGE_CASES: 2
+NO_GAIN_LINEAGE_CASES: 2
+STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 
 EXTERNAL_LINEAGE_APPLICATIONS: 0
@@ -216,6 +217,29 @@ SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 
 The result is explicitly fixture-bounded and does not claim permanent method irreducibility.
 
+## LIN-CH-004
+
+```text
+PRECOMMIT_COMMIT: 20d6dacf04f6a87b276af23bc7d4468b937a4850
+PRECOMMIT_BLOB: 0ac9e959500192f28177112de68361ccd8a29270
+RESULT_COMMIT: 0c2f048ddfce4191be38826d33f5ee2b1f342750
+RESULT_BLOB: 39dca881b4f8b726226779f13e44d7f44846daf4
+CHECKS: 64/64 PASS
+GAIN_STATUS: NO_GAIN
+```
+
+## LIN-CH-005
+
+```text
+PRECOMMIT_COMMIT: d0c5b6c6d060c30a85856f93cbd53d4dc341515a
+PRECOMMIT_BLOB: 91dc9f6aeab1a1b101354b0ebbb2c4ae0eb123e1
+RESULT_COMMIT: 628d1f31de6060d943666f76cd05990423f35add
+RESULT_BLOB: b2d0bca6e270d61dc378a2950876da935df8db48
+CHECKS: 72/72 PASS
+GAIN_STATUS: NO_GAIN
+STRONGEST_REASONABLE_BASELINE_LINEAGE: established_at_constructed_evidence_level
+```
+
 ## Next
 
-Prospectively precommit and execute the competent non-DSD baseline challenge.
+Prospectively precommit and execute the deterministic same-project Lineage retrace.
