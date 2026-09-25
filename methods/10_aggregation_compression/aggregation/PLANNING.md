@@ -1,6 +1,6 @@
 # DSD Aggregation Planning / DSD 집계론 기획
 
-Status: **internal standardization lane opened / source scope recovered / Task Interface v0.1 draft next-to-frozen**
+Status: **internal standardization in progress / Protocol v0.1 frozen / positive constructed challenge next**
 Date opened: **2026-09-25**
 Legacy path ID: `10A`
 Path: `methods/10_aggregation_compression/aggregation/`
@@ -117,9 +117,9 @@ source and registry recovery
 
 1. ✅ Aggregation scope recovered from current Method Family registry and static source.
 2. ✅ Task Interface v0.1 draft established.
-3. ⏸ Pre-protocol boundary attack.
-4. ⏸ Boundary Amendment if required.
-5. ⏸ Executable Aggregation Protocol.
+3. ✅ Pre-protocol boundary attack — 18 cases; 13 preserved / 5 nonbreaking refinements.
+4. ✅ Boundary Amendment 001 — 5/5 refinement groups adopted.
+5. ✅ Executable Aggregation Protocol v0.1 — frozen.
 6. ⏸ Positive / negative / boundary cases.
 7. ⏸ Competent and strongest-reasonable baselines.
 8. ⏸ Deterministic same-project retrace.
@@ -133,10 +133,34 @@ TASK_INTERFACE_DRAFT:
   v0.1 established
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  13
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  5
+
+BOUNDARY_COLLAPSE_FOUND:
   0
 
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  5/5
+
 DEDICATED_AGGREGATION_PROTOCOL:
-  not established
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G16
+
+BINDING_OPERATION:
+  T1-T16
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
   0
@@ -166,15 +190,31 @@ AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_AGGREGATION_EVIDENCE_STATUS:
-  task_interface_draft
+  protocol_frozen
 
 PROTOCOL_REVISION_REQUIRED:
-  not applicable before protocol freeze
+  no
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
 ```
 
+## Frozen development chain
+
+```text
+TASK_INTERFACE_COMMIT: 58287d8b4d200c55860c5029281699de0750a5d4
+TASK_INTERFACE_BLOB: 0eb42ab35703b4ac684ddd0fa477289dd944a3f0
+
+BOUNDARY_ATTACK_COMMIT: 59eefe5347b8509c097ee69ec488fcfe808849e9
+BOUNDARY_ATTACK_BLOB: 5deb99c973c8c89b4aead5d588d88b525daa534c
+
+AMENDMENT_COMMIT: a327688f71e336cd458490dda1c6a786ee59be4c
+AMENDMENT_BLOB: 7bbbb7837de21d4628e9b4bf36f6ac725198ddab
+
+PROTOCOL_COMMIT: 85b4263ad47cd10acd2230add542f381bd5d6a05
+PROTOCOL_BLOB: 5ac926aa40594126b42dac99762ff33fe87450f1
+```
+
 ## Next
 
-Prospectively run the pre-protocol Aggregation boundary attack against the frozen Task Interface v0.1 draft.
+Prospectively precommit and execute the first positive constructed Aggregation challenge.
