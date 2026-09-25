@@ -1,6 +1,6 @@
 # DSD Aggregation / DSD 집계론
 
-Status: **Protocol v0.1 frozen / AGG-CH-001 64/64 PASS + AGG-CH-002 80/80 PASS / direct neighboring-method boundary next**
+Status: **Protocol v0.1 frozen / AGG-CH-001 64/64 PASS + AGG-CH-002 80/80 PASS + AGG-CH-003 72/72 PASS / competent baseline next**
 Legacy path ID: `10A`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -16,6 +16,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`AGG-CH-001 result`](../../../evidence/method_specific/aggregation/AGG-CH-001_positive-constructed.md)
 - [`AGG-CH-002 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-002_precommit.md)
 - [`AGG-CH-002 result`](../../../evidence/method_specific/aggregation/AGG-CH-002_negative-unresolved-terminal.md)
+- [`AGG-CH-003 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-003_precommit.md)
+- [`AGG-CH-003 result`](../../../evidence/method_specific/aggregation/AGG-CH-003_direct-method-boundary.md)
 
 ## Task
 
@@ -195,7 +197,22 @@ ALL_SEVEN_AGGREGATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
   yes
 
 METHOD_BOUNDARY_AGGREGATION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  8
+
+EXACT_COLLAPSE_PAIRS:
   0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  8
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
 
 BASELINE_AGGREGATION_CASES:
   0
@@ -279,6 +296,52 @@ ALL_SEVEN_AGGREGATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
 
 AGG-CH-002 directly exercised NOT_ESTABLISHED, BLOCKED, CONFLICTING, OUT_OF_SCOPE, UNDERDETERMINED, PARTIAL, plus declared-class injectivity and collision distinctions.
 
+## AGG-CH-003 — direct neighboring-method boundary
+
+```text
+PRECOMMIT_COMMIT:
+  e3de5052e01db87185a6fe1d3d2885ba3336e23c
+
+PRECOMMIT_BLOB:
+  367f455914bd2eb22329408972542e479e5b45e9
+
+RESULT_COMMIT:
+  9c0d8ef548b5059289da85e8bc6eaa18e250ee80
+
+RESULT_BLOB:
+  d47f45884576ebb5cda4fc8967abff5bc484406a
+
+CHECKS:
+  72/72 PASS
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  8
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  8
+
+BOUNDARY_STATUS:
+  FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
+Compared neighbors:
+
+```text
+Compression
+Reconstruction
+Measurement
+Comparison
+Classification
+Tracking
+Lineage
+Audit
+```
+
+All eight retained claim-relevant differences across the five-interface test.
+
 ## Next
 
-Prospectively precommit and execute the direct neighboring-method Aggregation boundary challenge.
+Prospectively precommit and execute the competent non-DSD Aggregation baseline challenge.
