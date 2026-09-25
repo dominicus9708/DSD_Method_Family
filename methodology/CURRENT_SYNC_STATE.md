@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-26 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `fb7a16b166fb6835d1ddf8930869600c7d9fcff2`  
+Method-state source commit before this synchronization record: `8210c3cf54c92400d7d19850de8b5e5bd5b1ee03`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -52,7 +52,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Aggregation | Protocol v0.1 frozen; AGG-CH-001 64/64 PASS; AGG-CH-002 80/80 PASS; all seven task terminals directly exercised; direct boundary challenge next |
+| Aggregation | Protocol v0.1 frozen; AGG-CH-001 64/64 PASS; AGG-CH-002 80/80 PASS; AGG-CH-003 72/72 PASS fixture-bounded separation; competent baseline next |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
@@ -387,7 +387,22 @@ ALL_SEVEN_AGGREGATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
   yes
 
 METHOD_BOUNDARY_AGGREGATION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  8
+
+EXACT_COLLAPSE_PAIRS:
   0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  8
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
 
 AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
@@ -448,7 +463,21 @@ CHECKS: 80/80 PASS
 ALL_SEVEN_AGGREGATION_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 ```
 
-**Next canonical step:** prospectively precommit and execute the direct neighboring-method Aggregation boundary challenge.
+AGG-CH-003 direct neighboring-method boundary challenge:
+
+```text
+PRECOMMIT_COMMIT: e3de5052e01db87185a6fe1d3d2885ba3336e23c
+PRECOMMIT_BLOB: 367f455914bd2eb22329408972542e479e5b45e9
+RESULT_COMMIT: 9c0d8ef548b5059289da85e8bc6eaa18e250ee80
+RESULT_BLOB: d47f45884576ebb5cda4fc8967abff5bc484406a
+CHECKS: 72/72 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 8
+EXACT_COLLAPSE_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
+**Next canonical step:** prospectively precommit and execute the competent non-DSD Aggregation baseline challenge.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -489,4 +518,4 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-The active internal-standardization front is **Aggregation / DSD 집계론**. Its source scope, Task Interface v0.1, 18-case pre-protocol boundary attack, Boundary Amendment 001, and executable Protocol v0.1 are frozen. AGG-CH-001 passed 64/64 on the positive constructed fixture. AGG-CH-002 then passed 80/80 across negative/unresolved cases, directly exercising all remaining task terminals plus collision/injectivity/reconstruction-scope distinctions. All seven Aggregation task terminals now have direct constructed execution. The next canonical work item is the direct neighboring-method boundary challenge.
+The active internal-standardization front is **Aggregation / DSD 집계론**. Its source scope, Task Interface v0.1, 18-case pre-protocol boundary attack, Boundary Amendment 001, and executable Protocol v0.1 are frozen. AGG-CH-001 passed 64/64, AGG-CH-002 passed 80/80 with all seven task terminals directly exercised, and AGG-CH-003 passed 72/72 across eight neighboring-method pairs. All eight pairs were PARTIAL_OVERLAP_NOT_COLLAPSE with no exact collapse or unresolved boundary in this fixture. The result is fixture-bounded and does not establish permanent irreducibility. The next canonical work item is the competent non-DSD Aggregation baseline.
