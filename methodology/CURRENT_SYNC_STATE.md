@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-26 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `8210c3cf54c92400d7d19850de8b5e5bd5b1ee03`  
+Method-state source commit before this synchronization record: `849c59d6ee9b8d0f22fe57ec1cbde56428ea3f3c`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -52,7 +52,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Aggregation | Protocol v0.1 frozen; AGG-CH-001 64/64 PASS; AGG-CH-002 80/80 PASS; AGG-CH-003 72/72 PASS fixture-bounded separation; competent baseline next |
+| Aggregation | Protocol v0.1 frozen; AGG-CH-001~003 PASS; AGG-CH-004 competent baseline 64/64 PASS / NO_GAIN; strongest-reasonable baseline next |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
@@ -372,10 +372,10 @@ BINDING_OPERATION:
   T1-T16
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  2
+  4
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
-  2
+  4
 
 POSITIVE_AGGREGATION_CASES:
   1
@@ -403,6 +403,18 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
 
 SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
+
+BASELINE_AGGREGATION_CASES:
+  1
+
+NO_GAIN_AGGREGATION_CASES:
+  1
+
+STRONGEST_REASONABLE_BASELINE_AGGREGATION:
+  not established
+
+REPRODUCIBILITY_CASES:
+  0
 
 AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
@@ -477,7 +489,20 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
 BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
 ```
 
-**Next canonical step:** prospectively precommit and execute the competent non-DSD Aggregation baseline challenge.
+AGG-CH-004 competent non-DSD baseline:
+
+```text
+BASELINE_ID: B0_GENERIC_TYPED_AGGREGATION_EVALUATOR
+PRECOMMIT_COMMIT: e1152eae067817b0798b8e7618fad2362fd35b5f
+PRECOMMIT_BLOB: f7b36207895160e1318c447b0e7528b518788e11
+RESULT_COMMIT: d8563684d9bb9fb3d3456488cbf68fa9d64b6906
+RESULT_BLOB: 42c6500ba434c93bb6b3f43dd6f25857c3d158a0
+CHECKS: 64/64 PASS
+GAIN_STATUS: AGGREGATION_METHOD_GAIN_NO_GAIN
+GAIN_AXES: 6/6 BASELINE_MATCH
+```
+
+**Next canonical step:** prospectively precommit and execute the strongest-reasonable non-DSD Aggregation baseline challenge.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -518,4 +543,4 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-The active internal-standardization front is **Aggregation / DSD 집계론**. Its source scope, Task Interface v0.1, 18-case pre-protocol boundary attack, Boundary Amendment 001, and executable Protocol v0.1 are frozen. AGG-CH-001 passed 64/64, AGG-CH-002 passed 80/80 with all seven task terminals directly exercised, and AGG-CH-003 passed 72/72 across eight neighboring-method pairs. All eight pairs were PARTIAL_OVERLAP_NOT_COLLAPSE with no exact collapse or unresolved boundary in this fixture. The result is fixture-bounded and does not establish permanent irreducibility. The next canonical work item is the competent non-DSD Aggregation baseline.
+The active internal-standardization front is **Aggregation / DSD 집계론**. AGG-CH-001~003 remain complete. AGG-CH-004 then passed 64/64 against B0_GENERIC_TYPED_AGGREGATION_EVALUATOR under equal-information access, with all six precommitted gain axes BASELINE_MATCH and `AGGREGATION_METHOD_GAIN_NO_GAIN`. This bounded NO_GAIN result does not imply method failure, deletion, merger, absorption, or permanent redundancy. The next canonical work item is the strongest-reasonable non-DSD Aggregation baseline.
