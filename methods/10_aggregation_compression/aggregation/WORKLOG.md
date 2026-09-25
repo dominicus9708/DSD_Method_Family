@@ -220,3 +220,88 @@ The historical Task Interface and boundary attack remain immutable.
 ## Next
 
 Prospectively precommit and execute the first positive constructed Aggregation challenge.
+
+
+---
+
+## Step 6 — AGG-CH-001 positive constructed challenge
+
+```text
+PRECOMMIT_COMMIT:
+  00e4afd77d7f10855f6c4d62eacbeaa154c3a2ce
+
+PRECOMMIT_BLOB:
+  a59810b90b2b93a0e3b63ba7f23dc59178bef566
+
+RESULT_COMMIT:
+  21b54077a7fe48f690b7528b2ad0025d6b8a1325
+
+RESULT_BLOB:
+  7e5d071936d52655886a8a91141785cf7ed580f9
+
+CHECKS:
+  64/64 PASS
+
+TASK_TERMINAL:
+  AGGREGATION_TASK_ESTABLISHED
+
+PROTOCOL_CONFORMANCE:
+  AGGREGATION_PROTOCOL_CONFORMANT
+
+METHOD_GAIN_STATUS:
+  AGGREGATION_METHOD_GAIN_NOT_ASSESSED
+```
+
+Constructed fixture:
+
+```text
+formation support:
+  F = {c1,c2,c0}
+
+Comp(F):
+  (1,4)
+
+property support:
+  G = {i1,i2,i0}
+
+Agg(G):
+  (3,2)
+
+combined descriptor:
+  ((1,4),(3,2))
+
+separate equal-weight channel average:
+  (1/3,4/3)
+```
+
+Preserved:
+
+```text
+defined zero != absence
+defined zero != applicable-but-undefined
+multi-input property != single-channel ownership
+formation coordinate != property coordinate
+direct finite sum != normalized average
+aggregate equality != source/support identity
+```
+
+Current counters:
+
+```text
+DIRECT_AGGREGATION_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_AGGREGATION_PILOTS: 1
+POSITIVE_AGGREGATION_CASES: 1
+NEGATIVE_OR_UNRESOLVED_AGGREGATION_CASES: 0
+METHOD_BOUNDARY_AGGREGATION_CASES: 0
+BASELINE_AGGREGATION_CASES: 0
+NO_GAIN_AGGREGATION_CASES: 0
+REPRODUCIBILITY_CASES: 0
+AGGREGATION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_AGGREGATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute the negative / unresolved-terminal Aggregation challenge.
