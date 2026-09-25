@@ -1,6 +1,6 @@
 # DSD Aggregation / DSD 집계론
 
-Status: **Protocol v0.1 frozen / AGG-CH-001 64/64 PASS + AGG-CH-002 80/80 PASS + AGG-CH-003 72/72 PASS / competent baseline next**
+Status: **Protocol v0.1 frozen / AGG-CH-001~003 PASS / AGG-CH-004 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
 Legacy path ID: `10A`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -18,6 +18,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`AGG-CH-002 result`](../../../evidence/method_specific/aggregation/AGG-CH-002_negative-unresolved-terminal.md)
 - [`AGG-CH-003 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-003_precommit.md)
 - [`AGG-CH-003 result`](../../../evidence/method_specific/aggregation/AGG-CH-003_direct-method-boundary.md)
+- [`AGG-CH-004 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-004_precommit.md)
+- [`AGG-CH-004 result`](../../../evidence/method_specific/aggregation/AGG-CH-004_competent-baseline-no-gain.md)
 
 ## Task
 
@@ -182,10 +184,10 @@ DEDICATED_AGGREGATION_PROTOCOL:
   established v0.1
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  2
+  4
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
-  2
+  4
 
 POSITIVE_AGGREGATION_CASES:
   1
@@ -215,10 +217,13 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_AGGREGATION_CASES:
-  0
+  1
 
 NO_GAIN_AGGREGATION_CASES:
-  0
+  1
+
+STRONGEST_REASONABLE_BASELINE_AGGREGATION:
+  not established
 
 REPRODUCIBILITY_CASES:
   0
@@ -342,6 +347,38 @@ Audit
 
 All eight retained claim-relevant differences across the five-interface test.
 
+## AGG-CH-004 — competent non-DSD baseline
+
+```text
+BASELINE_ID:
+  B0_GENERIC_TYPED_AGGREGATION_EVALUATOR
+
+PRECOMMIT_COMMIT:
+  e1152eae067817b0798b8e7618fad2362fd35b5f
+
+PRECOMMIT_BLOB:
+  f7b36207895160e1318c447b0e7528b518788e11
+
+RESULT_COMMIT:
+  d8563684d9bb9fb3d3456488cbf68fa9d64b6906
+
+RESULT_BLOB:
+  42c6500ba434c93bb6b3f43dd6f25857c3d158a0
+
+CHECKS:
+  64/64 PASS
+
+GAIN_STATUS:
+  AGGREGATION_METHOD_GAIN_NO_GAIN
+
+GAIN_AXES:
+  6/6 BASELINE_MATCH
+```
+
+The competent generic evaluator received equal claim-relevant information and reproduced the frozen Aggregation outputs across typed-status preservation, finite/countable admission, coordinate/postprocessing separation, collision/injectivity, unresolved terminal semantics, and bounded-claim discipline.
+
+`NO_GAIN` remains a bounded comparative result and is not a method-deletion, merger, absorption, or permanent-redundancy result.
+
 ## Next
 
-Prospectively precommit and execute the competent non-DSD Aggregation baseline challenge.
+Prospectively precommit and execute the strongest-reasonable non-DSD Aggregation baseline challenge.
