@@ -415,3 +415,92 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute the direct neighboring-method boundary challenge under fair shared-artifact access.
+
+
+---
+
+## Step 8 — LIN-CH-003 direct neighboring-method boundary challenge
+
+```text
+PRECOMMIT_COMMIT:
+  7c68b63a0643b50fab49443c126955f0035d97a7
+PRECOMMIT_BLOB:
+  7488e670a50ee08ca739b6e37ce78781c8b04b83
+
+RESULT_COMMIT:
+  cc86daab1c8e0643e878159c913836bfe1e5aa38
+RESULT_BLOB:
+  ea3a94a1e6c572ea51efa719fd9450bd5c83c433
+
+PRECOMMITTED_REQUIRED_CHECKS: 72
+PASSED: 72
+FAILED: 0
+```
+
+Eight Method Family neighbors received fair shared-artifact access:
+
+```text
+Tracking
+Reconstruction
+Transformation
+Comparison
+Classification
+Aggregation
+Compression
+Audit
+```
+
+All eight resolved to:
+
+```text
+PARTIAL_OVERLAP_NOT_COLLAPSE
+```
+
+Summary:
+
+```text
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 8
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 8
+
+DYNAMICS_SOURCE_LAYER_BOUNDARY_TESTS: 1
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+
+BOUNDARY_STATUS:
+  FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+```
+
+The five-interface distinction used:
+
+```text
+INPUTS
+OPERATION
+OUTPUTS
+FAILURE_OR_NO_GAIN_CRITERIA
+VALIDATION_STANDARD
+```
+
+Dynamics was treated separately as the foundational source layer that supplies lineage primitives and transitions; Lineage operationalizes a declared identity task and does not derive the constitutive dynamic law.
+
+The result does not establish permanent irreducibility, superiority, or permanent registry survival.
+
+Counter update:
+
+```text
+DIRECT_LINEAGE_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_LINEAGE_PILOTS: 3
+POSITIVE_LINEAGE_CASES: 1
+NEGATIVE_OR_UNRESOLVED_LINEAGE_CASES: 1
+METHOD_BOUNDARY_LINEAGE_CASES: 1
+BASELINE_LINEAGE_CASES: 0
+NO_GAIN_LINEAGE_CASES: 0
+REPRODUCIBILITY_CASES: 0
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute a competent non-DSD baseline Lineage challenge. A fair `NO_GAIN` result is acceptable and must not be converted into a method-deletion argument.
