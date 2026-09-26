@@ -193,3 +193,34 @@ NOTES:
 ```
 
 현재 모든 ANA-Δ 항목의 DECISION은 **PENDING_DISCUSSION**이다.
+
+
+## 7. 2026-09-27 1차 알고리즘 정제
+
+세 난제 실전에서 얻은 후보를 일반 Analysis 절차로 옮기면서 다음 정제를 적용했다.
+
+- “최소 해상도”를 단일 스칼라가 아니라 **claim-relevant multi-axis resolution profile**로 변경했다.
+- 단순 dependency DAG 대신 **typed AND/OR dependency hypergraph**를 사용한다.
+- 하나의 frontier rank를 강제하지 않고 **minimal active frontier families**를 보존한다.
+- “강한 조건으로 상승”과 “정보를 잃는 축약”을 서로 다른 ledger로 분리한다.
+- common latent object가 있어도 projection/contraction/coarsening이면 자동 병합하지 않는다.
+- non-frontier route는 삭제하지 않고 supporting/exploratory/dormant/frozen 상태로 보존한다.
+- exact reuse/cache의 실제 구현은 Analysis가 아니라 **DSD Computation**으로 이관하는 방향을 택했다.
+- gain은 하나의 배타적 등급이 아니라 theorem/structural/computational/reproducibility/audit/negative-narrowing의 **multi-label set**으로 기록한다.
+
+세부 실행안: [GENERAL_ANALYSIS_CONTROLLER_V0_2.md](GENERAL_ANALYSIS_CONTROLLER_V0_2.md)
+
+### 잠정 후보 상태
+
+```text
+ANA-Δ01  PROMOTE_TO_AB_TEST
+ANA-Δ02  PROMOTE_TO_AB_TEST
+ANA-Δ03  PROMOTE_TO_AB_TEST
+ANA-Δ04  PROMOTE_TO_AB_TEST
+ANA-Δ05  ABSORB_INTO_INFORMATION_LOSS_CHECK
+ANA-Δ06  KEEP_AS_SHARED_OPERATIONAL_STATE_LAYER
+ANA-Δ07  REFER_TO_COMPUTATION
+ANA-Δ08  KEEP_AS_SHARED_RECORDING_RULE
+```
+
+이 상태는 정본 채택 결정이 아니라 **다음 A/B 검증을 위한 임시 정제 상태**다.
