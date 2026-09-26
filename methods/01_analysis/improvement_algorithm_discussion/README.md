@@ -224,3 +224,17 @@ ANA-Δ08  KEEP_AS_SHARED_RECORDING_RULE
 ```
 
 이 상태는 정본 채택 결정이 아니라 **다음 A/B 검증을 위한 임시 정제 상태**다.
+
+
+## 8. 기존 Challenge corpus와의 회귀 호환성 점검
+
+기존 `ANL-CH-005/007/008/009`를 기준으로 v0.2가 기존 분석 규율을 깨뜨리는지 점검했다.
+
+- minimum layer set과 required-resolution profile은 서로 다른 문제이므로 중복이 아니다.
+- internal structural gain은 strongest external baseline보다 우월함을 뜻하지 않는다.
+- transfer/reverse-prediction에서는 claim contract와 resolution profile도 reveal 전에 잠그는 것이 자연스럽다.
+- 기존 challenge corpus는 dependency hypergraph, sibling contraction, escalation-vs-information-loss, frontier admissibility, incomparable profile을 직접 시험하지 않는다.
+
+세부 기록: [REGRESSION_COMPATIBILITY_V0_1.md](REGRESSION_COMPATIBILITY_V0_1.md)
+
+다음 A/B 검증은 위 미시험 항목을 직접 겨냥한다.
