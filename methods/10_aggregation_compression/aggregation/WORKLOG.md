@@ -558,3 +558,94 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute the strongest-reasonable non-DSD Aggregation baseline challenge.
+
+
+---
+
+## Step 10 — AGG-CH-005 strongest-reasonable non-DSD baseline
+
+```text
+BASELINE_ID:
+  B1_STRONG_AGGREGATION_ENGINE
+
+PRECOMMIT_COMMIT:
+  da2bb2cb33d51f902e0a9a956846a13c0403a46a
+
+PRECOMMIT_BLOB:
+  d384d7f1c7a4fae71ad46ae12e7cbf504a8dc0d4
+
+RESULT_COMMIT:
+  6ffcd054ab94cdf143c0cd9fb644e5d214a479d2
+
+RESULT_BLOB:
+  d17c650e2f3f4635664f1bb6c6796edd67b54516
+
+CHECKS:
+  82/82 PASS
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+GAIN_STATUS:
+  AGGREGATION_METHOD_GAIN_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_AGGREGATION:
+  established_at_constructed_evidence_level
+```
+
+Strong-pressure subcases:
+
+```text
+R1 versioned rule registry / non-retroactivity / postprocessing pipeline
+R2 exact kernel + declared-class injectivity
+R3 admitted countable extension with exact sum
+R4 multi-coordinate inverse dependency closure
+R5 conflict / underdetermination / sidecar / deterministic rerun pressure
+```
+
+Seven gain axes:
+
+```text
+G1 versioned rule/nonretroactivity: BASELINE_MATCH
+G2 exact kernel/declared class: BASELINE_MATCH
+G3 countable admission/exact extension: BASELINE_MATCH
+G4 multicoordinate dependency closure: BASELINE_MATCH
+G5 conflict/underdetermination/sidecar boundary: BASELINE_MATCH
+G6 bounded maximum claim: BASELINE_MATCH
+G7 deterministic ledger/rerun manifest: BASELINE_MATCH
+```
+
+Preserved:
+
+```text
+STRONGEST_REASONABLE_BASELINE_AT_CONSTRUCTED_EVIDENCE_LEVEL
+  != UNIVERSALLY_STRONGEST_POSSIBLE_BASELINE
+
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+```
+
+Current counters:
+
+```text
+DIRECT_AGGREGATION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_AGGREGATION_PILOTS: 5
+POSITIVE_AGGREGATION_CASES: 1
+NEGATIVE_OR_UNRESOLVED_AGGREGATION_CASES: 1
+METHOD_BOUNDARY_AGGREGATION_CASES: 1
+BASELINE_AGGREGATION_CASES: 2
+NO_GAIN_AGGREGATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_AGGREGATION: established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 0
+AGGREGATION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_AGGREGATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute deterministic same-project Aggregation retrace.
