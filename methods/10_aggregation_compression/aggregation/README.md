@@ -1,6 +1,6 @@
 # DSD Aggregation / DSD 집계론
 
-Status: **Protocol v0.1 frozen / AGG-CH-001~003 PASS / AGG-CH-004 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
+Status: **Protocol v0.1 frozen / AGG-CH-001~003 PASS / AGG-CH-004 64/64 PASS NO_GAIN / AGG-CH-005 82/82 PASS NO_GAIN / deterministic retrace next**
 Legacy path ID: `10A`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -20,6 +20,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`AGG-CH-003 result`](../../../evidence/method_specific/aggregation/AGG-CH-003_direct-method-boundary.md)
 - [`AGG-CH-004 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-004_precommit.md)
 - [`AGG-CH-004 result`](../../../evidence/method_specific/aggregation/AGG-CH-004_competent-baseline-no-gain.md)
+- [`AGG-CH-005 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-005_precommit.md)
+- [`AGG-CH-005 result`](../../../evidence/method_specific/aggregation/AGG-CH-005_strongest-reasonable-baseline.md)
 
 ## Task
 
@@ -184,10 +186,10 @@ DEDICATED_AGGREGATION_PROTOCOL:
   established v0.1
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
-  4
+  5
 
 POSITIVE_AGGREGATION_CASES:
   1
@@ -217,13 +219,13 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_AGGREGATION_CASES:
-  1
+  2
 
 NO_GAIN_AGGREGATION_CASES:
-  1
+  2
 
 STRONGEST_REASONABLE_BASELINE_AGGREGATION:
-  not established
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
   0
@@ -379,6 +381,39 @@ The competent generic evaluator received equal claim-relevant information and re
 
 `NO_GAIN` remains a bounded comparative result and is not a method-deletion, merger, absorption, or permanent-redundancy result.
 
+## AGG-CH-005 — strongest-reasonable non-DSD baseline
+
+```text
+BASELINE_ID:
+  B1_STRONG_AGGREGATION_ENGINE
+
+PRECOMMIT_COMMIT:
+  da2bb2cb33d51f902e0a9a956846a13c0403a46a
+
+PRECOMMIT_BLOB:
+  d384d7f1c7a4fae71ad46ae12e7cbf504a8dc0d4
+
+RESULT_COMMIT:
+  6ffcd054ab94cdf143c0cd9fb644e5d214a479d2
+
+RESULT_BLOB:
+  d17c650e2f3f4635664f1bb6c6796edd67b54516
+
+CHECKS:
+  82/82 PASS
+
+GAIN_STATUS:
+  AGGREGATION_METHOD_GAIN_NO_GAIN
+
+GAIN_AXES:
+  7/7 BASELINE_MATCH
+
+STRONGEST_REASONABLE_BASELINE_AGGREGATION:
+  established_at_constructed_evidence_level
+```
+
+B1 exercised versioned aggregation-rule registries, exact kernel/class-local injectivity analysis, admitted countable extension, multi-coordinate inverse dependency closure, conflict/underdetermination handling, deterministic ledgers, bounded-claim generation, and rerun manifests.
+
 ## Next
 
-Prospectively precommit and execute the strongest-reasonable non-DSD Aggregation baseline challenge.
+Prospectively precommit and execute deterministic same-project Aggregation retrace.
