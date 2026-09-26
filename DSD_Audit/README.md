@@ -6,7 +6,7 @@ This folder is the dedicated home for **DSD Audit**, separated from **DSD Analys
 
 ## Distinction from DSD Analysis / DSD 분석론과의 구분
 
-- **DSD Analysis / DSD 분석론**: decomposes, compares, and reinterprets structures.
+- **DSD Analysis / DSD 분석론**: decomposes and structurally re-expresses one declared target. Cross-target structural comparison belongs to **DSD Comparison**, explicit criterion-based class assignment to **DSD Classification**, and source/context/interpretive-bridge reading to **DSD Interpretation**.
 - **DSD Audit / DSD 감사**: retraces an analysis, calculation, judgment, or record under an explicit scope, interface lock, procedure, evidence basis, and verdict rule.
 
 An analysis result is not automatically an audit pass, and an audit failure does not automatically imply that the audited object is false in every sense.
