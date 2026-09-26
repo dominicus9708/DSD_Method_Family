@@ -20,7 +20,7 @@ DSD Analysis  <->  DSD Audit
                      +-- Individual Audit Records
 ```
 
-- **Analysis** decomposes and compares structures.
+- **Analysis** decomposes and structurally re-expresses one declared target.
 - **Audit** retraces the path and supported claim under explicit rules.
 
 An analysis result is not automatically an audit pass.
@@ -83,17 +83,20 @@ Do not collapse undefinedness, absence, inapplicability, or prerequisite failure
 ## 6. Universal audit procedure / 보편 감사 절차
 
 1. Fix object and audit question.
-2. Fix scope, time, descriptive resolution, exclusions, and external standard.
+2. Fix scope, time, descriptive resolution, exclusions, and external standard. When intermediate requirements differ materially in locality, uniformity, norm, moment, support, aggregation, precision, or another claim-relevant axis, record their relation to the already-declared claim and do not force incomparable axes into one total resolution order without an explicit implication or preservation rule.
 3. Lock DSD interface and source revisions when relevant.
 4. Preserve original source claims and procedures.
 5. Separate evidence status from DSD object status.
-6. Reconstruct available alternatives.
+6. Reconstruct available alternatives and, when several routes are material, distinguish AND-prerequisites, OR-alternative sufficient routes, theorem/domain gates, bridges, attack methods, and supporting work.
 7. Record selections and exclusions with criteria.
 8. Record material selectors and bridges.
 9. Trace transitions and lineage requirements.
-10. Audit aggregation, information loss, injectivity, and reconstruction claims where used.
+10. Audit aggregation, information loss, injectivity, and reconstruction claims where used. When a route also strengthens an intermediate requirement, record claim-strength escalation separately from representation information loss. Equal outputs, a shared latent parent, or a one-way bound do not establish claim-relevant representation equivalence without an explicit preservation argument.
 11. Separate fact, inference, norm, and decision.
 12. Search for witnesses, counterexamples, and boundary cases.
+
+When the audited object itself declares an active research, engineering, procedural, or computational frontier, audit whether reported progress directly discharges a declared gate, supplies a required bridge or certificate, establishes a frontier-reducing equivalence, invalidates a route under the locked scope, or is instead supporting, exploratory, or stronger-but-optional work. This checks the accuracy of the progress claim; DSD Audit does not choose project resource allocation or execution priority unless a separate Operation, Computation, Optimization, or external governance rule is supplied. Non-frontier status is not a deletion instruction.
+
 13. Check definition, transition, structural, and claim-level contradictions.
 14. Restrict the verdict to the maximum supported claim.
 15. Preserve enough material for independent reconstruction or reproduction.
@@ -109,6 +112,8 @@ Do not collapse undefinedness, absence, inapplicability, or prerequisite failure
 - Finite computation must not be upgraded into a general proof without a separate argument.
 - Favorable cases must not be retained by post-hoc exclusion of failures.
 - Optional DSD specializations must not be promoted into universal DSD requirements.
+- A stronger sufficient condition must not be silently promoted into a necessary condition for the audited claim.
+- A shared latent object, common source, or equal reduced output must not be promoted into structural equivalence without a claim-relevant preservation argument.
 
 ## 8. Default verdict vocabulary / 기본 판정
 
