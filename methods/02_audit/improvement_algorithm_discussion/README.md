@@ -236,3 +236,33 @@ NOTES:
 ```
 
 현재 모든 AUD-Δ 항목의 DECISION은 **PENDING_DISCUSSION**이다.
+
+
+## 8. 2026-09-27 1차 알고리즘 정제
+
+기존 General Audit Framework를 유지한 채, 실전에서 반복된 다섯 후보를 machine-assistable check로 정제했다.
+
+- claim-to-resolution은 단일 해상도 서열이 아니라 **다축 profile + explicit implication**으로 판정한다.
+- gate 감사는 flat OPEN list가 아니라 **typed AND/OR hypergraph + frontier families**를 검사한다.
+- escalation과 information loss를 분리해, “더 강한 조건”과 “더 빈약한 표현”이 동시에 생길 수 있음을 기록한다.
+- common-object 발견만으로 route를 합치지 않고 claim-relevant equivalence가 증명된 경우에만 deduplicate한다.
+- frontier admissibility는 새 작업의 삭제 여부가 아니라 **본선 진전으로 계산할 수 있는지**를 판정한다.
+- freeze/reopen, executable certificate, finite/general boundary, negative-result retention은 기존 규칙의 specialization 여부를 우선한다.
+
+세부 실행안 및 warning code: [GENERAL_AUDIT_EXTENSION_V0_2.md](GENERAL_AUDIT_EXTENSION_V0_2.md)
+
+### 잠정 후보 상태
+
+```text
+AUD-Δ01  PROMOTE_TO_AB_TEST
+AUD-Δ02  PROMOTE_TO_AB_TEST
+AUD-Δ03  PROMOTE_TO_AB_TEST
+AUD-Δ04  PROMOTE_TO_AB_TEST
+AUD-Δ05  ABSORB_AS_OPERATIONAL_SPECIALIZATION
+AUD-Δ06  KEEP_AS_DOMAIN_REPRODUCIBILITY_SPECIALIZATION
+AUD-Δ07  PROMOTE_TO_AB_TEST
+AUD-Δ08  ABSORB_INTO_EXISTING_CORE_SAFEGUARD
+AUD-Δ09  ABSORB_INTO_SC-08
+```
+
+정본은 아직 변경하지 않았다.
