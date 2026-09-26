@@ -493,7 +493,7 @@ otherwise:
   AGGREGATION_METHOD_GAIN_UNDERDETERMINED
 ```
 
-## 11. Frozen scoring — 72 checks
+## 11. Frozen scoring — 82 checks
 
 ### A. Immutable fairness — 10
 
@@ -615,25 +615,7 @@ G8 no deletion/merger/absorption/permanent-redundancy conclusion inferred
 ```text
 TOTAL_REQUIRED_CHECKS:
   82
-```
 
-Correction before commit:
-
-```text
-A 10
-B 12
-C 14
-D 12
-E 12
-F 14
-G 8
-=
-82
-```
-
-The frozen challenge therefore uses **82 checks**, not 72.
-
-```text
 PASS_THRESHOLD:
   82/82
 
