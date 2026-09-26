@@ -238,3 +238,34 @@ ANA-Δ08  KEEP_AS_SHARED_RECORDING_RULE
 세부 기록: [REGRESSION_COMPATIBILITY_V0_1.md](REGRESSION_COMPATIBILITY_V0_1.md)
 
 다음 A/B 검증은 위 미시험 항목을 직접 겨냥한다.
+
+
+## 9. 2026-09-27 — 최종 경계 감사 및 clean review branch
+
+최종 method-boundary 감사에서 다음 보정이 필요하다고 확인했다.
+
+- Analysis의 `claim contract` 표현은 Specification과의 경계를 위해 **already-declared claim lock**으로 정제한다.
+- dependency/frontier는 구조 표현까지만 Analysis가 담당하고 실제 실행·생략·cache는 Computation, 자원·수명주기 orchestration은 Operation으로 넘긴다.
+- representation relation은 Analysis 내부의 보조 분류로만 사용하며 source→target mapping 자체가 주작업이면 Transformation으로 넘긴다.
+- information-loss 탐지는 Analysis/Audit가 수행할 수 있지만 deliberate reduction 설계는 Compression의 영역을 유지한다.
+- SC-01~SC-10은 현재 재개방하지 않는다.
+
+이를 반영한 exact diff v0.2:
+`EXACT_CANONICAL_DIFF_DRAFT_V0_2.md`
+
+또한 최신 main에서 새 review branch를 별도로 생성해 **임시 논의 파일을 제외한 실제 정본 변경 후보 7개 파일만** 적용했다.
+
+```text
+REVIEW_BRANCH:
+review/analysis-audit-strengthening-v0-2-20260927
+
+BASE:
+latest main at branch creation
+
+STATUS:
+7 commits ahead / 0 behind
+MAIN_MODIFIED:
+no
+```
+
+review branch의 Analysis 관련 변경은 README 최소 보강 + `ANALYSIS_OPERATIONAL_CONTROLLER.md` 신설이다.
