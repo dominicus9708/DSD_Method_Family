@@ -649,3 +649,98 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute deterministic same-project Aggregation retrace.
+
+
+---
+
+## Step 11 — AGG-CH-006 deterministic same-project retrace
+
+```text
+PRECOMMIT_COMMIT:
+  2c01089445a7c03a9a8d05f2308c066169253616
+
+PRECOMMIT_BLOB:
+  20e9d4f3beb5096e79c8d01fc7ecaa433df18723
+
+RECONSTRUCTION_LEDGER_COMMIT:
+  ffb25c6338900132d6143e9fe132486fe05d3edd
+
+RECONSTRUCTION_LEDGER_BLOB:
+  42b39c372e4dd3509c5e62e8b4097cda6a2ff557
+
+RESULT_COMMIT:
+  ab55f4afd8b55bead49b400279f859858bb4a4f8
+
+RESULT_BLOB:
+  d29bad3598b024aa67defa350bd49d0d87c04d4d
+
+CHECKS:
+  56/56 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+SEMANTIC_EQUIVALENT_MATCHES:
+  4
+
+NONCLAIM_RELEVANT_WORDING_DIFFERENCES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+```
+
+Derivation basis:
+
+```text
+P0 Aggregation Protocol v0.1
++
+P1 AGG-CH-005 strongest-reasonable baseline precommit
+```
+
+The reconstruction ledger was committed before formal comparison against P2.
+
+P2 was used only as the comparison target.
+
+Retraced Aggregation-side outputs:
+
+```text
+R1 versioned rule / postprocessing separation
+R2 exact kernel / declared-class injectivity
+R3 admitted countable extension
+R4 inverse dependency closure
+R5 conflict / underdetermination / sidecar / rerun boundary
+```
+
+Preserved:
+
+```text
+SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+RETRACE_PASS != EXTERNAL_APPLICABILITY
+```
+
+Current counters:
+
+```text
+DIRECT_AGGREGATION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_AGGREGATION_PILOTS: 5
+BASELINE_AGGREGATION_CASES: 2
+NO_GAIN_AGGREGATION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_AGGREGATION: established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+AGGREGATION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_AGGREGATION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+## Next
+
+Prospectively precommit and execute the frozen-axis Aggregation internal-standardization audit.
