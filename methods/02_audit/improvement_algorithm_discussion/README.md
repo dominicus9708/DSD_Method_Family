@@ -266,3 +266,28 @@ AUD-Δ09  ABSORB_INTO_SC-08
 ```
 
 정본은 아직 변경하지 않았다.
+
+
+## 9. A/B fixture precommit 및 1차 수동 calibration
+
+A/B 기대 결과를 먼저 `AB_FIXTURE_PLAN_V0_1.md`에 고정하고 commit `0dc75fa9f93622742bc1659df5595fedd94706a9`로 precommit한 뒤, 정본 baseline과 v0.2 extension을 같은 fixture에 수동 적용했다.
+
+결과 요약:
+
+```text
+AUD-Δ01  SURVIVES_TEMP_CALIBRATION
+AUD-Δ02  SURVIVES_TEMP_CALIBRATION
+AUD-Δ03  SURVIVES_TEMP_CALIBRATION
+AUD-Δ04  RETAIN_AS_ALGORITHMIC_SPECIALIZATION
+AUD-Δ05  ABSORB_AS_OPERATIONAL_SPECIALIZATION
+AUD-Δ06  KEEP_AS_DOMAIN_REPRODUCIBILITY_SPECIALIZATION
+AUD-Δ07  SURVIVES_TEMP_CALIBRATION
+AUD-Δ08  ABSORB_INTO_EXISTING_CORE_SAFEGUARD
+AUD-Δ09  ABSORB_INTO_SC-08
+```
+
+특히 AUD-Δ04는 기존 aggregate/reconstruction/information-loss 금지규칙 자체가 이미 강하므로, 새로운 보편 원리라기보다 **representation relation taxonomy의 실행 정밀화**로 보는 쪽이 현재 더 타당하다.
+
+세부 결과: [AB_CALIBRATION_RESULTS_V0_1.md](AB_CALIBRATION_RESULTS_V0_1.md)
+
+이 calibration은 동일 세션의 내부 calibration이며 독립 검증이 아니다. 정본은 아직 변경하지 않았다.
