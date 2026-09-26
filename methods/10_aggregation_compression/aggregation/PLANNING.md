@@ -1,6 +1,6 @@
 # DSD Aggregation Planning / DSD 집계론 기획
 
-Status: **internal standardization in progress / AGG-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN / deterministic retrace next**
+Status: **internal standardization in progress / AGG-CH-006 deterministic retrace 56/56 PASS / frozen-axis audit next**
 Date opened: **2026-09-25**
 Legacy path ID: `10A`
 Path: `methods/10_aggregation_compression/aggregation/`
@@ -122,8 +122,8 @@ source and registry recovery
 5. ✅ Executable Aggregation Protocol v0.1 — frozen.
 6. ✅ Positive / negative / boundary cases — AGG-CH-001 64/64 PASS; AGG-CH-002 80/80 PASS; AGG-CH-003 72/72 PASS.
 7. ✅ Competent and strongest-reasonable baselines — AGG-CH-004 64/64 PASS / NO_GAIN; AGG-CH-005 82/82 PASS / NO_GAIN.
-8. ⏸ Deterministic same-project retrace — next.
-9. ⏸ Frozen-axis internal standardization audit.
+8. ✅ Deterministic same-project retrace — AGG-CH-006 56/56 PASS; zero claim-relevant mismatches.
+9. ⏸ Frozen-axis internal standardization audit — next.
 10. ⏸ External applications / independent validation.
 
 ## Current counters
@@ -205,6 +205,15 @@ STRONGEST_REASONABLE_BASELINE_AGGREGATION:
   established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_AGGREGATION_APPLICATIONS:
@@ -309,6 +318,21 @@ GAIN_AXES: 7/7 BASELINE_MATCH
 STRONGEST_REASONABLE_BASELINE_AGGREGATION: established_at_constructed_evidence_level
 ```
 
+## AGG-CH-006
+
+```text
+PRECOMMIT_COMMIT: 2c01089445a7c03a9a8d05f2308c066169253616
+PRECOMMIT_BLOB: 20e9d4f3beb5096e79c8d01fc7ecaa433df18723
+RECONSTRUCTION_LEDGER_COMMIT: ffb25c6338900132d6143e9fe132486fe05d3edd
+RECONSTRUCTION_LEDGER_BLOB: 42b39c372e4dd3509c5e62e8b4097cda6a2ff557
+RESULT_COMMIT: ab55f4afd8b55bead49b400279f859858bb4a4f8
+RESULT_BLOB: d29bad3598b024aa67defa350bd49d0d87c04d4d
+CHECKS: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+```
+
 ## Next
 
-Prospectively precommit and execute deterministic same-project Aggregation retrace.
+Prospectively precommit and execute the frozen-axis Aggregation internal-standardization audit.
