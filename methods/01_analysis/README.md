@@ -26,8 +26,16 @@ Primary checks:
 - applicability and prerequisite distinctions;
 - direct/partial/encoded/non-correspondence when correspondence is part of the analysis;
 - aggregate equality vs structural equality;
-- first branching and boundary cases when applicable.
+- first branching and boundary cases when applicable;
+- for multi-step targets, the relation between an already-declared claim and intermediate requirement strength, without assuming one universal scalar resolution order;
+- when multiple routes are material, AND-prerequisites, OR-alternative sufficient routes, theorem gates, bridges, attack methods, and plural minimal dependency frontiers;
+- when multiple representations are material, established equivalence versus projection, contraction, coarsening, one-way sufficiency, sibling contraction, or shared latent parenthood;
+- claim-strength escalation and representation information loss as separate checks when both are material.
 
 DSD Analysis does not replace the external field's original terminology, proof rules, empirical standards, or interpretation practices.
+
+For multi-step analyses, use [`ANALYSIS_OPERATIONAL_CONTROLLER.md`](ANALYSIS_OPERATIONAL_CONTROLLER.md) when the declared target contains material intermediate requirements, multiple sufficient routes, multiple representations, or claim-relevant reductions.
+
+The controller analyzes an already-declared claim; it does not author domain requirements. Primary requirement specification remains DSD Specification or the competent external specification source. Dependency analysis does not decide run scheduling or resource allocation; executable omission/reuse belongs to DSD Computation, deliberate representation reduction to DSD Compression, and live lifecycle/resource orchestration to DSD Operation. When source-to-target mapping itself is the primary task, use DSD Transformation.
 
 See [`../METHOD_BOUNDARY_MATRIX.md`](../METHOD_BOUNDARY_MATRIX.md) for the current non-duplication boundary audit.
