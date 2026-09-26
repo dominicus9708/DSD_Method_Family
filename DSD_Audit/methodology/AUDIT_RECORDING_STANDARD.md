@@ -57,6 +57,29 @@ Record before evaluating:
 
 If scope changes, append the change rather than silently editing the original scope.
 
+### 4.1 Optional claim-requirement relation / 선택: 주장-요구조건 관계
+
+Use when intermediate requirements materially differ.
+
+```text
+DECLARED_CLAIM:
+ACTIVE_REQUIREMENT_AXES:
+INTERMEDIATE_REQUIREMENT:
+RELATION_TO_DECLARED_CLAIM:
+IMPLICATION_OR_PRESERVATION_BASIS:
+```
+
+Allowed relation vocabulary:
+
+```text
+REQUIRED_MATCH
+PROVEN_STRONGER_SUFFICIENT
+CONDITIONAL_STRONGER_SUFFICIENT
+WEAKER_INSUFFICIENT
+INCOMPARABLE
+RELATION_UNDETERMINED
+```
+
 ## 5. Source preservation / 원자료 보존
 
 ```text
@@ -152,6 +175,21 @@ For each alternative, record:
 - exclusion rule
 - information required for exclusion
 
+### 12.1 Optional dependency/frontier ledger / 선택: 의존성·전선 장부
+
+Use only when several material routes exist or the audited object itself makes a frontier/progress claim.
+
+```text
+AND_PREREQUISITES:
+OR_SUFFICIENT_ROUTES:
+COMMON_MANDATORY_GATES:
+MINIMAL_FRONTIER_FAMILIES:
+ATTACK_METHODS:
+SUPPORTING_WORK:
+FROZEN_BRANCHES:
+REOPEN_CONDITIONS:
+```
+
 ## 13. Aggregation and reconstruction ledger / 집계·복원 장부
 
 When a reduced output or summary is used:
@@ -164,7 +202,31 @@ INJECTIVITY_ESTABLISHED:
 COLLISION_WITNESS:
 KERNEL_OR_INFORMATION_LOSS_CHECK:
 RECONSTRUCTION_CLAIM:
+REPRESENTATION_RELATION:
+REPRESENTATION_PRESERVATION_BASIS:
+CLAIM_STRENGTH_ESCALATION:
+ESCALATION_BASIS:
+CLAIM_RELEVANT_INFORMATION_LOSS:
+MERGE_OR_DEDUPLICATION_BASIS:
 ```
+
+Suggested optional representation vocabulary:
+
+```text
+IDENTICAL
+BIJECTIVE_EXACT
+ISOMETRIC_OR_PARSEVAL_EQUIVALENT
+FIXED_WEIGHT_EQUIVALENT
+PROJECTION
+CONTRACTION
+COARSENING
+ONE_WAY_BOUND
+SIBLING_CONTRACTIONS
+INDEPENDENT
+UNKNOWN
+```
+
+If source-to-target mapping is itself the primary task, Transformation remains the primary method; Audit checks the performed mapping or claim.
 
 ## 14. Witness and counterexample record / 증인·반례 기록
 
@@ -230,6 +292,8 @@ For computational/procedural audits record where applicable:
 For non-computational audits record source set, dates, passages, classification rules, decision rules, and unresolved material.
 
 ## 19. Revision and migration log / 개정·마이그레이션 기록
+
+The optional fields introduced by later Audit methodology revisions are prospective and additive. Historical audit records are not invalidated solely because they predate those fields.
 
 Never overwrite a historical verdict silently.
 
