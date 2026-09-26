@@ -38,6 +38,19 @@ reproducibility
 revision_migration
 ```
 
+Optional conditional groups for materially multi-step cases:
+
+```text
+claim_requirement_relation
+dependency_frontier
+representation_relation
+escalation_information_loss
+branch_state_reopen
+gain_set
+```
+
+These optional groups are not required for every audit.
+
 ## 3. Phase 0 — manual structure stabilization / 수동 구조 안정화
 
 1. Apply the separated DSD Audit template to mathematics, science, software/algorithm, and at least one non-technical domain.
@@ -77,6 +90,23 @@ same summary -> strict equivalence        [warn without proof]
 identity change -> same literal channel   [warn without lineage]
 ```
 
+Additional candidate warning rules for materially multi-step cases:
+
+```text
+stronger sufficient -> necessary                  [warn without implication basis]
+weaker requirement -> sufficient                  [warn without bridge/argument]
+incomparable axes -> scalar total order            [warn without ordering rule]
+OR alternative -> mandatory AND prerequisite       [warn]
+attack method -> theorem/domain gate                [warn]
+established-equivalent obligations -> double count [warn]
+shared parent -> representation equivalence         [warn without preservation proof]
+one-way bound -> equivalence                        [warn]
+material claim-strength escalation -> unrecorded   [warn]
+claim-relevant information loss -> unrecorded      [warn]
+frozen branch -> false/impossible                   [warn]
+supporting/exploratory work -> direct closure      [warn]
+```
+
 Bridge rules should flag multi-input property allocation without selectors, property-to-dynamic coefficient use without constitutive bridges, and optional specialization treated as universal core.
 
 ## 6. Phase 3 — domain adapters / 분야별 어댑터
@@ -93,10 +123,14 @@ Domain verdict and DSD structural audit verdict remain separate.
 ```text
 SOURCE LOCK
 -> INTERFACE LOCK
+-> SCOPE / CLAIM-REQUIREMENT RELATION        [conditional]
 -> TYPE/STATUS VALIDATION
 -> SELECTION/EXCLUSION CHECK
+-> DEPENDENCY / FRONTIER CHECK               [conditional]
 -> BRIDGE CHECK
+-> REPRESENTATION-RELATION CHECK             [conditional]
 -> TRANSITION/LINEAGE CHECK
+-> ESCALATION / INFORMATION-LOSS CHECK       [conditional]
 -> ALTERNATIVE/WITNESS CHECK
 -> AGGREGATION/RECONSTRUCTION CHECK
 -> CONTRADICTION CHECK
