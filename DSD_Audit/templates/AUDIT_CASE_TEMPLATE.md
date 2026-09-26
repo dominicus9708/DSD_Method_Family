@@ -48,6 +48,18 @@ EXTERNAL_STANDARD:
 ASSUMPTIONS:
 ```
 
+## 3A. Optional claim-requirement relation / 선택: 주장-요구조건 관계
+
+Use only when intermediate requirement strength is material.
+
+```text
+DECLARED_CLAIM:
+ACTIVE_REQUIREMENT_AXES:
+INTERMEDIATE_REQUIREMENT:
+RELATION_TO_DECLARED_CLAIM:
+IMPLICATION_OR_PRESERVATION_BASIS:
+```
+
 ## 4. Original source preservation / 원자료 보존
 
 ```text
@@ -147,6 +159,21 @@ EXCLUSION_BASIS:
 ADDITIONAL_INFORMATION_NEEDED:
 ```
 
+## 11A. Optional dependency/frontier ledger / 선택: 의존성·전선 장부
+
+Use only when several material routes exist or a frontier/progress claim is audited.
+
+```text
+AND_PREREQUISITES:
+OR_SUFFICIENT_ROUTES:
+COMMON_MANDATORY_GATES:
+MINIMAL_FRONTIER_FAMILIES:
+ATTACK_METHODS:
+SUPPORTING_WORK:
+FROZEN_BRANCHES:
+REOPEN_CONDITIONS:
+```
+
 ## 12. Aggregation and reconstruction / 집계·복원
 
 ```text
@@ -157,6 +184,12 @@ INJECTIVITY_ESTABLISHED:
 COLLISION_WITNESS:
 KERNEL_OR_INFORMATION_LOSS_CHECK:
 RECONSTRUCTION_CLAIM:
+REPRESENTATION_RELATION:
+REPRESENTATION_PRESERVATION_BASIS:
+CLAIM_STRENGTH_ESCALATION:
+ESCALATION_BASIS:
+CLAIM_RELEVANT_INFORMATION_LOSS:
+MERGE_OR_DEDUPLICATION_BASIS:
 ```
 
 ## 13. Witnesses and counterexamples / 증인·반례
