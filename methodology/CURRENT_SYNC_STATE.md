@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-26 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `866a23fa812844b6478c4e2a412923bbc81e6c26`  
+Method-state source commit before this synchronization record: `99eb6c464e04f9252947db7aa5d1bdd499714fee`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -52,7 +52,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Aggregation | Protocol v0.1 frozen; AGG-CH-001~003 PASS; AGG-CH-004 64/64 PASS / NO_GAIN; AGG-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN; deterministic retrace next |
+| Aggregation | Protocol v0.1 frozen; AGG-CH-001~005 complete; AGG-CH-006 deterministic same-project retrace 56/56 PASS; frozen-axis internal audit next |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
@@ -414,6 +414,15 @@ STRONGEST_REASONABLE_BASELINE_AGGREGATION:
   established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
@@ -516,7 +525,22 @@ GAIN_AXES: 7/7 BASELINE_MATCH
 STRONGEST_REASONABLE_BASELINE_AGGREGATION: established_at_constructed_evidence_level
 ```
 
-**Next canonical step:** prospectively precommit and execute deterministic same-project Aggregation retrace.
+AGG-CH-006 deterministic same-project retrace:
+
+```text
+PRECOMMIT_COMMIT: 2c01089445a7c03a9a8d05f2308c066169253616
+PRECOMMIT_BLOB: 20e9d4f3beb5096e79c8d01fc7ecaa433df18723
+RECONSTRUCTION_LEDGER_COMMIT: ffb25c6338900132d6143e9fe132486fe05d3edd
+RECONSTRUCTION_LEDGER_BLOB: 42b39c372e4dd3509c5e62e8b4097cda6a2ff557
+RESULT_COMMIT: ab55f4afd8b55bead49b400279f859858bb4a4f8
+RESULT_BLOB: d29bad3598b024aa67defa350bd49d0d87c04d4d
+CHECKS: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+```
+
+**Next canonical step:** prospectively precommit and execute the frozen-axis Aggregation internal-standardization audit.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -557,4 +581,4 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-The active internal-standardization front is **Aggregation / DSD 집계론**. AGG-CH-001~003 remain complete. AGG-CH-004 passed 64/64 / NO_GAIN against the competent baseline. AGG-CH-005 then passed 82/82 / NO_GAIN against `B1_STRONG_AGGREGATION_ENGINE`, with all seven strong gain axes `BASELINE_MATCH`. `STRONGEST_REASONABLE_BASELINE_AGGREGATION` is now established at the constructed-evidence level only; this is not a universal strongest-baseline claim. The next canonical work item is deterministic same-project Aggregation retrace.
+The active internal-standardization front is **Aggregation / DSD 집계론**. AGG-CH-001~005 remain complete. AGG-CH-006 then deterministically regenerated the Aggregation-side outputs of the strongest-baseline workload from Protocol v0.1 + the frozen AGG-CH-005 precommit, committed the reconstruction ledger before formal comparison, and passed 56/56 with zero claim-relevant mismatches and zero post-comparison corrections. This remains same-project, non-blind evidence and does not establish independent replication, independent validation, or external applicability. The next canonical work item is the frozen-axis internal-standardization audit.
