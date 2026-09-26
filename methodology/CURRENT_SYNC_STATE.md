@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-26 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `849c59d6ee9b8d0f22fe57ec1cbde56428ea3f3c`  
+Method-state source commit before this synchronization record: `866a23fa812844b6478c4e2a412923bbc81e6c26`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -52,7 +52,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Aggregation | Protocol v0.1 frozen; AGG-CH-001~003 PASS; AGG-CH-004 competent baseline 64/64 PASS / NO_GAIN; strongest-reasonable baseline next |
+| Aggregation | Protocol v0.1 frozen; AGG-CH-001~003 PASS; AGG-CH-004 64/64 PASS / NO_GAIN; AGG-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN; deterministic retrace next |
 | Compression | proposed/developing |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
@@ -372,10 +372,10 @@ BINDING_OPERATION:
   T1-T16
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
-  4
+  5
 
 POSITIVE_AGGREGATION_CASES:
   1
@@ -405,13 +405,13 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_AGGREGATION_CASES:
-  1
+  2
 
 NO_GAIN_AGGREGATION_CASES:
-  1
+  2
 
 STRONGEST_REASONABLE_BASELINE_AGGREGATION:
-  not established
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
   0
@@ -502,7 +502,21 @@ GAIN_STATUS: AGGREGATION_METHOD_GAIN_NO_GAIN
 GAIN_AXES: 6/6 BASELINE_MATCH
 ```
 
-**Next canonical step:** prospectively precommit and execute the strongest-reasonable non-DSD Aggregation baseline challenge.
+AGG-CH-005 strongest-reasonable non-DSD baseline:
+
+```text
+BASELINE_ID: B1_STRONG_AGGREGATION_ENGINE
+PRECOMMIT_COMMIT: da2bb2cb33d51f902e0a9a956846a13c0403a46a
+PRECOMMIT_BLOB: d384d7f1c7a4fae71ad46ae12e7cbf504a8dc0d4
+RESULT_COMMIT: 6ffcd054ab94cdf143c0cd9fb644e5d214a479d2
+RESULT_BLOB: d17c650e2f3f4635664f1bb6c6796edd67b54516
+CHECKS: 82/82 PASS
+GAIN_STATUS: AGGREGATION_METHOD_GAIN_NO_GAIN
+GAIN_AXES: 7/7 BASELINE_MATCH
+STRONGEST_REASONABLE_BASELINE_AGGREGATION: established_at_constructed_evidence_level
+```
+
+**Next canonical step:** prospectively precommit and execute deterministic same-project Aggregation retrace.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -543,4 +557,4 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-The active internal-standardization front is **Aggregation / DSD 집계론**. AGG-CH-001~003 remain complete. AGG-CH-004 then passed 64/64 against B0_GENERIC_TYPED_AGGREGATION_EVALUATOR under equal-information access, with all six precommitted gain axes BASELINE_MATCH and `AGGREGATION_METHOD_GAIN_NO_GAIN`. This bounded NO_GAIN result does not imply method failure, deletion, merger, absorption, or permanent redundancy. The next canonical work item is the strongest-reasonable non-DSD Aggregation baseline.
+The active internal-standardization front is **Aggregation / DSD 집계론**. AGG-CH-001~003 remain complete. AGG-CH-004 passed 64/64 / NO_GAIN against the competent baseline. AGG-CH-005 then passed 82/82 / NO_GAIN against `B1_STRONG_AGGREGATION_ENGINE`, with all seven strong gain axes `BASELINE_MATCH`. `STRONGEST_REASONABLE_BASELINE_AGGREGATION` is now established at the constructed-evidence level only; this is not a universal strongest-baseline claim. The next canonical work item is deterministic same-project Aggregation retrace.
