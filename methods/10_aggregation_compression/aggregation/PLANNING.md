@@ -1,6 +1,6 @@
 # DSD Aggregation Planning / DSD 집계론 기획
 
-Status: **internal standardization in progress / AGG-CH-004 competent baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
+Status: **internal standardization in progress / AGG-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN / deterministic retrace next**
 Date opened: **2026-09-25**
 Legacy path ID: `10A`
 Path: `methods/10_aggregation_compression/aggregation/`
@@ -121,8 +121,8 @@ source and registry recovery
 4. ✅ Boundary Amendment 001 — 5/5 refinement groups adopted.
 5. ✅ Executable Aggregation Protocol v0.1 — frozen.
 6. ✅ Positive / negative / boundary cases — AGG-CH-001 64/64 PASS; AGG-CH-002 80/80 PASS; AGG-CH-003 72/72 PASS.
-7. 🟨 Competent and strongest-reasonable baselines — AGG-CH-004 competent baseline 64/64 PASS / NO_GAIN; strongest-reasonable baseline next.
-8. ⏸ Deterministic same-project retrace.
+7. ✅ Competent and strongest-reasonable baselines — AGG-CH-004 64/64 PASS / NO_GAIN; AGG-CH-005 82/82 PASS / NO_GAIN.
+8. ⏸ Deterministic same-project retrace — next.
 9. ⏸ Frozen-axis internal standardization audit.
 10. ⏸ External applications / independent validation.
 
@@ -163,10 +163,10 @@ BINDING_OPERATION:
   T1-T16
 
 DIRECT_AGGREGATION_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_AGGREGATION_PILOTS:
-  4
+  5
 
 POSITIVE_AGGREGATION_CASES:
   1
@@ -196,13 +196,13 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_AGGREGATION_CASES:
-  1
+  2
 
 NO_GAIN_AGGREGATION_CASES:
-  1
+  2
 
 STRONGEST_REASONABLE_BASELINE_AGGREGATION:
-  not established
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
   0
@@ -295,6 +295,20 @@ GAIN_STATUS: AGGREGATION_METHOD_GAIN_NO_GAIN
 GAIN_AXES: 6/6 BASELINE_MATCH
 ```
 
+## AGG-CH-005
+
+```text
+BASELINE_ID: B1_STRONG_AGGREGATION_ENGINE
+PRECOMMIT_COMMIT: da2bb2cb33d51f902e0a9a956846a13c0403a46a
+PRECOMMIT_BLOB: d384d7f1c7a4fae71ad46ae12e7cbf504a8dc0d4
+RESULT_COMMIT: 6ffcd054ab94cdf143c0cd9fb644e5d214a479d2
+RESULT_BLOB: d17c650e2f3f4635664f1bb6c6796edd67b54516
+CHECKS: 82/82 PASS
+GAIN_STATUS: AGGREGATION_METHOD_GAIN_NO_GAIN
+GAIN_AXES: 7/7 BASELINE_MATCH
+STRONGEST_REASONABLE_BASELINE_AGGREGATION: established_at_constructed_evidence_level
+```
+
 ## Next
 
-Prospectively precommit and execute the strongest-reasonable non-DSD Aggregation baseline challenge.
+Prospectively precommit and execute deterministic same-project Aggregation retrace.
