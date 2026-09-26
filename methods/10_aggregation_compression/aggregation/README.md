@@ -1,6 +1,6 @@
 # DSD Aggregation / DSD 집계론
 
-Status: **Protocol v0.1 frozen / AGG-CH-001~003 PASS / AGG-CH-004 64/64 PASS NO_GAIN / AGG-CH-005 82/82 PASS NO_GAIN / deterministic retrace next**
+Status: **Protocol v0.1 frozen / AGG-CH-001~005 complete / AGG-CH-006 deterministic retrace 56/56 PASS / internal-standardization audit next**
 Legacy path ID: `10A`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -22,6 +22,9 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`AGG-CH-004 result`](../../../evidence/method_specific/aggregation/AGG-CH-004_competent-baseline-no-gain.md)
 - [`AGG-CH-005 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-005_precommit.md)
 - [`AGG-CH-005 result`](../../../evidence/method_specific/aggregation/AGG-CH-005_strongest-reasonable-baseline.md)
+- [`AGG-CH-006 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-006_precommit.md)
+- [`AGG-CH-006 reconstruction ledger`](../../../evidence/method_specific/aggregation/AGG-CH-006_reconstruction-ledger.md)
+- [`AGG-CH-006 result`](../../../evidence/method_specific/aggregation/AGG-CH-006_deterministic-same-project-retrace.md)
 
 ## Task
 
@@ -228,6 +231,15 @@ STRONGEST_REASONABLE_BASELINE_AGGREGATION:
   established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_AGGREGATION_APPLICATIONS:
@@ -414,6 +426,42 @@ STRONGEST_REASONABLE_BASELINE_AGGREGATION:
 
 B1 exercised versioned aggregation-rule registries, exact kernel/class-local injectivity analysis, admitted countable extension, multi-coordinate inverse dependency closure, conflict/underdetermination handling, deterministic ledgers, bounded-claim generation, and rerun manifests.
 
+## AGG-CH-006 — deterministic same-project retrace
+
+```text
+PRECOMMIT_COMMIT:
+  2c01089445a7c03a9a8d05f2308c066169253616
+
+PRECOMMIT_BLOB:
+  20e9d4f3beb5096e79c8d01fc7ecaa433df18723
+
+RECONSTRUCTION_LEDGER_COMMIT:
+  ffb25c6338900132d6143e9fe132486fe05d3edd
+
+RECONSTRUCTION_LEDGER_BLOB:
+  42b39c372e4dd3509c5e62e8b4097cda6a2ff557
+
+RESULT_COMMIT:
+  ab55f4afd8b55bead49b400279f859858bb4a4f8
+
+RESULT_BLOB:
+  d29bad3598b024aa67defa350bd49d0d87c04d4d
+
+CHECKS:
+  56/56 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+```
+
+The reconstruction ledger was frozen from Protocol v0.1 + AGG-CH-005 precommit before formal comparison with the AGG-CH-005 result.
+
 ## Next
 
-Prospectively precommit and execute deterministic same-project Aggregation retrace.
+Prospectively precommit and execute the frozen-axis Aggregation internal-standardization audit.
