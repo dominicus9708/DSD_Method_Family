@@ -291,3 +291,41 @@ AUD-Δ09  ABSORB_INTO_SC-08
 세부 결과: [AB_CALIBRATION_RESULTS_V0_1.md](AB_CALIBRATION_RESULTS_V0_1.md)
 
 이 calibration은 동일 세션의 내부 calibration이며 독립 검증이 아니다. 정본은 아직 변경하지 않았다.
+
+
+## 10. 2026-09-27 — 최종 경계·중복 감사 및 merge-ready dry run
+
+최종 경계 감사 결과를 `FINAL_BOUNDARY_DUPLICATION_AUDIT_V0_1.md`에 기록했다.
+
+핵심 결과:
+
+```text
+EXACT_METHOD_COLLAPSE_FOUND: 0
+BOUNDARY_WORDING_REFINEMENTS_REQUIRED: yes
+CANONICAL_PATH_AMBIGUITY_FOUND: yes
+CANONICAL_NEW_AUDIT_PATH: DSD_Audit/
+TEMPLATE_SYNC_GAP_FOUND: yes
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+추가로 dedicated Audit module 내부에 남아 있던 과거 Analysis 범위 문구(`decomposes, compares, reinterprets`)가 현재 22-method 경계와 맞지 않는 것을 발견했다. 정본 후보에서는 Analysis를 one-target structural decomposition/re-expression으로 동기화하고 Comparison·Classification·Interpretation을 별도 방법으로 유지했다.
+
+Audit exact diff v0.2는 `DSD_Audit/templates/AUDIT_CASE_TEMPLATE.md`까지 포함하도록 수정했다.
+
+최신 main에서 clean review branch를 생성하고 정본 후보만 적용했다.
+
+```text
+REVIEW_BRANCH:
+review/analysis-audit-strengthening-v0-2-20260927
+
+DIFF_FROM_MAIN:
+7 files total
+- 6 modified canonical files
+- 1 new Analysis operational controller
+
+BRANCH_STATE:
+7 commits ahead
+0 commits behind
+```
+
+자동 marker 검증에서 7개 변경 파일 모두 예상 강화 항목 존재를 확인했다. main에는 아직 병합하지 않았다.
