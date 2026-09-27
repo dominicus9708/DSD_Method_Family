@@ -1,6 +1,6 @@
 # DSD Compression / DSD 압축론
 
-Status: **source/registry recovery complete / Task Interface v0.1 draft established / pre-protocol boundary attack next**
+Status: **pre-protocol boundary attack complete / 18 attacks / 9 preserved + 9 refined / Boundary Amendment 001 required next**
 Legacy path ID: `10B`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -9,6 +9,7 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`PLANNING.md`](PLANNING.md)
 - [`WORKLOG.md`](WORKLOG.md)
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
+- [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 
 ## Atomic task
 
@@ -111,10 +112,19 @@ TASK_INTERFACE_DRAFT:
   v0.1 established
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
-  0
+  18
+
+PRESERVED_NO_REFINEMENT:
+  9
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  9
+
+REFINEMENT_GROUPS_REQUIRED:
+  8
 
 BOUNDARY_AMENDMENT:
-  not established
+  required / not yet established
 
 DEDICATED_COMPRESSION_PROTOCOL:
   not established
@@ -147,12 +157,62 @@ COMPRESSION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPRESSION_EVIDENCE_STATUS:
-  source_and_interface_recovery
+  pre_protocol_boundary_attack_complete
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
 ~~~
 
+## Boundary attack result
+
+~~~text
+BOUNDARY_ATTACK_COMMIT:
+  c84fe112053cd12f46edb3a2c7099ccb5480d09e
+
+BOUNDARY_ATTACK_BLOB:
+  563d781498a3af8c64072f757d1e3906e9b9be22
+
+BOUNDARY_ATTACKS_RUN:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  9
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  9
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+REFINEMENT_GROUPS_REQUIRED:
+  8
+
+BOUNDARY_AMENDMENT_REQUIRED:
+  yes
+
+PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Required amendment groups:
+
+~~~text
+R1 multidimensional collision consequences
+R2 purpose-relation consistency / incompleteness
+R3 multi-purpose composition
+R4 resolution semantics
+R5 unavailable interface vs evaluable destructive loss
+R6 representation accounting / actual reduction criterion
+R7 reconstruction scope / relational coupling
+R8 end-to-end composition
+~~~
+
 ## Next
 
-Run the pre-protocol boundary attack against Task Interface v0.1 before freezing an executable Compression Protocol.
+Create prospective Task Interface Boundary Amendment 001, bind R1-R8 plus task-terminal precedence, and only then authorize executable Compression Protocol freeze.
