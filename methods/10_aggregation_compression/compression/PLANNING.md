@@ -1,6 +1,6 @@
 # DSD Compression Planning / DSD 압축론 기획
 
-Status: **source/registry recovery complete / Task Interface v0.1 draft established / pre-protocol boundary attack next**
+Status: **pre-protocol boundary attack complete / Boundary Amendment 001 required next**
 Date opened: **2026-09-27**
 Legacy path ID: 10B
 Path: methods/10_aggregation_compression/compression/
@@ -141,8 +141,8 @@ source and registry recovery
 1. ✅ Registry recovery.
 2. ✅ Source recovery — Property §9, Static Aggregation §11, Dynamics §§15–16.
 3. ✅ Task Interface v0.1 draft established prospectively.
-4. ⏸ Pre-protocol boundary attack.
-5. ⏸ Boundary Amendment if required.
+4. ✅ Pre-protocol boundary attack — 18 attacks; 9 preserved without refinement, 9 preserved with nonbreaking refinement; 0 collapse, 0 fundamental failure.
+5. ⏸ Boundary Amendment 001 — required next; 8 refinement groups.
 6. ⏸ Executable Compression Protocol.
 7. ⏸ Positive / negative / boundary challenges.
 8. ⏸ Competent and strongest-reasonable baselines.
@@ -154,8 +154,11 @@ source and registry recovery
 
 ~~~text
 TASK_INTERFACE_DRAFT: v0.1 established
-PRE_PROTOCOL_BOUNDARY_ATTACKS: 0
-BOUNDARY_AMENDMENT: not established
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
+PRESERVED_NO_REFINEMENT: 9
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 9
+REFINEMENT_GROUPS_REQUIRED: 8
+BOUNDARY_AMENDMENT: required / not yet established
 DEDICATED_COMPRESSION_PROTOCOL: not established
 DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 0
 SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 0
@@ -166,11 +169,28 @@ EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_COMPRESSION_EVIDENCE_STATUS: source_and_interface_recovery
+CURRENT_COMPRESSION_EVIDENCE_STATUS: pre_protocol_boundary_attack_complete
 PROTOCOL_REVISION_REQUIRED: not applicable
 SHARED_CORE_REOPEN_REQUIRED: no
 ~~~
 
+## Boundary attack
+
+~~~text
+TASK_INTERFACE_COMMIT: 40cfedf1ce027c84d4c063a306bb5d7ce770be46
+TASK_INTERFACE_BLOB: a80b776cbac43de4d6d2c761720fb5268aa87d88
+BOUNDARY_ATTACK_COMMIT: c84fe112053cd12f46edb3a2c7099ccb5480d09e
+BOUNDARY_ATTACK_BLOB: 563d781498a3af8c64072f757d1e3906e9b9be22
+ATTACKS: 18
+NO_REFINEMENT: 9
+NONBREAKING_REFINEMENT: 9
+REFINEMENT_GROUPS: 8
+BOUNDARY_COLLAPSE: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+BOUNDARY_AMENDMENT_REQUIRED: yes
+PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT: no
+~~~
+
 ## Next
 
-Run the pre-protocol Compression boundary attack against the Task Interface v0.1 draft before freezing an executable protocol.
+Create Task Interface Boundary Amendment 001 and bind R1-R8 plus terminal precedence before Protocol freeze.
