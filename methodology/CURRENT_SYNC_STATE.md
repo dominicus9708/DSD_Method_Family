@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-27 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `99eb6c464e04f9252947db7aa5d1bdd499714fee`  
+Method-state source commit before this synchronization record: `024c50142ecb410fbaf1c6e44b4778894bf85623`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -52,8 +52,8 @@ They are not a cross-method ranking and do not imply independent external valida
 | Transformation | Protocol v0.1 internally standardized; external validation queued, not yet opened |
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Aggregation | Protocol v0.1 frozen; AGG-CH-001~005 complete; AGG-CH-006 deterministic same-project retrace 56/56 PASS; frozen-axis internal audit next |
-| Compression | proposed/developing |
+| Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
+| Compression | proposed/developing; next internal-build front |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
 | Optimization | proposed |
@@ -426,7 +426,7 @@ POST_COMPARISON_CORRECTIONS:
   0
 
 AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_AGGREGATION_EVIDENCE_STATUS:
   validation_in_progress
@@ -540,7 +540,19 @@ POST_COMPARISON_CORRECTIONS: 0
 SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 ```
 
-**Next canonical step:** prospectively precommit and execute the frozen-axis Aggregation internal-standardization audit.
+AGG-AUD-001 frozen-axis internal standardization audit:
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 4c519f2b64caecb5490463af0bc82e71e4a864f8
+AUDIT_PRECOMMIT_BLOB: 2e08135330ccc047ff28a24fa821d4bbb63005e5
+AUDIT_RESULT_COMMIT: 9fbd397211007b8eab2d9d7eb0bfaba086888d94
+AUDIT_RESULT_BLOB: dce8b0a964cbc0041d77be98acde6ac0211c676e
+AUDIT_CHECKS: 28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+AGGREGATION_INTERNAL_STANDARDIZATION_STATUS: established
+```
+
+**Next canonical phase:** Aggregation external/independent validation remains deferred and separate. The family-wide internal-build front moves to Compression / DSD 압축론.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -581,4 +593,4 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-The active internal-standardization front is **Aggregation / DSD 집계론**. AGG-CH-001~005 remain complete. AGG-CH-006 then deterministically regenerated the Aggregation-side outputs of the strongest-baseline workload from Protocol v0.1 + the frozen AGG-CH-005 precommit, committed the reconstruction ledger before formal comparison, and passed 56/56 with zero claim-relevant mismatches and zero post-comparison corrections. This remains same-project, non-blind evidence and does not establish independent replication, independent validation, or external applicability. The next canonical work item is the frozen-axis internal-standardization audit.
+Tracking, Lineage, and Aggregation internal-standardization lanes are now closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. The next active internal-build front is **Compression / DSD 압축론**, currently proposed/developing with only its initial README-level task boundary present and no dedicated PLANNING/WORKLOG or executable protocol yet.
