@@ -359,3 +359,119 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Freeze executable Compression Protocol v0.1.
+
+
+---
+
+## Step 6 — Compression Protocol v0.1 freeze
+
+Frozen lineage:
+
+~~~text
+TASK_INTERFACE_COMMIT:
+  40cfedf1ce027c84d4c063a306bb5d7ce770be46
+
+TASK_INTERFACE_BLOB:
+  a80b776cbac43de4d6d2c761720fb5268aa87d88
+
+BOUNDARY_REVIEW_COMMIT:
+  c84fe112053cd12f46edb3a2c7099ccb5480d09e
+
+BOUNDARY_REVIEW_BLOB:
+  563d781498a3af8c64072f757d1e3906e9b9be22
+
+AMENDMENT_COMMIT:
+  907cc5ab415e12038fdb521466bb9d2cdfaef159
+
+AMENDMENT_BLOB:
+  735ad137da54933d2f2d969aa1dd82218ffa4c7a
+
+PROTOCOL_COMMIT:
+  b1efa06e4c715e08ce2558a608c7f09aa22172bd
+
+PROTOCOL_BLOB:
+  4d67d800e107229f91c16cf5b0235928124482b2
+~~~
+
+Protocol structure:
+
+~~~text
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
+
+DEDICATED_COMPRESSION_PROTOCOL:
+  established v0.1
+~~~
+
+The protocol binds:
+
+~~~text
+task/version/claim lock
+source/interface/representation lock
+purpose and purpose-composition lock
+required-distinction / acceptable-collision consistency
+compression-map/output lock
+resolution discipline
+status/support/provenance retention
+representation accounting / actual reduction
+purpose-relative collision evaluation
+multidimensional collision consequences
+property-summary / correlation guard
+descriptive-projection / reduced-readout guard
+linear/kernel / class-local losslessness
+reconstruction scope / relational coupling
+required-interface failure semantics
+end-to-end composition
+neighboring-method non-substitution
+terminal / conformance / gain / maximum claim
+~~~
+
+Frozen task-terminal precedence:
+
+~~~text
+OUT_OF_SCOPE
+>
+CONFLICTING
+>
+UNDERDETERMINED
+>
+BLOCKED
+>
+ESTABLISHED / PARTIAL / NOT_ESTABLISHED
+~~~
+
+Key protocol guards:
+
+~~~text
+SMALLER_REPRESENTATION != BETTER_REPRESENTATION
+COMPRESSION_RATIO != COMPRESSION_VALIDITY
+PURPOSE_SAFE_COLLISION != RECONSTRUCTION_SAFE_COLLISION
+LOSSY != FAILURE_BY_DEFAULT
+LOSSLESS_ON_DECLARED_CLASS != GLOBAL_INJECTIVITY
+UNAVAILABLE_REQUIRED_INTERFACE != EVALUABLE_DESTRUCTIVE_LOSS
+MAIN_OUTPUT_SHRINKAGE != TOTAL_REPRESENTATION_REDUCTION
+DISTINCTION_PRESERVATION != COMPRESSION_ESTABLISHED
+COORDINATEWISE_RECONSTRUCTION != RELATIONAL_RECONSTRUCTION
+LOCAL_STAGE_PASS != END_TO_END_COMPRESSION_PASS
+~~~
+
+Current counters:
+
+~~~text
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 0
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 0
+BASELINE_COMPRESSION_CASES: 0
+NO_GAIN_COMPRESSION_CASES: 0
+REPRODUCIBILITY_CASES: 0
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_COMPRESSION_EVIDENCE_STATUS: protocol_frozen
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+## Next
+
+Prospectively precommit and execute the first positive constructed Compression challenge without rewriting Protocol v0.1.
