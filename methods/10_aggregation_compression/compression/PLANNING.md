@@ -1,6 +1,6 @@
 # DSD Compression Planning / DSD 압축론 기획
 
-Status: **pre-protocol boundary attack complete / Boundary Amendment 001 required next**
+Status: **Boundary Amendment 001 established / Protocol freeze authorized / executable Compression Protocol v0.1 next**
 Date opened: **2026-09-27**
 Legacy path ID: 10B
 Path: methods/10_aggregation_compression/compression/
@@ -142,8 +142,8 @@ source and registry recovery
 2. ✅ Source recovery — Property §9, Static Aggregation §11, Dynamics §§15–16.
 3. ✅ Task Interface v0.1 draft established prospectively.
 4. ✅ Pre-protocol boundary attack — 18 attacks; 9 preserved without refinement, 9 preserved with nonbreaking refinement; 0 collapse, 0 fundamental failure.
-5. ⏸ Boundary Amendment 001 — required next; 8 refinement groups.
-6. ⏸ Executable Compression Protocol.
+5. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted; Protocol freeze authorized.
+6. ⏸ Executable Compression Protocol v0.1 — next.
 7. ⏸ Positive / negative / boundary challenges.
 8. ⏸ Competent and strongest-reasonable baselines.
 9. ⏸ Deterministic same-project retrace.
@@ -158,7 +158,7 @@ PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 PRESERVED_NO_REFINEMENT: 9
 PRESERVED_WITH_NONBREAKING_REFINEMENT: 9
 REFINEMENT_GROUPS_REQUIRED: 8
-BOUNDARY_AMENDMENT: required / not yet established
+BOUNDARY_AMENDMENT: established
 DEDICATED_COMPRESSION_PROTOCOL: not established
 DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 0
 SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 0
@@ -169,7 +169,7 @@ EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_COMPRESSION_EVIDENCE_STATUS: pre_protocol_boundary_attack_complete
+CURRENT_COMPRESSION_EVIDENCE_STATUS: boundary_amendment_complete
 PROTOCOL_REVISION_REQUIRED: not applicable
 SHARED_CORE_REOPEN_REQUIRED: no
 ~~~
@@ -191,6 +191,18 @@ BOUNDARY_AMENDMENT_REQUIRED: yes
 PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT: no
 ~~~
 
+## Boundary Amendment 001
+
+~~~text
+AMENDMENT_COMMIT: 907cc5ab415e12038fdb521466bb9d2cdfaef159
+AMENDMENT_BLOB: 735ad137da54933d2f2d969aa1dd82218ffa4c7a
+REFINEMENT_GROUPS_ADOPTED: 8/8
+METHOD_IDENTITY_CHANGED: no
+TASK_INTERFACE_CORE_REOPENED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+PROTOCOL_FREEZE_AUTHORIZED: yes
+~~~
+
 ## Next
 
-Create Task Interface Boundary Amendment 001 and bind R1-R8 plus terminal precedence before Protocol freeze.
+Freeze executable Compression Protocol v0.1 from Task Interface v0.1 + Boundary Amendment 001.
