@@ -1,6 +1,6 @@
 # DSD Compression Planning / DSD 압축론 기획
 
-Status: **Boundary Amendment 001 established / Protocol freeze authorized / executable Compression Protocol v0.1 next**
+Status: **Compression Protocol v0.1 frozen / first positive constructed challenge next**
 Date opened: **2026-09-27**
 Legacy path ID: 10B
 Path: methods/10_aggregation_compression/compression/
@@ -143,8 +143,8 @@ source and registry recovery
 3. ✅ Task Interface v0.1 draft established prospectively.
 4. ✅ Pre-protocol boundary attack — 18 attacks; 9 preserved without refinement, 9 preserved with nonbreaking refinement; 0 collapse, 0 fundamental failure.
 5. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted; Protocol freeze authorized.
-6. ⏸ Executable Compression Protocol v0.1 — next.
-7. ⏸ Positive / negative / boundary challenges.
+6. ✅ Executable Compression Protocol v0.1 — G1-G18 / T1-T18 frozen.
+7. ⏸ Positive / negative / boundary challenges — first positive constructed challenge next.
 8. ⏸ Competent and strongest-reasonable baselines.
 9. ⏸ Deterministic same-project retrace.
 10. ⏸ Frozen-axis internal-standardization audit.
@@ -159,7 +159,9 @@ PRESERVED_NO_REFINEMENT: 9
 PRESERVED_WITH_NONBREAKING_REFINEMENT: 9
 REFINEMENT_GROUPS_REQUIRED: 8
 BOUNDARY_AMENDMENT: established
-DEDICATED_COMPRESSION_PROTOCOL: not established
+DEDICATED_COMPRESSION_PROTOCOL: established v0.1
+VALIDITY_GATES: G1-G18
+BINDING_OPERATION: T1-T18
 DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 0
 SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 0
 BASELINE_COMPRESSION_CASES: 0
@@ -169,8 +171,8 @@ EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_COMPRESSION_EVIDENCE_STATUS: boundary_amendment_complete
-PROTOCOL_REVISION_REQUIRED: not applicable
+CURRENT_COMPRESSION_EVIDENCE_STATUS: protocol_frozen
+PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ~~~
 
@@ -203,6 +205,18 @@ SHARED_CORE_REOPEN_REQUIRED: no
 PROTOCOL_FREEZE_AUTHORIZED: yes
 ~~~
 
+## Compression Protocol v0.1
+
+~~~text
+PROTOCOL_COMMIT: b1efa06e4c715e08ce2558a608c7f09aa22172bd
+PROTOCOL_BLOB: 4d67d800e107229f91c16cf5b0235928124482b2
+VALIDITY_GATES: G1-G18
+BINDING_OPERATION: T1-T18
+DEDICATED_COMPRESSION_PROTOCOL: established v0.1
+CURRENT_COMPRESSION_EVIDENCE_STATUS: protocol_frozen
+PROTOCOL_REVISION_REQUIRED: no
+~~~
+
 ## Next
 
-Freeze executable Compression Protocol v0.1 from Task Interface v0.1 + Boundary Amendment 001.
+Prospectively precommit and execute the first positive constructed Compression challenge.
