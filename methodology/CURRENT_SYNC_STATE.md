@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-27 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `d8f29ffe042512c29ed7239b82f5287841374b38`  
+Method-state source commit before this synchronization record: `c4005c0089a06f82086f1f6af44162287ed63422`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -53,7 +53,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Compression | pre-protocol boundary review complete; 18 cases / 9 no-refinement / 9 nonbreaking-refinement / Boundary Amendment 001 required next |
+| Compression | Boundary Amendment 001 established / 8/8 refinements adopted / Protocol freeze authorized / Compression Protocol v0.1 next |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
 | Optimization | proposed |
@@ -588,7 +588,7 @@ EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_COMPRESSION_EVIDENCE_STATUS: pre_protocol_boundary_review_complete
+CURRENT_COMPRESSION_EVIDENCE_STATUS: boundary_amendment_complete
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
@@ -640,7 +640,17 @@ COMPRESSION != TRANSFORMATION
 COMPRESSION != RECONSTRUCTION
 ```
 
-**Next canonical step:** create Compression Task Interface Boundary Amendment 001 and bind the eight required refinements plus terminal precedence before freezing an executable Compression Protocol.
+AMENDMENT_COMMIT: 907cc5ab415e12038fdb521466bb9d2cdfaef159
+AMENDMENT_BLOB: 735ad137da54933d2f2d969aa1dd82218ffa4c7a
+
+BOUNDARY_AMENDMENT_001: established
+REFINEMENT_GROUPS_ADOPTED: 8/8
+METHOD_IDENTITY_CHANGED: no
+TASK_INTERFACE_CORE_REOPENED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+PROTOCOL_FREEZE_AUTHORIZED: yes
+
+**Next canonical step:** freeze executable Compression Protocol v0.1 from the historical Task Interface plus Boundary Amendment 001.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -681,4 +691,4 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. The active internal-build front is **Compression / DSD 압축론**. Source/registry recovery and Task Interface v0.1 are complete. The pre-protocol boundary review covered 18 constructed cases: 9 required no refinement, 9 required nonbreaking refinement, and no method-boundary collapse or fundamental interface failure was found. Eight refinement groups must be bound prospectively before executable protocol freeze. The next canonical work item is Task Interface Boundary Amendment 001.
+Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. The active internal-build front is **Compression / DSD 압축론**. Source/registry recovery, Task Interface v0.1, and the 18-case pre-protocol boundary review are complete. Boundary Amendment 001 has now adopted all 8 required refinement groups, preserved the historical draft/review, and authorized executable protocol freeze without reopening shared core. The next canonical work item is Compression Protocol v0.1.
