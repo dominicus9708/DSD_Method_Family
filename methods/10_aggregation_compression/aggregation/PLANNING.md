@@ -1,6 +1,6 @@
 # DSD Aggregation Planning / DSD 집계론 기획
 
-Status: **internal standardization in progress / AGG-CH-006 deterministic retrace 56/56 PASS / frozen-axis audit next**
+Status: **internal standardization complete / AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / external validation deferred**
 Date opened: **2026-09-25**
 Legacy path ID: `10A`
 Path: `methods/10_aggregation_compression/aggregation/`
@@ -123,8 +123,8 @@ source and registry recovery
 6. ✅ Positive / negative / boundary cases — AGG-CH-001 64/64 PASS; AGG-CH-002 80/80 PASS; AGG-CH-003 72/72 PASS.
 7. ✅ Competent and strongest-reasonable baselines — AGG-CH-004 64/64 PASS / NO_GAIN; AGG-CH-005 82/82 PASS / NO_GAIN.
 8. ✅ Deterministic same-project retrace — AGG-CH-006 56/56 PASS; zero claim-relevant mismatches.
-9. ⏸ Frozen-axis internal standardization audit — next.
-10. ⏸ External applications / independent validation.
+9. ✅ Frozen-axis internal standardization audit — AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
+10. ⏸ External applications / independent validation — deferred as a separate evidence phase.
 
 ## Current counters
 
@@ -226,7 +226,7 @@ INDEPENDENT_REPLICATION:
   not established
 
 AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_AGGREGATION_EVIDENCE_STATUS:
   validation_in_progress
@@ -333,6 +333,18 @@ POST_COMPARISON_CORRECTIONS: 0
 SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 ```
 
+## AGG-AUD-001
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 4c519f2b64caecb5490463af0bc82e71e4a864f8
+AUDIT_PRECOMMIT_BLOB: 2e08135330ccc047ff28a24fa821d4bbb63005e5
+AUDIT_RESULT_COMMIT: 9fbd397211007b8eab2d9d7eb0bfaba086888d94
+AUDIT_RESULT_BLOB: dce8b0a964cbc0041d77be98acde6ac0211c676e
+AUDIT_CHECKS: 28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+AGGREGATION_INTERNAL_STANDARDIZATION_STATUS: established
+```
+
 ## Next
 
-Prospectively precommit and execute the frozen-axis Aggregation internal-standardization audit.
+Aggregation external/independent validation is deferred. Move the family-wide internal-build front to the next proposed/developing method; Compression is the natural next candidate in field V.
