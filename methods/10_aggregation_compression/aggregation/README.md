@@ -1,6 +1,6 @@
 # DSD Aggregation / DSD 집계론
 
-Status: **Protocol v0.1 frozen / AGG-CH-001~005 complete / AGG-CH-006 deterministic retrace 56/56 PASS / internal-standardization audit next**
+Status: **Protocol v0.1 internally standardized / AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / external validation deferred**
 Legacy path ID: `10A`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -25,6 +25,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`AGG-CH-006 precommit`](../../../evidence/method_specific/aggregation/AGG-CH-006_precommit.md)
 - [`AGG-CH-006 reconstruction ledger`](../../../evidence/method_specific/aggregation/AGG-CH-006_reconstruction-ledger.md)
 - [`AGG-CH-006 result`](../../../evidence/method_specific/aggregation/AGG-CH-006_deterministic-same-project-retrace.md)
+- [`AGG-AUD-001 precommit`](../../../evidence/method_specific/aggregation/AGG-AUD-001_precommit.md)
+- [`AGG-AUD-001 result`](../../../evidence/method_specific/aggregation/AGG-AUD-001_internal-standardization-review.md)
 
 ## Task
 
@@ -252,7 +254,7 @@ INDEPENDENT_REPLICATION:
   not established
 
 AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_AGGREGATION_EVIDENCE_STATUS:
   validation_in_progress
@@ -462,6 +464,51 @@ SAME_PROJECT_DETERMINISTIC_RETRACE:
 
 The reconstruction ledger was frozen from Protocol v0.1 + AGG-CH-005 precommit before formal comparison with the AGG-CH-005 result.
 
+## AGG-AUD-001 — frozen-axis internal standardization audit
+
+```text
+AUDIT_PRECOMMIT_COMMIT:
+  4c519f2b64caecb5490463af0bc82e71e4a864f8
+
+AUDIT_PRECOMMIT_BLOB:
+  2e08135330ccc047ff28a24fa821d4bbb63005e5
+
+AUDIT_RESULT_COMMIT:
+  9fbd397211007b8eab2d9d7eb0bfaba086888d94
+
+AUDIT_RESULT_BLOB:
+  dce8b0a964cbc0041d77be98acde6ac0211c676e
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+```
+
+Axis results:
+
+```text
+M1 PASS
+M2 PASS
+M3 PASS
+M4 PASS
+M5 PASS
+M6 PASS
+M7 CONDITIONAL_PASS
+M8 PASS
+M9 PASS
+M10 PASS
+M11 PASS
+M12 PASS
+M13 PASS
+M14 DEFERRED_BY_SEQUENCE
+M15 PASS
+```
+
 ## Next
 
-Prospectively precommit and execute the frozen-axis Aggregation internal-standardization audit.
+Aggregation external applications and independent validation remain a separate later evidence phase. The family-wide internal-build front can move to another proposed/developing method; under the current Reduction & Representation sequence, Compression is the natural next candidate.
