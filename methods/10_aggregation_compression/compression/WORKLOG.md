@@ -127,3 +127,125 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Run the pre-protocol boundary attack against the Compression Task Interface v0.1 draft.
+
+
+---
+
+## Step 4 — Pre-protocol boundary attack
+
+Frozen historical basis:
+
+~~~text
+TASK_INTERFACE_COMMIT:
+  40cfedf1ce027c84d4c063a306bb5d7ce770be46
+
+TASK_INTERFACE_BLOB:
+  a80b776cbac43de4d6d2c761720fb5268aa87d88
+
+BOUNDARY_ATTACK_COMMIT:
+  c84fe112053cd12f46edb3a2c7099ccb5480d09e
+
+BOUNDARY_ATTACK_BLOB:
+  563d781498a3af8c64072f757d1e3906e9b9be22
+~~~
+
+Result:
+
+~~~text
+BOUNDARY_ATTACKS_RUN: 18
+PRESERVED_NO_REFINEMENT: 9
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 9
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+REFINEMENT_GROUPS_REQUIRED: 8
+BOUNDARY_AMENDMENT_REQUIRED: yes
+PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+The method identity survived.
+
+The required prospective refinement groups are:
+
+~~~text
+R1 multidimensional collision consequences
+
+R2 purpose-relation consistency and incompleteness
+
+R3 multi-purpose composition
+
+R4 resolution semantics
+
+R5 unavailable required interface
+   versus evaluable destructive loss
+
+R6 representation accounting
+   and actual reduction criterion
+
+R7 reconstruction scope
+   and relational/cross-coordinate coupling
+
+R8 end-to-end composition validation
+~~~
+
+Terminal precedence must also be frozen:
+
+~~~text
+OUT_OF_SCOPE
+>
+CONFLICTING
+>
+UNDERDETERMINED
+>
+BLOCKED
+>
+ESTABLISHED / PARTIAL / NOT_ESTABLISHED
+~~~
+
+Important distinctions exposed by the attack:
+
+~~~text
+purpose-safe collision
+  may still be
+reconstruction-destructive
+
+absence from REQUIRED_DISTINCTION
+  !=
+permission to merge
+
+required interface unavailable
+  !=
+evaluable destructive loss
+
+main-output shrinkage
+  !=
+total representation reduction
+
+local stage compression pass
+  !=
+end-to-end composite compression pass
+~~~
+
+The historical Task Interface remains unchanged.
+
+## Current counters
+
+~~~text
+TASK_INTERFACE_DRAFT: v0.1 established
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
+PRESERVED_NO_REFINEMENT: 9
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 9
+REFINEMENT_GROUPS_REQUIRED: 8
+BOUNDARY_AMENDMENT: required / not yet established
+DEDICATED_COMPRESSION_PROTOCOL: not established
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 0
+BASELINE_COMPRESSION_CASES: 0
+REPRODUCIBILITY_CASES: 0
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_COMPRESSION_EVIDENCE_STATUS: pre_protocol_boundary_attack_complete
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+## Next
+
+Create prospective Task Interface Boundary Amendment 001, preserving the historical draft and attack record.
