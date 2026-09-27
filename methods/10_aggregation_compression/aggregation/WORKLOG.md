@@ -744,3 +744,86 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute the frozen-axis Aggregation internal-standardization audit.
+
+
+---
+
+## Step 12 — AGG-AUD-001 frozen-axis internal standardization audit
+
+```text
+AUDIT_ID:
+  DSD-AUDIT-20260927-AGGREGATION-001
+
+AUDIT_PRECOMMIT_COMMIT:
+  4c519f2b64caecb5490463af0bc82e71e4a864f8
+
+AUDIT_PRECOMMIT_BLOB:
+  2e08135330ccc047ff28a24fa821d4bbb63005e5
+
+AUDIT_RESULT_COMMIT:
+  9fbd397211007b8eab2d9d7eb0bfaba086888d94
+
+AUDIT_RESULT_BLOB:
+  dce8b0a964cbc0041d77be98acde6ac0211c676e
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+```
+
+Frozen-axis results:
+
+```text
+M1 PASS
+M2 PASS
+M3 PASS
+M4 PASS
+M5 PASS
+M6 PASS
+M7 CONDITIONAL_PASS
+M8 PASS
+M9 PASS
+M10 PASS
+M11 PASS
+M12 PASS
+M13 PASS
+M14 DEFERRED_BY_SEQUENCE
+M15 PASS
+```
+
+Post-audit state:
+
+```text
+AGGREGATION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+CURRENT_AGGREGATION_EVIDENCE_STATUS:
+  validation_in_progress
+
+EXTERNAL_AGGREGATION_VALIDATION_PHASE:
+  deferred / separate
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+```
+
+The audit itself did not increment direct, baseline, NO_GAIN, retrace, or external counters.
+
+Preserved:
+
+```text
+INTERNAL_STANDARD != EXTERNAL_VALIDATION
+SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
+NO_GAIN != METHOD_FAILURE
+FIXTURE_BOUNDED_SEPARATION != PERMANENT_METHOD_IRREDUCIBILITY
+PASS != PERMANENT_METHOD_SURVIVAL
+```
+
+## Next
+
+The Aggregation internal-standardization lane is closed for the current registry. External/independent validation remains deferred. Move the family-wide internal-build front to another proposed/developing method; Compression is the natural next candidate in field V.
