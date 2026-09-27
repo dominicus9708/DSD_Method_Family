@@ -1,6 +1,6 @@
 # DSD Compression / DSD 압축론
 
-Status: **pre-protocol boundary attack complete / 18 attacks / 9 preserved + 9 refined / Boundary Amendment 001 required next**
+Status: **Boundary Amendment 001 established / 8/8 refinements adopted / Protocol freeze authorized / Compression Protocol v0.1 next**
 Legacy path ID: `10B`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -10,6 +10,7 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`WORKLOG.md`](WORKLOG.md)
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
+- [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 
 ## Atomic task
 
@@ -124,7 +125,7 @@ REFINEMENT_GROUPS_REQUIRED:
   8
 
 BOUNDARY_AMENDMENT:
-  required / not yet established
+  established
 
 DEDICATED_COMPRESSION_PROTOCOL:
   not established
@@ -157,7 +158,7 @@ COMPRESSION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPRESSION_EVIDENCE_STATUS:
-  pre_protocol_boundary_attack_complete
+  boundary_amendment_complete
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -213,6 +214,51 @@ R7 reconstruction scope / relational coupling
 R8 end-to-end composition
 ~~~
 
+## Boundary Amendment 001
+
+~~~text
+AMENDMENT_COMMIT:
+  907cc5ab415e12038fdb521466bb9d2cdfaef159
+
+AMENDMENT_BLOB:
+  735ad137da54933d2f2d969aa1dd82218ffa4c7a
+
+REFINEMENT_GROUPS_ADOPTED:
+  8/8
+
+METHOD_IDENTITY_CHANGED:
+  no
+
+TASK_INTERFACE_CORE_REOPENED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+~~~
+
+Binding additions:
+
+~~~text
+R1 multidimensional collision-consequence axes
+R2 purpose-relation consistency/incompleteness
+R3 multi-purpose composition
+R4 resolution status and version semantics
+R5 unavailable interface vs evaluable destructive loss
+R6 representation accounting and reduction criterion
+R7 reconstruction scope and relational coupling
+R8 end-to-end composition validation
+
+task terminal precedence:
+  OUT_OF_SCOPE
+  > CONFLICTING
+  > UNDERDETERMINED
+  > BLOCKED
+  > ESTABLISHED / PARTIAL / NOT_ESTABLISHED
+~~~
+
 ## Next
 
-Create prospective Task Interface Boundary Amendment 001, bind R1-R8 plus task-terminal precedence, and only then authorize executable Compression Protocol freeze.
+Freeze executable Compression Protocol v0.1 from the historical Task Interface plus Boundary Amendment 001.
