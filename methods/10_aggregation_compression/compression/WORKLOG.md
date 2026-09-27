@@ -249,3 +249,113 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Create prospective Task Interface Boundary Amendment 001, preserving the historical draft and attack record.
+
+
+---
+
+## Step 5 — Task Interface Boundary Amendment 001
+
+Frozen basis:
+
+~~~text
+TASK_INTERFACE_COMMIT:
+  40cfedf1ce027c84d4c063a306bb5d7ce770be46
+
+TASK_INTERFACE_BLOB:
+  a80b776cbac43de4d6d2c761720fb5268aa87d88
+
+BOUNDARY_REVIEW_COMMIT:
+  c84fe112053cd12f46edb3a2c7099ccb5480d09e
+
+BOUNDARY_REVIEW_BLOB:
+  563d781498a3af8c64072f757d1e3906e9b9be22
+
+AMENDMENT_COMMIT:
+  907cc5ab415e12038fdb521466bb9d2cdfaef159
+
+AMENDMENT_BLOB:
+  735ad137da54933d2f2d969aa1dd82218ffa4c7a
+~~~
+
+Result:
+
+~~~text
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  8/8
+
+METHOD_IDENTITY_CHANGED:
+  no
+
+TASK_INTERFACE_CORE_REOPENED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+~~~
+
+Binding refinements:
+
+~~~text
+R1 multidimensional collision consequences
+R2 purpose-relation consistency/incompleteness
+R3 multi-purpose composition
+R4 resolution semantics
+R5 unavailable interface vs evaluable destructive loss
+R6 representation accounting / actual reduction
+R7 reconstruction scope / relational coupling
+R8 end-to-end composition
+~~~
+
+Task-terminal precedence frozen:
+
+~~~text
+COMPRESSION_TASK_OUT_OF_SCOPE
+>
+COMPRESSION_TASK_CONFLICTING
+>
+COMPRESSION_TASK_UNDERDETERMINED
+>
+COMPRESSION_TASK_BLOCKED
+>
+COMPRESSION_TASK_ESTABLISHED /
+COMPRESSION_TASK_PARTIAL /
+COMPRESSION_TASK_NOT_ESTABLISHED
+~~~
+
+Key binding guards:
+
+~~~text
+PURPOSE_SAFE_COLLISION != RECONSTRUCTION_SAFE_COLLISION
+ABSENCE_FROM_REQUIRED_DISTINCTION != PERMISSION_TO_MERGE
+UNAVAILABLE_REQUIRED_INTERFACE != EVALUABLE_DESTRUCTIVE_LOSS
+MAIN_OUTPUT_SHRINKAGE != TOTAL_REPRESENTATION_REDUCTION
+DISTINCTION_PRESERVATION != COMPRESSION_ESTABLISHED
+COORDINATEWISE_RECONSTRUCTION != RELATIONAL_RECONSTRUCTION
+LOCAL_STAGE_PASS != END_TO_END_COMPRESSION_PASS
+~~~
+
+The historical Task Interface and boundary-review artifact remain unchanged.
+
+## Current state
+
+~~~text
+TASK_INTERFACE_DRAFT: v0.1 established
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
+BOUNDARY_AMENDMENT: established
+REFINEMENT_GROUPS_ADOPTED: 8/8
+PROTOCOL_FREEZE_AUTHORIZED: yes
+DEDICATED_COMPRESSION_PROTOCOL: not established
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_COMPRESSION_EVIDENCE_STATUS: boundary_amendment_complete
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+## Next
+
+Freeze executable Compression Protocol v0.1.
