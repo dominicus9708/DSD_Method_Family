@@ -1,6 +1,6 @@
 # DSD Compression / DSD 압축론
 
-Status: **Boundary Amendment 001 established / 8/8 refinements adopted / Protocol freeze authorized / Compression Protocol v0.1 next**
+Status: **Compression Protocol v0.1 frozen / G1-G18 + T1-T18 established / first positive constructed challenge next**
 Legacy path ID: `10B`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -11,6 +11,7 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
+- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 
 ## Atomic task
 
@@ -128,7 +129,13 @@ BOUNDARY_AMENDMENT:
   established
 
 DEDICATED_COMPRESSION_PROTOCOL:
-  not established
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
 
 DIRECT_COMPRESSION_PILOTS_ATTEMPTED:
   0
@@ -158,7 +165,7 @@ COMPRESSION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPRESSION_EVIDENCE_STATUS:
-  boundary_amendment_complete
+  protocol_frozen
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -259,6 +266,30 @@ task terminal precedence:
   > ESTABLISHED / PARTIAL / NOT_ESTABLISHED
 ~~~
 
+## Compression Protocol v0.1
+
+~~~text
+PROTOCOL_COMMIT:
+  b1efa06e4c715e08ce2558a608c7f09aa22172bd
+
+PROTOCOL_BLOB:
+  4d67d800e107229f91c16cf5b0235928124482b2
+
+DEDICATED_COMPRESSION_PROTOCOL:
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
+
+CURRENT_COMPRESSION_EVIDENCE_STATUS:
+  protocol_frozen
+~~~
+
+Protocol v0.1 binds task/source/purpose/map/version locks, purpose-relation consistency, resolution semantics, source status/support/provenance retention, representation accounting, actual reduction, multidimensional collision consequences, property-correlation guards, projection/readout guards, class-local losslessness, reconstruction scope, required-interface failure semantics, end-to-end composition, neighboring-method non-substitution, terminal precedence, protocol conformance, method gain, and bounded maximum claims.
+
 ## Next
 
-Freeze executable Compression Protocol v0.1 from the historical Task Interface plus Boundary Amendment 001.
+Prospectively precommit and execute the first positive constructed Compression challenge without rewriting Protocol v0.1.
