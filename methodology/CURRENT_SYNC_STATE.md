@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-27 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `c4005c0089a06f82086f1f6af44162287ed63422`  
+Method-state source commit before this synchronization record: `3ce2162064348e9e919281415d5074a712315e5f`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -53,7 +53,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Compression | Boundary Amendment 001 established / 8/8 refinements adopted / Protocol freeze authorized / Compression Protocol v0.1 next |
+| Compression | Protocol v0.1 frozen / G1-G18 + T1-T18 established / first positive constructed challenge next |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
 | Optimization | proposed |
@@ -580,7 +580,11 @@ PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
 PRESERVED_NO_REFINEMENT: 9
 PRESERVED_WITH_NONBREAKING_REFINEMENT: 9
 REFINEMENT_GROUPS_REQUIRED: 8
-DEDICATED_COMPRESSION_PROTOCOL: not established
+DEDICATED_COMPRESSION_PROTOCOL: established v0.1
+PROTOCOL_COMMIT: b1efa06e4c715e08ce2558a608c7f09aa22172bd
+PROTOCOL_BLOB: 4d67d800e107229f91c16cf5b0235928124482b2
+VALIDITY_GATES: G1-G18
+BINDING_OPERATION: T1-T18
 DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 0
 BASELINE_COMPRESSION_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -588,7 +592,7 @@ EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_COMPRESSION_EVIDENCE_STATUS: boundary_amendment_complete
+CURRENT_COMPRESSION_EVIDENCE_STATUS: protocol_frozen
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
@@ -650,7 +654,16 @@ TASK_INTERFACE_CORE_REOPENED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 PROTOCOL_FREEZE_AUTHORIZED: yes
 
-**Next canonical step:** freeze executable Compression Protocol v0.1 from the historical Task Interface plus Boundary Amendment 001.
+PROTOCOL_COMMIT: b1efa06e4c715e08ce2558a608c7f09aa22172bd
+PROTOCOL_BLOB: 4d67d800e107229f91c16cf5b0235928124482b2
+
+DEDICATED_COMPRESSION_PROTOCOL: established v0.1
+VALIDITY_GATES: G1-G18
+BINDING_OPERATION: T1-T18
+CURRENT_COMPRESSION_EVIDENCE_STATUS: protocol_frozen
+PROTOCOL_REVISION_REQUIRED: no
+
+**Next canonical step:** prospectively precommit and execute the first positive constructed Compression challenge without rewriting Protocol v0.1.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -691,4 +704,4 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. The active internal-build front is **Compression / DSD 압축론**. Source/registry recovery, Task Interface v0.1, and the 18-case pre-protocol boundary review are complete. Boundary Amendment 001 has now adopted all 8 required refinement groups, preserved the historical draft/review, and authorized executable protocol freeze without reopening shared core. The next canonical work item is Compression Protocol v0.1.
+Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. The active internal-build front is **Compression / DSD 압축론**. Source/registry recovery, Task Interface v0.1, the 18-case pre-protocol boundary review, and Boundary Amendment 001 are complete. Compression Protocol v0.1 is now frozen as the executable internal protocol with G1-G18 validity gates and T1-T18 binding operation. The next canonical work item is the first positive constructed Compression challenge, prospectively precommitted against the frozen protocol.
