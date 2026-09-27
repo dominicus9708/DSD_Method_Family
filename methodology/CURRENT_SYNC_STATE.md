@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-27 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `024c50142ecb410fbaf1c6e44b4778894bf85623`  
+Method-state source commit before this synchronization record: `c331472cdcd5727b7aaa061bf0db0b89495da2ad`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -53,7 +53,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Compression | proposed/developing; next internal-build front |
+| Compression | source/registry recovery complete; Task Interface v0.1 draft established; pre-protocol boundary attack next |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
 | Optimization | proposed |
@@ -554,6 +554,91 @@ AGGREGATION_INTERNAL_STANDARDIZATION_STATUS: established
 
 **Next canonical phase:** Aggregation external/independent validation remains deferred and separate. The family-wide internal-build front moves to Compression / DSD 압축론.
 
+### Active method — Compression / DSD 압축론
+
+Current state:
+
+```text
+LEGACY_PATH_ID: 10B
+CURRENT_PATH: methods/10_aggregation_compression/compression/
+
+SOURCE_REGISTRY_RECOVERY: complete
+TASK_INTERFACE_DRAFT: v0.1 established
+
+TASK_INTERFACE_COMMIT: 40cfedf1ce027c84d4c063a306bb5d7ce770be46
+TASK_INTERFACE_BLOB: a80b776cbac43de4d6d2c761720fb5268aa87d88
+
+PLANNING_COMMIT: 8c6216b8f63c240356ec8fdc5ac8bd6bf395ae06
+PLANNING_BLOB: c967b628d59191de877c4c2460170034c96984c6
+
+WORKLOG_COMMIT: 56c9069944e0a7f07a622ddf7b153336f3f9f8e3
+WORKLOG_BLOB: 93b14ef963f8d20541907b6de0f30f1793d89231
+
+README_SYNC_COMMIT: c331472cdcd5727b7aaa061bf0db0b89495da2ad
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 0
+DEDICATED_COMPRESSION_PROTOCOL: not established
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 0
+BASELINE_COMPRESSION_CASES: 0
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_COMPRESSION_APPLICATIONS: 0
+INDEPENDENT_COMPRESSION_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_COMPRESSION_EVIDENCE_STATUS: source_and_interface_recovery
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+Recovered source constraints:
+
+```text
+Property §9:
+  summary collision can erase cross-property correlations;
+  summary equality does not establish strict property equivalence.
+
+Static Aggregation §11:
+  reduced aggregates can erase support/decomposition;
+  reconstruction needs injectivity on the declared class plus
+  any required cross-coordinate reconstruction conditions.
+
+Dynamics §§15–16:
+  descriptive projections may erase distinctions;
+  reduced readouts need not be complete classifiers;
+  converse reconstruction needs injectivity or another
+  reconstruction condition.
+```
+
+Prospective interface lock:
+
+```text
+declared purpose
+source representation
+compression map
+required distinctions
+acceptable collision relation
+resolution/scope
+sidecar retention
+reconstruction requirements
+maximum-supported claim
+```
+
+Core draft guards:
+
+```text
+SMALLER_REPRESENTATION != BETTER_REPRESENTATION
+COMPRESSION_RATIO != COMPRESSION_VALIDITY
+SUMMARY_EQUALITY != STRICT_STRUCTURE_EQUIVALENCE
+PROJECTED_EQUALITY != COMPLETE_STATE_EQUALITY
+PURPOSE_SAFE_COLLISION != UNIVERSALLY_SAFE_COLLISION
+LOSSY != FAILURE_BY_DEFAULT
+LOSSLESS_ON_DECLARED_CLASS != GLOBAL_INJECTIVITY
+COMPRESSION != AGGREGATION
+COMPRESSION != TRANSFORMATION
+COMPRESSION != RECONSTRUCTION
+```
+
+**Next canonical step:** run the pre-protocol Compression boundary attack against Task Interface v0.1 before freezing an executable Compression Protocol.
+
 ## 6. Historical-preservation and verdict discipline
 
 Do not retroactively rewrite historical evidence for cosmetic consistency.
@@ -593,4 +678,4 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-Tracking, Lineage, and Aggregation internal-standardization lanes are now closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. The next active internal-build front is **Compression / DSD 압축론**, currently proposed/developing with only its initial README-level task boundary present and no dedicated PLANNING/WORKLOG or executable protocol yet.
+Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. The active internal-build front is now **Compression / DSD 압축론**. Compression source/registry recovery is complete, dedicated PLANNING/WORKLOG have been opened, and Task Interface v0.1 draft is established. The next canonical work item is the pre-protocol Compression boundary attack before any executable protocol freeze.
