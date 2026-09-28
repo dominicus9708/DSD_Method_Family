@@ -1,6 +1,6 @@
 # DSD Compression Planning / DSD 압축론 기획
 
-Status: **CPR-CH-001 positive constructed 72/72 PASS / negative-unresolved challenge next**
+Status: **CPR-CH-001 72/72 PASS / CPR-CH-002 80/80 PASS / direct neighboring-method boundary challenge next**
 Date opened: **2026-09-27**
 Legacy path ID: 10B
 Path: methods/10_aggregation_compression/compression/
@@ -144,7 +144,7 @@ source and registry recovery
 4. ✅ Pre-protocol boundary attack — 18 attacks; 9 preserved without refinement, 9 preserved with nonbreaking refinement; 0 collapse, 0 fundamental failure.
 5. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted; Protocol freeze authorized.
 6. ✅ Executable Compression Protocol v0.1 — G1-G18 / T1-T18 frozen.
-7. 🟨 Positive / negative / boundary challenges — CPR-CH-001 positive constructed 72/72 PASS; negative/unresolved-terminal challenge next.
+7. 🟨 Positive / negative / boundary challenges — CPR-CH-001 72/72 PASS + CPR-CH-002 80/80 PASS; direct neighboring-method boundary challenge next.
 8. ⏸ Competent and strongest-reasonable baselines.
 9. ⏸ Deterministic same-project retrace.
 10. ⏸ Frozen-axis internal-standardization audit.
@@ -162,10 +162,12 @@ BOUNDARY_AMENDMENT: established
 DEDICATED_COMPRESSION_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
-DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 1
-SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 1
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 2
 POSITIVE_COMPRESSION_CASES: 1
-NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES: 0
+NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES: 1
+ALL_SIX_COMPRESSION_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_COMPRESSION_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 METHOD_BOUNDARY_COMPRESSION_CASES: 0
 BASELINE_COMPRESSION_CASES: 0
 NO_GAIN_COMPRESSION_CASES: 0
@@ -232,6 +234,18 @@ TASK_TERMINAL: COMPRESSION_TASK_ESTABLISHED
 PROTOCOL_CONFORMANCE: COMPRESSION_PROTOCOL_CONFORMANT
 ~~~
 
+## CPR-CH-002
+
+~~~text
+PRECOMMIT_COMMIT: 865b195e37375c3e5132236018f0ba6b466c596e
+PRECOMMIT_BLOB: f6ce63ef7bc453c3ebc30cf676f49e2d28be4c7e
+RESULT_COMMIT: cfb247944cdf569b70ace9393cc50d4d706e11af
+RESULT_BLOB: 0599fcc128ce072b7cc30f331a8fbf596a9f069b
+CHECKS: 80/80 PASS
+ALL_SIX_COMPRESSION_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_COMPRESSION_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
+~~~
+
 ## Next
 
-Prospectively precommit and execute the negative / unresolved-terminal Compression challenge.
+Prospectively precommit and execute the direct neighboring-method Compression boundary challenge.
