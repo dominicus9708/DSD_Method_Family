@@ -1,6 +1,6 @@
 # DSD Compression / DSD 압축론
 
-Status: **Compression Protocol v0.1 frozen / G1-G18 + T1-T18 established / first positive constructed challenge next**
+Status: **Compression Protocol v0.1 frozen / CPR-CH-001 positive constructed 72/72 PASS / negative-unresolved challenge next**
 Legacy path ID: `10B`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -12,6 +12,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
+- [`CPR-CH-001 precommit`](../../../evidence/method_specific/compression/CPR-CH-001_precommit.md)
+- [`CPR-CH-001 result`](../../../evidence/method_specific/compression/CPR-CH-001_positive-constructed.md)
 
 ## Atomic task
 
@@ -138,9 +140,18 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPRESSION_PILOTS_ATTEMPTED:
-  0
+  1
 
 SUCCESSFUL_DIRECT_COMPRESSION_PILOTS:
+  1
+
+POSITIVE_COMPRESSION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES:
+  0
+
+METHOD_BOUNDARY_COMPRESSION_CASES:
   0
 
 BASELINE_COMPRESSION_CASES:
@@ -165,7 +176,7 @@ COMPRESSION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPRESSION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -290,6 +301,33 @@ CURRENT_COMPRESSION_EVIDENCE_STATUS:
 
 Protocol v0.1 binds task/source/purpose/map/version locks, purpose-relation consistency, resolution semantics, source status/support/provenance retention, representation accounting, actual reduction, multidimensional collision consequences, property-correlation guards, projection/readout guards, class-local losslessness, reconstruction scope, required-interface failure semantics, end-to-end composition, neighboring-method non-substitution, terminal precedence, protocol conformance, method gain, and bounded maximum claims.
 
+## CPR-CH-001 — positive constructed Compression challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  8d19e2672854926afef33b9aea16df213dfe6a4f
+
+PRECOMMIT_BLOB:
+  49788325989be77aa1d5ac69eba5a18a5ae6ec25
+
+RESULT_COMMIT:
+  6553e213287a312743fc8d292d580bf6ce8c054f
+
+RESULT_BLOB:
+  1e341af810f9b19fe9bd17209cc1c7431a23cee1
+
+CHECKS:
+  72/72 PASS
+
+TASK_TERMINAL:
+  COMPRESSION_TASK_ESTABLISHED
+
+PROTOCOL_CONFORMANCE:
+  COMPRESSION_PROTOCOL_CONFORMANT
+~~~
+
+The frozen map drops only the task-irrelevant detail coordinate, preserves every frozen group/status distinction, records two purpose-safe collision fibers, and reduces the frozen package cost from 12 to 8 field units.
+
 ## Next
 
-Prospectively precommit and execute the first positive constructed Compression challenge without rewriting Protocol v0.1.
+Prospectively precommit and execute the negative / unresolved-terminal Compression challenge without rewriting Protocol v0.1.
