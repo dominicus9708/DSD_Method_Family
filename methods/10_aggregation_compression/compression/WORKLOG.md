@@ -1148,3 +1148,91 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute CPR-AUD-001 frozen-axis internal-standardization audit.
+
+
+---
+
+## Step 13 — CPR-AUD-001 frozen-axis internal standardization audit
+
+~~~text
+AUDIT_ID:
+  DSD-AUDIT-20260929-COMPRESSION-001
+
+AUDIT_PRECOMMIT_COMMIT:
+  9966877e8ac6c3ee51d1e0032ec1fab39ff6c28d
+
+AUDIT_PRECOMMIT_BLOB:
+  d0c35f12b650df5ea2f2208506614ca0db9bd3b7
+
+AUDIT_RESULT_COMMIT:
+  af181cc714c69a840c8f5e7f552e6378bbafc493
+
+AUDIT_RESULT_BLOB:
+  f40fd631dfe6aead41d2670cda49ac6550b32c0f
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+~~~
+
+Frozen axis results:
+
+~~~text
+M1  PASS
+M2  PASS
+M3  PASS
+M4  PASS
+M5  PASS
+M6  PASS
+M7  CONDITIONAL_PASS
+M8  PASS
+M9  PASS
+M10 PASS
+M11 PASS
+M12 PASS
+M13 PASS
+M14 DEFERRED_BY_SEQUENCE
+M15 PASS
+~~~
+
+The audit found no post-freeze core defect requiring protocol or shared-core reopen.
+
+Interpretation limits:
+
+~~~text
+INTERNAL_STANDARD != EXTERNAL_VALIDATION
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_MERGER_PROOF
+FIXTURE_BOUNDED_SEPARATION != PERMANENT_IRREDUCIBILITY
+PASS != PERMANENT_METHOD_SURVIVAL
+~~~
+
+Post-audit state:
+
+~~~text
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 5
+BASELINE_COMPRESSION_CASES: 2
+NO_GAIN_COMPRESSION_CASES: 2
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: established
+CURRENT_COMPRESSION_EVIDENCE_STATUS: validation_in_progress
+EXTERNAL_COMPRESSION_VALIDATION_PHASE: deferred / separate
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+## Next
+
+Compression internal-standardization lane is closed for the current registry.
+
+The family-wide internal-build front moves to Diagnosis / DSD 진단론. Its current repository state is proposed, and the next canonical action is source/registry recovery before any Task Interface freeze.
