@@ -1,6 +1,6 @@
 # DSD Compression / DSD 압축론
 
-Status: **Compression Protocol v0.1 frozen / CPR-CH-001~006 complete / CPR-CH-006 deterministic same-project retrace 56/56 PASS / internal-standardization audit next**
+Status: **Compression Protocol v0.1 internally standardized / CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / external validation deferred**
 Legacy path ID: `10B`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -25,6 +25,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`CPR-CH-006 precommit`](../../../evidence/method_specific/compression/CPR-CH-006_precommit.md)
 - [`CPR-CH-006 reconstruction ledger`](../../../evidence/method_specific/compression/CPR-CH-006_reconstruction-ledger.md)
 - [`CPR-CH-006 result`](../../../evidence/method_specific/compression/CPR-CH-006_deterministic-same-project-retrace.md)
+- [`CPR-AUD-001 precommit`](../../../evidence/method_specific/compression/CPR-AUD-001_precommit.md)
+- [`CPR-AUD-001 result`](../../../evidence/method_specific/compression/CPR-AUD-001_internal-standardization-review.md)
 
 ## Atomic task
 
@@ -217,7 +219,7 @@ INDEPENDENT_REPLICATION:
   not established
 
 COMPRESSION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_COMPRESSION_EVIDENCE_STATUS:
   validation_in_progress
@@ -552,6 +554,43 @@ SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 ~~~
 
+## CPR-AUD-001 — frozen-axis internal standardization audit
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  9966877e8ac6c3ee51d1e0032ec1fab39ff6c28d
+
+AUDIT_PRECOMMIT_BLOB:
+  d0c35f12b650df5ea2f2208506614ca0db9bd3b7
+
+AUDIT_RESULT_COMMIT:
+  af181cc714c69a840c8f5e7f552e6378bbafc493
+
+AUDIT_RESULT_BLOB:
+  f40fd631dfe6aead41d2670cda49ac6550b32c0f
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+~~~
+
+Axis summary:
+
+~~~text
+M1~M6: PASS
+M7: CONDITIONAL_PASS
+M8~M13: PASS
+M14: DEFERRED_BY_SEQUENCE
+M15: PASS
+~~~
+
+The promotion is project-internal only. External applications, independent validation, and independent replication remain separate later evidence phases.
+
 ## Next
 
-Prospectively precommit and execute CPR-AUD-001 frozen-axis internal-standardization audit.
+Compression internal standardization is closed for the current registry. The family-wide internal-build front moves to Diagnosis / DSD 진단론.
