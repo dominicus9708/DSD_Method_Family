@@ -889,3 +889,146 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute a strongest-reasonable non-DSD Compression baseline challenge. The baseline must be materially stronger than B0 while remaining non-DSD and receiving equal claim-relevant information.
+
+
+---
+
+## Step 11 — CPR-CH-005 strongest-reasonable non-DSD Compression baseline
+
+~~~text
+CHALLENGE_ID:
+  CPR-CH-005
+
+BASELINE_ID:
+  B1_STRONG_COMPRESSION_ENGINE
+
+PRECOMMIT_COMMIT:
+  f55ec8c5818e75184ef941d72467fec9951abc0d
+
+PRECOMMIT_BLOB:
+  2c9d7f02ab43a0f37b9765c669b2c26f9d919e1a
+
+RESULT_COMMIT:
+  e438dfa356faf18c733a6b60119de86ca94c7cae
+
+RESULT_BLOB:
+  d9f905def2a94a3585fe14c1ac9885114ba4c68d
+
+CHECKS:
+  82/82 PASS
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+COMPRESSION_HIDDEN_ADVANTAGE_INPUTS:
+  0
+
+BASELINE_WITHHELD_CLAIM_RELEVANT_INPUTS:
+  0
+
+COMPRESSION_METHOD_GAIN_STATUS:
+  COMPRESSION_METHOD_GAIN_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_COMPRESSION:
+  established_at_constructed_evidence_level
+~~~
+
+Strong subcases:
+
+~~~text
+R1 versioned purpose/map registry and non-retroactivity
+R2 exact linear fiber/kernel and declared-class losslessness
+R3 required-sidecar dependency closure and total package accounting
+R4 local-stage success versus end-to-end chain failure
+R5 alternative metric / conflict / sidecar / rerun pressure
+~~~
+
+Frozen gain axes:
+
+~~~text
+G1 VERSIONED_PURPOSE_MAP_AND_NONRETROACTIVITY_GAIN:
+  BASELINE_MATCH
+
+G2 EXACT_FIBER_KERNEL_AND_DECLARED_CLASS_GAIN:
+  BASELINE_MATCH
+
+G3 PACKAGE_ACCOUNTING_AND_SIDECAR_DEPENDENCY_GAIN:
+  BASELINE_MATCH
+
+G4 END_TO_END_CHAIN_AND_PURPOSE_PROPAGATION_GAIN:
+  BASELINE_MATCH
+
+G5 CONFLICT_UNDERDETERMINATION_AND_SIDECAR_BOUNDARY_GAIN:
+  BASELINE_MATCH
+
+G6 BOUNDED_MAXIMUM_CLAIM_GAIN:
+  BASELINE_MATCH
+
+G7 DETERMINISTIC_LEDGER_AND_RERUN_MANIFEST_GAIN:
+  BASELINE_MATCH
+~~~
+
+Important results:
+
+~~~text
+ker(C)=span{(-1,-1,1)}
+LOSSLESS_ON_DECLARED_CLASS: established
+GLOBAL_INJECTIVITY: not established
+
+required-sidecar package:
+  main output 4 + sidecar 8 = 12
+  source 12
+  strict reduction NOT_ESTABLISHED
+
+multi-stage chain:
+  stage 1 established
+  stage 2 established
+  end-to-end original-purpose NOT_ESTABLISHED
+~~~
+
+Interpretation lock:
+
+~~~text
+STRONGEST_REASONABLE_BASELINE_AT_CONSTRUCTED_EVIDENCE_LEVEL
+  !=
+UNIVERSALLY_STRONGEST_POSSIBLE_BASELINE
+
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+~~~
+
+Current counters:
+
+~~~text
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 5
+POSITIVE_COMPRESSION_CASES: 1
+NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES: 1
+METHOD_BOUNDARY_COMPRESSION_CASES: 1
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 9
+BASELINE_COMPRESSION_CASES: 2
+NO_GAIN_COMPRESSION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_COMPRESSION: established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_COMPRESSION_APPLICATIONS: 0
+INDEPENDENT_COMPRESSION_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_COMPRESSION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+## Next
+
+Prospectively precommit and execute CPR-CH-006 deterministic same-project retrace.
+
+Required interpretation guards:
+
+~~~text
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+~~~
