@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-29 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `550e8e24340d62b7b57d49cc53351cca18e3478e`  
+Method-state source commit before this synchronization record: `af181cc714c69a840c8f5e7f552e6378bbafc493`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -53,7 +53,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Compression | Protocol v0.1 frozen; CPR-CH-001~006 complete; CPR-CH-006 deterministic same-project retrace 56/56 PASS / 0 mismatches; internal-standardization audit next |
+| Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
 | Optimization | proposed |
@@ -607,7 +607,7 @@ POST_COMPARISON_CORRECTIONS: 0
 EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
-COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_COMPRESSION_EVIDENCE_STATUS: validation_in_progress
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
@@ -768,7 +768,29 @@ SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 
 `SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION` and `DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION`.
 
-**Next canonical step:** prospectively precommit and execute CPR-AUD-001 frozen-axis internal-standardization audit.
+CPR-AUD-001 frozen-axis internal standardization audit:
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 9966877e8ac6c3ee51d1e0032ec1fab39ff6c28d
+AUDIT_PRECOMMIT_BLOB: d0c35f12b650df5ea2f2208506614ca0db9bd3b7
+AUDIT_RESULT_COMMIT: af181cc714c69a840c8f5e7f552e6378bbafc493
+AUDIT_RESULT_BLOB: f40fd631dfe6aead41d2670cda49ac6550b32c0f
+AUDIT_CHECKS: 28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: established
+```
+
+```text
+M1~M6: PASS
+M7: CONDITIONAL_PASS
+M8~M13: PASS
+M14: DEFERRED_BY_SEQUENCE
+M15: PASS
+```
+
+Compression external/independent validation remains deferred as a separate evidence phase.
+
+**Next canonical internal-build front:** Diagnosis / DSD 진단론.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -809,4 +831,46 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. The active internal-build front is **Compression / DSD 압축론**. CPR-CH-001~005 are complete, and CPR-CH-006 deterministic same-project retrace passed 56/56 with zero claim-relevant mismatches and zero post-comparison corrections. The retrace is same-project artifact-consistency evidence only and is not independent replication or independent validation. The next canonical work item is CPR-AUD-001 frozen-axis internal-standardization audit.
+Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. Compression / DSD 압축론 completed CPR-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; its internal-standardization lane is closed for the current registry, while external/independent validation remains a separate deferred phase. The active family-wide internal-build front now moves to **Diagnosis / DSD 진단론**, currently proposed. The next canonical work item is Diagnosis source/registry recovery before any Task Interface freeze.
+
+
+### Active method — Diagnosis / DSD 진단론
+
+Current state:
+
+```text
+LEGACY_PATH_ID: 15A
+CURRENT_PATH: methods/15_diagnosis_reconstruction/diagnosis/
+HIGHER_FIELD: VI. Inverse Inference & Reconstruction
+CURRENT_STATUS: proposed
+DEDICATED_DIAGNOSIS_PROTOCOL: not established
+SOURCE_REGISTRY_RECOVERY: next
+```
+
+Current repository definition:
+
+```text
+infer which current hidden states, failure modes, causes,
+or structural conditions remain compatible with present observations
+```
+
+Primary existing source classes named by the method stub:
+
+```text
+Formation/Property status distinctions
+measurement records
+support-retaining descriptors
+dynamic residuals
+transition constraints
+```
+
+Current boundary:
+
+```text
+Diagnosis concerns present hidden structure or cause hypotheses.
+It does not automatically reconstruct a unique past history.
+Insufficient evidence or non-injective forward structure requires
+preserving multiple admissible alternatives.
+```
+
+**Next canonical step:** recover Diagnosis source/registry constraints and establish its planning/worklog lane before drafting a Task Interface.
