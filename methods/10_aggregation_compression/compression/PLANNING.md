@@ -1,6 +1,6 @@
 # DSD Compression Planning / DSD 압축론 기획
 
-Status: **CPR-CH-004 competent baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
+Status: **CPR-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN / deterministic retrace next**
 Date opened: **2026-09-27**
 Legacy path ID: 10B
 Path: methods/10_aggregation_compression/compression/
@@ -145,8 +145,8 @@ source and registry recovery
 5. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted; Protocol freeze authorized.
 6. ✅ Executable Compression Protocol v0.1 — G1-G18 / T1-T18 frozen.
 7. ✅ Positive / negative / direct boundary challenges — CPR-CH-001 72/72 PASS + CPR-CH-002 80/80 PASS + CPR-CH-003 81/81 PASS.
-8. 🟨 Competent and strongest-reasonable baselines — competent baseline 64/64 PASS / NO_GAIN; strongest-reasonable baseline next.
-9. ⏸ Deterministic same-project retrace.
+8. ✅ Competent and strongest-reasonable baselines — CPR-CH-004 64/64 PASS / NO_GAIN; CPR-CH-005 82/82 PASS / NO_GAIN.
+9. ⏸ Deterministic same-project retrace — CPR-CH-006 next.
 10. ⏸ Frozen-axis internal-standardization audit.
 11. ⏸ External applications / independent validation.
 
@@ -162,8 +162,8 @@ BOUNDARY_AMENDMENT: established
 DEDICATED_COMPRESSION_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
-DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 4
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 5
 POSITIVE_COMPRESSION_CASES: 1
 NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES: 1
 ALL_SIX_COMPRESSION_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
@@ -174,9 +174,9 @@ EXACT_COLLAPSE_PAIRS: 0
 UNRESOLVED_BOUNDARY_PAIRS: 0
 PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 9
 SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
-BASELINE_COMPRESSION_CASES: 1
-NO_GAIN_COMPRESSION_CASES: 1
-STRONGEST_REASONABLE_BASELINE_COMPRESSION: not established
+BASELINE_COMPRESSION_CASES: 2
+NO_GAIN_COMPRESSION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_COMPRESSION: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
@@ -282,6 +282,20 @@ COMPRESSION_METHOD_GAIN_STATUS: COMPRESSION_METHOD_GAIN_NO_GAIN
 
 All six frozen gain axes were BASELINE_MATCH.
 
+## CPR-CH-005
+
+~~~text
+BASELINE_ID: B1_STRONG_COMPRESSION_ENGINE
+PRECOMMIT_COMMIT: f55ec8c5818e75184ef941d72467fec9951abc0d
+PRECOMMIT_BLOB: 2c9d7f02ab43a0f37b9765c669b2c26f9d919e1a
+RESULT_COMMIT: e438dfa356faf18c733a6b60119de86ca94c7cae
+RESULT_BLOB: d9f905def2a94a3585fe14c1ac9885114ba4c68d
+CHECKS: 82/82 PASS
+GAIN_AXES: 7/7 BASELINE_MATCH
+COMPRESSION_METHOD_GAIN_STATUS: COMPRESSION_METHOD_GAIN_NO_GAIN
+STRONGEST_REASONABLE_BASELINE_COMPRESSION: established_at_constructed_evidence_level
+~~~
+
 ## Next
 
-Prospectively precommit and execute the strongest-reasonable non-DSD Compression baseline challenge.
+Prospectively precommit and execute CPR-CH-006 deterministic same-project retrace.
