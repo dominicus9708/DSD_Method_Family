@@ -1,6 +1,6 @@
 # DSD Compression / DSD 압축론
 
-Status: **Compression Protocol v0.1 frozen / CPR-CH-001~005 complete / CPR-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN / deterministic retrace next**
+Status: **Compression Protocol v0.1 frozen / CPR-CH-001~006 complete / CPR-CH-006 deterministic same-project retrace 56/56 PASS / internal-standardization audit next**
 Legacy path ID: `10B`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -22,6 +22,9 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`CPR-CH-004 result`](../../../evidence/method_specific/compression/CPR-CH-004_competent-baseline-no-gain.md)
 - [`CPR-CH-005 precommit`](../../../evidence/method_specific/compression/CPR-CH-005_precommit.md)
 - [`CPR-CH-005 result`](../../../evidence/method_specific/compression/CPR-CH-005_strongest-reasonable-baseline-no-gain.md)
+- [`CPR-CH-006 precommit`](../../../evidence/method_specific/compression/CPR-CH-006_precommit.md)
+- [`CPR-CH-006 reconstruction ledger`](../../../evidence/method_specific/compression/CPR-CH-006_reconstruction-ledger.md)
+- [`CPR-CH-006 result`](../../../evidence/method_specific/compression/CPR-CH-006_deterministic-same-project-retrace.md)
 
 ## Atomic task
 
@@ -193,6 +196,15 @@ STRONGEST_REASONABLE_BASELINE_COMPRESSION:
   established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_COMPRESSION_APPLICATIONS:
@@ -497,6 +509,49 @@ B1 is materially stronger than B0: versioned purpose/map/metric registries, auto
 
 The strongest-reasonable label is bounded to the frozen constructed comparator class. It is not universal optimality.
 
+## CPR-CH-006 — deterministic same-project retrace
+
+~~~text
+PRECOMMIT_COMMIT:
+  cb7b6b1f945d34a184aff94dae5c6af6124f62c0
+
+PRECOMMIT_BLOB:
+  556df56b7f50f3694c1558d538482924d36b689c
+
+RECONSTRUCTION_LEDGER_COMMIT:
+  a064f6008fd05f6007c7b6979882d37f6c8bcdfd
+
+RECONSTRUCTION_LEDGER_BLOB:
+  a2c788523071b3a5725f9c5e73b519dccd8f1d00
+
+RESULT_COMMIT:
+  550e8e24340d62b7b57d49cc53351cca18e3478e
+
+RESULT_BLOB:
+  734834af23b9ffc14066ee0a99084ba5ecaa7969
+
+CHECKS:
+  56/56 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+~~~
+
+The reconstruction ledger was frozen from Protocol v0.1 + the CPR-CH-005 precommit before formal comparison against the CPR-CH-005 result.
+
+This is same-project artifact-consistency evidence only.
+
+~~~text
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+~~~
+
 ## Next
 
-Prospectively precommit and execute CPR-CH-006 deterministic same-project retrace. Preserve `SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION` and `DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION`.
+Prospectively precommit and execute CPR-AUD-001 frozen-axis internal-standardization audit.
