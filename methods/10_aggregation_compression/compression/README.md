@@ -1,6 +1,6 @@
 # DSD Compression / DSD 압축론
 
-Status: **Compression Protocol v0.1 frozen / CPR-CH-001~004 complete / CPR-CH-004 competent baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
+Status: **Compression Protocol v0.1 frozen / CPR-CH-001~005 complete / CPR-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN / deterministic retrace next**
 Legacy path ID: `10B`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -20,6 +20,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`CPR-CH-003 result`](../../../evidence/method_specific/compression/CPR-CH-003_direct-method-boundary.md)
 - [`CPR-CH-004 precommit`](../../../evidence/method_specific/compression/CPR-CH-004_precommit.md)
 - [`CPR-CH-004 result`](../../../evidence/method_specific/compression/CPR-CH-004_competent-baseline-no-gain.md)
+- [`CPR-CH-005 precommit`](../../../evidence/method_specific/compression/CPR-CH-005_precommit.md)
+- [`CPR-CH-005 result`](../../../evidence/method_specific/compression/CPR-CH-005_strongest-reasonable-baseline-no-gain.md)
 
 ## Atomic task
 
@@ -146,10 +148,10 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPRESSION_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_COMPRESSION_PILOTS:
-  4
+  5
 
 POSITIVE_COMPRESSION_CASES:
   1
@@ -182,13 +184,13 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_COMPRESSION_CASES:
-  1
+  2
 
 NO_GAIN_COMPRESSION_CASES:
-  1
+  2
 
 STRONGEST_REASONABLE_BASELINE_COMPRESSION:
-  not established
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
   0
@@ -457,6 +459,44 @@ All six frozen gain axes were `BASELINE_MATCH`.
 
 It is not method failure, deletion, merger, absorption, or permanent-redundancy evidence.
 
+## CPR-CH-005 — strongest-reasonable non-DSD Compression baseline
+
+~~~text
+BASELINE_ID:
+  B1_STRONG_COMPRESSION_ENGINE
+
+PRECOMMIT_COMMIT:
+  f55ec8c5818e75184ef941d72467fec9951abc0d
+
+PRECOMMIT_BLOB:
+  2c9d7f02ab43a0f37b9765c669b2c26f9d919e1a
+
+RESULT_COMMIT:
+  e438dfa356faf18c733a6b60119de86ca94c7cae
+
+RESULT_BLOB:
+  d9f905def2a94a3585fe14c1ac9885114ba4c68d
+
+CHECKS:
+  82/82 PASS
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+GAIN_AXES:
+  7/7 BASELINE_MATCH
+
+COMPRESSION_METHOD_GAIN_STATUS:
+  COMPRESSION_METHOD_GAIN_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_COMPRESSION:
+  established_at_constructed_evidence_level
+~~~
+
+B1 is materially stronger than B0: versioned purpose/map/metric registries, automatic relation validation, exact finite fiber and linear-kernel analysis, declared-class injectivity, required-sidecar dependency closure, total package accounting, alternative metric/schema management, multi-stage end-to-end purpose propagation, deterministic evaluation ledgers, and rerun manifests are allowed.
+
+The strongest-reasonable label is bounded to the frozen constructed comparator class. It is not universal optimality.
+
 ## Next
 
-Prospectively precommit and execute a strongest-reasonable non-DSD Compression baseline challenge. The next baseline must be materially stronger than B0 without importing DSD as theory.
+Prospectively precommit and execute CPR-CH-006 deterministic same-project retrace. Preserve `SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION` and `DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION`.
