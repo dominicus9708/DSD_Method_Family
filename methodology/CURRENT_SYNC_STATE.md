@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-29 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `e438dfa356faf18c733a6b60119de86ca94c7cae`  
+Method-state source commit before this synchronization record: `550e8e24340d62b7b57d49cc53351cca18e3478e`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -53,7 +53,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Tracking | Protocol v0.1 internally standardized; TRK-AUD-001 28/28 PASS; external validation deferred |
 | Lineage | Protocol v0.1 internally standardized; LIN-CH-006 56/56 PASS deterministic same-project retrace; LIN-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Compression | Protocol v0.1 frozen; CPR-CH-001~005 complete; CPR-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN; deterministic retrace next |
+| Compression | Protocol v0.1 frozen; CPR-CH-001~006 complete; CPR-CH-006 deterministic same-project retrace 56/56 PASS / 0 mismatches; internal-standardization audit next |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | proposed |
 | Optimization | proposed |
@@ -600,7 +600,10 @@ SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 BASELINE_COMPRESSION_CASES: 2
 NO_GAIN_COMPRESSION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_COMPRESSION: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
 EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
@@ -748,7 +751,24 @@ STRONGEST_REASONABLE_BASELINE_COMPRESSION: established_at_constructed_evidence_l
 
 The strongest-reasonable label remains bounded to the frozen constructed comparator class and is not universal baseline optimality.
 
-**Next canonical step:** prospectively precommit and execute CPR-CH-006 deterministic same-project retrace.
+CPR-CH-006 deterministic same-project retrace:
+
+```text
+PRECOMMIT_COMMIT: cb7b6b1f945d34a184aff94dae5c6af6124f62c0
+PRECOMMIT_BLOB: 556df56b7f50f3694c1558d538482924d36b689c
+RECONSTRUCTION_LEDGER_COMMIT: a064f6008fd05f6007c7b6979882d37f6c8bcdfd
+RECONSTRUCTION_LEDGER_BLOB: a2c788523071b3a5725f9c5e73b519dccd8f1d00
+RESULT_COMMIT: 550e8e24340d62b7b57d49cc53351cca18e3478e
+RESULT_BLOB: 734834af23b9ffc14066ee0a99084ba5ecaa7969
+CHECKS: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+```
+
+`SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION` and `DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION`.
+
+**Next canonical step:** prospectively precommit and execute CPR-AUD-001 frozen-axis internal-standardization audit.
 
 ## 6. Historical-preservation and verdict discipline
 
@@ -789,4 +809,4 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. The active internal-build front is **Compression / DSD 압축론**. CPR-CH-001 passed 72/72, CPR-CH-002 passed 80/80, CPR-CH-003 passed 81/81, CPR-CH-004 competent baseline passed 64/64 / NO_GAIN, and CPR-CH-005 strongest-reasonable non-DSD baseline passed 82/82 / NO_GAIN. All seven strong gain axes were BASELINE_MATCH, so STRONGEST_REASONABLE_BASELINE_COMPRESSION is established only at the constructed-evidence level. The next canonical work item is CPR-CH-006 deterministic same-project retrace.
+Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. The active internal-build front is **Compression / DSD 압축론**. CPR-CH-001~005 are complete, and CPR-CH-006 deterministic same-project retrace passed 56/56 with zero claim-relevant mismatches and zero post-comparison corrections. The retrace is same-project artifact-consistency evidence only and is not independent replication or independent validation. The next canonical work item is CPR-AUD-001 frozen-axis internal-standardization audit.
