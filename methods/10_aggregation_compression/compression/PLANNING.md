@@ -1,6 +1,6 @@
 # DSD Compression Planning / DSD 압축론 기획
 
-Status: **Compression Protocol v0.1 frozen / first positive constructed challenge next**
+Status: **CPR-CH-001 positive constructed 72/72 PASS / negative-unresolved challenge next**
 Date opened: **2026-09-27**
 Legacy path ID: 10B
 Path: methods/10_aggregation_compression/compression/
@@ -144,7 +144,7 @@ source and registry recovery
 4. ✅ Pre-protocol boundary attack — 18 attacks; 9 preserved without refinement, 9 preserved with nonbreaking refinement; 0 collapse, 0 fundamental failure.
 5. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted; Protocol freeze authorized.
 6. ✅ Executable Compression Protocol v0.1 — G1-G18 / T1-T18 frozen.
-7. ⏸ Positive / negative / boundary challenges — first positive constructed challenge next.
+7. 🟨 Positive / negative / boundary challenges — CPR-CH-001 positive constructed 72/72 PASS; negative/unresolved-terminal challenge next.
 8. ⏸ Competent and strongest-reasonable baselines.
 9. ⏸ Deterministic same-project retrace.
 10. ⏸ Frozen-axis internal-standardization audit.
@@ -162,8 +162,11 @@ BOUNDARY_AMENDMENT: established
 DEDICATED_COMPRESSION_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
-DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 0
-SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 0
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 1
+POSITIVE_COMPRESSION_CASES: 1
+NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES: 0
+METHOD_BOUNDARY_COMPRESSION_CASES: 0
 BASELINE_COMPRESSION_CASES: 0
 NO_GAIN_COMPRESSION_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -171,7 +174,7 @@ EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_COMPRESSION_EVIDENCE_STATUS: protocol_frozen
+CURRENT_COMPRESSION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ~~~
@@ -217,6 +220,18 @@ CURRENT_COMPRESSION_EVIDENCE_STATUS: protocol_frozen
 PROTOCOL_REVISION_REQUIRED: no
 ~~~
 
+## CPR-CH-001
+
+~~~text
+PRECOMMIT_COMMIT: 8d19e2672854926afef33b9aea16df213dfe6a4f
+PRECOMMIT_BLOB: 49788325989be77aa1d5ac69eba5a18a5ae6ec25
+RESULT_COMMIT: 6553e213287a312743fc8d292d580bf6ce8c054f
+RESULT_BLOB: 1e341af810f9b19fe9bd17209cc1c7431a23cee1
+CHECKS: 72/72 PASS
+TASK_TERMINAL: COMPRESSION_TASK_ESTABLISHED
+PROTOCOL_CONFORMANCE: COMPRESSION_PROTOCOL_CONFORMANT
+~~~
+
 ## Next
 
-Prospectively precommit and execute the first positive constructed Compression challenge.
+Prospectively precommit and execute the negative / unresolved-terminal Compression challenge.
