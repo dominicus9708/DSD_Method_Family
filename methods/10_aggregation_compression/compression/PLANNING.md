@@ -1,6 +1,6 @@
 # DSD Compression Planning / DSD 압축론 기획
 
-Status: **CPR-CH-001 72/72 PASS / CPR-CH-002 80/80 PASS / direct neighboring-method boundary challenge next**
+Status: **CPR-CH-001 72/72 PASS / CPR-CH-002 80/80 PASS / CPR-CH-003 81/81 PASS / competent baseline next**
 Date opened: **2026-09-27**
 Legacy path ID: 10B
 Path: methods/10_aggregation_compression/compression/
@@ -144,8 +144,8 @@ source and registry recovery
 4. ✅ Pre-protocol boundary attack — 18 attacks; 9 preserved without refinement, 9 preserved with nonbreaking refinement; 0 collapse, 0 fundamental failure.
 5. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted; Protocol freeze authorized.
 6. ✅ Executable Compression Protocol v0.1 — G1-G18 / T1-T18 frozen.
-7. 🟨 Positive / negative / boundary challenges — CPR-CH-001 72/72 PASS + CPR-CH-002 80/80 PASS; direct neighboring-method boundary challenge next.
-8. ⏸ Competent and strongest-reasonable baselines.
+7. ✅ Positive / negative / direct boundary challenges — CPR-CH-001 72/72 PASS + CPR-CH-002 80/80 PASS + CPR-CH-003 81/81 PASS.
+8. ⏸ Competent and strongest-reasonable baselines — competent non-DSD baseline next.
 9. ⏸ Deterministic same-project retrace.
 10. ⏸ Frozen-axis internal-standardization audit.
 11. ⏸ External applications / independent validation.
@@ -162,13 +162,18 @@ BOUNDARY_AMENDMENT: established
 DEDICATED_COMPRESSION_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
-DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 2
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 3
 POSITIVE_COMPRESSION_CASES: 1
 NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES: 1
 ALL_SIX_COMPRESSION_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_COMPRESSION_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
-METHOD_BOUNDARY_COMPRESSION_CASES: 0
+METHOD_BOUNDARY_COMPRESSION_CASES: 1
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 9
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 9
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 BASELINE_COMPRESSION_CASES: 0
 NO_GAIN_COMPRESSION_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -246,6 +251,22 @@ ALL_SIX_COMPRESSION_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_COMPRESSION_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 ~~~
 
+## CPR-CH-003
+
+~~~text
+PRECOMMIT_COMMIT: a16efe888955b8cfe9e67b0fc7b2eb85ce3d17a9
+PRECOMMIT_BLOB: ac697219b2fe0a68fbfecafafa55ea703f031634
+RESULT_COMMIT: 52669b0832b843f353b3bee3450d073ea051cb00
+RESULT_BLOB: 2f39edf6234d2e04fe818b7ce68ef3180a798365
+CHECKS: 81/81 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 9
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 9
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
+~~~
+
 ## Next
 
-Prospectively precommit and execute the direct neighboring-method Compression boundary challenge.
+Prospectively precommit and execute a fair competent non-DSD Compression baseline challenge.
