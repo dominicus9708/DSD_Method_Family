@@ -1,6 +1,6 @@
 # DSD Compression Planning / DSD 압축론 기획
 
-Status: **CPR-CH-006 deterministic same-project retrace 56/56 PASS / internal-standardization audit next**
+Status: **CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / internal lane closed**
 Date opened: **2026-09-27**
 Legacy path ID: 10B
 Path: methods/10_aggregation_compression/compression/
@@ -148,7 +148,7 @@ source and registry recovery
 8. ✅ Competent and strongest-reasonable baselines — CPR-CH-004 64/64 PASS / NO_GAIN; CPR-CH-005 82/82 PASS / NO_GAIN.
 9. ✅ Deterministic same-project retrace — CPR-CH-006 56/56 PASS / 0 claim-relevant mismatches / 0 post-comparison corrections.
 10. ⏸ Frozen-axis internal-standardization audit.
-11. ⏸ External applications / independent validation.
+11. ⏸ External applications / independent validation — deferred as separate evidence phase.
 
 ## Initial counters
 
@@ -184,7 +184,7 @@ POST_COMPARISON_CORRECTIONS: 0
 EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
-COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_COMPRESSION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
@@ -314,6 +314,26 @@ POST_COMPARISON_CORRECTIONS: 0
 SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
 ~~~
 
+## CPR-AUD-001
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT: 9966877e8ac6c3ee51d1e0032ec1fab39ff6c28d
+AUDIT_PRECOMMIT_BLOB: d0c35f12b650df5ea2f2208506614ca0db9bd3b7
+AUDIT_RESULT_COMMIT: af181cc714c69a840c8f5e7f552e6378bbafc493
+AUDIT_RESULT_BLOB: f40fd631dfe6aead41d2670cda49ac6550b32c0f
+AUDIT_CHECKS: 28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: established
+~~~
+
+~~~text
+M1~M6: PASS
+M7: CONDITIONAL_PASS
+M8~M13: PASS
+M14: DEFERRED_BY_SEQUENCE
+M15: PASS
+~~~
+
 ## Next
 
-Prospectively precommit and execute CPR-AUD-001 frozen-axis internal-standardization audit.
+Internal Compression standardization is closed. External/independent validation remains separate. The family-wide internal-build front moves to Diagnosis / DSD 진단론.
