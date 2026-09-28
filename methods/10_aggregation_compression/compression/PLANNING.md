@@ -1,6 +1,6 @@
 # DSD Compression Planning / DSD 압축론 기획
 
-Status: **CPR-CH-001 72/72 PASS / CPR-CH-002 80/80 PASS / CPR-CH-003 81/81 PASS / competent baseline next**
+Status: **CPR-CH-004 competent baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
 Date opened: **2026-09-27**
 Legacy path ID: 10B
 Path: methods/10_aggregation_compression/compression/
@@ -145,7 +145,7 @@ source and registry recovery
 5. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted; Protocol freeze authorized.
 6. ✅ Executable Compression Protocol v0.1 — G1-G18 / T1-T18 frozen.
 7. ✅ Positive / negative / direct boundary challenges — CPR-CH-001 72/72 PASS + CPR-CH-002 80/80 PASS + CPR-CH-003 81/81 PASS.
-8. ⏸ Competent and strongest-reasonable baselines — competent non-DSD baseline next.
+8. 🟨 Competent and strongest-reasonable baselines — competent baseline 64/64 PASS / NO_GAIN; strongest-reasonable baseline next.
 9. ⏸ Deterministic same-project retrace.
 10. ⏸ Frozen-axis internal-standardization audit.
 11. ⏸ External applications / independent validation.
@@ -162,8 +162,8 @@ BOUNDARY_AMENDMENT: established
 DEDICATED_COMPRESSION_PROTOCOL: established v0.1
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
-DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 3
-SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 3
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 4
 POSITIVE_COMPRESSION_CASES: 1
 NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES: 1
 ALL_SIX_COMPRESSION_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
@@ -174,8 +174,9 @@ EXACT_COLLAPSE_PAIRS: 0
 UNRESOLVED_BOUNDARY_PAIRS: 0
 PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 9
 SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
-BASELINE_COMPRESSION_CASES: 0
-NO_GAIN_COMPRESSION_CASES: 0
+BASELINE_COMPRESSION_CASES: 1
+NO_GAIN_COMPRESSION_CASES: 1
+STRONGEST_REASONABLE_BASELINE_COMPRESSION: not established
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
@@ -267,6 +268,20 @@ BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
 SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 ~~~
 
+## CPR-CH-004
+
+~~~text
+PRECOMMIT_COMMIT: 61c51cc9f0078d9db0020e0f7e158640b6f478f9
+PRECOMMIT_BLOB: 4ea0d3faa6bc7bcce515878cca6b8fb7ed8ff001
+RESULT_COMMIT: dfff0009e9ef586bca56d1c3d895a4f1dbcbbb16
+RESULT_BLOB: b9381a269671798f838f0ee4f97b11cfdd8ca841
+CHECKS: 64/64 PASS
+EQUAL_INFORMATION_ACCESS: yes
+COMPRESSION_METHOD_GAIN_STATUS: COMPRESSION_METHOD_GAIN_NO_GAIN
+~~~
+
+All six frozen gain axes were BASELINE_MATCH.
+
 ## Next
 
-Prospectively precommit and execute a fair competent non-DSD Compression baseline challenge.
+Prospectively precommit and execute the strongest-reasonable non-DSD Compression baseline challenge.
