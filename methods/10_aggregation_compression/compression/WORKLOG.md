@@ -578,3 +578,91 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute the negative / unresolved-terminal Compression challenge.
+
+
+---
+
+## Step 8 — CPR-CH-002 negative / unresolved-terminal Compression challenge
+
+~~~text
+CHALLENGE_ID:
+  CPR-CH-002
+
+PRECOMMIT_COMMIT:
+  865b195e37375c3e5132236018f0ba6b466c596e
+
+PRECOMMIT_BLOB:
+  f6ce63ef7bc453c3ebc30cf676f49e2d28be4c7e
+
+RESULT_COMMIT:
+  cfb247944cdf569b70ace9393cc50d4d706e11af
+
+RESULT_BLOB:
+  0599fcc128ce072b7cc30f331a8fbf596a9f069b
+
+CHECKS:
+  80/80 PASS
+~~~
+
+Direct coverage:
+
+~~~text
+COMPRESSION_NOT_ESTABLISHED:
+  destructive collision
+  no reduction
+  reconstruction-destructive collision
+
+COMPRESSION_BLOCKED:
+  unavailable required status interface
+
+COMPRESSION_CONFLICTING:
+  same purpose pair required-distinct and safe-to-merge
+
+COMPRESSION_OUT_OF_SCOPE:
+  stochastic encoder without frozen stochastic interface
+
+COMPRESSION_UNDERDETERMINED:
+  multiple admissible resolutions with different outcomes
+
+COMPRESSION_TASK_PARTIAL:
+  two independent required obligations with one established
+  and one evaluably not established
+
+LOSSLESS_ON_DECLARED_CLASS:
+  positive bounded subcase without global injectivity promotion
+
+TERMINAL_PRECEDENCE:
+  OUT_OF_SCOPE > CONFLICTING > UNDERDETERMINED > BLOCKED
+  with lower-level states retained
+~~~
+
+Coverage state:
+
+~~~text
+ALL_SIX_COMPRESSION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_COMPRESSION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+Current counters:
+
+~~~text
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 2
+POSITIVE_COMPRESSION_CASES: 1
+NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES: 1
+METHOD_BOUNDARY_COMPRESSION_CASES: 0
+BASELINE_COMPRESSION_CASES: 0
+NO_GAIN_COMPRESSION_CASES: 0
+REPRODUCIBILITY_CASES: 0
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_COMPRESSION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+## Next
+
+Prospectively precommit and execute the direct neighboring-method Compression boundary challenge under fair shared-artifact access.
