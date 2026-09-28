@@ -1,6 +1,6 @@
 # DSD Compression Planning / DSD 압축론 기획
 
-Status: **CPR-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN / deterministic retrace next**
+Status: **CPR-CH-006 deterministic same-project retrace 56/56 PASS / internal-standardization audit next**
 Date opened: **2026-09-27**
 Legacy path ID: 10B
 Path: methods/10_aggregation_compression/compression/
@@ -146,7 +146,7 @@ source and registry recovery
 6. ✅ Executable Compression Protocol v0.1 — G1-G18 / T1-T18 frozen.
 7. ✅ Positive / negative / direct boundary challenges — CPR-CH-001 72/72 PASS + CPR-CH-002 80/80 PASS + CPR-CH-003 81/81 PASS.
 8. ✅ Competent and strongest-reasonable baselines — CPR-CH-004 64/64 PASS / NO_GAIN; CPR-CH-005 82/82 PASS / NO_GAIN.
-9. ⏸ Deterministic same-project retrace — CPR-CH-006 next.
+9. ✅ Deterministic same-project retrace — CPR-CH-006 56/56 PASS / 0 claim-relevant mismatches / 0 post-comparison corrections.
 10. ⏸ Frozen-axis internal-standardization audit.
 11. ⏸ External applications / independent validation.
 
@@ -177,7 +177,10 @@ SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 BASELINE_COMPRESSION_CASES: 2
 NO_GAIN_COMPRESSION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_COMPRESSION: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
 EXTERNAL_COMPRESSION_APPLICATIONS: 0
 INDEPENDENT_COMPRESSION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
@@ -296,6 +299,21 @@ COMPRESSION_METHOD_GAIN_STATUS: COMPRESSION_METHOD_GAIN_NO_GAIN
 STRONGEST_REASONABLE_BASELINE_COMPRESSION: established_at_constructed_evidence_level
 ~~~
 
+## CPR-CH-006
+
+~~~text
+PRECOMMIT_COMMIT: cb7b6b1f945d34a184aff94dae5c6af6124f62c0
+PRECOMMIT_BLOB: 556df56b7f50f3694c1558d538482924d36b689c
+RECONSTRUCTION_LEDGER_COMMIT: a064f6008fd05f6007c7b6979882d37f6c8bcdfd
+RECONSTRUCTION_LEDGER_BLOB: a2c788523071b3a5725f9c5e73b519dccd8f1d00
+RESULT_COMMIT: 550e8e24340d62b7b57d49cc53351cca18e3478e
+RESULT_BLOB: 734834af23b9ffc14066ee0a99084ba5ecaa7969
+CHECKS: 56/56 PASS
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+~~~
+
 ## Next
 
-Prospectively precommit and execute CPR-CH-006 deterministic same-project retrace.
+Prospectively precommit and execute CPR-AUD-001 frozen-axis internal-standardization audit.
