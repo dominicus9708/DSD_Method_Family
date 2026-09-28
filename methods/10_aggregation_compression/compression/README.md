@@ -1,6 +1,6 @@
 # DSD Compression / DSD 압축론
 
-Status: **Compression Protocol v0.1 frozen / CPR-CH-001 72/72 PASS / CPR-CH-002 80/80 PASS / direct neighboring-method boundary challenge next**
+Status: **Compression Protocol v0.1 frozen / CPR-CH-001 72/72 PASS / CPR-CH-002 80/80 PASS / CPR-CH-003 81/81 PASS / competent baseline next**
 Legacy path ID: `10B`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -16,6 +16,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`CPR-CH-001 result`](../../../evidence/method_specific/compression/CPR-CH-001_positive-constructed.md)
 - [`CPR-CH-002 precommit`](../../../evidence/method_specific/compression/CPR-CH-002_precommit.md)
 - [`CPR-CH-002 result`](../../../evidence/method_specific/compression/CPR-CH-002_negative-unresolved.md)
+- [`CPR-CH-003 precommit`](../../../evidence/method_specific/compression/CPR-CH-003_precommit.md)
+- [`CPR-CH-003 result`](../../../evidence/method_specific/compression/CPR-CH-003_direct-method-boundary.md)
 
 ## Atomic task
 
@@ -142,10 +144,10 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPRESSION_PILOTS_ATTEMPTED:
-  2
+  3
 
 SUCCESSFUL_DIRECT_COMPRESSION_PILOTS:
-  2
+  3
 
 POSITIVE_COMPRESSION_CASES:
   1
@@ -160,7 +162,22 @@ ALL_SEVEN_COMPRESSION_TASK_TERMINALS_DIRECTLY_EXERCISED:
   yes
 
 METHOD_BOUNDARY_COMPRESSION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  9
+
+EXACT_COLLAPSE_PAIRS:
   0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  9
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
 
 BASELINE_COMPRESSION_CASES:
   0
@@ -363,6 +380,47 @@ ALL_SEVEN_COMPRESSION_TASK_TERMINALS_DIRECTLY_EXERCISED:
 
 Directly exercised destructive collision, failed reduction, blocked required interface, conflicting purpose semantics, out-of-scope stochastic requests, resolution underdetermination, partial multi-obligation execution, reconstruction-destructive collision, declared-class losslessness, and terminal precedence.
 
+## CPR-CH-003 — direct neighboring-method boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  a16efe888955b8cfe9e67b0fc7b2eb85ce3d17a9
+
+PRECOMMIT_BLOB:
+  ac697219b2fe0a68fbfecafafa55ea703f031634
+
+RESULT_COMMIT:
+  52669b0832b843f353b3bee3450d073ea051cb00
+
+RESULT_BLOB:
+  2f39edf6234d2e04fe818b7ce68ef3180a798365
+
+CHECKS:
+  81/81 PASS
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  9
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  9
+
+BOUNDARY_STATUS:
+  FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+~~~
+
+Compression remained five-interface distinguishable from Aggregation, Transformation, Reconstruction, Classification, Comparison, Measurement, Tracking, Lineage, and Audit under fair shared-artifact access.
+
+This is fixture-bounded separation only.
+
 ## Next
 
-Prospectively precommit and execute the direct neighboring-method Compression boundary challenge under fair shared-artifact access.
+Prospectively precommit and execute a fair competent non-DSD Compression baseline challenge. The baseline must receive equal claim-relevant information and NO_GAIN must remain an allowed result.
