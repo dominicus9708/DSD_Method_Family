@@ -1032,3 +1032,119 @@ Required interpretation guards:
 SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
 DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 ~~~
+
+
+---
+
+## Step 12 — CPR-CH-006 deterministic same-project Compression retrace
+
+~~~text
+CHALLENGE_ID:
+  CPR-CH-006
+
+PRECOMMIT_COMMIT:
+  cb7b6b1f945d34a184aff94dae5c6af6124f62c0
+
+PRECOMMIT_BLOB:
+  556df56b7f50f3694c1558d538482924d36b689c
+
+RECONSTRUCTION_LEDGER_COMMIT:
+  a064f6008fd05f6007c7b6979882d37f6c8bcdfd
+
+RECONSTRUCTION_LEDGER_BLOB:
+  a2c788523071b3a5725f9c5e73b519dccd8f1d00
+
+RESULT_COMMIT:
+  550e8e24340d62b7b57d49cc53351cca18e3478e
+
+RESULT_BLOB:
+  734834af23b9ffc14066ee0a99084ba5ecaa7969
+
+CHECKS:
+  56/56 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+~~~
+
+Retrace construction rule:
+
+~~~text
+DERIVATION_BASIS:
+  Compression Protocol v0.1
+  +
+  CPR-CH-005 strongest-reasonable baseline precommit
+
+CPR-CH-005 result:
+  comparison target only
+
+ledger freeze:
+  before formal result comparison
+
+post-comparison repair:
+  prohibited
+~~~
+
+Claim-relevant reconstructed areas:
+
+~~~text
+R1 versioned purpose/map semantics and strict reduction
+R2 exact kernel / declared-class losslessness
+R3 required-sidecar package accounting
+R4 local-stage versus end-to-end chain validity
+R5 purpose conflict / metric underdetermination /
+   neighboring-sidecar boundary / deterministic metadata
+~~~
+
+Comparison outcome:
+
+~~~text
+R1: match
+R2: match
+R3: match
+R4: match
+R5: match
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+~~~
+
+Interpretation lock:
+
+~~~text
+SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+RETRACE_PASS != EXTERNAL_APPLICABILITY
+RETRACE_PASS != METHOD_SUPERIORITY
+~~~
+
+Current counters:
+
+~~~text
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 5
+BASELINE_COMPRESSION_CASES: 2
+NO_GAIN_COMPRESSION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_COMPRESSION: established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+EXTERNAL_COMPRESSION_APPLICATIONS: 0
+INDEPENDENT_COMPRESSION_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_COMPRESSION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+## Next
+
+Prospectively precommit and execute CPR-AUD-001 frozen-axis internal-standardization audit.
