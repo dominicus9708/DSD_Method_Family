@@ -789,3 +789,103 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute a fair competent non-DSD Compression baseline challenge with equal claim-relevant information and NO_GAIN allowed.
+
+
+---
+
+## Step 10 — CPR-CH-004 competent non-DSD Compression baseline
+
+~~~text
+CHALLENGE_ID:
+  CPR-CH-004
+
+BASELINE_ID:
+  B0_GENERIC_TYPED_COMPRESSION_EVALUATOR
+
+PRECOMMIT_COMMIT:
+  61c51cc9f0078d9db0020e0f7e158640b6f478f9
+
+PRECOMMIT_BLOB:
+  4ea0d3faa6bc7bcce515878cca6b8fb7ed8ff001
+
+RESULT_COMMIT:
+  dfff0009e9ef586bca56d1c3d895a4f1dbcbbb16
+
+RESULT_BLOB:
+  b9381a269671798f838f0ee4f97b11cfdd8ca841
+
+CHECKS:
+  64/64 PASS
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+COMPRESSION_HIDDEN_ADVANTAGE_INPUTS:
+  0
+
+BASELINE_WITHHELD_CLAIM_RELEVANT_INPUTS:
+  0
+
+COMPRESSION_METHOD_GAIN_STATUS:
+  COMPRESSION_METHOD_GAIN_NO_GAIN
+~~~
+
+Frozen gain axes:
+
+~~~text
+G1 typed-status / purpose-relation preservation:
+  BASELINE_MATCH
+
+G2 representation-accounting / actual reduction:
+  BASELINE_MATCH
+
+G3 collision-fiber / safe-versus-destructive consequences:
+  BASELINE_MATCH
+
+G4 declared-class losslessness / reconstruction scope:
+  BASELINE_MATCH
+
+G5 negative / blocked / conflict / scope /
+   underdetermination / partial semantics:
+  BASELINE_MATCH
+
+G6 bounded claim / neighboring-sidecar /
+   overclaim prevention:
+  BASELINE_MATCH
+~~~
+
+Interpretation lock:
+
+~~~text
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+~~~
+
+Current counters:
+
+~~~text
+DIRECT_COMPRESSION_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_COMPRESSION_PILOTS: 4
+POSITIVE_COMPRESSION_CASES: 1
+NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES: 1
+METHOD_BOUNDARY_COMPRESSION_CASES: 1
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 9
+BASELINE_COMPRESSION_CASES: 1
+NO_GAIN_COMPRESSION_CASES: 1
+STRONGEST_REASONABLE_BASELINE_COMPRESSION: not established
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_COMPRESSION_APPLICATIONS: 0
+INDEPENDENT_COMPRESSION_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+COMPRESSION_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_COMPRESSION_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+## Next
+
+Prospectively precommit and execute a strongest-reasonable non-DSD Compression baseline challenge. The baseline must be materially stronger than B0 while remaining non-DSD and receiving equal claim-relevant information.
