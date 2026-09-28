@@ -1,6 +1,6 @@
 # DSD Compression / DSD 압축론
 
-Status: **Compression Protocol v0.1 frozen / CPR-CH-001 72/72 PASS / CPR-CH-002 80/80 PASS / CPR-CH-003 81/81 PASS / competent baseline next**
+Status: **Compression Protocol v0.1 frozen / CPR-CH-001~004 complete / CPR-CH-004 competent baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
 Legacy path ID: `10B`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -18,6 +18,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`CPR-CH-002 result`](../../../evidence/method_specific/compression/CPR-CH-002_negative-unresolved.md)
 - [`CPR-CH-003 precommit`](../../../evidence/method_specific/compression/CPR-CH-003_precommit.md)
 - [`CPR-CH-003 result`](../../../evidence/method_specific/compression/CPR-CH-003_direct-method-boundary.md)
+- [`CPR-CH-004 precommit`](../../../evidence/method_specific/compression/CPR-CH-004_precommit.md)
+- [`CPR-CH-004 result`](../../../evidence/method_specific/compression/CPR-CH-004_competent-baseline-no-gain.md)
 
 ## Atomic task
 
@@ -144,10 +146,10 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPRESSION_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_COMPRESSION_PILOTS:
-  3
+  4
 
 POSITIVE_COMPRESSION_CASES:
   1
@@ -180,10 +182,13 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_COMPRESSION_CASES:
-  0
+  1
 
 NO_GAIN_COMPRESSION_CASES:
-  0
+  1
+
+STRONGEST_REASONABLE_BASELINE_COMPRESSION:
+  not established
 
 REPRODUCIBILITY_CASES:
   0
@@ -421,6 +426,37 @@ Compression remained five-interface distinguishable from Aggregation, Transforma
 
 This is fixture-bounded separation only.
 
+## CPR-CH-004 — competent non-DSD Compression baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  61c51cc9f0078d9db0020e0f7e158640b6f478f9
+
+PRECOMMIT_BLOB:
+  4ea0d3faa6bc7bcce515878cca6b8fb7ed8ff001
+
+RESULT_COMMIT:
+  dfff0009e9ef586bca56d1c3d895a4f1dbcbbb16
+
+RESULT_BLOB:
+  b9381a269671798f838f0ee4f97b11cfdd8ca841
+
+CHECKS:
+  64/64 PASS
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+COMPRESSION_METHOD_GAIN_STATUS:
+  COMPRESSION_METHOD_GAIN_NO_GAIN
+~~~
+
+All six frozen gain axes were `BASELINE_MATCH`.
+
+`NO_GAIN` means only that no claim-relevant DSD Compression performance advantage over this competent constructed baseline was established on the frozen tasks under equal-information access.
+
+It is not method failure, deletion, merger, absorption, or permanent-redundancy evidence.
+
 ## Next
 
-Prospectively precommit and execute a fair competent non-DSD Compression baseline challenge. The baseline must receive equal claim-relevant information and NO_GAIN must remain an allowed result.
+Prospectively precommit and execute a strongest-reasonable non-DSD Compression baseline challenge. The next baseline must be materially stronger than B0 without importing DSD as theory.
