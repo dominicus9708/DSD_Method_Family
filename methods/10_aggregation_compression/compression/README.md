@@ -1,6 +1,6 @@
 # DSD Compression / DSD 압축론
 
-Status: **Compression Protocol v0.1 frozen / CPR-CH-001 positive constructed 72/72 PASS / negative-unresolved challenge next**
+Status: **Compression Protocol v0.1 frozen / CPR-CH-001 72/72 PASS / CPR-CH-002 80/80 PASS / direct neighboring-method boundary challenge next**
 Legacy path ID: `10B`
 Higher field: **V. Reduction & Representation / 축약·표현**
 
@@ -14,6 +14,8 @@ Higher field: **V. Reduction & Representation / 축약·표현**
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 - [`CPR-CH-001 precommit`](../../../evidence/method_specific/compression/CPR-CH-001_precommit.md)
 - [`CPR-CH-001 result`](../../../evidence/method_specific/compression/CPR-CH-001_positive-constructed.md)
+- [`CPR-CH-002 precommit`](../../../evidence/method_specific/compression/CPR-CH-002_precommit.md)
+- [`CPR-CH-002 result`](../../../evidence/method_specific/compression/CPR-CH-002_negative-unresolved.md)
 
 ## Atomic task
 
@@ -140,16 +142,22 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPRESSION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_COMPRESSION_PILOTS:
-  1
+  2
 
 POSITIVE_COMPRESSION_CASES:
   1
 
 NEGATIVE_OR_UNRESOLVED_COMPRESSION_CASES:
-  0
+  1
+
+ALL_SIX_COMPRESSION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_COMPRESSION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 METHOD_BOUNDARY_COMPRESSION_CASES:
   0
@@ -328,6 +336,33 @@ PROTOCOL_CONFORMANCE:
 
 The frozen map drops only the task-irrelevant detail coordinate, preserves every frozen group/status distinction, records two purpose-safe collision fibers, and reduces the frozen package cost from 12 to 8 field units.
 
+## CPR-CH-002 — negative / unresolved-terminal Compression challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  865b195e37375c3e5132236018f0ba6b466c596e
+
+PRECOMMIT_BLOB:
+  f6ce63ef7bc453c3ebc30cf676f49e2d28be4c7e
+
+RESULT_COMMIT:
+  cfb247944cdf569b70ace9393cc50d4d706e11af
+
+RESULT_BLOB:
+  0599fcc128ce072b7cc30f331a8fbf596a9f069b
+
+CHECKS:
+  80/80 PASS
+
+ALL_SIX_COMPRESSION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_COMPRESSION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+Directly exercised destructive collision, failed reduction, blocked required interface, conflicting purpose semantics, out-of-scope stochastic requests, resolution underdetermination, partial multi-obligation execution, reconstruction-destructive collision, declared-class losslessness, and terminal precedence.
+
 ## Next
 
-Prospectively precommit and execute the negative / unresolved-terminal Compression challenge without rewriting Protocol v0.1.
+Prospectively precommit and execute the direct neighboring-method Compression boundary challenge under fair shared-artifact access.
