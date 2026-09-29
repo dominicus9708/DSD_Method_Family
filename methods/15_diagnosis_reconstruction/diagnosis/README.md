@@ -1,6 +1,6 @@
 # DSD Diagnosis / DSD 진단론
 
-Status: **Diagnosis Protocol v0.1 frozen / first positive constructed challenge next**
+Status: **Diagnosis Protocol v0.1 frozen / DIAG-CH-001 positive constructed 80/80 PASS / negative-terminal challenge next**
 Legacy path ID: `15A`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -278,6 +278,74 @@ method gain
 maximum-supported claim
 ~~~
 
+## DIAG-CH-001 — positive constructed Diagnosis challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  2d832246197b9ed474962c10732fa2196ed065a5
+
+PRECOMMIT_BLOB:
+  53874c7c53115373b358b467eeb79682bade5034
+
+RESULT_COMMIT:
+  6a182dce0976a25b6317e9c9af85b8317781d88b
+
+RESULT_BLOB:
+  591e9aaeba8176b7a535c979851064294aef0c56
+
+CHECKS:
+  80/80 PASS
+
+DIRECT_DIAGNOSIS_PILOT:
+  positive
+~~~
+
+Frozen subtask outcomes:
+
+~~~text
+A:
+  DIAGNOSIS_SET_MULTIPLE_COMPATIBLE
+  DIAGNOSIS_TASK_ESTABLISHED
+
+B:
+  DIAGNOSIS_SET_UNIQUE_WITHIN_DECLARED_CLASS
+  DIAGNOSIS_TASK_ESTABLISHED
+
+C:
+  CAUSE_COMPATIBILITY_ONLY
+  DIAGNOSIS_TASK_ESTABLISHED
+~~~
+
+The challenge directly exercised noninjective readout, typed Property-status/support handoffs, relation-valued transition constraints, scalar residuals, candidate-class-bounded uniqueness, bounded cause compatibility, and additional-observation handoff without causal or global-uniqueness overclaim.
+
+Current counters:
+
+~~~text
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
+  1
+
+POSITIVE_DIAGNOSIS_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_DIAGNOSIS_CASES:
+  0
+
+METHOD_BOUNDARY_DIAGNOSIS_CASES:
+  0
+
+BASELINE_DIAGNOSIS_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
+  validation_in_progress
+~~~
+
 ## Next
 
-Prospectively precommit and execute the first positive constructed Diagnosis challenge.
+Prospectively precommit and execute DIAG-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
