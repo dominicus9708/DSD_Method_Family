@@ -1,6 +1,6 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **DIAG-CH-001 positive constructed 80/80 PASS / negative-terminal challenge next**  
+Status: **DIAG-CH-001~002 complete / all statuses-terminals covered / neighboring-method boundary challenge next**  
 Date: **2026-09-29**
 
 ## 1. Goal
@@ -240,10 +240,10 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
-  1
+  2
 
 BASELINE_DIAGNOSIS_CASES:
   0
@@ -388,6 +388,18 @@ B: UNIQUE_WITHIN_DECLARED_CLASS / TASK_ESTABLISHED
 C: CAUSE_COMPATIBILITY_ONLY / TASK_ESTABLISHED
 ~~~
 
+## DIAG-CH-002
+
+~~~text
+PRECOMMIT_COMMIT: 119407929fe5e9d43fd9fc04ac21ec9a49147950
+PRECOMMIT_BLOB: 655c5feab5626453027d89faca66842cd5506fc5
+RESULT_COMMIT: edc89cc16df5290c78a7dd033ad67e34c59dc695
+RESULT_BLOB: 024ed7f48b06ff20e7eca8e2dbc1136f878cc6d3
+CHECKS: 80/80 PASS
+ALL_SIX_DIAGNOSIS_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_DIAGNOSIS_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
+~~~
+
 ## 8. Next
 
-Prospectively precommit and execute DIAG-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
+Prospectively precommit and execute DIAG-CH-003 direct neighboring-method boundary challenge.
