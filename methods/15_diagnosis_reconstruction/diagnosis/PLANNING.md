@@ -1,6 +1,6 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **source/registry recovery complete / Task Interface v0.1 draft established / pre-protocol boundary attack next**  
+Status: **pre-protocol boundary attack complete / Boundary Amendment 001 next**  
 Date: **2026-09-29**
 
 ## 1. Goal
@@ -77,8 +77,8 @@ Registry boundary:
 1. ✅ Registry recovery.
 2. ✅ Source recovery and source-derived constraint extraction.
 3. ✅ Task Interface v0.1 draft.
-4. ⏸ Pre-protocol boundary counterexamples.
-5. ⏸ Boundary Amendment if required.
+4. ✅ Pre-protocol boundary counterexamples — 18 attacks / 13 preserved / 5 nonbreaking refinements.
+5. ⏸ Boundary Amendment 001 — required next.
 6. ⏸ Executable Diagnosis Protocol v0.1.
 7. ⏸ Positive constructed challenge.
 8. ⏸ Negative / blocked / unresolved terminal coverage.
@@ -213,6 +213,18 @@ TASK_INTERFACE_DRAFT:
   v0.1 established
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  13
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  5
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
@@ -243,7 +255,7 @@ DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
-  source_and_interface_recovery
+  pre_protocol_boundary_attack_complete
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable
@@ -278,8 +290,37 @@ current-state Diagnosis
 past-history Reconstruction
 ~~~
 
+## Boundary attack result
+
+~~~text
+BOUNDARY_ATTACK_COMMIT:
+  f930b29b1422f4306fa38e8063edd9a8a3ed8118
+
+BOUNDARY_ATTACK_BLOB:
+  50de1b4ccb64264cf100a573f3831b8e2d1c7057
+
+BOUNDARY_ATTACKS_RUN: 18
+PRESERVED_NO_REFINEMENT: 13
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+BOUNDARY_AMENDMENT_REQUIRED: yes
+PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+Required refinement groups:
+
+~~~text
+R1 evidence-set coherence / conflict semantics
+R2 bridge-rule conflict / pair-conflict semantics
+R3 required-interface availability / BLOCKED semantics
+R4 deterministic vs explicit probabilistic inference mode
+R5 task-terminal precedence / PARTIAL semantics
+~~~
+
 ## 8. Next
 
-Execute a pre-protocol boundary attack.
+Establish Boundary Amendment 001 prospectively.
 
-Do not rewrite the Task Interface draft after attack execution begins; use a separate amendment if refinement is required.
+The historical Task Interface draft must not be rewritten.
