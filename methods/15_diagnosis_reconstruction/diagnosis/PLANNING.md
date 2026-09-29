@@ -1,6 +1,6 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **Boundary Amendment 001 established / Protocol v0.1 freeze next**  
+Status: **Diagnosis Protocol v0.1 frozen / positive constructed challenge next**  
 Date: **2026-09-29**
 
 ## 1. Goal
@@ -207,7 +207,19 @@ SOURCE_REGISTRY_RECOVERY:
   complete
 
 DEDICATED_DIAGNOSIS_PROTOCOL:
-  not established
+  established v0.1
+
+PROTOCOL_COMMIT:
+  2d6eb83301860f044cba9a67a87c3a937335823b
+
+PROTOCOL_BLOB:
+  7bf9ab2dbb2ae990b2b0a0c09209ec28aa0f1129
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
 
 TASK_INTERFACE_DRAFT:
   v0.1 established
@@ -255,10 +267,10 @@ DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
-  boundary_amendment_complete
+  protocol_frozen
 
 PROTOCOL_REVISION_REQUIRED:
-  not applicable
+  no
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -341,8 +353,25 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 ~~~
 
+## Diagnosis Protocol v0.1
+
+~~~text
+PROTOCOL_COMMIT:
+  2d6eb83301860f044cba9a67a87c3a937335823b
+
+PROTOCOL_BLOB:
+  7bf9ab2dbb2ae990b2b0a0c09209ec28aa0f1129
+
+DEDICATED_DIAGNOSIS_PROTOCOL:
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
+~~~
+
 ## 8. Next
 
-Freeze executable Diagnosis Protocol v0.1.
-
-The historical Task Interface and boundary-attack record remain immutable.
+Prospectively precommit and execute the first positive constructed Diagnosis challenge.
