@@ -393,3 +393,136 @@ SHARED_CORE_REOPEN_REQUIRED:
 ## Next
 
 Freeze executable Diagnosis Protocol v0.1 from the recovered source registry, historical Task Interface, and Boundary Amendment 001.
+
+
+---
+
+## Step 7 — Diagnosis Protocol v0.1 freeze
+
+~~~text
+PROTOCOL_COMMIT:
+  2d6eb83301860f044cba9a67a87c3a937335823b
+
+PROTOCOL_BLOB:
+  7bf9ab2dbb2ae990b2b0a0c09209ec28aa0f1129
+
+DEDICATED_DIAGNOSIS_PROTOCOL:
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Protocol v0.1 operationalizes:
+
+~~~text
+recovered Source Registry
++
+historical Task Interface v0.1
++
+Boundary Amendment 001
+~~~
+
+It keeps source-derived constraints distinct from prospective method rules.
+
+Key executable separations:
+
+~~~text
+candidate compatibility
+  !=
+candidate-set identifiability
+
+multiple compatible candidates
+  !=
+task underdetermination
+
+evidence conflict
+  !=
+zero compatible candidates
+
+missing required evidence/interface
+  !=
+negative evidence
+
+pair incompatibility
+  !=
+pair conflict
+
+declared-class uniqueness
+  !=
+global uniqueness
+
+cause compatibility
+  !=
+causal proof
+
+current-state Diagnosis
+  !=
+past-history Reconstruction
+
+deterministic compatibility
+  !=
+posterior probability
+~~~
+
+Post-freeze state:
+
+~~~text
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
+  0
+
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
+  0
+
+POSITIVE_DIAGNOSIS_CASES:
+  0
+
+NEGATIVE_OR_UNRESOLVED_DIAGNOSIS_CASES:
+  0
+
+METHOD_BOUNDARY_DIAGNOSIS_CASES:
+  0
+
+BASELINE_DIAGNOSIS_CASES:
+  0
+
+NO_GAIN_DIAGNOSIS_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+
+EXTERNAL_DIAGNOSIS_APPLICATIONS:
+  0
+
+INDEPENDENT_DIAGNOSIS_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
+  protocol_frozen
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+## Next
+
+Prospectively precommit and execute the first positive constructed Diagnosis challenge.
