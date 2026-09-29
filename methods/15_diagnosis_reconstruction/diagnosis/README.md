@@ -1,6 +1,6 @@
 # DSD Diagnosis / DSD 진단론
 
-Status: **pre-protocol boundary attack complete / 18 attacks / 13 preserved / 5 nonbreaking refinements / Boundary Amendment 001 next**
+Status: **Boundary Amendment 001 established / 5/5 refinements adopted / Protocol v0.1 freeze authorized**
 Legacy path ID: `15A`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -25,6 +25,7 @@ Boundary: diagnosis concerns present hidden structure or cause hypotheses; it do
 - [`WORKLOG.md`](WORKLOG.md)
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
+- [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 
 ## Source / registry recovery
 
@@ -98,10 +99,10 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 BOUNDARY_AMENDMENT_001:
-  not yet established
+  established
 
-REFINEMENT_GROUPS_REQUIRED:
-  5
+REFINEMENT_GROUPS_ADOPTED:
+  5/5
 
 DEDICATED_DIAGNOSIS_PROTOCOL:
   not established
@@ -128,7 +129,7 @@ DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
-  pre_protocol_boundary_attack_complete
+  boundary_amendment_complete
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -177,8 +178,46 @@ R5 task-terminal precedence / PARTIAL semantics
 
 The historical Task Interface v0.1 draft remains unchanged.
 
+## Boundary Amendment 001
+
+~~~text
+AMENDMENT_COMMIT:
+  eb51b70765a69277aeabe4152260431c970b95e5
+
+AMENDMENT_BLOB:
+  c5b9fde42828d67f77a7e92d3a588cb6a7aeca2d
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  5/5
+
+METHOD_IDENTITY_CHANGED:
+  no
+
+TASK_INTERFACE_CORE_REOPENED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+~~~
+
+Adopted refinement groups:
+
+~~~text
+R1 evidence-set coherence / conflict semantics
+R2 bridge-rule conflict / pair-conflict semantics
+R3 required-interface availability / BLOCKED semantics
+R4 deterministic vs explicitly supplied probabilistic inference mode
+R5 task-terminal precedence / PARTIAL semantics
+~~~
+
+The historical Task Interface and boundary-attack record remain unchanged.
+
 ## Next
 
-Establish Diagnosis Task Interface Boundary Amendment 001 prospectively.
-
-Do not freeze Diagnosis Protocol v0.1 before the Amendment is established.
+Freeze executable Diagnosis Protocol v0.1 from the recovered source registry + historical Task Interface v0.1 + Boundary Amendment 001.
