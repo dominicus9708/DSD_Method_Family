@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-29 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `af181cc714c69a840c8f5e7f552e6378bbafc493`  
+Method-state source commit before this synchronization record: `e808dd1dbd4f348f7bdad8a768fd33acb05c0543`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -60,7 +60,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
-| Diagnosis | proposed |
+| Diagnosis | source/registry recovery complete; Task Interface v0.1 draft established; pre-protocol boundary attack next |
 | Reconstruction | proposed |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
@@ -831,7 +831,7 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. Compression / DSD 압축론 completed CPR-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; its internal-standardization lane is closed for the current registry, while external/independent validation remains a separate deferred phase. The active family-wide internal-build front now moves to **Diagnosis / DSD 진단론**, currently proposed. The next canonical work item is Diagnosis source/registry recovery before any Task Interface freeze.
+Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. Compression / DSD 압축론 completed CPR-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; its internal-standardization lane is closed for the current registry, while external/independent validation remains a separate deferred phase. The active family-wide internal-build front is **Diagnosis / DSD 진단론**. Source/registry recovery is complete and Task Interface v0.1 draft is established. The next canonical work item is a serious pre-protocol boundary attack; the Task Interface draft becomes historical and must not be rewritten once that attack begins.
 
 
 ### Active method — Diagnosis / DSD 진단론
@@ -842,35 +842,91 @@ Current state:
 LEGACY_PATH_ID: 15A
 CURRENT_PATH: methods/15_diagnosis_reconstruction/diagnosis/
 HIGHER_FIELD: VI. Inverse Inference & Reconstruction
-CURRENT_STATUS: proposed
+
+SOURCE_REGISTRY_RECOVERY: complete
+SOURCE_REGISTRY_COMMIT: 63ccc25d5bc8ddadadabfe698852d846e5671f15
+SOURCE_REGISTRY_BLOB: 1152759be5b56462156c83ecd3c508c73f1755f7
+
+PLANNING_COMMIT: c320b49ad51d100cb1e42f939d4925d7a985558f
+PLANNING_BLOB: 138eba629cba3807a4a0e163e70c9383a58f49b9
+
+WORKLOG_INITIAL_COMMIT: bbf71f71e06b2db2f265e58d0cacc42a1b66bc04
+WORKLOG_INITIAL_BLOB: 653659e0fbe72ec7418602ee091198bbf9e03f52
+
+TASK_INTERFACE_DRAFT: v0.1 established
+TASK_INTERFACE_COMMIT: e2c636eb0751878423a35d6848f7ef5a8fe81cc3
+TASK_INTERFACE_BLOB: 8cc12899c9b3f7a5f78d0e1893c5aa3a3824d444
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 0
+BOUNDARY_AMENDMENT: not established
 DEDICATED_DIAGNOSIS_PROTOCOL: not established
-SOURCE_REGISTRY_RECOVERY: next
+
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 0
+BASELINE_DIAGNOSIS_CASES: 0
+REPRODUCIBILITY_CASES: 0
+EXTERNAL_DIAGNOSIS_APPLICATIONS: 0
+INDEPENDENT_DIAGNOSIS_VALIDATION: not established
+INDEPENDENT_REPLICATION: not established
+
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS: source_and_interface_recovery
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-Current repository definition:
+Recovered source classes:
 
 ```text
-infer which current hidden states, failure modes, causes,
-or structural conditions remain compatible with present observations
+Formation:
+  typed status distinctions
+  strict-vs-composite comparison
+  staged comparison / first branching
+
+Property:
+  declaration / profile / applicability / prerequisite /
+  definedness / zero-value status
+
+Static Aggregation:
+  support-retaining descriptors
+  collision / injectivity / reconstruction limits
+
+Dynamics:
+  typed residuals
+  relation-valued transitions
+  descriptive projections / latent distinctions
+  reduced readouts
+
+Measurement:
+  discrimination/evidence handoff
+  decision-rule / temporal / information-loss records
 ```
 
-Primary existing source classes named by the method stub:
+Current registry boundary:
 
 ```text
-Formation/Property status distinctions
-measurement records
-support-retaining descriptors
-dynamic residuals
-transition constraints
+Diagnosis:
+  current hidden-state / failure-mode /
+  cause-hypothesis / current-condition compatibility
+
+Reconstruction:
+  prior / omitted / damaged / compressed structure
+  and history compatibility
 ```
 
-Current boundary:
+Task Interface v0.1 working guards include:
 
 ```text
-Diagnosis concerns present hidden structure or cause hypotheses.
-It does not automatically reconstruct a unique past history.
-Insufficient evidence or non-injective forward structure requires
-preserving multiple admissible alternatives.
+OBSERVATION_COMPATIBLE != TRUE_STATE_ESTABLISHED
+MULTIPLE_COMPATIBLE != TASK_UNDERDETERMINED
+UNIQUE_WITHIN_DECLARED_CLASS != GLOBAL_UNIQUE_DIAGNOSIS
+NONE_COMPATIBLE_IN_DECLARED_CLASS != NO_REAL_STATE_EXISTS
+DIAGNOSTIC_COMPATIBILITY != CAUSAL_PROOF
+MEASUREMENT_SUFFICIENCY != DIAGNOSIS
+EQUAL_READOUT != EQUAL_HIDDEN_STATE
+NONINJECTIVE_FORWARD_MAP != LICENSE_TO_SELECT_ONE_PREIMAGE
+MISSING_REQUIRED_EVIDENCE != NEGATIVE_EVIDENCE
+CURRENT_STATE_DIAGNOSIS != PAST_HISTORY_RECONSTRUCTION
 ```
 
-**Next canonical step:** recover Diagnosis source/registry constraints and establish its planning/worklog lane before drafting a Task Interface.
+The draft separately records candidate compatibility, candidate-set identifiability, task status, task terminal, cause-claim scope, and additional-observation handoff.
+
+**Next canonical step:** execute pre-protocol boundary counterexamples. From the start of that attack, `TASK_INTERFACE_v0.1-draft.md` is historical and may only be refined through a separate amendment.
