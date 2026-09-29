@@ -1,6 +1,6 @@
 # DSD Diagnosis / DSD 진단론
 
-Status: **Diagnosis Protocol v0.1 frozen / DIAG-CH-001 positive constructed 80/80 PASS / negative-terminal challenge next**
+Status: **Diagnosis Protocol v0.1 frozen / DIAG-CH-001~002 complete / all primary statuses and task terminals directly exercised / neighboring-method boundary challenge next**
 Legacy path ID: `15A`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -346,6 +346,90 @@ CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
   validation_in_progress
 ~~~
 
+## DIAG-CH-002 — negative / unresolved terminal coverage
+
+~~~text
+PRECOMMIT_COMMIT:
+  119407929fe5e9d43fd9fc04ac21ec9a49147950
+
+PRECOMMIT_BLOB:
+  655c5feab5626453027d89faca66842cd5506fc5
+
+RESULT_COMMIT:
+  edc89cc16df5290c78a7dd033ad67e34c59dc695
+
+RESULT_BLOB:
+  024ed7f48b06ff20e7eca8e2dbc1136f878cc6d3
+
+CHECKS:
+  80/80 PASS
+
+ALL_SIX_DIAGNOSIS_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_DIAGNOSIS_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+Directly exercised:
+
+~~~text
+DIAGNOSIS_NOT_ESTABLISHED
+DIAGNOSIS_BLOCKED
+DIAGNOSIS_CONFLICTING
+DIAGNOSIS_OUT_OF_SCOPE
+DIAGNOSIS_UNDERDETERMINED
+
+DIAGNOSIS_TASK_NOT_ESTABLISHED
+DIAGNOSIS_TASK_BLOCKED
+DIAGNOSIS_TASK_CONFLICTING
+DIAGNOSIS_TASK_OUT_OF_SCOPE
+DIAGNOSIS_TASK_UNDERDETERMINED
+DIAGNOSIS_TASK_PARTIAL
+~~~
+
+The bundle also confirmed:
+
+~~~text
+EVIDENCE_CONFLICT != ZERO-CANDIDATE DIAGNOSIS
+NONE_COMPATIBLE_IN_DECLARED_CLASS != NO_REAL_STATE_EXISTS
+PAIR_INCOMPATIBLE != PAIR_CONFLICTING
+BLOCKED != NOT_ESTABLISHED
+OUT_OF_SCOPE != FALSE
+PARTIAL != ATOMIC-FAILURE RESCUE
+~~~
+
+Current counters:
+
+~~~text
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
+  2
+
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
+  2
+
+POSITIVE_DIAGNOSIS_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_DIAGNOSIS_CASES:
+  1
+
+METHOD_BOUNDARY_DIAGNOSIS_CASES:
+  0
+
+BASELINE_DIAGNOSIS_CASES:
+  0
+
+NO_GAIN_DIAGNOSIS_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
+  validation_in_progress
+~~~
+
 ## Next
 
-Prospectively precommit and execute DIAG-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
+Prospectively precommit and execute DIAG-CH-003 direct neighboring-method boundary challenge.
