@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-29 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `6a182dce0976a25b6317e9c9af85b8317781d88b`  
+Method-state source commit before this synchronization record: `edc89cc16df5290c78a7dd033ad67e34c59dc695`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -60,7 +60,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
-| Diagnosis | Protocol v0.1 frozen; DIAG-CH-001 positive constructed 80/80 PASS; negative-terminal challenge next |
+| Diagnosis | Protocol v0.1 frozen; DIAG-CH-001~002 complete; all six primary statuses and all seven task terminals directly exercised; neighboring-method boundary challenge next |
 | Reconstruction | proposed |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
@@ -873,7 +873,7 @@ PROTOCOL_BLOB: 7bf9ab2dbb2ae990b2b0a0c09209ec28aa0f1129
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
 
-DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 1
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 2
 BASELINE_DIAGNOSIS_CASES: 0
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_DIAGNOSIS_APPLICATIONS: 0
@@ -1011,8 +1011,11 @@ RESULT_COMMIT: 6a182dce0976a25b6317e9c9af85b8317781d88b
 RESULT_BLOB: 591e9aaeba8176b7a535c979851064294aef0c56
 CHECKS: 80/80 PASS
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 1
-SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS: 1
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS: 2
 POSITIVE_DIAGNOSIS_CASES: 1
+NEGATIVE_OR_UNRESOLVED_DIAGNOSIS_CASES: 1
+ALL_SIX_DIAGNOSIS_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_DIAGNOSIS_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 ```
 
 Frozen subtask outcomes:
@@ -1033,4 +1036,27 @@ C:
 
 The result remains constructed internal evidence only; it does not establish external applicability, independent validation, global uniqueness, unrestricted causal proof, or method superiority.
 
-**Next canonical step:** prospectively precommit and execute DIAG-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
+DIAG-CH-002 negative / unresolved terminal challenge:
+
+```text
+PRECOMMIT_COMMIT: 119407929fe5e9d43fd9fc04ac21ec9a49147950
+PRECOMMIT_BLOB: 655c5feab5626453027d89faca66842cd5506fc5
+RESULT_COMMIT: edc89cc16df5290c78a7dd033ad67e34c59dc695
+RESULT_BLOB: 024ed7f48b06ff20e7eca8e2dbc1136f878cc6d3
+CHECKS: 80/80 PASS
+ALL_SIX_DIAGNOSIS_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_DIAGNOSIS_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
+```
+
+Directly preserved:
+
+```text
+NOT_ESTABLISHED != BLOCKED
+CONFLICTING != UNDERDETERMINED
+OUT_OF_SCOPE != FALSE
+PARTIAL != ATOMIC-FAILURE RESCUE
+EVIDENCE_CONFLICT != ZERO-CANDIDATE DIAGNOSIS
+NONE_COMPATIBLE_IN_DECLARED_CLASS != NO_REAL_STATE_EXISTS
+```
+
+**Next canonical step:** prospectively precommit and execute DIAG-CH-003 direct neighboring-method boundary challenge.
