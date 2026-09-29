@@ -117,3 +117,52 @@ CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
 Draft Task Interface v0.1 from the recovered registry.
 
 Do not freeze a protocol before direct boundary attack.
+
+
+---
+
+## Step 4 — Task Interface v0.1 draft
+
+~~~text
+TASK_INTERFACE_COMMIT:
+  e2c636eb0751878423a35d6848f7ef5a8fe81cc3
+
+TASK_INTERFACE_BLOB:
+  8cc12899c9b3f7a5f78d0e1893c5aa3a3824d444
+
+TASK_INTERFACE_DRAFT:
+  v0.1 established
+
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
+  source_and_interface_recovery
+~~~
+
+The working interface now separates:
+
+~~~text
+candidate-level compatibility disposition
+candidate-set outcome / identifiability
+overall Diagnosis primary status
+task terminal
+cause-claim scope
+additional-observation handoff
+~~~
+
+Important draft distinctions:
+
+~~~text
+MULTIPLE_COMPATIBLE != TASK_UNDERDETERMINED
+UNIQUE_WITHIN_DECLARED_CLASS != GLOBAL_UNIQUE_DIAGNOSIS
+NONE_COMPATIBLE_IN_DECLARED_CLASS != NO_REAL_STATE_EXISTS
+DIAGNOSTIC_COMPATIBILITY != CAUSAL_PROOF
+MEASUREMENT_SUFFICIENCY != DIAGNOSIS
+CURRENT_STATE_DIAGNOSIS != PAST_HISTORY_RECONSTRUCTION
+~~~
+
+Draft terminal precedence remains deliberately unfrozen and is a boundary-attack target.
+
+## Next
+
+Execute serious pre-protocol boundary counterexamples before any protocol freeze.
+
+From the moment boundary attack begins, the Task Interface draft is historical and must not be rewritten; refinements belong in a separate amendment.
