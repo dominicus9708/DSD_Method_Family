@@ -1,6 +1,6 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **pre-protocol boundary attack complete / Boundary Amendment 001 next**  
+Status: **Boundary Amendment 001 established / Protocol v0.1 freeze next**  
 Date: **2026-09-29**
 
 ## 1. Goal
@@ -78,7 +78,7 @@ Registry boundary:
 2. ✅ Source recovery and source-derived constraint extraction.
 3. ✅ Task Interface v0.1 draft.
 4. ✅ Pre-protocol boundary counterexamples — 18 attacks / 13 preserved / 5 nonbreaking refinements.
-5. ⏸ Boundary Amendment 001 — required next.
+5. ✅ Boundary Amendment 001 — 5/5 refinements adopted / Protocol freeze authorized.
 6. ⏸ Executable Diagnosis Protocol v0.1.
 7. ⏸ Positive constructed challenge.
 8. ⏸ Negative / blocked / unresolved terminal coverage.
@@ -255,7 +255,7 @@ DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
-  pre_protocol_boundary_attack_complete
+  boundary_amendment_complete
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable
@@ -319,8 +319,30 @@ R4 deterministic vs explicit probabilistic inference mode
 R5 task-terminal precedence / PARTIAL semantics
 ~~~
 
+## Boundary Amendment 001
+
+~~~text
+AMENDMENT_COMMIT:
+  eb51b70765a69277aeabe4152260431c970b95e5
+
+AMENDMENT_BLOB:
+  c5b9fde42828d67f77a7e92d3a588cb6a7aeca2d
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  5/5
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
 ## 8. Next
 
-Establish Boundary Amendment 001 prospectively.
+Freeze executable Diagnosis Protocol v0.1.
 
-The historical Task Interface draft must not be rewritten.
+The historical Task Interface and boundary-attack record remain immutable.
