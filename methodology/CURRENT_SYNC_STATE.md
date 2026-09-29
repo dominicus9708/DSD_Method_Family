@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-29 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `2d6eb83301860f044cba9a67a87c3a937335823b`  
+Method-state source commit before this synchronization record: `6a182dce0976a25b6317e9c9af85b8317781d88b`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -60,7 +60,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
-| Diagnosis | Protocol v0.1 frozen; G1-G18 / T1-T18; first positive constructed challenge next |
+| Diagnosis | Protocol v0.1 frozen; DIAG-CH-001 positive constructed 80/80 PASS; negative-terminal challenge next |
 | Reconstruction | proposed |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
@@ -873,7 +873,7 @@ PROTOCOL_BLOB: 7bf9ab2dbb2ae990b2b0a0c09209ec28aa0f1129
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
 
-DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 0
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 1
 BASELINE_DIAGNOSIS_CASES: 0
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_DIAGNOSIS_APPLICATIONS: 0
@@ -881,7 +881,7 @@ INDEPENDENT_DIAGNOSIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
 DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_DIAGNOSIS_EVIDENCE_STATUS: protocol_frozen
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS: validation_in_progress
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
@@ -1002,4 +1002,35 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-**Next canonical step:** prospectively precommit and execute the first positive constructed Diagnosis challenge.
+DIAG-CH-001 positive constructed challenge:
+
+```text
+PRECOMMIT_COMMIT: 2d832246197b9ed474962c10732fa2196ed065a5
+PRECOMMIT_BLOB: 53874c7c53115373b358b467eeb79682bade5034
+RESULT_COMMIT: 6a182dce0976a25b6317e9c9af85b8317781d88b
+RESULT_BLOB: 591e9aaeba8176b7a535c979851064294aef0c56
+CHECKS: 80/80 PASS
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS: 1
+POSITIVE_DIAGNOSIS_CASES: 1
+```
+
+Frozen subtask outcomes:
+
+```text
+A:
+  MULTIPLE_COMPATIBLE
+  TASK_ESTABLISHED
+
+B:
+  UNIQUE_WITHIN_DECLARED_CLASS
+  TASK_ESTABLISHED
+
+C:
+  CAUSE_COMPATIBILITY_ONLY
+  TASK_ESTABLISHED
+```
+
+The result remains constructed internal evidence only; it does not establish external applicability, independent validation, global uniqueness, unrestricted causal proof, or method superiority.
+
+**Next canonical step:** prospectively precommit and execute DIAG-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
