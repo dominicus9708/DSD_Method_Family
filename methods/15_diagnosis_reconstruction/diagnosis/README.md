@@ -1,6 +1,6 @@
 # DSD Diagnosis / DSD 진단론
 
-Status: **Boundary Amendment 001 established / 5/5 refinements adopted / Protocol v0.1 freeze authorized**
+Status: **Diagnosis Protocol v0.1 frozen / first positive constructed challenge next**
 Legacy path ID: `15A`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -26,6 +26,7 @@ Boundary: diagnosis concerns present hidden structure or cause hypotheses; it do
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
+- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 
 ## Source / registry recovery
 
@@ -105,7 +106,19 @@ REFINEMENT_GROUPS_ADOPTED:
   5/5
 
 DEDICATED_DIAGNOSIS_PROTOCOL:
-  not established
+  established v0.1
+
+PROTOCOL_COMMIT:
+  2d6eb83301860f044cba9a67a87c3a937335823b
+
+PROTOCOL_BLOB:
+  7bf9ab2dbb2ae990b2b0a0c09209ec28aa0f1129
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
 
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
   0
@@ -129,7 +142,7 @@ DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
-  boundary_amendment_complete
+  protocol_frozen
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -218,6 +231,53 @@ R5 task-terminal precedence / PARTIAL semantics
 
 The historical Task Interface and boundary-attack record remain unchanged.
 
+## Diagnosis Protocol v0.1
+
+~~~text
+PROTOCOL_COMMIT:
+  2d6eb83301860f044cba9a67a87c3a937335823b
+
+PROTOCOL_BLOB:
+  7bf9ab2dbb2ae990b2b0a0c09209ec28aa0f1129
+
+DEDICATED_DIAGNOSIS_PROTOCOL:
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
+
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
+  protocol_frozen
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Protocol v0.1 binds:
+
+~~~text
+candidate-class completeness discipline
+evidence-set coherence
+bridge and pair conflict semantics
+required-interface availability
+deterministic / explicit-probabilistic inference mode
+readout / residual / transition constraints
+candidate disposition
+candidate-set identifiability
+cause-claim gate
+neighboring-method handoffs
+task-terminal precedence
+protocol conformance
+method gain
+maximum-supported claim
+~~~
+
 ## Next
 
-Freeze executable Diagnosis Protocol v0.1 from the recovered source registry + historical Task Interface v0.1 + Boundary Amendment 001.
+Prospectively precommit and execute the first positive constructed Diagnosis challenge.
