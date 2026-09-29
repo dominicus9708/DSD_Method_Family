@@ -1,6 +1,6 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **source/registry recovery complete / Task Interface v0.1 draft next**  
+Status: **source/registry recovery complete / Task Interface v0.1 draft established / pre-protocol boundary attack next**  
 Date: **2026-09-29**
 
 ## 1. Goal
@@ -76,7 +76,7 @@ Registry boundary:
 
 1. ✅ Registry recovery.
 2. ✅ Source recovery and source-derived constraint extraction.
-3. ⏸ Task Interface v0.1 draft.
+3. ✅ Task Interface v0.1 draft.
 4. ⏸ Pre-protocol boundary counterexamples.
 5. ⏸ Boundary Amendment if required.
 6. ⏸ Executable Diagnosis Protocol v0.1.
@@ -210,7 +210,7 @@ DEDICATED_DIAGNOSIS_PROTOCOL:
   not established
 
 TASK_INTERFACE_DRAFT:
-  not established
+  v0.1 established
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
   0
@@ -243,7 +243,7 @@ DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
-  source_and_registry_recovery_complete
+  source_and_interface_recovery
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable
@@ -252,8 +252,34 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 ~~~
 
+## Task Interface v0.1
+
+~~~text
+TASK_INTERFACE_COMMIT:
+  e2c636eb0751878423a35d6848f7ef5a8fe81cc3
+
+TASK_INTERFACE_BLOB:
+  8cc12899c9b3f7a5f78d0e1893c5aa3a3824d444
+
+TASK_INTERFACE_STATUS:
+  historical draft once boundary attack begins
+~~~
+
+The draft separates:
+
+~~~text
+candidate compatibility
+candidate-set identifiability
+task status
+task terminal
+cause-claim scope
+information-loss / noninjectivity
+current-state Diagnosis
+past-history Reconstruction
+~~~
+
 ## 8. Next
 
-Draft Task Interface v0.1 without retroactively altering the recovered source registry.
+Execute a pre-protocol boundary attack.
 
-Once boundary attack begins, the Task Interface draft becomes immutable historical development evidence.
+Do not rewrite the Task Interface draft after attack execution begins; use a separate amendment if refinement is required.
