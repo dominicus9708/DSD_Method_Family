@@ -1,6 +1,6 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **Diagnosis Protocol v0.1 frozen / positive constructed challenge next**  
+Status: **DIAG-CH-001 positive constructed 80/80 PASS / negative-terminal challenge next**  
 Date: **2026-09-29**
 
 ## 1. Goal
@@ -240,10 +240,10 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
-  0
+  1
 
 SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
-  0
+  1
 
 BASELINE_DIAGNOSIS_CASES:
   0
@@ -267,7 +267,7 @@ DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED:
   no
@@ -372,6 +372,22 @@ BINDING_OPERATION:
   T1-T18
 ~~~
 
+## DIAG-CH-001
+
+~~~text
+PRECOMMIT_COMMIT: 2d832246197b9ed474962c10732fa2196ed065a5
+PRECOMMIT_BLOB: 53874c7c53115373b358b467eeb79682bade5034
+RESULT_COMMIT: 6a182dce0976a25b6317e9c9af85b8317781d88b
+RESULT_BLOB: 591e9aaeba8176b7a535c979851064294aef0c56
+CHECKS: 80/80 PASS
+~~~
+
+~~~text
+A: MULTIPLE_COMPATIBLE / TASK_ESTABLISHED
+B: UNIQUE_WITHIN_DECLARED_CLASS / TASK_ESTABLISHED
+C: CAUSE_COMPATIBILITY_ONLY / TASK_ESTABLISHED
+~~~
+
 ## 8. Next
 
-Prospectively precommit and execute the first positive constructed Diagnosis challenge.
+Prospectively precommit and execute DIAG-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
