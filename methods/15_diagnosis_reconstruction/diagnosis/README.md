@@ -1,6 +1,6 @@
 # DSD Diagnosis / DSD 진단론
 
-Status: **source/registry recovery complete / Task Interface v0.1 draft established / pre-protocol boundary attack next**
+Status: **pre-protocol boundary attack complete / 18 attacks / 13 preserved / 5 nonbreaking refinements / Boundary Amendment 001 next**
 Legacy path ID: `15A`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -24,6 +24,7 @@ Boundary: diagnosis concerns present hidden structure or cause hypotheses; it do
 - [`PLANNING.md`](PLANNING.md)
 - [`WORKLOG.md`](WORKLOG.md)
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
+- [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 
 ## Source / registry recovery
 
@@ -82,10 +83,25 @@ TASK_INTERFACE_DRAFT:
   v0.1 established
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  13
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  5
+
+BOUNDARY_COLLAPSE_FOUND:
   0
 
-BOUNDARY_AMENDMENT:
-  not established
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_001:
+  not yet established
+
+REFINEMENT_GROUPS_REQUIRED:
+  5
 
 DEDICATED_DIAGNOSIS_PROTOCOL:
   not established
@@ -112,14 +128,57 @@ DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
-  source_and_interface_recovery
+  pre_protocol_boundary_attack_complete
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
 ~~~
 
+## Pre-protocol boundary attack
+
+~~~text
+BOUNDARY_ATTACK_COMMIT:
+  f930b29b1422f4306fa38e8063edd9a8a3ed8118
+
+BOUNDARY_ATTACK_BLOB:
+  50de1b4ccb64264cf100a573f3831b8e2d1c7057
+
+BOUNDARY_ATTACKS_RUN:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  13
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  5
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_REQUIRED:
+  yes
+
+PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT:
+  no
+~~~
+
+Required prospective refinement groups:
+
+~~~text
+R1 evidence-set coherence / conflict semantics
+R2 bridge-rule conflict / pair-conflict semantics
+R3 required-interface availability / BLOCKED semantics
+R4 deterministic vs explicitly supplied probabilistic inference mode
+R5 task-terminal precedence / PARTIAL semantics
+~~~
+
+The historical Task Interface v0.1 draft remains unchanged.
+
 ## Next
 
-Treat Task Interface v0.1 as historical once the next step begins.
+Establish Diagnosis Task Interface Boundary Amendment 001 prospectively.
 
-Execute a serious pre-protocol boundary attack before any Diagnosis Protocol freeze.
+Do not freeze Diagnosis Protocol v0.1 before the Amendment is established.
