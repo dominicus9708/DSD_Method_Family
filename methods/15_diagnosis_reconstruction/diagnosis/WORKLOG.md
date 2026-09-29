@@ -273,3 +273,123 @@ SHARED_CORE_REOPEN_REQUIRED:
 Establish Diagnosis Task Interface Boundary Amendment 001.
 
 Do not freeze an executable Diagnosis Protocol before the Amendment is established.
+
+
+---
+
+## Step 6 — Diagnosis Task Interface Boundary Amendment 001
+
+~~~text
+AMENDMENT_COMMIT:
+  eb51b70765a69277aeabe4152260431c970b95e5
+
+AMENDMENT_BLOB:
+  c5b9fde42828d67f77a7e92d3a588cb6a7aeca2d
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  5/5
+
+METHOD_IDENTITY_CHANGED:
+  no
+
+TASK_INTERFACE_CORE_REOPENED:
+  no
+
+HISTORICAL_TASK_INTERFACE_REWRITTEN:
+  no
+
+HISTORICAL_BOUNDARY_ATTACK_RECORD_REWRITTEN:
+  no
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Adopted refinements:
+
+~~~text
+R1
+  EVIDENCE_SET_COHERENCE_STATUS
+  separates coherent candidate exclusion from conflicting evidence
+
+R2
+  BRIDGE_RELATION_STATUS + PAIR_CONFLICTING
+  separates bridge conflict from underdetermined semantics
+
+R3
+  REQUIRED_DIAGNOSIS_INTERFACE_STATUS
+  unavailable required interface -> BLOCKED
+
+R4
+  INFERENCE_MODE
+  default deterministic compatibility;
+  probability/ranking only with explicit probabilistic interface
+
+R5
+  binding task-terminal precedence and PARTIAL semantics
+~~~
+
+Binding terminal precedence:
+
+~~~text
+DIAGNOSIS_TASK_OUT_OF_SCOPE
+>
+DIAGNOSIS_TASK_CONFLICTING
+>
+DIAGNOSIS_TASK_UNDERDETERMINED
+>
+DIAGNOSIS_TASK_BLOCKED
+>
+DIAGNOSIS_TASK_ESTABLISHED /
+DIAGNOSIS_TASK_PARTIAL /
+DIAGNOSIS_TASK_NOT_ESTABLISHED
+~~~
+
+Candidate-set multiplicity remains separate from the terminal family.
+
+~~~text
+MULTIPLE_COMPATIBLE != TASK_UNDERDETERMINED
+UNIQUE_WITHIN_DECLARED_CLASS != GLOBAL_UNIQUE_DIAGNOSIS
+NONE_COMPATIBLE_IN_DECLARED_CLASS != NO_REAL_STATE_EXISTS
+~~~
+
+Post-amendment state:
+
+~~~text
+TASK_INTERFACE_DRAFT:
+  v0.1 historical draft preserved
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  5/5
+
+DEDICATED_DIAGNOSIS_PROTOCOL:
+  not established
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
+  boundary_amendment_complete
+
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+## Next
+
+Freeze executable Diagnosis Protocol v0.1 from the recovered source registry, historical Task Interface, and Boundary Amendment 001.
