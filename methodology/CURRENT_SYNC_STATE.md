@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-29 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `e808dd1dbd4f348f7bdad8a768fd33acb05c0543`  
+Method-state source commit before this synchronization record: `f930b29b1422f4306fa38e8063edd9a8a3ed8118`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -60,7 +60,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
-| Diagnosis | source/registry recovery complete; Task Interface v0.1 draft established; pre-protocol boundary attack next |
+| Diagnosis | pre-protocol boundary attack complete; 18 attacks / 13 preserved / 5 nonbreaking refinements; Boundary Amendment 001 next |
 | Reconstruction | proposed |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
@@ -831,7 +831,7 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
 
-Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. Compression / DSD 압축론 completed CPR-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; its internal-standardization lane is closed for the current registry, while external/independent validation remains a separate deferred phase. The active family-wide internal-build front is **Diagnosis / DSD 진단론**. Source/registry recovery is complete and Task Interface v0.1 draft is established. The next canonical work item is a serious pre-protocol boundary attack; the Task Interface draft becomes historical and must not be rewritten once that attack begins.
+Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. Compression / DSD 압축론 completed CPR-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; its internal-standardization lane is closed for the current registry, while external/independent validation remains a separate deferred phase. The active family-wide internal-build front is **Diagnosis / DSD 진단론**. Source/registry recovery and Task Interface v0.1 draft are complete, and the serious pre-protocol boundary attack has executed: 18 attacks, 13 preserved without refinement, 5 preserved with nonbreaking refinements, zero boundary collapse, and zero fundamental interface failure. The next canonical work item is Diagnosis Task Interface Boundary Amendment 001. The historical Task Interface draft must not be rewritten.
 
 
 ### Active method — Diagnosis / DSD 진단론
@@ -857,8 +857,13 @@ TASK_INTERFACE_DRAFT: v0.1 established
 TASK_INTERFACE_COMMIT: e2c636eb0751878423a35d6848f7ef5a8fe81cc3
 TASK_INTERFACE_BLOB: 8cc12899c9b3f7a5f78d0e1893c5aa3a3824d444
 
-PRE_PROTOCOL_BOUNDARY_ATTACKS: 0
-BOUNDARY_AMENDMENT: not established
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
+PRESERVED_NO_REFINEMENT: 13
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+BOUNDARY_AMENDMENT_001: not yet established
+REFINEMENT_GROUPS_REQUIRED: 5
 DEDICATED_DIAGNOSIS_PROTOCOL: not established
 
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 0
@@ -869,7 +874,7 @@ INDEPENDENT_DIAGNOSIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
 DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_DIAGNOSIS_EVIDENCE_STATUS: source_and_interface_recovery
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS: pre_protocol_boundary_attack_complete
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
@@ -929,4 +934,29 @@ CURRENT_STATE_DIAGNOSIS != PAST_HISTORY_RECONSTRUCTION
 
 The draft separately records candidate compatibility, candidate-set identifiability, task status, task terminal, cause-claim scope, and additional-observation handoff.
 
-**Next canonical step:** execute pre-protocol boundary counterexamples. From the start of that attack, `TASK_INTERFACE_v0.1-draft.md` is historical and may only be refined through a separate amendment.
+Boundary attack result:
+
+```text
+BOUNDARY_ATTACK_COMMIT: f930b29b1422f4306fa38e8063edd9a8a3ed8118
+BOUNDARY_ATTACK_BLOB: 50de1b4ccb64264cf100a573f3831b8e2d1c7057
+BOUNDARY_ATTACKS_RUN: 18
+PRESERVED_NO_REFINEMENT: 13
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 5
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+BOUNDARY_AMENDMENT_REQUIRED: yes
+PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+Required refinement groups:
+
+```text
+R1 evidence-set coherence / conflict semantics
+R2 bridge-rule conflict / pair-conflict semantics
+R3 required-interface availability / BLOCKED semantics
+R4 deterministic vs explicitly supplied probabilistic inference mode
+R5 task-terminal precedence / PARTIAL semantics
+```
+
+**Next canonical step:** establish Diagnosis Task Interface Boundary Amendment 001 prospectively. Do not freeze Diagnosis Protocol v0.1 before the Amendment is established.
