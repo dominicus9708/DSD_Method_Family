@@ -166,3 +166,110 @@ Draft terminal precedence remains deliberately unfrozen and is a boundary-attack
 Execute serious pre-protocol boundary counterexamples before any protocol freeze.
 
 From the moment boundary attack begins, the Task Interface draft is historical and must not be rewritten; refinements belong in a separate amendment.
+
+
+---
+
+## Step 5 — pre-protocol boundary attack
+
+~~~text
+BOUNDARY_ATTACK_COMMIT:
+  f930b29b1422f4306fa38e8063edd9a8a3ed8118
+
+BOUNDARY_ATTACK_BLOB:
+  50de1b4ccb64264cf100a573f3831b8e2d1c7057
+
+BOUNDARY_ATTACKS_RUN:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  13
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  5
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_REQUIRED:
+  yes
+
+PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Preserved without refinement:
+
+~~~text
+D1 multiple compatible candidates as an established set result
+D2 unique within declared but incomplete class
+D3 none compatible in declared class without ontological overclaim
+D5 required evidence unavailable -> blocked, not negative evidence
+D6 alternative bridge semantics -> underdetermined
+D8 noninjective readout preserves multiple candidates
+D9 declared-class injectivity != global uniqueness
+D11 zero residual != state identity
+D12 branching transition != unique successor
+D13 current-state identification != unique history
+D14 cause compatibility != causal proof
+D16 discriminator requirement != optimal measurement selection
+D17 neighboring-method outputs do not substitute for Diagnosis
+~~~
+
+Nonbreaking refinements required:
+
+~~~text
+D4 -> R1 evidence-set coherence / conflict semantics
+D7 -> R2 bridge-rule conflict / pair-conflict semantics
+D10 -> R3 required-interface availability / BLOCKED semantics
+D15 -> R4 deterministic vs probabilistic inference-mode scope
+D18 -> R5 task-terminal precedence / PARTIAL semantics
+~~~
+
+The historical Task Interface v0.1 draft was not modified.
+
+Current state:
+
+~~~text
+TASK_INTERFACE_DRAFT:
+  v0.1 historical draft preserved
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  13
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  5
+
+BOUNDARY_AMENDMENT_001:
+  not yet established
+
+REFINEMENT_GROUPS_REQUIRED:
+  5
+
+DEDICATED_DIAGNOSIS_PROTOCOL:
+  not established
+
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
+  pre_protocol_boundary_attack_complete
+
+PROTOCOL_REVISION_REQUIRED:
+  not applicable pre-protocol
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+## Next
+
+Establish Diagnosis Task Interface Boundary Amendment 001.
+
+Do not freeze an executable Diagnosis Protocol before the Amendment is established.
