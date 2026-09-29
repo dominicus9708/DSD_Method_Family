@@ -526,3 +526,153 @@ SHARED_CORE_REOPEN_REQUIRED:
 ## Next
 
 Prospectively precommit and execute the first positive constructed Diagnosis challenge.
+
+
+---
+
+## Step 8 — DIAG-CH-001 positive constructed Diagnosis challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  2d832246197b9ed474962c10732fa2196ed065a5
+
+PRECOMMIT_BLOB:
+  53874c7c53115373b358b467eeb79682bade5034
+
+RESULT_COMMIT:
+  6a182dce0976a25b6317e9c9af85b8317781d88b
+
+RESULT_BLOB:
+  591e9aaeba8176b7a535c979851064294aef0c56
+
+CHECKS:
+  80/80 PASS
+~~~
+
+Subtask A:
+
+~~~text
+CANDIDATE_CLASS:
+  {a1,a2,a3}
+
+MAIN_READOUT:
+  R(a1)=R(a2)=R(a3)=0
+
+STATUS/SUPPORT/TRANSITION:
+  a1 compatible
+  a2 compatible
+  a3 excluded
+
+DIAGNOSIS_SET_OUTCOME:
+  DIAGNOSIS_SET_MULTIPLE_COMPATIBLE
+
+PRIMARY_STATUS:
+  DIAGNOSIS_ESTABLISHED
+
+TASK_TERMINAL:
+  DIAGNOSIS_TASK_ESTABLISHED
+~~~
+
+This directly preserves:
+
+~~~text
+MULTIPLE_COMPATIBLE != TASK_UNDERDETERMINED
+EQUAL_READOUT != EQUAL_HIDDEN_STATE
+APPLICABLE_BUT_UNDEFINED != DEFINED_ZERO
+CURRENT_STATE_DIAGNOSIS != PAST_HISTORY_RECONSTRUCTION
+~~~
+
+Subtask B:
+
+~~~text
+q(b1)=9
+q(b2)=10
+q(b3)=11
+
+r(b)=abs(q(b)-10)
+
+r(b1)=1
+r(b2)=0
+r(b3)=1
+
+DIAGNOSIS_SET_OUTCOME:
+  DIAGNOSIS_SET_UNIQUE_WITHIN_DECLARED_CLASS
+
+TASK_TERMINAL:
+  DIAGNOSIS_TASK_ESTABLISHED
+~~~
+
+No global uniqueness was claimed.
+
+Subtask C:
+
+~~~text
+cause hypotheses:
+  c1
+  c2
+
+frozen marker bridge:
+  c1 compatible
+  c2 excluded
+
+CAUSE_CLAIM_STATUS:
+  CAUSE_COMPATIBILITY_ONLY
+
+TASK_TERMINAL:
+  DIAGNOSIS_TASK_ESTABLISHED
+~~~
+
+No causal-proof promotion occurred.
+
+Post-challenge state:
+
+~~~text
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
+  1
+
+POSITIVE_DIAGNOSIS_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_DIAGNOSIS_CASES:
+  0
+
+METHOD_BOUNDARY_DIAGNOSIS_CASES:
+  0
+
+BASELINE_DIAGNOSIS_CASES:
+  0
+
+NO_GAIN_DIAGNOSIS_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+
+EXTERNAL_DIAGNOSIS_APPLICATIONS:
+  0
+
+INDEPENDENT_DIAGNOSIS_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
+  validation_in_progress
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+## Next
+
+Prospectively precommit and execute DIAG-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
