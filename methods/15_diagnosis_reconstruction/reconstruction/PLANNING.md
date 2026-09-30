@@ -1,6 +1,6 @@
 # DSD Reconstruction — Planning / Validation Roadmap
 
-Status: **TASK INTERFACE v0.1 DRAFT ESTABLISHED — PRE-PROTOCOL BOUNDARY ATTACK NEXT**  
+Status: **PRE-PROTOCOL BOUNDARY ATTACK COMPLETE — BOUNDARY AMENDMENT 001 NEXT**  
 Date: **2026-10-01**  
 Method: **Reconstruction / DSD 복원론**  
 Legacy path ID: `15B`
@@ -99,8 +99,8 @@ Shared interface:
 2. ✅ Registry/source recovery.
 3. ✅ Planning/worklog lane.
 4. ✅ Task Interface v0.1 draft.
-5. ⏸ Pre-protocol boundary counterexamples — next.
-6. ⏸ Boundary Amendment 001 if required.
+5. ✅ Pre-protocol boundary counterexamples — 18 attacks / 10 preserved / 8 nonbreaking refinements.
+6. ⏸ Boundary Amendment 001 — required / next.
 7. ⏸ Executable Reconstruction Protocol v0.1.
 8. ⏸ Positive constructed challenge.
 9. ⏸ Negative / blocked / unresolved / unrecoverable terminal coverage.
@@ -326,7 +326,31 @@ TASK_INTERFACE_BLOB:
   92bfa7f9e523af0886169bf76d2854870ba202e3
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+BOUNDARY_ATTACK_COMMIT:
+  27d0ead2e3a95b0ce8eb08169a3c56714384f1d6
+
+BOUNDARY_ATTACK_BLOB:
+  01b083199069477d0b8aec6518709eba735dc893
+
+PRESERVED_NO_REFINEMENT:
+  10
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  8
+
+BOUNDARY_COLLAPSE_FOUND:
   0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_001:
+  not yet established
+
+REFINEMENT_GROUPS_REQUIRED:
+  8
 
 DEDICATED_RECONSTRUCTION_PROTOCOL:
   not established
@@ -353,7 +377,7 @@ RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
-  source_and_registry_recovery_complete
+  pre_protocol_boundary_attack_complete
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -361,8 +385,8 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Execute the serious pre-protocol Reconstruction boundary attack against Task Interface v0.1.
+Establish Reconstruction Task Interface Boundary Amendment 001 prospectively.
 
-Once boundary attack begins, preserve the Task Interface draft immutably and place any refinements in a separate amendment.
+Bind R1-R8 without rewriting the historical Task Interface or boundary-attack record.
 
-Do not freeze a protocol before direct boundary attack.
+Protocol freeze is not authorized before the Amendment.
