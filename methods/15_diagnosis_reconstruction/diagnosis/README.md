@@ -1,6 +1,6 @@
 # DSD Diagnosis / DSD 진단론
 
-Status: **DIAG-CH-005 strongest-reasonable non-DSD baseline 82/82 PASS / NO_GAIN / deterministic retrace next**
+Status: **DIAG-CH-006 deterministic same-project retrace 70/70 PASS / frozen-axis internal-standardization audit next**
 Legacy path ID: `15A`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -121,12 +121,42 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
-  0
+  5
 
-BASELINE_DIAGNOSIS_CASES:
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
+  5
+
+POSITIVE_DIAGNOSIS_CASES:
   1
 
+NEGATIVE_OR_UNRESOLVED_DIAGNOSIS_CASES:
+  1
+
+METHOD_BOUNDARY_DIAGNOSIS_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  10
+
+BASELINE_DIAGNOSIS_CASES:
+  2
+
+NO_GAIN_DIAGNOSIS_CASES:
+  2
+
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS:
+  established_at_constructed_evidence_level
+
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_DIAGNOSIS_APPLICATIONS:
@@ -142,7 +172,10 @@ DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
+
+PROTOCOL_REVISION_REQUIRED:
+  no
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -563,12 +596,46 @@ B1 directly matched versioned-registry non-retroactivity, exact preimage/kernel 
 
 `STRONGEST_REASONABLE_BASELINE_AT_CONSTRUCTED_EVIDENCE_LEVEL != UNIVERSALLY_STRONGEST_POSSIBLE_BASELINE`.
 
+## DIAG-CH-006 — deterministic same-project retrace
+
+~~~text
+PRECOMMIT_COMMIT:
+  9e9ba8d6b7e832d1456778559f5431a2c650f556
+
+PRECOMMIT_BLOB:
+  3d2337667e058442cf744a6af4a93bb2a6a17484
+
+RECONSTRUCTION_LEDGER_COMMIT:
+  dc8a2bef09d2ccef590bd2dca145e4a707f31ea5
+
+RECONSTRUCTION_LEDGER_BLOB:
+  5c88893c4a5d643571c19df7033ff4e5498eb21c
+
+RESULT_COMMIT:
+  d0aaf3f7b13a9c44a2959e415cc2b8171931596f
+
+CHECKS:
+  70/70 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+~~~
+
+DIAG-CH-001 through DIAG-CH-005 were reconstructed from the frozen protocol plus their prospectively frozen precommit semantics. The reconstruction ledger was committed before formal result comparison. All 70 frozen retrace checks passed.
+
+`SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION` and `DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION`.
+
 ## Next
 
-Prospectively precommit and execute DIAG-CH-006 deterministic same-project retrace.
+Prospectively precommit DIAG-AUD-001 frozen-axis internal-standardization audit.
 
-
-## Current Diagnosis counters after DIAG-CH-005
+## Current Diagnosis counters after DIAG-CH-006
 
 ~~~text
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
@@ -599,6 +666,15 @@ STRONGEST_REASONABLE_BASELINE_DIAGNOSIS:
   established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
