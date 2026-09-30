@@ -1,6 +1,6 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **DIAG-CH-003 neighboring-method boundary 90/90 PASS / competent baseline next**  
+Status: **DIAG-CH-004 competent non-DSD baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**  
 Date: **2026-09-29**
 
 ## 1. Goal
@@ -240,13 +240,16 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
-  3
+  4
 
 BASELINE_DIAGNOSIS_CASES:
-  0
+  1
+
+NO_GAIN_DIAGNOSIS_CASES:
+  1
 
 NO_GAIN_DIAGNOSIS_CASES:
   0
@@ -416,6 +419,18 @@ BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
 SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 ~~~
 
+## DIAG-CH-004
+
+~~~text
+PRECOMMIT_COMMIT: cf85b4299cfdedb85fffdc3ef4c588681c71f268
+PRECOMMIT_BLOB: af35f3074b96a1764c71f7c4bf9ed8e5e1a638bb
+RESULT_COMMIT: 8978b543144742dc5d1a7e4bffb2a0a24692eeaf
+RESULT_BLOB: 2f3e5f966e8fc6102a633dffee7df9af8c5635a8
+CHECKS: 64/64 PASS
+GAIN_AXES: 6/6 BASELINE_MATCH
+DIAGNOSIS_METHOD_GAIN_STATUS: DIAGNOSIS_METHOD_GAIN_NO_GAIN
+~~~
+
 ## 8. Next
 
-Prospectively precommit and execute a fair competent non-DSD Diagnosis baseline challenge.
+Prospectively precommit and execute a strongest-reasonable non-DSD Diagnosis baseline challenge.
