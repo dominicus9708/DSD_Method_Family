@@ -2,12 +2,12 @@
 
 Synchronized: **2026-09-30 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20260930-DIAG-CH005`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `b7971662c56679d8d46ce11e544b01bb4f317875`  
-Latest completed method event: **DIAG-CH-005 strongest-reasonable non-DSD Diagnosis baseline — 82/82 PASS / NO_GAIN**  
-Latest method-result commit: `6dbcd396baf61bf6c05b7ac051a49342c3c03634`  
+Sync epoch: `MF-SYNC-20260930-DIAG-CH006`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `19b36b86ddcaa470771d2537bbfb40e7d68099b0`  
+Latest completed method event: **DIAG-CH-006 deterministic same-project Diagnosis retrace — 70/70 PASS / 0 claim-relevant mismatches**  
+Latest method-result commit: `d0aaf3f7b13a9c44a2959e415cc2b8171931596f`  
 Active internal-build front: **Diagnosis / DSD 진단론**  
-Next canonical step: **DIAG-CH-006 deterministic same-project retrace**  
+Next canonical step: **DIAG-AUD-001 frozen-axis internal-standardization audit — prospective precommit first**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -68,7 +68,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
-| Diagnosis | DIAG-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN; deterministic same-project retrace next |
+| Diagnosis | DIAG-CH-006 deterministic same-project retrace 70/70 PASS / zero claim-relevant mismatches; frozen-axis internal-standardization audit next |
 | Reconstruction | proposed |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
@@ -839,7 +839,7 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 Tracking, Lineage, Measurement, Aggregation, Compression, Interpretation, and the other already-standardized lanes retain their recorded status; external and independent validation remain separate evidence phases unless explicitly opened.
 
-The active family-wide internal-build front is **Diagnosis / DSD 진단론**. Diagnosis Protocol v0.1 remains frozen with G1-G18 validity gates and T1-T18 binding operations. DIAG-CH-001 through DIAG-CH-005 are complete. The latest completed event is DIAG-CH-005 strongest-reasonable non-DSD baseline at 82/82 PASS with 7/7 baseline match and `DIAGNOSIS_METHOD_GAIN_NO_GAIN`. This NO_GAIN is bounded evidence and does not imply deletion, merger, absorption, or permanent redundancy. The next canonical work item is **DIAG-CH-006 deterministic same-project retrace**.
+The active family-wide internal-build front is **Diagnosis / DSD 진단론**. Diagnosis Protocol v0.1 remains frozen with G1-G18 validity gates and T1-T18 binding operations. DIAG-CH-001 through DIAG-CH-006 are complete. The latest completed event is DIAG-CH-006 deterministic same-project retrace at 70/70 PASS with `CLAIM_RELEVANT_MISMATCHES: 0` and `POST_COMPARISON_CORRECTIONS: 0`. The retrace is same-project evidence and is not independent replication or independent validation. The next canonical work item is **DIAG-AUD-001 frozen-axis internal-standardization audit**, with prospective precommit required.
 
 
 ### Active method — Diagnosis / DSD 진단론
@@ -885,7 +885,10 @@ DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 5
 BASELINE_DIAGNOSIS_CASES: 2
 NO_GAIN_DIAGNOSIS_CASES: 2
 STRONGEST_REASONABLE_BASELINE_DIAGNOSIS: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
 EXTERNAL_DIAGNOSIS_APPLICATIONS: 0
 INDEPENDENT_DIAGNOSIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
@@ -1121,4 +1124,24 @@ STRONGEST_REASONABLE_BASELINE_DIAGNOSIS: established_at_constructed_evidence_lev
 
 The strongest-reasonable label remains bounded to the frozen constructed comparator class and is not a universal optimality claim.
 
-**Next canonical step:** prospectively precommit and execute DIAG-CH-006 deterministic same-project retrace.
+
+DIAG-CH-006 deterministic same-project retrace:
+
+```text
+PRECOMMIT_COMMIT: 9e9ba8d6b7e832d1456778559f5431a2c650f556
+PRECOMMIT_BLOB: 3d2337667e058442cf744a6af4a93bb2a6a17484
+RECONSTRUCTION_LEDGER_COMMIT: dc8a2bef09d2ccef590bd2dca145e4a707f31ea5
+RECONSTRUCTION_LEDGER_BLOB: 5c88893c4a5d643571c19df7033ff4e5498eb21c
+RESULT_COMMIT: d0aaf3f7b13a9c44a2959e415cc2b8171931596f
+CHECKS: 70/70 PASS
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+```
+
+The retrace reconstructed DIAG-CH-001~005 from the frozen Diagnosis Protocol plus their prospectively frozen precommit artifacts, committed the reconstruction ledger before formal comparison, and found no claim-relevant mismatch. This result is same-project/non-blind retraceability evidence and does not establish independent replication, independent validation, external applicability, or method superiority.
+
+**Next canonical step:** prospectively precommit DIAG-AUD-001 frozen-axis internal-standardization audit.
