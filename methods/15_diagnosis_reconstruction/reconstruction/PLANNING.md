@@ -1,6 +1,6 @@
 # DSD Reconstruction — Planning / Validation Roadmap
 
-Status: **SOURCE / REGISTRY RECOVERY COMPLETE — Task Interface draft next**  
+Status: **TASK INTERFACE v0.1 DRAFT ESTABLISHED — PRE-PROTOCOL BOUNDARY ATTACK NEXT**  
 Date: **2026-10-01**  
 Method: **Reconstruction / DSD 복원론**  
 Legacy path ID: `15B`
@@ -98,8 +98,8 @@ Shared interface:
 1. ✅ Active-front handoff from Diagnosis.
 2. ✅ Registry/source recovery.
 3. ✅ Planning/worklog lane.
-4. ⏸ Task Interface v0.1 draft.
-5. ⏸ Pre-protocol boundary counterexamples.
+4. ✅ Task Interface v0.1 draft.
+5. ⏸ Pre-protocol boundary counterexamples — next.
 6. ⏸ Boundary Amendment 001 if required.
 7. ⏸ Executable Reconstruction Protocol v0.1.
 8. ⏸ Positive constructed challenge.
@@ -317,7 +317,13 @@ PLANNING_LANE:
   established
 
 TASK_INTERFACE_DRAFT:
-  not established
+  v0.1 established
+
+TASK_INTERFACE_COMMIT:
+  b12426af3c5ed053c8383e4b242d761251af8d22
+
+TASK_INTERFACE_BLOB:
+  92bfa7f9e523af0886169bf76d2854870ba202e3
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
   0
@@ -355,6 +361,8 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Draft Reconstruction Task Interface v0.1 from the recovered registry.
+Execute the serious pre-protocol Reconstruction boundary attack against Task Interface v0.1.
+
+Once boundary attack begins, preserve the Task Interface draft immutably and place any refinements in a separate amendment.
 
 Do not freeze a protocol before direct boundary attack.
