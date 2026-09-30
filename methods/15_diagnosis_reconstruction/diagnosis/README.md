@@ -1,6 +1,6 @@
 # DSD Diagnosis / DSD 진단론
 
-Status: **DIAG-CH-006 deterministic same-project retrace 70/70 PASS / frozen-axis internal-standardization audit next**
+Status: **Diagnosis Protocol v0.1 internally standardized / DIAG-AUD-001 28/28 PASS / external validation deferred**
 Legacy path ID: `15A`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -27,6 +27,9 @@ Boundary: diagnosis concerns present hidden structure or cause hypotheses; it do
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 - [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
+- [`DIAG-AUD-001 precommit`](../../../evidence/method_specific/diagnosis/DIAG-AUD-001_precommit.md)
+- [`DIAG-AUD-001 pre-scoring provenance correction 001`](../../../evidence/method_specific/diagnosis/DIAG-AUD-001_pre_scoring_provenance_correction_001.md)
+- [`DIAG-AUD-001 result`](../../../evidence/method_specific/diagnosis/DIAG-AUD-001_internal-standardization-review.md)
 
 ## Source / registry recovery
 
@@ -169,7 +172,7 @@ INDEPENDENT_REPLICATION:
   not established
 
 DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
   validation_in_progress
@@ -631,11 +634,60 @@ DIAG-CH-001 through DIAG-CH-005 were reconstructed from the frozen protocol plus
 
 `SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION` and `DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION`.
 
+
+## DIAG-AUD-001 — frozen-axis internal standardization audit
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  7a61edc5eb3b5b40fb40e266dd484a67a0bba753
+
+AUDIT_PRECOMMIT_BLOB:
+  3cc2b55b0cc50850ffaf6fed58cf52b3b64608b8
+
+PRE_SCORING_PROVENANCE_CORRECTION_COMMIT:
+  9ef1b2216b4cd0a195710e34bd276fb493f2a1f1
+
+PRE_SCORING_PROVENANCE_CORRECTION_BLOB:
+  1697443467605dd3e2140c9838d79d1baac6f919
+
+AUDIT_RESULT_COMMIT:
+  8895b421dc8ef1075f5717a7ab69781c0aa59a22
+
+AUDIT_RESULT_BLOB:
+  982594b44047d5a97c1e69dd9fce3b42f329f9d7
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+M7:
+  CONDITIONAL_PASS
+
+M13:
+  PRESENT_NONFATAL
+
+M14:
+  DEFERRED_BY_SEQUENCE
+~~~
+
+The audit precommit contained one incorrect transcription of the DIAG-CH-006 result blob. The original precommit was not rewritten. A separate provenance-correction artifact was committed before scoring, and the audit retained this as `M13: PRESENT_NONFATAL`.
+
+`PRESENT_NONFATAL` is not a hidden pass: the correction remains visible and was permitted by the prospectively frozen promotion rule.
+
+The promotion is limited to project-internal protocol standardization. Diagnosis external application and independent validation remain separate.
+
 ## Next
 
-Prospectively precommit DIAG-AUD-001 frozen-axis internal-standardization audit.
+The Diagnosis internal-standardization lane is closed at Protocol v0.1.
 
-## Current Diagnosis counters after DIAG-CH-006
+Family-wide internal-build moves to **Reconstruction / DSD 복원론** for source/registry recovery and planning. Diagnosis external/independent validation remains a separate later phase.
+
+## Final Diagnosis counters after DIAG-AUD-001
 
 ~~~text
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
@@ -678,7 +730,7 @@ POST_COMPARISON_CORRECTIONS:
   0
 
 DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
   validation_in_progress
