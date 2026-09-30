@@ -1,6 +1,6 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **DIAG-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN / deterministic retrace next**  
+Status: **DIAG-CH-006 deterministic same-project retrace 70/70 PASS / internal-standardization audit next**  
 Date: **2026-09-29**
 
 ## 1. Goal
@@ -79,13 +79,13 @@ Registry boundary:
 3. ✅ Task Interface v0.1 draft.
 4. ✅ Pre-protocol boundary counterexamples — 18 attacks / 13 preserved / 5 nonbreaking refinements.
 5. ✅ Boundary Amendment 001 — 5/5 refinements adopted / Protocol freeze authorized.
-6. ⏸ Executable Diagnosis Protocol v0.1.
-7. ⏸ Positive constructed challenge.
-8. ⏸ Negative / blocked / unresolved terminal coverage.
-9. ⏸ Direct neighboring-method boundary challenge.
-10. ⏸ Competent non-DSD baseline.
-11. ⏸ Strongest-reasonable non-DSD baseline.
-12. ⏸ Deterministic same-project retrace.
+6. ✅ Executable Diagnosis Protocol v0.1.
+7. ✅ Positive constructed challenge.
+8. ✅ Negative / blocked / unresolved terminal coverage.
+9. ✅ Direct neighboring-method boundary challenge.
+10. ✅ Competent non-DSD baseline.
+11. ✅ Strongest-reasonable non-DSD baseline.
+12. ✅ Deterministic same-project retrace — 70/70 PASS / 0 claim-relevant mismatches.
 13. ⏸ Frozen-axis internal standardization audit.
 14. ⏸ External applications / independent validation — separate later phase.
 
@@ -240,21 +240,42 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
-  4
+  5
+
+POSITIVE_DIAGNOSIS_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_DIAGNOSIS_CASES:
+  1
+
+METHOD_BOUNDARY_DIAGNOSIS_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  10
 
 BASELINE_DIAGNOSIS_CASES:
-  1
+  2
 
 NO_GAIN_DIAGNOSIS_CASES:
-  1
+  2
 
-NO_GAIN_DIAGNOSIS_CASES:
-  0
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS:
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_DIAGNOSIS_APPLICATIONS:
@@ -445,6 +466,23 @@ DIAGNOSIS_METHOD_GAIN_STATUS: DIAGNOSIS_METHOD_GAIN_NO_GAIN
 STRONGEST_REASONABLE_BASELINE_DIAGNOSIS: established_at_constructed_evidence_level
 ~~~
 
+## DIAG-CH-006
+
+~~~text
+PRECOMMIT_COMMIT: 9e9ba8d6b7e832d1456778559f5431a2c650f556
+PRECOMMIT_BLOB: 3d2337667e058442cf744a6af4a93bb2a6a17484
+RECONSTRUCTION_LEDGER_COMMIT: dc8a2bef09d2ccef590bd2dca145e4a707f31ea5
+RECONSTRUCTION_LEDGER_BLOB: 5c88893c4a5d643571c19df7033ff4e5498eb21c
+RESULT_COMMIT: d0aaf3f7b13a9c44a2959e415cc2b8171931596f
+CHECKS: 70/70 PASS
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+~~~ 
+
+The retrace reconstructed DIAG-CH-001~005 from the frozen protocol and precommit artifacts, committed the reconstruction ledger before formal comparison, and found zero claim-relevant mismatch. It remains same-project, non-blind retraceability evidence rather than independent replication.
+
 ## 8. Next
 
-Prospectively precommit and execute DIAG-CH-006 deterministic same-project retrace.
+Prospectively precommit DIAG-AUD-001 frozen-axis internal-standardization audit.
