@@ -295,3 +295,64 @@ CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
 Execute a serious pre-protocol boundary attack.
 
 Once that attack begins, the Task Interface draft becomes immutable historical development evidence; refinements must be recorded separately.
+
+
+---
+
+## Step 5 — pre-protocol boundary attack
+
+~~~text
+BOUNDARY_ATTACK_COMMIT:
+  27d0ead2e3a95b0ce8eb08169a3c56714384f1d6
+
+BOUNDARY_ATTACK_BLOB:
+  01b083199069477d0b8aec6518709eba735dc893
+
+BOUNDARY_ATTACKS_RUN:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  10
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  8
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_REQUIRED:
+  yes
+
+REFINEMENT_GROUPS_REQUIRED:
+  8
+
+PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Refinement groups:
+
+~~~text
+R1 candidate-class representation / evaluation mode
+R2 evidence-set coherence / conflict semantics
+R3 required-interface availability / BLOCKED semantics
+R4 frozen-interface closure for unrecoverability claims
+R5 history-relation coherence / composition semantics
+R6 definitional-recompletion scope
+R7 deterministic / explicit probabilistic inference-mode scope
+R8 task-terminal precedence / exact PARTIAL semantics
+~~~
+
+The historical Task Interface remains unchanged.
+
+## Next
+
+Establish Reconstruction Task Interface Boundary Amendment 001 prospectively.
+
+Protocol freeze remains prohibited until the Amendment binds R1-R8.
