@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — Task Interface v0.1 draft established / pre-protocol boundary attack next**
+Status: **active internal-build front — pre-protocol boundary attack complete / Boundary Amendment 001 next**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -51,6 +51,7 @@ No dedicated Reconstruction protocol is established yet.
 - [`PLANNING.md`](PLANNING.md)
 - [`WORKLOG.md`](WORKLOG.md)
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
+- [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 
 ## Source / registry recovery
 
@@ -129,7 +130,31 @@ TASK_INTERFACE_BLOB:
   92bfa7f9e523af0886169bf76d2854870ba202e3
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+BOUNDARY_ATTACK_COMMIT:
+  27d0ead2e3a95b0ce8eb08169a3c56714384f1d6
+
+BOUNDARY_ATTACK_BLOB:
+  01b083199069477d0b8aec6518709eba735dc893
+
+PRESERVED_NO_REFINEMENT:
+  10
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  8
+
+BOUNDARY_COLLAPSE_FOUND:
   0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_001:
+  not yet established
+
+REFINEMENT_GROUPS_REQUIRED:
+  8
 
 DEDICATED_RECONSTRUCTION_PROTOCOL:
   not established
@@ -156,7 +181,7 @@ RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
-  source_and_registry_recovery_complete
+  pre_protocol_boundary_attack_complete
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -164,8 +189,8 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## Next
 
-Execute a serious **pre-protocol Reconstruction boundary attack** against Task Interface v0.1.
+Establish **Reconstruction Task Interface Boundary Amendment 001** prospectively.
 
-The Task Interface is now historical development evidence. Do not rewrite it once boundary attack begins; record refinements in a separate amendment.
+The historical Task Interface and boundary-attack record remain unchanged. Bind the eight nonbreaking refinement groups in the Amendment before any executable Reconstruction Protocol is frozen.
 
-Do not freeze a protocol before direct boundary attack.
+Protocol freeze is not authorized before that Amendment.
