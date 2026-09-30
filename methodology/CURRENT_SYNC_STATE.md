@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-01 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261001-RECON-SOURCE-RECOVERY`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `7594532e121040f68e9fea50f3fc9aaa1e0b1910`  
-Latest completed method event: **Reconstruction source/registry recovery + planning/worklog lane established**  
+Sync epoch: `MF-SYNC-20261001-RECON-TI01`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `e28a7fd1ac876caf3149bb00d2b06427ddce288a`  
+Latest completed method event: **Reconstruction Task Interface v0.1 draft established**  
 Latest method-result commit: `8895b421dc8ef1075f5717a7ab69781c0aa59a22`  
 Active internal-build front: **Reconstruction / DSD 복원론**  
-Next canonical step: **Reconstruction Task Interface v0.1 draft**  
+Next canonical step: **serious pre-protocol Reconstruction boundary attack**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -69,7 +69,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Prediction | proposed |
 | Control | proposed |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Reconstruction | active internal-build front; source/registry recovery complete; planning/worklog established; Task Interface v0.1 draft next |
+| Reconstruction | active internal-build front; Task Interface v0.1 draft established; serious pre-protocol boundary attack next |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
 
@@ -839,7 +839,7 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 Tracking, Lineage, Measurement, Aggregation, Compression, Interpretation, and the other already-standardized lanes retain their recorded status; external and independent validation remain separate evidence phases unless explicitly opened.
 
-Diagnosis / DSD 진단론 has closed its project-internal standardization lane at Protocol v0.1. DIAG-AUD-001 executed at 28/28 PASS with `FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD`. M7 remains `CONDITIONAL_PASS`, M13 is `PRESENT_NONFATAL` because a pre-scoring result-blob transcription was corrected in a separate preserved artifact before scoring, and M14 remains `DEFERRED_BY_SEQUENCE`. No external or independent validation is claimed. The active family-wide internal-build front is now **Reconstruction / DSD 복원론**. Source/registry recovery is complete, the planning/worklog lane is established, and the next canonical work item is **Reconstruction Task Interface v0.1 draft**. Protocol freeze remains prohibited until after direct boundary attack.
+Diagnosis / DSD 진단론 has closed its project-internal standardization lane at Protocol v0.1. DIAG-AUD-001 executed at 28/28 PASS with `FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD`. M7 remains `CONDITIONAL_PASS`, M13 is `PRESENT_NONFATAL` because a pre-scoring result-blob transcription was corrected in a separate preserved artifact before scoring, and M14 remains `DEFERRED_BY_SEQUENCE`. No external or independent validation is claimed. The active family-wide internal-build front is now **Reconstruction / DSD 복원론**. Source/registry recovery is complete, the planning/worklog lane is established, and **Reconstruction Task Interface v0.1 draft** is now established. The next canonical work item is a serious **pre-protocol Reconstruction boundary attack**. The Task Interface is historical development evidence once boundary attack begins; protocol freeze remains prohibited until after that attack.
 
 
 ### Recently closed method — Diagnosis / DSD 진단론
@@ -1181,11 +1181,13 @@ PLANNING_COMMIT: ad2bac42aa9c38c46dd671aac6b6d742a61f02da
 PLANNING_BLOB: 018677bb3fa69f2c71f428d94cb178276f7c0eb3
 WORKLOG_COMMIT: 80c7572468db70f4b863b6ac9731443c3b7b357b
 WORKLOG_BLOB: 1d50d4183aba1974f90d4bb046e0dcc3405a9547
-TASK_INTERFACE_DRAFT: not established
+TASK_INTERFACE_DRAFT: v0.1 established
+TASK_INTERFACE_COMMIT: b12426af3c5ed053c8383e4b242d761251af8d22
+TASK_INTERFACE_BLOB: 92bfa7f9e523af0886169bf76d2854870ba202e3
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 0
 DEDICATED_RECONSTRUCTION_PROTOCOL: not established
 CURRENT_RECONSTRUCTION_EVIDENCE_STATUS: source_and_registry_recovery_complete
 RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS: developing
 ```
 
-The next canonical step is **Reconstruction Task Interface v0.1 draft**. Diagnosis internal-standardization evidence is not automatically Reconstruction validation, and no Reconstruction protocol is frozen yet.
+The next canonical step is a serious **pre-protocol Reconstruction boundary attack**. Diagnosis internal-standardization evidence is not automatically Reconstruction validation, and no Reconstruction protocol is frozen yet.
