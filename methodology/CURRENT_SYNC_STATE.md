@@ -1,13 +1,13 @@
 # DSD Method Family — Current Sync State
 
-Synchronized: **2026-09-30 KST**  
+Synchronized: **2026-10-01 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20260930-DIAG-CH006`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `19b36b86ddcaa470771d2537bbfb40e7d68099b0`  
-Latest completed method event: **DIAG-CH-006 deterministic same-project Diagnosis retrace — 70/70 PASS / 0 claim-relevant mismatches**  
-Latest method-result commit: `d0aaf3f7b13a9c44a2959e415cc2b8171931596f`  
-Active internal-build front: **Diagnosis / DSD 진단론**  
-Next canonical step: **DIAG-AUD-001 frozen-axis internal-standardization audit — prospective precommit first**  
+Sync epoch: `MF-SYNC-20261001-DIAG-AUD001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `8bfe55b07ace42c2228e51160457502068ee5773`  
+Latest completed method event: **DIAG-AUD-001 Diagnosis internal-standardization audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
+Latest method-result commit: `8895b421dc8ef1075f5717a7ab69781c0aa59a22`  
+Active internal-build front: **Reconstruction / DSD 복원론**  
+Next canonical step: **Reconstruction source/registry recovery and planning**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -68,8 +68,8 @@ They are not a cross-method ranking and do not imply independent external valida
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
-| Diagnosis | DIAG-CH-006 deterministic same-project retrace 70/70 PASS / zero claim-relevant mismatches; frozen-axis internal-standardization audit next |
-| Reconstruction | proposed |
+| Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
+| Reconstruction | active internal-build front; source/registry recovery and planning next |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
 
@@ -839,10 +839,10 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 Tracking, Lineage, Measurement, Aggregation, Compression, Interpretation, and the other already-standardized lanes retain their recorded status; external and independent validation remain separate evidence phases unless explicitly opened.
 
-The active family-wide internal-build front is **Diagnosis / DSD 진단론**. Diagnosis Protocol v0.1 remains frozen with G1-G18 validity gates and T1-T18 binding operations. DIAG-CH-001 through DIAG-CH-006 are complete. The latest completed event is DIAG-CH-006 deterministic same-project retrace at 70/70 PASS with `CLAIM_RELEVANT_MISMATCHES: 0` and `POST_COMPARISON_CORRECTIONS: 0`. The retrace is same-project evidence and is not independent replication or independent validation. The next canonical work item is **DIAG-AUD-001 frozen-axis internal-standardization audit**, with prospective precommit required.
+Diagnosis / DSD 진단론 has closed its project-internal standardization lane at Protocol v0.1. DIAG-AUD-001 executed at 28/28 PASS with `FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD`. M7 remains `CONDITIONAL_PASS`, M13 is `PRESENT_NONFATAL` because a pre-scoring result-blob transcription was corrected in a separate preserved artifact before scoring, and M14 remains `DEFERRED_BY_SEQUENCE`. No external or independent validation is claimed. The active family-wide internal-build front is now **Reconstruction / DSD 복원론**, beginning with source/registry recovery and planning.
 
 
-### Active method — Diagnosis / DSD 진단론
+### Recently closed method — Diagnosis / DSD 진단론
 
 Current state:
 
@@ -893,7 +893,7 @@ EXTERNAL_DIAGNOSIS_APPLICATIONS: 0
 INDEPENDENT_DIAGNOSIS_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
-DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS: developing
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS: established
 CURRENT_DIAGNOSIS_EVIDENCE_STATUS: validation_in_progress
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
@@ -1145,3 +1145,37 @@ SHARED_CORE_REOPEN_REQUIRED: no
 The retrace reconstructed DIAG-CH-001~005 from the frozen Diagnosis Protocol plus their prospectively frozen precommit artifacts, committed the reconstruction ledger before formal comparison, and found no claim-relevant mismatch. This result is same-project/non-blind retraceability evidence and does not establish independent replication, independent validation, external applicability, or method superiority.
 
 **Next canonical step:** prospectively precommit DIAG-AUD-001 frozen-axis internal-standardization audit.
+
+
+DIAG-AUD-001 frozen-axis internal standardization audit:
+
+```text
+AUDIT_PRECOMMIT_COMMIT: 7a61edc5eb3b5b40fb40e266dd484a67a0bba753
+AUDIT_PRECOMMIT_BLOB: 3cc2b55b0cc50850ffaf6fed58cf52b3b64608b8
+PRE_SCORING_PROVENANCE_CORRECTION_COMMIT: 9ef1b2216b4cd0a195710e34bd276fb493f2a1f1
+PRE_SCORING_PROVENANCE_CORRECTION_BLOB: 1697443467605dd3e2140c9838d79d1baac6f919
+AUDIT_RESULT_COMMIT: 8895b421dc8ef1075f5717a7ab69781c0aa59a22
+AUDIT_RESULT_BLOB: 982594b44047d5a97c1e69dd9fce3b42f329f9d7
+AUDIT_CHECKS: 28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS: established
+M7: CONDITIONAL_PASS
+M13: PRESENT_NONFATAL
+M14: DEFERRED_BY_SEQUENCE
+```
+
+The pre-scoring provenance correction preserves the original audit precommit and fixes only the DIAG-CH-006 result-blob transcription before scoring. No audit axis, promotion rule, method evidence, protocol rule, or pass threshold changed.
+
+### Active method — Reconstruction / DSD 복원론
+
+```text
+CURRENT_STATUS: active_internal_build_front
+CURRENT_PATH: methods/15_diagnosis_reconstruction/reconstruction/
+LEGACY_PATH_ID: 15B
+HIGHER_FIELD: VI. Inverse Inference & Reconstruction
+DEDICATED_RECONSTRUCTION_PROTOCOL: not established
+SOURCE_REGISTRY_RECOVERY: next
+PLANNING_LANE: next
+```
+
+The next canonical step is source/registry recovery and planning. Diagnosis internal-standardization evidence is not automatically Reconstruction validation.
