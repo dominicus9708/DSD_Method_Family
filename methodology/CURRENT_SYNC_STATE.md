@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-29 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `edc89cc16df5290c78a7dd033ad67e34c59dc695`  
+Method-state source commit before this synchronization record: `67b1d448540387426c13fe0d58e8bdc8f1f83cdc`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -60,7 +60,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
-| Diagnosis | Protocol v0.1 frozen; DIAG-CH-001~002 complete; all six primary statuses and all seven task terminals directly exercised; neighboring-method boundary challenge next |
+| Diagnosis | DIAG-CH-003 boundary 90/90 PASS; 10/10 neighboring pairs partial-overlap-not-collapse; competent non-DSD baseline next |
 | Reconstruction | proposed |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
@@ -873,7 +873,7 @@ PROTOCOL_BLOB: 7bf9ab2dbb2ae990b2b0a0c09209ec28aa0f1129
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
 
-DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 2
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 3
 BASELINE_DIAGNOSIS_CASES: 0
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_DIAGNOSIS_APPLICATIONS: 0
@@ -1056,4 +1056,28 @@ EVIDENCE_CONFLICT != ZERO-CANDIDATE DIAGNOSIS
 NONE_COMPATIBLE_IN_DECLARED_CLASS != NO_REAL_STATE_EXISTS
 ```
 
-**Next canonical step:** prospectively precommit and execute DIAG-CH-003 direct neighboring-method boundary challenge.
+DIAG-CH-003 direct neighboring-method boundary challenge:
+
+```text
+PRECOMMIT_COMMIT: 8b21d04280c5c54e5897033acd8a42fbaffdd26c
+PRECOMMIT_BLOB: 299f1d74a60f0da07746abde6fa677f8c6c5d3f9
+RESULT_COMMIT: 67b1d448540387426c13fe0d58e8bdc8f1f83cdc
+RESULT_BLOB: 1ba8520cbb376867094d413d5bed66258d8c258e
+CHECKS: 90/90 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 10
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 10
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
+```
+
+The ten tested pairs were Measurement, Reconstruction, Classification, Comparison, Prediction, Simulation, Optimization, Audit, Tracking, and Lineage.
+
+```text
+FIXTURE_BOUNDED_SEPARATION != PERMANENT_METHOD_IRREDUCIBILITY
+PARTIAL_OVERLAP_NOT_COLLAPSE != METHOD_SUPERIORITY
+NO_EXACT_COLLAPSE_IN_THIS_FIXTURE != PERMANENT_REGISTRY_SURVIVAL
+```
+
+**Next canonical step:** prospectively precommit and execute a fair competent non-DSD Diagnosis baseline challenge.
