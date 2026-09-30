@@ -1,6 +1,6 @@
 # DSD Diagnosis / DSD 진단론
 
-Status: **DIAG-CH-003 neighboring-method boundary 90/90 PASS / 10/10 partial-overlap-not-collapse / competent baseline next**
+Status: **DIAG-CH-004 competent non-DSD baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
 Legacy path ID: `15A`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -124,7 +124,7 @@ DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
   0
 
 BASELINE_DIAGNOSIS_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -421,7 +421,7 @@ BASELINE_DIAGNOSIS_CASES:
   0
 
 NO_GAIN_DIAGNOSIS_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -486,10 +486,10 @@ Current counters:
 
 ~~~text
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
-  3
+  4
 
 METHOD_BOUNDARY_DIAGNOSIS_CASES:
   1
@@ -510,6 +510,21 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 ~~~
 
+## DIAG-CH-004 — competent non-DSD Diagnosis baseline
+
+~~~text
+PRECOMMIT_COMMIT: cf85b4299cfdedb85fffdc3ef4c588681c71f268
+PRECOMMIT_BLOB: af35f3074b96a1764c71f7c4bf9ed8e5e1a638bb
+RESULT_COMMIT: 8978b543144742dc5d1a7e4bffb2a0a24692eeaf
+RESULT_BLOB: 2f3e5f966e8fc6102a633dffee7df9af8c5635a8
+CHECKS: 64/64 PASS
+EQUAL_INFORMATION_ACCESS: yes
+GAIN_AXES: 6/6 BASELINE_MATCH
+DIAGNOSIS_METHOD_GAIN_STATUS: DIAGNOSIS_METHOD_GAIN_NO_GAIN
+~~~
+
+`NO_GAIN` is bounded evidence only and is not method failure, deletion, merger, absorption, or permanent-redundancy evidence.
+
 ## Next
 
-Prospectively precommit and execute a fair competent non-DSD Diagnosis baseline challenge.
+Prospectively precommit and execute a strongest-reasonable non-DSD Diagnosis baseline challenge.
