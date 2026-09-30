@@ -1202,3 +1202,92 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit DIAG-AUD-001 frozen-axis internal-standardization audit. The audit may count same-project retraceability as conditional internal evidence but must not relabel it as independent replication or external validation.
+
+
+---
+
+## Step 14 — DIAG-AUD-001 frozen-axis internal standardization audit
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  7a61edc5eb3b5b40fb40e266dd484a67a0bba753
+
+AUDIT_PRECOMMIT_BLOB:
+  3cc2b55b0cc50850ffaf6fed58cf52b3b64608b8
+
+PRE_SCORING_PROVENANCE_CORRECTION_COMMIT:
+  9ef1b2216b4cd0a195710e34bd276fb493f2a1f1
+
+PRE_SCORING_PROVENANCE_CORRECTION_BLOB:
+  1697443467605dd3e2140c9838d79d1baac6f919
+
+AUDIT_RESULT_COMMIT:
+  8895b421dc8ef1075f5717a7ab69781c0aa59a22
+
+AUDIT_RESULT_BLOB:
+  982594b44047d5a97c1e69dd9fce3b42f329f9d7
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
+  established
+~~~
+
+Frozen axis results:
+
+~~~text
+M1-M6:
+  PASS
+
+M7 same-project retraceability:
+  CONDITIONAL_PASS
+
+M8-M12:
+  PASS
+
+M13 historical / anti-post-hoc preservation:
+  PRESENT_NONFATAL
+
+M14 external / independent evidence:
+  DEFERRED_BY_SEQUENCE
+
+M15:
+  PASS
+~~~
+
+One DIAG-CH-006 result-blob transcription in the audit precommit was incorrect. The original precommit was preserved and a separate provenance correction was committed before scoring. No audit axis, criterion, promotion rule, scoring item, method evidence, protocol rule, or pass threshold changed.
+
+The audit therefore did not hide the defect as a clean PASS; M13 remains `PRESENT_NONFATAL`, which the frozen promotion rule explicitly permits.
+
+~~~text
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
+  validation_in_progress
+
+EXTERNAL_DIAGNOSIS_APPLICATIONS:
+  0
+
+INDEPENDENT_DIAGNOSIS_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+## Next
+
+Diagnosis internal standardization is closed at Protocol v0.1.
+
+The family-wide internal-build front moves to **Reconstruction / DSD 복원론**. Begin with source/registry recovery and planning; do not transfer Diagnosis validation automatically.
