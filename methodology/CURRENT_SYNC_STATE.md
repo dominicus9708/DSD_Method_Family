@@ -1,13 +1,21 @@
 # DSD Method Family — Current Sync State
 
-Synchronized: **2026-09-29 KST**  
+Synchronized: **2026-09-30 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `6dbcd396baf61bf6c05b7ac051a49342c3c03634`  
+Sync epoch: `MF-SYNC-20260930-DIAG-CH005`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `b7971662c56679d8d46ce11e544b01bb4f317875`  
+Latest completed method event: **DIAG-CH-005 strongest-reasonable non-DSD Diagnosis baseline — 82/82 PASS / NO_GAIN**  
+Latest method-result commit: `6dbcd396baf61bf6c05b7ac051a49342c3c03634`  
+Active internal-build front: **Diagnosis / DSD 진단론**  
+Next canonical step: **DIAG-CH-006 deterministic same-project retrace**  
+Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
 This file is the current cross-surface restoration/synchronization checkpoint for the DSD Method Family.
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
+
+**Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
 
 ## 1. Canonical architecture
 
@@ -829,9 +837,9 @@ When surfaces differ, preserve history and reconcile by explicit version/commit/
 
 The current family-wide priority is **method-specific protocol/evidence maturation**, not adding more shared-core labels.
 
-At this synchronization point, Tracking and Lineage internal-standardization lanes are closed at Protocol v0.1, while external and independent validation remain separate later evidence phases.
+Tracking, Lineage, Measurement, Aggregation, Compression, Interpretation, and the other already-standardized lanes retain their recorded status; external and independent validation remain separate evidence phases unless explicitly opened.
 
-Tracking, Lineage, and Aggregation internal-standardization lanes are closed for the current registry. Aggregation completed AGG-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; external/independent Aggregation validation remains a separate deferred evidence phase. Compression / DSD 압축론 completed CPR-AUD-001 at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`; its internal-standardization lane is closed for the current registry, while external/independent validation remains a separate deferred phase. The active family-wide internal-build front is **Diagnosis / DSD 진단론**. Executable Diagnosis Protocol v0.1 is now frozen from the recovered Source Registry, historical Task Interface v0.1, and Boundary Amendment 001. It contains G1-G18 validity gates and T1-T18 binding operations. The next canonical work item is the first positive constructed Diagnosis challenge.
+The active family-wide internal-build front is **Diagnosis / DSD 진단론**. Diagnosis Protocol v0.1 remains frozen with G1-G18 validity gates and T1-T18 binding operations. DIAG-CH-001 through DIAG-CH-005 are complete. The latest completed event is DIAG-CH-005 strongest-reasonable non-DSD baseline at 82/82 PASS with 7/7 baseline match and `DIAGNOSIS_METHOD_GAIN_NO_GAIN`. This NO_GAIN is bounded evidence and does not imply deletion, merger, absorption, or permanent redundancy. The next canonical work item is **DIAG-CH-006 deterministic same-project retrace**.
 
 
 ### Active method — Diagnosis / DSD 진단론
