@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — source/registry recovery complete / Task Interface draft next**
+Status: **active internal-build front — Task Interface v0.1 draft established / pre-protocol boundary attack next**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -50,6 +50,7 @@ No dedicated Reconstruction protocol is established yet.
 - [`SOURCE_REGISTRY_v0.1.md`](SOURCE_REGISTRY_v0.1.md)
 - [`PLANNING.md`](PLANNING.md)
 - [`WORKLOG.md`](WORKLOG.md)
+- [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 
 ## Source / registry recovery
 
@@ -119,7 +120,13 @@ PLANNING_LANE:
   established
 
 TASK_INTERFACE_DRAFT:
-  not established
+  v0.1 established
+
+TASK_INTERFACE_COMMIT:
+  b12426af3c5ed053c8383e4b242d761251af8d22
+
+TASK_INTERFACE_BLOB:
+  92bfa7f9e523af0886169bf76d2854870ba202e3
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
   0
@@ -157,6 +164,8 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## Next
 
-Draft **Reconstruction Task Interface v0.1** from the recovered registry.
+Execute a serious **pre-protocol Reconstruction boundary attack** against Task Interface v0.1.
+
+The Task Interface is now historical development evidence. Do not rewrite it once boundary attack begins; record refinements in a separate amendment.
 
 Do not freeze a protocol before direct boundary attack.
