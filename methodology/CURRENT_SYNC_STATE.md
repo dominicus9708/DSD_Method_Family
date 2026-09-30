@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-29 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `8978b543144742dc5d1a7e4bffb2a0a24692eeaf`  
+Method-state source commit before this synchronization record: `6dbcd396baf61bf6c05b7ac051a49342c3c03634`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -60,7 +60,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
-| Diagnosis | DIAG-CH-004 competent non-DSD baseline 64/64 PASS / NO_GAIN; strongest-reasonable baseline next |
+| Diagnosis | DIAG-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN; deterministic same-project retrace next |
 | Reconstruction | proposed |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
@@ -873,9 +873,10 @@ PROTOCOL_BLOB: 7bf9ab2dbb2ae990b2b0a0c09209ec28aa0f1129
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
 
-DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 4
-BASELINE_DIAGNOSIS_CASES: 1
-NO_GAIN_DIAGNOSIS_CASES: 1
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 5
+BASELINE_DIAGNOSIS_CASES: 2
+NO_GAIN_DIAGNOSIS_CASES: 2
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_DIAGNOSIS_APPLICATIONS: 0
 INDEPENDENT_DIAGNOSIS_VALIDATION: not established
@@ -1096,4 +1097,20 @@ DIAGNOSIS_METHOD_GAIN_STATUS: DIAGNOSIS_METHOD_GAIN_NO_GAIN
 
 `NO_GAIN` remains bounded evidence and does not imply method failure, deletion, merger, absorption, or permanent redundancy.
 
-**Next canonical step:** prospectively precommit and execute a strongest-reasonable non-DSD Diagnosis baseline challenge.
+DIAG-CH-005 strongest-reasonable non-DSD baseline:
+
+```text
+BASELINE_ID: B1_STRONG_DIAGNOSTIC_INFERENCE_ENGINE
+PRECOMMIT_COMMIT: ce3c6d7e0bdab70453916875ef18b59720069114
+PRECOMMIT_BLOB: 7becc81d1ac3b9822fa6331fd8cfc6953e106c27
+RESULT_COMMIT: 6dbcd396baf61bf6c05b7ac051a49342c3c03634
+RESULT_BLOB: 85c01c39ce6daef445442218b153896f42a8e8a6
+CHECKS: 82/82 PASS
+GAIN_AXES: 7/7 BASELINE_MATCH
+DIAGNOSIS_METHOD_GAIN_STATUS: DIAGNOSIS_METHOD_GAIN_NO_GAIN
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS: established_at_constructed_evidence_level
+```
+
+The strongest-reasonable label remains bounded to the frozen constructed comparator class and is not a universal optimality claim.
+
+**Next canonical step:** prospectively precommit and execute DIAG-CH-006 deterministic same-project retrace.
