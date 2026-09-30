@@ -1,0 +1,194 @@
+# DSD Reconstruction — Worklog
+
+Date started: **2026-10-01**  
+Method: **Reconstruction / DSD 복원론**  
+Legacy path ID: `15B`
+
+## Step 1 — active-front handoff
+
+Diagnosis / DSD 진단론 completed its project-internal standardization lane at Protocol v0.1.
+
+Reconstruction became the next family-wide internal-build front.
+
+Starting state:
+
+~~~text
+CURRENT_STATUS:
+  active_internal_build_front
+
+CURRENT_PATH:
+  methods/15_diagnosis_reconstruction/reconstruction/
+
+DEDICATED_RECONSTRUCTION_PROTOCOL:
+  not established
+~~~
+
+The handoff preserves:
+
+~~~text
+DIAGNOSIS_INTERNAL_STANDARDIZATION
+  !=
+RECONSTRUCTION_VALIDATION
+
+DIAGNOSIS_EVIDENCE
+  !=
+RECONSTRUCTION_EVIDENCE_BY_DEFAULT
+~~~
+
+## Step 2 — source / registry recovery
+
+Canonical source-recovery artifact:
+
+~~~text
+SOURCE_REGISTRY_FILE:
+  SOURCE_REGISTRY_v0.1.md
+
+SOURCE_REGISTRY_COMMIT:
+  78acf2532680722cf09a50376d0c69d74803f1a4
+
+SOURCE_REGISTRY_BLOB:
+  f00063f285745dd328e5b2d8c82ff3579957d615
+~~~
+
+Recovered source classes:
+
+~~~text
+Formation
+Property
+Channel-Indexed Static Aggregation
+Structural Reorganization Dynamics
+Tracking Protocol v0.1
+Lineage Protocol v0.1
+Compression Protocol v0.1
+Aggregation Protocol v0.1
+Diagnosis Protocol v0.1
+DSD interface/shared-core discipline
+~~~
+
+Key recovered constraints:
+
+~~~text
+equal output != equal source
+
+formation witness history != actual temporal history
+
+stage dependency order != physical time order
+
+injectivity on declared class != global injectivity
+
+coordinatewise recovery != relational/full-source recovery
+
+transition compatibility != unique predecessor history
+
+reconstructed candidate link != established Tracking link
+
+reconstructed candidate relation != established Lineage identity
+
+definitional recompletion != evidence-based reconstruction
+
+missing required information != negative evidence
+
+unavailable required interface != demonstrated unrecoverability
+
+one remaining declared candidate != global historical truth
+
+no candidate in declared class != no real past
+
+current-state Diagnosis != past/omitted Reconstruction
+~~~
+
+The source registry explicitly separates:
+
+~~~text
+SOURCE-DERIVED CONSTRAINTS
+
+from
+
+PROSPECTIVE RECONSTRUCTION METHOD CONSTRUCTION
+~~~
+
+No Reconstruction protocol is inferred directly from predecessor papers or neighboring method protocols.
+
+## Step 3 — planning lane
+
+The initial roadmap preserves the standard family build order:
+
+~~~text
+source / registry recovery
+->
+Task Interface draft
+->
+pre-protocol boundary attack
+->
+amendment if required
+->
+executable protocol
+->
+positive / negative / boundary / baseline challenges
+->
+same-project retrace
+->
+frozen-axis internal-standardization audit
+->
+external / independent phase later
+~~~
+
+Initial boundary-pressure targets include:
+
+~~~text
+aggregate/readout collisions
+class-local injectivity
+relational recovery failure
+witness-history vs temporal-history
+Tracking gap vs reconstructed link
+Lineage identity vs candidate predecessor
+branching transitions
+definitional recompletion boundary
+unavailable sidecar vs proven information loss
+declared-class uniqueness vs global truth
+zero declared-class candidates vs no real history
+Diagnosis current state vs Reconstruction history
+branching/merging histories
+trace-conflict cases
+additional-evidence handoffs
+~~~
+
+Current state:
+
+~~~text
+SOURCE_REGISTRY_RECOVERY:
+  complete
+
+PLANNING_LANE:
+  established
+
+TASK_INTERFACE_DRAFT:
+  not established
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  0
+
+DEDICATED_RECONSTRUCTION_PROTOCOL:
+  not established
+
+RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
+  source_and_registry_recovery_complete
+
+EXTERNAL_RECONSTRUCTION_APPLICATIONS:
+  0
+
+INDEPENDENT_RECONSTRUCTION_VALIDATION:
+  not established
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+## Next
+
+Draft Reconstruction Task Interface v0.1 from the recovered source / registry artifact.
+
+Do not freeze a protocol before direct boundary attack.
