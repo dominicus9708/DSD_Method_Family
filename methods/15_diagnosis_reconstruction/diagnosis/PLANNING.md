@@ -1,6 +1,6 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **DIAG-CH-004 competent non-DSD baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**  
+Status: **DIAG-CH-005 strongest-reasonable baseline 82/82 PASS / NO_GAIN / deterministic retrace next**  
 Date: **2026-09-29**
 
 ## 1. Goal
@@ -431,6 +431,20 @@ GAIN_AXES: 6/6 BASELINE_MATCH
 DIAGNOSIS_METHOD_GAIN_STATUS: DIAGNOSIS_METHOD_GAIN_NO_GAIN
 ~~~
 
+## DIAG-CH-005
+
+~~~text
+BASELINE_ID: B1_STRONG_DIAGNOSTIC_INFERENCE_ENGINE
+PRECOMMIT_COMMIT: ce3c6d7e0bdab70453916875ef18b59720069114
+PRECOMMIT_BLOB: 7becc81d1ac3b9822fa6331fd8cfc6953e106c27
+RESULT_COMMIT: 6dbcd396baf61bf6c05b7ac051a49342c3c03634
+RESULT_BLOB: 85c01c39ce6daef445442218b153896f42a8e8a6
+CHECKS: 82/82 PASS
+GAIN_AXES: 7/7 BASELINE_MATCH
+DIAGNOSIS_METHOD_GAIN_STATUS: DIAGNOSIS_METHOD_GAIN_NO_GAIN
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS: established_at_constructed_evidence_level
+~~~
+
 ## 8. Next
 
-Prospectively precommit and execute a strongest-reasonable non-DSD Diagnosis baseline challenge.
+Prospectively precommit and execute DIAG-CH-006 deterministic same-project retrace.
