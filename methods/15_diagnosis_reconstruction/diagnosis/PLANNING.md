@@ -1,6 +1,6 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **DIAG-CH-001~002 complete / all statuses-terminals covered / neighboring-method boundary challenge next**  
+Status: **DIAG-CH-003 neighboring-method boundary 90/90 PASS / competent baseline next**  
 Date: **2026-09-29**
 
 ## 1. Goal
@@ -240,10 +240,10 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
-  2
+  3
 
 SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
-  2
+  3
 
 BASELINE_DIAGNOSIS_CASES:
   0
@@ -400,6 +400,22 @@ ALL_SIX_DIAGNOSIS_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_DIAGNOSIS_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 ~~~
 
+## DIAG-CH-003
+
+~~~text
+PRECOMMIT_COMMIT: 8b21d04280c5c54e5897033acd8a42fbaffdd26c
+PRECOMMIT_BLOB: 299f1d74a60f0da07746abde6fa677f8c6c5d3f9
+RESULT_COMMIT: 67b1d448540387426c13fe0d58e8bdc8f1f83cdc
+RESULT_BLOB: 1ba8520cbb376867094d413d5bed66258d8c258e
+CHECKS: 90/90 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 10
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 10
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
+~~~
+
 ## 8. Next
 
-Prospectively precommit and execute DIAG-CH-003 direct neighboring-method boundary challenge.
+Prospectively precommit and execute a fair competent non-DSD Diagnosis baseline challenge.
