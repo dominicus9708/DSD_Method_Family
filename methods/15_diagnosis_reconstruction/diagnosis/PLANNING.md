@@ -1,7 +1,7 @@
 # DSD Diagnosis — Planning / Validation Roadmap
 
-Status: **DIAG-CH-006 deterministic same-project retrace 70/70 PASS / internal-standardization audit next**  
-Date: **2026-09-29**
+Status: **Diagnosis Protocol v0.1 internally standardized / DIAG-AUD-001 28/28 PASS / external validation deferred**  
+Date: **2026-10-01**
 
 ## 1. Goal
 
@@ -86,8 +86,8 @@ Registry boundary:
 10. ✅ Competent non-DSD baseline.
 11. ✅ Strongest-reasonable non-DSD baseline.
 12. ✅ Deterministic same-project retrace — 70/70 PASS / 0 claim-relevant mismatches.
-13. ⏸ Frozen-axis internal standardization audit.
-14. ⏸ External applications / independent validation — separate later phase.
+13. ✅ Frozen-axis internal standardization audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
+14. ⏸ External applications / independent validation — separate later phase; deferred by sequence.
 
 ## 4. Working five-interface identity — not yet frozen
 
@@ -483,6 +483,55 @@ POST_COMPARISON_CORRECTIONS: 0
 
 The retrace reconstructed DIAG-CH-001~005 from the frozen protocol and precommit artifacts, committed the reconstruction ledger before formal comparison, and found zero claim-relevant mismatch. It remains same-project, non-blind retraceability evidence rather than independent replication.
 
+
+## DIAG-AUD-001 — frozen-axis internal standardization audit
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  7a61edc5eb3b5b40fb40e266dd484a67a0bba753
+
+AUDIT_PRECOMMIT_BLOB:
+  3cc2b55b0cc50850ffaf6fed58cf52b3b64608b8
+
+PRE_SCORING_PROVENANCE_CORRECTION_COMMIT:
+  9ef1b2216b4cd0a195710e34bd276fb493f2a1f1
+
+PRE_SCORING_PROVENANCE_CORRECTION_BLOB:
+  1697443467605dd3e2140c9838d79d1baac6f919
+
+AUDIT_RESULT_COMMIT:
+  8895b421dc8ef1075f5717a7ab69781c0aa59a22
+
+AUDIT_RESULT_BLOB:
+  982594b44047d5a97c1e69dd9fce3b42f329f9d7
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+M7:
+  CONDITIONAL_PASS
+
+M13:
+  PRESENT_NONFATAL
+
+M14:
+  DEFERRED_BY_SEQUENCE
+~~~
+
+The audit precommit contained one incorrect transcription of the DIAG-CH-006 result blob. The original precommit was not rewritten. A separate provenance-correction artifact was committed before scoring, and the audit retained this as `M13: PRESENT_NONFATAL`.
+
+`PRESENT_NONFATAL` is not a hidden pass: the correction remains visible and was permitted by the prospectively frozen promotion rule.
+
+The promotion is limited to project-internal protocol standardization. Diagnosis external application and independent validation remain separate.
+
 ## 8. Next
 
-Prospectively precommit DIAG-AUD-001 frozen-axis internal-standardization audit.
+Diagnosis internal standardization is closed.
+
+Family-wide internal build proceeds to **Reconstruction / DSD 복원론** source/registry recovery and planning. Diagnosis external validation remains deferred and separate.
