@@ -8,7 +8,12 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 
 ## Current synchronization checkpoint / 현재 동기화 체크포인트
 
-- [`methodology/CURRENT_SYNC_STATE.md`](methodology/CURRENT_SYNC_STATE.md) — Notion·GitHub·프로젝트 채팅을 교차 복원한 2026-09-22 현재 상태 체크포인트.
+- [`methodology/CURRENT_SYNC_STATE.md`](methodology/CURRENT_SYNC_STATE.md) — Notion·GitHub·프로젝트 채팅을 교차 복원한 **2026-09-30 KST** 현재 상태 체크포인트.
+- [`methodology/LIVE_SYNC_POLICY.md`](methodology/LIVE_SYNC_POLICY.md) — 상태 변화가 발생한 같은 작업 단위에서 GitHub와 Notion을 함께 갱신하는 필수 실시간 동기화 규칙.
+- Current sync epoch: `MF-SYNC-20260930-DIAG-CH005`
+- Latest claim-relevant source checkpoint at adoption: `b7971662c56679d8d46ce11e544b01bb4f317875`
+- Latest completed method event: **DIAG-CH-005 strongest-reasonable non-DSD Diagnosis baseline — 82/82 PASS / NO_GAIN**.
+- Next canonical step: **DIAG-CH-006 deterministic same-project retrace**.
 - Canonical Notion sync page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 - The checkpoint does not replace method-specific protocols, precommits, evidence, audits, or historical worklogs.
 
@@ -39,7 +44,7 @@ DSD foundational layers
 1. **Structural Description & Understanding / 구조 기술·이해** — Analysis, Comparison, Classification, Interpretation
 2. **Criteria & Validation / 기준·검증** — Specification, Audit
 3. **Construction & Transformation / 구성·변환** — Design, Synthesis, Transformation
-4. **Evidence & Lineage / 증거·계보** — Measurement, Provenance, Lineage
+4. **Evidence & Lineage / 증거·계보** — Measurement, Tracking, Lineage
 5. **Reduction & Representation / 축약·표현** — Aggregation, Compression
 6. **Inverse Inference & Reconstruction / 역추론·복원** — Diagnosis, Reconstruction
 7. **Computation & Selection / 계산·선택** — Computation, Optimization
