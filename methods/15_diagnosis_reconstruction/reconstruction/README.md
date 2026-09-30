@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — source/registry recovery and planning next**
+Status: **active internal-build front — source/registry recovery complete / Task Interface draft next**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -43,3 +43,120 @@ CURRENT_STATE_DIAGNOSIS != PAST_OR_OMITTED_STRUCTURE_RECONSTRUCTION
 ~~~
 
 No dedicated Reconstruction protocol is established yet.
+
+
+## Development files
+
+- [`SOURCE_REGISTRY_v0.1.md`](SOURCE_REGISTRY_v0.1.md)
+- [`PLANNING.md`](PLANNING.md)
+- [`WORKLOG.md`](WORKLOG.md)
+
+## Source / registry recovery
+
+~~~text
+SOURCE_REGISTRY_COMMIT:
+  78acf2532680722cf09a50376d0c69d74803f1a4
+
+SOURCE_REGISTRY_BLOB:
+  f00063f285745dd328e5b2d8c82ff3579957d615
+
+PLANNING_COMMIT:
+  ad2bac42aa9c38c46dd671aac6b6d742a61f02da
+
+PLANNING_BLOB:
+  018677bb3fa69f2c71f428d94cb178276f7c0eb3
+
+WORKLOG_COMMIT:
+  80c7572468db70f4b863b6ac9731443c3b7b357b
+
+WORKLOG_BLOB:
+  1d50d4183aba1974f90d4bb046e0dcc3405a9547
+~~~
+
+Recovered source classes:
+
+~~~text
+Formation
+Property
+Channel-Indexed Static Aggregation
+Structural Reorganization Dynamics
+Tracking
+Lineage
+Compression
+Aggregation
+Diagnosis
+DSD interface/shared-core discipline
+~~~
+
+The source registry keeps source-derived constraints separate from prospective Reconstruction method construction.
+
+## Current recovered guards
+
+~~~text
+EQUAL_OUTPUT != EQUAL_SOURCE
+FORMATION_WITNESS_HISTORY != ACTUAL_TEMPORAL_HISTORY
+STAGE_DEPENDENCY_ORDER != PHYSICAL_TIME_ORDER
+LOSSLESS_ON_DECLARED_CLASS != GLOBAL_INJECTIVITY
+COORDINATEWISE_RECOVERY != RELATIONAL_OR_FULL_SOURCE_RECOVERY
+TRANSITION_COMPATIBILITY != UNIQUE_PREDECESSOR_HISTORY
+RECONSTRUCTION_CANDIDATE != ESTABLISHED_TRACE_LINK
+RECONSTRUCTION_CANDIDATE != ESTABLISHED_LINEAGE
+DEFINITIONAL_RECOMPLETION != EVIDENCE_BASED_RECONSTRUCTION
+MISSING_REQUIRED_RECONSTRUCTION_INFORMATION != NEGATIVE_EVIDENCE
+UNAVAILABLE_REQUIRED_INTERFACE != DEMONSTRATED_UNRECOVERABILITY
+SINGLE_REMAINING_DECLARED_RECONSTRUCTION != GLOBAL_HISTORICAL_TRUTH
+NO_ADMISSIBLE_DECLARED_RECONSTRUCTION != NO_REAL_PAST_STATE_OR_HISTORY
+CURRENT_STATE_DIAGNOSIS != PAST_OR_OMITTED_RECONSTRUCTION
+~~~
+
+## Current evidence state
+
+~~~text
+SOURCE_REGISTRY_RECOVERY:
+  complete
+
+PLANNING_LANE:
+  established
+
+TASK_INTERFACE_DRAFT:
+  not established
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  0
+
+DEDICATED_RECONSTRUCTION_PROTOCOL:
+  not established
+
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
+  0
+
+BASELINE_RECONSTRUCTION_CASES:
+  0
+
+NO_GAIN_RECONSTRUCTION_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+
+EXTERNAL_RECONSTRUCTION_APPLICATIONS:
+  0
+
+INDEPENDENT_RECONSTRUCTION_VALIDATION:
+  not established
+
+RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
+  source_and_registry_recovery_complete
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+## Next
+
+Draft **Reconstruction Task Interface v0.1** from the recovered registry.
+
+Do not freeze a protocol before direct boundary attack.
