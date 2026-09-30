@@ -2,7 +2,7 @@
 
 Synchronized: **2026-09-29 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Method-state source commit before this synchronization record: `67b1d448540387426c13fe0d58e8bdc8f1f83cdc`  
+Method-state source commit before this synchronization record: `8978b543144742dc5d1a7e4bffb2a0a24692eeaf`  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 
@@ -60,7 +60,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
-| Diagnosis | DIAG-CH-003 boundary 90/90 PASS; 10/10 neighboring pairs partial-overlap-not-collapse; competent non-DSD baseline next |
+| Diagnosis | DIAG-CH-004 competent non-DSD baseline 64/64 PASS / NO_GAIN; strongest-reasonable baseline next |
 | Reconstruction | proposed |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
@@ -873,8 +873,9 @@ PROTOCOL_BLOB: 7bf9ab2dbb2ae990b2b0a0c09209ec28aa0f1129
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
 
-DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 3
-BASELINE_DIAGNOSIS_CASES: 0
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 4
+BASELINE_DIAGNOSIS_CASES: 1
+NO_GAIN_DIAGNOSIS_CASES: 1
 REPRODUCIBILITY_CASES: 0
 EXTERNAL_DIAGNOSIS_APPLICATIONS: 0
 INDEPENDENT_DIAGNOSIS_VALIDATION: not established
@@ -1080,4 +1081,19 @@ PARTIAL_OVERLAP_NOT_COLLAPSE != METHOD_SUPERIORITY
 NO_EXACT_COLLAPSE_IN_THIS_FIXTURE != PERMANENT_REGISTRY_SURVIVAL
 ```
 
-**Next canonical step:** prospectively precommit and execute a fair competent non-DSD Diagnosis baseline challenge.
+DIAG-CH-004 competent non-DSD baseline:
+
+```text
+PRECOMMIT_COMMIT: cf85b4299cfdedb85fffdc3ef4c588681c71f268
+PRECOMMIT_BLOB: af35f3074b96a1764c71f7c4bf9ed8e5e1a638bb
+RESULT_COMMIT: 8978b543144742dc5d1a7e4bffb2a0a24692eeaf
+RESULT_BLOB: 2f3e5f966e8fc6102a633dffee7df9af8c5635a8
+CHECKS: 64/64 PASS
+EQUAL_INFORMATION_ACCESS: yes
+GAIN_AXES: 6/6 BASELINE_MATCH
+DIAGNOSIS_METHOD_GAIN_STATUS: DIAGNOSIS_METHOD_GAIN_NO_GAIN
+```
+
+`NO_GAIN` remains bounded evidence and does not imply method failure, deletion, merger, absorption, or permanent redundancy.
+
+**Next canonical step:** prospectively precommit and execute a strongest-reasonable non-DSD Diagnosis baseline challenge.
