@@ -5,7 +5,7 @@ Repository: `dominicus9708/DSD_Method_Family`
 Sync epoch: `MF-SYNC-20261001-RECON-BOUNDARY01`  
 Latest claim-relevant source checkpoint before synchronization metadata writes: `b8b53b75759ed1ab4c0547356745c5e304f8a186`  
 Latest completed method event: **Reconstruction pre-protocol boundary attack — 18 attacks / 10 preserved / 8 nonbreaking refinements**  
-Latest method-result commit: `8895b421dc8ef1075f5717a7ab69781c0aa59a22`  
+Latest method-result commit: `27d0ead2e3a95b0ce8eb08169a3c56714384f1d6`  
 Active internal-build front: **Reconstruction / DSD 복원론**  
 Next canonical step: **Reconstruction Task Interface Boundary Amendment 001**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
