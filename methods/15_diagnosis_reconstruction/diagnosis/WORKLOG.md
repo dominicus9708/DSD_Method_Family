@@ -1032,3 +1032,91 @@ SHARED_CORE_REOPEN_REQUIRED: no
 ## Next
 
 Prospectively precommit and execute a strongest-reasonable non-DSD Diagnosis baseline challenge.
+
+
+---
+
+## Step 12 — DIAG-CH-005 strongest-reasonable non-DSD baseline
+
+~~~text
+BASELINE_ID:
+  B1_STRONG_DIAGNOSTIC_INFERENCE_ENGINE
+
+PRECOMMIT_COMMIT:
+  ce3c6d7e0bdab70453916875ef18b59720069114
+
+PRECOMMIT_BLOB:
+  7becc81d1ac3b9822fa6331fd8cfc6953e106c27
+
+RESULT_COMMIT:
+  6dbcd396baf61bf6c05b7ac051a49342c3c03634
+
+RESULT_BLOB:
+  85c01c39ce6daef445442218b153896f42a8e8a6
+
+CHECKS:
+  82/82 PASS
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+DIAGNOSIS_HIDDEN_ADVANTAGE_INPUTS:
+  0
+
+BASELINE_WITHHELD_CLAIM_RELEVANT_INPUTS:
+  0
+
+BASELINE_WEAKENED_AFTER_PRECOMMIT:
+  no
+
+GAIN_AXES:
+  7/7 BASELINE_MATCH
+
+DIAGNOSIS_METHOD_GAIN_STATUS:
+  DIAGNOSIS_METHOD_GAIN_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS:
+  established_at_constructed_evidence_level
+~~~
+
+Strong workload covered:
+
+~~~text
+R1 versioned candidate/evidence/bridge registries and non-retroactivity
+R2 exact linear preimage/kernel and declared-class uniqueness
+R3 required-interface dependency closure
+R4 explicit Bayesian posterior/ranking with supplied priors/likelihoods
+R5 evidence conflict + threshold ambiguity + neighbor-sidecar boundaries + replay metadata
+~~~
+
+Post-challenge:
+
+~~~text
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS: 5
+BASELINE_DIAGNOSIS_CASES: 2
+NO_GAIN_DIAGNOSIS_CASES: 2
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS: established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 0
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+Interpretation:
+
+~~~text
+STRONGEST_REASONABLE_BASELINE_AT_CONSTRUCTED_EVIDENCE_LEVEL
+  !=
+UNIVERSALLY_STRONGEST_POSSIBLE_BASELINE
+
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+~~~
+
+## Next
+
+Prospectively precommit and execute DIAG-CH-006 deterministic same-project retrace.
