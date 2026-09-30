@@ -986,3 +986,49 @@ NO_EXACT_COLLAPSE_IN_THIS_FIXTURE != PERMANENT_REGISTRY_SURVIVAL
 ## Next
 
 Prospectively precommit and execute a fair competent non-DSD Diagnosis baseline challenge.
+
+
+---
+
+## Step 11 — DIAG-CH-004 competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT: cf85b4299cfdedb85fffdc3ef4c588681c71f268
+PRECOMMIT_BLOB: af35f3074b96a1764c71f7c4bf9ed8e5e1a638bb
+RESULT_COMMIT: 8978b543144742dc5d1a7e4bffb2a0a24692eeaf
+RESULT_BLOB: 2f3e5f966e8fc6102a633dffee7df9af8c5635a8
+CHECKS: 64/64 PASS
+EQUAL_INFORMATION_ACCESS: yes
+DIAGNOSIS_HIDDEN_ADVANTAGE_INPUTS: 0
+BASELINE_WITHHELD_CLAIM_RELEVANT_INPUTS: 0
+GAIN_AXES: 6/6 BASELINE_MATCH
+DIAGNOSIS_METHOD_GAIN_STATUS: DIAGNOSIS_METHOD_GAIN_NO_GAIN
+~~~
+
+The competent baseline matched Diagnosis on:
+- typed-status/evidence-coherence handling
+- bridge/pair/required-interface semantics
+- candidate-set and declared-class identifiability
+- readout/residual/transition discipline
+- cause/probabilistic scope
+- terminal/bounded-claim/neighbor-sidecar discipline
+
+`NO_GAIN != METHOD_FAILURE`.
+
+Post-challenge:
+
+~~~text
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 4
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS: 4
+BASELINE_DIAGNOSIS_CASES: 1
+NO_GAIN_DIAGNOSIS_CASES: 1
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS: not established
+REPRODUCIBILITY_CASES: 0
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+## Next
+
+Prospectively precommit and execute a strongest-reasonable non-DSD Diagnosis baseline challenge.
