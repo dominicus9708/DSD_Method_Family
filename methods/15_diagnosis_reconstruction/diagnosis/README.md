@@ -1,6 +1,6 @@
 # DSD Diagnosis / DSD 진단론
 
-Status: **DIAG-CH-004 competent non-DSD baseline 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
+Status: **DIAG-CH-005 strongest-reasonable non-DSD baseline 82/82 PASS / NO_GAIN / deterministic retrace next**
 Legacy path ID: `15A`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -525,6 +525,91 @@ DIAGNOSIS_METHOD_GAIN_STATUS: DIAGNOSIS_METHOD_GAIN_NO_GAIN
 
 `NO_GAIN` is bounded evidence only and is not method failure, deletion, merger, absorption, or permanent-redundancy evidence.
 
+## DIAG-CH-005 — strongest-reasonable non-DSD Diagnosis baseline
+
+~~~text
+BASELINE_ID:
+  B1_STRONG_DIAGNOSTIC_INFERENCE_ENGINE
+
+PRECOMMIT_COMMIT:
+  ce3c6d7e0bdab70453916875ef18b59720069114
+
+PRECOMMIT_BLOB:
+  7becc81d1ac3b9822fa6331fd8cfc6953e106c27
+
+RESULT_COMMIT:
+  6dbcd396baf61bf6c05b7ac051a49342c3c03634
+
+RESULT_BLOB:
+  85c01c39ce6daef445442218b153896f42a8e8a6
+
+CHECKS:
+  82/82 PASS
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+GAIN_AXES:
+  7/7 BASELINE_MATCH
+
+DIAGNOSIS_METHOD_GAIN_STATUS:
+  DIAGNOSIS_METHOD_GAIN_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS:
+  established_at_constructed_evidence_level
+~~~
+
+B1 directly matched versioned-registry non-retroactivity, exact preimage/kernel analysis, declared-class uniqueness, required-interface dependency closure, explicit probabilistic inference, conflict/threshold ambiguity, bounded claims, and deterministic rerun metadata.
+
+`STRONGEST_REASONABLE_BASELINE_AT_CONSTRUCTED_EVIDENCE_LEVEL != UNIVERSALLY_STRONGEST_POSSIBLE_BASELINE`.
+
 ## Next
 
-Prospectively precommit and execute a strongest-reasonable non-DSD Diagnosis baseline challenge.
+Prospectively precommit and execute DIAG-CH-006 deterministic same-project retrace.
+
+
+## Current Diagnosis counters after DIAG-CH-005
+
+~~~text
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED:
+  5
+
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS:
+  5
+
+POSITIVE_DIAGNOSIS_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_DIAGNOSIS_CASES:
+  1
+
+METHOD_BOUNDARY_DIAGNOSIS_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  10
+
+BASELINE_DIAGNOSIS_CASES:
+  2
+
+NO_GAIN_DIAGNOSIS_CASES:
+  2
+
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS:
+  established_at_constructed_evidence_level
+
+REPRODUCIBILITY_CASES:
+  0
+
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS:
+  validation_in_progress
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
