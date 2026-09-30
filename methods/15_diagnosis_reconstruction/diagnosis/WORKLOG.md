@@ -1120,3 +1120,85 @@ NO_GAIN != PERMANENT_REDUNDANCY
 ## Next
 
 Prospectively precommit and execute DIAG-CH-006 deterministic same-project retrace.
+
+
+---
+
+## Step 13 — DIAG-CH-006 deterministic same-project retrace
+
+~~~text
+PRECOMMIT_COMMIT:
+  9e9ba8d6b7e832d1456778559f5431a2c650f556
+
+PRECOMMIT_BLOB:
+  3d2337667e058442cf744a6af4a93bb2a6a17484
+
+RECONSTRUCTION_LEDGER_COMMIT:
+  dc8a2bef09d2ccef590bd2dca145e4a707f31ea5
+
+RECONSTRUCTION_LEDGER_BLOB:
+  5c88893c4a5d643571c19df7033ff4e5498eb21c
+
+RESULT_COMMIT:
+  d0aaf3f7b13a9c44a2959e415cc2b8171931596f
+
+CHECKS:
+  70/70 PASS
+
+REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+~~~
+
+The reconstruction ledger used the frozen Diagnosis Protocol plus DIAG-CH-001~005 precommit semantics and was committed before formal comparison against the five recorded result artifacts.
+
+Reconstructed claim-relevant outputs covered:
+
+~~~text
+CH001 positive multiple-compatible / declared-class uniqueness / cause compatibility
+CH002 all negative, blocked, conflicting, underdetermined, out-of-scope, partial terminals
+CH003 ten neighboring-method boundary pairs
+CH004 competent B0 baseline / 6 of 6 BASELINE_MATCH / NO_GAIN
+CH005 strongest-reasonable B1 baseline / 7 of 7 BASELINE_MATCH / NO_GAIN
+~~~
+
+No claim-relevant mismatch and no post-comparison correction were recorded.
+
+~~~text
+SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+RETRACE_PASS != EXTERNAL_APPLICABILITY
+~~~
+
+Post-challenge:
+
+~~~text
+DIRECT_DIAGNOSIS_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_DIAGNOSIS_PILOTS: 5
+POSITIVE_DIAGNOSIS_CASES: 1
+NEGATIVE_OR_UNRESOLVED_DIAGNOSIS_CASES: 1
+METHOD_BOUNDARY_DIAGNOSIS_CASES: 1
+BASELINE_DIAGNOSIS_CASES: 2
+NO_GAIN_DIAGNOSIS_CASES: 2
+STRONGEST_REASONABLE_BASELINE_DIAGNOSIS: established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
+DIAGNOSIS_INTERNAL_STANDARDIZATION_STATUS: developing
+CURRENT_DIAGNOSIS_EVIDENCE_STATUS: validation_in_progress
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+## Next
+
+Prospectively precommit DIAG-AUD-001 frozen-axis internal-standardization audit. The audit may count same-project retraceability as conditional internal evidence but must not relabel it as independent replication or external validation.
