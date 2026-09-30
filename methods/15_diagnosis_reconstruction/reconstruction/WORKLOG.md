@@ -192,3 +192,106 @@ SHARED_CORE_REOPEN_REQUIRED:
 Draft Reconstruction Task Interface v0.1 from the recovered source / registry artifact.
 
 Do not freeze a protocol before direct boundary attack.
+
+
+---
+
+## Step 4 — Task Interface v0.1 draft
+
+Canonical artifact:
+
+~~~text
+TASK_INTERFACE_FILE:
+  TASK_INTERFACE_v0.1-draft.md
+
+TASK_INTERFACE_COMMIT:
+  b12426af3c5ed053c8383e4b242d761251af8d22
+
+TASK_INTERFACE_BLOB:
+  92bfa7f9e523af0886169bf76d2854870ba202e3
+~~~
+
+The draft freezes no executable protocol.
+
+It prospectively defines:
+
+~~~text
+reconstruction target kinds
+primary claim levels
+task/class/evidence/bridge locks
+candidate-class completeness semantics
+candidate-evidence pair dispositions
+reconstruction candidate dispositions
+candidate-set outcomes
+collision/injectivity/unrecoverability discipline
+typed status/support/relational sidecars
+temporal/history discipline
+Tracking and Lineage handoff boundaries
+definitional recompletion boundary
+additional-evidence handoff
+working primary statuses
+working task terminals and precedence candidate
+R1-R18 binding-operation draft
+output contract
+five-interface identity
+core draft guards
+~~~
+
+Important newly explicit distinctions:
+
+~~~text
+UNRECOVERABLE_ON_FROZEN_INTERFACE
+  !=
+ABSOLUTELY_UNRECOVERABLE_BY_ANY_FUTURE_EVIDENCE
+
+UNAVAILABLE_REQUIRED_INTERFACE
+  !=
+DEMONSTRATED_UNRECOVERABILITY
+
+RECONSTRUCTED_LINK
+  !=
+ESTABLISHED_TRACE_LINK
+
+RECONSTRUCTION_CANDIDATE
+  !=
+ESTABLISHED_LINEAGE
+
+DEFINITIONAL_RECOMPLETION
+  !=
+EVIDENCE_BASED_RECONSTRUCTION
+
+MULTIPLE_COMPATIBLE
+  !=
+TASK_UNDERDETERMINED
+~~~
+
+Current state:
+
+~~~text
+SOURCE_REGISTRY_RECOVERY:
+  complete
+
+TASK_INTERFACE_DRAFT:
+  v0.1 established
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  0
+
+BOUNDARY_AMENDMENT:
+  not established
+
+DEDICATED_RECONSTRUCTION_PROTOCOL:
+  not established
+
+RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
+  source_and_interface_recovery
+~~~
+
+## Next
+
+Execute a serious pre-protocol boundary attack.
+
+Once that attack begins, the Task Interface draft becomes immutable historical development evidence; refinements must be recorded separately.
