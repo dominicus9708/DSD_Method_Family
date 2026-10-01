@@ -779,3 +779,107 @@ REPRODUCIBILITY_CASES:
 ## Next
 
 Prospectively precommit and execute RECON-CH-005 strongest-reasonable non-DSD Reconstruction baseline.
+
+
+---
+
+## Step 12 — RECON-CH-005 strongest-reasonable non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  c8fa76c3c7764a77c9c3f01a49edae7b93dcf005
+
+PRECOMMIT_BLOB:
+  a134bab5a6d1da5f556cb2783166defefd5e6b82
+
+RESULT_COMMIT:
+  ed43ca7b79ae99af2f5a5cece7dd6620bbe8a975
+
+RESULT_BLOB:
+  813be6f0e394a2eb6226e871a4a1f29d42a38480
+
+TOTAL_REQUIRED_CHECKS:
+  82
+
+PASSED:
+  82
+
+FAILED:
+  0
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+BASELINE_ID:
+  B1_STRONG_INVERSE_RECONSTRUCTION_ENGINE
+
+RECONSTRUCTION_METHOD_GAIN_STATUS:
+  RECONSTRUCTION_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION:
+  established_at_constructed_evidence_level
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+All seven frozen gain axes were BASELINE_MATCH.
+
+The strong workload covered:
+
+~~~text
+versioned registry semantics
+exact affine preimage / kernel analysis
+declared-class uniqueness
+required-interface dependency closure
+explicit probabilistic inverse inference
+temporal relation algebra
+branch / merge history
+direct-versus-composed long-interval relations
+Tracking / Lineage / Formation and neighboring-sidecar non-substitution
+bounded claims
+deterministic replay metadata
+~~~
+
+Interpretation lock:
+
+~~~text
+STRONGEST_REASONABLE_BASELINE_AT_CONSTRUCTED_EVIDENCE_LEVEL
+  !=
+UNIVERSALLY_STRONGEST_POSSIBLE_BASELINE
+
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+~~~
+
+Post-challenge counters:
+
+~~~text
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
+  5
+
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
+  5
+
+BASELINE_RECONSTRUCTION_CASES:
+  2
+
+NO_GAIN_RECONSTRUCTION_CASES:
+  2
+
+STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION:
+  established_at_constructed_evidence_level
+
+REPRODUCIBILITY_CASES:
+  0
+~~~
+
+## Next
+
+Prospectively precommit and execute RECON-CH-006 deterministic same-project retrace.
