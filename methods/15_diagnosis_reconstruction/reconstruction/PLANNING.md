@@ -1,6 +1,6 @@
 # DSD Reconstruction — Planning / Validation Roadmap
 
-Status: **PROTOCOL v0.1 FROZEN — RECON-CH-001 POSITIVE CHALLENGE NEXT**  
+Status: **RECON-CH-001 80/80 PASS — RECON-CH-002 NEGATIVE/UNRESOLVED COVERAGE NEXT**  
 Date: **2026-10-01**  
 Method: **Reconstruction / DSD 복원론**  
 Legacy path ID: `15B`
@@ -102,7 +102,7 @@ Shared interface:
 5. ✅ Pre-protocol boundary counterexamples — 18 attacks / 10 preserved / 8 nonbreaking refinements.
 6. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted.
 7. ✅ Executable Reconstruction Protocol v0.1 — frozen.
-8. ⏸ Positive constructed challenge — RECON-CH-001 next.
+8. ✅ Positive constructed challenge — RECON-CH-001 80/80 PASS.
 9. ⏸ Negative / blocked / unresolved / unrecoverable terminal coverage.
 10. ⏸ Direct neighboring-method boundary challenge.
 11. ⏸ Competent non-DSD baseline.
@@ -377,7 +377,16 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
-  0
+  1
+
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
+  1
+
+POSITIVE_RECONSTRUCTION_CASES:
+  1
+
+UNRECOVERABILITY_RECONSTRUCTION_CASES:
+  1
 
 BASELINE_RECONSTRUCTION_CASES:
   0
@@ -406,6 +415,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Prospectively precommit and execute RECON-CH-001, the first direct positive constructed Reconstruction challenge.
+Prospectively precommit and execute RECON-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
 
-The first challenge should test the frozen G1-G18 / T1-T18 protocol without using external validation evidence.
+Keep the frozen Protocol v0.1 unchanged unless the precommitted result itself forces a separately recorded revision.
