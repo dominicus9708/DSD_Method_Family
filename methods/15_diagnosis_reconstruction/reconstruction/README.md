@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — Boundary Amendment 001 established / Protocol v0.1 freeze next**
+Status: **active internal-build front — Protocol v0.1 frozen / RECON-CH-001 positive challenge next**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -53,6 +53,7 @@ No dedicated Reconstruction protocol is established yet.
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
 - [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
+- [`PROTOCOL_v0.1.md`](PROTOCOL_v0.1.md)
 
 ## Source / registry recovery
 
@@ -167,7 +168,19 @@ PROTOCOL_FREEZE_AUTHORIZED:
   yes
 
 DEDICATED_RECONSTRUCTION_PROTOCOL:
-  not established
+  established v0.1
+
+PROTOCOL_COMMIT:
+  2d4cdcab4b646a9d75f96dcc2ef301722eb612ad
+
+PROTOCOL_BLOB:
+  1f009e81b9992fbdec75abbd9551e9d06f0a170e
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
 
 DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
   0
@@ -191,7 +204,7 @@ RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
-  pre_protocol_boundary_attack_complete
+  protocol_frozen_pre_challenge
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -199,6 +212,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## Next
 
-Freeze executable **Reconstruction Protocol v0.1** using the source registry, historical Task Interface, boundary-attack record, and Boundary Amendment 001.
+Prospectively precommit and execute **RECON-CH-001**, the first direct positive constructed Reconstruction challenge.
 
-The historical Task Interface and boundary-attack record remain unchanged. Protocol freeze is now authorized, but no direct Reconstruction pilot has yet been executed.
+Protocol v0.1 is frozen and executable. Protocol freeze itself is not counted as a successful direct Reconstruction pilot.
