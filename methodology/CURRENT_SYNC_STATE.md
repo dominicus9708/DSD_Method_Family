@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-01 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261001-RECON-CH002`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `0812027177a46a3e8c573c1982b6e847f4983c2d`  
-Latest completed method event: **RECON-CH-002 terminal coverage challenge — 80/80 PASS**  
-Latest method-result commit: `c29a8255604788752048eacfb530612ad32ed8d9`  
+Sync epoch: `MF-SYNC-20261001-RECON-CH003`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `670a214b7c74f4a50c61690aee8ee1a2c83253fd`  
+Latest completed method event: **RECON-CH-003 direct neighboring-method boundary challenge — 99/99 PASS**  
+Latest method-result commit: `3f6d503e1e0ef1e014d354c580198bbadff3b1e6`  
 Active internal-build front: **Reconstruction / DSD 복원론**  
-Next canonical step: **prospectively precommit and execute RECON-CH-003 direct neighboring-method boundary challenge**  
+Next canonical step: **prospectively precommit and execute RECON-CH-004 competent non-DSD Reconstruction baseline**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -69,7 +69,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Prediction | proposed |
 | Control | proposed |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Reconstruction | active internal-build front; RECON-CH-002 80/80 PASS; all six primary statuses and seven task terminals exercised; RECON-CH-003 boundary challenge next |
+| Reconstruction | active internal-build front; RECON-CH-003 99/99 PASS; 11/11 neighboring-method pairs fixture-bounded non-collapse; RECON-CH-004 competent baseline next |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
 
@@ -1172,16 +1172,10 @@ The pre-scoring provenance correction preserves the original audit precommit and
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/15_diagnosis_reconstruction/reconstruction/
 CURRENT_STATUS_FILE: methods/15_diagnosis_reconstruction/reconstruction/CURRENT_STATUS.md
-CURRENT_STATUS_COMMIT: 0812027177a46a3e8c573c1982b6e847f4983c2d
-CURRENT_STATUS_BLOB: 61d3f7375245519f80d66299598c91c7108537ba
+CURRENT_STATUS_COMMIT: 043a4223e2b4d19a23ba7dfff8bf49187c6a37f3
+CURRENT_STATUS_BLOB: 9946b8596eedd4b97bfcd2aa3a55a7a1e6a072e2
 LEGACY_PATH_ID: 15B
 HIGHER_FIELD: VI. Inverse Inference & Reconstruction
-
-SOURCE_REGISTRY_RECOVERY: complete
-TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
-PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
-BOUNDARY_AMENDMENT_001: established
-REFINEMENT_GROUPS_ADOPTED: 8/8
 
 DEDICATED_RECONSTRUCTION_PROTOCOL: established v0.1
 PROTOCOL_COMMIT: 2d4cdcab4b646a9d75f96dcc2ef301722eb612ad
@@ -1190,17 +1184,19 @@ VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
 
 RECON_CH_001_RESULT_COMMIT: 0353a5c9b7336c60a7f267bd597baa4ac5403ce9
-RECON_CH_001_RESULT_BLOB: 3fdd1e3a0541febb643b22c5bd738464594b7e9b
 RECON_CH_001_CHECKS: 80/80 PASS
 
-RECON_CH_002_PRECOMMIT_COMMIT: 9235e37685fbdd75d5f64200412416cf464212d0
-RECON_CH_002_PRECOMMIT_BLOB: 8312fe0f0722bba44b21e2e8a50c04336de7f888
 RECON_CH_002_RESULT_COMMIT: c29a8255604788752048eacfb530612ad32ed8d9
-RECON_CH_002_RESULT_BLOB: 56f41da71347174aef86f5fd6c410d3a161f4690
 RECON_CH_002_CHECKS: 80/80 PASS
 
-DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 2
-SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 2
+RECON_CH_003_PRECOMMIT_COMMIT: d2eae78393e5eb37c3f9c5719ef1e74df7bc81b5
+RECON_CH_003_PRECOMMIT_BLOB: 6e3adb97f1357a3ad69237141f6a8e716d2586e9
+RECON_CH_003_RESULT_COMMIT: 3f6d503e1e0ef1e014d354c580198bbadff3b1e6
+RECON_CH_003_RESULT_BLOB: 6af4aab18971b2c4a1114674dc5310754c2a441f
+RECON_CH_003_CHECKS: 99/99 PASS
+
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 3
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 3
 POSITIVE_RECONSTRUCTION_CASES: 1
 NEGATIVE_OR_UNRESOLVED_RECONSTRUCTION_CASES: 1
 UNRECOVERABILITY_RECONSTRUCTION_CASES: 2
@@ -1208,7 +1204,14 @@ UNRECOVERABILITY_RECONSTRUCTION_CASES: 2
 ALL_SIX_RECONSTRUCTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
 ALL_SEVEN_RECONSTRUCTION_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
 
-METHOD_BOUNDARY_RECONSTRUCTION_CASES: 0
+METHOD_BOUNDARY_RECONSTRUCTION_CASES: 1
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 11
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 11
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
+
 BASELINE_RECONSTRUCTION_CASES: 0
 NO_GAIN_RECONSTRUCTION_CASES: 0
 REPRODUCIBILITY_CASES: 0
@@ -1223,4 +1226,4 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-The next canonical step is to **prospectively precommit and execute RECON-CH-003 direct neighboring-method boundary challenge**. RECON-CH-001 and RECON-CH-002 remain constructed internal evidence only.
+The next canonical step is to **prospectively precommit and execute RECON-CH-004 competent non-DSD Reconstruction baseline**. The baseline must receive equal claim-relevant information and may validly produce NO_GAIN.
