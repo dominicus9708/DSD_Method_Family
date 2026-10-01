@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — Protocol v0.1 frozen / RECON-CH-001 positive challenge next**
+Status: **active internal-build front — RECON-CH-001 80/80 PASS / negative-unresolved challenge next**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -204,7 +204,7 @@ RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
-  protocol_frozen_pre_challenge
+  validation_in_progress
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -212,6 +212,60 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## Next
 
-Prospectively precommit and execute **RECON-CH-001**, the first direct positive constructed Reconstruction challenge.
+Prospectively precommit and execute **RECON-CH-002**, covering negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal behavior.
 
-Protocol v0.1 is frozen and executable. Protocol freeze itself is not counted as a successful direct Reconstruction pilot.
+
+## RECON-CH-001 positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  f56cce9a1228384b5607b89ce9092606053696bf
+
+PRECOMMIT_BLOB:
+  88058d72c76ff953e75dc18f179c64f040f8e51d
+
+RESULT_COMMIT:
+  0353a5c9b7336c60a7f267bd597baa4ac5403ce9
+
+RESULT_BLOB:
+  3fdd1e3a0541febb643b22c5bd738464594b7e9b
+
+CHECKS:
+  80/80 PASS
+
+DIRECT_RECONSTRUCTION_PILOT:
+  positive
+
+SUBTASK_A:
+  RECONSTRUCTION_SET_MULTIPLE_COMPATIBLE
+  RECONSTRUCTION_TASK_ESTABLISHED
+
+SUBTASK_B:
+  RECONSTRUCTION_SET_UNIQUE_WITHIN_DECLARED_CLASS
+  RECONSTRUCTION_TASK_ESTABLISHED
+
+SUBTASK_C:
+  UNRECOVERABLE_DISTINCTION_ESTABLISHED_ON_FROZEN_INTERFACE
+  RECONSTRUCTION_TASK_ESTABLISHED
+
+PROTOCOL_CONFORMANCE:
+  conformant on all three subtasks
+
+METHOD_GAIN_STATUS:
+  RECONSTRUCTION_GAIN_NOT_YET_TESTED
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Interpretation lock:
+
+~~~text
+POSITIVE_CONSTRUCTED_PASS != EXTERNAL_VALIDATION
+DECLARED_CLASS_UNIQUENESS != GLOBAL_HISTORICAL_TRUTH
+FROZEN_INTERFACE_UNRECOVERABILITY != ABSOLUTE_UNRECOVERABILITY
+PASS != METHOD_SUPERIORITY
+~~~
