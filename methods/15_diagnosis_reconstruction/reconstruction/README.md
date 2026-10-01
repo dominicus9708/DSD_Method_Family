@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — RECON-CH-003 99/99 PASS / competent baseline next**
+Status: **active internal-build front — RECON-CH-004 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -183,10 +183,10 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
-  3
+  4
 
 POSITIVE_RECONSTRUCTION_CASES:
   1
@@ -216,10 +216,10 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_RECONSTRUCTION_CASES:
-  0
+  1
 
 NO_GAIN_RECONSTRUCTION_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -242,7 +242,7 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## Next
 
-Prospectively precommit and execute **RECON-CH-004**, the competent non-DSD Reconstruction baseline.
+Prospectively precommit and execute **RECON-CH-005**, the strongest-reasonable non-DSD Reconstruction baseline.
 
 
 ## RECON-CH-001 positive constructed challenge
@@ -349,3 +349,40 @@ SOURCE_HANDOFF_SEPARATION:
 ~~~
 
 This is fixture-bounded separation only and is not a permanent irreducibility or superiority claim.
+
+
+## RECON-CH-004 competent non-DSD baseline
+
+~~~text
+BASELINE_ID:
+  B0_GENERIC_TYPED_INVERSE_RECONSTRUCTION_EVALUATOR
+
+PRECOMMIT_COMMIT:
+  f06ceaad98ecd9e993483f48e46fd91911ddf6e5
+
+PRECOMMIT_BLOB:
+  126c168d43bf8fa0daa44bf2d16c9cb6618104ce
+
+RESULT_COMMIT:
+  894793e0faaa1b58c06bd7dcd0fab95a1d06a6f1
+
+RESULT_BLOB:
+  3367ae360dec3b5783d943f0f751ad5ab7d2d37f
+
+CHECKS:
+  64/64 PASS
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+RECONSTRUCTION_METHOD_GAIN_STATUS:
+  RECONSTRUCTION_NO_GAIN
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The competent generic inverse evaluator matched the frozen Reconstruction outputs on all six gain axes. This NO_GAIN result is bounded to the constructed baseline and does not imply method failure, deletion, merger, absorption, or permanent redundancy.
