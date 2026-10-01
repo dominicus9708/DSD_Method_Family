@@ -1,6 +1,6 @@
-# Reconstruction Current Status — RECON-CH-004 checkpoint
+# Reconstruction Current Status — RECON-CH-005 checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — RECON-CH-004 64/64 PASS / NO_GAIN**  
+Status: **ACTIVE INTERNAL BUILD — RECON-CH-005 82/82 PASS / NO_GAIN**  
 Date: **2026-10-01**
 
 ~~~text
@@ -16,15 +16,19 @@ RECON_CH_002_CHECKS: 80/80 PASS
 RECON_CH_003_RESULT_COMMIT: 3f6d503e1e0ef1e014d354c580198bbadff3b1e6
 RECON_CH_003_CHECKS: 99/99 PASS
 
-RECON_CH_004_PRECOMMIT_COMMIT: f06ceaad98ecd9e993483f48e46fd91911ddf6e5
-RECON_CH_004_PRECOMMIT_BLOB: 126c168d43bf8fa0daa44bf2d16c9cb6618104ce
 RECON_CH_004_RESULT_COMMIT: 894793e0faaa1b58c06bd7dcd0fab95a1d06a6f1
-RECON_CH_004_RESULT_BLOB: 3367ae360dec3b5783d943f0f751ad5ab7d2d37f
 RECON_CH_004_CHECKS: 64/64 PASS
 RECON_CH_004_GAIN_STATUS: RECONSTRUCTION_NO_GAIN
 
-DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 4
-SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 4
+RECON_CH_005_PRECOMMIT_COMMIT: c8fa76c3c7764a77c9c3f01a49edae7b93dcf005
+RECON_CH_005_PRECOMMIT_BLOB: a134bab5a6d1da5f556cb2783166defefd5e6b82
+RECON_CH_005_RESULT_COMMIT: ed43ca7b79ae99af2f5a5cece7dd6620bbe8a975
+RECON_CH_005_RESULT_BLOB: 813be6f0e394a2eb6226e871a4a1f29d42a38480
+RECON_CH_005_CHECKS: 82/82 PASS
+RECON_CH_005_GAIN_STATUS: RECONSTRUCTION_NO_GAIN
+
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 5
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 5
 POSITIVE_RECONSTRUCTION_CASES: 1
 NEGATIVE_OR_UNRESOLVED_RECONSTRUCTION_CASES: 1
 UNRECOVERABILITY_RECONSTRUCTION_CASES: 2
@@ -37,9 +41,9 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 11
 BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
 SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 
-BASELINE_RECONSTRUCTION_CASES: 1
-NO_GAIN_RECONSTRUCTION_CASES: 1
-STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION: not established
+BASELINE_RECONSTRUCTION_CASES: 2
+NO_GAIN_RECONSTRUCTION_CASES: 2
+STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION: established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES: 0
 
 EXTERNAL_RECONSTRUCTION_APPLICATIONS: 0
@@ -52,10 +56,10 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 
 NEXT_CANONICAL_STEP:
-  prospectively precommit and execute RECON-CH-005
-  strongest-reasonable non-DSD Reconstruction baseline
+  prospectively precommit and execute RECON-CH-006
+  deterministic same-project retrace
 ~~~
 
-RECON-CH-004 establishes NO_GAIN only against the frozen competent constructed baseline under equal-information access.
+RECON-CH-005 establishes strongest-reasonable baseline equivalence only at the constructed-evidence level.
 
-It does not imply Reconstruction method failure, deletion, merger, absorption, permanent redundancy, or lack of organizational/theoretical value.
+It does not imply universal baseline optimality, Reconstruction method failure, deletion, merger, absorption, permanent redundancy, external validity, or independent replication.
