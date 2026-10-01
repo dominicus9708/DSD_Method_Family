@@ -1,6 +1,6 @@
 # DSD Reconstruction — Planning / Validation Roadmap
 
-Status: **RECON-CH-001 80/80 PASS — RECON-CH-002 NEGATIVE/UNRESOLVED COVERAGE NEXT**  
+Status: **RECON-CH-002 80/80 PASS — RECON-CH-003 METHOD-BOUNDARY CHALLENGE NEXT**  
 Date: **2026-10-01**  
 Method: **Reconstruction / DSD 복원론**  
 Legacy path ID: `15B`
