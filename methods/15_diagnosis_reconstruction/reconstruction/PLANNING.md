@@ -1,6 +1,6 @@
 # DSD Reconstruction — Planning / Validation Roadmap
 
-Status: **PRE-PROTOCOL BOUNDARY ATTACK COMPLETE — BOUNDARY AMENDMENT 001 NEXT**  
+Status: **BOUNDARY AMENDMENT 001 ESTABLISHED — PROTOCOL v0.1 FREEZE NEXT**  
 Date: **2026-10-01**  
 Method: **Reconstruction / DSD 복원론**  
 Legacy path ID: `15B`
@@ -100,8 +100,8 @@ Shared interface:
 3. ✅ Planning/worklog lane.
 4. ✅ Task Interface v0.1 draft.
 5. ✅ Pre-protocol boundary counterexamples — 18 attacks / 10 preserved / 8 nonbreaking refinements.
-6. ⏸ Boundary Amendment 001 — required / next.
-7. ⏸ Executable Reconstruction Protocol v0.1.
+6. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted.
+7. ⏸ Executable Reconstruction Protocol v0.1 — next.
 8. ⏸ Positive constructed challenge.
 9. ⏸ Negative / blocked / unresolved / unrecoverable terminal coverage.
 10. ⏸ Direct neighboring-method boundary challenge.
@@ -347,10 +347,19 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 BOUNDARY_AMENDMENT_001:
-  not yet established
+  established
 
-REFINEMENT_GROUPS_REQUIRED:
-  8
+AMENDMENT_COMMIT:
+  fbbf3840e606d1e005f7efcda3b38dfd33e2a2ce
+
+AMENDMENT_BLOB:
+  206926e77584398860ded1ccf2d7aac30cdf154a
+
+REFINEMENT_GROUPS_ADOPTED:
+  8/8
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
 
 DEDICATED_RECONSTRUCTION_PROTOCOL:
   not established
@@ -385,8 +394,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Establish Reconstruction Task Interface Boundary Amendment 001 prospectively.
+Freeze executable Reconstruction Protocol v0.1 from the source registry + historical Task Interface + boundary-attack record + Boundary Amendment 001.
 
-Bind R1-R8 without rewriting the historical Task Interface or boundary-attack record.
-
-Protocol freeze is not authorized before the Amendment.
+Protocol freeze is now authorized. Do not count protocol freeze itself as a successful Reconstruction pilot.
