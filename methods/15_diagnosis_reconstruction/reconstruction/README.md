@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — pre-protocol boundary attack complete / Boundary Amendment 001 next**
+Status: **active internal-build front — Boundary Amendment 001 established / Protocol v0.1 freeze next**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -52,6 +52,7 @@ No dedicated Reconstruction protocol is established yet.
 - [`WORKLOG.md`](WORKLOG.md)
 - [`TASK_INTERFACE_v0.1-draft.md`](TASK_INTERFACE_v0.1-draft.md)
 - [`BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md`](BOUNDARY_COUNTEREXAMPLES_v0.1-draft.md)
+- [`TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md`](TASK_INTERFACE_BOUNDARY_AMENDMENT_001.md)
 
 ## Source / registry recovery
 
@@ -151,10 +152,19 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 BOUNDARY_AMENDMENT_001:
-  not yet established
+  established
 
-REFINEMENT_GROUPS_REQUIRED:
-  8
+AMENDMENT_COMMIT:
+  fbbf3840e606d1e005f7efcda3b38dfd33e2a2ce
+
+AMENDMENT_BLOB:
+  206926e77584398860ded1ccf2d7aac30cdf154a
+
+REFINEMENT_GROUPS_ADOPTED:
+  8/8
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
 
 DEDICATED_RECONSTRUCTION_PROTOCOL:
   not established
@@ -189,8 +199,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## Next
 
-Establish **Reconstruction Task Interface Boundary Amendment 001** prospectively.
+Freeze executable **Reconstruction Protocol v0.1** using the source registry, historical Task Interface, boundary-attack record, and Boundary Amendment 001.
 
-The historical Task Interface and boundary-attack record remain unchanged. Bind the eight nonbreaking refinement groups in the Amendment before any executable Reconstruction Protocol is frozen.
-
-Protocol freeze is not authorized before that Amendment.
+The historical Task Interface and boundary-attack record remain unchanged. Protocol freeze is now authorized, but no direct Reconstruction pilot has yet been executed.
