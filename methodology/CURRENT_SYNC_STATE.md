@@ -3,7 +3,7 @@
 Synchronized: **2026-10-01 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
 Sync epoch: `MF-SYNC-20261001-RECON-CH002`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `3a1aeb55dbecf2c860fe07d40efd52e97b66f6d1`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `0812027177a46a3e8c573c1982b6e847f4983c2d`  
 Latest completed method event: **RECON-CH-002 terminal coverage challenge — 80/80 PASS**  
 Latest method-result commit: `c29a8255604788752048eacfb530612ad32ed8d9`  
 Active internal-build front: **Reconstruction / DSD 복원론**  
@@ -1171,6 +1171,9 @@ The pre-scoring provenance correction preserves the original audit precommit and
 ```text
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/15_diagnosis_reconstruction/reconstruction/
+CURRENT_STATUS_FILE: methods/15_diagnosis_reconstruction/reconstruction/CURRENT_STATUS.md
+CURRENT_STATUS_COMMIT: 0812027177a46a3e8c573c1982b6e847f4983c2d
+CURRENT_STATUS_BLOB: 61d3f7375245519f80d66299598c91c7108537ba
 LEGACY_PATH_ID: 15B
 HIGHER_FIELD: VI. Inverse Inference & Reconstruction
 
@@ -1186,17 +1189,25 @@ PROTOCOL_BLOB: 1f009e81b9992fbdec75abbd9551e9d06f0a170e
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
 
-RECON_CH_001_PRECOMMIT_COMMIT: f56cce9a1228384b5607b89ce9092606053696bf
-RECON_CH_001_PRECOMMIT_BLOB: 88058d72c76ff953e75dc18f179c64f040f8e51d
 RECON_CH_001_RESULT_COMMIT: 0353a5c9b7336c60a7f267bd597baa4ac5403ce9
 RECON_CH_001_RESULT_BLOB: 3fdd1e3a0541febb643b22c5bd738464594b7e9b
 RECON_CH_001_CHECKS: 80/80 PASS
 
-DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 1
-SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 1
+RECON_CH_002_PRECOMMIT_COMMIT: 9235e37685fbdd75d5f64200412416cf464212d0
+RECON_CH_002_PRECOMMIT_BLOB: 8312fe0f0722bba44b21e2e8a50c04336de7f888
+RECON_CH_002_RESULT_COMMIT: c29a8255604788752048eacfb530612ad32ed8d9
+RECON_CH_002_RESULT_BLOB: 56f41da71347174aef86f5fd6c410d3a161f4690
+RECON_CH_002_CHECKS: 80/80 PASS
+
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 2
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 2
 POSITIVE_RECONSTRUCTION_CASES: 1
-NEGATIVE_OR_UNRESOLVED_RECONSTRUCTION_CASES: 0
-UNRECOVERABILITY_RECONSTRUCTION_CASES: 1
+NEGATIVE_OR_UNRESOLVED_RECONSTRUCTION_CASES: 1
+UNRECOVERABILITY_RECONSTRUCTION_CASES: 2
+
+ALL_SIX_RECONSTRUCTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
+ALL_SEVEN_RECONSTRUCTION_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
+
 METHOD_BOUNDARY_RECONSTRUCTION_CASES: 0
 BASELINE_RECONSTRUCTION_CASES: 0
 NO_GAIN_RECONSTRUCTION_CASES: 0
@@ -1212,4 +1223,4 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-The next canonical step is to **prospectively precommit and execute RECON-CH-002** negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage. RECON-CH-001 is internal constructed evidence only.
+The next canonical step is to **prospectively precommit and execute RECON-CH-003 direct neighboring-method boundary challenge**. RECON-CH-001 and RECON-CH-002 remain constructed internal evidence only.
