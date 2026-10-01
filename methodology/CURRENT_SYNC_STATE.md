@@ -1173,21 +1173,41 @@ CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/15_diagnosis_reconstruction/reconstruction/
 LEGACY_PATH_ID: 15B
 HIGHER_FIELD: VI. Inverse Inference & Reconstruction
+
 SOURCE_REGISTRY_RECOVERY: complete
 SOURCE_REGISTRY_COMMIT: 78acf2532680722cf09a50376d0c69d74803f1a4
 SOURCE_REGISTRY_BLOB: f00063f285745dd328e5b2d8c82ff3579957d615
+
 PLANNING_LANE: established
-PLANNING_COMMIT: ad2bac42aa9c38c46dd671aac6b6d742a61f02da
-PLANNING_BLOB: 018677bb3fa69f2c71f428d94cb178276f7c0eb3
-WORKLOG_COMMIT: 80c7572468db70f4b863b6ac9731443c3b7b357b
-WORKLOG_BLOB: 1d50d4183aba1974f90d4bb046e0dcc3405a9547
-TASK_INTERFACE_DRAFT: v0.1 established
+PLANNING_COMMIT: 0a5731da9bd55e14c80e0ec2f03beea0cde6b472
+PLANNING_BLOB: 71ce06a5fdbdf0ec301f10ea5de63341f5206349
+
+WORKLOG_COMMIT: 6af04645fb039aa0e5cf585c6c9827094806ede9
+WORKLOG_BLOB: 543a27973ef4e3698721b8461fbbf54ad9f8e573
+
+TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
 TASK_INTERFACE_COMMIT: b12426af3c5ed053c8383e4b242d761251af8d22
 TASK_INTERFACE_BLOB: 92bfa7f9e523af0886169bf76d2854870ba202e3
-PRE_PROTOCOL_BOUNDARY_ATTACKS: 0
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
+BOUNDARY_ATTACK_COMMIT: 27d0ead2e3a95b0ce8eb08169a3c56714384f1d6
+BOUNDARY_ATTACK_BLOB: 01b083199069477d0b8aec6518709eba735dc893
+PRESERVED_NO_REFINEMENT: 10
+PRESERVED_WITH_NONBREAKING_REFINEMENT: 8
+BOUNDARY_COLLAPSE_FOUND: 0
+FUNDAMENTAL_INTERFACE_FAILURE: 0
+
+BOUNDARY_AMENDMENT_001: established
+AMENDMENT_COMMIT: fbbf3840e606d1e005f7efcda3b38dfd33e2a2ce
+AMENDMENT_BLOB: 206926e77584398860ded1ccf2d7aac30cdf154a
+REFINEMENT_GROUPS_ADOPTED: 8/8
+PROTOCOL_FREEZE_AUTHORIZED: yes
+
 DEDICATED_RECONSTRUCTION_PROTOCOL: not established
-CURRENT_RECONSTRUCTION_EVIDENCE_STATUS: source_and_registry_recovery_complete
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 0
+CURRENT_RECONSTRUCTION_EVIDENCE_STATUS: boundary_amendment_established
 RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS: developing
+SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-The next canonical step is to **freeze executable Reconstruction Protocol v0.1**. Diagnosis internal-standardization evidence is not automatically Reconstruction validation, and no Reconstruction direct pilot has yet been executed.
+The next canonical step is to **freeze executable Reconstruction Protocol v0.1** from the source registry + historical Task Interface + boundary-attack record + Boundary Amendment 001. Protocol freeze itself is not a successful direct Reconstruction pilot. Diagnosis internal-standardization evidence is not automatically Reconstruction validation.
