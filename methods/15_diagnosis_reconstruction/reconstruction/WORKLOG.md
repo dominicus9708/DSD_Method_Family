@@ -883,3 +883,78 @@ REPRODUCIBILITY_CASES:
 ## Next
 
 Prospectively precommit and execute RECON-CH-006 deterministic same-project retrace.
+
+
+---
+
+## Step 13 — RECON-CH-006 deterministic same-project retrace
+
+~~~text
+PRECOMMIT_COMMIT:
+  2fe975ffef49293d7afabec940f22d5ac756f27c
+
+PRECOMMIT_BLOB:
+  586c4eecb90232800ecd235e29bc925d123ea722
+
+RECONSTRUCTION_LEDGER_COMMIT:
+  ed55ef5394f77b82716a50a9dcacd9c975dbf263
+
+RECONSTRUCTION_LEDGER_BLOB:
+  8a13b9baf47b2b649f8845c72df4de3f16d94c76
+
+RESULT_COMMIT:
+  9f58bb124ba9e9c22752648c2858ca02090c40c8
+
+RESULT_BLOB:
+  f02d4aa15d60881f53ea649048d39d546e8381a4
+
+TOTAL_REQUIRED_CHECKS:
+  70
+
+PASSED:
+  70
+
+FAILED:
+  0
+
+RETRACE_VERDICT:
+  PASS
+
+REPRODUCIBILITY_CLASS:
+  deterministic_same_project_retrace
+
+REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The committed reconstruction ledger was derived from Protocol v0.1 plus RECON-CH-001~005 precommits before formal comparison against the corresponding result artifacts.
+
+Interpretation lock:
+
+~~~text
+SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+RETRACE_PASS != EXTERNAL_APPLICABILITY
+RETRACE_PASS != METHOD_SUPERIORITY
+~~~
+
+Direct and baseline counters remain unchanged.
+
+## Next
+
+Prospectively precommit and execute RECON-AUD-001 frozen-axis internal-standardization audit.
