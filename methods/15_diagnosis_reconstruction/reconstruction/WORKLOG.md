@@ -356,3 +356,63 @@ The historical Task Interface remains unchanged.
 Establish Reconstruction Task Interface Boundary Amendment 001 prospectively.
 
 Protocol freeze remains prohibited until the Amendment binds R1-R8.
+
+
+---
+
+## Step 6 — Boundary Amendment 001
+
+~~~text
+AMENDMENT_COMMIT:
+  fbbf3840e606d1e005f7efcda3b38dfd33e2a2ce
+
+AMENDMENT_BLOB:
+  206926e77584398860ded1ccf2d7aac30cdf154a
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  8/8
+
+METHOD_IDENTITY_CHANGED:
+  no
+
+TASK_INTERFACE_CORE_REOPENED:
+  no
+
+HISTORICAL_TASK_INTERFACE_REWRITTEN:
+  no
+
+HISTORICAL_BOUNDARY_ATTACK_RECORD_REWRITTEN:
+  no
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The Amendment prospectively binds:
+
+~~~text
+R1 candidate-class representation / evaluation mode
+R2 evidence-set coherence / conflict semantics
+R3 required-interface availability / BLOCKED semantics
+R4 frozen-interface closure for unrecoverability claims
+R5 history-relation coherence / composition semantics
+R6 definitional-recompletion scope
+R7 deterministic / explicit probabilistic inference-mode scope
+R8 task-terminal precedence / exact PARTIAL semantics
+~~~
+
+The historical Task Interface and boundary-attack record remain immutable.
+
+## Next
+
+Freeze executable Reconstruction Protocol v0.1.
+
+Use the source registry, historical Task Interface, boundary-attack record, and Amendment 001 together.
+
+Protocol freeze does not count as a successful direct Reconstruction pilot.
