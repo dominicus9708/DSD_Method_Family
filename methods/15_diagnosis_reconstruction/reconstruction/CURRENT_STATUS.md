@@ -1,7 +1,7 @@
-# Reconstruction Current Status — RECON-CH-005 checkpoint
+# Reconstruction Current Status — RECON-CH-006 checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — RECON-CH-005 82/82 PASS / NO_GAIN**  
-Date: **2026-10-01**
+Status: **ACTIVE INTERNAL BUILD — RECON-CH-006 70/70 PASS / RETRACE ESTABLISHED**  
+Date: **2026-10-02**
 
 ~~~text
 PROTOCOL_COMMIT: 2d4cdcab4b646a9d75f96dcc2ef301722eb612ad
@@ -20,12 +20,18 @@ RECON_CH_004_RESULT_COMMIT: 894793e0faaa1b58c06bd7dcd0fab95a1d06a6f1
 RECON_CH_004_CHECKS: 64/64 PASS
 RECON_CH_004_GAIN_STATUS: RECONSTRUCTION_NO_GAIN
 
-RECON_CH_005_PRECOMMIT_COMMIT: c8fa76c3c7764a77c9c3f01a49edae7b93dcf005
-RECON_CH_005_PRECOMMIT_BLOB: a134bab5a6d1da5f556cb2783166defefd5e6b82
 RECON_CH_005_RESULT_COMMIT: ed43ca7b79ae99af2f5a5cece7dd6620bbe8a975
-RECON_CH_005_RESULT_BLOB: 813be6f0e394a2eb6226e871a4a1f29d42a38480
 RECON_CH_005_CHECKS: 82/82 PASS
 RECON_CH_005_GAIN_STATUS: RECONSTRUCTION_NO_GAIN
+STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION: established_at_constructed_evidence_level
+
+RECON_CH_006_PRECOMMIT_COMMIT: 2fe975ffef49293d7afabec940f22d5ac756f27c
+RECON_CH_006_PRECOMMIT_BLOB: 586c4eecb90232800ecd235e29bc925d123ea722
+RECON_CH_006_LEDGER_COMMIT: ed55ef5394f77b82716a50a9dcacd9c975dbf263
+RECON_CH_006_LEDGER_BLOB: 8a13b9baf47b2b649f8845c72df4de3f16d94c76
+RECON_CH_006_RESULT_COMMIT: 9f58bb124ba9e9c22752648c2858ca02090c40c8
+RECON_CH_006_RESULT_BLOB: f02d4aa15d60881f53ea649048d39d546e8381a4
+RECON_CH_006_CHECKS: 70/70 PASS
 
 DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 5
 SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 5
@@ -43,8 +49,11 @@ SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 
 BASELINE_RECONSTRUCTION_CASES: 2
 NO_GAIN_RECONSTRUCTION_CASES: 2
-STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
 
 EXTERNAL_RECONSTRUCTION_APPLICATIONS: 0
 INDEPENDENT_RECONSTRUCTION_VALIDATION: not established
@@ -56,10 +65,10 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 
 NEXT_CANONICAL_STEP:
-  prospectively precommit and execute RECON-CH-006
-  deterministic same-project retrace
+  prospectively precommit and execute RECON-AUD-001
+  frozen-axis internal-standardization audit
 ~~~
 
-RECON-CH-005 establishes strongest-reasonable baseline equivalence only at the constructed-evidence level.
+RECON-CH-006 establishes same-project deterministic retraceability once.
 
-It does not imply universal baseline optimality, Reconstruction method failure, deletion, merger, absorption, permanent redundancy, external validity, or independent replication.
+It does not establish independent replication, independent validation, blinded reproduction, external applicability, method superiority, or universal protocol correctness.
