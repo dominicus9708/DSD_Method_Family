@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — RECON-CH-005 82/82 PASS / NO_GAIN / deterministic retrace next**
+Status: **active internal-build front — RECON-CH-006 70/70 PASS / internal-standardization audit next**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -222,6 +222,15 @@ NO_GAIN_RECONSTRUCTION_CASES:
   2
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_RECONSTRUCTION_APPLICATIONS:
@@ -242,7 +251,7 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## Next
 
-Prospectively precommit and execute **RECON-CH-006**, the deterministic same-project Reconstruction retrace.
+Prospectively precommit and execute **RECON-AUD-001**, the frozen-axis Reconstruction internal-standardization audit.
 
 
 ## RECON-CH-001 positive constructed challenge
@@ -386,3 +395,43 @@ SHARED_CORE_REOPEN_REQUIRED:
 ~~~
 
 The competent generic inverse evaluator matched the frozen Reconstruction outputs on all six gain axes. This NO_GAIN result is bounded to the constructed baseline and does not imply method failure, deletion, merger, absorption, or permanent redundancy.
+
+
+## RECON-CH-006 deterministic same-project retrace
+
+~~~text
+PRECOMMIT_COMMIT:
+  2fe975ffef49293d7afabec940f22d5ac756f27c
+PRECOMMIT_BLOB:
+  586c4eecb90232800ecd235e29bc925d123ea722
+
+RECONSTRUCTION_LEDGER_COMMIT:
+  ed55ef5394f77b82716a50a9dcacd9c975dbf263
+RECONSTRUCTION_LEDGER_BLOB:
+  8a13b9baf47b2b649f8845c72df4de3f16d94c76
+
+RESULT_COMMIT:
+  9f58bb124ba9e9c22752648c2858ca02090c40c8
+RESULT_BLOB:
+  f02d4aa15d60881f53ea649048d39d546e8381a4
+
+CHECKS:
+  70/70 PASS
+
+REPRODUCIBILITY_CLASS:
+  deterministic_same_project_retrace
+
+REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+~~~
+
+This is same-project, non-blind retraceability evidence only. It is not independent replication or independent validation.
