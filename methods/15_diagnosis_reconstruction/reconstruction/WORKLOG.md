@@ -508,3 +508,122 @@ Prospectively precommit and execute the first direct positive constructed Recons
 ~~~text
 RECON-CH-001
 ~~~
+
+
+---
+
+## Step 8 — RECON-CH-001 positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  f56cce9a1228384b5607b89ce9092606053696bf
+
+PRECOMMIT_BLOB:
+  88058d72c76ff953e75dc18f179c64f040f8e51d
+
+RESULT_COMMIT:
+  0353a5c9b7336c60a7f267bd597baa4ac5403ce9
+
+RESULT_BLOB:
+  3fdd1e3a0541febb643b22c5bd738464594b7e9b
+
+TOTAL_REQUIRED_CHECKS:
+  80
+
+PASSED:
+  80
+
+FAILED:
+  0
+~~~
+
+Challenge pack:
+
+~~~text
+A:
+  noninjective compressed-source reconstruction
+  ->
+  MULTIPLE_COMPATIBLE
+  +
+  TASK_ESTABLISHED
+
+B:
+  prior-state reconstruction under frozen marker + transition relation
+  ->
+  UNIQUE_WITHIN_DECLARED_CLASS
+  +
+  TASK_ESTABLISHED
+
+C:
+  complete frozen interface collision
+  ->
+  UNRECOVERABLE_DISTINCTION_ESTABLISHED_ON_FROZEN_INTERFACE
+  +
+  TASK_ESTABLISHED
+~~~
+
+Post-challenge counters:
+
+~~~text
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
+  1
+
+POSITIVE_RECONSTRUCTION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_RECONSTRUCTION_CASES:
+  0
+
+UNRECOVERABILITY_RECONSTRUCTION_CASES:
+  1
+
+METHOD_BOUNDARY_RECONSTRUCTION_CASES:
+  0
+
+BASELINE_RECONSTRUCTION_CASES:
+  0
+
+NO_GAIN_RECONSTRUCTION_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+
+EXTERNAL_RECONSTRUCTION_APPLICATIONS:
+  0
+
+INDEPENDENT_RECONSTRUCTION_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+
+RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
+  validation_in_progress
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Interpretation lock:
+
+~~~text
+POSITIVE_CONSTRUCTED_PASS != EXTERNAL_VALIDATION
+MULTIPLE_COMPATIBLE != TASK_UNDERDETERMINED
+DECLARED_CLASS_UNIQUENESS != GLOBAL_HISTORICAL_TRUTH
+FROZEN_INTERFACE_UNRECOVERABILITY != ABSOLUTE_UNRECOVERABILITY
+PASS != METHOD_SUPERIORITY
+~~~
+
+## Next
+
+Prospectively precommit and execute RECON-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
