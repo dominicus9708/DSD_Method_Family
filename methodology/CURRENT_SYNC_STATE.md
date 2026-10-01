@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-01 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261001-RECON-CH001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `1ba534c5a2c95f5ac96f14d653022d8634687b20`  
-Latest completed method event: **RECON-CH-001 positive constructed challenge — 80/80 PASS**  
-Latest method-result commit: `0353a5c9b7336c60a7f267bd597baa4ac5403ce9`  
+Sync epoch: `MF-SYNC-20261001-RECON-CH002`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `3a1aeb55dbecf2c860fe07d40efd52e97b66f6d1`  
+Latest completed method event: **RECON-CH-002 terminal coverage challenge — 80/80 PASS**  
+Latest method-result commit: `c29a8255604788752048eacfb530612ad32ed8d9`  
 Active internal-build front: **Reconstruction / DSD 복원론**  
-Next canonical step: **prospectively precommit and execute RECON-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal challenge**  
+Next canonical step: **prospectively precommit and execute RECON-CH-003 direct neighboring-method boundary challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -69,7 +69,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Prediction | proposed |
 | Control | proposed |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Reconstruction | active internal-build front; RECON-CH-001 80/80 PASS; validation in progress; RECON-CH-002 negative/unresolved coverage next |
+| Reconstruction | active internal-build front; RECON-CH-002 80/80 PASS; all six primary statuses and seven task terminals exercised; RECON-CH-003 boundary challenge next |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
 
