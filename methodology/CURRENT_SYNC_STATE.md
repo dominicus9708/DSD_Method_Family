@@ -1,13 +1,13 @@
 # DSD Method Family — Current Sync State
 
-Synchronized: **2026-10-01 KST**  
+Synchronized: **2026-10-02 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261001-RECON-CH005`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `75fa7bfd7e2958a3acf63cf556a6b141b3c83931`  
-Latest completed method event: **RECON-CH-005 strongest-reasonable non-DSD baseline — 82/82 PASS / NO_GAIN**  
-Latest method-result commit: `ed43ca7b79ae99af2f5a5cece7dd6620bbe8a975`  
+Sync epoch: `MF-SYNC-20261002-RECON-CH006`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `a8e97d05388462bdfae66ce6a3fe35f389753396`  
+Latest completed method event: **RECON-CH-006 deterministic same-project retrace — 70/70 PASS**  
+Latest method-result commit: `9f58bb124ba9e9c22752648c2858ca02090c40c8`  
 Active internal-build front: **Reconstruction / DSD 복원론**  
-Next canonical step: **prospectively precommit and execute RECON-CH-006 deterministic same-project Reconstruction retrace**  
+Next canonical step: **prospectively precommit and execute RECON-AUD-001 frozen-axis Reconstruction internal-standardization audit**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -69,7 +69,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Prediction | proposed |
 | Control | proposed |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Reconstruction | active internal-build front; RECON-CH-005 82/82 PASS / NO_GAIN; strongest-reasonable baseline established at constructed-evidence level; RECON-CH-006 deterministic retrace next |
+| Reconstruction | active internal-build front; RECON-CH-006 70/70 PASS deterministic same-project retrace; 0 claim-relevant mismatches; RECON-AUD-001 internal-standardization audit next |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
 
@@ -1172,9 +1172,9 @@ The pre-scoring provenance correction preserves the original audit precommit and
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/15_diagnosis_reconstruction/reconstruction/
 CURRENT_STATUS_FILE: methods/15_diagnosis_reconstruction/reconstruction/CURRENT_STATUS.md
-CURRENT_STATUS_COMMIT: b28b278cc3bb3c331d0b0f7ea07d03ae1f0d62a0
-CURRENT_STATUS_BLOB: 93466da1ffa41b3f5552ab7206fe5f8b213e0706
-README_SYNC_COMMIT: 75fa7bfd7e2958a3acf63cf556a6b141b3c83931
+CURRENT_STATUS_COMMIT: c75224be8a26b71902de0784e201a19d2fbdefe0
+CURRENT_STATUS_BLOB: 13dc029b5257775c3f538aaaa3f6771a1bfe0fa1
+README_SYNC_COMMIT: a8e97d05388462bdfae66ce6a3fe35f389753396
 LEGACY_PATH_ID: 15B
 HIGHER_FIELD: VI. Inverse Inference & Reconstruction
 
@@ -1197,12 +1197,18 @@ RECON_CH_004_RESULT_COMMIT: 894793e0faaa1b58c06bd7dcd0fab95a1d06a6f1
 RECON_CH_004_CHECKS: 64/64 PASS
 RECON_CH_004_GAIN_STATUS: RECONSTRUCTION_NO_GAIN
 
-RECON_CH_005_PRECOMMIT_COMMIT: c8fa76c3c7764a77c9c3f01a49edae7b93dcf005
-RECON_CH_005_PRECOMMIT_BLOB: a134bab5a6d1da5f556cb2783166defefd5e6b82
 RECON_CH_005_RESULT_COMMIT: ed43ca7b79ae99af2f5a5cece7dd6620bbe8a975
-RECON_CH_005_RESULT_BLOB: 813be6f0e394a2eb6226e871a4a1f29d42a38480
 RECON_CH_005_CHECKS: 82/82 PASS
 RECON_CH_005_GAIN_STATUS: RECONSTRUCTION_NO_GAIN
+STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION: established_at_constructed_evidence_level
+
+RECON_CH_006_PRECOMMIT_COMMIT: 2fe975ffef49293d7afabec940f22d5ac756f27c
+RECON_CH_006_PRECOMMIT_BLOB: 586c4eecb90232800ecd235e29bc925d123ea722
+RECON_CH_006_LEDGER_COMMIT: ed55ef5394f77b82716a50a9dcacd9c975dbf263
+RECON_CH_006_LEDGER_BLOB: 8a13b9baf47b2b649f8845c72df4de3f16d94c76
+RECON_CH_006_RESULT_COMMIT: 9f58bb124ba9e9c22752648c2858ca02090c40c8
+RECON_CH_006_RESULT_BLOB: f02d4aa15d60881f53ea649048d39d546e8381a4
+RECON_CH_006_CHECKS: 70/70 PASS
 
 DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 5
 SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 5
@@ -1224,7 +1230,11 @@ SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
 BASELINE_RECONSTRUCTION_CASES: 2
 NO_GAIN_RECONSTRUCTION_CASES: 2
 STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION: established_at_constructed_evidence_level
-REPRODUCIBILITY_CASES: 0
+
+REPRODUCIBILITY_CASES: 1
+SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
+CLAIM_RELEVANT_MISMATCHES: 0
+POST_COMPARISON_CORRECTIONS: 0
 
 EXTERNAL_RECONSTRUCTION_APPLICATIONS: 0
 INDEPENDENT_RECONSTRUCTION_VALIDATION: not established
@@ -1236,4 +1246,4 @@ PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-The next canonical step is to **prospectively precommit and execute RECON-CH-006 deterministic same-project Reconstruction retrace**. RECON-CH-005 is a strongest-reasonable comparison only at the constructed-evidence level and does not establish universal baseline optimality or method redundancy.
+The next canonical step is to **prospectively precommit and execute RECON-AUD-001 frozen-axis Reconstruction internal-standardization audit**. RECON-CH-006 is same-project deterministic retraceability evidence and is not independent replication or independent validation.
