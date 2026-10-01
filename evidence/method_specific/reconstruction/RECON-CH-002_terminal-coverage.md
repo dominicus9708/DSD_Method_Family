@@ -1,0 +1,668 @@
+# RECON-CH-002 — Terminal-Coverage Reconstruction Challenge Result
+
+Status: **EXECUTED — 80/80 PASS**  
+Date: **2026-10-01**  
+Challenge ID: `RECON-CH-002`  
+Method: **Reconstruction / DSD 복원론**  
+Protocol: **Reconstruction Protocol v0.1**  
+Case class: `negative_unresolved_terminal_coverage_constructed`
+
+## 1. Frozen references
+
+~~~text
+PROTOCOL_COMMIT:
+  2d4cdcab4b646a9d75f96dcc2ef301722eb612ad
+
+PROTOCOL_BLOB:
+  1f009e81b9992fbdec75abbd9551e9d06f0a170e
+
+PRECOMMIT_COMMIT:
+  9235e37685fbdd75d5f64200412416cf464212d0
+
+PRECOMMIT_BLOB:
+  8312fe0f0722bba44b21e2e8a50c04336de7f888
+~~~
+
+No protocol rule, subcase identity, class definition, evidence packet, bridge semantics, interface status, terminal target, scoring item, or pass threshold was changed after precommit.
+
+## 2. Final result
+
+~~~text
+TOTAL_REQUIRED_CHECKS:
+  80
+
+PASSED:
+  80
+
+FAILED:
+  0
+
+ALL_SIX_RECONSTRUCTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_RECONSTRUCTION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+This is constructed internal validation only.
+
+A conformant NOT_ESTABLISHED, BLOCKED, CONFLICTING, UNDERDETERMINED, OUT_OF_SCOPE, PARTIAL, or zero-compatible result is not a method failure.
+
+## 3. N1 — declared-class uniqueness evaluably fails
+
+Frozen:
+
+~~~text
+class:
+  {h1,h2}
+
+F(h1)=0
+F(h2)=0
+observed y=0
+
+evidence:
+  coherent
+
+bridge:
+  available
+~~~
+
+Execution:
+
+~~~text
+h1:
+  RECONSTRUCTION_CANDIDATE_COMPATIBLE
+
+h2:
+  RECONSTRUCTION_CANDIDATE_COMPATIBLE
+
+RECONSTRUCTION_SET_OUTCOME:
+  RECONSTRUCTION_SET_MULTIPLE_COMPATIBLE
+
+RECONSTRUCTION_PRIMARY_STATUS:
+  RECONSTRUCTION_NOT_ESTABLISHED
+
+RECONSTRUCTION_TASK_TERMINAL:
+  RECONSTRUCTION_TASK_NOT_ESTABLISHED
+
+RECONSTRUCTION_PROTOCOL_CONFORMANCE:
+  RECONSTRUCTION_PROTOCOL_CONFORMANT
+~~~
+
+Preserved:
+
+~~~text
+MULTIPLE_COMPATIBLE != TASK_UNDERDETERMINED
+FAILED_UNIQUENESS_CLAIM != BLOCKED
+~~~
+
+## 4. N2 — unavailable required sidecar
+
+Frozen required support-retention sidecar was unavailable and no substitute was authorized.
+
+Execution:
+
+~~~text
+REQUIRED_RECONSTRUCTION_INTERFACE_STATUS:
+  REQUIRED_RECONSTRUCTION_INTERFACE_UNAVAILABLE
+
+RECONSTRUCTION_PRIMARY_STATUS:
+  RECONSTRUCTION_BLOCKED
+
+RECONSTRUCTION_TASK_TERMINAL:
+  RECONSTRUCTION_TASK_BLOCKED
+
+RECONSTRUCTION_PROTOCOL_CONFORMANCE:
+  RECONSTRUCTION_PROTOCOL_CONFORMANT
+~~~
+
+No candidate was excluded from missing sidecar information.
+
+Preserved:
+
+~~~text
+UNAVAILABLE_REQUIRED_INTERFACE
+  !=
+EVALUABLE_DESTRUCTIVE_INFORMATION_LOSS
+
+BLOCKED != NOT_ESTABLISHED
+MISSING_REQUIRED_SIDECAR != NEGATIVE_EVIDENCE
+~~~
+
+## 5. N3 — conflicting bridge rules
+
+Frozen same-version/scope rules:
+
+~~~text
+rule A:
+  compatible
+
+rule B:
+  incompatible
+
+resolver:
+  none
+~~~
+
+Execution:
+
+~~~text
+BRIDGE_RELATION_STATUS:
+  BRIDGE_RELATION_CONFLICTING
+
+PAIR_DISPOSITION:
+  RECONSTRUCTION_PAIR_CONFLICTING
+
+RECONSTRUCTION_CANDIDATE_DISPOSITION:
+  RECONSTRUCTION_CANDIDATE_CONFLICTING
+
+RECONSTRUCTION_PRIMARY_STATUS:
+  RECONSTRUCTION_CONFLICTING
+
+RECONSTRUCTION_TASK_TERMINAL:
+  RECONSTRUCTION_TASK_CONFLICTING
+
+RECONSTRUCTION_PROTOCOL_CONFORMANCE:
+  RECONSTRUCTION_PROTOCOL_CONFORMANT
+~~~
+
+Preserved:
+
+~~~text
+PAIR_INCOMPATIBLE != PAIR_CONFLICTING
+CONFLICTING != UNDERDETERMINED
+~~~
+
+## 6. N4 — underdetermined bridge semantics
+
+Two admissible alternative bridge interpretations yielded different pair results.
+
+Execution:
+
+~~~text
+BRIDGE_RELATION_STATUS:
+  BRIDGE_RELATION_UNDERDETERMINED
+
+PAIR_DISPOSITION:
+  RECONSTRUCTION_PAIR_UNDERDETERMINED
+
+RECONSTRUCTION_CANDIDATE_DISPOSITION:
+  RECONSTRUCTION_CANDIDATE_UNDERDETERMINED
+
+RECONSTRUCTION_PRIMARY_STATUS:
+  RECONSTRUCTION_UNDERDETERMINED
+
+RECONSTRUCTION_TASK_TERMINAL:
+  RECONSTRUCTION_TASK_UNDERDETERMINED
+
+RECONSTRUCTION_PROTOCOL_CONFORMANCE:
+  RECONSTRUCTION_PROTOCOL_CONFORMANT
+~~~
+
+Preserved:
+
+~~~text
+MULTIPLE_ADMISSIBLE_SEMANTICS != CONFLICTING_RECORDS
+~~~
+
+## 7. N5 — requested history relation outside frozen scope
+
+Frozen:
+
+~~~text
+requested regime:
+  R2
+
+bridge scope:
+  R1 only
+
+declared extension:
+  none
+~~~
+
+Execution:
+
+~~~text
+BRIDGE_RELATION_STATUS:
+  BRIDGE_RELATION_OUT_OF_SCOPE
+
+RECONSTRUCTION_PRIMARY_STATUS:
+  RECONSTRUCTION_OUT_OF_SCOPE
+
+RECONSTRUCTION_TASK_TERMINAL:
+  RECONSTRUCTION_TASK_OUT_OF_SCOPE
+
+RECONSTRUCTION_PROTOCOL_CONFORMANCE:
+  RECONSTRUCTION_PROTOCOL_CONFORMANT
+~~~
+
+Preserved:
+
+~~~text
+OUT_OF_SCOPE != FALSE
+OUT_OF_SCOPE != BLOCKED
+~~~
+
+## 8. N6 — valid PARTIAL multi-obligation task
+
+Frozen independent obligations:
+
+~~~text
+Q1:
+  compatibility-set claim
+  compatible set {p1}
+  RECONSTRUCTION_ESTABLISHED
+
+Q2:
+  declared-class uniqueness claim
+  compatible set {q1,q2}
+  RECONSTRUCTION_NOT_ESTABLISHED
+~~~
+
+No higher-priority terminal existed.
+
+Execution:
+
+~~~text
+RECONSTRUCTION_TASK_TERMINAL:
+  RECONSTRUCTION_TASK_PARTIAL
+
+RECONSTRUCTION_PROTOCOL_CONFORMANCE:
+  RECONSTRUCTION_PROTOCOL_CONFORMANT
+~~~
+
+Preserved:
+
+~~~text
+PARTIAL != one-claim rescue
+PARTIAL != BLOCKED_RESCUE_LABEL
+~~~
+
+## 9. N7 — conflicting evidence packet
+
+Frozen evidence:
+
+~~~text
+same carrier / time / regime / schema:
+  yes
+
+e1:
+  Y=0
+  valid
+
+e2:
+  Y=1
+  valid
+
+resolver:
+  none
+~~~
+
+Execution:
+
+~~~text
+EVIDENCE_SET_COHERENCE_STATUS:
+  EVIDENCE_SET_CONFLICTING
+
+RECONSTRUCTION_PRIMARY_STATUS:
+  RECONSTRUCTION_CONFLICTING
+
+RECONSTRUCTION_TASK_TERMINAL:
+  RECONSTRUCTION_TASK_CONFLICTING
+
+RECONSTRUCTION_SET_NONE_COMPATIBLE_IN_DECLARED_CLASS:
+  not asserted
+
+RECONSTRUCTION_PROTOCOL_CONFORMANCE:
+  RECONSTRUCTION_PROTOCOL_CONFORMANT
+~~~
+
+Preserved:
+
+~~~text
+EVIDENCE_CONFLICT
+  !=
+RECONSTRUCTION_SET_NONE_COMPATIBLE_IN_DECLARED_CLASS
+~~~
+
+## 10. N8 — coherent zero-compatible declared class
+
+Frozen:
+
+~~~text
+evidence:
+  y=2
+
+n1 predicts:
+  y=0
+
+n2 predicts:
+  y=1
+~~~
+
+Evidence was coherent and the bridge was available.
+
+Execution:
+
+~~~text
+n1:
+  RECONSTRUCTION_CANDIDATE_EXCLUDED
+
+n2:
+  RECONSTRUCTION_CANDIDATE_EXCLUDED
+
+COMPATIBLE_RECONSTRUCTION_SET:
+  {}
+
+EXCLUDED_RECONSTRUCTION_SET:
+  {n1,n2}
+
+RECONSTRUCTION_SET_OUTCOME:
+  RECONSTRUCTION_SET_NONE_COMPATIBLE_IN_DECLARED_CLASS
+
+RECONSTRUCTION_PRIMARY_STATUS:
+  RECONSTRUCTION_ESTABLISHED
+
+RECONSTRUCTION_TASK_TERMINAL:
+  RECONSTRUCTION_TASK_ESTABLISHED
+
+RECONSTRUCTION_PROTOCOL_CONFORMANCE:
+  RECONSTRUCTION_PROTOCOL_CONFORMANT
+~~~
+
+The established claim is limited to the declared candidate class.
+
+## 11. N9 — unrecoverability claim evaluably fails
+
+Frozen complete-for-claim interface:
+
+~~~text
+k1:
+  main readout = 1
+  support = S1
+
+k2:
+  main readout = 1
+  support = S2
+
+evidence:
+  main readout = 1
+  support = S1
+
+RECONSTRUCTION_INTERFACE_CLOSURE_STATUS:
+  INTERFACE_COMPLETE_FOR_DECLARED_CLAIM
+~~~
+
+Execution:
+
+~~~text
+k1:
+  RECONSTRUCTION_CANDIDATE_COMPATIBLE
+
+k2:
+  RECONSTRUCTION_CANDIDATE_EXCLUDED
+
+RECONSTRUCTION_SET_OUTCOME:
+  RECONSTRUCTION_SET_UNIQUE_WITHIN_DECLARED_CLASS
+
+RECOVERY_STATUS:
+  RECOVERABLE_ON_DECLARED_SCOPE
+
+REQUESTED_UNRECOVERABILITY:
+  not established
+
+RECONSTRUCTION_PRIMARY_STATUS:
+  RECONSTRUCTION_NOT_ESTABLISHED
+
+RECONSTRUCTION_TASK_TERMINAL:
+  RECONSTRUCTION_TASK_NOT_ESTABLISHED
+
+RECONSTRUCTION_PROTOCOL_CONFORMANCE:
+  RECONSTRUCTION_PROTOCOL_CONFORMANT
+~~~
+
+Preserved:
+
+~~~text
+MAIN_READOUT_COLLISION
+  !=
+UNRECOVERABILITY_WHEN_FROZEN_SIDECAR_DISTINGUISHES
+~~~
+
+The complete-for-claim interface made the unrecoverability claim evaluable and false within its frozen scope.
+
+## 12. N10 — terminal precedence
+
+Frozen subordinate obligation states:
+
+~~~text
+Q1:
+  RECONSTRUCTION_OUT_OF_SCOPE
+
+Q2:
+  RECONSTRUCTION_CONFLICTING
+
+Q3:
+  RECONSTRUCTION_UNDERDETERMINED
+
+Q4:
+  RECONSTRUCTION_BLOCKED
+~~~
+
+Frozen precedence:
+
+~~~text
+OUT_OF_SCOPE
+>
+CONFLICTING
+>
+UNDERDETERMINED
+>
+BLOCKED
+>
+ESTABLISHED / PARTIAL / NOT_ESTABLISHED
+~~~
+
+Execution:
+
+~~~text
+RECONSTRUCTION_TASK_TERMINAL:
+  RECONSTRUCTION_TASK_OUT_OF_SCOPE
+
+LOWER_LEVEL_Q2_RETAINED:
+  yes
+
+LOWER_LEVEL_Q3_RETAINED:
+  yes
+
+LOWER_LEVEL_Q4_RETAINED:
+  yes
+
+RECONSTRUCTION_PROTOCOL_CONFORMANCE:
+  RECONSTRUCTION_PROTOCOL_CONFORMANT
+~~~
+
+The terminal summarized the task without erasing subordinate states.
+
+## 13. Direct coverage achieved
+
+Across RECON-CH-001 and RECON-CH-002:
+
+Primary statuses:
+
+~~~text
+RECONSTRUCTION_ESTABLISHED:
+  directly exercised
+
+RECONSTRUCTION_NOT_ESTABLISHED:
+  directly exercised
+
+RECONSTRUCTION_BLOCKED:
+  directly exercised
+
+RECONSTRUCTION_CONFLICTING:
+  directly exercised
+
+RECONSTRUCTION_OUT_OF_SCOPE:
+  directly exercised
+
+RECONSTRUCTION_UNDERDETERMINED:
+  directly exercised
+~~~
+
+Task terminals:
+
+~~~text
+RECONSTRUCTION_TASK_ESTABLISHED:
+  directly exercised
+
+RECONSTRUCTION_TASK_PARTIAL:
+  directly exercised
+
+RECONSTRUCTION_TASK_NOT_ESTABLISHED:
+  directly exercised
+
+RECONSTRUCTION_TASK_BLOCKED:
+  directly exercised
+
+RECONSTRUCTION_TASK_CONFLICTING:
+  directly exercised
+
+RECONSTRUCTION_TASK_OUT_OF_SCOPE:
+  directly exercised
+
+RECONSTRUCTION_TASK_UNDERDETERMINED:
+  directly exercised
+~~~
+
+Therefore:
+
+~~~text
+ALL_SIX_RECONSTRUCTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_RECONSTRUCTION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+## 14. Execution of the 80 frozen checks
+
+~~~text
+N1: 8/8 PASS
+N2: 8/8 PASS
+N3: 8/8 PASS
+N4: 8/8 PASS
+N5: 8/8 PASS
+N6: 8/8 PASS
+N7: 8/8 PASS
+N8: 8/8 PASS
+N9: 8/8 PASS
+N10: 8/8 PASS
+
+TOTAL_REQUIRED_CHECKS:
+  80
+
+PASSED:
+  80
+
+FAILED:
+  0
+~~~
+
+## 15. Post-challenge state
+
+~~~text
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
+  2
+
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
+  2
+
+POSITIVE_RECONSTRUCTION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_RECONSTRUCTION_CASES:
+  1
+
+UNRECOVERABILITY_RECONSTRUCTION_CASES:
+  2
+
+ALL_SIX_RECONSTRUCTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_RECONSTRUCTION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+
+METHOD_BOUNDARY_RECONSTRUCTION_CASES:
+  0
+
+BASELINE_RECONSTRUCTION_CASES:
+  0
+
+NO_GAIN_RECONSTRUCTION_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+
+EXTERNAL_RECONSTRUCTION_APPLICATIONS:
+  0
+
+INDEPENDENT_RECONSTRUCTION_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+
+RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
+  validation_in_progress
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The unrecoverability counter includes challenge packs whose primary coverage directly tests frozen-interface recoverability/unrecoverability, regardless of whether the requested unrecoverability claim is established or evaluably not established.
+
+## 16. Interpretation lock
+
+~~~text
+CONFORMANT_NEGATIVE_TERMINAL != METHOD_FAILURE
+
+NOT_ESTABLISHED != BLOCKED
+
+CONFLICTING != UNDERDETERMINED
+
+OUT_OF_SCOPE != FALSE
+
+PARTIAL != ATOMIC-FAILURE_RESCUE
+
+NONE_COMPATIBLE_IN_DECLARED_CLASS
+  !=
+UNBOUNDED_NONEXISTENCE_CLAIM
+
+MAIN_READOUT_COLLISION
+  !=
+UNRECOVERABILITY_IF_A_FROZEN_SIDECAR_DISTINGUISHES
+
+PROTOCOL_CONFORMANCE
+  !=
+HISTORICAL_TRUTH_CERTAINTY
+
+PASS != METHOD_SUPERIORITY
+~~~
+
+## 17. Next
+
+Prospectively precommit and execute RECON-CH-003 direct neighboring-method boundary challenge.
