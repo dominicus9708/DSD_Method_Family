@@ -701,3 +701,81 @@ Interpretation remains fixture-bounded. No method-superiority, permanent irreduc
 ## Next
 
 Prospectively precommit and execute RECON-CH-004 competent non-DSD Reconstruction baseline. The baseline receives equal claim-relevant information and may return NO_GAIN.
+
+
+---
+
+## Step 11 — RECON-CH-004 competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  f06ceaad98ecd9e993483f48e46fd91911ddf6e5
+
+PRECOMMIT_BLOB:
+  126c168d43bf8fa0daa44bf2d16c9cb6618104ce
+
+RESULT_COMMIT:
+  894793e0faaa1b58c06bd7dcd0fab95a1d06a6f1
+
+RESULT_BLOB:
+  3367ae360dec3b5783d943f0f751ad5ab7d2d37f
+
+TOTAL_REQUIRED_CHECKS:
+  64
+
+PASSED:
+  64
+
+FAILED:
+  0
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+RECONSTRUCTION_METHOD_GAIN_STATUS:
+  RECONSTRUCTION_NO_GAIN
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+B0_GENERIC_TYPED_INVERSE_RECONSTRUCTION_EVALUATOR reproduced the claim-relevant Reconstruction outputs under equal-information access.
+
+Interpretation lock:
+
+~~~text
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+~~~
+
+Post-challenge counters:
+
+~~~text
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
+  4
+
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
+  4
+
+BASELINE_RECONSTRUCTION_CASES:
+  1
+
+NO_GAIN_RECONSTRUCTION_CASES:
+  1
+
+STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION:
+  not established
+
+REPRODUCIBILITY_CASES:
+  0
+~~~
+
+## Next
+
+Prospectively precommit and execute RECON-CH-005 strongest-reasonable non-DSD Reconstruction baseline.
