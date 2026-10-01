@@ -3,6 +3,7 @@
 Synchronized: **2026-10-01 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
 Sync epoch: `MF-SYNC-20261001-RECON-CH002`  
+Sync status: `SYNC_PENDING_NOTION_ROOT_CALLOUT`  
 Latest claim-relevant source checkpoint before synchronization metadata writes: `0812027177a46a3e8c573c1982b6e847f4983c2d`  
 Latest completed method event: **RECON-CH-002 terminal coverage challenge — 80/80 PASS**  
 Latest method-result commit: `c29a8255604788752048eacfb530612ad32ed8d9`  
