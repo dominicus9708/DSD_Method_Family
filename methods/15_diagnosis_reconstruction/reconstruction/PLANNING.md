@@ -1,6 +1,6 @@
 # DSD Reconstruction — Planning / Validation Roadmap
 
-Status: **BOUNDARY AMENDMENT 001 ESTABLISHED — PROTOCOL v0.1 FREEZE NEXT**  
+Status: **PROTOCOL v0.1 FROZEN — RECON-CH-001 POSITIVE CHALLENGE NEXT**  
 Date: **2026-10-01**  
 Method: **Reconstruction / DSD 복원론**  
 Legacy path ID: `15B`
@@ -101,8 +101,8 @@ Shared interface:
 4. ✅ Task Interface v0.1 draft.
 5. ✅ Pre-protocol boundary counterexamples — 18 attacks / 10 preserved / 8 nonbreaking refinements.
 6. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted.
-7. ⏸ Executable Reconstruction Protocol v0.1 — next.
-8. ⏸ Positive constructed challenge.
+7. ✅ Executable Reconstruction Protocol v0.1 — frozen.
+8. ⏸ Positive constructed challenge — RECON-CH-001 next.
 9. ⏸ Negative / blocked / unresolved / unrecoverable terminal coverage.
 10. ⏸ Direct neighboring-method boundary challenge.
 11. ⏸ Competent non-DSD baseline.
@@ -362,7 +362,19 @@ PROTOCOL_FREEZE_AUTHORIZED:
   yes
 
 DEDICATED_RECONSTRUCTION_PROTOCOL:
-  not established
+  established v0.1
+
+PROTOCOL_COMMIT:
+  2d4cdcab4b646a9d75f96dcc2ef301722eb612ad
+
+PROTOCOL_BLOB:
+  1f009e81b9992fbdec75abbd9551e9d06f0a170e
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
 
 DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
   0
@@ -394,6 +406,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Freeze executable Reconstruction Protocol v0.1 from the source registry + historical Task Interface + boundary-attack record + Boundary Amendment 001.
+Prospectively precommit and execute RECON-CH-001, the first direct positive constructed Reconstruction challenge.
 
-Protocol freeze is now authorized. Do not count protocol freeze itself as a successful Reconstruction pilot.
+The first challenge should test the frozen G1-G18 / T1-T18 protocol without using external validation evidence.
