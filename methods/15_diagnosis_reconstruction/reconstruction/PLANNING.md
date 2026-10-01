@@ -1,6 +1,6 @@
 # DSD Reconstruction — Planning / Validation Roadmap
 
-Status: **RECON-CH-005 82/82 PASS / NO_GAIN — RECON-CH-006 DETERMINISTIC RETRACE NEXT**  
+Status: **RECON-CH-006 70/70 PASS — RECON-AUD-001 INTERNAL-STANDARDIZATION AUDIT NEXT**  
 Date: **2026-10-01**  
 Method: **Reconstruction / DSD 복원론**  
 Legacy path ID: `15B`
@@ -107,8 +107,8 @@ Shared interface:
 10. ✅ Direct neighboring-method boundary challenge — RECON-CH-003 99/99 PASS.
 11. ✅ Competent non-DSD baseline — RECON-CH-004 64/64 PASS / NO_GAIN.
 12. ✅ Strongest-reasonable non-DSD baseline — RECON-CH-005 82/82 PASS / NO_GAIN.
-13. ⏸ Deterministic same-project retrace — RECON-CH-006 next.
-14. ⏸ Frozen-axis internal-standardization audit.
+13. ✅ Deterministic same-project retrace — RECON-CH-006 70/70 PASS.
+14. ⏸ Frozen-axis internal-standardization audit — RECON-AUD-001 next.
 15. ⏸ External applications / independent validation — separate later phase.
 
 ## 4. Working five-interface identity — not yet frozen
@@ -413,6 +413,15 @@ NO_GAIN_RECONSTRUCTION_CASES:
   2
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_RECONSTRUCTION_APPLICATIONS:
@@ -433,6 +442,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Prospectively precommit and execute RECON-CH-006 deterministic same-project Reconstruction retrace.
+Prospectively precommit and execute RECON-AUD-001 frozen-axis internal-standardization audit.
 
-The retrace must reconstruct frozen RECON-CH-001~005 claim-relevant outputs from immutable repository artifacts, preserve every mismatch, prohibit post-comparison correction, and remain distinct from independent replication.
+The audit may use RECON-CH-006 as same-project retraceability evidence but must not relabel it as independent replication or independent validation.
