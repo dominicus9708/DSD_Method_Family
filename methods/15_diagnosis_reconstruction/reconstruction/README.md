@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — RECON-CH-001 80/80 PASS / negative-unresolved challenge next**
+Status: **active internal-build front — RECON-CH-003 99/99 PASS / competent baseline next**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -123,7 +123,7 @@ PLANNING_LANE:
   established
 
 TASK_INTERFACE_DRAFT:
-  v0.1 established
+  v0.1 historical draft preserved
 
 TASK_INTERFACE_COMMIT:
   b12426af3c5ed053c8383e4b242d761251af8d22
@@ -183,7 +183,37 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
+  3
+
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
+  3
+
+POSITIVE_RECONSTRUCTION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_RECONSTRUCTION_CASES:
+  1
+
+UNRECOVERABILITY_RECONSTRUCTION_CASES:
+  2
+
+METHOD_BOUNDARY_RECONSTRUCTION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+
+EXACT_COLLAPSE_PAIRS:
   0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
 
 BASELINE_RECONSTRUCTION_CASES:
   0
@@ -212,7 +242,7 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## Next
 
-Prospectively precommit and execute **RECON-CH-002**, covering negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal behavior.
+Prospectively precommit and execute **RECON-CH-004**, the competent non-DSD Reconstruction baseline.
 
 
 ## RECON-CH-001 positive constructed challenge
@@ -269,3 +299,53 @@ DECLARED_CLASS_UNIQUENESS != GLOBAL_HISTORICAL_TRUTH
 FROZEN_INTERFACE_UNRECOVERABILITY != ABSOLUTE_UNRECOVERABILITY
 PASS != METHOD_SUPERIORITY
 ~~~
+
+
+## RECON-CH-002 terminal coverage challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  9235e37685fbdd75d5f64200412416cf464212d0
+PRECOMMIT_BLOB:
+  8312fe0f0722bba44b21e2e8a50c04336de7f888
+RESULT_COMMIT:
+  c29a8255604788752048eacfb530612ad32ed8d9
+RESULT_BLOB:
+  56f41da71347174aef86f5fd6c410d3a161f4690
+CHECKS:
+  80/80 PASS
+ALL_SIX_RECONSTRUCTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+ALL_SEVEN_RECONSTRUCTION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+
+## RECON-CH-003 direct method-boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  d2eae78393e5eb37c3f9c5719ef1e74df7bc81b5
+PRECOMMIT_BLOB:
+  6e3adb97f1357a3ad69237141f6a8e716d2586e9
+RESULT_COMMIT:
+  3f6d503e1e0ef1e014d354c580198bbadff3b1e6
+RESULT_BLOB:
+  6af4aab18971b2c4a1114674dc5310754c2a441f
+CHECKS:
+  99/99 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+EXACT_COLLAPSE_PAIRS:
+  0
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+BOUNDARY_STATUS:
+  FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+~~~
+
+This is fixture-bounded separation only and is not a permanent irreducibility or superiority claim.
