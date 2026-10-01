@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-01 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261001-RECON-PROTOCOL01`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `d5aab8b0e44a75472c6fb9d1fc012e41ef223e0d`  
-Latest completed method event: **Reconstruction Protocol v0.1 frozen — G1-G18 / T1-T18**  
-Latest method-result commit: `2d4cdcab4b646a9d75f96dcc2ef301722eb612ad`  
+Sync epoch: `MF-SYNC-20261001-RECON-CH001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `1ba534c5a2c95f5ac96f14d653022d8634687b20`  
+Latest completed method event: **RECON-CH-001 positive constructed challenge — 80/80 PASS**  
+Latest method-result commit: `0353a5c9b7336c60a7f267bd597baa4ac5403ce9`  
 Active internal-build front: **Reconstruction / DSD 복원론**  
-Next canonical step: **prospectively precommit and execute RECON-CH-001 positive constructed challenge**  
+Next canonical step: **prospectively precommit and execute RECON-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -69,7 +69,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Prediction | proposed |
 | Control | proposed |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Reconstruction | active internal-build front; Protocol v0.1 frozen; G1-G18 / T1-T18; RECON-CH-001 positive challenge next |
+| Reconstruction | active internal-build front; RECON-CH-001 80/80 PASS; validation in progress; RECON-CH-002 negative/unresolved coverage next |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
 
@@ -839,7 +839,7 @@ The current family-wide priority is **method-specific protocol/evidence maturati
 
 Tracking, Lineage, Measurement, Aggregation, Compression, Interpretation, and the other already-standardized lanes retain their recorded status; external and independent validation remain separate evidence phases unless explicitly opened.
 
-Diagnosis / DSD 진단론 has closed its project-internal standardization lane at Protocol v0.1. DIAG-AUD-001 executed at 28/28 PASS with `FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD`. M7 remains `CONDITIONAL_PASS`, M13 is `PRESENT_NONFATAL` because a pre-scoring result-blob transcription was corrected in a separate preserved artifact before scoring, and M14 remains `DEFERRED_BY_SEQUENCE`. No external or independent validation is claimed. The active family-wide internal-build front is now **Reconstruction / DSD 복원론**. Source/registry recovery is complete, the planning/worklog lane is established, and **Reconstruction Task Interface v0.1 draft** is now established. The pre-protocol Reconstruction boundary attack is complete: 18 attacks, 10 preserved without refinement, 8 preserved with nonbreaking refinement, 0 boundary collapse, 0 fundamental interface failure. The historical Task Interface remains unchanged. Reconstruction Protocol v0.1 is now frozen and executable with G1-G18 validity gates and T1-T18 binding operation. The historical source registry, Task Interface, boundary attack, and Amendment remain unchanged. Protocol freeze itself is not a direct pilot. The next canonical work item is **RECON-CH-001**, prospectively precommitted and then executed as the first positive constructed Reconstruction challenge.
+Diagnosis / DSD 진단론 has closed its project-internal standardization lane at Protocol v0.1. DIAG-AUD-001 executed at 28/28 PASS with `FINAL_INTERNAL_STANDARDIZATION_DECISION: PROMOTE_INTERNAL_STANDARD`. M7 remains `CONDITIONAL_PASS`, M13 is `PRESENT_NONFATAL` because a pre-scoring result-blob transcription was corrected in a separate preserved artifact before scoring, and M14 remains `DEFERRED_BY_SEQUENCE`. No external or independent validation is claimed. The active family-wide internal-build front is now **Reconstruction / DSD 복원론**. Source/registry recovery is complete, the planning/worklog lane is established, and **Reconstruction Task Interface v0.1 draft** is now established. The pre-protocol Reconstruction boundary attack is complete: 18 attacks, 10 preserved without refinement, 8 preserved with nonbreaking refinement, 0 boundary collapse, 0 fundamental interface failure. The historical Task Interface remains unchanged. RECON-CH-001 was prospectively precommitted and executed against frozen Reconstruction Protocol v0.1: 80/80 PASS. The challenge established one positive constructed pilot, including multiple-compatible source reconstruction, declared-class unique prior-state reconstruction, and frozen-interface unrecoverability. It is not external validation or method-gain evidence. The next canonical work item is **RECON-CH-002** negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
 
 
 ### Recently closed method — Diagnosis / DSD 진단론
@@ -1175,22 +1175,9 @@ LEGACY_PATH_ID: 15B
 HIGHER_FIELD: VI. Inverse Inference & Reconstruction
 
 SOURCE_REGISTRY_RECOVERY: complete
-SOURCE_REGISTRY_COMMIT: 78acf2532680722cf09a50376d0c69d74803f1a4
-SOURCE_REGISTRY_BLOB: f00063f285745dd328e5b2d8c82ff3579957d615
-
 TASK_INTERFACE_DRAFT: v0.1 historical draft preserved
-TASK_INTERFACE_COMMIT: b12426af3c5ed053c8383e4b242d761251af8d22
-TASK_INTERFACE_BLOB: 92bfa7f9e523af0886169bf76d2854870ba202e3
-
 PRE_PROTOCOL_BOUNDARY_ATTACKS: 18
-BOUNDARY_ATTACK_COMMIT: 27d0ead2e3a95b0ce8eb08169a3c56714384f1d6
-BOUNDARY_ATTACK_BLOB: 01b083199069477d0b8aec6518709eba735dc893
-PRESERVED_NO_REFINEMENT: 10
-PRESERVED_WITH_NONBREAKING_REFINEMENT: 8
-
 BOUNDARY_AMENDMENT_001: established
-AMENDMENT_COMMIT: fbbf3840e606d1e005f7efcda3b38dfd33e2a2ce
-AMENDMENT_BLOB: 206926e77584398860ded1ccf2d7aac30cdf154a
 REFINEMENT_GROUPS_ADOPTED: 8/8
 
 DEDICATED_RECONSTRUCTION_PROTOCOL: established v0.1
@@ -1199,16 +1186,30 @@ PROTOCOL_BLOB: 1f009e81b9992fbdec75abbd9551e9d06f0a170e
 VALIDITY_GATES: G1-G18
 BINDING_OPERATION: T1-T18
 
-DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 0
-SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 0
+RECON_CH_001_PRECOMMIT_COMMIT: f56cce9a1228384b5607b89ce9092606053696bf
+RECON_CH_001_PRECOMMIT_BLOB: 88058d72c76ff953e75dc18f179c64f040f8e51d
+RECON_CH_001_RESULT_COMMIT: 0353a5c9b7336c60a7f267bd597baa4ac5403ce9
+RECON_CH_001_RESULT_BLOB: 3fdd1e3a0541febb643b22c5bd738464594b7e9b
+RECON_CH_001_CHECKS: 80/80 PASS
+
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 1
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 1
+POSITIVE_RECONSTRUCTION_CASES: 1
+NEGATIVE_OR_UNRESOLVED_RECONSTRUCTION_CASES: 0
+UNRECOVERABILITY_RECONSTRUCTION_CASES: 1
+METHOD_BOUNDARY_RECONSTRUCTION_CASES: 0
+BASELINE_RECONSTRUCTION_CASES: 0
+NO_GAIN_RECONSTRUCTION_CASES: 0
+REPRODUCIBILITY_CASES: 0
+
 EXTERNAL_RECONSTRUCTION_APPLICATIONS: 0
 INDEPENDENT_RECONSTRUCTION_VALIDATION: not established
 INDEPENDENT_REPLICATION: not established
 
 RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_RECONSTRUCTION_EVIDENCE_STATUS: protocol_frozen_pre_challenge
+CURRENT_RECONSTRUCTION_EVIDENCE_STATUS: validation_in_progress
 PROTOCOL_REVISION_REQUIRED: no
 SHARED_CORE_REOPEN_REQUIRED: no
 ```
 
-The next canonical step is to **prospectively precommit and execute RECON-CH-001**, the first direct positive constructed Reconstruction challenge. Protocol freeze itself is not a successful direct pilot.
+The next canonical step is to **prospectively precommit and execute RECON-CH-002** negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage. RECON-CH-001 is internal constructed evidence only.
