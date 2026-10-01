@@ -627,3 +627,77 @@ PASS != METHOD_SUPERIORITY
 ## Next
 
 Prospectively precommit and execute RECON-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
+
+
+---
+
+## Step 10 — RECON-CH-003 direct method-boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  d2eae78393e5eb37c3f9c5719ef1e74df7bc81b5
+
+PRECOMMIT_BLOB:
+  6e3adb97f1357a3ad69237141f6a8e716d2586e9
+
+RESULT_COMMIT:
+  3f6d503e1e0ef1e014d354c580198bbadff3b1e6
+
+RESULT_BLOB:
+  6af4aab18971b2c4a1114674dc5310754c2a441f
+
+TOTAL_REQUIRED_CHECKS:
+  99
+
+PASSED:
+  99
+
+FAILED:
+  0
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+
+BOUNDARY_STATUS:
+  FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Compared methods:
+
+~~~text
+Diagnosis
+Aggregation
+Compression
+Tracking
+Lineage
+Measurement
+Transformation
+Prediction
+Simulation
+Optimization
+Audit
+~~~
+
+Interpretation remains fixture-bounded. No method-superiority, permanent irreducibility, merger/deletion, or external-validity claim is made.
+
+## Next
+
+Prospectively precommit and execute RECON-CH-004 competent non-DSD Reconstruction baseline. The baseline receives equal claim-relevant information and may return NO_GAIN.
