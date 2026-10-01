@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — RECON-CH-004 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
+Status: **active internal-build front — RECON-CH-005 82/82 PASS / NO_GAIN / deterministic retrace next**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -183,10 +183,10 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
-  4
+  5
 
 POSITIVE_RECONSTRUCTION_CASES:
   1
@@ -216,10 +216,10 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_RECONSTRUCTION_CASES:
-  1
+  2
 
 NO_GAIN_RECONSTRUCTION_CASES:
-  1
+  2
 
 REPRODUCIBILITY_CASES:
   0
@@ -242,7 +242,7 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## Next
 
-Prospectively precommit and execute **RECON-CH-005**, the strongest-reasonable non-DSD Reconstruction baseline.
+Prospectively precommit and execute **RECON-CH-006**, the deterministic same-project Reconstruction retrace.
 
 
 ## RECON-CH-001 positive constructed challenge
