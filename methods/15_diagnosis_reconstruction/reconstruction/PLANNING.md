@@ -1,6 +1,6 @@
 # DSD Reconstruction — Planning / Validation Roadmap
 
-Status: **RECON-CH-002 80/80 PASS — RECON-CH-003 METHOD-BOUNDARY CHALLENGE NEXT**  
+Status: **RECON-CH-003 99/99 PASS — RECON-CH-004 COMPETENT BASELINE NEXT**  
 Date: **2026-10-01**  
 Method: **Reconstruction / DSD 복원론**  
 Legacy path ID: `15B`
@@ -103,9 +103,9 @@ Shared interface:
 6. ✅ Boundary Amendment 001 — 8/8 refinement groups adopted.
 7. ✅ Executable Reconstruction Protocol v0.1 — frozen.
 8. ✅ Positive constructed challenge — RECON-CH-001 80/80 PASS.
-9. ⏸ Negative / blocked / unresolved / unrecoverable terminal coverage.
-10. ⏸ Direct neighboring-method boundary challenge.
-11. ⏸ Competent non-DSD baseline.
+9. ✅ Terminal coverage — RECON-CH-002 80/80 PASS.
+10. ✅ Direct neighboring-method boundary challenge — RECON-CH-003 99/99 PASS.
+11. ⏸ Competent non-DSD baseline — RECON-CH-004 next.
 12. ⏸ Strongest-reasonable non-DSD baseline.
 13. ⏸ Deterministic same-project retrace.
 14. ⏸ Frozen-axis internal-standardization audit.
@@ -377,16 +377,34 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
-  1
+  3
 
 SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
-  1
+  3
 
 POSITIVE_RECONSTRUCTION_CASES:
   1
 
 UNRECOVERABILITY_RECONSTRUCTION_CASES:
+  2
+
+METHOD_BOUNDARY_RECONSTRUCTION_CASES:
   1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
 
 BASELINE_RECONSTRUCTION_CASES:
   0
@@ -407,7 +425,7 @@ RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
-  pre_protocol_boundary_attack_complete
+  validation_in_progress
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -415,6 +433,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Prospectively precommit and execute RECON-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
+Prospectively precommit and execute RECON-CH-004 competent non-DSD Reconstruction baseline.
 
-Keep the frozen Protocol v0.1 unchanged unless the precommitted result itself forces a separately recorded revision.
+The baseline must receive equal claim-relevant information and may produce NO_GAIN for Reconstruction.
