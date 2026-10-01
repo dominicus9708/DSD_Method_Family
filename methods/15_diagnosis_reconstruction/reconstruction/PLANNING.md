@@ -1,6 +1,6 @@
 # DSD Reconstruction — Planning / Validation Roadmap
 
-Status: **RECON-CH-003 99/99 PASS — RECON-CH-004 COMPETENT BASELINE NEXT**  
+Status: **RECON-CH-004 64/64 PASS / NO_GAIN — RECON-CH-005 STRONGEST-REASONABLE BASELINE NEXT**  
 Date: **2026-10-01**  
 Method: **Reconstruction / DSD 복원론**  
 Legacy path ID: `15B`
@@ -105,8 +105,8 @@ Shared interface:
 8. ✅ Positive constructed challenge — RECON-CH-001 80/80 PASS.
 9. ✅ Terminal coverage — RECON-CH-002 80/80 PASS.
 10. ✅ Direct neighboring-method boundary challenge — RECON-CH-003 99/99 PASS.
-11. ⏸ Competent non-DSD baseline — RECON-CH-004 next.
-12. ⏸ Strongest-reasonable non-DSD baseline.
+11. ✅ Competent non-DSD baseline — RECON-CH-004 64/64 PASS / NO_GAIN.
+12. ⏸ Strongest-reasonable non-DSD baseline — RECON-CH-005 next.
 13. ⏸ Deterministic same-project retrace.
 14. ⏸ Frozen-axis internal-standardization audit.
 15. ⏸ External applications / independent validation — separate later phase.
@@ -377,10 +377,10 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
-  3
+  4
 
 POSITIVE_RECONSTRUCTION_CASES:
   1
@@ -407,10 +407,10 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_RECONSTRUCTION_CASES:
-  0
+  1
 
 NO_GAIN_RECONSTRUCTION_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -433,6 +433,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Prospectively precommit and execute RECON-CH-004 competent non-DSD Reconstruction baseline.
+Prospectively precommit and execute RECON-CH-005 strongest-reasonable non-DSD Reconstruction baseline.
 
-The baseline must receive equal claim-relevant information and may produce NO_GAIN for Reconstruction.
+The comparator must be materially stronger than B0 without importing DSD as theory, must receive equal claim-relevant information, and must preserve NO_GAIN as an allowed outcome.
