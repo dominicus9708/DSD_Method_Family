@@ -416,3 +416,95 @@ Freeze executable Reconstruction Protocol v0.1.
 Use the source registry, historical Task Interface, boundary-attack record, and Amendment 001 together.
 
 Protocol freeze does not count as a successful direct Reconstruction pilot.
+
+
+---
+
+## Step 7 — Protocol v0.1 freeze
+
+~~~text
+PROTOCOL_COMMIT:
+  2d4cdcab4b646a9d75f96dcc2ef301722eb612ad
+
+PROTOCOL_BLOB:
+  1f009e81b9992fbdec75abbd9551e9d06f0a170e
+
+DEDICATED_RECONSTRUCTION_PROTOCOL:
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
+~~~
+
+Protocol v0.1 operationalizes:
+
+~~~text
+source registry
++
+historical Task Interface
++
+pre-protocol boundary attack
++
+Boundary Amendment 001
+~~~
+
+Key protocol features:
+
+~~~text
+extensional or intensional reconstruction-class representation
+
+elementwise / symbolic / exact-fiber / theorem-based evaluation
+
+evidence-set coherence before historical exclusion
+
+required-interface BLOCKED semantics
+
+frozen-interface closure before unrecoverability claims
+
+history relation coherence / composition rules
+
+Tracking / Lineage / Diagnosis non-substitution
+
+definitional recompletion as a distinct role
+
+deterministic compatibility as default inference mode
+
+explicit probabilistic interface when probability is requested
+
+exact task-terminal precedence and PARTIAL semantics
+~~~
+
+Current state:
+
+~~~text
+DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED:
+  0
+
+SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS:
+  0
+
+RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
+  protocol_frozen_pre_challenge
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Protocol freeze itself is not counted as a successful Reconstruction pilot.
+
+## Next
+
+Prospectively precommit and execute the first direct positive constructed Reconstruction challenge:
+
+~~~text
+RECON-CH-001
+~~~
