@@ -1,13 +1,13 @@
 # DSD Method Family — Current Sync State
 
-Synchronized: **2026-10-02 KST**  
+Synchronized: **2026-10-03 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261002-RECON-CH006`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `a8e97d05388462bdfae66ce6a3fe35f389753396`  
-Latest completed method event: **RECON-CH-006 deterministic same-project retrace — 70/70 PASS**  
-Latest method-result commit: `9f58bb124ba9e9c22752648c2858ca02090c40c8`  
-Active internal-build front: **Reconstruction / DSD 복원론**  
-Next canonical step: **prospectively precommit and execute RECON-AUD-001 frozen-axis Reconstruction internal-standardization audit**  
+Sync epoch: `MF-SYNC-20261003-RECON-AUD001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `9f17856d842aa996dffb3f09caf318fd0f2657c7`  
+Latest completed method event: **RECON-AUD-001 frozen-axis internal-standardization audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
+Latest method-result commit: `b72f90d7c8948fc644a639ab11d2cb8a16eccccc`  
+Active internal-build front: **Computation / DSD 계산론**  
+Next canonical step: **recover Computation source/registry constraints and establish Computation planning/worklog lane**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,13 +63,13 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | proposed |
+| Computation | active internal-build front; source/registry recovery and planning next; no dedicated protocol yet |
 | Optimization | proposed |
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Reconstruction | active internal-build front; RECON-CH-006 70/70 PASS deterministic same-project retrace; 0 claim-relevant mismatches; RECON-AUD-001 internal-standardization audit next |
+| Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
 | Operation | proposed |
 
@@ -1166,84 +1166,100 @@ M14: DEFERRED_BY_SEQUENCE
 
 The pre-scoring provenance correction preserves the original audit precommit and fixes only the DIAG-CH-006 result-blob transcription before scoring. No audit axis, promotion rule, method evidence, protocol rule, or pass threshold changed.
 
-### Active method — Reconstruction / DSD 복원론
+### Recently closed internal-standardization front — Reconstruction / DSD 복원론
 
 ```text
-CURRENT_STATUS: active_internal_build_front
-CURRENT_PATH: methods/15_diagnosis_reconstruction/reconstruction/
-CURRENT_STATUS_FILE: methods/15_diagnosis_reconstruction/reconstruction/CURRENT_STATUS.md
-CURRENT_STATUS_COMMIT: c75224be8a26b71902de0784e201a19d2fbdefe0
-CURRENT_STATUS_BLOB: 13dc029b5257775c3f538aaaa3f6771a1bfe0fa1
-README_SYNC_COMMIT: a8e97d05388462bdfae66ce6a3fe35f389753396
-LEGACY_PATH_ID: 15B
-HIGHER_FIELD: VI. Inverse Inference & Reconstruction
-
 DEDICATED_RECONSTRUCTION_PROTOCOL: established v0.1
 PROTOCOL_COMMIT: 2d4cdcab4b646a9d75f96dcc2ef301722eb612ad
 PROTOCOL_BLOB: 1f009e81b9992fbdec75abbd9551e9d06f0a170e
-VALIDITY_GATES: G1-G18
-BINDING_OPERATION: T1-T18
 
-RECON_CH_001_RESULT_COMMIT: 0353a5c9b7336c60a7f267bd597baa4ac5403ce9
-RECON_CH_001_CHECKS: 80/80 PASS
+RECON_CH_001: 80/80 PASS
+RECON_CH_002: 80/80 PASS
+RECON_CH_003: 99/99 PASS
+RECON_CH_004: 64/64 PASS / NO_GAIN
+RECON_CH_005: 82/82 PASS / NO_GAIN
+RECON_CH_006: 70/70 PASS / deterministic same-project retrace
 
-RECON_CH_002_RESULT_COMMIT: c29a8255604788752048eacfb530612ad32ed8d9
-RECON_CH_002_CHECKS: 80/80 PASS
+STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION:
+  established_at_constructed_evidence_level
 
-RECON_CH_003_RESULT_COMMIT: 3f6d503e1e0ef1e014d354c580198bbadff3b1e6
-RECON_CH_003_CHECKS: 99/99 PASS
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
 
-RECON_CH_004_RESULT_COMMIT: 894793e0faaa1b58c06bd7dcd0fab95a1d06a6f1
-RECON_CH_004_CHECKS: 64/64 PASS
-RECON_CH_004_GAIN_STATUS: RECONSTRUCTION_NO_GAIN
+CLAIM_RELEVANT_MISMATCHES:
+  0
 
-RECON_CH_005_RESULT_COMMIT: ed43ca7b79ae99af2f5a5cece7dd6620bbe8a975
-RECON_CH_005_CHECKS: 82/82 PASS
-RECON_CH_005_GAIN_STATUS: RECONSTRUCTION_NO_GAIN
-STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION: established_at_constructed_evidence_level
+POST_COMPARISON_CORRECTIONS:
+  0
 
-RECON_CH_006_PRECOMMIT_COMMIT: 2fe975ffef49293d7afabec940f22d5ac756f27c
-RECON_CH_006_PRECOMMIT_BLOB: 586c4eecb90232800ecd235e29bc925d123ea722
-RECON_CH_006_LEDGER_COMMIT: ed55ef5394f77b82716a50a9dcacd9c975dbf263
-RECON_CH_006_LEDGER_BLOB: 8a13b9baf47b2b649f8845c72df4de3f16d94c76
-RECON_CH_006_RESULT_COMMIT: 9f58bb124ba9e9c22752648c2858ca02090c40c8
-RECON_CH_006_RESULT_BLOB: f02d4aa15d60881f53ea649048d39d546e8381a4
-RECON_CH_006_CHECKS: 70/70 PASS
+RECON_AUD_001_PRECOMMIT_COMMIT:
+  19cd6410e5bdf475c6191af433433c5fd81d2ebe
 
-DIRECT_RECONSTRUCTION_PILOTS_ATTEMPTED: 5
-SUCCESSFUL_DIRECT_RECONSTRUCTION_PILOTS: 5
-POSITIVE_RECONSTRUCTION_CASES: 1
-NEGATIVE_OR_UNRESOLVED_RECONSTRUCTION_CASES: 1
-UNRECOVERABILITY_RECONSTRUCTION_CASES: 2
+RECON_AUD_001_PRECOMMIT_BLOB:
+  09fc255de3a469bb8e525a592605c6f005697864
 
-ALL_SIX_RECONSTRUCTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED: yes
-ALL_SEVEN_RECONSTRUCTION_TASK_TERMINALS_DIRECTLY_EXERCISED: yes
+RECON_AUD_001_RESULT_COMMIT:
+  b72f90d7c8948fc644a639ab11d2cb8a16eccccc
 
-METHOD_BOUNDARY_RECONSTRUCTION_CASES: 1
-METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 11
-EXACT_COLLAPSE_PAIRS: 0
-UNRESOLVED_BOUNDARY_PAIRS: 0
-PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 11
-BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
-SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
+RECON_AUD_001_RESULT_BLOB:
+  4d97d1a265275ebfde04e9fee20b97897e44b0c4
 
-BASELINE_RECONSTRUCTION_CASES: 2
-NO_GAIN_RECONSTRUCTION_CASES: 2
-STRONGEST_REASONABLE_BASELINE_RECONSTRUCTION: established_at_constructed_evidence_level
+RECON_AUD_001_CHECKS:
+  28/28 PASS
 
-REPRODUCIBILITY_CASES: 1
-SAME_PROJECT_DETERMINISTIC_RETRACE: established_once
-CLAIM_RELEVANT_MISMATCHES: 0
-POST_COMPARISON_CORRECTIONS: 0
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
 
-EXTERNAL_RECONSTRUCTION_APPLICATIONS: 0
-INDEPENDENT_RECONSTRUCTION_VALIDATION: not established
-INDEPENDENT_REPLICATION: not established
+RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
+  established
 
-RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS: developing
-CURRENT_RECONSTRUCTION_EVIDENCE_STATUS: validation_in_progress
-PROTOCOL_REVISION_REQUIRED: no
-SHARED_CORE_REOPEN_REQUIRED: no
+CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
+  validation_in_progress
+
+EXTERNAL_RECONSTRUCTION_APPLICATIONS:
+  0
+
+INDEPENDENT_RECONSTRUCTION_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
 ```
 
-The next canonical step is to **prospectively precommit and execute RECON-AUD-001 frozen-axis Reconstruction internal-standardization audit**. RECON-CH-006 is same-project deterministic retraceability evidence and is not independent replication or independent validation.
+Reconstruction external applications and independent validation remain deferred as a separate evidence phase.
+
+### Active method — Computation / DSD 계산론
+
+```text
+CURRENT_STATUS: active_internal_build_front
+CURRENT_PATH: methods/12_computation_optimization/computation/
+LEGACY_PATH_ID: 12A
+HIGHER_FIELD: VII. Computation & Selection
+
+DEDICATED_COMPUTATION_PROTOCOL:
+  not established
+
+COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_COMPUTATION_EVIDENCE_STATUS:
+  pre_source_registry_recovery
+
+NEXT_CANONICAL_STEP:
+  recover Computation source/registry constraints
+  separate source-derived constraints from prospective method construction
+  establish Computation planning/worklog lane
+```
+
+The active-front handoff does not transfer Reconstruction validation into Computation evidence.
+
+```text
+RECONSTRUCTION_INTERNAL_STANDARDIZATION != COMPUTATION_VALIDATION
+RECONSTRUCTION_EVIDENCE != COMPUTATION_EVIDENCE_BY_DEFAULT
+```
