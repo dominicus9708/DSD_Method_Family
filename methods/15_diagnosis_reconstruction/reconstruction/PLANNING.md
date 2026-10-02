@@ -1,6 +1,6 @@
 # DSD Reconstruction — Planning / Validation Roadmap
 
-Status: **RECON-CH-006 70/70 PASS — RECON-AUD-001 INTERNAL-STANDARDIZATION AUDIT NEXT**  
+Status: **RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD — INTERNAL LANE CLOSED**  
 Date: **2026-10-01**  
 Method: **Reconstruction / DSD 복원론**  
 Legacy path ID: `15B`
@@ -108,8 +108,8 @@ Shared interface:
 11. ✅ Competent non-DSD baseline — RECON-CH-004 64/64 PASS / NO_GAIN.
 12. ✅ Strongest-reasonable non-DSD baseline — RECON-CH-005 82/82 PASS / NO_GAIN.
 13. ✅ Deterministic same-project retrace — RECON-CH-006 70/70 PASS.
-14. ⏸ Frozen-axis internal-standardization audit — RECON-AUD-001 next.
-15. ⏸ External applications / independent validation — separate later phase.
+14. ✅ Frozen-axis internal-standardization audit — RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
+15. ⏸ External applications / independent validation — separate later phase after internal lane closure.
 
 ## 4. Working five-interface identity — not yet frozen
 
@@ -431,7 +431,7 @@ INDEPENDENT_RECONSTRUCTION_VALIDATION:
   not established
 
 RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
   validation_in_progress
@@ -442,6 +442,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Prospectively precommit and execute RECON-AUD-001 frozen-axis internal-standardization audit.
+The Reconstruction internal-standardization lane is closed at Protocol v0.1 after RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
 
-The audit may use RECON-CH-006 as same-project retraceability evidence but must not relabel it as independent replication or independent validation.
+External application and independent validation remain separate later phases. The family-wide internal-build sequence moves next to Computation / DSD 계산론 source/registry recovery and planning.
