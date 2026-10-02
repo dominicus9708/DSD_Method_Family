@@ -1,6 +1,6 @@
 # DSD Reconstruction / DSD 복원론
 
-Status: **active internal-build front — RECON-CH-006 70/70 PASS / internal-standardization audit next**
+Status: **internally standardized — RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD**
 Legacy path ID: `15B`
 Higher field: **VI. Inverse Inference & Reconstruction / 역추론·복원**
 
@@ -240,7 +240,7 @@ INDEPENDENT_RECONSTRUCTION_VALIDATION:
   not established
 
 RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_RECONSTRUCTION_EVIDENCE_STATUS:
   validation_in_progress
@@ -251,7 +251,7 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## Next
 
-Prospectively precommit and execute **RECON-AUD-001**, the frozen-axis Reconstruction internal-standardization audit.
+The Reconstruction internal-standardization lane is closed at Protocol v0.1. External applications and independent validation remain separate later phases. The family-wide internal-build sequence moves next to Computation / DSD 계산론.
 
 
 ## RECON-CH-001 positive constructed challenge
@@ -435,3 +435,41 @@ POST_COMPARISON_CORRECTIONS:
 ~~~
 
 This is same-project, non-blind retraceability evidence only. It is not independent replication or independent validation.
+
+
+## RECON-AUD-001 frozen-axis internal-standardization audit
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  19cd6410e5bdf475c6191af433433c5fd81d2ebe
+AUDIT_PRECOMMIT_BLOB:
+  09fc255de3a469bb8e525a592605c6f005697864
+
+AUDIT_RESULT_COMMIT:
+  b72f90d7c8948fc644a639ab11d2cb8a16eccccc
+AUDIT_RESULT_BLOB:
+  4d97d1a265275ebfde04e9fee20b97897e44b0c4
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+RECONSTRUCTION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+M7:
+  CONDITIONAL_PASS
+
+M14:
+  DEFERRED_BY_SEQUENCE
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The internal-standardization decision is project-internal only. It does not establish independent validation, independent replication, external applicability, method superiority, universal inverse-problem correctness, or permanent method-registry survival.
