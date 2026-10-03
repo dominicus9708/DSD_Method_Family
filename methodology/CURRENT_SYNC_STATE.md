@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-03 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261003-COMP-BOUNDARY01`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `9bdf3fe03ef0e6344cab278525125940ae36fee7`  
-Latest completed method event: **Computation pre-protocol boundary attack — 18 attacks / 11 preserved / 7 nonbreaking refinements / 0 collapse**  
-Latest method-result commit: `addbcb62647e5dca82255d9bd978eee9ec76b8c1`  
+Sync epoch: `MF-SYNC-20261003-COMP-AMEND001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `7c1ea8efa357db16fe6c6ad9491d74964f351372`  
+Latest completed method event: **Computation Task Interface Boundary Amendment 001 — 7/7 refinements adopted / protocol freeze authorized**  
+Latest method-result commit: `a5dacd3e80544d4a5058c1497cb2062124717c72`  
 Active internal-build front: **Computation / DSD 계산론**  
-Next canonical step: **establish Computation Task Interface Boundary Amendment 001 binding R1-R7 before protocol freeze**  
+Next canonical step: **freeze executable Computation Protocol v0.1**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,7 +63,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | active internal-build front; pre-protocol boundary attack complete (18 attacks, 11 preserved, 7 nonbreaking refinements, 0 collapse); Boundary Amendment 001 next; no dedicated protocol yet |
+| Computation | active internal-build front; Boundary Amendment 001 established (7/7 refinements adopted); protocol freeze authorized; executable Protocol v0.1 next |
 | Optimization | proposed |
 | Simulation | proposed |
 | Prediction | proposed |
@@ -1240,9 +1240,9 @@ Reconstruction external applications and independent validation remain deferred 
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/12_computation_optimization/computation/
 CURRENT_STATUS_FILE: methods/12_computation_optimization/computation/CURRENT_STATUS.md
-CURRENT_STATUS_COMMIT: 6045f43234ba26b31634367eaaefa13bad1c3dfe
-CURRENT_STATUS_BLOB: c7035bdd01ae292cfc4e7e1473b6034c55578563
-README_SYNC_COMMIT: 9bdf3fe03ef0e6344cab278525125940ae36fee7
+CURRENT_STATUS_COMMIT: 9906927511037908aef4365937c90a8d6c7fd1e7
+CURRENT_STATUS_BLOB: bcf6ebcdb7c491edbb0dc5702a97878fe2432f14
+README_SYNC_COMMIT: 7c1ea8efa357db16fe6c6ad9491d74964f351372
 LEGACY_PATH_ID: 12A
 HIGHER_FIELD: VII. Computation & Selection
 
@@ -1304,10 +1304,22 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 BOUNDARY_AMENDMENT_001:
-  not yet established
+  established
 
 REFINEMENT_GROUPS_REQUIRED:
   7
+
+REFINEMENT_GROUPS_ADOPTED:
+  7/7
+
+AMENDMENT_COMMIT:
+  a5dacd3e80544d4a5058c1497cb2062124717c72
+
+AMENDMENT_BLOB:
+  1490548c203f70db5054007a27456e2073f1a7da
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
 
 DEDICATED_COMPUTATION_PROTOCOL:
   not established
@@ -1337,7 +1349,7 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  pre_protocol_boundary_attack_complete
+  boundary_amendment_complete
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable before protocol
@@ -1346,8 +1358,7 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  establish Computation Task Interface Boundary Amendment 001
-  binding R1-R7 before protocol freeze
+  freeze executable Computation Protocol v0.1
 ```
 
 Recovered source constraints are separated from prospective Computation method construction.
