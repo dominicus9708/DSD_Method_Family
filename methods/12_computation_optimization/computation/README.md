@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — Task Interface v0.1 established / boundary attack next**
+Status: **active internal-build front — pre-protocol boundary attack complete / Amendment 001 next**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -83,13 +83,31 @@ TASK_INTERFACE_BLOB:
   0e307f2e6bb3b579a8bc161cb0a25bd76c28e69f
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  11
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  7
+
+BOUNDARY_COLLAPSE_FOUND:
   0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_001:
+  not yet established
+
+REFINEMENT_GROUPS_REQUIRED:
+  7
 
 DEDICATED_COMPUTATION_PROTOCOL:
   not established
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  source_and_interface_recovery
+  pre_protocol_boundary_attack_complete
 ~~~
 
 Recovered source-derived constraints are recorded as `CR-01~CR-16`.
@@ -111,6 +129,58 @@ The recovered source constraints do not themselves validate Computation as a met
 
 ## Next canonical step
 
-Execute a serious pre-protocol boundary attack against **Computation Task Interface v0.1**.
+Establish **Computation Task Interface Boundary Amendment 001** prospectively.
 
-The historical Task Interface draft must not be rewritten once boundary attack begins; any required refinement must be recorded in a separate prospective amendment.
+The Amendment must bind R1-R7 from the completed boundary attack before an executable Computation Protocol v0.1 may be frozen.
+
+
+## Pre-protocol boundary attack — 2026-10-03
+
+~~~text
+BOUNDARY_ATTACK_COMMIT:
+  addbcb62647e5dca82255d9bd978eee9ec76b8c1
+
+BOUNDARY_ATTACK_BLOB:
+  8e1ea692251835b1cb58c68f6598d9f8f7695e86
+
+BOUNDARY_ATTACKS_RUN:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  11
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  7
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+REFINEMENT_GROUPS_REQUIRED:
+  7
+
+BOUNDARY_AMENDMENT_REQUIRED:
+  yes
+
+PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Required prospective refinement groups:
+
+~~~text
+R1 semantic necessity versus execution action
+R2 reuse-interface coherence and invalidation
+R3 countable / recursive closure interface
+R4 symbolic evaluation coverage
+R5 explicit Computation method-gain status
+R6 comparator fairness
+R7 exact task-terminal precedence and PARTIAL semantics
+~~~
+
+The historical Task Interface v0.1 draft remains immutable.
