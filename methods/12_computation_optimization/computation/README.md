@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — pre-protocol boundary attack complete / Amendment 001 next**
+Status: **active internal-build front — Boundary Amendment 001 established / Protocol v0.1 next**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -98,16 +98,28 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 BOUNDARY_AMENDMENT_001:
-  not yet established
+  established
 
 REFINEMENT_GROUPS_REQUIRED:
   7
+
+REFINEMENT_GROUPS_ADOPTED:
+  7/7
+
+AMENDMENT_COMMIT:
+  a5dacd3e80544d4a5058c1497cb2062124717c72
+
+AMENDMENT_BLOB:
+  1490548c203f70db5054007a27456e2073f1a7da
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
 
 DEDICATED_COMPUTATION_PROTOCOL:
   not established
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  pre_protocol_boundary_attack_complete
+  boundary_amendment_complete
 ~~~
 
 Recovered source-derived constraints are recorded as `CR-01~CR-16`.
@@ -129,9 +141,9 @@ The recovered source constraints do not themselves validate Computation as a met
 
 ## Next canonical step
 
-Establish **Computation Task Interface Boundary Amendment 001** prospectively.
+Freeze executable **Computation Protocol v0.1** from the recovered Source Registry, historical Task Interface, completed boundary attack, and Boundary Amendment 001.
 
-The Amendment must bind R1-R7 from the completed boundary attack before an executable Computation Protocol v0.1 may be frozen.
+Historical Task Interface and boundary-attack records remain immutable.
 
 
 ## Pre-protocol boundary attack — 2026-10-03
@@ -184,3 +196,44 @@ R7 exact task-terminal precedence and PARTIAL semantics
 ~~~
 
 The historical Task Interface v0.1 draft remains immutable.
+
+
+## Boundary Amendment 001 — 2026-10-03
+
+~~~text
+AMENDMENT_COMMIT:
+  a5dacd3e80544d4a5058c1497cb2062124717c72
+
+AMENDMENT_BLOB:
+  1490548c203f70db5054007a27456e2073f1a7da
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  7/7
+
+METHOD_IDENTITY_CHANGED:
+  no
+
+TASK_INTERFACE_CORE_REOPENED:
+  no
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The seven prospective bindings are:
+
+~~~text
+R1 semantic necessity versus execution action
+R2 reuse-interface coherence and invalidation
+R3 countable / recursive closure interface
+R4 symbolic evaluation coverage
+R5 explicit Computation method-gain status
+R6 comparator fairness
+R7 exact task-terminal precedence and PARTIAL semantics
+~~~
