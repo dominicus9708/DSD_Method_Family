@@ -319,3 +319,79 @@ The historical Task Interface v0.1 draft remains unchanged.
 Establish Computation Task Interface Boundary Amendment 001 prospectively.
 
 Do not freeze Computation Protocol v0.1 before the Amendment is established.
+
+
+---
+
+## Step 6 — Boundary Amendment 001
+
+Canonical prospective amendment:
+
+~~~text
+AMENDMENT_COMMIT:
+  a5dacd3e80544d4a5058c1497cb2062124717c72
+
+AMENDMENT_BLOB:
+  1490548c203f70db5054007a27456e2073f1a7da
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  7/7
+
+METHOD_IDENTITY_CHANGED:
+  no
+
+TASK_INTERFACE_CORE_REOPENED:
+  no
+
+HISTORICAL_TASK_INTERFACE_REWRITTEN:
+  no
+
+HISTORICAL_BOUNDARY_ATTACK_RECORD_REWRITTEN:
+  no
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Adopted refinements:
+
+~~~text
+R1 semantic necessity versus execution action
+R2 reuse-interface coherence and invalidation
+R3 countable / recursive closure interface
+R4 symbolic evaluation coverage
+R5 explicit Computation method-gain status
+R6 comparator fairness
+R7 exact task-terminal precedence and PARTIAL semantics
+~~~
+
+Important new binding distinctions include:
+
+~~~text
+REQUIRED_RESULT != FRESH_EVALUATION_REQUIRED
+REUSE != TARGET_IRRELEVANCE
+CACHE_HIT != SEMANTIC_REUSE_VALIDITY
+FINITE_CORRECTNESS != COUNTABLE_CORRECTNESS
+SYMBOLIC_RULE_FOUND != FULL_CLASS_COVERAGE
+COMPUTATION_ESTABLISHED may coexist with COMPUTATION_NO_GAIN
+CHANGED_TARGET_SPEEDUP != METHOD_GAIN
+PARTIAL != BLOCKED_WITH_SOME_SUCCESS
+~~~
+
+## Next
+
+Freeze executable Computation Protocol v0.1.
+
+Protocol construction must use the historical Task Interface plus Boundary Amendment 001 without rewriting the historical development artifacts.
