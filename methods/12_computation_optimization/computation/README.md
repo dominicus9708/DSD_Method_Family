@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — Boundary Amendment 001 established / Protocol v0.1 next**
+Status: **active internal-build front — Protocol v0.1 frozen / COMP-CH-001 next**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -116,10 +116,22 @@ PROTOCOL_FREEZE_AUTHORIZED:
   yes
 
 DEDICATED_COMPUTATION_PROTOCOL:
-  not established
+  established v0.1
+
+PROTOCOL_COMMIT:
+  03b1b7463af6d3a34dc3693a19933e83a3917b4d
+
+PROTOCOL_BLOB:
+  4c4fe0b0616371b7df6aff9ce6a1ff7636c49da4
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  boundary_amendment_complete
+  protocol_frozen
 ~~~
 
 Recovered source-derived constraints are recorded as `CR-01~CR-16`.
@@ -141,9 +153,9 @@ The recovered source constraints do not themselves validate Computation as a met
 
 ## Next canonical step
 
-Freeze executable **Computation Protocol v0.1** from the recovered Source Registry, historical Task Interface, completed boundary attack, and Boundary Amendment 001.
+Prospectively precommit and execute **COMP-CH-001**, the first positive constructed Computation challenge.
 
-Historical Task Interface and boundary-attack records remain immutable.
+Protocol v0.1 and all historical development artifacts remain immutable during the challenge.
 
 
 ## Pre-protocol boundary attack — 2026-10-03
@@ -237,3 +249,33 @@ R5 explicit Computation method-gain status
 R6 comparator fairness
 R7 exact task-terminal precedence and PARTIAL semantics
 ~~~
+
+
+## Computation Protocol v0.1 — 2026-10-03
+
+~~~text
+PROTOCOL_COMMIT:
+  03b1b7463af6d3a34dc3693a19933e83a3917b4d
+
+PROTOCOL_BLOB:
+  4c4fe0b0616371b7df6aff9ce6a1ff7636c49da4
+
+DEDICATED_COMPUTATION_PROTOCOL:
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
+
+CURRENT_COMPUTATION_EVIDENCE_STATUS:
+  protocol_frozen
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+~~~
+
+Protocol v0.1 binds the seven Boundary Amendment refinements and preserves the historical guards.
+
+It is an executable internal protocol, not yet an internally standardized method.
