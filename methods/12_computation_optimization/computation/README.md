@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — Protocol v0.1 frozen / COMP-CH-001 next**
+Status: **active internal-build front — COMP-CH-001 84/84 PASS / COMP-CH-002 next**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -131,7 +131,7 @@ BINDING_OPERATION:
   T1-T18
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 ~~~
 
 Recovered source-derived constraints are recorded as `CR-01~CR-16`.
@@ -153,9 +153,9 @@ The recovered source constraints do not themselves validate Computation as a met
 
 ## Next canonical step
 
-Prospectively precommit and execute **COMP-CH-001**, the first positive constructed Computation challenge.
+Prospectively precommit and execute **COMP-CH-002**, the negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage challenge.
 
-Protocol v0.1 and all historical development artifacts remain immutable during the challenge.
+COMP-CH-001 remains immutable positive constructed evidence.
 
 
 ## Pre-protocol boundary attack — 2026-10-03
@@ -279,3 +279,51 @@ PROTOCOL_REVISION_REQUIRED:
 Protocol v0.1 binds the seven Boundary Amendment refinements and preserves the historical guards.
 
 It is an executable internal protocol, not yet an internally standardized method.
+
+
+## COMP-CH-001 — 2026-10-03
+
+~~~text
+PRECOMMIT_COMMIT:
+  68d850d77361356df5ea0beddaee8d3f5dcd0b2f
+
+PRECOMMIT_BLOB:
+  ad7b98886af649973cf56bb3e22863b334bcd602
+
+RESULT_COMMIT:
+  1add7ed65c874e7ca1bf8e004567a7c1785a0726
+
+RESULT_BLOB:
+  212ee1631b0753418bc79e52aada0365b80a0365
+
+CHECKS:
+  84/84 PASS
+
+DIRECT_COMPUTATION_PILOT:
+  positive
+
+PROTOCOL_CONFORMANCE:
+  conformant on all three subtasks
+
+METHOD_GAIN_STATUS:
+  COMPUTATION_GAIN_NOT_TESTED
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The three subtasks directly exercised:
+
+~~~text
+mixed fresh / valid reuse / sound omission
+finite-DAG closure
+symbolic full-class discharge
+resolution sufficiency
+information-loss guard
+Computation / Optimization non-substitution
+~~~
+
+This is constructed internal evidence only.
