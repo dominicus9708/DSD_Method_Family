@@ -1,6 +1,6 @@
 # DSD Computation — Planning / Validation Roadmap
 
-Status: **BOUNDARY AMENDMENT 001 ESTABLISHED — PROTOCOL v0.1 FREEZE NEXT**  
+Status: **PROTOCOL v0.1 FROZEN — POSITIVE CONSTRUCTED CHALLENGE NEXT**  
 Date: **2026-10-03**  
 Method: **Computation / DSD 계산론**  
 Legacy path ID: `12A`  
@@ -22,7 +22,19 @@ TASK_INTERFACE_DRAFT:
   v0.1 established
 
 DEDICATED_COMPUTATION_PROTOCOL:
-  not established
+  established v0.1
+
+PROTOCOL_COMMIT:
+  03b1b7463af6d3a34dc3693a19933e83a3917b4d
+
+PROTOCOL_BLOB:
+  4c4fe0b0616371b7df6aff9ce6a1ff7636c49da4
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
 ~~~
 
 The source registry separates predecessor/source constraints from prospective Computation method construction.
@@ -304,10 +316,10 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  boundary_amendment_complete
+  protocol_frozen
 
 PROTOCOL_REVISION_REQUIRED:
-  not applicable before protocol
+  no
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -315,6 +327,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Freeze executable Computation Protocol v0.1 from the recovered Source Registry, historical Task Interface, completed boundary attack, and Boundary Amendment 001.
+Prospectively precommit and execute COMP-CH-001, the first positive constructed Computation challenge.
 
-Do not rewrite historical artifacts during Protocol construction.
+The challenge must use Protocol v0.1 without rewriting it.
