@@ -10,10 +10,10 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 
 - [`methodology/CURRENT_SYNC_STATE.md`](methodology/CURRENT_SYNC_STATE.md) — Notion·GitHub·프로젝트 채팅을 교차 복원한 **2026-10-03 KST** 현재 상태 체크포인트.
 - [`methodology/LIVE_SYNC_POLICY.md`](methodology/LIVE_SYNC_POLICY.md) — 상태 변화가 발생한 같은 작업 단위에서 GitHub와 Notion을 함께 갱신하는 필수 실시간 동기화 규칙.
-- Current sync epoch: `MF-SYNC-20261003-COMP-BOUNDARY01`
-- Latest claim-relevant source checkpoint at adoption: `9bdf3fe03ef0e6344cab278525125940ae36fee7`
-- Latest completed method event: **Computation pre-protocol boundary attack — 18 attacks / 11 preserved / 7 nonbreaking refinements / 0 collapse**.
-- Next canonical step: **establish Computation Task Interface Boundary Amendment 001 binding R1-R7 before protocol freeze**.
+- Current sync epoch: `MF-SYNC-20261003-COMP-AMEND001`
+- Latest claim-relevant source checkpoint at adoption: `7c1ea8efa357db16fe6c6ad9491d74964f351372`
+- Latest completed method event: **Computation Task Interface Boundary Amendment 001 — 7/7 refinements adopted / protocol freeze authorized**.
+- Next canonical step: **freeze executable Computation Protocol v0.1**.
 - Canonical Notion sync page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 - The checkpoint does not replace method-specific protocols, precommits, evidence, audits, or historical worklogs.
 
