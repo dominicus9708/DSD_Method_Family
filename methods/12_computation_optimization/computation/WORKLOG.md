@@ -255,3 +255,67 @@ The draft is prospective method construction, not a theorem of the predecessor p
 Execute a serious pre-protocol boundary attack against the frozen historical draft.
 
 Once the boundary attack begins, `TASK_INTERFACE_v0.1-draft.md` must not be rewritten.
+
+
+---
+
+## Step 5 — pre-protocol boundary attack
+
+Canonical boundary artifact:
+
+~~~text
+BOUNDARY_ATTACK_COMMIT:
+  addbcb62647e5dca82255d9bd978eee9ec76b8c1
+
+BOUNDARY_ATTACK_BLOB:
+  8e1ea692251835b1cb58c68f6598d9f8f7695e86
+
+BOUNDARY_ATTACKS_RUN:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  11
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  7
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+REFINEMENT_GROUPS_REQUIRED:
+  7
+
+BOUNDARY_AMENDMENT_REQUIRED:
+  yes
+
+PROTOCOL_FREEZE_AUTHORIZED_BEFORE_AMENDMENT:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The seven required refinement groups are:
+
+~~~text
+R1 semantic necessity versus execution action
+R2 reuse-interface coherence and invalidation
+R3 countable / recursive closure interface
+R4 symbolic evaluation coverage
+R5 explicit Computation method-gain status
+R6 comparator fairness
+R7 exact task-terminal precedence and PARTIAL semantics
+~~~
+
+Method identity survived direct pressure against Optimization, Aggregation, Compression, Analysis, Measurement, Simulation, Prediction, Transformation, Audit, Tracking, and Lineage.
+
+The historical Task Interface v0.1 draft remains unchanged.
+
+## Next
+
+Establish Computation Task Interface Boundary Amendment 001 prospectively.
+
+Do not freeze Computation Protocol v0.1 before the Amendment is established.
