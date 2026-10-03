@@ -1,6 +1,6 @@
 # DSD Computation — Planning / Validation Roadmap
 
-Status: **PRE-PROTOCOL BOUNDARY ATTACK COMPLETE — BOUNDARY AMENDMENT 001 NEXT**  
+Status: **BOUNDARY AMENDMENT 001 ESTABLISHED — PROTOCOL v0.1 FREEZE NEXT**  
 Date: **2026-10-03**  
 Method: **Computation / DSD 계산론**  
 Legacy path ID: `12A`  
@@ -253,10 +253,22 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 BOUNDARY_AMENDMENT_001:
-  not yet established
+  established
 
 REFINEMENT_GROUPS_REQUIRED:
   7
+
+REFINEMENT_GROUPS_ADOPTED:
+  7/7
+
+AMENDMENT_COMMIT:
+  a5dacd3e80544d4a5058c1497cb2062124717c72
+
+AMENDMENT_BLOB:
+  1490548c203f70db5054007a27456e2073f1a7da
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
 
 DEDICATED_COMPUTATION_PROTOCOL:
   not established
@@ -292,7 +304,7 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  pre_protocol_boundary_attack_complete
+  boundary_amendment_complete
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable before protocol
@@ -303,6 +315,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Establish Computation Task Interface Boundary Amendment 001 prospectively.
+Freeze executable Computation Protocol v0.1 from the recovered Source Registry, historical Task Interface, completed boundary attack, and Boundary Amendment 001.
 
-The amendment must bind the seven nonbreaking refinement groups from the completed boundary attack before any executable Computation Protocol v0.1 may be frozen.
+Do not rewrite historical artifacts during Protocol construction.
