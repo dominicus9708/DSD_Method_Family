@@ -1,6 +1,6 @@
-# Computation Current Status — Protocol v0.1 checkpoint
+# Computation Current Status — COMP-CH-001 checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / COMP-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — COMP-CH-001 84/84 PASS / COMP-CH-002 NEXT**  
 Date: **2026-10-03**
 
 ~~~text
@@ -13,65 +13,26 @@ LEGACY_PATH_ID:
 HIGHER_FIELD:
   VII. Computation & Selection
 
-SOURCE_REGISTRY_COMMIT:
-  af9951011d999aef3c29a2beba6093983c1546f6
-
-SOURCE_REGISTRY_BLOB:
-  6f5ad5731ee82fc9a6561a39ff6d66fc4bd82461
-
-TASK_INTERFACE_COMMIT:
-  e0376c35c9fd6c6ab2fc1a20a5bc0e329fc0fb71
-
-TASK_INTERFACE_BLOB:
-  0e307f2e6bb3b579a8bc161cb0a25bd76c28e69f
-
-BOUNDARY_ATTACK_COMMIT:
-  addbcb62647e5dca82255d9bd978eee9ec76b8c1
-
-BOUNDARY_ATTACK_BLOB:
-  8e1ea692251835b1cb58c68f6598d9f8f7695e86
-
-AMENDMENT_COMMIT:
-  a5dacd3e80544d4a5058c1497cb2062124717c72
-
-AMENDMENT_BLOB:
-  1490548c203f70db5054007a27456e2073f1a7da
-
 PROTOCOL_COMMIT:
   03b1b7463af6d3a34dc3693a19933e83a3917b4d
 
 PROTOCOL_BLOB:
   4c4fe0b0616371b7df6aff9ce6a1ff7636c49da4
 
-SOURCE_REGISTRY_RECOVERY:
-  complete
+COMP_CH_001_PRECOMMIT_COMMIT:
+  68d850d77361356df5ea0beddaee8d3f5dcd0b2f
 
-TASK_INTERFACE_DRAFT:
-  v0.1 historical draft preserved
+COMP_CH_001_PRECOMMIT_BLOB:
+  ad7b98886af649973cf56bb3e22863b334bcd602
 
-PRE_PROTOCOL_BOUNDARY_ATTACKS:
-  18
+COMP_CH_001_RESULT_COMMIT:
+  1add7ed65c874e7ca1bf8e004567a7c1785a0726
 
-PRESERVED_NO_REFINEMENT:
-  11
+COMP_CH_001_RESULT_BLOB:
+  212ee1631b0753418bc79e52aada0365b80a0365
 
-PRESERVED_WITH_NONBREAKING_REFINEMENT:
-  7
-
-BOUNDARY_COLLAPSE_FOUND:
-  0
-
-FUNDAMENTAL_INTERFACE_FAILURE:
-  0
-
-BOUNDARY_AMENDMENT_001:
-  established
-
-REFINEMENT_GROUPS_ADOPTED:
-  7/7
-
-PROTOCOL_FREEZE_AUTHORIZED:
-  yes
+COMP_CH_001_CHECKS:
+  84/84 PASS
 
 DEDICATED_COMPUTATION_PROTOCOL:
   established v0.1
@@ -83,13 +44,13 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
-  0
+  1
 
 SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
-  0
+  1
 
 POSITIVE_COMPUTATION_CASES:
-  0
+  1
 
 NEGATIVE_OR_UNRESOLVED_COMPUTATION_CASES:
   0
@@ -119,7 +80,7 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED:
   no
@@ -128,14 +89,28 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  prospectively precommit and execute COMP-CH-001
-  first positive constructed Computation challenge
+  prospectively precommit and execute COMP-CH-002
+  negative / blocked / conflicting / underdetermined /
+  out-of-scope / partial terminal coverage
 ~~~
 
-Protocol freeze is not internal standardization.
+COMP-CH-001 directly exercised:
 
 ~~~text
-PROTOCOL_FROZEN != INTERNALLY_STANDARDIZED
+required-result vs fresh-evaluation separation
+valid reuse
+sound omission
+finite-DAG closure
+symbolic full-class discharge
+resolution sufficiency
+information-loss guard
+Computation / Optimization non-substitution
+~~~
+
+Interpretation limits remain:
+
+~~~text
+POSITIVE_CONSTRUCTED_PASS != EXTERNAL_VALIDATION
 COMPUTATION_ESTABLISHED != COMPUTATIONAL_GAIN
-COMPUTATION_NO_GAIN != METHOD_FAILURE
+PASS != METHOD_SUPERIORITY
 ~~~
