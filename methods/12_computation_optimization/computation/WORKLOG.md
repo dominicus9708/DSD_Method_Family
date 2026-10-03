@@ -431,3 +431,97 @@ The protocol freeze itself does not increment direct-pilot counters and does not
 Prospectively precommit and execute COMP-CH-001, the first positive constructed Computation challenge.
 
 The challenge should exercise required-result/fresh-evaluation separation, valid reuse, sound omission, symbolic coverage, resolution sufficiency, a simple closure condition, an information-loss guard, and Computation/Optimization non-substitution.
+
+
+---
+
+## Step 8 — COMP-CH-001 positive constructed challenge
+
+Prospective precommit:
+
+~~~text
+PRECOMMIT_COMMIT:
+  68d850d77361356df5ea0beddaee8d3f5dcd0b2f
+
+PRECOMMIT_BLOB:
+  ad7b98886af649973cf56bb3e22863b334bcd602
+~~~
+
+Execution result:
+
+~~~text
+RESULT_COMMIT:
+  1add7ed65c874e7ca1bf8e004567a7c1785a0726
+
+RESULT_BLOB:
+  212ee1631b0753418bc79e52aada0365b80a0365
+
+CHECKS:
+  84/84 PASS
+
+DIRECT_COMPUTATION_PILOT:
+  positive
+
+SUBTASK_A:
+  mixed fresh / valid reuse / sound omission
+  finite-DAG closure
+  Computation / Optimization non-substitution
+  COMPUTATION_TASK_ESTABLISHED
+
+SUBTASK_B:
+  symbolic full-class discharge
+  complete theorem coverage
+  COMPUTATION_TASK_ESTABLISHED
+
+SUBTASK_C:
+  target-safe reduced readout
+  resolution sufficiency
+  information-loss guard preserved
+  COMPUTATION_TASK_ESTABLISHED
+
+PROTOCOL_CONFORMANCE:
+  conformant on all three subtasks
+
+METHOD_GAIN_STATUS:
+  COMPUTATION_GAIN_NOT_TESTED
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Direct counters after COMP-CH-001:
+
+~~~text
+DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
+  1
+
+POSITIVE_COMPUTATION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_COMPUTATION_CASES:
+  0
+
+METHOD_BOUNDARY_COMPUTATION_CASES:
+  0
+
+BASELINE_COMPUTATION_CASES:
+  0
+
+NO_GAIN_COMPUTATION_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+~~~
+
+The result is internal constructed evidence only.
+
+## Next
+
+Prospectively precommit and execute COMP-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
