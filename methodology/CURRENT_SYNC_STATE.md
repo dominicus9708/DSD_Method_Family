@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-03 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261003-COMP-PROTOCOL01`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `bc20899a4837ef30e48b3e0e2f85d61554976c8f`  
-Latest completed method event: **Computation Protocol v0.1 frozen — G1-G18 / T1-T18**  
-Latest method-result commit: `03b1b7463af6d3a34dc3693a19933e83a3917b4d`  
+Sync epoch: `MF-SYNC-20261003-COMP-CH001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `bc92a06ebb4138a56c3b5c9891668ba806fc9add`  
+Latest completed method event: **COMP-CH-001 positive constructed challenge — 84/84 PASS**  
+Latest method-result commit: `1add7ed65c874e7ca1bf8e004567a7c1785a0726`  
 Active internal-build front: **Computation / DSD 계산론**  
-Next canonical step: **prospectively precommit and execute COMP-CH-001, the first positive constructed Computation challenge**  
+Next canonical step: **prospectively precommit and execute COMP-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,7 +63,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | active internal-build front; Protocol v0.1 frozen (G1-G18 / T1-T18); COMP-CH-001 positive constructed challenge next |
+| Computation | active internal-build front; COMP-CH-001 84/84 PASS; positive constructed pilot established; COMP-CH-002 terminal-coverage challenge next |
 | Optimization | proposed |
 | Simulation | proposed |
 | Prediction | proposed |
@@ -1240,9 +1240,9 @@ Reconstruction external applications and independent validation remain deferred 
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/12_computation_optimization/computation/
 CURRENT_STATUS_FILE: methods/12_computation_optimization/computation/CURRENT_STATUS.md
-CURRENT_STATUS_COMMIT: d91fb5d4b8cb638e5a47a5506fbaa71eef6ebf9a
-CURRENT_STATUS_BLOB: 603a7d86db809652fce320da0b6731b589fc9662
-README_SYNC_COMMIT: bc20899a4837ef30e48b3e0e2f85d61554976c8f
+CURRENT_STATUS_COMMIT: bcf5b0327019d23e7837f6246e8c8247c73134cd
+CURRENT_STATUS_BLOB: c99aeaa3030588233e4982f588010acec9edc65d
+README_SYNC_COMMIT: bc92a06ebb4138a56c3b5c9891668ba806fc9add
 LEGACY_PATH_ID: 12A
 HIGHER_FIELD: VII. Computation & Selection
 
@@ -1337,7 +1337,28 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
-  0
+  1
+
+SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
+  1
+
+POSITIVE_COMPUTATION_CASES:
+  1
+
+COMP_CH_001_PRECOMMIT_COMMIT:
+  68d850d77361356df5ea0beddaee8d3f5dcd0b2f
+
+COMP_CH_001_PRECOMMIT_BLOB:
+  ad7b98886af649973cf56bb3e22863b334bcd602
+
+COMP_CH_001_RESULT_COMMIT:
+  1add7ed65c874e7ca1bf8e004567a7c1785a0726
+
+COMP_CH_001_RESULT_BLOB:
+  212ee1631b0753418bc79e52aada0365b80a0365
+
+COMP_CH_001_CHECKS:
+  84/84 PASS
 
 BASELINE_COMPUTATION_CASES:
   0
@@ -1361,7 +1382,7 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable before protocol
@@ -1370,8 +1391,9 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  prospectively precommit and execute COMP-CH-001
-  first positive constructed Computation challenge
+  prospectively precommit and execute COMP-CH-002
+  negative / blocked / conflicting / underdetermined /
+  out-of-scope / partial terminal coverage
 ```
 
 Recovered source constraints are separated from prospective Computation method construction.
