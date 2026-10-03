@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-03 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261003-COMP-AMEND001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `7c1ea8efa357db16fe6c6ad9491d74964f351372`  
-Latest completed method event: **Computation Task Interface Boundary Amendment 001 — 7/7 refinements adopted / protocol freeze authorized**  
-Latest method-result commit: `a5dacd3e80544d4a5058c1497cb2062124717c72`  
+Sync epoch: `MF-SYNC-20261003-COMP-PROTOCOL01`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `bc20899a4837ef30e48b3e0e2f85d61554976c8f`  
+Latest completed method event: **Computation Protocol v0.1 frozen — G1-G18 / T1-T18**  
+Latest method-result commit: `03b1b7463af6d3a34dc3693a19933e83a3917b4d`  
 Active internal-build front: **Computation / DSD 계산론**  
-Next canonical step: **freeze executable Computation Protocol v0.1**  
+Next canonical step: **prospectively precommit and execute COMP-CH-001, the first positive constructed Computation challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,7 +63,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | active internal-build front; Boundary Amendment 001 established (7/7 refinements adopted); protocol freeze authorized; executable Protocol v0.1 next |
+| Computation | active internal-build front; Protocol v0.1 frozen (G1-G18 / T1-T18); COMP-CH-001 positive constructed challenge next |
 | Optimization | proposed |
 | Simulation | proposed |
 | Prediction | proposed |
@@ -1240,9 +1240,9 @@ Reconstruction external applications and independent validation remain deferred 
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/12_computation_optimization/computation/
 CURRENT_STATUS_FILE: methods/12_computation_optimization/computation/CURRENT_STATUS.md
-CURRENT_STATUS_COMMIT: 9906927511037908aef4365937c90a8d6c7fd1e7
-CURRENT_STATUS_BLOB: bcf6ebcdb7c491edbb0dc5702a97878fe2432f14
-README_SYNC_COMMIT: 7c1ea8efa357db16fe6c6ad9491d74964f351372
+CURRENT_STATUS_COMMIT: d91fb5d4b8cb638e5a47a5506fbaa71eef6ebf9a
+CURRENT_STATUS_BLOB: 603a7d86db809652fce320da0b6731b589fc9662
+README_SYNC_COMMIT: bc20899a4837ef30e48b3e0e2f85d61554976c8f
 LEGACY_PATH_ID: 12A
 HIGHER_FIELD: VII. Computation & Selection
 
@@ -1322,7 +1322,19 @@ PROTOCOL_FREEZE_AUTHORIZED:
   yes
 
 DEDICATED_COMPUTATION_PROTOCOL:
-  not established
+  established v0.1
+
+PROTOCOL_COMMIT:
+  03b1b7463af6d3a34dc3693a19933e83a3917b4d
+
+PROTOCOL_BLOB:
+  4c4fe0b0616371b7df6aff9ce6a1ff7636c49da4
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
   0
@@ -1349,7 +1361,7 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  boundary_amendment_complete
+  protocol_frozen
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable before protocol
@@ -1358,7 +1370,8 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  freeze executable Computation Protocol v0.1
+  prospectively precommit and execute COMP-CH-001
+  first positive constructed Computation challenge
 ```
 
 Recovered source constraints are separated from prospective Computation method construction.
