@@ -395,3 +395,39 @@ PARTIAL != BLOCKED_WITH_SOME_SUCCESS
 Freeze executable Computation Protocol v0.1.
 
 Protocol construction must use the historical Task Interface plus Boundary Amendment 001 without rewriting the historical development artifacts.
+
+
+---
+
+## Step 7 — executable Computation Protocol v0.1
+
+Canonical protocol:
+
+~~~text
+PROTOCOL_COMMIT:
+  03b1b7463af6d3a34dc3693a19933e83a3917b4d
+
+PROTOCOL_BLOB:
+  4c4fe0b0616371b7df6aff9ce6a1ff7636c49da4
+
+DEDICATED_COMPUTATION_PROTOCOL:
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  T1-T18
+~~~
+
+Protocol v0.1 operationalizes the historical Task Interface plus Boundary Amendment 001.
+
+Major executable bindings include semantic obligation vs execution action, sound omission, reuse coherence/invalidation, information-loss handoffs, resolution/error discipline, closure semantics, symbolic coverage, dynamic locality, Computation/Optimization separation, method-gain separation, comparator fairness, and frozen task-terminal precedence.
+
+The protocol freeze itself does not increment direct-pilot counters and does not establish internal standardization.
+
+## Next
+
+Prospectively precommit and execute COMP-CH-001, the first positive constructed Computation challenge.
+
+The challenge should exercise required-result/fresh-evaluation separation, valid reuse, sound omission, symbolic coverage, resolution sufficiency, a simple closure condition, an information-loss guard, and Computation/Optimization non-substitution.
