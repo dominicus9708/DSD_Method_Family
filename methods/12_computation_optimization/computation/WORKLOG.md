@@ -184,3 +184,74 @@ Draft Computation Task Interface v0.1.
 Do not freeze a Computation protocol before direct boundary attack.
 
 Once boundary attack begins, the Task Interface draft becomes immutable historical development evidence.
+
+
+---
+
+## Step 4 — Computation Task Interface v0.1 draft
+
+Canonical historical draft:
+
+~~~text
+TASK_INTERFACE_COMMIT:
+  e0376c35c9fd6c6ab2fc1a20a5bc0e329fc0fb71
+
+TASK_INTERFACE_BLOB:
+  0e307f2e6bb3b579a8bc161cb0a25bd76c28e69f
+
+TASK_INTERFACE_STATUS:
+  PRE-PROTOCOL HISTORICAL DRAFT
+  NOT AN EXECUTABLE STANDARD
+~~~
+
+The draft freezes the prospective Computation interface around:
+
+~~~text
+primary claim levels
+target/equivalence/tolerance lock
+evaluation-class representation
+typed status/applicability
+dependency interface
+required-interface status
+target relevance
+omission discipline
+reuse equivalence and invalidation
+information-loss handoffs
+resolution / approximation / error
+finite vs countable / recursive boundary
+dynamic / transition / locality boundary
+Computation vs Optimization
+complexity / performance evidence separation
+evaluation-set outcome
+primary status
+task terminal
+soundness-obligation ledger
+C1-C18 binding-operation draft
+five-interface identity
+core guards
+~~~
+
+Primary guard family includes:
+
+~~~text
+ONE_FAILED_BRANCH != GLOBAL_PRUNING_LICENSE
+OUTPUT_EQUALITY != SOURCE_EQUIVALENCE
+AGGREGATE_EQUALITY != CACHE_EQUIVALENCE
+OMITTED != PROVED_IRRELEVANT
+FORMATION_STAGE_ORDER != RUNTIME_SCHEDULE
+FINITE_PROPAGATION_BOUND != UNIVERSAL_DSD_PRUNING_RULE
+LOWER_RESOLUTION != SAFE_COMPUTATION
+FINITE_CORRECTNESS != COUNTABLE_CORRECTNESS
+SOUND_PRUNING != COMPLEXITY_IMPROVEMENT
+COMPUTATION != OPTIMIZATION
+COMPUTATION_PLAN != SIMULATION_EXECUTION
+NO_GAIN != METHOD_FAILURE
+~~~
+
+The draft is prospective method construction, not a theorem of the predecessor papers.
+
+## Next
+
+Execute a serious pre-protocol boundary attack against the frozen historical draft.
+
+Once the boundary attack begins, `TASK_INTERFACE_v0.1-draft.md` must not be rewritten.
