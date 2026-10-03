@@ -1,6 +1,6 @@
 # Computation Current Status — source / registry recovery checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — SOURCE / REGISTRY RECOVERY COMPLETE / TASK INTERFACE NEXT**  
+Status: **ACTIVE INTERNAL BUILD — TASK INTERFACE v0.1 ESTABLISHED / BOUNDARY ATTACK NEXT**  
 Date: **2026-10-03**
 
 ~~~text
@@ -38,7 +38,13 @@ PLANNING_LANE:
   established
 
 TASK_INTERFACE_DRAFT:
-  not established
+  v0.1 established
+
+TASK_INTERFACE_COMMIT:
+  e0376c35c9fd6c6ab2fc1a20a5bc0e329fc0fb71
+
+TASK_INTERFACE_BLOB:
+  0e307f2e6bb3b579a8bc161cb0a25bd76c28e69f
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
   0
@@ -77,7 +83,7 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  source_and_registry_recovery_complete
+  source_and_interface_recovery
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable before protocol
@@ -86,8 +92,8 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  draft Computation Task Interface v0.1
-  from SOURCE_REGISTRY_v0.1
+  execute serious pre-protocol boundary attack
+  against frozen TASK_INTERFACE_v0.1-draft.md
 ~~~
 
 Recovered source-derived constraint family:
