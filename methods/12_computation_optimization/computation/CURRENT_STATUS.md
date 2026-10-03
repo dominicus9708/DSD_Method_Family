@@ -1,6 +1,6 @@
-# Computation Current Status — source / registry recovery checkpoint
+# Computation Current Status — pre-protocol boundary attack checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — TASK INTERFACE v0.1 ESTABLISHED / BOUNDARY ATTACK NEXT**  
+Status: **ACTIVE INTERNAL BUILD — BOUNDARY ATTACK COMPLETE / AMENDMENT 001 NEXT**  
 Date: **2026-10-03**
 
 ~~~text
@@ -19,35 +19,44 @@ SOURCE_REGISTRY_COMMIT:
 SOURCE_REGISTRY_BLOB:
   6f5ad5731ee82fc9a6561a39ff6d66fc4bd82461
 
-PLANNING_COMMIT:
-  f6c6a3e57b132909125c2bc3b6ee59c3a1643a88
-
-PLANNING_BLOB:
-  c6e21a2562765aa181889bb0b1e577e18bbf2f3e
-
-WORKLOG_COMMIT:
-  0a0fd9bc1d4431f29c6a51d6d45ee77abff0ba5c
-
-WORKLOG_BLOB:
-  5da60993a0d77a06d961e763018a34446aa6ef8f
-
-SOURCE_REGISTRY_RECOVERY:
-  complete
-
-PLANNING_LANE:
-  established
-
-TASK_INTERFACE_DRAFT:
-  v0.1 established
-
 TASK_INTERFACE_COMMIT:
   e0376c35c9fd6c6ab2fc1a20a5bc0e329fc0fb71
 
 TASK_INTERFACE_BLOB:
   0e307f2e6bb3b579a8bc161cb0a25bd76c28e69f
 
+BOUNDARY_ATTACK_COMMIT:
+  addbcb62647e5dca82255d9bd978eee9ec76b8c1
+
+BOUNDARY_ATTACK_BLOB:
+  8e1ea692251835b1cb58c68f6598d9f8f7695e86
+
+SOURCE_REGISTRY_RECOVERY:
+  complete
+
+TASK_INTERFACE_DRAFT:
+  v0.1 historical draft preserved
+
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  11
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  7
+
+BOUNDARY_COLLAPSE_FOUND:
   0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_001:
+  not yet established
+
+REFINEMENT_GROUPS_REQUIRED:
+  7
 
 DEDICATED_COMPUTATION_PROTOCOL:
   not established
@@ -83,33 +92,19 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  source_and_interface_recovery
+  pre_protocol_boundary_attack_complete
 
 PROTOCOL_REVISION_REQUIRED:
-  not applicable before protocol
+  not applicable pre-protocol
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  execute serious pre-protocol boundary attack
-  against frozen TASK_INTERFACE_v0.1-draft.md
+  establish Computation Task Interface Boundary Amendment 001
+  binding R1-R7 before protocol freeze
 ~~~
 
-Recovered source-derived constraint family:
+Method identity survived the boundary attack.
 
-~~~text
-CR-01 through CR-16
-~~~
-
-Key limits:
-
-~~~text
-COMPUTATION != OPTIMIZATION
-SOUND_PRUNING != COMPLEXITY_IMPROVEMENT
-OUTPUT_EQUALITY != SOURCE_EQUIVALENCE
-OMITTED != PROVED_IRRELEVANT
-FINITE_PROPAGATION_BOUND != UNIVERSAL_DSD_PRUNING_RULE
-~~~
-
-No Computation protocol, direct pilot, baseline, retrace, external application, or independent validation is established at this checkpoint.
+No executable Computation protocol may be frozen before the required prospective Amendment is established.
