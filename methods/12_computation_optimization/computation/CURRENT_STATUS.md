@@ -1,6 +1,6 @@
-# Computation Current Status — pre-protocol boundary attack checkpoint
+# Computation Current Status — Boundary Amendment 001 checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — BOUNDARY ATTACK COMPLETE / AMENDMENT 001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — BOUNDARY AMENDMENT 001 ESTABLISHED / PROTOCOL v0.1 NEXT**  
 Date: **2026-10-03**
 
 ~~~text
@@ -31,6 +31,12 @@ BOUNDARY_ATTACK_COMMIT:
 BOUNDARY_ATTACK_BLOB:
   8e1ea692251835b1cb58c68f6598d9f8f7695e86
 
+AMENDMENT_COMMIT:
+  a5dacd3e80544d4a5058c1497cb2062124717c72
+
+AMENDMENT_BLOB:
+  1490548c203f70db5054007a27456e2073f1a7da
+
 SOURCE_REGISTRY_RECOVERY:
   complete
 
@@ -53,10 +59,19 @@ FUNDAMENTAL_INTERFACE_FAILURE:
   0
 
 BOUNDARY_AMENDMENT_001:
-  not yet established
+  established
 
-REFINEMENT_GROUPS_REQUIRED:
-  7
+REFINEMENT_GROUPS_ADOPTED:
+  7/7
+
+METHOD_IDENTITY_CHANGED:
+  no
+
+TASK_INTERFACE_CORE_REOPENED:
+  no
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
 
 DEDICATED_COMPUTATION_PROTOCOL:
   not established
@@ -92,7 +107,7 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  pre_protocol_boundary_attack_complete
+  boundary_amendment_complete
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable pre-protocol
@@ -101,10 +116,15 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  establish Computation Task Interface Boundary Amendment 001
-  binding R1-R7 before protocol freeze
+  freeze executable Computation Protocol v0.1
+  from Source Registry + historical Task Interface
+  + boundary attack + Boundary Amendment 001
 ~~~
 
-Method identity survived the boundary attack.
+The Amendment does not validate the future protocol.
 
-No executable Computation protocol may be frozen before the required prospective Amendment is established.
+~~~text
+BOUNDARY_AMENDMENT != PROTOCOL_VALIDATION
+PROTOCOL_FREEZE_AUTHORIZED != PROTOCOL_INTERNALLY_STANDARDIZED
+SOUND_COMPUTATION_PLAN != COMPUTATIONAL_GAIN
+~~~
