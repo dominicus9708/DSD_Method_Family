@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-03 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261003-COMP-TASK01`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `7fc2bacab17f12920175410d4e00ccaa823099e0`  
-Latest completed method event: **Computation Task Interface v0.1 historical draft established**  
-Latest method-result commit: `b72f90d7c8948fc644a639ab11d2cb8a16eccccc`  
+Sync epoch: `MF-SYNC-20261003-COMP-BOUNDARY01`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `9bdf3fe03ef0e6344cab278525125940ae36fee7`  
+Latest completed method event: **Computation pre-protocol boundary attack — 18 attacks / 11 preserved / 7 nonbreaking refinements / 0 collapse**  
+Latest method-result commit: `addbcb62647e5dca82255d9bd978eee9ec76b8c1`  
 Active internal-build front: **Computation / DSD 계산론**  
-Next canonical step: **execute serious pre-protocol boundary attack against frozen Computation Task Interface v0.1**  
+Next canonical step: **establish Computation Task Interface Boundary Amendment 001 binding R1-R7 before protocol freeze**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,7 +63,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | active internal-build front; Task Interface v0.1 historical draft established; serious pre-protocol boundary attack next; no dedicated protocol yet |
+| Computation | active internal-build front; pre-protocol boundary attack complete (18 attacks, 11 preserved, 7 nonbreaking refinements, 0 collapse); Boundary Amendment 001 next; no dedicated protocol yet |
 | Optimization | proposed |
 | Simulation | proposed |
 | Prediction | proposed |
@@ -1240,9 +1240,9 @@ Reconstruction external applications and independent validation remain deferred 
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/12_computation_optimization/computation/
 CURRENT_STATUS_FILE: methods/12_computation_optimization/computation/CURRENT_STATUS.md
-CURRENT_STATUS_COMMIT: 149f3b4276a1293d86306dc038f43c56906983b7
-CURRENT_STATUS_BLOB: 95af7234ca59c7604d007aeea9297a8903727dea
-README_SYNC_COMMIT: 7fc2bacab17f12920175410d4e00ccaa823099e0
+CURRENT_STATUS_COMMIT: 6045f43234ba26b31634367eaaefa13bad1c3dfe
+CURRENT_STATUS_BLOB: c7035bdd01ae292cfc4e7e1473b6034c55578563
+README_SYNC_COMMIT: 9bdf3fe03ef0e6344cab278525125940ae36fee7
 LEGACY_PATH_ID: 12A
 HIGHER_FIELD: VII. Computation & Selection
 
@@ -1283,7 +1283,31 @@ TASK_INTERFACE_BLOB:
   0e307f2e6bb3b579a8bc161cb0a25bd76c28e69f
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  18
+
+BOUNDARY_ATTACK_COMMIT:
+  addbcb62647e5dca82255d9bd978eee9ec76b8c1
+
+BOUNDARY_ATTACK_BLOB:
+  8e1ea692251835b1cb58c68f6598d9f8f7695e86
+
+PRESERVED_NO_REFINEMENT:
+  11
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  7
+
+BOUNDARY_COLLAPSE_FOUND:
   0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+
+BOUNDARY_AMENDMENT_001:
+  not yet established
+
+REFINEMENT_GROUPS_REQUIRED:
+  7
 
 DEDICATED_COMPUTATION_PROTOCOL:
   not established
@@ -1313,7 +1337,7 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  source_and_interface_recovery
+  pre_protocol_boundary_attack_complete
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable before protocol
@@ -1322,8 +1346,8 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  execute serious pre-protocol boundary attack
-  against frozen TASK_INTERFACE_v0.1-draft.md
+  establish Computation Task Interface Boundary Amendment 001
+  binding R1-R7 before protocol freeze
 ```
 
 Recovered source constraints are separated from prospective Computation method construction.
