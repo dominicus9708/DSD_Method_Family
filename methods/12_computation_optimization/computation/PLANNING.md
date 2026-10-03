@@ -1,6 +1,6 @@
 # DSD Computation — Planning / Validation Roadmap
 
-Status: **PROTOCOL v0.1 FROZEN — POSITIVE CONSTRUCTED CHALLENGE NEXT**  
+Status: **VALIDATION IN PROGRESS — COMP-CH-001 84/84 PASS / COMP-CH-002 NEXT**  
 Date: **2026-10-03**  
 Method: **Computation / DSD 계산론**  
 Legacy path ID: `12A`  
@@ -286,10 +286,10 @@ DEDICATED_COMPUTATION_PROTOCOL:
   not established
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
-  0
+  1
 
 SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
-  0
+  1
 
 METHOD_BOUNDARY_COMPUTATION_CASES:
   0
@@ -316,7 +316,7 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED:
   no
@@ -327,6 +327,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Prospectively precommit and execute COMP-CH-001, the first positive constructed Computation challenge.
+Prospectively precommit and execute COMP-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
 
-The challenge must use Protocol v0.1 without rewriting it.
+COMP-CH-001 remains immutable positive constructed evidence.
