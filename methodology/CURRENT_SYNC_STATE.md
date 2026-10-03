@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-03 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261003-RECON-AUD001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `9f17856d842aa996dffb3f09caf318fd0f2657c7`  
-Latest completed method event: **RECON-AUD-001 frozen-axis internal-standardization audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
+Sync epoch: `MF-SYNC-20261003-COMP-SOURCE01`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `25e3f84b1c87c8bde698e45146b0d969b42ff7f2`  
+Latest completed method event: **Computation source / registry recovery complete — planning/worklog lane established**  
 Latest method-result commit: `b72f90d7c8948fc644a639ab11d2cb8a16eccccc`  
 Active internal-build front: **Computation / DSD 계산론**  
-Next canonical step: **recover Computation source/registry constraints and establish Computation planning/worklog lane**  
+Next canonical step: **draft Computation Task Interface v0.1 from SOURCE_REGISTRY_v0.1**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,7 +63,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | active internal-build front; source/registry recovery and planning next; no dedicated protocol yet |
+| Computation | active internal-build front; source/registry recovery complete; planning/worklog lane established; Task Interface v0.1 next; no dedicated protocol yet |
 | Optimization | proposed |
 | Simulation | proposed |
 | Prediction | proposed |
@@ -1239,27 +1239,95 @@ Reconstruction external applications and independent validation remain deferred 
 ```text
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/12_computation_optimization/computation/
+CURRENT_STATUS_FILE: methods/12_computation_optimization/computation/CURRENT_STATUS.md
+CURRENT_STATUS_COMMIT: aefe09288d88ea67b38e67e31e73bd1dcc3c315a
+CURRENT_STATUS_BLOB: 9d3ba44a110dd4420049a8082ca46815b8a5ed5a
+README_SYNC_COMMIT: 25e3f84b1c87c8bde698e45146b0d969b42ff7f2
 LEGACY_PATH_ID: 12A
 HIGHER_FIELD: VII. Computation & Selection
 
+SOURCE_REGISTRY_RECOVERY:
+  complete
+
+SOURCE_REGISTRY_COMMIT:
+  af9951011d999aef3c29a2beba6093983c1546f6
+
+SOURCE_REGISTRY_BLOB:
+  6f5ad5731ee82fc9a6561a39ff6d66fc4bd82461
+
+SOURCE_DERIVED_CONSTRAINTS:
+  CR-01 through CR-16
+
+PLANNING_LANE:
+  established
+
+PLANNING_COMMIT:
+  f6c6a3e57b132909125c2bc3b6ee59c3a1643a88
+
+PLANNING_BLOB:
+  c6e21a2562765aa181889bb0b1e577e18bbf2f3e
+
+WORKLOG_COMMIT:
+  0a0fd9bc1d4431f29c6a51d6d45ee77abff0ba5c
+
+WORKLOG_BLOB:
+  5da60993a0d77a06d961e763018a34446aa6ef8f
+
+TASK_INTERFACE_DRAFT:
+  not established
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  0
+
 DEDICATED_COMPUTATION_PROTOCOL:
+  not established
+
+DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
+  0
+
+BASELINE_COMPUTATION_CASES:
+  0
+
+NO_GAIN_COMPUTATION_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+
+EXTERNAL_COMPUTATION_APPLICATIONS:
+  0
+
+INDEPENDENT_COMPUTATION_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
   not established
 
 COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  pre_source_registry_recovery
+  source_and_registry_recovery_complete
+
+PROTOCOL_REVISION_REQUIRED:
+  not applicable before protocol
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
 
 NEXT_CANONICAL_STEP:
-  recover Computation source/registry constraints
-  separate source-derived constraints from prospective method construction
-  establish Computation planning/worklog lane
+  draft Computation Task Interface v0.1
+  from SOURCE_REGISTRY_v0.1
 ```
 
-The active-front handoff does not transfer Reconstruction validation into Computation evidence.
+Recovered source constraints are separated from prospective Computation method construction.
 
 ```text
-RECONSTRUCTION_INTERNAL_STANDARDIZATION != COMPUTATION_VALIDATION
+COMPUTATION != OPTIMIZATION
+SOUND_PRUNING != COMPLEXITY_IMPROVEMENT
+OUTPUT_EQUALITY != SOURCE_EQUIVALENCE
+OMITTED != PROVED_IRRELEVANT
 RECONSTRUCTION_EVIDENCE != COMPUTATION_EVIDENCE_BY_DEFAULT
 ```
+
+No Computation protocol may be frozen before a serious pre-protocol boundary attack.
