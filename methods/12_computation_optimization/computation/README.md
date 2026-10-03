@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — source/registry recovery complete / Task Interface next**
+Status: **active internal-build front — Task Interface v0.1 established / boundary attack next**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -74,7 +74,13 @@ PLANNING_LANE:
   established
 
 TASK_INTERFACE_DRAFT:
-  not established
+  v0.1 established
+
+TASK_INTERFACE_COMMIT:
+  e0376c35c9fd6c6ab2fc1a20a5bc0e329fc0fb71
+
+TASK_INTERFACE_BLOB:
+  0e307f2e6bb3b579a8bc161cb0a25bd76c28e69f
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
   0
@@ -83,7 +89,7 @@ DEDICATED_COMPUTATION_PROTOCOL:
   not established
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  source_and_registry_recovery_complete
+  source_and_interface_recovery
 ~~~
 
 Recovered source-derived constraints are recorded as `CR-01~CR-16`.
@@ -105,6 +111,6 @@ The recovered source constraints do not themselves validate Computation as a met
 
 ## Next canonical step
 
-Draft **Computation Task Interface v0.1** from `SOURCE_REGISTRY_v0.1.md`.
+Execute a serious pre-protocol boundary attack against **Computation Task Interface v0.1**.
 
-Do not freeze a Computation protocol before a serious pre-protocol boundary attack.
+The historical Task Interface draft must not be rewritten once boundary attack begins; any required refinement must be recorded in a separate prospective amendment.
