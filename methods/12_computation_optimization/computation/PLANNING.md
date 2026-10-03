@@ -1,6 +1,6 @@
 # DSD Computation — Planning / Validation Roadmap
 
-Status: **SOURCE / REGISTRY RECOVERY COMPLETE — TASK INTERFACE NEXT**  
+Status: **TASK INTERFACE v0.1 ESTABLISHED — PRE-PROTOCOL BOUNDARY ATTACK NEXT**  
 Date: **2026-10-03**  
 Method: **Computation / DSD 계산론**  
 Legacy path ID: `12A`  
@@ -19,7 +19,7 @@ SOURCE_REGISTRY_RECOVERY:
   complete
 
 TASK_INTERFACE_DRAFT:
-  not established
+  v0.1 established
 
 DEDICATED_COMPUTATION_PROTOCOL:
   not established
@@ -61,7 +61,7 @@ The target is a sound evaluation plan, not automatically a globally minimal-cost
 2. ✅ Computation source / registry recovery
 3. ✅ source-derived constraints separated from prospective method construction
 4. ✅ Computation planning / worklog lane
-5. ⏸ Computation Task Interface v0.1 draft
+5. ✅ Computation Task Interface v0.1 draft
 6. ⏸ serious pre-protocol boundary attack
 7. ⏸ Task Interface Boundary Amendment 001 if required
 8. ⏸ executable Computation Protocol v0.1
@@ -274,7 +274,7 @@ COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
-  source_and_registry_recovery_complete
+  source_and_interface_recovery
 
 PROTOCOL_REVISION_REQUIRED:
   not applicable before protocol
@@ -285,6 +285,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Draft Computation Task Interface v0.1 from the source registry.
+Freeze the current Task Interface v0.1 draft as historical development evidence and execute a serious pre-protocol boundary attack.
 
-Once the boundary attack begins, the Task Interface draft must become immutable historical development evidence; any refinements must go into a separate prospective amendment.
+The boundary attack must not rewrite the Task Interface draft; any required refinement must be recorded prospectively in a separate amendment.
