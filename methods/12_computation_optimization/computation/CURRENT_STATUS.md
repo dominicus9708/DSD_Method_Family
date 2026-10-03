@@ -1,0 +1,109 @@
+# Computation Current Status — source / registry recovery checkpoint
+
+Status: **ACTIVE INTERNAL BUILD — SOURCE / REGISTRY RECOVERY COMPLETE / TASK INTERFACE NEXT**  
+Date: **2026-10-03**
+
+~~~text
+CURRENT_PATH:
+  methods/12_computation_optimization/computation/
+
+LEGACY_PATH_ID:
+  12A
+
+HIGHER_FIELD:
+  VII. Computation & Selection
+
+SOURCE_REGISTRY_COMMIT:
+  af9951011d999aef3c29a2beba6093983c1546f6
+
+SOURCE_REGISTRY_BLOB:
+  6f5ad5731ee82fc9a6561a39ff6d66fc4bd82461
+
+PLANNING_COMMIT:
+  f6c6a3e57b132909125c2bc3b6ee59c3a1643a88
+
+PLANNING_BLOB:
+  c6e21a2562765aa181889bb0b1e577e18bbf2f3e
+
+WORKLOG_COMMIT:
+  0a0fd9bc1d4431f29c6a51d6d45ee77abff0ba5c
+
+WORKLOG_BLOB:
+  5da60993a0d77a06d961e763018a34446aa6ef8f
+
+SOURCE_REGISTRY_RECOVERY:
+  complete
+
+PLANNING_LANE:
+  established
+
+TASK_INTERFACE_DRAFT:
+  not established
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  0
+
+DEDICATED_COMPUTATION_PROTOCOL:
+  not established
+
+DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
+  0
+
+SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
+  0
+
+METHOD_BOUNDARY_COMPUTATION_CASES:
+  0
+
+BASELINE_COMPUTATION_CASES:
+  0
+
+NO_GAIN_COMPUTATION_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+
+EXTERNAL_COMPUTATION_APPLICATIONS:
+  0
+
+INDEPENDENT_COMPUTATION_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+
+COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_COMPUTATION_EVIDENCE_STATUS:
+  source_and_registry_recovery_complete
+
+PROTOCOL_REVISION_REQUIRED:
+  not applicable before protocol
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+
+NEXT_CANONICAL_STEP:
+  draft Computation Task Interface v0.1
+  from SOURCE_REGISTRY_v0.1
+~~~
+
+Recovered source-derived constraint family:
+
+~~~text
+CR-01 through CR-16
+~~~
+
+Key limits:
+
+~~~text
+COMPUTATION != OPTIMIZATION
+SOUND_PRUNING != COMPLEXITY_IMPROVEMENT
+OUTPUT_EQUALITY != SOURCE_EQUIVALENCE
+OMITTED != PROVED_IRRELEVANT
+FINITE_PROPAGATION_BOUND != UNIVERSAL_DSD_PRUNING_RULE
+~~~
+
+No Computation protocol, direct pilot, baseline, retrace, external application, or independent validation is established at this checkpoint.
