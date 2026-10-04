@@ -1,6 +1,6 @@
 # DSD Computation — Planning / Validation Roadmap
 
-Status: **VALIDATION IN PROGRESS — COMP-CH-001 84/84 PASS / COMP-CH-002 NEXT**  
+Status: **VALIDATION IN PROGRESS — COMP-CH-002 80/80 PASS / DIRECT METHOD-BOUNDARY CHALLENGE NEXT**  
 Date: **2026-10-03**  
 Method: **Computation / DSD 계산론**  
 Legacy path ID: `12A`  
@@ -286,10 +286,10 @@ DEDICATED_COMPUTATION_PROTOCOL:
   not established
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
-  1
+  2
 
 METHOD_BOUNDARY_COMPUTATION_CASES:
   0
@@ -327,6 +327,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Prospectively precommit and execute COMP-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
+Prospectively precommit and execute COMP-CH-003, the direct neighboring-method boundary challenge.
 
-COMP-CH-001 remains immutable positive constructed evidence.
+COMP-CH-001 and COMP-CH-002 remain immutable evidence.
