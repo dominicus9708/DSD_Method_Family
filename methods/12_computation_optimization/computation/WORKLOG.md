@@ -525,3 +525,66 @@ The result is internal constructed evidence only.
 ## Next
 
 Prospectively precommit and execute COMP-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
+
+
+---
+
+## Step 9 — COMP-CH-002 terminal coverage
+
+Prospective precommit:
+
+~~~text
+PRECOMMIT_COMMIT:
+  4b2c1478a1776ba5aeb5fb4d897a3ea4ca1e8bde
+
+PRECOMMIT_BLOB:
+  b988deeff6500175682e120abb1436d3672dfeec
+~~~
+
+Execution result:
+
+~~~text
+RESULT_COMMIT:
+  6bb4f83f7c5d31517eb1ed34ece0be9b42754470
+
+RESULT_BLOB:
+  31bacacccffebedf6679fb2587ca745eda2e469a
+
+CHECKS:
+  80/80 PASS
+
+NEGATIVE_OR_UNRESOLVED_COMPUTATION_CASES:
+  1
+
+ALL_SEVEN_COMPUTATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Directly exercised:
+
+~~~text
+COMPUTATION_TASK_NOT_ESTABLISHED
+COMPUTATION_TASK_BLOCKED
+COMPUTATION_TASK_CONFLICTING
+COMPUTATION_TASK_OUT_OF_SCOPE
+COMPUTATION_TASK_UNDERDETERMINED
+COMPUTATION_TASK_PARTIAL
+~~~
+
+Together with COMP-CH-001:
+
+~~~text
+COMPUTATION_TASK_ESTABLISHED
+~~~
+
+all seven task terminals have now been directly exercised.
+
+## Next
+
+Prospectively precommit and execute COMP-CH-003, the direct neighboring-method boundary challenge.
