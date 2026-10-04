@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-04 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261004-COMP-CH002`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `319f1465712823aec9eae65050a0c3f0d6d95250`  
-Latest completed method event: **COMP-CH-002 terminal coverage — 80/80 PASS / all seven Computation task terminals directly exercised**  
-Latest method-result commit: `6bb4f83f7c5d31517eb1ed34ece0be9b42754470`  
+Sync epoch: `MF-SYNC-20261004-COMP-CH003`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `9a84bccca5538c4ca0cd4f7bb6f50ff3d6cf6b24`  
+Latest completed method event: **COMP-CH-003 direct neighboring-method boundary challenge — 99/99 PASS / 11 pairs / 0 exact collapse**  
+Latest method-result commit: `be3b6092b553f90c34c37d3cde3fde8dc42f845d`  
 Active internal-build front: **Computation / DSD 계산론**  
-Next canonical step: **prospectively precommit and execute COMP-CH-003 direct neighboring-method boundary challenge**  
+Next canonical step: **prospectively precommit and execute COMP-CH-004 fair competent non-DSD Computation baseline**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,7 +63,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | active internal-build front; COMP-CH-001 84/84 PASS; COMP-CH-002 80/80 PASS; all seven task terminals directly exercised; COMP-CH-003 direct method-boundary challenge next |
+| Computation | active internal-build front; COMP-CH-001 84/84 PASS; COMP-CH-002 80/80 PASS; COMP-CH-003 99/99 PASS; 11 neighboring pairs tested with 0 exact collapse; COMP-CH-004 competent baseline next |
 | Optimization | proposed |
 | Simulation | proposed |
 | Prediction | proposed |
@@ -1240,9 +1240,9 @@ Reconstruction external applications and independent validation remain deferred 
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/12_computation_optimization/computation/
 CURRENT_STATUS_FILE: methods/12_computation_optimization/computation/CURRENT_STATUS.md
-CURRENT_STATUS_COMMIT: 055a9cfc389e4e966f4c35340f885cced0e5aaf8
-CURRENT_STATUS_BLOB: ca7d059610fc20d911aa248edd7440cf980b588d
-README_SYNC_COMMIT: 319f1465712823aec9eae65050a0c3f0d6d95250
+CURRENT_STATUS_COMMIT: f31b314161d1ba133d3ee4776570adb4bb5c3983
+CURRENT_STATUS_BLOB: 4cbe9398c865d1fb4b45cf96ded0459c997ddeb1
+README_SYNC_COMMIT: 9a84bccca5538c4ca0cd4f7bb6f50ff3d6cf6b24
 LEGACY_PATH_ID: 12A
 HIGHER_FIELD: VII. Computation & Selection
 
@@ -1262,16 +1262,16 @@ PLANNING_LANE:
   established
 
 PLANNING_COMMIT:
-  f6c6a3e57b132909125c2bc3b6ee59c3a1643a88
+  b6a792fd8caab360988d102068b0959c7e52fef3
 
 PLANNING_BLOB:
-  c6e21a2562765aa181889bb0b1e577e18bbf2f3e
+  df4aa973394a3b01ef9dd20a6d99d9ba232077a8
 
 WORKLOG_COMMIT:
-  0a0fd9bc1d4431f29c6a51d6d45ee77abff0ba5c
+  a670a0e03c3e1ecaccc6da3a5f72f9febc4c9fa5
 
 WORKLOG_BLOB:
-  5da60993a0d77a06d961e763018a34446aa6ef8f
+  7308314d0b7e1862ffbb424df2b97e9430b50acf
 
 TASK_INTERFACE_DRAFT:
   v0.1 established
@@ -1337,10 +1337,10 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
-  2
+  3
 
 SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
-  2
+  3
 
 POSITIVE_COMPUTATION_CASES:
   1
@@ -1378,6 +1378,39 @@ COMP_CH_002_RESULT_BLOB:
 COMP_CH_002_CHECKS:
   80/80 PASS
 
+COMP_CH_003_PRECOMMIT_COMMIT:
+  8680891f4ce4c31c8e0881ecfc43b794596a2232
+
+COMP_CH_003_PRECOMMIT_BLOB:
+  000bc019a89282679d90ba5e18705425b2a66fe3
+
+COMP_CH_003_RESULT_COMMIT:
+  be3b6092b553f90c34c37d3cde3fde8dc42f845d
+
+COMP_CH_003_RESULT_BLOB:
+  fe1e9003cab0c213b0efdafd2aa1cb52c738c9d0
+
+COMP_CH_003_CHECKS:
+  99/99 PASS
+
+METHOD_BOUNDARY_COMPUTATION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+
 BASELINE_COMPUTATION_CASES:
   0
 
@@ -1403,14 +1436,14 @@ CURRENT_COMPUTATION_EVIDENCE_STATUS:
   validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED:
-  not applicable before protocol
+  no
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  prospectively precommit and execute COMP-CH-003
-  direct neighboring-method boundary challenge
+  prospectively precommit and execute COMP-CH-004
+  fair competent non-DSD Computation baseline
 ```
 
 Recovered source constraints are separated from prospective Computation method construction.
