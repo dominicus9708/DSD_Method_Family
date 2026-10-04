@@ -588,3 +588,32 @@ all seven task terminals have now been directly exercised.
 ## Next
 
 Prospectively precommit and execute COMP-CH-003, the direct neighboring-method boundary challenge.
+
+
+---
+
+## Step 10 — COMP-CH-003 direct neighboring-method boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT: 8680891f4ce4c31c8e0881ecfc43b794596a2232
+PRECOMMIT_BLOB: 000bc019a89282679d90ba5e18705425b2a66fe3
+RESULT_COMMIT: be3b6092b553f90c34c37d3cde3fde8dc42f845d
+RESULT_BLOB: fe1e9003cab0c213b0efdafd2aa1cb52c738c9d0
+CHECKS: 99/99 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED: 11
+EXACT_COLLAPSE_PAIRS: 0
+UNRESOLVED_BOUNDARY_PAIRS: 0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS: 11
+BOUNDARY_STATUS: FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+SOURCE_HANDOFF_SEPARATION: established_at_fixture_level
+PROTOCOL_REVISION_REQUIRED: no
+SHARED_CORE_REOPEN_REQUIRED: no
+~~~
+
+Compared neighbors: Optimization, Aggregation, Compression, Analysis, Measurement, Simulation, Prediction, Transformation, Audit, Tracking, and Lineage.
+
+All eleven pair results were PARTIAL_OVERLAP_NOT_COLLAPSE.
+
+## Next
+
+Prospectively precommit and execute COMP-CH-004, a fair competent non-DSD Computation baseline challenge. The baseline may validly produce COMPUTATION_NO_GAIN.
