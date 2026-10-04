@@ -3,7 +3,7 @@
 Synchronized: **2026-10-04 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
 Sync epoch: `MF-SYNC-20261004-COMP-CH003`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `9a84bccca5538c4ca0cd4f7bb6f50ff3d6cf6b24`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `d113fc85ab414fe87a292debe662e788f91d6099`  
 Latest completed method event: **COMP-CH-003 direct neighboring-method boundary challenge — 99/99 PASS / 11 pairs / 0 exact collapse**  
 Latest method-result commit: `be3b6092b553f90c34c37d3cde3fde8dc42f845d`  
 Active internal-build front: **Computation / DSD 계산론**  
@@ -1262,10 +1262,10 @@ PLANNING_LANE:
   established
 
 PLANNING_COMMIT:
-  b6a792fd8caab360988d102068b0959c7e52fef3
+  d113fc85ab414fe87a292debe662e788f91d6099
 
 PLANNING_BLOB:
-  df4aa973394a3b01ef9dd20a6d99d9ba232077a8
+  c6e712a1d17984c8166a61949000e9caa1a54bed
 
 WORKLOG_COMMIT:
   a670a0e03c3e1ecaccc6da3a5f72f9febc4c9fa5
