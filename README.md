@@ -11,7 +11,7 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 - [`methodology/CURRENT_SYNC_STATE.md`](methodology/CURRENT_SYNC_STATE.md) — Notion·GitHub·프로젝트 채팅을 교차 복원한 **2026-10-04 KST** 현재 상태 체크포인트.
 - [`methodology/LIVE_SYNC_POLICY.md`](methodology/LIVE_SYNC_POLICY.md) — 상태 변화가 발생한 같은 작업 단위에서 GitHub와 Notion을 함께 갱신하는 필수 실시간 동기화 규칙.
 - Current sync epoch: `MF-SYNC-20261004-COMP-CH003`
-- Latest claim-relevant source checkpoint at adoption: `9a84bccca5538c4ca0cd4f7bb6f50ff3d6cf6b24`
+- Latest claim-relevant source checkpoint at adoption: `d113fc85ab414fe87a292debe662e788f91d6099`
 - Latest completed method event: **COMP-CH-003 direct neighboring-method boundary challenge — 99/99 PASS / 11 pairs / 0 exact collapse**.
 - Next canonical step: **prospectively precommit and execute COMP-CH-004 fair competent non-DSD Computation baseline**.
 - Canonical Notion sync page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
