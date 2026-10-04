@@ -1,7 +1,7 @@
-# Computation Current Status — COMP-CH-001 checkpoint
+# Computation Current Status — COMP-CH-002 checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — COMP-CH-001 84/84 PASS / COMP-CH-002 NEXT**  
-Date: **2026-10-03**
+Status: **ACTIVE INTERNAL BUILD — COMP-CH-002 80/80 PASS / COMP-CH-003 NEXT**  
+Date: **2026-10-04**
 
 ~~~text
 CURRENT_PATH:
@@ -19,12 +19,6 @@ PROTOCOL_COMMIT:
 PROTOCOL_BLOB:
   4c4fe0b0616371b7df6aff9ce6a1ff7636c49da4
 
-COMP_CH_001_PRECOMMIT_COMMIT:
-  68d850d77361356df5ea0beddaee8d3f5dcd0b2f
-
-COMP_CH_001_PRECOMMIT_BLOB:
-  ad7b98886af649973cf56bb3e22863b334bcd602
-
 COMP_CH_001_RESULT_COMMIT:
   1add7ed65c874e7ca1bf8e004567a7c1785a0726
 
@@ -33,6 +27,21 @@ COMP_CH_001_RESULT_BLOB:
 
 COMP_CH_001_CHECKS:
   84/84 PASS
+
+COMP_CH_002_PRECOMMIT_COMMIT:
+  4b2c1478a1776ba5aeb5fb4d897a3ea4ca1e8bde
+
+COMP_CH_002_PRECOMMIT_BLOB:
+  b988deeff6500175682e120abb1436d3672dfeec
+
+COMP_CH_002_RESULT_COMMIT:
+  6bb4f83f7c5d31517eb1ed34ece0be9b42754470
+
+COMP_CH_002_RESULT_BLOB:
+  31bacacccffebedf6679fb2587ca745eda2e469a
+
+COMP_CH_002_CHECKS:
+  80/80 PASS
 
 DEDICATED_COMPUTATION_PROTOCOL:
   established v0.1
@@ -44,16 +53,19 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
-  1
+  2
 
 POSITIVE_COMPUTATION_CASES:
   1
 
 NEGATIVE_OR_UNRESOLVED_COMPUTATION_CASES:
-  0
+  1
+
+ALL_SEVEN_COMPUTATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 METHOD_BOUNDARY_COMPUTATION_CASES:
   0
@@ -89,28 +101,16 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  prospectively precommit and execute COMP-CH-002
-  negative / blocked / conflicting / underdetermined /
-  out-of-scope / partial terminal coverage
+  prospectively precommit and execute COMP-CH-003
+  direct neighboring-method boundary challenge
 ~~~
 
-COMP-CH-001 directly exercised:
+COMP-CH-002 preserved:
 
 ~~~text
-required-result vs fresh-evaluation separation
-valid reuse
-sound omission
-finite-DAG closure
-symbolic full-class discharge
-resolution sufficiency
-information-loss guard
-Computation / Optimization non-substitution
-~~~
-
-Interpretation limits remain:
-
-~~~text
-POSITIVE_CONSTRUCTED_PASS != EXTERNAL_VALIDATION
-COMPUTATION_ESTABLISHED != COMPUTATIONAL_GAIN
-PASS != METHOD_SUPERIORITY
+BLOCKED != NOT_ESTABLISHED
+OUT_OF_SCOPE != FALSE
+CONFLICTING != UNDERDETERMINED
+PARTIAL != BLOCKED_WITH_SOME_SUCCESS
+NEGATIVE_OR_UNRESOLVED_TERMINAL != PROTOCOL_FAILURE
 ~~~
