@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — COMP-CH-002 80/80 PASS / COMP-CH-003 next**
+Status: **active internal-build front — COMP-CH-003 99/99 PASS / COMP-CH-004 next**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -153,9 +153,9 @@ The recovered source constraints do not themselves validate Computation as a met
 
 ## Next canonical step
 
-Prospectively precommit and execute **COMP-CH-003**, the direct neighboring-method boundary challenge.
+Prospectively precommit and execute **COMP-CH-004**, a fair competent non-DSD Computation baseline challenge.
 
-COMP-CH-001 and COMP-CH-002 remain immutable evidence.
+COMP-CH-001~003 remain immutable evidence.
 
 
 ## Pre-protocol boundary attack — 2026-10-03
