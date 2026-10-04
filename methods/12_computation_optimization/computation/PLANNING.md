@@ -1,6 +1,6 @@
 # DSD Computation — Planning / Validation Roadmap
 
-Status: **VALIDATION IN PROGRESS — COMP-CH-002 80/80 PASS / DIRECT METHOD-BOUNDARY CHALLENGE NEXT**  
+Status: **VALIDATION IN PROGRESS — COMP-CH-003 99/99 PASS / COMPETENT BASELINE NEXT**  
 Date: **2026-10-03**  
 Method: **Computation / DSD 계산론**  
 Legacy path ID: `12A`  
@@ -74,13 +74,13 @@ The target is a sound evaluation plan, not automatically a globally minimal-cost
 3. ✅ source-derived constraints separated from prospective method construction
 4. ✅ Computation planning / worklog lane
 5. ✅ Computation Task Interface v0.1 draft
-6. ⏸ serious pre-protocol boundary attack
-7. ⏸ Task Interface Boundary Amendment 001 if required
-8. ⏸ executable Computation Protocol v0.1
-9. ⏸ positive constructed challenge
-10. ⏸ negative / blocked / conflicting / underdetermined / out-of-scope coverage
-11. ⏸ direct neighboring-method boundary challenge
-12. ⏸ competent non-DSD baseline
+6. ✅ serious pre-protocol boundary attack — 18 attacks / 0 collapse
+7. ✅ Task Interface Boundary Amendment 001 — 7/7 refinements adopted
+8. ✅ executable Computation Protocol v0.1 — G1-G18 / T1-T18
+9. ✅ positive constructed challenge — COMP-CH-001 84/84 PASS
+10. ✅ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — COMP-CH-002 80/80 PASS
+11. ✅ direct neighboring-method boundary challenge — COMP-CH-003 99/99 PASS
+12. ⏸ competent non-DSD baseline — COMP-CH-004 next
 13. ⏸ strongest-reasonable non-DSD baseline
 14. ⏸ deterministic same-project retrace
 15. ⏸ frozen-axis internal-standardization audit
@@ -292,7 +292,22 @@ SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
   2
 
 METHOD_BOUNDARY_COMPUTATION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+
+EXACT_COLLAPSE_PAIRS:
   0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
 
 BASELINE_COMPUTATION_CASES:
   0
@@ -327,6 +342,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Prospectively precommit and execute COMP-CH-003, the direct neighboring-method boundary challenge.
+Prospectively precommit and execute COMP-CH-004, a fair competent non-DSD Computation baseline challenge.
 
-COMP-CH-001 and COMP-CH-002 remain immutable evidence.
+The baseline must receive equal claim-relevant information and must permit COMPUTATION_NO_GAIN as a valid result. COMP-CH-001~003 remain immutable evidence.
