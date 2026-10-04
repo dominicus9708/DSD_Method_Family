@@ -1,13 +1,13 @@
 # DSD Method Family — Current Sync State
 
-Synchronized: **2026-10-03 KST**  
+Synchronized: **2026-10-04 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261003-COMP-CH001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `bc92a06ebb4138a56c3b5c9891668ba806fc9add`  
-Latest completed method event: **COMP-CH-001 positive constructed challenge — 84/84 PASS**  
-Latest method-result commit: `1add7ed65c874e7ca1bf8e004567a7c1785a0726`  
+Sync epoch: `MF-SYNC-20261004-COMP-CH002`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `319f1465712823aec9eae65050a0c3f0d6d95250`  
+Latest completed method event: **COMP-CH-002 terminal coverage — 80/80 PASS / all seven Computation task terminals directly exercised**  
+Latest method-result commit: `6bb4f83f7c5d31517eb1ed34ece0be9b42754470`  
 Active internal-build front: **Computation / DSD 계산론**  
-Next canonical step: **prospectively precommit and execute COMP-CH-002 negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage**  
+Next canonical step: **prospectively precommit and execute COMP-CH-003 direct neighboring-method boundary challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,7 +63,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | active internal-build front; COMP-CH-001 84/84 PASS; positive constructed pilot established; COMP-CH-002 terminal-coverage challenge next |
+| Computation | active internal-build front; COMP-CH-001 84/84 PASS; COMP-CH-002 80/80 PASS; all seven task terminals directly exercised; COMP-CH-003 direct method-boundary challenge next |
 | Optimization | proposed |
 | Simulation | proposed |
 | Prediction | proposed |
@@ -1240,9 +1240,9 @@ Reconstruction external applications and independent validation remain deferred 
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/12_computation_optimization/computation/
 CURRENT_STATUS_FILE: methods/12_computation_optimization/computation/CURRENT_STATUS.md
-CURRENT_STATUS_COMMIT: bcf5b0327019d23e7837f6246e8c8247c73134cd
-CURRENT_STATUS_BLOB: c99aeaa3030588233e4982f588010acec9edc65d
-README_SYNC_COMMIT: bc92a06ebb4138a56c3b5c9891668ba806fc9add
+CURRENT_STATUS_COMMIT: 055a9cfc389e4e966f4c35340f885cced0e5aaf8
+CURRENT_STATUS_BLOB: ca7d059610fc20d911aa248edd7440cf980b588d
+README_SYNC_COMMIT: 319f1465712823aec9eae65050a0c3f0d6d95250
 LEGACY_PATH_ID: 12A
 HIGHER_FIELD: VII. Computation & Selection
 
@@ -1337,13 +1337,16 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
-  1
+  2
 
 POSITIVE_COMPUTATION_CASES:
   1
+
+ALL_SEVEN_COMPUTATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 COMP_CH_001_PRECOMMIT_COMMIT:
   68d850d77361356df5ea0beddaee8d3f5dcd0b2f
@@ -1359,6 +1362,21 @@ COMP_CH_001_RESULT_BLOB:
 
 COMP_CH_001_CHECKS:
   84/84 PASS
+
+COMP_CH_002_PRECOMMIT_COMMIT:
+  4b2c1478a1776ba5aeb5fb4d897a3ea4ca1e8bde
+
+COMP_CH_002_PRECOMMIT_BLOB:
+  b988deeff6500175682e120abb1436d3672dfeec
+
+COMP_CH_002_RESULT_COMMIT:
+  6bb4f83f7c5d31517eb1ed34ece0be9b42754470
+
+COMP_CH_002_RESULT_BLOB:
+  31bacacccffebedf6679fb2587ca745eda2e469a
+
+COMP_CH_002_CHECKS:
+  80/80 PASS
 
 BASELINE_COMPUTATION_CASES:
   0
@@ -1391,9 +1409,8 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  prospectively precommit and execute COMP-CH-002
-  negative / blocked / conflicting / underdetermined /
-  out-of-scope / partial terminal coverage
+  prospectively precommit and execute COMP-CH-003
+  direct neighboring-method boundary challenge
 ```
 
 Recovered source constraints are separated from prospective Computation method construction.
