@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — COMP-CH-001 84/84 PASS / COMP-CH-002 next**
+Status: **active internal-build front — COMP-CH-002 80/80 PASS / COMP-CH-003 next**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -153,9 +153,9 @@ The recovered source constraints do not themselves validate Computation as a met
 
 ## Next canonical step
 
-Prospectively precommit and execute **COMP-CH-002**, the negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage challenge.
+Prospectively precommit and execute **COMP-CH-003**, the direct neighboring-method boundary challenge.
 
-COMP-CH-001 remains immutable positive constructed evidence.
+COMP-CH-001 and COMP-CH-002 remain immutable evidence.
 
 
 ## Pre-protocol boundary attack — 2026-10-03
@@ -327,3 +327,34 @@ Computation / Optimization non-substitution
 ~~~
 
 This is constructed internal evidence only.
+
+
+## COMP-CH-002 — 2026-10-04
+
+~~~text
+PRECOMMIT_COMMIT:
+  4b2c1478a1776ba5aeb5fb4d897a3ea4ca1e8bde
+
+PRECOMMIT_BLOB:
+  b988deeff6500175682e120abb1436d3672dfeec
+
+RESULT_COMMIT:
+  6bb4f83f7c5d31517eb1ed34ece0be9b42754470
+
+RESULT_BLOB:
+  31bacacccffebedf6679fb2587ca745eda2e469a
+
+CHECKS:
+  80/80 PASS
+
+ALL_SEVEN_COMPUTATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The terminal-coverage challenge directly exercised every remaining non-positive Computation terminal while preserving lower-level statuses beneath task-level precedence.
