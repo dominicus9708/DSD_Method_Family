@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-05 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261005-OPT-CH001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `ab7896209cbb45ac4eaa397bac6f46977e8db653`  
-Latest completed method event: **OPT-CH-001 positive constructed Optimization challenge — 72/72 PASS**  
-Latest method-result commit: `d46f8248ffc9729eb4e8e00daa933b9fab22b0ae`  
+Sync epoch: `MF-SYNC-20261005-OPT-CH002`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `dd7ddff714d275a446a053a7df0df7d331415269`  
+Latest completed method event: **OPT-CH-002 terminal / negative Optimization challenge — 80/80 PASS / all six primary statuses and all seven task terminals directly exercised**  
+Latest method-result commit: `a793aaf451cfca2b7befa8c64f23a2083da4e0f1`  
 Active internal-build front: **Optimization / DSD 최적화론**  
-Next canonical step: **prospectively precommit and execute OPT-CH-002 terminal / negative coverage**  
+Next canonical step: **prospectively precommit and execute OPT-CH-003 direct neighboring-method boundary challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -64,7 +64,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | Protocol v0.1 internally standardized; COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Optimization | active internal-build front; Protocol v0.1 frozen; OPT-CH-001 72/72 PASS positive constructed challenge; OPT-CH-002 terminal/negative coverage next |
+| Optimization | active internal-build front; Protocol v0.1 frozen; OPT-CH-001 72/72 PASS; OPT-CH-002 80/80 PASS; all six primary statuses and all seven task terminals directly exercised; OPT-CH-003 next |
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
