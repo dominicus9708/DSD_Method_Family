@@ -1,6 +1,6 @@
 # Simulation Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / SIM-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — SIM-CH-001 84/84 PASS / SIM-CH-002 NEXT**  
 Date: **2026-10-05**  
 Method: **Simulation / DSD 시뮬레이션론**  
 Legacy path ID: `13`  
@@ -59,6 +59,15 @@ BINDING_OPERATION:
   S1-S18
 
 DIRECT_SIMULATION_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
+  1
+
+POSITIVE_SIMULATION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_SIMULATION_CASES:
   0
 
 BASELINE_SIMULATION_CASES:
@@ -83,7 +92,7 @@ SIMULATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_SIMULATION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -145,6 +154,29 @@ SIMULATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **SIM-CH-001**, the positive constructed Simulation challenge.
+Prospectively precommit and execute **SIM-CH-002**, the negative / blocked / conflicting / underdetermined / out-of-scope / PARTIAL terminal-coverage challenge.
 
-The frozen protocol should directly exercise regular deterministic evolution, declared branching, hybrid transition handling, static-slice conformance, readout information-loss discipline, bounded numerical approximation, stochastic sample-path semantics, and neighboring-method boundary preservation.
+SIM-CH-001 is frozen at 84/84 PASS and must not be retroactively rewritten.
+
+## SIM-CH-001 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  7605e452268295c9cc1b48a1c4ac6dfb0c167f5f
+PRECOMMIT_BLOB:
+  bf150326b076869da88dabfb50df8f883db45be9
+
+RESULT_COMMIT:
+  86ff6673229356500317d58eee404b45f1b66ca6
+RESULT_BLOB:
+  b566582c9dfc5e31cb8607138c624aa14ff8bccd
+
+CHECKS:
+  84/84 PASS
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
