@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-OPR-CH001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `f85b638586897b7f50b2d4e3d9de0ccde0fa0484`  
-Latest completed method event: **OPR-CH-001 positive constructed Operation challenge — 84/84 PASS**  
-Latest method-result commit: `3c8582a18ce7ebf881b6fdbea54306bef671dbed`  
+Sync epoch: `MF-SYNC-20261006-OPR-CH002`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `a84cf9e67f6168ed0b8693fb80941b385518ef9b`  
+Latest completed method event: **OPR-CH-002 Operation status-coverage challenge — 100/100 PASS / all six primary statuses and all seven task terminals directly exercised**  
+Latest method-result commit: `4258abd92e571d1f4bcedf599c49a7ece9b61f80`  
 Active internal-build front: **Operation / DSD 운영론**  
-Next canonical step: **prospectively precommit and execute OPR-CH-002 status / terminal coverage**  
+Next canonical step: **prospectively precommit and execute OPR-CH-003 direct neighboring-method boundary challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -71,7 +71,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
-| Operation | active internal-build front; Protocol v0.1 frozen; OPR-CH-001 84/84 PASS; OPR-CH-002 status coverage next |
+| Operation | active internal-build front; Protocol v0.1 frozen; OPR-CH-001 84/84 PASS; OPR-CH-002 100/100 PASS; all six primary statuses and all seven task terminals directly exercised; OPR-CH-003 next |
 
 ## 3. Shared core
 
