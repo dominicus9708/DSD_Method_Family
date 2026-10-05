@@ -1,6 +1,6 @@
 # 17. DSD Operation / DSD 운영론
 
-Status: **proposed**
+Status: **active internal-build front — Protocol v0.1 frozen / OPR-CH-001 next**
 
 Task: manage a live or repeatedly executed system across its lifecycle by coordinating states, resources, procedures, monitoring, handoffs, and method composition.
 
@@ -15,3 +15,54 @@ Typical outputs:
 - governance hooks kept separate from domain authority.
 
 Boundary: operation coordinates an already specified domain process; it does not create legal, clinical, organizational, or ethical authority by itself.
+
+
+## Internal-build checkpoint — 2026-10-06
+
+~~~text
+SOURCE_REGISTRY_COMMIT:
+  73e007bbce27fbcd241b413908aeac22eff32e90
+SOURCE_REGISTRY_BLOB:
+  ed4fa251935919513f8b14fe8c868ef781c4a4d8
+
+TASK_INTERFACE_COMMIT:
+  830b8ad7e1ea9d9ff98b6ea0119695472fa7842b
+TASK_INTERFACE_BLOB:
+  e8beafd45dee9715df32ae83445e12ea1b11941b
+
+BOUNDARY_REVIEW_COMMIT:
+  c578928b1eab3655551b2ca745db856640b0888e
+BOUNDARY_REVIEW_BLOB:
+  fc28b83f874af7676765128d144c0e54172fbcd9
+
+BOUNDARY_AMENDMENT_001_COMMIT:
+  8c115eb1a41cca3a8224201d2d909c821ca8deb6
+BOUNDARY_AMENDMENT_001_BLOB:
+  5abf44f5b94b8a52539741d1dad70201acfd008c
+
+PROTOCOL_COMMIT:
+  f732733fd871cbfed930abe44c6970e8ec34fed6
+PROTOCOL_BLOB:
+  5c6df2773f57ecad85d7ddbc4f06e607b79cc02e
+
+VALIDITY_GATES:
+  G1-G18
+BINDING_OPERATION:
+  OP1-OP18
+~~~
+
+Core boundary:
+
+~~~text
+PROCEDURE_SPECIFICATION != PROCEDURE_EXECUTION
+CONTROL_POLICY != OPERATION_EXECUTION
+PREDICTION_CLAIM != OPERATION_DECISION
+SIMULATION_TRAJECTORY != LIVE_EXECUTION_RECORD
+HANDOFF_TRIGGERED != HANDOFF_ACCEPTED
+SOURCE_STEP_COMPLETE != TARGET_READY_BY_DEFAULT
+OPERATION_ESTABLISHED may coexist with OPERATION_NO_GAIN
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **OPR-CH-001**, the positive constructed Operation challenge.
