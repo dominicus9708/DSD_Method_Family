@@ -1,6 +1,6 @@
 # DSD Prediction — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — PRED-CH-003 99/99 PASS / PRED-CH-004 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — PRED-CH-004 64/64 PASS / PRED-CH-005 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — family active-front handoff
@@ -267,3 +267,34 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
 ## Next
 
 Prospectively precommit and execute **PRED-CH-004** competent non-DSD Prediction baseline challenge.
+
+
+## Step 10 — PRED-CH-004 competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  ea475b3eb389761ff476e3a7f5696a2044d88654
+PRECOMMIT_BLOB:
+  2cb8e963bbda7ca8e67822310ffebb9bf6cefca9
+
+RESULT_COMMIT:
+  cefbd117fae8ab54042d188bd179d1d5c3a7109c
+RESULT_BLOB:
+  59f54e5670dfb500874938cf47114fdf66f211b7
+
+CHECKS:
+  64/64 PASS
+
+PREDICTION_METHOD_GAIN_STATUS:
+  PREDICTION_NO_GAIN
+
+BASELINE_PREDICTION_CASES:
+  1
+
+NO_GAIN_PREDICTION_CASES:
+  1
+~~~
+
+## Next
+
+Prospectively precommit and execute **PRED-CH-005** strongest-reasonable non-DSD Prediction baseline challenge.
