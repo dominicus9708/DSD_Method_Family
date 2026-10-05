@@ -1,6 +1,6 @@
 # DSD Optimization — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-003 99/99 PASS / COMPETENT BASELINE NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-004 64/64 PASS / NO_GAIN / STRONGEST-REASONABLE BASELINE NEXT**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -17,8 +17,8 @@ Date: **2026-10-05**
 9. ✅ positive constructed challenge — OPT-CH-001 72/72 PASS
 10. ✅ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — OPT-CH-002 80/80 PASS
 11. ✅ direct neighboring-method boundary challenge — OPT-CH-003 99/99 PASS / 11 pairs / 0 collapse
-12. ⏸ competent non-DSD baseline — OPT-CH-004 next
-13. ⏸ strongest-reasonable non-DSD baseline
+12. ✅ competent non-DSD baseline — OPT-CH-004 64/64 PASS / NO_GAIN
+13. ⏸ strongest-reasonable non-DSD baseline — OPT-CH-005 next
 14. ⏸ deterministic same-project retrace
 15. ⏸ frozen-axis internal-standardization audit
 16. ⏸ external applications / independent validation later
@@ -150,10 +150,10 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
   11
 
 BASELINE_OPTIMIZATION_CASES:
-  0
+  1
 
 NO_GAIN_OPTIMIZATION_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -170,8 +170,8 @@ OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-OPT-CH-003 completed at 99/99 PASS.
+OPT-CH-004 completed at 64/64 PASS with `OPTIMIZATION_NO_GAIN` under equal-information access.
 
-The frozen fixture tested Optimization against Computation, Comparison, Design, Measurement, Aggregation, Compression, Simulation, Prediction, Control, Operation, and Audit. All 11 pairs were `PARTIAL_OVERLAP_NOT_COLLAPSE`; exact collapse 0 and unresolved boundary 0.
+The result does not imply method failure, deletion, merger, absorption, or permanent redundancy.
 
-Next: prospectively precommit and execute **OPT-CH-004**, a fair competent non-DSD Optimization baseline with equal claim-relevant information and an explicit NO_GAIN-allowed scoring rule.
+Next: prospectively precommit and execute **OPT-CH-005**, a materially stronger strongest-reasonable non-DSD Optimization baseline.
