@@ -1,6 +1,6 @@
 # DSD Optimization / DSD 최적화론
 
-Status: **active internal-build front — OPT-CH-004 64/64 PASS / NO_GAIN / OPT-CH-005 next**
+Status: **active internal-build front — OPT-CH-005 82/82 PASS / NO_GAIN / strongest-reasonable constructed baseline established / OPT-CH-006 next**
 Legacy path ID: `12B`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -318,3 +318,39 @@ The competent baseline reproduced the frozen claim-relevant Optimization outcome
 ### Next canonical step
 
 Prospectively precommit and execute **OPT-CH-005**, a strongest-reasonable non-DSD Optimization baseline.
+
+
+## OPT-CH-005 — strongest-reasonable non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  a3837f703675b9a7dd6e3d67889435344becbfb8
+PRECOMMIT_BLOB:
+  a69caf6af982efe8e35a5b99dae2bf70e218d6c7
+
+RESULT_COMMIT:
+  75d9a3b91695ada9b6ec1717038d65f4fa9db740
+RESULT_BLOB:
+  f94fe261bfa6896237a775e1b7c8d16e1bfe91bd
+
+CHECKS:
+  82/82 PASS
+
+BASELINE_ID:
+  B1_STRONG_OPTIMIZATION_ENGINE
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+OPTIMIZATION_METHOD_GAIN_STATUS:
+  OPTIMIZATION_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_OPTIMIZATION:
+  established_at_constructed_evidence_level
+~~~
+
+The result is bounded to the frozen constructed evidence and does not establish a universally strongest possible baseline.
+
+### Next canonical step
+
+Prospectively precommit and execute **OPT-CH-006**, a deterministic same-project retrace of OPT-CH-001~005.
