@@ -1,6 +1,6 @@
 # DSD Computation — Planning / Validation Roadmap
 
-Status: **VALIDATION IN PROGRESS — COMP-CH-005 82/82 PASS / NO_GAIN / DETERMINISTIC RETRACE NEXT**  
+Status: **VALIDATION IN PROGRESS — COMP-CH-006 70/70 PASS / INTERNAL-STANDARDIZATION AUDIT NEXT**  
 Date: **2026-10-05**  
 Method: **Computation / DSD 계산론**  
 Legacy path ID: `12A`  
@@ -82,8 +82,8 @@ The target is a sound evaluation plan, not automatically a globally minimal-cost
 11. ✅ direct neighboring-method boundary challenge — COMP-CH-003 99/99 PASS
 12. ✅ competent non-DSD baseline — COMP-CH-004 64/64 PASS / COMPUTATION_NO_GAIN
 13. ✅ strongest-reasonable non-DSD baseline — COMP-CH-005 82/82 PASS / COMPUTATION_NO_GAIN
-14. ⏸ deterministic same-project retrace — COMP-CH-006 next
-15. ⏸ frozen-axis internal-standardization audit
+14. ✅ deterministic same-project retrace — COMP-CH-006 70/70 PASS / zero mismatch
+15. ⏸ frozen-axis internal-standardization audit — COMP-AUD-001 next
 16. ⏸ external applications / independent validation later
 ~~~
 
@@ -325,6 +325,15 @@ STRONGEST_REASONABLE_BASELINE_COMPUTATION:
   established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_COMPUTATION_APPLICATIONS:
@@ -351,8 +360,8 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-COMP-CH-004 completed at 64/64 PASS with equal-information access and `COMPUTATION_NO_GAIN` against `B0_GENERIC_TYPED_COMPUTATION_PLANNER`.
+COMP-CH-006 completed at 70/70 PASS with zero claim-relevant mismatch and zero post-comparison correction.
 
-COMP-CH-005 completed at 82/82 PASS with `COMPUTATION_NO_GAIN`; the strongest-reasonable baseline is established at the constructed-evidence level only.
+The retrace is same-project deterministic artifact-consistency evidence only and does not establish independent replication or independent validation.
 
-Next, prospectively precommit and execute COMP-CH-006, a deterministic same-project retrace of COMP-CH-001~005. The retrace must be reconstructed from frozen repository artifacts before comparison, preserve every mismatch, prohibit post-comparison correction, and keep `SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION`. COMP-CH-001~005 remain immutable evidence.
+Next, prospectively precommit and execute COMP-AUD-001, the frozen-axis internal-standardization audit. The audit must keep COMP-CH-001~006 immutable and must not treat the two NO_GAIN baselines as method-failure, deletion, merger, absorption, or permanent-redundancy evidence.
