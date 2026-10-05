@@ -1,6 +1,6 @@
 # DSD Optimization / DSD 최적화론
 
-Status: **active internal-build front — OPT-CH-001 72/72 PASS / OPT-CH-002 next**
+Status: **active internal-build front — OPT-CH-002 80/80 PASS / all statuses+terminals covered / OPT-CH-003 next**
 Legacy path ID: `12B`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -207,3 +207,42 @@ The challenge established positive protocol behavior on unique, tied, and Pareto
 ### Next canonical step
 
 Prospectively precommit and execute **OPT-CH-002** negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
+
+
+## OPT-CH-002 — terminal / negative coverage
+
+~~~text
+PRECOMMIT_COMMIT:
+  8d778da4289b0a4080e5f93ffecae5ae55256f62
+PRECOMMIT_BLOB:
+  393dbfa5bdc9040cfcd4a07e63899873293dffd9
+
+RESULT_COMMIT:
+  a793aaf451cfca2b7befa8c64f23a2083da4e0f1
+RESULT_BLOB:
+  f3fc516f7d88735ca7195cbf508a2c6336f9f5a1
+
+CHECKS:
+  80/80 PASS
+
+DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
+  2
+
+SUCCESSFUL_DIRECT_OPTIMIZATION_PILOTS:
+  2
+
+NEGATIVE_OR_UNRESOLVED_OPTIMIZATION_CASES:
+  1
+
+ALL_SIX_OPTIMIZATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_OPTIMIZATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+The challenge preserved evaluable failure, missing required interfaces, conflicting semantics, multiple admissible unresolved selection semantics, Control handoff, exact PARTIAL semantics, reduction nonpreservation, and frozen terminal precedence.
+
+### Next canonical step
+
+Prospectively precommit and execute **OPT-CH-003**, the direct neighboring-method boundary challenge.
