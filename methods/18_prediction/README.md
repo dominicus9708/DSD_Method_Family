@@ -1,6 +1,6 @@
 # 18. DSD Prediction / DSD 예측론
 
-Status: **active internal-build front — source/registry recovery complete / Task Interface v0.1 draft established / boundary attack next**
+Status: **active internal-build front — Protocol v0.1 frozen / PRED-CH-001 next**
 
 Task: derive future-state or outcome claims from an explicitly fixed current state, dynamic model, uncertainty structure, and domain bridge.
 
@@ -56,3 +56,42 @@ PREDICTION != OPERATION
 ### Next canonical step
 
 Begin the serious pre-protocol boundary attack against the historical Task Interface v0.1 draft.
+
+
+## Protocol freeze checkpoint — 2026-10-06
+
+~~~text
+BOUNDARY_STRESS_TEST_COMMIT:
+  a1c90a4f6b5500e3dfb23b6dbb7a0b942e3c4121
+BOUNDARY_STRESS_TEST_BLOB:
+  028eddff450b1bae49176b801cc2b205fab7c173
+
+BOUNDARY_AMENDMENT_001_COMMIT:
+  f6df08584c2ec93b654f526b997f6770ff6795ee
+BOUNDARY_AMENDMENT_001_BLOB:
+  d5ccf44ed1a6db7c466662e4e8253af689428bc6
+
+PROTOCOL_COMMIT:
+  1a03a96e270f0d975710f5d530a8b1dbf5105bb0
+PROTOCOL_BLOB:
+  54de0673e41fe46f88dd78a56c6150e8d97cfc3c
+
+PRE_PROTOCOL_BOUNDARY_TESTS:
+  18
+
+NONBREAKING_REFINEMENTS:
+  8
+
+BOUNDARY_COLLAPSE:
+  0
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  P1-P18
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **PRED-CH-001**, the positive constructed Prediction challenge.
