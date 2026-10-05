@@ -1,6 +1,6 @@
 # DSD Operation — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — OPR-CH-002 100/100 PASS / OPR-CH-003 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPR-CH-003 99/99 PASS / OPR-CH-004 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — active-front handoff
@@ -130,3 +130,27 @@ ALL_SEVEN_OPERATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
 ## Next
 
 Prospectively precommit and execute **OPR-CH-003** direct neighboring-method boundary challenge.
+
+
+## Step 9 — OPR-CH-003 neighboring-method boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  d743dc97ed72a57277c35b2db0c33bda0d21a464
+RESULT_COMMIT:
+  0074facf9d84d828269fc6a921829566bafc7851
+RESULT_BLOB:
+  b0b650c09bc51d1f070517f714d9068d90036b64
+CHECKS:
+  99/99 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+EXACT_COLLAPSE_PAIRS:
+  0
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+~~~
+
+## Next
+
+Prospectively precommit and execute **OPR-CH-004** competent non-DSD Operation baseline challenge.
