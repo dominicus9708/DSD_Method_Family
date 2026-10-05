@@ -10,10 +10,10 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 
 - [`methodology/CURRENT_SYNC_STATE.md`](methodology/CURRENT_SYNC_STATE.md) — Notion·GitHub·프로젝트 채팅을 교차 복원한 **2026-10-05 KST** 현재 상태 체크포인트.
 - [`methodology/LIVE_SYNC_POLICY.md`](methodology/LIVE_SYNC_POLICY.md) — 상태 변화가 발생한 같은 작업 단위에서 GitHub와 Notion을 함께 갱신하는 필수 실시간 동기화 규칙.
-- Current sync epoch: `MF-SYNC-20261006-OPR-PROTOCOL-v0.1`
-- Latest claim-relevant source checkpoint at adoption: `607cb2e1b05f37378a6b1e2baddcad050263f520`
-- Latest completed method event: **Operation Protocol v0.1 frozen after 18 boundary tests and Boundary Amendment 001 (8/8 refinements)**.
-- Next canonical step: **prospectively precommit and execute OPR-CH-001 positive constructed Operation challenge**.
+- Current sync epoch: `MF-SYNC-20261006-OPR-CH001`
+- Latest claim-relevant source checkpoint at adoption: `f85b638586897b7f50b2d4e3d9de0ccde0fa0484`
+- Latest completed method event: **OPR-CH-001 positive constructed Operation challenge — 84/84 PASS**.
+- Next canonical step: **prospectively precommit and execute OPR-CH-002 status / terminal coverage**.
 - Canonical Notion sync page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 - The checkpoint does not replace method-specific protocols, precommits, evidence, audits, or historical worklogs.
 
