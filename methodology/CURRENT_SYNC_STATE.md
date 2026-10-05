@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-CTRL-CH006`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `cd1118abc8850655954faf4dc8cb4c3a5bb563b2`  
-Latest completed method event: **CTRL-CH-006 deterministic same-project Control retrace — 70/70 PASS / mismatch 0 / correction 0**  
-Latest method-result commit: `3dcc9bc3dafcd3a979871ee6db562d2e768fbb14`  
-Active internal-build front: **Control / DSD 제어론**  
-Next canonical step: **prospectively precommit and execute CTRL-AUD-001 frozen-axis internal-standardization audit**  
+Sync epoch: `MF-SYNC-20261006-CTRL-AUD001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `7c398ac8f7bf140cadaa099c99c2fc76ed49fbf2`  
+Latest completed method event: **CTRL-AUD-001 frozen-axis Control audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
+Latest method-result commit: `d8edb8ab3fcfcd7b7e7d7ef5517948009621a7bb`  
+Active internal-build front: **Operation / DSD 운영론**  
+Next canonical step: **recover Operation source/registry constraints and establish the Operation internal-build lane**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -67,11 +67,11 @@ They are not a cross-method ranking and do not imply independent external valida
 | Optimization | Protocol v0.1 internally standardized; OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Simulation | Protocol v0.1 internally standardized; SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Prediction | Protocol v0.1 internally standardized; PRED-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Control | active internal-build front; Protocol v0.1 frozen; CTRL-CH-006 70/70 PASS deterministic retrace / mismatch 0; CTRL-AUD-001 next |
+| Control | Protocol v0.1 internally standardized; CTRL-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
-| Operation | proposed |
+| Operation | active internal-build front; source/registry recovery next |
 
 ## 3. Shared core
 
