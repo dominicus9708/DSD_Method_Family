@@ -1,6 +1,6 @@
 # DSD Optimization — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — TASK INTERFACE v0.1 DRAFT ESTABLISHED**  
+Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / OPT-CH-001 NEXT**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -130,3 +130,96 @@ SHARED_CORE_REOPEN_REQUIRED:
 Execute serious pre-protocol boundary attack.
 
 Once attack execution begins, keep Task Interface v0.1 immutable and record any refinements in a separate amendment.
+
+
+## Step 4 — serious pre-protocol boundary attack
+
+~~~text
+BOUNDARY_ATTACK_COMMIT:
+  108954715c1fb19ad2d12050bccb498d505e33a5
+
+BOUNDARY_ATTACK_BLOB:
+  6f1c855c7340d3e4c39d213576e43d7f61a6be40
+
+ATTACKS:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  12
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  6
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+FUNDAMENTAL_INTERFACE_FAILURE:
+  0
+~~~
+
+Required refinements:
+
+~~~text
+R1 explicit constraint-transformation lock
+R2 explicit pair-order and uncertainty status
+R3 objective / constraint dependency completeness
+R4 selection preservation under reduction
+R5 comparator equivalence and fairness lock
+R6 exact terminal precedence and PARTIAL semantics
+~~~
+
+## Step 5 — Boundary Amendment 001
+
+~~~text
+AMENDMENT_COMMIT:
+  49aa357dae124a2529d7be692d6e63855b95716e
+
+AMENDMENT_BLOB:
+  7ccbe5d6cac6f51ceef57bad6f1d51a9eaba9a2a
+
+REFINEMENT_GROUPS_ADOPTED:
+  6/6
+
+METHOD_IDENTITY_CHANGED:
+  no
+
+TASK_INTERFACE_CORE_REOPENED:
+  no
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+~~~
+
+## Step 6 — executable Optimization Protocol v0.1
+
+~~~text
+PROTOCOL_COMMIT:
+  34584acd54af1bafef7dd176f795ed914eddc6b2
+
+PROTOCOL_BLOB:
+  5d2f9e37eab08bba27b0f416599df2e74a8c0c42
+
+DEDICATED_OPTIMIZATION_PROTOCOL:
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  O1-O18
+
+CURRENT_OPTIMIZATION_EVIDENCE_STATUS:
+  protocol_frozen
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The protocol binds candidate admissibility, objective/constraint registries, explicit transformation locks, pair-order/incomparability, uncertainty, reduction-preservation, regime invalidation, neighboring-method handoffs, comparator fairness, six primary statuses, and seven task terminals.
+
+## Next
+
+Prospectively precommit and execute **OPT-CH-001** positive constructed challenge.
