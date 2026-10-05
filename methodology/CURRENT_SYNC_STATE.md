@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-CTRL-AUD001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `7c398ac8f7bf140cadaa099c99c2fc76ed49fbf2`  
-Latest completed method event: **CTRL-AUD-001 frozen-axis Control audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
-Latest method-result commit: `d8edb8ab3fcfcd7b7e7d7ef5517948009621a7bb`  
+Sync epoch: `MF-SYNC-20261006-OPR-PROTOCOL-v0.1`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `607cb2e1b05f37378a6b1e2baddcad050263f520`  
+Latest completed method event: **Operation Protocol v0.1 frozen after 18 boundary tests and Boundary Amendment 001 (8/8 refinements)**  
+Latest method-result commit: `f732733fd871cbfed930abe44c6970e8ec34fed6`  
 Active internal-build front: **Operation / DSD 운영론**  
-Next canonical step: **recover Operation source/registry constraints and establish the Operation internal-build lane**  
+Next canonical step: **prospectively precommit and execute OPR-CH-001 positive constructed Operation challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -71,7 +71,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
-| Operation | active internal-build front; source/registry recovery next |
+| Operation | active internal-build front; Protocol v0.1 frozen; 18 boundary tests / 8 nonbreaking refinements / 0 collapse; OPR-CH-001 next |
 
 ## 3. Shared core
 
