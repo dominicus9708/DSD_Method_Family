@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — COMP-CH-005 82/82 PASS / NO_GAIN / COMP-CH-006 next**
+Status: **active internal-build front — COMP-CH-006 70/70 PASS / deterministic retrace established / COMP-AUD-001 next**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -157,9 +157,11 @@ COMP-CH-004 completed at **64/64 PASS / COMPUTATION_NO_GAIN** against the compet
 
 COMP-CH-005 completed at **82/82 PASS / COMPUTATION_NO_GAIN** against `B1_STRONG_COMPUTATION_PLANNING_ENGINE` under equal-information access.
 
-Prospectively precommit and execute **COMP-CH-006**, a deterministic same-project retrace of COMP-CH-001~005.
+COMP-CH-006 completed at **70/70 PASS** with zero claim-relevant mismatch and zero post-comparison correction.
 
-COMP-CH-001~005 remain immutable evidence.
+Prospectively precommit and execute **COMP-AUD-001**, the frozen-axis internal-standardization audit.
+
+COMP-CH-001~006 remain immutable evidence.
 
 
 ## Pre-protocol boundary attack — 2026-10-03
@@ -450,3 +452,53 @@ The materially stronger non-DSD computation-planning engine matched the frozen c
 ## Next after COMP-CH-005
 
 Prospectively precommit and execute **COMP-CH-006**, a deterministic same-project retrace of COMP-CH-001~005.
+
+
+## COMP-CH-006 — 2026-10-05
+
+~~~text
+PRECOMMIT_COMMIT:
+  c06db625de902fbbd69820f37d6d1c3b5265a57d
+PRECOMMIT_BLOB:
+  45f23122b449a6434074c512544006abaf65b5a1
+
+RETRACE_LEDGER_COMMIT:
+  1a0bfbb17bce48cc9383fd7769cd2987e9a1f574
+RETRACE_LEDGER_BLOB:
+  3f7a7a529859e6dd15ecf4f728c6b14fb7b3a527
+
+RESULT_COMMIT:
+  27ce66a5edb231f1f283ecf3a259aafb13bb587f
+
+CHECKS:
+  70/70 PASS
+
+REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+INDEPENDENT_REPLICATION:
+  not established
+
+INDEPENDENT_COMPUTATION_VALIDATION:
+  not established
+~~~
+
+The retrace reconstructed COMP-CH-001~005 from the frozen protocol and precommit artifacts, froze the retrace ledger before formal comparison, then compared it with the immutable historical result artifacts.
+
+~~~text
+SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **COMP-AUD-001**, the frozen-axis internal-standardization audit.
