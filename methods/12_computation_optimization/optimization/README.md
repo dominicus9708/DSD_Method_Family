@@ -1,6 +1,6 @@
 # DSD Optimization / DSD 최적화론
 
-Status: **active internal-build front — OPT-CH-005 82/82 PASS / NO_GAIN / strongest-reasonable constructed baseline established / OPT-CH-006 next**
+Status: **active internal-build front — OPT-CH-006 70/70 PASS / deterministic retrace established / OPT-AUD-001 next**
 Legacy path ID: `12B`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -354,3 +354,42 @@ The result is bounded to the frozen constructed evidence and does not establish 
 ### Next canonical step
 
 Prospectively precommit and execute **OPT-CH-006**, a deterministic same-project retrace of OPT-CH-001~005.
+
+
+## OPT-CH-006 — deterministic same-project retrace
+
+~~~text
+PRECOMMIT_COMMIT:
+  74ff0b217777618830bdafa300c606501649a507
+PRECOMMIT_BLOB:
+  5af5c1282184d56fb94f8ea32b389d502d602fc6
+
+RETRACE_LEDGER_COMMIT:
+  315e834b7c29646b2ff30eab0603ed537f416bc7
+RETRACE_LEDGER_BLOB:
+  c7d94f30b476659fa39b174280a29d6cf43acdf2
+
+RESULT_COMMIT:
+  2edf684b499a1edbc015028e3afe468a6e14fd86
+RESULT_BLOB:
+  f36049137c180f0d76cd31a349d87e5e811a062b
+
+CHECKS:
+  70/70 PASS
+
+REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **OPT-AUD-001**, the frozen-axis internal-standardization audit.
