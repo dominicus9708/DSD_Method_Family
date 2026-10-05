@@ -10,10 +10,10 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 
 - [`methodology/CURRENT_SYNC_STATE.md`](methodology/CURRENT_SYNC_STATE.md) — Notion·GitHub·프로젝트 채팅을 교차 복원한 **2026-10-05 KST** 현재 상태 체크포인트.
 - [`methodology/LIVE_SYNC_POLICY.md`](methodology/LIVE_SYNC_POLICY.md) — 상태 변화가 발생한 같은 작업 단위에서 GitHub와 Notion을 함께 갱신하는 필수 실시간 동기화 규칙.
-- Current sync epoch: `MF-SYNC-20261006-PRED-AUD001`
-- Latest claim-relevant source checkpoint at adoption: `ff7dc7de53d70718ef607649a9ed74b24e582c96`
-- Latest completed method event: **PRED-AUD-001 frozen-axis Prediction audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**.
-- Next canonical step: **recover Control source/registry constraints and establish the Control internal-build lane**.
+- Current sync epoch: `MF-SYNC-20261006-CTRL-PROTOCOL-v0.1`
+- Latest claim-relevant source checkpoint at adoption: `ae6cb6980940cd8ef0b86522ddc3e0032e4af30d`
+- Latest completed method event: **Control Protocol v0.1 frozen after 18 boundary tests and Boundary Amendment 001 (8/8 refinements)**.
+- Next canonical step: **prospectively precommit and execute CTRL-CH-001 positive constructed Control challenge**.
 - Canonical Notion sync page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 - The checkpoint does not replace method-specific protocols, precommits, evidence, audits, or historical worklogs.
 
