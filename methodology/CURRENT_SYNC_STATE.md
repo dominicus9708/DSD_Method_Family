@@ -1,13 +1,13 @@
 # DSD Method Family — Current Sync State
 
-Synchronized: **2026-10-04 KST**  
+Synchronized: **2026-10-05 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261004-COMP-CH003`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `d113fc85ab414fe87a292debe662e788f91d6099`  
-Latest completed method event: **COMP-CH-003 direct neighboring-method boundary challenge — 99/99 PASS / 11 pairs / 0 exact collapse**  
-Latest method-result commit: `be3b6092b553f90c34c37d3cde3fde8dc42f845d`  
+Sync epoch: `MF-SYNC-20261005-COMP-CH004`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `dc5903e03275f54e426e9ac47124f1dc08960e97`  
+Latest completed method event: **COMP-CH-004 competent non-DSD Computation baseline — 64/64 PASS / COMPUTATION_NO_GAIN / equal-information access**  
+Latest method-result commit: `3a336a606ff5ae8bba3a47564cd37e77cc45409d`  
 Active internal-build front: **Computation / DSD 계산론**  
-Next canonical step: **prospectively precommit and execute COMP-CH-004 fair competent non-DSD Computation baseline**  
+Next canonical step: **prospectively precommit and execute COMP-CH-005 strongest-reasonable non-DSD Computation baseline**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,7 +63,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | active internal-build front; COMP-CH-001 84/84 PASS; COMP-CH-002 80/80 PASS; COMP-CH-003 99/99 PASS; 11 neighboring pairs tested with 0 exact collapse; COMP-CH-004 competent baseline next |
+| Computation | active internal-build front; COMP-CH-001 84/84 PASS; COMP-CH-002 80/80 PASS; COMP-CH-003 99/99 PASS; COMP-CH-004 64/64 PASS / COMPUTATION_NO_GAIN; competent baseline matched under equal information; COMP-CH-005 strongest-reasonable baseline next |
 | Optimization | proposed |
 | Simulation | proposed |
 | Prediction | proposed |
@@ -1240,9 +1240,9 @@ Reconstruction external applications and independent validation remain deferred 
 CURRENT_STATUS: active_internal_build_front
 CURRENT_PATH: methods/12_computation_optimization/computation/
 CURRENT_STATUS_FILE: methods/12_computation_optimization/computation/CURRENT_STATUS.md
-CURRENT_STATUS_COMMIT: f31b314161d1ba133d3ee4776570adb4bb5c3983
-CURRENT_STATUS_BLOB: 4cbe9398c865d1fb4b45cf96ded0459c997ddeb1
-README_SYNC_COMMIT: 9a84bccca5538c4ca0cd4f7bb6f50ff3d6cf6b24
+CURRENT_STATUS_COMMIT: 6fa1b3dc7950e5ec9439a5f7c27df1bf1a96a7e0
+CURRENT_STATUS_BLOB: 2b2f86159566b90379450a1573fcb027b2719c33
+README_SYNC_COMMIT: 0c530ced653ee14724ec628e8b66db88b670d9a3
 LEGACY_PATH_ID: 12A
 HIGHER_FIELD: VII. Computation & Selection
 
@@ -1262,16 +1262,16 @@ PLANNING_LANE:
   established
 
 PLANNING_COMMIT:
-  d113fc85ab414fe87a292debe662e788f91d6099
+  b2e8de4e00545003b86671475fb5382c2f0fa05c
 
 PLANNING_BLOB:
-  c6e712a1d17984c8166a61949000e9caa1a54bed
+  d52ab057a0812ae46b3d6916d22b7b66b99faa5b
 
 WORKLOG_COMMIT:
-  a670a0e03c3e1ecaccc6da3a5f72f9febc4c9fa5
+  dc5903e03275f54e426e9ac47124f1dc08960e97
 
 WORKLOG_BLOB:
-  7308314d0b7e1862ffbb424df2b97e9430b50acf
+  e9251e3017f1be2e0e4971c9ed727fdf71355622
 
 TASK_INTERFACE_DRAFT:
   v0.1 established
@@ -1337,10 +1337,10 @@ BINDING_OPERATION:
   T1-T18
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
-  3
+  4
 
 POSITIVE_COMPUTATION_CASES:
   1
@@ -1393,6 +1393,27 @@ COMP_CH_003_RESULT_BLOB:
 COMP_CH_003_CHECKS:
   99/99 PASS
 
+COMP_CH_004_PRECOMMIT_COMMIT:
+  ba7cb32f760d6d7502cf1056fb20a02a7d830d93
+
+COMP_CH_004_PRECOMMIT_BLOB:
+  f57876c7127953a7d5b81fdefa991f75fb4ebe30
+
+COMP_CH_004_RESULT_COMMIT:
+  3a336a606ff5ae8bba3a47564cd37e77cc45409d
+
+COMP_CH_004_RESULT_BLOB:
+  71b9406413b16f9271690217a1def0c06ee49553
+
+COMP_CH_004_CHECKS:
+  64/64 PASS
+
+COMP_CH_004_GAIN_STATUS:
+  COMPUTATION_NO_GAIN
+
+COMP_CH_004_EQUAL_INFORMATION_ACCESS:
+  yes
+
 METHOD_BOUNDARY_COMPUTATION_CASES:
   1
 
@@ -1412,10 +1433,10 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_COMPUTATION_CASES:
-  0
+  1
 
 NO_GAIN_COMPUTATION_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -1442,8 +1463,8 @@ SHARED_CORE_REOPEN_REQUIRED:
   no
 
 NEXT_CANONICAL_STEP:
-  prospectively precommit and execute COMP-CH-004
-  fair competent non-DSD Computation baseline
+  prospectively precommit and execute COMP-CH-005
+  strongest-reasonable non-DSD Computation baseline
 ```
 
 Recovered source constraints are separated from prospective Computation method construction.
@@ -1457,3 +1478,36 @@ RECONSTRUCTION_EVIDENCE != COMPUTATION_EVIDENCE_BY_DEFAULT
 ```
 
 No Computation protocol may be frozen before a serious pre-protocol boundary attack.
+
+
+### Latest Computation checkpoint — COMP-CH-004
+
+~~~text
+PRECOMMIT_COMMIT:
+  ba7cb32f760d6d7502cf1056fb20a02a7d830d93
+PRECOMMIT_BLOB:
+  f57876c7127953a7d5b81fdefa991f75fb4ebe30
+
+RESULT_COMMIT:
+  3a336a606ff5ae8bba3a47564cd37e77cc45409d
+RESULT_BLOB:
+  71b9406413b16f9271690217a1def0c06ee49553
+
+CHECKS:
+  64/64 PASS
+
+BASELINE:
+  B0_GENERIC_TYPED_COMPUTATION_PLANNER
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+COMPUTATION_METHOD_GAIN_STATUS:
+  COMPUTATION_NO_GAIN
+~~~
+
+The competent constructed non-DSD baseline reproduced the frozen claim-relevant Computation outcomes under equal-information access.
+
+This is bounded same-project constructed evidence. It does not establish strongest-reasonable baseline equivalence, external applicability, independent validation, independent replication, method redundancy, or method superiority.
+
+Next canonical step: prospectively precommit and execute **COMP-CH-005**, the strongest-reasonable non-DSD Computation baseline challenge.
