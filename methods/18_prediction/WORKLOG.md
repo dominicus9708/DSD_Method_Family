@@ -140,3 +140,50 @@ BINDING_OPERATION:
 ## Next
 
 Prospectively precommit and execute **PRED-CH-001** positive constructed challenge.
+
+
+## Step 7 — PRED-CH-001 positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  70660aa399709faff8eab25a15fb9e918857f29c
+PRECOMMIT_BLOB:
+  758988f687ffaa04a33936d8d6947df10df983d0
+
+RESULT_COMMIT:
+  4a674e75312b16dcda1635364f2dcdaee454c641
+RESULT_BLOB:
+  c4000ea9b3b6461a839720244236b7488a320211
+
+CHECKS:
+  84/84 PASS
+
+DIRECT_PREDICTION_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
+  1
+
+POSITIVE_PREDICTION_CASES:
+  1
+
+PREDICTION_METHOD_GAIN_STATUS:
+  PREDICTION_GAIN_NOT_TESTED
+~~~
+
+Directly exercised:
+
+~~~text
+point target claim
+interval target claim
+scenario-conditional claim without probability invention
+probabilistic claim with explicit probability interface
+update / supersession non-retroactivity
+readout collision without future-state identity overclaim
+later validation of an immutable historical claim
+Simulation / Measurement / Control / Operation boundaries
+~~~
+
+## Next
+
+Prospectively precommit and execute **PRED-CH-002** terminal / negative coverage.
