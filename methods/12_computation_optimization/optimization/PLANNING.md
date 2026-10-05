@@ -1,6 +1,6 @@
 # DSD Optimization — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-001 72/72 PASS / TERMINAL COVERAGE NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-002 80/80 PASS / METHOD-BOUNDARY CHALLENGE NEXT**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -15,8 +15,8 @@ Date: **2026-10-05**
 7. ✅ Boundary Amendment 001 — 6/6 refinements adopted
 8. ✅ executable Optimization Protocol v0.1 — G1-G18 / O1-O18
 9. ✅ positive constructed challenge — OPT-CH-001 72/72 PASS
-10. ⏸ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — OPT-CH-002 next
-11. ⏸ direct neighboring-method boundary challenge
+10. ✅ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — OPT-CH-002 80/80 PASS
+11. ⏸ direct neighboring-method boundary challenge — OPT-CH-003 next
 12. ⏸ competent non-DSD baseline
 13. ⏸ strongest-reasonable non-DSD baseline
 14. ⏸ deterministic same-project retrace
@@ -115,17 +115,24 @@ BOUNDARY_AMENDMENT_001:
 DEDICATED_OPTIMIZATION_PROTOCOL:
   established v0.1
 
-DEDICATED_OPTIMIZATION_PROTOCOL:
-  not established
 
 DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_OPTIMIZATION_PILOTS:
-  1
+  2
 
 POSITIVE_OPTIMIZATION_CASES:
   1
+
+NEGATIVE_OR_UNRESOLVED_OPTIMIZATION_CASES:
+  1
+
+ALL_SIX_OPTIMIZATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_OPTIMIZATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 BASELINE_OPTIMIZATION_CASES:
   0
@@ -148,8 +155,8 @@ OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-OPT-CH-001 completed at 72/72 PASS.
+OPT-CH-002 completed at 80/80 PASS.
 
-It directly exercised unique optimum, tied optimum set, Pareto set, incomparability distinct from underdetermination, hard-constraint exclusion, uncertainty-aware ordering, selection preservation under a reduced readout, and Computation handoff without substitution.
+Across OPT-CH-001 and OPT-CH-002, all six primary Optimization statuses and all seven task terminals have now been directly exercised.
 
-Next: prospectively precommit and execute **OPT-CH-002** terminal / negative coverage.
+Next: prospectively precommit and execute **OPT-CH-003**, the direct neighboring-method boundary challenge using the five-interface identity and equal shared-artifact access.
