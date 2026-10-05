@@ -86,10 +86,13 @@ Control internal build/standardization is closed at Protocol v0.1 after CTRL-AUD
 ~~~text
 NEXT_FAMILY_INTERNAL_BUILD_FRONT:
   Operation / DSD 운영론
+
 CONTROL_EXTERNAL_VALIDATION_PHASE:
   deferred / separate
+
 INDEPENDENT_CONTROL_VALIDATION:
   not established
+
 INDEPENDENT_REPLICATION:
   not established
 ~~~
