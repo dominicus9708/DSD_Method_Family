@@ -10,10 +10,10 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 
 - [`methodology/CURRENT_SYNC_STATE.md`](methodology/CURRENT_SYNC_STATE.md) — Notion·GitHub·프로젝트 채팅을 교차 복원한 **2026-10-05 KST** 현재 상태 체크포인트.
 - [`methodology/LIVE_SYNC_POLICY.md`](methodology/LIVE_SYNC_POLICY.md) — 상태 변화가 발생한 같은 작업 단위에서 GitHub와 Notion을 함께 갱신하는 필수 실시간 동기화 규칙.
-- Current sync epoch: `MF-SYNC-20261005-OPT-CH003`
-- Latest claim-relevant source checkpoint at adoption: `8f64e379c6487c12f70817d75921d84d1a3f83ce`
-- Latest completed method event: **OPT-CH-003 direct neighboring-method Optimization boundary challenge — 99/99 PASS / 11 pairs / 0 exact collapse / 0 unresolved**.
-- Next canonical step: **prospectively precommit and execute OPT-CH-004 competent non-DSD baseline challenge**.
+- Current sync epoch: `MF-SYNC-20261005-OPT-CH004`
+- Latest claim-relevant source checkpoint at adoption: `e22031ab53963f1b1e31daee6b2b5583bc6c181f`
+- Latest completed method event: **OPT-CH-004 competent non-DSD Optimization baseline — 64/64 PASS / OPTIMIZATION_NO_GAIN / equal-information access**.
+- Next canonical step: **prospectively precommit and execute OPT-CH-005 strongest-reasonable non-DSD Optimization baseline**.
 - Canonical Notion sync page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 - The checkpoint does not replace method-specific protocols, precommits, evidence, audits, or historical worklogs.
 
