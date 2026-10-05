@@ -1,6 +1,6 @@
 # DSD Control — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-001 84/84 PASS / CTRL-CH-002 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-002 100/100 PASS / CTRL-CH-003 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — active-front handoff
@@ -108,3 +108,27 @@ Directly exercised one-step action, feedback policy, open-loop sequence, hard co
 ## Next
 
 Prospectively precommit and execute **CTRL-CH-002** status / terminal coverage.
+
+
+## Step 8 — CTRL-CH-002 status / terminal coverage
+
+~~~text
+PRECOMMIT_COMMIT:
+  b06e81a080cf204c9c6d84024f0fe395043f0de5
+PRECOMMIT_BLOB:
+  eb88a123b83b88c9c990f036ad365b1ec4e82449
+RESULT_COMMIT:
+  0dd8c01f7001ef50cfc439b57a63b62a0874372d
+RESULT_BLOB:
+  23afb5e113641088ae9b53db6a046c48d5349441
+CHECKS:
+  100/100 PASS
+ALL_SIX_CONTROL_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+ALL_SEVEN_CONTROL_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+## Next
+
+Prospectively precommit and execute **CTRL-CH-003** direct neighboring-method boundary challenge.
