@@ -1,6 +1,6 @@
 # DSD Simulation — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — SIM-CH-003 108/108 PASS / SIM-CH-004 NEXT**  
+Status: **INTERNALLY STANDARDIZED — SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -363,3 +363,117 @@ No permanent method irreducibility, superiority, deletion, merger, absorption, o
 ## Next
 
 Prospectively precommit and execute **SIM-CH-004** competent non-DSD Simulation baseline challenge.
+
+
+## Step 10 — SIM-CH-004 competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  7d85d57625f109ba2e1836c000d24b7b5a5fee16
+PRECOMMIT_BLOB:
+  066104319e65f5a5f420a494cf5857df9a6f7c47
+
+RESULT_COMMIT:
+  b0f923f25258cfa877ec68268a5b04275a3ecab8
+RESULT_BLOB:
+  818125814c82a2893510dd6e972ba1633d98ee88
+
+CHECKS:
+  64/64 PASS
+
+SIMULATION_METHOD_GAIN_STATUS:
+  SIMULATION_NO_GAIN
+~~~
+
+## Step 11 — SIM-CH-005 strongest-reasonable non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  da364f3999558c71fb705a8bd87b734c0132a8d6
+PRECOMMIT_BLOB:
+  5a980110d8e2cab5b9fbef654bc4acfe0dbce16b
+
+RESULT_COMMIT:
+  c055c0c1beeb6ff8a5cb91b60a61f06e1869ed1f
+RESULT_BLOB:
+  01c4a5b38da961a7763b0f83b1775618f11b6bdf
+
+CHECKS:
+  82/82 PASS
+
+SIMULATION_METHOD_GAIN_STATUS:
+  SIMULATION_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_SIMULATION:
+  established_at_constructed_evidence_level
+~~~
+
+## Step 12 — SIM-CH-006 deterministic same-project retrace
+
+~~~text
+PRECOMMIT_COMMIT:
+  cccf36124f3eab6cffeb00b5d770bc8a403cf327
+PRECOMMIT_BLOB:
+  c22a0a45ac27eb92de37ef71fe79ae6fae639c9e
+
+RETRACE_LEDGER_COMMIT:
+  655f74d1698a12722c5dd3064aff60823c49c67d
+RETRACE_LEDGER_BLOB:
+  894b8b0b4237f74e7bec2274c373385f3fc4a1a0
+
+RESULT_COMMIT:
+  1afe457facbf9c36b891186f7b20169597a135be
+RESULT_BLOB:
+  fc708095fb3d1c1f6cd500ca7445a9c99a4b8426
+
+CHECKS:
+  70/70 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+~~~
+
+## Step 13 — SIM-AUD-001 frozen-axis internal-standardization audit
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  7c3a1a9058e4573d70b7c67f632bafb144abb661
+AUDIT_PRECOMMIT_BLOB:
+  9bb500a8a1655b66e40b0230b17eb1313189a41a
+
+AUDIT_RESULT_COMMIT:
+  a72cb6bb05baab5c31f5478fe67d536ad541efc4
+AUDIT_RESULT_BLOB:
+  34f40dabaafa7cea7c796a90bf3b19f8d9be79e5
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+SIMULATION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+EXTERNAL_SIMULATION_VALIDATION_PHASE:
+  deferred / separate
+~~~
+
+## Family handoff
+
+~~~text
+NEXT_FAMILY_INTERNAL_BUILD_FRONT:
+  Prediction / DSD 예측론
+
+SIMULATION_EXTERNAL_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+~~~
