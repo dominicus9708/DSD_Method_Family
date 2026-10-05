@@ -1,6 +1,6 @@
 # Control Current Status
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-001 84/84 PASS / CTRL-CH-002 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-002 100/100 PASS / CTRL-CH-003 NEXT**  
 Date: **2026-10-06**  
 Method: **Control / DSD 제어론**  
 Canonical path ID: `14`
@@ -46,13 +46,17 @@ BINDING_OPERATION:
   C1-C18
 
 DIRECT_CONTROL_PILOTS_ATTEMPTED:
-  1
+  2
 SUCCESSFUL_DIRECT_CONTROL_PILOTS:
-  1
+  2
 POSITIVE_CONTROL_CASES:
   1
 NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
-  0
+  1
+ALL_SIX_CONTROL_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+ALL_SEVEN_CONTROL_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 METHOD_BOUNDARY_CONTROL_CASES:
   0
 BASELINE_CONTROL_CASES:
@@ -94,7 +98,7 @@ CONTROL_ESTABLISHED may coexist with CONTROL_NO_GAIN
 
 ## Next
 
-Prospectively precommit and execute **CTRL-CH-002**, the status / terminal coverage challenge.
+Prospectively precommit and execute **CTRL-CH-003**, the direct neighboring-method boundary challenge.
 
 ## CTRL-CH-001 checkpoint
 
