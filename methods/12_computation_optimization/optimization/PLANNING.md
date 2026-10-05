@@ -1,6 +1,6 @@
 # DSD Optimization — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — OPTIMIZATION PROTOCOL v0.1 FROZEN / OPT-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-001 72/72 PASS / TERMINAL COVERAGE NEXT**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -14,8 +14,8 @@ Date: **2026-10-05**
 6. ✅ serious pre-protocol boundary attack — 18 attacks / 12 preserved / 6 nonbreaking refinements / 0 collapse
 7. ✅ Boundary Amendment 001 — 6/6 refinements adopted
 8. ✅ executable Optimization Protocol v0.1 — G1-G18 / O1-O18
-9. ⏸ positive constructed challenge — OPT-CH-001 next
-10. ⏸ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage
+9. ✅ positive constructed challenge — OPT-CH-001 72/72 PASS
+10. ⏸ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — OPT-CH-002 next
 11. ⏸ direct neighboring-method boundary challenge
 12. ⏸ competent non-DSD baseline
 13. ⏸ strongest-reasonable non-DSD baseline
@@ -119,7 +119,13 @@ DEDICATED_OPTIMIZATION_PROTOCOL:
   not established
 
 DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
-  0
+  1
+
+SUCCESSFUL_DIRECT_OPTIMIZATION_PILOTS:
+  1
+
+POSITIVE_OPTIMIZATION_CASES:
+  1
 
 BASELINE_OPTIMIZATION_CASES:
   0
@@ -142,6 +148,8 @@ OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-Prospectively precommit and execute **OPT-CH-001** under the frozen Optimization Protocol v0.1.
+OPT-CH-001 completed at 72/72 PASS.
 
-The positive challenge should exercise multiple positive result forms rather than only a unique optimum, so that tied optimum, Pareto multiplicity, incomparability, uncertainty, reduction-preservation, and explicit handoff boundaries are tested before the negative/terminal challenge.
+It directly exercised unique optimum, tied optimum set, Pareto set, incomparability distinct from underdetermination, hard-constraint exclusion, uncertainty-aware ordering, selection preservation under a reduced readout, and Computation handoff without substitution.
+
+Next: prospectively precommit and execute **OPT-CH-002** terminal / negative coverage.
