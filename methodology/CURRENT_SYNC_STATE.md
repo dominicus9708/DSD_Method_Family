@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-PRED-AUD001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `ff7dc7de53d70718ef607649a9ed74b24e582c96`  
-Latest completed method event: **PRED-AUD-001 frozen-axis Prediction audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
-Latest method-result commit: `3bc266995b33bdd7d1e8b88f4e3849bfd00d6c99`  
+Sync epoch: `MF-SYNC-20261006-CTRL-PROTOCOL-v0.1`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `ae6cb6980940cd8ef0b86522ddc3e0032e4af30d`  
+Latest completed method event: **Control Protocol v0.1 frozen after 18 boundary tests and Boundary Amendment 001 (8/8 refinements)**  
+Latest method-result commit: `cda84e4298be81993a571f8f1277b3c7530c6057`  
 Active internal-build front: **Control / DSD 제어론**  
-Next canonical step: **recover Control source/registry constraints and establish the Control internal-build lane**  
+Next canonical step: **prospectively precommit and execute CTRL-CH-001 positive constructed Control challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -67,7 +67,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Optimization | Protocol v0.1 internally standardized; OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Simulation | Protocol v0.1 internally standardized; SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Prediction | Protocol v0.1 internally standardized; PRED-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Control | active internal-build front; source/registry recovery next |
+| Control | active internal-build front; Protocol v0.1 frozen; 18 boundary tests / 8 nonbreaking refinements / 0 collapse; CTRL-CH-001 next |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
