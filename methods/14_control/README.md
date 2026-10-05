@@ -1,6 +1,6 @@
 # 14. DSD Control / DSD 제어론
 
-Status: **active internal-build front — Protocol v0.1 frozen / CTRL-CH-001 next**
+Status: **active internal-build front — CTRL-CH-001 84/84 PASS / CTRL-CH-002 next**
 
 Task: choose interventions or control actions that move an admissible dynamic system toward declared target states while preserving explicit transition and domain conditions.
 
@@ -65,3 +65,23 @@ CONTROL_ESTABLISHED may coexist with CONTROL_NO_GAIN
 ### Next canonical step
 
 Prospectively precommit and execute **CTRL-CH-001**, the positive constructed Control challenge.
+
+
+## CTRL-CH-001 — positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  e8a8098de206a50dc613f243e7c262595fe67cb4
+PRECOMMIT_BLOB:
+  6266f83c410e598bacb6e57e2bb16725d65360f5
+RESULT_COMMIT:
+  727157f99b32f18bff65668fbbed4b01d8dba2da
+RESULT_BLOB:
+  6c116ac1df1bf874e76de2fc104f1ed29c6cf904
+CHECKS:
+  84/84 PASS
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **CTRL-CH-002** status / terminal coverage.
