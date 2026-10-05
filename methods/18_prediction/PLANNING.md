@@ -18,8 +18,8 @@ Date: **2026-10-06**
 10. ✅ negative / blocked / conflicting / underdetermined /
        out-of-scope / partial terminal coverage — PRED-CH-002 100/100 PASS
 11. ✅ direct neighboring-method boundary challenge — PRED-CH-003 99/99 PASS / 11 pairs / exact collapse 0
-12. ⏸ competent non-DSD baseline — PRED-CH-004 next
-13. ⏸ strongest-reasonable non-DSD baseline
+12. ✅ competent non-DSD baseline — PRED-CH-004 64/64 PASS / NO_GAIN
+13. ⏸ strongest-reasonable non-DSD baseline — PRED-CH-005 next
 14. ⏸ deterministic same-project retrace
 15. ⏸ frozen-axis internal-standardization audit
 16. ⏸ external applications / independent validation later
@@ -115,10 +115,10 @@ DEDICATED_PREDICTION_PROTOCOL:
   established v0.1
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
-  3
+  4
 
 POSITIVE_PREDICTION_CASES:
   1
@@ -139,10 +139,10 @@ METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
   11
 
 BASELINE_PREDICTION_CASES:
-  0
+  1
 
 NO_GAIN_PREDICTION_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -159,8 +159,6 @@ PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-PRED-CH-003 completed at 99/99 PASS.
+PRED-CH-004 completed at 64/64 PASS with `PREDICTION_NO_GAIN`.
 
-Eleven neighboring-method pairs were tested with zero exact collapses and zero unresolved boundaries. This remains fixture-bounded separation only.
-
-Next: prospectively precommit and execute **PRED-CH-004**, the competent non-DSD Prediction baseline challenge.
+Next: prospectively precommit and execute **PRED-CH-005**, the strongest-reasonable non-DSD Prediction baseline challenge.
