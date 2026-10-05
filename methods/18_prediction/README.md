@@ -1,6 +1,6 @@
 # 18. DSD Prediction / DSD 예측론
 
-Status: **active internal-build front — Protocol v0.1 frozen / PRED-CH-001 next**
+Status: **active internal-build front — PRED-CH-001 84/84 PASS / PRED-CH-002 next**
 
 Task: derive future-state or outcome claims from an explicitly fixed current state, dynamic model, uncertainty structure, and domain bridge.
 
