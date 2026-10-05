@@ -1,6 +1,6 @@
 # Optimization Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-003 99/99 PASS / 11 PAIRS / 0 COLLAPSE / OPT-CH-004 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-004 64/64 PASS / NO_GAIN / OPT-CH-005 NEXT**  
 Date: **2026-10-05**  
 Method: **Optimization / DSD 최적화론**  
 Legacy path ID: `12B`  
@@ -59,10 +59,10 @@ BINDING_OPERATION:
   O1-O18
 
 DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_OPTIMIZATION_PILOTS:
-  3
+  4
 
 POSITIVE_OPTIMIZATION_CASES:
   1
@@ -95,10 +95,10 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_OPTIMIZATION_CASES:
-  0
+  1
 
 NO_GAIN_OPTIMIZATION_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -176,9 +176,9 @@ OPTIMIZATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **OPT-CH-004**, a fair competent non-DSD Optimization baseline challenge.
+Prospectively precommit and execute **OPT-CH-005**, a strongest-reasonable non-DSD Optimization baseline challenge.
 
-The baseline must receive equal claim-relevant information and must allow `OPTIMIZATION_NO_GAIN` as a valid result.
+The baseline must be materially stronger than B0, must receive equal claim-relevant information, and must preserve `OPTIMIZATION_NO_GAIN` as an allowed result.
 
 
 ## OPT-CH-001 checkpoint
@@ -265,6 +265,36 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
 
 SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+
+## OPT-CH-004 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  f31ff4ab5619ebc161bc2b6dea9574ff6792c3d7
+PRECOMMIT_BLOB:
+  3411d000de6e6d67ceda7fa2defca338e696fff7
+
+RESULT_COMMIT:
+  3b123abe43761ec460c0e002bb16a2a2f84ac9bf
+RESULT_BLOB:
+  8c93ab0e1975d818ac04a401a6f007bb6c603886
+
+CHECKS:
+  64/64 PASS
+
+OPTIMIZATION_METHOD_GAIN_STATUS:
+  OPTIMIZATION_NO_GAIN
+
+EQUAL_INFORMATION_ACCESS:
+  yes
 
 PROTOCOL_REVISION_REQUIRED:
   no
