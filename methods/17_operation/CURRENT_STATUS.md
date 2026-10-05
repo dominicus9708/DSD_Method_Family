@@ -1,6 +1,6 @@
 # Operation Current Status
 
-Status: **ACTIVE INTERNAL BUILD — OPR-CH-006 70/70 PASS / OPR-AUD-001 NEXT**  
+Status: **INTERNALLY STANDARDIZED — OPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
 Date: **2026-10-06**  
 Method: **Operation / DSD 운영론**  
 Canonical path ID: `17`
@@ -92,7 +92,7 @@ INDEPENDENT_REPLICATION:
   not established
 
 OPERATION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 CURRENT_OPERATION_EVIDENCE_STATUS:
   validation_in_progress
 
@@ -119,7 +119,23 @@ OPERATION_ESTABLISHED may coexist with OPERATION_NO_GAIN
 
 ## Next
 
-Prospectively precommit and execute **OPR-AUD-001**, the frozen-axis internal-standardization audit.
+Operation internal build/standardization is closed at Protocol v0.1.
+
+~~~text
+INTERNALLY_STANDARDIZED_METHODS:
+  22 / 22
+
+REMAINING_INTERNAL_BUILD_METHODS:
+  0 / 22
+
+METHOD_FAMILY_INTERNAL_BUILD_STATUS:
+  complete
+
+OPERATION_EXTERNAL_VALIDATION_PHASE:
+  deferred / separate
+~~~
+
+No method remains in the internal-build queue.
 
 
 ## OPR-CH-001 checkpoint
@@ -243,4 +259,24 @@ CLAIM_RELEVANT_MISMATCHES:
   0
 POST_COMPARISON_CORRECTIONS:
   0
+~~~
+
+
+## OPR-AUD-001 checkpoint
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  cb268429fab634829b29cfaadc02f6c2bafb8bb2
+AUDIT_PRECOMMIT_BLOB:
+  d90754b3c9ea780b5a4ead69f394c062579f4a9c
+AUDIT_RESULT_COMMIT:
+  59105917a92142c09e8c9c6125de6d503e407b9f
+AUDIT_RESULT_BLOB:
+  2657a1420a5ad1d7d5900fe193527ccb22598581
+AUDIT_CHECKS:
+  28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+OPERATION_INTERNAL_STANDARDIZATION_STATUS:
+  established
 ~~~
