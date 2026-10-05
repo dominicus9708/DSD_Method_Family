@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-05 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261005-COMP-CH006`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `85437e3064ccde057c2df9c7705c76f6be9dd281`  
-Latest completed method event: **COMP-CH-006 deterministic same-project Computation retrace — 70/70 PASS / zero claim-relevant mismatch / zero post-comparison correction**  
-Latest method-result commit: `27ce66a5edb231f1f283ecf3a259aafb13bb587f`  
-Active internal-build front: **Computation / DSD 계산론**  
-Next canonical step: **prospectively precommit and execute COMP-AUD-001 frozen-axis internal-standardization audit**  
+Sync epoch: `MF-SYNC-20261005-OPT-PROTOCOL-v0.1`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `953190e69c7fb7182ba0323f591196108fb80cc9`  
+Latest completed method event: **Optimization Protocol v0.1 frozen after 18-attack boundary phase and 6/6 Boundary Amendment 001 adoption**  
+Latest method-result commit: `34584acd54af1bafef7dd176f795ed914eddc6b2`  
+Active internal-build front: **Optimization / DSD 최적화론**  
+Next canonical step: **prospectively precommit and execute OPT-CH-001 positive constructed challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,8 +63,8 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | active internal-build front; COMP-CH-001 84/84 PASS; COMP-CH-002 80/80 PASS; COMP-CH-003 99/99 PASS; COMP-CH-004 64/64 PASS / NO_GAIN; COMP-CH-005 82/82 PASS / NO_GAIN; COMP-CH-006 70/70 PASS deterministic same-project retrace; reproducibility case 1; zero claim-relevant mismatch; COMP-AUD-001 next |
-| Optimization | proposed |
+| Computation | Protocol v0.1 internally standardized; COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
+| Optimization | active internal-build front; source/registry recovered; Task Interface v0.1 historical draft frozen; 18 boundary attacks; Boundary Amendment 001 6/6 adopted; Protocol v0.1 frozen; OPT-CH-001 next |
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
