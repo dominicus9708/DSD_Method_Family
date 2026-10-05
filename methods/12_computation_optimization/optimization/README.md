@@ -1,6 +1,6 @@
 # DSD Optimization / DSD 최적화론
 
-Status: **active internal-build front — OPT-CH-006 70/70 PASS / deterministic retrace established / OPT-AUD-001 next**
+Status: **internally standardized — OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / external validation deferred**
 Legacy path ID: `12B`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -393,3 +393,38 @@ POST_COMPARISON_CORRECTIONS:
 ### Next canonical step
 
 Prospectively precommit and execute **OPT-AUD-001**, the frozen-axis internal-standardization audit.
+
+
+## OPT-AUD-001 — internal-standardization audit
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  379864b2c77fb4b5ff53341f3765ff560c3ebd8d
+AUDIT_PRECOMMIT_BLOB:
+  177a50c9b6d24acdcf032539bf28ee30a054284e
+
+AUDIT_RESULT_COMMIT:
+  030150b6b95a05f98adb8a4b5adda228ac023151
+AUDIT_RESULT_BLOB:
+  e2a3095f05c7ab179a92fcec06b3b77a32de2a34
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+EXTERNAL_OPTIMIZATION_VALIDATION_PHASE:
+  deferred / separate
+~~~
+
+The two NO_GAIN baselines remain bounded evidence and do not imply method failure, deletion, merger, absorption, or permanent redundancy.
+
+### Family handoff
+
+Optimization internal build/standardization is closed at Protocol v0.1.
+
+The next family-wide internal-build front is **Simulation / DSD 시뮬레이션론**.
