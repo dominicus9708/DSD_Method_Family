@@ -1,13 +1,13 @@
 # DSD Method Family — Current Sync State
 
-Synchronized: **2026-10-05 KST**  
+Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261005-SIM-CH003`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `b85ebe6002345177cbdfe01ac9e5c9ffd336b688`  
-Latest completed method event: **SIM-CH-003 direct neighboring-method Simulation boundary challenge — 108/108 PASS / 12 pairs / exact collapse 0 / unresolved 0**  
-Latest method-result commit: `abc626363574c8f9bd535a377cb705351e735129`  
-Active internal-build front: **Simulation / DSD 시뮬레이션론**  
-Next canonical step: **prospectively precommit and execute SIM-CH-004 competent non-DSD Simulation baseline challenge**  
+Sync epoch: `MF-SYNC-20261006-SIM-AUD001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `18559d96c41ed81504f3a5b5930830a5e20fd107`  
+Latest completed method event: **SIM-AUD-001 frozen-axis Simulation audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
+Latest method-result commit: `a72cb6bb05baab5c31f5478fe67d536ad541efc4`  
+Active internal-build front: **Prediction / DSD 예측론**  
+Next canonical step: **recover Prediction source/registry constraints and establish the Prediction internal-build lane**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -65,8 +65,8 @@ They are not a cross-method ranking and do not imply independent external valida
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | Protocol v0.1 internally standardized; COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Optimization | Protocol v0.1 internally standardized; OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Simulation | active internal-build front; Protocol v0.1 frozen; SIM-CH-001 84/84 PASS; SIM-CH-002 80/80 PASS; SIM-CH-003 108/108 PASS / 12 boundary pairs / exact collapse 0; SIM-CH-004 competent baseline next |
-| Prediction | proposed |
+| Simulation | Protocol v0.1 internally standardized; SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
+| Prediction | active internal-build front; source/registry recovery next |
 | Control | proposed |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
