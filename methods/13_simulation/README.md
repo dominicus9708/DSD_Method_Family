@@ -1,6 +1,6 @@
 # 13. DSD Simulation / DSD 시뮬레이션론
 
-Status: **active internal-build front — SIM-CH-002 80/80 PASS / all statuses+terminals covered / SIM-CH-003 next**
+Status: **active internal-build front — SIM-CH-003 108/108 PASS / competent baseline next**
 
 Task: generate and compare admissible state trajectories while keeping regular evolution, status/domain transitions, and formation-level transitions distinct.
 
@@ -250,3 +250,42 @@ ALL_SEVEN_SIMULATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
 ### Next canonical step
 
 Prospectively precommit and execute **SIM-CH-003**, the direct neighboring-method boundary challenge.
+
+
+## SIM-CH-003 — direct neighboring-method boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  28438af12f0e80b441381b45b2cb836e587c4aa3
+PRECOMMIT_BLOB:
+  3f750323283a3525a4925d122f3ffee26211d654
+
+RESULT_COMMIT:
+  abc626363574c8f9bd535a377cb705351e735129
+RESULT_BLOB:
+  a8e8e9f547ccde46196761df146394ce35481e2f
+
+CHECKS:
+  108/108 PASS
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  12
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  12
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+~~~
+
+This supports fixture-bounded Simulation separation from Computation, Optimization, Measurement, Aggregation, Compression, Transformation, Tracking, Lineage, Prediction, Control, Operation, and Audit.
+
+### Next canonical step
+
+Prospectively precommit and execute **SIM-CH-004**, a fair competent non-DSD Simulation baseline challenge.
