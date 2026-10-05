@@ -1,6 +1,6 @@
 # Prediction Current Status — source / registry recovery checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — SOURCE / REGISTRY RECOVERY COMPLETE / TASK INTERFACE NEXT**  
+Status: **ACTIVE INTERNAL BUILD — TASK INTERFACE v0.1 DRAFT ESTABLISHED / BOUNDARY ATTACK NEXT**  
 Date: **2026-10-06**  
 Method: **Prediction / DSD 예측론**  
 Canonical path ID: `18`  
@@ -22,7 +22,17 @@ SOURCE_DERIVED_CONSTRAINTS:
   PR-01~PR-20
 
 TASK_INTERFACE_DRAFT:
-  not established
+  v0.1 established
+
+TASK_INTERFACE_COMMIT:
+  b5e4004aeb1b90866e17ad0c26ffdba833b0effe
+
+TASK_INTERFACE_BLOB:
+  edcafd7e692933a5e02a5384e85cf78553670474
+
+TASK_INTERFACE_STATUS:
+  PRE-PROTOCOL HISTORICAL DRAFT
+  NOT AN EXECUTABLE STANDARD
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
   0
@@ -55,7 +65,7 @@ PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_PREDICTION_EVIDENCE_STATUS:
-  source_and_registry_recovery_complete
+  source_and_interface_recovery
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -136,6 +146,6 @@ PREDICTION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Draft **Prediction Task Interface v0.1** from the recovered source/registry constraints.
+Begin the serious pre-protocol boundary attack against **Prediction Task Interface v0.1**.
 
-The Task Interface must be frozen as historical pre-protocol evidence before serious boundary attack begins.
+Once the attack starts, the Task Interface is immutable historical evidence and any required nonbreaking refinements must be recorded separately in a Boundary Amendment.
