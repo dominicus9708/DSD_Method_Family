@@ -1,6 +1,6 @@
 # DSD Operation — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — OPR-CH-005 82/82 PASS / OPR-CH-006 NEXT**  
+Status: **INTERNALLY STANDARDIZED — OPR-AUD-001 28/28 PASS / METHOD FAMILY INTERNAL BUILD COMPLETE**  
 Date: **2026-10-06**
 
 ## Canonical sequence
@@ -17,8 +17,8 @@ Date: **2026-10-06**
 9. ✅ direct neighboring-method boundary challenge — OPR-CH-003 99/99 PASS / 11 pairs / exact collapse 0
 10. ✅ competent non-DSD baseline — OPR-CH-004 64/64 PASS / NO_GAIN
 11. ✅ strongest-reasonable non-DSD baseline — OPR-CH-005 82/82 PASS / NO_GAIN
-12. ⏸ deterministic same-project retrace — OPR-CH-006 next
-13. ⏸ frozen-axis internal-standardization audit
+12. ✅ deterministic same-project retrace — OPR-CH-006 70/70 PASS / mismatch 0
+13. ✅ frozen-axis internal-standardization audit — OPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD
 14. ⏸ external / independent validation later
 ~~~
 
@@ -47,6 +47,12 @@ BASELINE_OPERATION_CASES:
 NO_GAIN_OPERATION_CASES:
   2
 REPRODUCIBILITY_CASES:
+  1
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+CLAIM_RELEVANT_MISMATCHES:
+  0
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_OPERATION_APPLICATIONS:
@@ -56,7 +62,7 @@ INDEPENDENT_OPERATION_VALIDATION:
 INDEPENDENT_REPLICATION:
   not established
 OPERATION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 ~~~
 
 ## Evidence path
@@ -75,8 +81,21 @@ Task Interface
 
 ## Next
 
-OPR-CH-005 completed at 82/82 PASS with `OPERATION_NO_GAIN`.
+Operation internal build/standardization is closed after OPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
 
-The strongest-reasonable baseline status is bounded to constructed evidence.
+~~~text
+INTERNALLY_STANDARDIZED_METHODS:
+  22 / 22
+REMAINING_INTERNAL_BUILD_METHODS:
+  0 / 22
+METHOD_FAMILY_INTERNAL_BUILD_STATUS:
+  complete
+OPERATION_EXTERNAL_VALIDATION_PHASE:
+  deferred / separate
+INDEPENDENT_OPERATION_VALIDATION:
+  not established
+INDEPENDENT_REPLICATION:
+  not established
+~~~
 
-Next: prospectively precommit and execute **OPR-CH-006**, the deterministic same-project Operation retrace.
+Any next work belongs to a separate post-standardization phase.
