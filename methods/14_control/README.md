@@ -1,6 +1,6 @@
 # 14. DSD Control / DSD 제어론
 
-Status: **active internal-build front — CTRL-CH-001 84/84 PASS / CTRL-CH-002 next**
+Status: **active internal-build front — CTRL-CH-002 100/100 PASS / all statuses+terminals covered / CTRL-CH-003 next**
 
 Task: choose interventions or control actions that move an admissible dynamic system toward declared target states while preserving explicit transition and domain conditions.
 
@@ -85,3 +85,27 @@ CHECKS:
 ### Next canonical step
 
 Prospectively precommit and execute **CTRL-CH-002** status / terminal coverage.
+
+
+## CTRL-CH-002 — status / terminal coverage
+
+~~~text
+PRECOMMIT_COMMIT:
+  b06e81a080cf204c9c6d84024f0fe395043f0de5
+PRECOMMIT_BLOB:
+  eb88a123b83b88c9c990f036ad365b1ec4e82449
+RESULT_COMMIT:
+  0dd8c01f7001ef50cfc439b57a63b62a0874372d
+RESULT_BLOB:
+  23afb5e113641088ae9b53db6a046c48d5349441
+CHECKS:
+  100/100 PASS
+ALL_SIX_CONTROL_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+ALL_SEVEN_CONTROL_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **CTRL-CH-003**, the direct neighboring-method boundary challenge.
