@@ -1,6 +1,6 @@
 # DSD Control — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-006 70/70 PASS / CTRL-AUD-001 NEXT**  
+Status: **INTERNALLY STANDARDIZED — CTRL-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
 Date: **2026-10-06**
 
 ## Step 1 — active-front handoff
@@ -230,3 +230,32 @@ POST_COMPARISON_CORRECTIONS:
 ## Next
 
 Prospectively precommit and execute **CTRL-AUD-001** frozen-axis internal-standardization audit.
+
+
+## Step 13 — CTRL-AUD-001 internal-standardization audit
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  92998255e09b0f6786c22a7a2b7207f4b64af2a4
+AUDIT_RESULT_COMMIT:
+  d8edb8ab3fcfcd7b7e7d7ef5517948009621a7bb
+AUDIT_RESULT_BLOB:
+  21bae6299825c4707f24e3b248db31fa8901ae47
+AUDIT_CHECKS:
+  28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+CONTROL_INTERNAL_STANDARDIZATION_STATUS:
+  established
+~~~
+
+## Family handoff
+
+~~~text
+NEXT_FAMILY_INTERNAL_BUILD_FRONT:
+  Operation / DSD 운영론
+CONTROL_EXTERNAL_VALIDATION:
+  not established
+INDEPENDENT_REPLICATION:
+  not established
+~~~
