@@ -1,6 +1,6 @@
 # DSD Optimization / DSD 최적화론
 
-Status: **active internal-build front — OPT-CH-003 99/99 PASS / 11 pairs / 0 collapse / OPT-CH-004 next**
+Status: **active internal-build front — OPT-CH-004 64/64 PASS / NO_GAIN / OPT-CH-005 next**
 Legacy path ID: `12B`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -285,3 +285,36 @@ Compared methods: Computation, Comparison, Design, Measurement, Aggregation, Com
 ### Next canonical step
 
 Prospectively precommit and execute **OPT-CH-004**, a fair competent non-DSD Optimization baseline challenge.
+
+
+## OPT-CH-004 — competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  f31ff4ab5619ebc161bc2b6dea9574ff6792c3d7
+PRECOMMIT_BLOB:
+  3411d000de6e6d67ceda7fa2defca338e696fff7
+
+RESULT_COMMIT:
+  3b123abe43761ec460c0e002bb16a2a2f84ac9bf
+RESULT_BLOB:
+  8c93ab0e1975d818ac04a401a6f007bb6c603886
+
+CHECKS:
+  64/64 PASS
+
+BASELINE_ID:
+  B0_GENERIC_TYPED_CONSTRAINED_SELECTOR
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+OPTIMIZATION_METHOD_GAIN_STATUS:
+  OPTIMIZATION_NO_GAIN
+~~~
+
+The competent baseline reproduced the frozen claim-relevant Optimization outcomes on all six gain axes.
+
+### Next canonical step
+
+Prospectively precommit and execute **OPT-CH-005**, a strongest-reasonable non-DSD Optimization baseline.
