@@ -1,6 +1,6 @@
 # DSD Simulation — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — SIM-CH-003 108/108 PASS / COMPETENT BASELINE NEXT**  
+Status: **INTERNALLY STANDARDIZED — SIM-AUD-001 28/28 PASS / EXTERNAL VALIDATION DEFERRED**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -17,10 +17,10 @@ Date: **2026-10-05**
 9. ✅ positive constructed challenge — SIM-CH-001 84/84 PASS
 10. ✅ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — SIM-CH-002 80/80 PASS
 11. ✅ direct neighboring-method boundary challenge — SIM-CH-003 108/108 PASS / 12 pairs / exact collapse 0
-12. ⏸ competent non-DSD baseline — SIM-CH-004 next
-13. ⏸ strongest-reasonable non-DSD baseline
-14. ⏸ deterministic same-project retrace
-15. ⏸ frozen-axis internal-standardization audit
+12. ✅ competent non-DSD baseline — SIM-CH-004 64/64 PASS / NO_GAIN
+13. ✅ strongest-reasonable non-DSD baseline — SIM-CH-005 82/82 PASS / NO_GAIN
+14. ✅ deterministic same-project retrace — SIM-CH-006 70/70 PASS / mismatch 0
+15. ✅ frozen-axis internal-standardization audit — SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD
 16. ⏸ external applications / independent validation later
 ~~~
 
@@ -114,10 +114,10 @@ DEDICATED_SIMULATION_PROTOCOL:
   established v0.1
 
 DIRECT_SIMULATION_PILOTS_ATTEMPTED:
-  3
+  5
 
 SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
-  3
+  5
 
 POSITIVE_SIMULATION_CASES:
   1
@@ -132,12 +132,24 @@ ALL_SEVEN_SIMULATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
   yes
 
 BASELINE_SIMULATION_CASES:
-  0
+  2
 
 NO_GAIN_SIMULATION_CASES:
-  0
+  2
+
+STRONGEST_REASONABLE_BASELINE_SIMULATION:
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_SIMULATION_APPLICATIONS:
@@ -147,13 +159,23 @@ INDEPENDENT_SIMULATION_VALIDATION:
   not established
 
 SIMULATION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 ~~~
 
 ## 7. Next
 
-SIM-CH-003 completed at 108/108 PASS.
+Simulation internal build/standardization is closed at Protocol v0.1 after SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
 
-Twelve neighboring-method pairs were tested with zero exact collapses and zero unresolved boundaries. This is fixture-bounded separation only, not a permanent irreducibility claim.
+~~~text
+NEXT_FAMILY_INTERNAL_BUILD_FRONT:
+  Prediction / DSD 예측론
 
-Next: prospectively precommit and execute **SIM-CH-004**, the fair competent non-DSD Simulation baseline challenge.
+SIMULATION_EXTERNAL_VALIDATION_PHASE:
+  deferred / separate
+
+INDEPENDENT_SIMULATION_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+~~~
