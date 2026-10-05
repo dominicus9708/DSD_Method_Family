@@ -1,6 +1,6 @@
-# Optimization Current Status — source/interface recovery checkpoint
+# Optimization Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — TASK INTERFACE v0.1 DRAFT ESTABLISHED / BOUNDARY ATTACK NEXT**  
+Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / OPT-CH-001 NEXT**  
 Date: **2026-10-05**  
 Method: **Optimization / DSD 최적화론**  
 Legacy path ID: `12B`  
@@ -32,10 +32,31 @@ TASK_INTERFACE_STATUS:
   NOT AN EXECUTABLE STANDARD
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
-  0
+  18
+
+BOUNDARY_ATTACK_RESULT:
+  12 preserved / 6 nonbreaking refinements / 0 collapse
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  6/6
 
 DEDICATED_OPTIMIZATION_PROTOCOL:
-  not established
+  established v0.1
+
+PROTOCOL_COMMIT:
+  34584acd54af1bafef7dd176f795ed914eddc6b2
+
+PROTOCOL_BLOB:
+  5d2f9e37eab08bba27b0f416599df2e74a8c0c42
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  O1-O18
 
 DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
   0
@@ -62,7 +83,7 @@ OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_OPTIMIZATION_EVIDENCE_STATUS:
-  source_and_interface_recovery
+  protocol_frozen
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -122,6 +143,6 @@ OPTIMIZATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Execute a serious pre-protocol boundary attack against the 18 attack targets frozen in `TASK_INTERFACE_v0.1-draft.md`.
+Prospectively precommit and execute **OPT-CH-001**, the positive constructed Optimization challenge.
 
-Once direct boundary attack begins, the Task Interface draft remains immutable historical evidence. Refinements must be recorded separately.
+The frozen protocol must directly exercise unique optimum, tied optimum set, Pareto-set semantics, hard constraints, declared multi-objective semantics, incomparability versus underdetermination, uncertainty/reduction sidecars, Computation handoff without substitution, and bounded maximum claim.
