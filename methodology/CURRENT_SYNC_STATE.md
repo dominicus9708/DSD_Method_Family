@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-CTRL-AUD001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `c47f8c454d79cb3b02de0bac0a2cf0a0242f1e01`  
-Latest completed method event: **CTRL-AUD-001 frozen-axis Control audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
-Latest method-result commit: `d8edb8ab3fcfcd7b7e7d7ef5517948009621a7bb`  
+Sync epoch: `MF-SYNC-20261006-OPR-CH004`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `43422ac92373653d5d010a21bfa2d8cb92f209eb`  
+Latest completed method event: **OPR-CH-004 competent non-DSD Operation baseline — 64/64 PASS / OPERATION_NO_GAIN**  
+Latest method-result commit: `c3c405fed879d1d49dda60aaa6ef467f445f9c05`  
 Active internal-build front: **Operation / DSD 운영론**  
-Next canonical step: **recover Operation source/registry constraints and establish the Operation internal-build lane**  
+Next canonical step: **prospectively precommit and execute OPR-CH-005 strongest-reasonable non-DSD Operation baseline challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -71,7 +71,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
-| Operation | active internal-build front; source/registry recovery next |
+| Operation | active internal-build front; Protocol v0.1 frozen; OPR-CH-004 64/64 PASS / NO_GAIN; OPR-CH-005 strongest-reasonable baseline next |
 
 ## 3. Shared core
 
