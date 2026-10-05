@@ -1,6 +1,6 @@
 # DSD Control — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-002 100/100 PASS / CTRL-CH-003 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-003 90/90 PASS / CTRL-CH-004 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — active-front handoff
@@ -132,3 +132,27 @@ ALL_SEVEN_CONTROL_TASK_TERMINALS_DIRECTLY_EXERCISED:
 ## Next
 
 Prospectively precommit and execute **CTRL-CH-003** direct neighboring-method boundary challenge.
+
+
+## Step 9 — CTRL-CH-003 neighboring-method boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  e684473b906a4e1dd0e0bf56a096b4a4dbf47ff3
+RESULT_COMMIT:
+  d0d5e841b7e4497139d3aa662622e91c4a31ac24
+RESULT_BLOB:
+  35fdb5d5d6c8bd6d7bd0bcf92866d2053fc6a895
+CHECKS:
+  90/90 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  10
+EXACT_COLLAPSE_PAIRS:
+  0
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+~~~
+
+## Next
+
+Prospectively precommit and execute **CTRL-CH-004** competent non-DSD Control baseline challenge.
