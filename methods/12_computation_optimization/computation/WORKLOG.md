@@ -686,3 +686,51 @@ This result is constructed same-project evidence only. It does not establish str
 ### Next canonical step
 
 Prospectively precommit and execute **COMP-CH-005**, the strongest-reasonable non-DSD Computation baseline challenge.
+
+
+## Step — COMP-CH-005 strongest-reasonable baseline
+
+Date: **2026-10-05**
+
+~~~text
+PRECOMMIT_COMMIT:
+  c49c96fe0f54d7f492e21261b30af14450b6c437
+PRECOMMIT_BLOB:
+  086b6cce2d39bc76e901199dcaadfd40e4fdecd4
+RESULT_COMMIT:
+  fd89c3ef37da93a1c4198a6630332bc425403f66
+RESULT_BLOB:
+  2cde47641112eadbc559c44f99a62722a60c91ce
+CHECKS:
+  82/82 PASS
+BASELINE:
+  B1_STRONG_COMPUTATION_PLANNING_ENGINE
+EQUAL_INFORMATION_ACCESS:
+  yes
+COMPUTATION_METHOD_GAIN_STATUS:
+  COMPUTATION_NO_GAIN
+DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
+  5
+SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
+  5
+BASELINE_COMPUTATION_CASES:
+  2
+NO_GAIN_COMPUTATION_CASES:
+  2
+STRONGEST_REASONABLE_BASELINE_COMPUTATION:
+  established_at_constructed_evidence_level
+PROTOCOL_REVISION_REQUIRED:
+  no
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+B1 is materially stronger than the competent B0 baseline and uses ordinary dependency slicing, incremental invalidation, symbolic discharge, abstract/interval reasoning, recursive-closure checks, end-to-end error propagation, transition invalidation, deterministic ledgers, and rerun manifests without importing DSD as theory.
+
+All seven frozen gain axes were BASELINE_MATCH.
+
+This strongest-reasonable label is bounded to the frozen constructed comparator class and is not a universal optimality claim.
+
+### Next canonical step
+
+Prospectively precommit and execute **COMP-CH-006**, the deterministic same-project retrace of COMP-CH-001~005.
