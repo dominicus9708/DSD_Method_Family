@@ -1,6 +1,6 @@
 # 13. DSD Simulation / DSD 시뮬레이션론
 
-Status: **proposed**
+Status: **active internal-build front — source/interface recovery complete / Task Interface v0.1 draft established / pre-protocol boundary attack next**
 
 Task: generate and compare admissible state trajectories while keeping regular evolution, status/domain transitions, and formation-level transitions distinct.
 
@@ -15,3 +15,120 @@ Typical outputs:
 - alternative trajectories and termination conditions.
 
 Boundary: DSD provides the structural simulation interface; physical, biological, economic, social, artistic, or other dynamics require domain-specific laws or rules.
+
+## Active-front handoff — 2026-10-05
+
+Optimization / DSD 최적화론 completed project-internal standardization:
+
+~~~text
+OPT-AUD-001:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+~~~
+
+Simulation is now the active internal-build front.
+
+~~~text
+OPTIMIZATION != SIMULATION
+OPTIMIZATION_EVIDENCE != SIMULATION_EVIDENCE_BY_DEFAULT
+~~~
+
+## Source / registry recovery
+
+~~~text
+SOURCE_REGISTRY_COMMIT:
+  8c3879f211d1a024ba903273044e099f7ad7041d
+
+SOURCE_REGISTRY_BLOB:
+  a19a771215c0d63144bf613ff3ca6c3a9163151e
+
+SOURCE_DERIVED_CONSTRAINTS:
+  SR-01~SR-20
+~~~
+
+The Dynamics paper supplies the primary formal source interface, but the method-level Simulation protocol is a separate prospective construction.
+
+## Task Interface v0.1 draft
+
+~~~text
+TASK_INTERFACE_COMMIT:
+  31d2ff76c377f70a2a53f733d63b9e723661620d
+
+TASK_INTERFACE_BLOB:
+  62006cb8142a1f461c1c48ab48cb00354bf6f462
+
+TASK_INTERFACE_STATUS:
+  PRE-PROTOCOL HISTORICAL DRAFT
+  NOT AN EXECUTABLE STANDARD
+~~~
+
+Current draft identity:
+
+~~~text
+MISSING_EVOLUTION_LAW != ZERO_DYNAMICS
+REGULAR_VALUE_EVOLUTION != STATUS_OR_DOMAIN_TRANSITION
+CHANNEL_IDENTITY_CHANGE != VALUE_CHANGE_ON_ONE_FIXED_CHANNEL
+TRANSITION_RELATION != DETERMINISTIC_JUMP_MAP
+ONE_ADMISSIBLE_TRAJECTORY != UNIQUE_TRAJECTORY
+EQUAL_READOUT_HISTORY != EQUAL_STATE_HISTORY
+NUMERICAL_TRAJECTORY != EXACT_TRAJECTORY
+ONE_STOCHASTIC_SAMPLE_PATH != DISTRIBUTIONAL_CLAIM
+SIMULATION_TRAJECTORY != PREDICTION
+SIMULATING_POLICY != CHOOSING_CONTROL_POLICY
+SIMULATING_LIFECYCLE != OPERATING_LIFECYCLE
+NO_GAIN != METHOD_FAILURE
+~~~
+
+## Current development state
+
+~~~text
+SOURCE_REGISTRY_RECOVERY:
+  complete
+
+TASK_INTERFACE_DRAFT:
+  v0.1 established
+
+PRE_PROTOCOL_BOUNDARY_ATTACKS:
+  0
+
+DEDICATED_SIMULATION_PROTOCOL:
+  not established
+
+DIRECT_SIMULATION_PILOTS_ATTEMPTED:
+  0
+
+BASELINE_SIMULATION_CASES:
+  0
+
+NO_GAIN_SIMULATION_CASES:
+  0
+
+REPRODUCIBILITY_CASES:
+  0
+
+EXTERNAL_SIMULATION_APPLICATIONS:
+  0
+
+INDEPENDENT_SIMULATION_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+
+SIMULATION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+
+CURRENT_SIMULATION_EVIDENCE_STATUS:
+  source_and_interface_recovery
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+## Next canonical step
+
+Execute the serious pre-protocol boundary attack frozen by `TASK_INTERFACE_v0.1-draft.md`.
+
+Once direct attack execution begins, the Task Interface draft remains immutable historical evidence and any refinement must be recorded in a separate amendment.
