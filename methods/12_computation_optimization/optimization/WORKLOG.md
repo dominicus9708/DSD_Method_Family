@@ -1,6 +1,6 @@
 # DSD Optimization — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-002 80/80 PASS / OPT-CH-003 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-003 99/99 PASS / OPT-CH-004 NEXT**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -331,3 +331,51 @@ missing required objective component
 ## Next
 
 Prospectively precommit and execute **OPT-CH-003** direct neighboring-method boundary challenge.
+
+
+## Step 9 — OPT-CH-003 direct neighboring-method boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  d32729c8928f409305d44bdf78f35b3a8b95e223
+PRECOMMIT_BLOB:
+  2b610516e022ab5286ec0e21b17734bed133915f
+
+RESULT_COMMIT:
+  51283efd2b12efae2d98b4a9640501b03c425501
+RESULT_BLOB:
+  272a6a532b3cb4fff528356de3a3b3766831f930
+
+CHECKS:
+  99/99 PASS
+
+METHOD_BOUNDARY_OPTIMIZATION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The result is fixture-bounded separation evidence only and does not establish permanent irreducibility or permanent registry survival.
+
+## Next
+
+Prospectively precommit and execute **OPT-CH-004** competent non-DSD baseline challenge.
