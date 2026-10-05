@@ -1,6 +1,6 @@
 # DSD Control — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-005 82/82 PASS / CTRL-CH-006 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-006 70/70 PASS / CTRL-AUD-001 NEXT**  
 Date: **2026-10-06**
 
 ## Canonical sequence
@@ -17,8 +17,8 @@ Date: **2026-10-06**
 9. ✅ direct neighboring-method boundary challenge — CTRL-CH-003 90/90 PASS / 10 pairs / exact collapse 0
 10. ✅ competent non-DSD baseline — CTRL-CH-004 64/64 PASS / NO_GAIN
 11. ✅ strongest-reasonable non-DSD baseline — CTRL-CH-005 82/82 PASS / NO_GAIN
-12. ⏸ deterministic same-project retrace — CTRL-CH-006 next
-13. ⏸ frozen-axis internal-standardization audit
+12. ✅ deterministic same-project retrace — CTRL-CH-006 70/70 PASS / mismatch 0
+13. ⏸ frozen-axis internal-standardization audit — CTRL-AUD-001 next
 14. ⏸ external / independent validation later
 ~~~
 
@@ -47,6 +47,12 @@ BASELINE_CONTROL_CASES:
 NO_GAIN_CONTROL_CASES:
   2
 REPRODUCIBILITY_CASES:
+  1
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+CLAIM_RELEVANT_MISMATCHES:
+  0
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_CONTROL_APPLICATIONS:
@@ -75,6 +81,6 @@ Task Interface
 
 ## Next
 
-CTRL-CH-005 completed at 82/82 PASS with `CONTROL_NO_GAIN` and a constructed-evidence strongest-reasonable baseline.
+CTRL-CH-006 completed at 70/70 PASS with zero claim-relevant mismatch and zero post-comparison correction.
 
-Next: prospectively precommit and execute **CTRL-CH-006**, the deterministic same-project Control retrace.
+Next: prospectively precommit and execute **CTRL-AUD-001**, the frozen-axis internal-standardization audit.
