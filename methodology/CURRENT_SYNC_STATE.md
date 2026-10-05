@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-05 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261005-SIM-PROTOCOL-v0.1`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `805d6c4902529f4b29dcc2ececd62708047d2c4a`  
-Latest completed method event: **Simulation Protocol v0.1 frozen after 18-attack boundary phase and Boundary Amendment 001 6/6 adoption**  
-Latest method-result commit: `ea271d04eb09d252299d9420d0fb1191564f5bc6`  
+Sync epoch: `MF-SYNC-20261005-SIM-CH001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `91e8a8f3a2387f2e6cd62363556e5a70ad2bfbc9`  
+Latest completed method event: **SIM-CH-001 positive constructed Simulation challenge — 84/84 PASS**  
+Latest method-result commit: `86ff6673229356500317d58eee404b45f1b66ca6`  
 Active internal-build front: **Simulation / DSD 시뮬레이션론**  
-Next canonical step: **prospectively precommit and execute SIM-CH-001 positive constructed challenge**  
+Next canonical step: **prospectively precommit and execute SIM-CH-002 terminal / negative coverage**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -65,7 +65,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | Protocol v0.1 internally standardized; COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Optimization | Protocol v0.1 internally standardized; OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Simulation | active internal-build front; source/registry recovered; Task Interface v0.1 historical draft frozen; 18 boundary attacks; Boundary Amendment 001 6/6 adopted; Protocol v0.1 frozen; SIM-CH-001 next |
+| Simulation | active internal-build front; Protocol v0.1 frozen; SIM-CH-001 84/84 PASS positive constructed challenge; SIM-CH-002 terminal/negative coverage next |
 | Prediction | proposed |
 | Control | proposed |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
