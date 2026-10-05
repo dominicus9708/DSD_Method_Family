@@ -17,8 +17,8 @@ Date: **2026-10-06**
 9. ✅ positive constructed challenge — PRED-CH-001 84/84 PASS
 10. ✅ negative / blocked / conflicting / underdetermined /
        out-of-scope / partial terminal coverage — PRED-CH-002 100/100 PASS
-11. ⏸ direct neighboring-method boundary challenge — PRED-CH-003 next
-12. ⏸ competent non-DSD baseline
+11. ✅ direct neighboring-method boundary challenge — PRED-CH-003 99/99 PASS / 11 pairs / exact collapse 0
+12. ⏸ competent non-DSD baseline — PRED-CH-004 next
 13. ⏸ strongest-reasonable non-DSD baseline
 14. ⏸ deterministic same-project retrace
 15. ⏸ frozen-axis internal-standardization audit
@@ -115,10 +115,10 @@ DEDICATED_PREDICTION_PROTOCOL:
   established v0.1
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
-  2
+  3
 
 SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
-  2
+  3
 
 POSITIVE_PREDICTION_CASES:
   1
@@ -133,7 +133,10 @@ ALL_SEVEN_PREDICTION_TASK_TERMINALS_DIRECTLY_EXERCISED:
   yes
 
 METHOD_BOUNDARY_PREDICTION_CASES:
-  0
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
 
 BASELINE_PREDICTION_CASES:
   0
@@ -156,8 +159,8 @@ PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-PRED-CH-002 completed at 100/100 PASS.
+PRED-CH-003 completed at 99/99 PASS.
 
-Across PRED-CH-001 and PRED-CH-002, all six primary Prediction statuses and all seven task terminals have been directly exercised.
+Eleven neighboring-method pairs were tested with zero exact collapses and zero unresolved boundaries. This remains fixture-bounded separation only.
 
-Next: prospectively precommit and execute **PRED-CH-003**, the direct neighboring-method boundary challenge.
+Next: prospectively precommit and execute **PRED-CH-004**, the competent non-DSD Prediction baseline challenge.
