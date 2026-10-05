@@ -1,6 +1,6 @@
 # DSD Optimization — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-005 82/82 PASS / NO_GAIN / DETERMINISTIC RETRACE NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-006 70/70 PASS / INTERNAL-STANDARDIZATION AUDIT NEXT**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -19,8 +19,8 @@ Date: **2026-10-05**
 11. ✅ direct neighboring-method boundary challenge — OPT-CH-003 99/99 PASS / 11 pairs / 0 collapse
 12. ✅ competent non-DSD baseline — OPT-CH-004 64/64 PASS / NO_GAIN
 13. ✅ strongest-reasonable non-DSD baseline — OPT-CH-005 82/82 PASS / NO_GAIN
-14. ⏸ deterministic same-project retrace — OPT-CH-006 next
-15. ⏸ frozen-axis internal-standardization audit
+14. ✅ deterministic same-project retrace — OPT-CH-006 70/70 PASS / zero mismatch
+15. ⏸ frozen-axis internal-standardization audit — OPT-AUD-001 next
 16. ⏸ external applications / independent validation later
 ~~~
 
@@ -159,6 +159,15 @@ STRONGEST_REASONABLE_BASELINE_OPTIMIZATION:
   established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_OPTIMIZATION_APPLICATIONS:
@@ -173,8 +182,8 @@ OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-OPT-CH-005 completed at 82/82 PASS with `OPTIMIZATION_NO_GAIN`.
+OPT-CH-006 completed at 70/70 PASS with zero claim-relevant mismatch and zero post-comparison correction.
 
-The strongest-reasonable non-DSD baseline status is established only at the constructed-evidence level.
+The retrace is same-project deterministic artifact-consistency evidence only and does not establish independent replication or independent validation.
 
-Next: prospectively precommit and execute **OPT-CH-006**, a deterministic same-project retrace of OPT-CH-001~005.
+Next: prospectively precommit and execute **OPT-AUD-001**, the frozen-axis internal-standardization audit.
