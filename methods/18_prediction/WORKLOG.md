@@ -1,6 +1,6 @@
 # DSD Prediction — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / PRED-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — PRED-CH-002 100/100 PASS / PRED-CH-003 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — family active-front handoff
@@ -187,3 +187,46 @@ Simulation / Measurement / Control / Operation boundaries
 ## Next
 
 Prospectively precommit and execute **PRED-CH-002** terminal / negative coverage.
+
+
+## Step 8 — PRED-CH-002 status coverage
+
+~~~text
+PRECOMMIT_COMMIT:
+  0b4aa64207a3432cecf0d38dab21e87b26745c16
+PRECOMMIT_BLOB:
+  b1cff116482a9d155c5b2a69ffa9da55ab65f5c5
+
+RESULT_COMMIT:
+  c1a9b05924918ad77b131bc872f136115ef99108
+RESULT_BLOB:
+  a75bd1507481d02b52fbb4cf09e632950270532d
+
+CHECKS:
+  100/100 PASS
+
+ALL_SIX_PREDICTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_PREDICTION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+Directly exercised:
+
+~~~text
+NOT_ESTABLISHED
+BLOCKED
+CONFLICTING
+OUT_OF_SCOPE
+UNDERDETERMINED
+PARTIAL
+future-data leakage
+effective-validity overrun
+validation not-yet-due separation
+terminal precedence with lower-state retention
+~~~
+
+## Next
+
+Prospectively precommit and execute **PRED-CH-003** direct neighboring-method boundary challenge.
