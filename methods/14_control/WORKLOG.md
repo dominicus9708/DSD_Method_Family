@@ -1,6 +1,6 @@
 # DSD Control — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / CTRL-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-001 84/84 PASS / CTRL-CH-002 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — active-front handoff
@@ -84,3 +84,27 @@ BINDING_OPERATION:
 ## Next
 
 Prospectively precommit and execute **CTRL-CH-001** positive constructed Control challenge.
+
+
+## Step 7 — CTRL-CH-001 positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  e8a8098de206a50dc613f243e7c262595fe67cb4
+PRECOMMIT_BLOB:
+  6266f83c410e598bacb6e57e2bb16725d65360f5
+RESULT_COMMIT:
+  727157f99b32f18bff65668fbbed4b01d8dba2da
+RESULT_BLOB:
+  6c116ac1df1bf874e76de2fc104f1ed29c6cf904
+CHECKS:
+  84/84 PASS
+CONTROL_METHOD_GAIN_STATUS:
+  CONTROL_GAIN_NOT_TESTED
+~~~
+
+Directly exercised one-step action, feedback policy, open-loop sequence, hard constraints, typed transition/lineage, reduced-readout target, policy update, and neighboring-method handoffs.
+
+## Next
+
+Prospectively precommit and execute **CTRL-CH-002** status / terminal coverage.
