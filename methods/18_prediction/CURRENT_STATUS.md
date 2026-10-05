@@ -1,6 +1,6 @@
 # Prediction Current Status — source / registry recovery checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — PRED-CH-001 84/84 PASS / PRED-CH-002 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — PRED-CH-002 100/100 PASS / ALL PRIMARY+TERMINALS COVERED / PRED-CH-003 NEXT**  
 Date: **2026-10-06**  
 Method: **Prediction / DSD 예측론**  
 Canonical path ID: `18`  
@@ -62,16 +62,22 @@ BINDING_OPERATION:
   P1-P18
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
-  1
+  2
 
 POSITIVE_PREDICTION_CASES:
   1
 
 NEGATIVE_OR_UNRESOLVED_PREDICTION_CASES:
-  0
+  1
+
+ALL_SIX_PREDICTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_PREDICTION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 METHOD_BOUNDARY_PREDICTION_CASES:
   0
@@ -179,9 +185,10 @@ PREDICTION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **PRED-CH-002**, the terminal / negative Prediction challenge.
+Prospectively precommit and execute **PRED-CH-003**, the direct neighboring-method boundary challenge.
 
-PRED-CH-001 is frozen at 84/84 PASS and must not be retroactively rewritten.
+PRED-CH-001 and PRED-CH-002 remain immutable evidence.
+
 
 ## PRED-CH-001 checkpoint
 
@@ -207,4 +214,28 @@ PROTOCOL_REVISION_REQUIRED:
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
+~~~
+
+
+## PRED-CH-002 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  0b4aa64207a3432cecf0d38dab21e87b26745c16
+PRECOMMIT_BLOB:
+  b1cff116482a9d155c5b2a69ffa9da55ab65f5c5
+
+RESULT_COMMIT:
+  c1a9b05924918ad77b131bc872f136115ef99108
+RESULT_BLOB:
+  a75bd1507481d02b52fbb4cf09e632950270532d
+
+CHECKS:
+  100/100 PASS
+
+ALL_SIX_PREDICTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_PREDICTION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 ~~~
