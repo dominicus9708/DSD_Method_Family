@@ -1,6 +1,6 @@
 # Optimization Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-005 82/82 PASS / NO_GAIN / STRONGEST-REASONABLE ESTABLISHED / OPT-CH-006 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-006 70/70 PASS / DETERMINISTIC RETRACE ESTABLISHED / OPT-AUD-001 NEXT**  
 Date: **2026-10-05**  
 Method: **Optimization / DSD 최적화론**  
 Legacy path ID: `12B`  
@@ -104,6 +104,15 @@ STRONGEST_REASONABLE_BASELINE_OPTIMIZATION:
   established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_OPTIMIZATION_APPLICATIONS:
@@ -179,9 +188,9 @@ OPTIMIZATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **OPT-CH-006**, a deterministic same-project retrace of OPT-CH-001~005.
+Prospectively precommit and execute **OPT-AUD-001**, the frozen-axis internal-standardization audit.
 
-The reconstruction ledger must be committed before formal comparison with the historical result artifacts.
+The audit must keep OPT-CH-001~006 immutable and must not reinterpret NO_GAIN as method failure, deletion, merger, absorption, or permanent redundancy.
 
 
 ## OPT-CH-001 checkpoint
@@ -331,6 +340,47 @@ STRONGEST_REASONABLE_BASELINE_OPTIMIZATION:
 
 EQUAL_INFORMATION_ACCESS:
   yes
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+
+## OPT-CH-006 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  74ff0b217777618830bdafa300c606501649a507
+PRECOMMIT_BLOB:
+  5af5c1282184d56fb94f8ea32b389d502d602fc6
+
+RETRACE_LEDGER_COMMIT:
+  315e834b7c29646b2ff30eab0603ed537f416bc7
+RETRACE_LEDGER_BLOB:
+  c7d94f30b476659fa39b174280a29d6cf43acdf2
+
+RESULT_COMMIT:
+  2edf684b499a1edbc015028e3afe468a6e14fd86
+RESULT_BLOB:
+  f36049137c180f0d76cd31a349d87e5e811a062b
+
+CHECKS:
+  70/70 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
 
 PROTOCOL_REVISION_REQUIRED:
   no
