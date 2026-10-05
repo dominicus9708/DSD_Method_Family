@@ -1,6 +1,6 @@
 # 18. DSD Prediction / DSD 예측론
 
-Status: **active internal-build front — PRED-CH-003 99/99 PASS / competent baseline next**
+Status: **active internal-build front — PRED-CH-004 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
 
 Task: derive future-state or outcome claims from an explicitly fixed current state, dynamic model, uncertainty structure, and domain bridge.
 
@@ -159,3 +159,28 @@ This supports fixture-bounded separation only.
 ### Next canonical step
 
 Prospectively precommit and execute **PRED-CH-004**, a competent non-DSD Prediction baseline challenge.
+
+
+## PRED-CH-004 — competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  ea475b3eb389761ff476e3a7f5696a2044d88654
+PRECOMMIT_BLOB:
+  2cb8e963bbda7ca8e67822310ffebb9bf6cefca9
+
+RESULT_COMMIT:
+  cefbd117fae8ab54042d188bd179d1d5c3a7109c
+RESULT_BLOB:
+  59f54e5670dfb500874938cf47114fdf66f211b7
+
+CHECKS:
+  64/64 PASS
+
+PREDICTION_METHOD_GAIN_STATUS:
+  PREDICTION_NO_GAIN
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **PRED-CH-005**, a strongest-reasonable non-DSD Prediction baseline challenge.
