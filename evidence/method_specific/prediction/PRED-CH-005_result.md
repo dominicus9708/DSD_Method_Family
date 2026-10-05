@@ -1,0 +1,115 @@
+# PRED-CH-005 Result
+
+Status: **82/82 PASS / PREDICTION_NO_GAIN**  
+Date: **2026-10-06**
+
+~~~text
+PRECOMMIT_COMMIT:
+  742a1bc46bd240ad72c0c8d596cd663eda4ba906
+PRECOMMIT_BLOB:
+  5fbff8ae542f32ea71c0b03755191c8e1df3a8c8
+BASELINE_ID:
+  B1_STRONG_VERSIONED_FORECAST_ENGINE
+EQUAL_INFORMATION_ACCESS:
+  yes
+~~~
+
+Frozen outputs:
+
+~~~text
+R1 model-version lock:
+  BASELINE_MATCH
+
+R2 interval target mapping [5,11]:
+  BASELINE_MATCH
+
+R3 scenario probabilities 0.5/0.3/0.2:
+  BASELINE_MATCH
+
+R4 update lineage / P1 retention:
+  BASELINE_MATCH
+
+R5 prospective vs hindcast classification:
+  BASELINE_MATCH
+
+R6 frozen Brier evaluation:
+  p=0.7
+  y=1
+  score=0.09
+  BASELINE_MATCH
+
+R7 validity/status/maximum-claim discipline:
+  BASELINE_MATCH
+~~~
+
+Gain axes:
+
+~~~text
+G1 BASELINE_MATCH
+G2 BASELINE_MATCH
+G3 BASELINE_MATCH
+G4 BASELINE_MATCH
+G5 BASELINE_MATCH
+G6 BASELINE_MATCH
+G7 BASELINE_MATCH
+~~~
+
+Therefore:
+
+~~~text
+PREDICTION_METHOD_GAIN_STATUS:
+  PREDICTION_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_PREDICTION:
+  established_at_constructed_evidence_level
+~~~
+
+~~~text
+TOTAL_REQUIRED_CHECKS:
+  82
+PASSED:
+  82
+FAILED:
+  0
+~~~
+
+Post-state:
+
+~~~text
+DIRECT_PREDICTION_PILOTS_ATTEMPTED:
+  5
+SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
+  5
+POSITIVE_PREDICTION_CASES:
+  1
+NEGATIVE_OR_UNRESOLVED_PREDICTION_CASES:
+  1
+METHOD_BOUNDARY_PREDICTION_CASES:
+  1
+BASELINE_PREDICTION_CASES:
+  2
+NO_GAIN_PREDICTION_CASES:
+  2
+STRONGEST_REASONABLE_BASELINE_PREDICTION:
+  established_at_constructed_evidence_level
+REPRODUCIBILITY_CASES:
+  0
+EXTERNAL_PREDICTION_APPLICATIONS:
+  0
+INDEPENDENT_PREDICTION_VALIDATION:
+  not established
+INDEPENDENT_REPLICATION:
+  not established
+PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+CURRENT_PREDICTION_EVIDENCE_STATUS:
+  validation_in_progress
+PROTOCOL_REVISION_REQUIRED:
+  no
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The strongest-reasonable result is bounded to constructed evidence and is not a universal baseline claim.
+
+Next: PRED-CH-006 deterministic same-project retrace.
