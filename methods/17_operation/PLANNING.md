@@ -15,8 +15,8 @@ Date: **2026-10-06**
 7. ✅ positive constructed challenge — OPR-CH-001 84/84 PASS
 8. ✅ status / terminal coverage — OPR-CH-002 100/100 PASS
 9. ✅ direct neighboring-method boundary challenge — OPR-CH-003 99/99 PASS / 11 pairs / exact collapse 0
-10. ⏸ competent non-DSD baseline — OPR-CH-004 next
-11. ⏸ strongest-reasonable non-DSD baseline
+10. ✅ competent non-DSD baseline — OPR-CH-004 64/64 PASS / NO_GAIN
+11. ⏸ strongest-reasonable non-DSD baseline — OPR-CH-005 next
 12. ⏸ deterministic same-project retrace
 13. ⏸ frozen-axis internal-standardization audit
 14. ⏸ external / independent validation later
@@ -33,9 +33,9 @@ DEDICATED_OPERATION_PROTOCOL:
   established v0.1
 
 DIRECT_OPERATION_PILOTS_ATTEMPTED:
-  3
+  4
 SUCCESSFUL_DIRECT_OPERATION_PILOTS:
-  3
+  4
 POSITIVE_OPERATION_CASES:
   1
 NEGATIVE_OR_UNRESOLVED_OPERATION_CASES:
@@ -43,9 +43,9 @@ NEGATIVE_OR_UNRESOLVED_OPERATION_CASES:
 METHOD_BOUNDARY_OPERATION_CASES:
   1
 BASELINE_OPERATION_CASES:
-  0
+  1
 NO_GAIN_OPERATION_CASES:
-  0
+  1
 REPRODUCIBILITY_CASES:
   0
 
@@ -75,6 +75,6 @@ Task Interface
 
 ## Next
 
-OPR-CH-003 completed at 99/99 PASS. Eleven neighboring-method pairs had exact collapse 0 and unresolved 0; this remains fixture-bounded separation.
+OPR-CH-004 completed at 64/64 PASS with `OPERATION_NO_GAIN`.
 
-Next: prospectively precommit and execute **OPR-CH-004**, the competent non-DSD Operation baseline challenge.
+Next: prospectively precommit and execute **OPR-CH-005**, the strongest-reasonable non-DSD Operation baseline challenge.
