@@ -1,6 +1,6 @@
 # Prediction Current Status — source / registry recovery checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — PRED-CH-004 64/64 PASS / NO_GAIN / STRONGEST-REASONABLE BASELINE NEXT**  
+Status: **INTERNALLY STANDARDIZED — PRED-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
 Date: **2026-10-06**  
 Method: **Prediction / DSD 예측론**  
 Canonical path ID: `18`  
@@ -62,10 +62,10 @@ BINDING_OPERATION:
   P1-P18
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
-  4
+  5
 
 POSITIVE_PREDICTION_CASES:
   1
@@ -98,12 +98,24 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_PREDICTION_CASES:
-  1
+  2
 
 NO_GAIN_PREDICTION_CASES:
-  1
+  2
+
+STRONGEST_REASONABLE_BASELINE_PREDICTION:
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_PREDICTION_APPLICATIONS:
@@ -116,7 +128,7 @@ INDEPENDENT_REPLICATION:
   not established
 
 PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_PREDICTION_EVIDENCE_STATUS:
   validation_in_progress
@@ -200,9 +212,17 @@ PREDICTION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **PRED-CH-005**, a strongest-reasonable non-DSD Prediction baseline challenge.
+Prediction internal build/standardization is closed at Protocol v0.1.
 
-The baseline must be materially stronger than B0 and preserve `PREDICTION_NO_GAIN` as an allowed result.
+~~~text
+NEXT_ACTIVE_METHOD:
+  Control / DSD 제어론
+
+PREDICTION_EXTERNAL_VALIDATION_PHASE:
+  deferred / separate
+~~~
+
+Internal standardization does not establish external predictive validity or independent replication.
 
 
 ## PRED-CH-001 checkpoint
@@ -307,4 +327,76 @@ CHECKS:
 
 PREDICTION_METHOD_GAIN_STATUS:
   PREDICTION_NO_GAIN
+~~~
+
+
+## PRED-CH-005 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  742a1bc46bd240ad72c0c8d596cd663eda4ba906
+PRECOMMIT_BLOB:
+  5fbff8ae542f32ea71c0b03755191c8e1df3a8c8
+
+RESULT_COMMIT:
+  5bbf237d177eb51d482db7fba14ff7cfd1898f71
+RESULT_BLOB:
+  bfea17d3bf5029b842f00e4c8cdce55e90817247
+
+CHECKS:
+  82/82 PASS
+
+PREDICTION_METHOD_GAIN_STATUS:
+  PREDICTION_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_PREDICTION:
+  established_at_constructed_evidence_level
+~~~
+
+## PRED-CH-006 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  e8660a8a3a28180c31bae4ba45cf5a5686540196
+PRECOMMIT_BLOB:
+  8760589fa391f657717df807e6e3735d5d2545d1
+
+RETRACE_LEDGER_COMMIT:
+  e192005f9c796398767eb73b37a1e5b6e0a3450e
+RETRACE_LEDGER_BLOB:
+  8edfa1902ca69165815df49be42848d8edd89b22
+
+RESULT_COMMIT:
+  a256a4b8375c427eb1e005799f23a1fee4107317
+RESULT_BLOB:
+  9c3b5e52232922e67c6ffafb4a20354c3ab3c64d
+
+CHECKS:
+  70/70 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+~~~
+
+## PRED-AUD-001 checkpoint
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  8fa85c6ebae2ce2929e472f5a11a94b153404408
+AUDIT_PRECOMMIT_BLOB:
+  bd1d8aad0fe9e000241e433a7839c026c8c03ea9
+
+AUDIT_RESULT_COMMIT:
+  3bc266995b33bdd7d1e8b88f4e3849bfd00d6c99
+AUDIT_RESULT_BLOB:
+  36b65287569081fa24760c102c4983f593c97296
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
 ~~~
