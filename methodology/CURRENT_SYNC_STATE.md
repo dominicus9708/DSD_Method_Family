@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-OPR-CH003`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `fb30f5732a559da0b169a3817aedcdd833256c08`  
-Latest completed method event: **OPR-CH-003 direct neighboring-method Operation boundary challenge — 99/99 PASS / 11 pairs / exact collapse 0 / unresolved 0**  
-Latest method-result commit: `0074facf9d84d828269fc6a921829566bafc7851`  
+Sync epoch: `MF-SYNC-20261006-CTRL-AUD001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `c47f8c454d79cb3b02de0bac0a2cf0a0242f1e01`  
+Latest completed method event: **CTRL-AUD-001 frozen-axis Control audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
+Latest method-result commit: `d8edb8ab3fcfcd7b7e7d7ef5517948009621a7bb`  
 Active internal-build front: **Operation / DSD 운영론**  
-Next canonical step: **prospectively precommit and execute OPR-CH-004 competent non-DSD Operation baseline challenge**  
+Next canonical step: **recover Operation source/registry constraints and establish the Operation internal-build lane**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -71,7 +71,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
-| Operation | active internal-build front; Protocol v0.1 frozen; OPR-CH-003 99/99 PASS / 11 boundary pairs / exact collapse 0; OPR-CH-004 competent baseline next |
+| Operation | active internal-build front; source/registry recovery next |
 
 ## 3. Shared core
 
