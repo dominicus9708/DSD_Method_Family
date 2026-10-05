@@ -1,6 +1,6 @@
 # 13. DSD Simulation / DSD 시뮬레이션론
 
-Status: **active internal-build front — Protocol v0.1 frozen / SIM-CH-001 next**
+Status: **active internal-build front — SIM-CH-001 84/84 PASS / SIM-CH-002 next**
 
 Task: generate and compare admissible state trajectories while keeping regular evolution, status/domain transitions, and formation-level transitions distinct.
 
@@ -180,3 +180,36 @@ BINDING_OPERATION:
 ### Next canonical step
 
 Prospectively precommit and execute **SIM-CH-001** positive constructed challenge.
+
+
+## SIM-CH-001 — positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  7605e452268295c9cc1b48a1c4ac6dfb0c167f5f
+PRECOMMIT_BLOB:
+  bf150326b076869da88dabfb50df8f883db45be9
+
+RESULT_COMMIT:
+  86ff6673229356500317d58eee404b45f1b66ca6
+RESULT_BLOB:
+  b566582c9dfc5e31cb8607138c624aa14ff8bccd
+
+CHECKS:
+  84/84 PASS
+
+DIRECT_SIMULATION_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
+  1
+
+POSITIVE_SIMULATION_CASES:
+  1
+~~~
+
+The challenge established positive protocol behavior on deterministic, branching, hybrid-transition, numerical, stochastic-sample, and readout-collision cases while preserving neighboring-method boundaries.
+
+### Next canonical step
+
+Prospectively precommit and execute **SIM-CH-002** negative / blocked / conflicting / underdetermined / out-of-scope / PARTIAL terminal coverage.
