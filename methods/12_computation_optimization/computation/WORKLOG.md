@@ -617,3 +617,72 @@ All eleven pair results were PARTIAL_OVERLAP_NOT_COLLAPSE.
 ## Next
 
 Prospectively precommit and execute COMP-CH-004, a fair competent non-DSD Computation baseline challenge. The baseline may validly produce COMPUTATION_NO_GAIN.
+
+
+## Step — COMP-CH-004 competent baseline
+
+Date: **2026-10-05**
+
+Prospective precommit was created before execution.
+
+~~~text
+PRECOMMIT_COMMIT:
+  ba7cb32f760d6d7502cf1056fb20a02a7d830d93
+
+PRECOMMIT_BLOB:
+  f57876c7127953a7d5b81fdefa991f75fb4ebe30
+
+RESULT_COMMIT:
+  3a336a606ff5ae8bba3a47564cd37e77cc45409d
+
+RESULT_BLOB:
+  71b9406413b16f9271690217a1def0c06ee49553
+
+CHECKS:
+  64/64 PASS
+
+BASELINE:
+  B0_GENERIC_TYPED_COMPUTATION_PLANNER
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+COMPUTATION_METHOD_GAIN_STATUS:
+  COMPUTATION_NO_GAIN
+
+DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
+  4
+
+SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
+  4
+
+BASELINE_COMPUTATION_CASES:
+  1
+
+NO_GAIN_COMPUTATION_CASES:
+  1
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The baseline received the same claim-relevant task, dependency, status, reuse, reduction, resolution, symbolic-coverage, closure, transition, handoff, and precedence information as Computation.
+
+It reproduced the frozen claim-relevant outcomes for all six baseline fixture groups. No DSD-specific gain was established on the six frozen gain axes.
+
+~~~text
+NO_GAIN != METHOD_FAILURE
+NO_GAIN != METHOD_DELETION_PROOF
+NO_GAIN != METHOD_MERGER_PROOF
+NO_GAIN != METHOD_ABSORPTION_PROOF
+NO_GAIN != PERMANENT_REDUNDANCY
+~~~
+
+This result is constructed same-project evidence only. It does not establish strongest-reasonable baseline equivalence, external applicability, independent validation, independent replication, method redundancy, or superiority.
+
+### Next canonical step
+
+Prospectively precommit and execute **COMP-CH-005**, the strongest-reasonable non-DSD Computation baseline challenge.
