@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — COMP-CH-006 70/70 PASS / deterministic retrace established / COMP-AUD-001 next**
+Status: **internally standardized — COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / external validation deferred**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -502,3 +502,48 @@ DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 ### Next canonical step
 
 Prospectively precommit and execute **COMP-AUD-001**, the frozen-axis internal-standardization audit.
+
+
+## COMP-AUD-001 — 2026-10-05
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  164e302f9b3694daa6fdeefe00bf0fe7ac34495d
+
+AUDIT_PRECOMMIT_BLOB:
+  4f1326e950350d78aee9c5e1ab012e6d372a1a91
+
+AUDIT_RESULT_COMMIT:
+  a1b14dd8557ccfc037970284f51048a72f1b5920
+
+AUDIT_RESULT_BLOB:
+  7727fd69dbb493669ebbe30735fb61005199594c
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+EXTERNAL_COMPUTATION_VALIDATION_PHASE:
+  deferred / separate
+
+INDEPENDENT_COMPUTATION_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+~~~
+
+Frozen-axis results were PASS on M1-M6 and M8-M13/M15, CONDITIONAL_PASS on same-project retraceability M7, and DEFERRED_BY_SEQUENCE on external/independent evidence M14.
+
+The two NO_GAIN baselines remain preserved as valid bounded evidence and do not imply deletion, merger, absorption, permanent redundancy, or method failure.
+
+### Family handoff
+
+Computation internal build/standardization is closed at Protocol v0.1.
+
+The next family-wide internal-build front is **Optimization / DSD 최적화론**.
