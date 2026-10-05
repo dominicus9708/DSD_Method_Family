@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-05 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261005-COMP-CH005`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `ac340b82f5eeb57dfda1bcf7dcfb544c3ca054bd`  
-Latest completed method event: **COMP-CH-005 strongest-reasonable non-DSD Computation baseline — 82/82 PASS / COMPUTATION_NO_GAIN / strongest-reasonable-at-constructed-evidence-level**  
-Latest method-result commit: `fd89c3ef37da93a1c4198a6630332bc425403f66`  
+Sync epoch: `MF-SYNC-20261005-COMP-CH006`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `85437e3064ccde057c2df9c7705c76f6be9dd281`  
+Latest completed method event: **COMP-CH-006 deterministic same-project Computation retrace — 70/70 PASS / zero claim-relevant mismatch / zero post-comparison correction**  
+Latest method-result commit: `27ce66a5edb231f1f283ecf3a259aafb13bb587f`  
 Active internal-build front: **Computation / DSD 계산론**  
-Next canonical step: **prospectively precommit and execute COMP-CH-006 deterministic same-project retrace of COMP-CH-001~005**  
+Next canonical step: **prospectively precommit and execute COMP-AUD-001 frozen-axis internal-standardization audit**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -63,7 +63,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Aggregation | Protocol v0.1 internally standardized; AGG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
-| Computation | active internal-build front; COMP-CH-001 84/84 PASS; COMP-CH-002 80/80 PASS; COMP-CH-003 99/99 PASS; COMP-CH-004 64/64 PASS / NO_GAIN; COMP-CH-005 82/82 PASS / NO_GAIN; strongest-reasonable baseline established at constructed-evidence level; COMP-CH-006 deterministic retrace next |
+| Computation | active internal-build front; COMP-CH-001 84/84 PASS; COMP-CH-002 80/80 PASS; COMP-CH-003 99/99 PASS; COMP-CH-004 64/64 PASS / NO_GAIN; COMP-CH-005 82/82 PASS / NO_GAIN; COMP-CH-006 70/70 PASS deterministic same-project retrace; reproducibility case 1; zero claim-relevant mismatch; COMP-AUD-001 next |
 | Optimization | proposed |
 | Simulation | proposed |
 | Prediction | proposed |
