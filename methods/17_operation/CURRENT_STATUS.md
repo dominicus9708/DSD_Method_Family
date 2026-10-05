@@ -1,6 +1,6 @@
 # Operation Current Status
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / OPR-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPR-CH-001 84/84 PASS / OPR-CH-002 NEXT**  
 Date: **2026-10-06**  
 Method: **Operation / DSD 운영론**  
 Canonical path ID: `17`
@@ -46,11 +46,11 @@ BINDING_OPERATION:
   OP1-OP18
 
 DIRECT_OPERATION_PILOTS_ATTEMPTED:
-  0
+  1
 SUCCESSFUL_DIRECT_OPERATION_PILOTS:
-  0
+  1
 POSITIVE_OPERATION_CASES:
-  0
+  1
 NEGATIVE_OR_UNRESOLVED_OPERATION_CASES:
   0
 METHOD_BOUNDARY_OPERATION_CASES:
@@ -72,7 +72,7 @@ INDEPENDENT_REPLICATION:
 OPERATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 CURRENT_OPERATION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED:
   no
@@ -97,4 +97,22 @@ OPERATION_ESTABLISHED may coexist with OPERATION_NO_GAIN
 
 ## Next
 
-Prospectively precommit and execute **OPR-CH-001**, the positive constructed Operation challenge.
+Prospectively precommit and execute **OPR-CH-002**, the status / terminal coverage challenge.
+
+
+## OPR-CH-001 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  0d818404dc4497823ad2a64e9ab420e712b28e70
+PRECOMMIT_BLOB:
+  368357f8084e4d3ea9a57d0e84c29251117171ab
+RESULT_COMMIT:
+  3c8582a18ce7ebf881b6fdbea54306bef671dbed
+RESULT_BLOB:
+  b488f243907d7c42e1e7842dfdb3ea768b0948cf
+CHECKS:
+  84/84 PASS
+OPERATION_METHOD_GAIN_STATUS:
+  OPERATION_GAIN_NOT_TESTED
+~~~
