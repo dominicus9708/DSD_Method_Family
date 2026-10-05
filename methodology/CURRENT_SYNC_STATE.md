@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-05 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261005-SIM-CH002`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `d35a540b7bc0799f0e032ee61ec7151917b32a93`  
-Latest completed method event: **SIM-CH-002 terminal / negative Simulation challenge — 80/80 PASS / all six primary statuses and all seven task terminals directly exercised**  
-Latest method-result commit: `250232d9a513d6b679746e039c2cda0ad4f57bb7`  
+Sync epoch: `MF-SYNC-20261005-SIM-CH003`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `b85ebe6002345177cbdfe01ac9e5c9ffd336b688`  
+Latest completed method event: **SIM-CH-003 direct neighboring-method Simulation boundary challenge — 108/108 PASS / 12 pairs / exact collapse 0 / unresolved 0**  
+Latest method-result commit: `abc626363574c8f9bd535a377cb705351e735129`  
 Active internal-build front: **Simulation / DSD 시뮬레이션론**  
-Next canonical step: **prospectively precommit and execute SIM-CH-003 direct neighboring-method boundary challenge**  
+Next canonical step: **prospectively precommit and execute SIM-CH-004 competent non-DSD Simulation baseline challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -65,7 +65,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | Protocol v0.1 internally standardized; COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Optimization | Protocol v0.1 internally standardized; OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Simulation | active internal-build front; Protocol v0.1 frozen; SIM-CH-001 84/84 PASS; SIM-CH-002 80/80 PASS; all six primary statuses and all seven task terminals directly exercised; SIM-CH-003 next |
+| Simulation | active internal-build front; Protocol v0.1 frozen; SIM-CH-001 84/84 PASS; SIM-CH-002 80/80 PASS; SIM-CH-003 108/108 PASS / 12 boundary pairs / exact collapse 0; SIM-CH-004 competent baseline next |
 | Prediction | proposed |
 | Control | proposed |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
