@@ -1,6 +1,6 @@
 # 17. DSD Operation / DSD 운영론
 
-Status: **active internal-build front — OPR-CH-002 100/100 PASS / all statuses+terminals covered / OPR-CH-003 next**
+Status: **active internal-build front — OPR-CH-003 99/99 PASS / competent baseline next**
 
 Task: manage a live or repeatedly executed system across its lifecycle by coordinating states, resources, procedures, monitoring, handoffs, and method composition.
 
@@ -110,3 +110,33 @@ ALL_SEVEN_OPERATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
 ### Next canonical step
 
 Prospectively precommit and execute **OPR-CH-003**, the direct neighboring-method boundary challenge.
+
+
+## OPR-CH-003 — neighboring-method boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  d743dc97ed72a57277c35b2db0c33bda0d21a464
+PRECOMMIT_BLOB:
+  dae0107e8f875c6e6ea1c2dc5d76b60f00476ed1
+RESULT_COMMIT:
+  0074facf9d84d828269fc6a921829566bafc7851
+RESULT_BLOB:
+  b0b650c09bc51d1f070517f714d9068d90036b64
+CHECKS:
+  99/99 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+EXACT_COLLAPSE_PAIRS:
+  0
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+~~~
+
+This is fixture-bounded separation only.
+
+### Next canonical step
+
+Prospectively precommit and execute **OPR-CH-004**, a competent non-DSD Operation baseline challenge.
