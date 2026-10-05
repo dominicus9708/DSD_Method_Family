@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-CTRL-CH001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `a1ab00691ed880fc294efcb315517659aaaaf93e`  
-Latest completed method event: **CTRL-CH-001 positive constructed Control challenge — 84/84 PASS**  
-Latest method-result commit: `727157f99b32f18bff65668fbbed4b01d8dba2da`  
+Sync epoch: `MF-SYNC-20261006-CTRL-CH002`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `d2f94b92eb4a50ae474da40a66df6f2635437081`  
+Latest completed method event: **CTRL-CH-002 Control status-coverage challenge — 100/100 PASS / all six primary statuses and all seven task terminals directly exercised**  
+Latest method-result commit: `0dd8c01f7001ef50cfc439b57a63b62a0874372d`  
 Active internal-build front: **Control / DSD 제어론**  
-Next canonical step: **prospectively precommit and execute CTRL-CH-002 status / terminal coverage**  
+Next canonical step: **prospectively precommit and execute CTRL-CH-003 direct neighboring-method boundary challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -67,7 +67,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Optimization | Protocol v0.1 internally standardized; OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Simulation | Protocol v0.1 internally standardized; SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Prediction | Protocol v0.1 internally standardized; PRED-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Control | active internal-build front; Protocol v0.1 frozen; CTRL-CH-001 84/84 PASS; CTRL-CH-002 status coverage next |
+| Control | active internal-build front; Protocol v0.1 frozen; CTRL-CH-001 84/84 PASS; CTRL-CH-002 100/100 PASS; all six primary statuses and all seven task terminals directly exercised; CTRL-CH-003 next |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
