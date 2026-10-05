@@ -1,6 +1,6 @@
 # DSD Operation — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / OPR-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPR-CH-005 82/82 PASS / OPR-CH-006 NEXT**  
 Date: **2026-10-06**
 
 ## Canonical sequence
@@ -16,8 +16,8 @@ Date: **2026-10-06**
 8. ✅ status / terminal coverage — OPR-CH-002 100/100 PASS
 9. ✅ direct neighboring-method boundary challenge — OPR-CH-003 99/99 PASS / 11 pairs / exact collapse 0
 10. ✅ competent non-DSD baseline — OPR-CH-004 64/64 PASS / NO_GAIN
-11. ⏸ strongest-reasonable non-DSD baseline — OPR-CH-005 next
-12. ⏸ deterministic same-project retrace
+11. ✅ strongest-reasonable non-DSD baseline — OPR-CH-005 82/82 PASS / NO_GAIN
+12. ⏸ deterministic same-project retrace — OPR-CH-006 next
 13. ⏸ frozen-axis internal-standardization audit
 14. ⏸ external / independent validation later
 ~~~
@@ -33,9 +33,9 @@ DEDICATED_OPERATION_PROTOCOL:
   established v0.1
 
 DIRECT_OPERATION_PILOTS_ATTEMPTED:
-  4
+  5
 SUCCESSFUL_DIRECT_OPERATION_PILOTS:
-  4
+  5
 POSITIVE_OPERATION_CASES:
   1
 NEGATIVE_OR_UNRESOLVED_OPERATION_CASES:
@@ -43,9 +43,9 @@ NEGATIVE_OR_UNRESOLVED_OPERATION_CASES:
 METHOD_BOUNDARY_OPERATION_CASES:
   1
 BASELINE_OPERATION_CASES:
-  1
+  2
 NO_GAIN_OPERATION_CASES:
-  1
+  2
 REPRODUCIBILITY_CASES:
   0
 
@@ -75,6 +75,8 @@ Task Interface
 
 ## Next
 
-OPR-CH-004 completed at 64/64 PASS with `OPERATION_NO_GAIN`.
+OPR-CH-005 completed at 82/82 PASS with `OPERATION_NO_GAIN`.
 
-Next: prospectively precommit and execute **OPR-CH-005**, the strongest-reasonable non-DSD Operation baseline challenge.
+The strongest-reasonable baseline status is bounded to constructed evidence.
+
+Next: prospectively precommit and execute **OPR-CH-006**, the deterministic same-project Operation retrace.
