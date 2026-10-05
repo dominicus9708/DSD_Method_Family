@@ -1,6 +1,6 @@
 # 17. DSD Operation / DSD 운영론
 
-Status: **active internal-build front — OPR-CH-001 84/84 PASS / OPR-CH-002 next**
+Status: **active internal-build front — OPR-CH-002 100/100 PASS / all statuses+terminals covered / OPR-CH-003 next**
 
 Task: manage a live or repeatedly executed system across its lifecycle by coordinating states, resources, procedures, monitoring, handoffs, and method composition.
 
@@ -86,3 +86,27 @@ CHECKS:
 ### Next canonical step
 
 Prospectively precommit and execute **OPR-CH-002** status / terminal coverage.
+
+
+## OPR-CH-002 — status / terminal coverage
+
+~~~text
+PRECOMMIT_COMMIT:
+  57472f701d61b6c66e88267fb13824cf6256e5a2
+PRECOMMIT_BLOB:
+  249ab0ce44bd11fd719e6c3c2f5eb5b7b47f664b
+RESULT_COMMIT:
+  4258abd92e571d1f4bcedf599c49a7ece9b61f80
+RESULT_BLOB:
+  d12ad8e164ca77708d56aa043d102e5654f2dedd
+CHECKS:
+  100/100 PASS
+ALL_SIX_OPERATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+ALL_SEVEN_OPERATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **OPR-CH-003**, the direct neighboring-method boundary challenge.
