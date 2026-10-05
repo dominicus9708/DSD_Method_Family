@@ -1,6 +1,6 @@
 # 14. DSD Control / DSD 제어론
 
-Status: **active internal-build front — CTRL-CH-005 82/82 PASS / NO_GAIN / deterministic retrace next**
+Status: **active internal-build front — CTRL-CH-006 70/70 PASS / audit next**
 
 Task: choose interventions or control actions that move an admissible dynamic system toward declared target states while preserving explicit transition and domain conditions.
 
@@ -185,3 +185,31 @@ STRONGEST_REASONABLE_BASELINE_CONTROL:
 ### Next canonical step
 
 Prospectively precommit and execute **CTRL-CH-006**, the deterministic same-project Control retrace.
+
+
+## CTRL-CH-006 — deterministic same-project retrace
+
+~~~text
+PRECOMMIT_COMMIT:
+  1e96b4d721aaad53b090a906b0631dae6ee05dc9
+PRECOMMIT_BLOB:
+  d980a921f7db2480e3a2d6a41e5b0736ad6d373a
+RETRACE_LEDGER_COMMIT:
+  0214c47a326366144546aa3c56c2494e504dc0f2
+RETRACE_LEDGER_BLOB:
+  3377a848fcee9e939596b3a3eb45f23336c6e45d
+RESULT_COMMIT:
+  3dcc9bc3dafcd3a979871ee6db562d2e768fbb14
+RESULT_BLOB:
+  6190b505fe3b24530617f83690482caa91d4f987
+CHECKS:
+  70/70 PASS
+CLAIM_RELEVANT_MISMATCHES:
+  0
+POST_COMPARISON_CORRECTIONS:
+  0
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **CTRL-AUD-001**, the frozen-axis internal-standardization audit.
