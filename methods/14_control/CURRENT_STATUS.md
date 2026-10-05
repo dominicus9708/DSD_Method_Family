@@ -1,6 +1,6 @@
 # Control Current Status
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-003 90/90 PASS / CTRL-CH-004 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-004 64/64 PASS / NO_GAIN / CTRL-CH-005 NEXT**  
 Date: **2026-10-06**  
 Method: **Control / DSD 제어론**  
 Canonical path ID: `14`
@@ -46,9 +46,9 @@ BINDING_OPERATION:
   C1-C18
 
 DIRECT_CONTROL_PILOTS_ATTEMPTED:
-  3
+  4
 SUCCESSFUL_DIRECT_CONTROL_PILOTS:
-  3
+  4
 POSITIVE_CONTROL_CASES:
   1
 NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
@@ -70,9 +70,9 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
 SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 BASELINE_CONTROL_CASES:
-  0
+  1
 NO_GAIN_CONTROL_CASES:
-  0
+  1
 REPRODUCIBILITY_CASES:
   0
 
@@ -108,7 +108,7 @@ CONTROL_ESTABLISHED may coexist with CONTROL_NO_GAIN
 
 ## Next
 
-Prospectively precommit and execute **CTRL-CH-004**, a competent non-DSD Control baseline challenge.
+Prospectively precommit and execute **CTRL-CH-005**, a strongest-reasonable non-DSD Control baseline challenge.
 
 ## CTRL-CH-001 checkpoint
 
@@ -169,4 +169,22 @@ UNRESOLVED_BOUNDARY_PAIRS:
   0
 PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
   10
+~~~
+
+
+## CTRL-CH-004 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  d90589a1527e082037a2777904c7e4f27cae14c8
+PRECOMMIT_BLOB:
+  8191ae6b13756d5b8df3b3685b5376fe412190cc
+RESULT_COMMIT:
+  4d1a70b96e33463389fe37d7be475b6c7bcc748d
+RESULT_BLOB:
+  f29de70fd288464841b6eb60683d9ba46bd6784e
+CHECKS:
+  64/64 PASS
+CONTROL_METHOD_GAIN_STATUS:
+  CONTROL_NO_GAIN
 ~~~
