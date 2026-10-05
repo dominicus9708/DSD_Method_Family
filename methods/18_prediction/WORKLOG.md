@@ -1,6 +1,6 @@
 # DSD Prediction — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — PRED-CH-002 100/100 PASS / PRED-CH-003 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — PRED-CH-003 99/99 PASS / PRED-CH-004 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — family active-front handoff
@@ -230,3 +230,40 @@ terminal precedence with lower-state retention
 ## Next
 
 Prospectively precommit and execute **PRED-CH-003** direct neighboring-method boundary challenge.
+
+
+## Step 9 — PRED-CH-003 neighboring-method boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  2d6a01eb379020ebcd227fcece00f52e99f48862
+PRECOMMIT_BLOB:
+  693c21c851dbd0ea6bff1a3ae61a1df18c09f65e
+
+RESULT_COMMIT:
+  f3bdcca9fa91619a443b92418658a5f0610f2503
+RESULT_BLOB:
+  e62abcf3a4bfb60a16c8397967c36617b907666d
+
+CHECKS:
+  99/99 PASS
+
+METHOD_BOUNDARY_PREDICTION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+~~~
+
+## Next
+
+Prospectively precommit and execute **PRED-CH-004** competent non-DSD Prediction baseline challenge.
