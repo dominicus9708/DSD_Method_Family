@@ -1,6 +1,6 @@
 # Operation Current Status
 
-Status: **ACTIVE INTERNAL BUILD — OPR-CH-005 82/82 PASS / NO_GAIN / OPR-CH-006 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPR-CH-006 70/70 PASS / OPR-AUD-001 NEXT**  
 Date: **2026-10-06**  
 Method: **Operation / DSD 운영론**  
 Canonical path ID: `17`
@@ -76,6 +76,12 @@ NO_GAIN_OPERATION_CASES:
 STRONGEST_REASONABLE_BASELINE_OPERATION:
   established_at_constructed_evidence_level
 REPRODUCIBILITY_CASES:
+  1
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+CLAIM_RELEVANT_MISMATCHES:
+  0
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_OPERATION_APPLICATIONS:
@@ -113,7 +119,7 @@ OPERATION_ESTABLISHED may coexist with OPERATION_NO_GAIN
 
 ## Next
 
-Prospectively precommit and execute **OPR-CH-006**, a deterministic same-project Operation retrace.
+Prospectively precommit and execute **OPR-AUD-001**, the frozen-axis internal-standardization audit.
 
 
 ## OPR-CH-001 checkpoint
@@ -213,4 +219,28 @@ OPERATION_METHOD_GAIN_STATUS:
   OPERATION_NO_GAIN
 STRONGEST_REASONABLE_BASELINE_OPERATION:
   established_at_constructed_evidence_level
+~~~
+
+
+## OPR-CH-006 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  761a508c35fdc2914379ef92ef6bb73a4142aa86
+PRECOMMIT_BLOB:
+  c6056d1d1f5d6b839b5368f60d5b20962195ed30
+RETRACE_LEDGER_COMMIT:
+  ee74631161424e2b8868a5bb86afd71e4de84286
+RETRACE_LEDGER_BLOB:
+  796b0f8105e78079241aa48d8d31ffa4e8b868bc
+RESULT_COMMIT:
+  8d45255f589e2627fa7b014046a44efad8e2098c
+RESULT_BLOB:
+  3d7ffa52195b81d3a1a828dd9111daaea0835397
+CHECKS:
+  70/70 PASS
+CLAIM_RELEVANT_MISMATCHES:
+  0
+POST_COMPARISON_CORRECTIONS:
+  0
 ~~~
