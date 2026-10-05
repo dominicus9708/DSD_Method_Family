@@ -1,6 +1,6 @@
 # DSD Optimization — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-001 72/72 PASS / OPT-CH-002 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-002 80/80 PASS / OPT-CH-003 NEXT**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -273,3 +273,61 @@ Computation handoff without substitution
 ## Next
 
 Prospectively precommit and execute **OPT-CH-002** terminal / negative coverage.
+
+
+## Step 8 — OPT-CH-002 terminal / negative coverage
+
+~~~text
+PRECOMMIT_COMMIT:
+  8d778da4289b0a4080e5f93ffecae5ae55256f62
+PRECOMMIT_BLOB:
+  393dbfa5bdc9040cfcd4a07e63899873293dffd9
+
+RESULT_COMMIT:
+  a793aaf451cfca2b7befa8c64f23a2083da4e0f1
+RESULT_BLOB:
+  f3fc516f7d88735ca7195cbf508a2c6336f9f5a1
+
+CHECKS:
+  80/80 PASS
+
+DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
+  2
+
+SUCCESSFUL_DIRECT_OPTIMIZATION_PILOTS:
+  2
+
+NEGATIVE_OR_UNRESOLVED_OPTIMIZATION_CASES:
+  1
+
+ALL_SIX_OPTIMIZATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_OPTIMIZATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Directly exercised:
+
+~~~text
+NOT_ESTABLISHED
+BLOCKED
+CONFLICTING
+OUT_OF_SCOPE
+UNDERDETERMINED
+PARTIAL
+terminal precedence with lower-state retention
+selection-reduction nonpreservation
+Control handoff
+missing required objective component
+~~~
+
+## Next
+
+Prospectively precommit and execute **OPT-CH-003** direct neighboring-method boundary challenge.
