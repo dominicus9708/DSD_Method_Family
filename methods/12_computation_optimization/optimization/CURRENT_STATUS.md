@@ -1,6 +1,6 @@
 # Optimization Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-006 70/70 PASS / DETERMINISTIC RETRACE ESTABLISHED / OPT-AUD-001 NEXT**  
+Status: **INTERNALLY STANDARDIZED — OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / EXTERNAL VALIDATION DEFERRED**  
 Date: **2026-10-05**  
 Method: **Optimization / DSD 최적화론**  
 Legacy path ID: `12B`  
@@ -125,7 +125,7 @@ INDEPENDENT_REPLICATION:
   not established
 
 OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_OPTIMIZATION_EVIDENCE_STATUS:
   validation_in_progress
@@ -188,9 +188,9 @@ OPTIMIZATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **OPT-AUD-001**, the frozen-axis internal-standardization audit.
+Optimization internal build/standardization is closed at Protocol v0.1.
 
-The audit must keep OPT-CH-001~006 immutable and must not reinterpret NO_GAIN as method failure, deletion, merger, absorption, or permanent redundancy.
+The family-wide active internal-build front moves to **Simulation / DSD 시뮬레이션론**. Optimization external validation remains a separate deferred evidence phase.
 
 
 ## OPT-CH-001 checkpoint
@@ -387,4 +387,31 @@ PROTOCOL_REVISION_REQUIRED:
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
+~~~
+
+
+## OPT-AUD-001 checkpoint
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  379864b2c77fb4b5ff53341f3765ff560c3ebd8d
+AUDIT_PRECOMMIT_BLOB:
+  177a50c9b6d24acdcf032539bf28ee30a054284e
+
+AUDIT_RESULT_COMMIT:
+  030150b6b95a05f98adb8a4b5adda228ac023151
+AUDIT_RESULT_BLOB:
+  e2a3095f05c7ab179a92fcec06b3b77a32de2a34
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+EXTERNAL_OPTIMIZATION_VALIDATION_PHASE:
+  deferred / separate
 ~~~
