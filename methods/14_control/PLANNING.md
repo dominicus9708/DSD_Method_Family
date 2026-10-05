@@ -1,6 +1,6 @@
 # DSD Control — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-002 100/100 PASS / CTRL-CH-003 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-003 90/90 PASS / CTRL-CH-004 NEXT**  
 Date: **2026-10-06**
 
 ## Canonical sequence
@@ -14,8 +14,8 @@ Date: **2026-10-06**
 6. ✅ executable Control Protocol v0.1 — G1-G18 / C1-C18
 7. ✅ positive constructed challenge — CTRL-CH-001 84/84 PASS
 8. ✅ status / terminal coverage — CTRL-CH-002 100/100 PASS
-9. ⏸ direct neighboring-method boundary challenge — CTRL-CH-003 next
-10. ⏸ competent non-DSD baseline
+9. ✅ direct neighboring-method boundary challenge — CTRL-CH-003 90/90 PASS / 10 pairs / exact collapse 0
+10. ⏸ competent non-DSD baseline — CTRL-CH-004 next
 11. ⏸ strongest-reasonable non-DSD baseline
 12. ⏸ deterministic same-project retrace
 13. ⏸ frozen-axis internal-standardization audit
@@ -33,15 +33,15 @@ DEDICATED_CONTROL_PROTOCOL:
   established v0.1
 
 DIRECT_CONTROL_PILOTS_ATTEMPTED:
-  2
+  3
 SUCCESSFUL_DIRECT_CONTROL_PILOTS:
-  2
+  3
 POSITIVE_CONTROL_CASES:
   1
 NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
   1
 METHOD_BOUNDARY_CONTROL_CASES:
-  0
+  1
 BASELINE_CONTROL_CASES:
   0
 NO_GAIN_CONTROL_CASES:
@@ -75,8 +75,8 @@ Task Interface
 
 ## Next
 
-CTRL-CH-002 completed at 100/100 PASS.
+CTRL-CH-003 completed at 90/90 PASS.
 
-Across CTRL-CH-001 and CTRL-CH-002, all six primary Control statuses and all seven task terminals have been directly exercised.
+Ten neighboring-method pairs were tested with zero exact collapses and zero unresolved boundaries. This is fixture-bounded separation only.
 
-Next: prospectively precommit and execute **CTRL-CH-003** direct neighboring-method boundary challenge.
+Next: prospectively precommit and execute **CTRL-CH-004**, the competent non-DSD Control baseline challenge.
