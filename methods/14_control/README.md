@@ -1,6 +1,6 @@
 # 14. DSD Control / DSD 제어론
 
-Status: **active internal-build front — CTRL-CH-002 100/100 PASS / all statuses+terminals covered / CTRL-CH-003 next**
+Status: **active internal-build front — CTRL-CH-003 90/90 PASS / competent baseline next**
 
 Task: choose interventions or control actions that move an admissible dynamic system toward declared target states while preserving explicit transition and domain conditions.
 
@@ -109,3 +109,33 @@ ALL_SEVEN_CONTROL_TASK_TERMINALS_DIRECTLY_EXERCISED:
 ### Next canonical step
 
 Prospectively precommit and execute **CTRL-CH-003**, the direct neighboring-method boundary challenge.
+
+
+## CTRL-CH-003 — neighboring-method boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  e684473b906a4e1dd0e0bf56a096b4a4dbf47ff3
+PRECOMMIT_BLOB:
+  552020b7ca07f7ff3eaa19818e910845621a6a48
+RESULT_COMMIT:
+  d0d5e841b7e4497139d3aa662622e91c4a31ac24
+RESULT_BLOB:
+  35fdb5d5d6c8bd6d7bd0bcf92866d2053fc6a895
+CHECKS:
+  90/90 PASS
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  10
+EXACT_COLLAPSE_PAIRS:
+  0
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  10
+~~~
+
+This is fixture-bounded separation only.
+
+### Next canonical step
+
+Prospectively precommit and execute **CTRL-CH-004**, a competent non-DSD Control baseline challenge.
