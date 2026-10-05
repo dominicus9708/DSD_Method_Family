@@ -1,6 +1,6 @@
 # Simulation Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — SIM-CH-001 84/84 PASS / SIM-CH-002 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — SIM-CH-002 80/80 PASS / ALL PRIMARY+TERMINALS COVERED / SIM-CH-003 NEXT**  
 Date: **2026-10-05**  
 Method: **Simulation / DSD 시뮬레이션론**  
 Legacy path ID: `13`  
@@ -59,16 +59,22 @@ BINDING_OPERATION:
   S1-S18
 
 DIRECT_SIMULATION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
-  1
+  2
 
 POSITIVE_SIMULATION_CASES:
   1
 
 NEGATIVE_OR_UNRESOLVED_SIMULATION_CASES:
-  0
+  1
+
+ALL_SIX_SIMULATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_SIMULATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 BASELINE_SIMULATION_CASES:
   0
@@ -154,9 +160,10 @@ SIMULATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **SIM-CH-002**, the negative / blocked / conflicting / underdetermined / out-of-scope / PARTIAL terminal-coverage challenge.
+Prospectively precommit and execute **SIM-CH-003**, the direct neighboring-method boundary challenge.
 
-SIM-CH-001 is frozen at 84/84 PASS and must not be retroactively rewritten.
+SIM-CH-001 and SIM-CH-002 remain immutable evidence.
+
 
 ## SIM-CH-001 checkpoint
 
@@ -173,6 +180,36 @@ RESULT_BLOB:
 
 CHECKS:
   84/84 PASS
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+
+## SIM-CH-002 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  8db0d4fd374c5576acf4fc80809775d6ea1630f3
+PRECOMMIT_BLOB:
+  f76d39d1e9bd183f948237c4c12e8f7325edee49
+
+RESULT_COMMIT:
+  250232d9a513d6b679746e039c2cda0ad4f57bb7
+RESULT_BLOB:
+  0333f487032c7bd9971e07684cc1fee7e3a576f8
+
+CHECKS:
+  80/80 PASS
+
+ALL_SIX_SIMULATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_SIMULATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 PROTOCOL_REVISION_REQUIRED:
   no
