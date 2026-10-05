@@ -1,6 +1,6 @@
 # DSD Prediction — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — TASK INTERFACE v0.1 DRAFT ESTABLISHED / BOUNDARY ATTACK NEXT**  
+Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / PRED-CH-001 NEXT**  
 Date: **2026-10-06**
 
 ## 1. Canonical development sequence
@@ -11,10 +11,10 @@ Date: **2026-10-06**
 3. ✅ source-derived constraints separated from prospective method construction
 4. ✅ planning / worklog lane
 5. ✅ Prediction Task Interface v0.1 draft
-6. ⏸ serious pre-protocol boundary attack — next
-7. ⏸ Boundary Amendment 001 if required
-8. ⏸ executable Prediction Protocol v0.1
-9. ⏸ positive constructed challenge
+6. ✅ serious pre-protocol boundary attack — 18 tests / 10 preserved / 8 refinements / 0 collapse
+7. ✅ Boundary Amendment 001 — 8/8 refinements adopted
+8. ✅ executable Prediction Protocol v0.1 — G1-G18 / P1-P18
+9. ⏸ positive constructed challenge — PRED-CH-001 next
 10. ⏸ negative / blocked / conflicting / underdetermined /
        out-of-scope / partial terminal coverage
 11. ⏸ direct neighboring-method boundary challenge
@@ -106,13 +106,13 @@ Task Interface
 
 ~~~text
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
-  0
+  18
 
 BOUNDARY_AMENDMENT_001:
-  not established
+  established
 
 DEDICATED_PREDICTION_PROTOCOL:
-  not established
+  established v0.1
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
   0
@@ -150,6 +150,6 @@ PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-Begin the serious pre-protocol boundary attack against the frozen historical Prediction Task Interface v0.1 draft.
+Prediction Protocol v0.1 is frozen after 18 direct boundary tests and Boundary Amendment 001.
 
-Any required nonbreaking refinements must be recorded in a separate Boundary Amendment rather than rewriting the Task Interface.
+Next: prospectively precommit and execute **PRED-CH-001**, the positive constructed Prediction challenge.
