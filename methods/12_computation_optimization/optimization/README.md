@@ -1,6 +1,6 @@
 # DSD Optimization / DSD 최적화론
 
-Status: **active internal-build front — source/interface recovery complete / Task Interface v0.1 draft established / pre-protocol boundary attack next**
+Status: **active internal-build front — Protocol v0.1 frozen / OPT-CH-001 next**
 Legacy path ID: `12B`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -126,3 +126,51 @@ SHARED_CORE_REOPEN_REQUIRED:
 Execute the serious pre-protocol boundary attack frozen by `TASK_INTERFACE_v0.1-draft.md`.
 
 Once direct attack execution begins, the Task Interface draft remains immutable historical evidence and any refinement must be recorded in a separate amendment.
+
+
+## Boundary attack and protocol freeze — 2026-10-05
+
+~~~text
+BOUNDARY_ATTACK_COMMIT:
+  108954715c1fb19ad2d12050bccb498d505e33a5
+BOUNDARY_ATTACK_BLOB:
+  6f1c855c7340d3e4c39d213576e43d7f61a6be40
+
+BOUNDARY_ATTACKS:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  12
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  6
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+AMENDMENT_COMMIT:
+  49aa357dae124a2529d7be692d6e63855b95716e
+AMENDMENT_BLOB:
+  7ccbe5d6cac6f51ceef57bad6f1d51a9eaba9a2a
+
+REFINEMENT_GROUPS_ADOPTED:
+  6/6
+
+PROTOCOL_COMMIT:
+  34584acd54af1bafef7dd176f795ed914eddc6b2
+PROTOCOL_BLOB:
+  5d2f9e37eab08bba27b0f416599df2e74a8c0c42
+
+DEDICATED_OPTIMIZATION_PROTOCOL:
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  O1-O18
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **OPT-CH-001** positive constructed challenge.
