@@ -10,10 +10,10 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 
 - [`methodology/CURRENT_SYNC_STATE.md`](methodology/CURRENT_SYNC_STATE.md) — Notion·GitHub·프로젝트 채팅을 교차 복원한 **2026-10-05 KST** 현재 상태 체크포인트.
 - [`methodology/LIVE_SYNC_POLICY.md`](methodology/LIVE_SYNC_POLICY.md) — 상태 변화가 발생한 같은 작업 단위에서 GitHub와 Notion을 함께 갱신하는 필수 실시간 동기화 규칙.
-- Current sync epoch: `MF-SYNC-20261005-SIM-CH002`
-- Latest claim-relevant source checkpoint at adoption: `d35a540b7bc0799f0e032ee61ec7151917b32a93`
-- Latest completed method event: **SIM-CH-002 terminal / negative Simulation challenge — 80/80 PASS / all six primary statuses and all seven task terminals directly exercised**.
-- Next canonical step: **prospectively precommit and execute SIM-CH-003 direct neighboring-method boundary challenge**.
+- Current sync epoch: `MF-SYNC-20261005-SIM-CH003`
+- Latest claim-relevant source checkpoint at adoption: `b85ebe6002345177cbdfe01ac9e5c9ffd336b688`
+- Latest completed method event: **SIM-CH-003 direct neighboring-method Simulation boundary challenge — 108/108 PASS / 12 pairs / exact collapse 0 / unresolved 0**.
+- Next canonical step: **prospectively precommit and execute SIM-CH-004 competent non-DSD Simulation baseline challenge**.
 - Canonical Notion sync page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
 - The checkpoint does not replace method-specific protocols, precommits, evidence, audits, or historical worklogs.
 
