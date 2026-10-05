@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-PRED-CH003`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `e1389d5596dd3fe6979d5923587215966e7a5210`  
-Latest completed method event: **PRED-CH-003 direct neighboring-method Prediction boundary challenge — 99/99 PASS / 11 pairs / exact collapse 0 / unresolved 0**  
-Latest method-result commit: `f3bdcca9fa91619a443b92418658a5f0610f2503`  
+Sync epoch: `MF-SYNC-20261006-PRED-AUD001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `ff7dc7de53d70718ef607649a9ed74b24e582c96`  
+Latest completed method event: **PRED-AUD-001 frozen-axis Prediction audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
+Latest method-result commit: `3bc266995b33bdd7d1e8b88f4e3849bfd00d6c99`  
 Active internal-build front: **Control / DSD 제어론**  
-Next canonical step: **prospectively precommit and execute PRED-CH-004 competent non-DSD Prediction baseline challenge**  
+Next canonical step: **recover Control source/registry constraints and establish the Control internal-build lane**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
