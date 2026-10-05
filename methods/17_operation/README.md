@@ -1,6 +1,6 @@
 # 17. DSD Operation / DSD 운영론
 
-Status: **active internal-build front — OPR-CH-004 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
+Status: **active internal-build front — OPR-CH-005 82/82 PASS / NO_GAIN / deterministic retrace next**
 
 Task: manage a live or repeatedly executed system across its lifecycle by coordinating states, resources, procedures, monitoring, handoffs, and method composition.
 
@@ -162,3 +162,27 @@ OPERATION_METHOD_GAIN_STATUS:
 ### Next canonical step
 
 Prospectively precommit and execute **OPR-CH-005**, a strongest-reasonable non-DSD Operation baseline challenge.
+
+
+## OPR-CH-005 — strongest-reasonable baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  63bf101783ac112a71b38804847a9026fc3c8250
+PRECOMMIT_BLOB:
+  891aeb6dc28013527aba6c4a36ad91255b2dba26
+RESULT_COMMIT:
+  4ca3c9efa1b9bb73e3ea61aaa4b7832f334787a5
+RESULT_BLOB:
+  fd558f882df081139de128b16803577fe63c66a6
+CHECKS:
+  82/82 PASS
+OPERATION_METHOD_GAIN_STATUS:
+  OPERATION_NO_GAIN
+STRONGEST_REASONABLE_BASELINE_OPERATION:
+  established_at_constructed_evidence_level
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **OPR-CH-006**, the deterministic same-project Operation retrace.
