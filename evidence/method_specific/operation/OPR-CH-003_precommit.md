@@ -1,0 +1,139 @@
+# OPR-CH-003 — Direct Neighboring-Method Operation Boundary Precommit
+
+Status: **PRECOMMITTED BEFORE EXECUTION**  
+Date: **2026-10-06**
+
+~~~text
+PROTOCOL_COMMIT:
+  f732733fd871cbfed930abe44c6970e8ec34fed6
+PROTOCOL_BLOB:
+  5c6df2773f57ecad85d7ddbc4f06e607b79cc02e
+~~~
+
+Compare each pair on:
+
+~~~text
+INPUTS
+OPERATION
+OUTPUTS
+FAILURE_OR_NO_GAIN_CRITERIA
+VALIDATION_STANDARD
+~~~
+
+Allowed pair result:
+
+~~~text
+EXACT_COLLAPSE
+PARTIAL_OVERLAP_NOT_COLLAPSE
+UNRESOLVED_BOUNDARY
+~~~
+
+Frozen pairs and guards:
+
+~~~text
+B1 Operation vs Control
+  CONTROL_POLICY != OPERATION_EXECUTION
+
+B2 Operation vs Prediction
+  PREDICTION_CLAIM != OPERATION_DECISION
+
+B3 Operation vs Simulation
+  SIMULATION_TRAJECTORY != LIVE_EXECUTION_RECORD
+
+B4 Operation vs Measurement
+  MEASUREMENT_RESULT != OPERATION_ACTION
+
+B5 Operation vs Tracking
+  TRACKING_TRACE != OPERATION_DECISION
+
+B6 Operation vs Lineage
+  LINEAGE_HANDOFF != OPERATION_HANDOFF_RULE
+
+B7 Operation vs Optimization
+  OPTIMIZATION_SELECTION != OPERATION_EXECUTION
+
+B8 Operation vs Computation
+  COMPUTATION_PLAN != OPERATION_COMPLETION
+
+B9 Operation vs Specification
+  SPECIFICATION_RULE != EXECUTION_RECORD
+
+B10 Operation vs Design
+  DESIGN_PLAN != OPERATION_STATE
+
+B11 Operation vs Audit
+  AUDIT_VERDICT != OPERATION_ACTION
+~~~
+
+Expected for every pair:
+
+~~~text
+PARTIAL_OVERLAP_NOT_COLLAPSE
+~~~
+
+Source/handoff guards:
+
+~~~text
+DYNAMICS_HANDOFF != OPERATION_EXECUTION
+CONTROL_HANDOFF != OPERATION_COMPLETION
+MEASUREMENT_HANDOFF != OPERATION_DECISION
+TRACKING_HANDOFF != OPERATION_ACTION
+AUDIT_HANDOFF != OPERATION_ACTION
+~~~
+
+Scoring:
+
+~~~text
+9 checks per pair
+11 pairs
+TOTAL_REQUIRED_CHECKS:
+  99
+PASS_THRESHOLD:
+  99/99
+PARTIAL_PASS_ALLOWED:
+  no
+~~~
+
+Each pair must preserve:
+1. fair shared information;
+2. input distinction;
+3. operation distinction;
+4. output distinction;
+5. failure/NO_GAIN distinction;
+6. validation-standard distinction;
+7. semantic guard;
+8. expected pair result;
+9. bounded interpretation.
+
+On full pass:
+
+~~~text
+DIRECT_OPERATION_PILOTS_ATTEMPTED:
+  2 -> 3
+SUCCESSFUL_DIRECT_OPERATION_PILOTS:
+  2 -> 3
+METHOD_BOUNDARY_OPERATION_CASES:
+  0 -> 1
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+EXACT_COLLAPSE_PAIRS:
+  0
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+PROTOCOL_REVISION_REQUIRED:
+  no
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+~~~text
+FIXTURE_BOUNDED_SEPARATION != PERMANENT_METHOD_IRREDUCIBILITY
+PARTIAL_OVERLAP_NOT_COLLAPSE != METHOD_SUPERIORITY
+NO_EXACT_COLLAPSE_IN_THIS_FIXTURE != PERMANENT_REGISTRY_SURVIVAL
+~~~
+
+Next on full pass: OPR-CH-004 competent non-DSD Operation baseline.
