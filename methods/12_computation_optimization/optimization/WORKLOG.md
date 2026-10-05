@@ -1,6 +1,6 @@
 # DSD Optimization — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-003 99/99 PASS / OPT-CH-004 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-004 64/64 PASS / NO_GAIN / OPT-CH-005 NEXT**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -379,3 +379,39 @@ The result is fixture-bounded separation evidence only and does not establish pe
 ## Next
 
 Prospectively precommit and execute **OPT-CH-004** competent non-DSD baseline challenge.
+
+
+## Step 10 — OPT-CH-004 competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  f31ff4ab5619ebc161bc2b6dea9574ff6792c3d7
+PRECOMMIT_BLOB:
+  3411d000de6e6d67ceda7fa2defca338e696fff7
+
+RESULT_COMMIT:
+  3b123abe43761ec460c0e002bb16a2a2f84ac9bf
+RESULT_BLOB:
+  8c93ab0e1975d818ac04a401a6f007bb6c603886
+
+CHECKS:
+  64/64 PASS
+
+BASELINE_OPTIMIZATION_CASES:
+  1
+
+NO_GAIN_OPTIMIZATION_CASES:
+  1
+
+OPTIMIZATION_METHOD_GAIN_STATUS:
+  OPTIMIZATION_NO_GAIN
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+~~~
+
+All six frozen gain axes were BASELINE_MATCH.
+
+## Next
+
+Prospectively precommit and execute **OPT-CH-005** strongest-reasonable non-DSD baseline.
