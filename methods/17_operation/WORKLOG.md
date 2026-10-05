@@ -1,6 +1,6 @@
 # DSD Operation — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — OPR-CH-004 64/64 PASS / OPR-CH-005 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPR-CH-005 82/82 PASS / OPR-CH-006 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — active-front handoff
@@ -180,3 +180,27 @@ NO_GAIN_OPERATION_CASES:
 ## Next
 
 Prospectively precommit and execute **OPR-CH-005** strongest-reasonable non-DSD Operation baseline challenge.
+
+
+## Step 11 — OPR-CH-005 strongest-reasonable non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  63bf101783ac112a71b38804847a9026fc3c8250
+PRECOMMIT_BLOB:
+  891aeb6dc28013527aba6c4a36ad91255b2dba26
+RESULT_COMMIT:
+  4ca3c9efa1b9bb73e3ea61aaa4b7832f334787a5
+RESULT_BLOB:
+  fd558f882df081139de128b16803577fe63c66a6
+CHECKS:
+  82/82 PASS
+OPERATION_METHOD_GAIN_STATUS:
+  OPERATION_NO_GAIN
+STRONGEST_REASONABLE_BASELINE_OPERATION:
+  established_at_constructed_evidence_level
+~~~
+
+## Next
+
+Prospectively precommit and execute **OPR-CH-006** deterministic same-project Operation retrace.
