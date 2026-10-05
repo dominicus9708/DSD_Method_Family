@@ -1,6 +1,6 @@
 # DSD Simulation — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — SIM-CH-001 84/84 PASS / TERMINAL COVERAGE NEXT**  
+Status: **ACTIVE INTERNAL BUILD — SIM-CH-002 80/80 PASS / METHOD-BOUNDARY CHALLENGE NEXT**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -15,8 +15,8 @@ Date: **2026-10-05**
 7. ✅ Boundary Amendment 001 — 6/6 refinements adopted
 8. ✅ executable Simulation Protocol v0.1 — G1-G18 / S1-S18
 9. ✅ positive constructed challenge — SIM-CH-001 84/84 PASS
-10. ⏸ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — SIM-CH-002 next
-11. ⏸ direct neighboring-method boundary challenge
+10. ✅ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — SIM-CH-002 80/80 PASS
+11. ⏸ direct neighboring-method boundary challenge — SIM-CH-003 next
 12. ⏸ competent non-DSD baseline
 13. ⏸ strongest-reasonable non-DSD baseline
 14. ⏸ deterministic same-project retrace
@@ -117,13 +117,22 @@ DEDICATED_SIMULATION_PROTOCOL:
   not established
 
 DIRECT_SIMULATION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
-  1
+  2
 
 POSITIVE_SIMULATION_CASES:
   1
+
+NEGATIVE_OR_UNRESOLVED_SIMULATION_CASES:
+  1
+
+ALL_SIX_SIMULATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_SIMULATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 NEGATIVE_OR_UNRESOLVED_SIMULATION_CASES:
   0
@@ -149,8 +158,8 @@ SIMULATION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-SIM-CH-001 completed at 84/84 PASS.
+SIM-CH-002 completed at 80/80 PASS.
 
-It directly exercised regular deterministic evolution, declared branching, hybrid typed transition, lineage handoff, static-slice conformance, readout collision, bounded numerical approximation, stochastic sample-path semantics, and supplied Control-policy simulation without method substitution.
+Across SIM-CH-001 and SIM-CH-002, all six primary Simulation statuses and all seven task terminals have now been directly exercised.
 
-Next: prospectively precommit and execute **SIM-CH-002** terminal / negative coverage.
+Next: prospectively precommit and execute **SIM-CH-003**, the direct neighboring-method boundary challenge.
