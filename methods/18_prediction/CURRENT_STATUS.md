@@ -1,6 +1,6 @@
 # Prediction Current Status — source / registry recovery checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — TASK INTERFACE v0.1 DRAFT ESTABLISHED / BOUNDARY ATTACK NEXT**  
+Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / PRED-CH-001 NEXT**  
 Date: **2026-10-06**  
 Method: **Prediction / DSD 예측론**  
 Canonical path ID: `18`  
@@ -35,10 +35,31 @@ TASK_INTERFACE_STATUS:
   NOT AN EXECUTABLE STANDARD
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
-  0
+  18
+
+BOUNDARY_ATTACK_RESULT:
+  10 preserved / 8 nonbreaking refinements / 0 collapse
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  8/8
 
 DEDICATED_PREDICTION_PROTOCOL:
-  not established
+  established v0.1
+
+PROTOCOL_COMMIT:
+  1a03a96e270f0d975710f5d530a8b1dbf5105bb0
+
+PROTOCOL_BLOB:
+  54de0673e41fe46f88dd78a56c6150e8d97cfc3c
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  P1-P18
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
   0
@@ -65,7 +86,7 @@ PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_PREDICTION_EVIDENCE_STATUS:
-  source_and_interface_recovery
+  protocol_frozen
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -146,6 +167,6 @@ PREDICTION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Begin the serious pre-protocol boundary attack against **Prediction Task Interface v0.1**.
+Prospectively precommit and execute **PRED-CH-001**, the positive constructed Prediction challenge.
 
-Once the attack starts, the Task Interface is immutable historical evidence and any required nonbreaking refinements must be recorded separately in a Boundary Amendment.
+The frozen Protocol v0.1 must not be altered in response to the challenge.
