@@ -1,6 +1,6 @@
 # 17. DSD Operation / DSD 운영론
 
-Status: **active internal-build front — OPR-CH-003 99/99 PASS / competent baseline next**
+Status: **active internal-build front — OPR-CH-004 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
 
 Task: manage a live or repeatedly executed system across its lifecycle by coordinating states, resources, procedures, monitoring, handoffs, and method composition.
 
@@ -140,3 +140,25 @@ This is fixture-bounded separation only.
 ### Next canonical step
 
 Prospectively precommit and execute **OPR-CH-004**, a competent non-DSD Operation baseline challenge.
+
+
+## OPR-CH-004 — competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  99c150e0759087f4a3b56670964e74ecffb0dd79
+PRECOMMIT_BLOB:
+  8c653f68886fec8f71d8300bee28cf01a99cf1a8
+RESULT_COMMIT:
+  c3c405fed879d1d49dda60aaa6ef467f445f9c05
+RESULT_BLOB:
+  c005eb642d2e9d488c09a491fb02247ea326777d
+CHECKS:
+  64/64 PASS
+OPERATION_METHOD_GAIN_STATUS:
+  OPERATION_NO_GAIN
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **OPR-CH-005**, a strongest-reasonable non-DSD Operation baseline challenge.
