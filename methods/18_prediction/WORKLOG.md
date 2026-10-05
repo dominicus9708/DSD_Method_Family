@@ -1,6 +1,6 @@
 # DSD Prediction — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — TASK INTERFACE v0.1 DRAFT ESTABLISHED**  
+Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / PRED-CH-001 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — family active-front handoff
@@ -84,3 +84,59 @@ protocol validity vs method gain
 Begin the serious pre-protocol boundary attack.
 
 Once the attack starts, do not rewrite the historical Task Interface. Any nonbreaking corrections must move into a separate Boundary Amendment.
+
+
+## Step 4 — serious pre-protocol boundary stress test
+
+~~~text
+STRESS_TEST_COMMIT:
+  a1c90a4f6b5500e3dfb23b6dbb7a0b942e3c4121
+STRESS_TEST_BLOB:
+  028eddff450b1bae49176b801cc2b205fab7c173
+
+TOTAL_TESTS:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  10
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  8
+
+BOUNDARY_COLLAPSE:
+  0
+~~~
+
+## Step 5 — Boundary Amendment 001
+
+~~~text
+AMENDMENT_COMMIT:
+  f6df08584c2ec93b654f526b997f6770ff6795ee
+AMENDMENT_BLOB:
+  d5ccf44ed1a6db7c466662e4e8253af689428bc6
+
+REFINEMENT_GROUPS_ADOPTED:
+  8/8
+
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+~~~
+
+## Step 6 — executable Prediction Protocol v0.1
+
+~~~text
+PROTOCOL_COMMIT:
+  1a03a96e270f0d975710f5d530a8b1dbf5105bb0
+PROTOCOL_BLOB:
+  54de0673e41fe46f88dd78a56c6150e8d97cfc3c
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  P1-P18
+~~~
+
+## Next
+
+Prospectively precommit and execute **PRED-CH-001** positive constructed challenge.
