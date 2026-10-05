@@ -1,6 +1,6 @@
 # DSD Operation — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — OPR-CH-003 99/99 PASS / OPR-CH-004 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPR-CH-004 64/64 PASS / OPR-CH-005 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — active-front handoff
@@ -154,3 +154,29 @@ UNRESOLVED_BOUNDARY_PAIRS:
 ## Next
 
 Prospectively precommit and execute **OPR-CH-004** competent non-DSD Operation baseline challenge.
+
+
+## Step 10 — OPR-CH-004 competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  99c150e0759087f4a3b56670964e74ecffb0dd79
+PRECOMMIT_BLOB:
+  8c653f68886fec8f71d8300bee28cf01a99cf1a8
+RESULT_COMMIT:
+  c3c405fed879d1d49dda60aaa6ef467f445f9c05
+RESULT_BLOB:
+  c005eb642d2e9d488c09a491fb02247ea326777d
+CHECKS:
+  64/64 PASS
+OPERATION_METHOD_GAIN_STATUS:
+  OPERATION_NO_GAIN
+BASELINE_OPERATION_CASES:
+  1
+NO_GAIN_OPERATION_CASES:
+  1
+~~~
+
+## Next
+
+Prospectively precommit and execute **OPR-CH-005** strongest-reasonable non-DSD Operation baseline challenge.
