@@ -14,9 +14,9 @@ Date: **2026-10-06**
 6. ✅ serious pre-protocol boundary attack — 18 tests / 10 preserved / 8 refinements / 0 collapse
 7. ✅ Boundary Amendment 001 — 8/8 refinements adopted
 8. ✅ executable Prediction Protocol v0.1 — G1-G18 / P1-P18
-9. ⏸ positive constructed challenge — PRED-CH-001 next
+9. ✅ positive constructed challenge — PRED-CH-001 84/84 PASS
 10. ⏸ negative / blocked / conflicting / underdetermined /
-       out-of-scope / partial terminal coverage
+       out-of-scope / partial terminal coverage — PRED-CH-002 next
 11. ⏸ direct neighboring-method boundary challenge
 12. ⏸ competent non-DSD baseline
 13. ⏸ strongest-reasonable non-DSD baseline
@@ -115,13 +115,13 @@ DEDICATED_PREDICTION_PROTOCOL:
   established v0.1
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
-  0
+  1
 
 SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
-  0
+  1
 
 POSITIVE_PREDICTION_CASES:
-  0
+  1
 
 NEGATIVE_OR_UNRESOLVED_PREDICTION_CASES:
   0
@@ -150,6 +150,6 @@ PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-Prediction Protocol v0.1 is frozen after 18 direct boundary tests and Boundary Amendment 001.
+PRED-CH-001 completed at 84/84 PASS.
 
-Next: prospectively precommit and execute **PRED-CH-001**, the positive constructed Prediction challenge.
+Next: prospectively precommit and execute **PRED-CH-002** terminal / negative coverage.
