@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-OPR-CH004`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `43422ac92373653d5d010a21bfa2d8cb92f209eb`  
-Latest completed method event: **OPR-CH-004 competent non-DSD Operation baseline — 64/64 PASS / OPERATION_NO_GAIN**  
-Latest method-result commit: `c3c405fed879d1d49dda60aaa6ef467f445f9c05`  
+Sync epoch: `MF-SYNC-20261006-OPR-CH005`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `7cb165d6a9f61357fedb85ca7cf61a05b6432e12`  
+Latest completed method event: **OPR-CH-005 strongest-reasonable non-DSD Operation baseline — 82/82 PASS / OPERATION_NO_GAIN**  
+Latest method-result commit: `4ca3c9efa1b9bb73e3ea61aaa4b7832f334787a5`  
 Active internal-build front: **Operation / DSD 운영론**  
-Next canonical step: **prospectively precommit and execute OPR-CH-005 strongest-reasonable non-DSD Operation baseline challenge**  
+Next canonical step: **prospectively precommit and execute OPR-CH-006 deterministic same-project Operation retrace**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -71,7 +71,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
-| Operation | active internal-build front; Protocol v0.1 frozen; OPR-CH-004 64/64 PASS / NO_GAIN; OPR-CH-005 strongest-reasonable baseline next |
+| Operation | active internal-build front; Protocol v0.1 frozen; OPR-CH-005 82/82 PASS / NO_GAIN; strongest-reasonable constructed baseline established; OPR-CH-006 retrace next |
 
 ## 3. Shared core
 
