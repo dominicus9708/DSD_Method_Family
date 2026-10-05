@@ -1,6 +1,6 @@
 # DSD Control — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-003 90/90 PASS / CTRL-CH-004 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-004 64/64 PASS / CTRL-CH-005 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — active-front handoff
@@ -156,3 +156,29 @@ UNRESOLVED_BOUNDARY_PAIRS:
 ## Next
 
 Prospectively precommit and execute **CTRL-CH-004** competent non-DSD Control baseline challenge.
+
+
+## Step 10 — CTRL-CH-004 competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  d90589a1527e082037a2777904c7e4f27cae14c8
+PRECOMMIT_BLOB:
+  8191ae6b13756d5b8df3b3685b5376fe412190cc
+RESULT_COMMIT:
+  4d1a70b96e33463389fe37d7be475b6c7bcc748d
+RESULT_BLOB:
+  f29de70fd288464841b6eb60683d9ba46bd6784e
+CHECKS:
+  64/64 PASS
+CONTROL_METHOD_GAIN_STATUS:
+  CONTROL_NO_GAIN
+BASELINE_CONTROL_CASES:
+  1
+NO_GAIN_CONTROL_CASES:
+  1
+~~~
+
+## Next
+
+Prospectively precommit and execute **CTRL-CH-005** strongest-reasonable non-DSD Control baseline challenge.
