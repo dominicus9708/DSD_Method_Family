@@ -1,6 +1,6 @@
 # 18. DSD Prediction / DSD 예측론
 
-Status: **active internal-build front — PRED-CH-001 84/84 PASS / PRED-CH-002 next**
+Status: **active internal-build front — PRED-CH-002 100/100 PASS / all statuses+terminals covered / PRED-CH-003 next**
 
 Task: derive future-state or outcome claims from an explicitly fixed current state, dynamic model, uncertainty structure, and domain bridge.
 
@@ -95,3 +95,31 @@ BINDING_OPERATION:
 ### Next canonical step
 
 Prospectively precommit and execute **PRED-CH-001**, the positive constructed Prediction challenge.
+
+
+## PRED-CH-002 — status coverage
+
+~~~text
+PRECOMMIT_COMMIT:
+  0b4aa64207a3432cecf0d38dab21e87b26745c16
+PRECOMMIT_BLOB:
+  b1cff116482a9d155c5b2a69ffa9da55ab65f5c5
+
+RESULT_COMMIT:
+  c1a9b05924918ad77b131bc872f136115ef99108
+RESULT_BLOB:
+  a75bd1507481d02b52fbb4cf09e632950270532d
+
+CHECKS:
+  100/100 PASS
+
+ALL_SIX_PREDICTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_PREDICTION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **PRED-CH-003**, the direct neighboring-method boundary challenge.
