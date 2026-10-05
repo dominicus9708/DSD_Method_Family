@@ -15,9 +15,9 @@ Date: **2026-10-06**
 7. ✅ Boundary Amendment 001 — 8/8 refinements adopted
 8. ✅ executable Prediction Protocol v0.1 — G1-G18 / P1-P18
 9. ✅ positive constructed challenge — PRED-CH-001 84/84 PASS
-10. ⏸ negative / blocked / conflicting / underdetermined /
-       out-of-scope / partial terminal coverage — PRED-CH-002 next
-11. ⏸ direct neighboring-method boundary challenge
+10. ✅ negative / blocked / conflicting / underdetermined /
+       out-of-scope / partial terminal coverage — PRED-CH-002 100/100 PASS
+11. ⏸ direct neighboring-method boundary challenge — PRED-CH-003 next
 12. ⏸ competent non-DSD baseline
 13. ⏸ strongest-reasonable non-DSD baseline
 14. ⏸ deterministic same-project retrace
@@ -115,16 +115,22 @@ DEDICATED_PREDICTION_PROTOCOL:
   established v0.1
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
-  1
+  2
 
 POSITIVE_PREDICTION_CASES:
   1
 
 NEGATIVE_OR_UNRESOLVED_PREDICTION_CASES:
-  0
+  1
+
+ALL_SIX_PREDICTION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_PREDICTION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 METHOD_BOUNDARY_PREDICTION_CASES:
   0
@@ -150,6 +156,8 @@ PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-PRED-CH-001 completed at 84/84 PASS.
+PRED-CH-002 completed at 100/100 PASS.
 
-Next: prospectively precommit and execute **PRED-CH-002** terminal / negative coverage.
+Across PRED-CH-001 and PRED-CH-002, all six primary Prediction statuses and all seven task terminals have been directly exercised.
+
+Next: prospectively precommit and execute **PRED-CH-003**, the direct neighboring-method boundary challenge.
