@@ -1,6 +1,6 @@
 # DSD Simulation — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / SIM-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — SIM-CH-001 84/84 PASS / SIM-CH-002 NEXT**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -226,3 +226,55 @@ The protocol binds model/state/horizon locks, trajectory quantifiers, regular ep
 ## Next
 
 Prospectively precommit and execute **SIM-CH-001** positive constructed challenge.
+
+
+## Step 7 — SIM-CH-001 positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  7605e452268295c9cc1b48a1c4ac6dfb0c167f5f
+PRECOMMIT_BLOB:
+  bf150326b076869da88dabfb50df8f883db45be9
+
+RESULT_COMMIT:
+  86ff6673229356500317d58eee404b45f1b66ca6
+RESULT_BLOB:
+  b566582c9dfc5e31cb8607138c624aa14ff8bccd
+
+CHECKS:
+  84/84 PASS
+
+DIRECT_SIMULATION_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
+  1
+
+POSITIVE_SIMULATION_CASES:
+  1
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Directly exercised:
+
+~~~text
+regular deterministic trajectory
+declared branching trajectory family
+hybrid typed transition
+lineage handoff
+fixed-time static-slice conformance
+readout collision without state collapse
+bounded numerical approximation
+stochastic sample-path semantics
+supplied Control-policy simulation without Control substitution
+Simulation-Prediction-Operation boundaries
+~~~
+
+## Next
+
+Prospectively precommit and execute **SIM-CH-002** terminal / negative coverage.
