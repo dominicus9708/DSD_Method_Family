@@ -1,6 +1,6 @@
 # 14. DSD Control / DSD 제어론
 
-Status: **active internal-build front — CTRL-CH-006 70/70 PASS / audit next**
+Status: **internally standardized — CTRL-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / external validation deferred**
 
 Task: choose interventions or control actions that move an admissible dynamic system toward declared target states while preserving explicit transition and domain conditions.
 
@@ -213,3 +213,38 @@ POST_COMPARISON_CORRECTIONS:
 ### Next canonical step
 
 Prospectively precommit and execute **CTRL-AUD-001**, the frozen-axis internal-standardization audit.
+
+
+## CTRL-AUD-001 — internal-standardization audit
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  92998255e09b0f6786c22a7a2b7207f4b64af2a4
+AUDIT_PRECOMMIT_BLOB:
+  b50764970460860819c3bfdb6a3bdf89c38c92bc
+AUDIT_RESULT_COMMIT:
+  d8edb8ab3fcfcd7b7e7d7ef5517948009621a7bb
+AUDIT_RESULT_BLOB:
+  21bae6299825c4707f24e3b248db31fa8901ae47
+AUDIT_CHECKS:
+  28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+CONTROL_INTERNAL_STANDARDIZATION_STATUS:
+  established
+~~~
+
+### Family-wide handoff
+
+Control internal build/standardization is closed at Protocol v0.1.
+
+~~~text
+NEXT_ACTIVE_METHOD:
+  Operation / DSD 운영론
+CONTROL_EXTERNAL_VALIDATION_PHASE:
+  deferred / separate
+INDEPENDENT_CONTROL_VALIDATION:
+  not established
+INDEPENDENT_REPLICATION:
+  not established
+~~~
