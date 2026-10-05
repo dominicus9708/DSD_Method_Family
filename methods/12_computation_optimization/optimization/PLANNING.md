@@ -1,6 +1,6 @@
 # DSD Optimization — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-006 70/70 PASS / INTERNAL-STANDARDIZATION AUDIT NEXT**  
+Status: **INTERNALLY STANDARDIZED — OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -177,13 +177,13 @@ INDEPENDENT_OPTIMIZATION_VALIDATION:
   not established
 
 OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 ~~~
 
 ## 7. Next
 
-OPT-CH-006 completed at 70/70 PASS with zero claim-relevant mismatch and zero post-comparison correction.
+OPT-AUD-001 completed at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`.
 
-The retrace is same-project deterministic artifact-consistency evidence only and does not establish independent replication or independent validation.
+Optimization internal build/standardization is closed at Protocol v0.1. External applications, independent validation, and independent replication remain separate deferred evidence phases.
 
-Next: prospectively precommit and execute **OPT-AUD-001**, the frozen-axis internal-standardization audit.
+The next family-wide internal-build front is **Simulation / DSD 시뮬레이션론**.
