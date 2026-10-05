@@ -1,6 +1,6 @@
 # Optimization Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / OPT-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-001 72/72 PASS / OPT-CH-002 NEXT**  
 Date: **2026-10-05**  
 Method: **Optimization / DSD 최적화론**  
 Legacy path ID: `12B`  
@@ -59,6 +59,15 @@ BINDING_OPERATION:
   O1-O18
 
 DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_OPTIMIZATION_PILOTS:
+  1
+
+POSITIVE_OPTIMIZATION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_OPTIMIZATION_CASES:
   0
 
 BASELINE_OPTIMIZATION_CASES:
@@ -83,7 +92,7 @@ OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_OPTIMIZATION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -143,6 +152,30 @@ OPTIMIZATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **OPT-CH-001**, the positive constructed Optimization challenge.
+Prospectively precommit and execute **OPT-CH-002**, the negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal-coverage challenge.
 
-The frozen protocol must directly exercise unique optimum, tied optimum set, Pareto-set semantics, hard constraints, declared multi-objective semantics, incomparability versus underdetermination, uncertainty/reduction sidecars, Computation handoff without substitution, and bounded maximum claim.
+OPT-CH-001 is frozen at 72/72 PASS and must not be retroactively rewritten.
+
+
+## OPT-CH-001 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  cadaf7abec3a1ed9b4bf313433b9a07734585faf
+PRECOMMIT_BLOB:
+  94393d8b81540b3b2a8d595bf9c2264e2c9b40ae
+
+RESULT_COMMIT:
+  d46f8248ffc9729eb4e8e00daa933b9fab22b0ae
+RESULT_BLOB:
+  ed0fb18bdb84dfed75ee924fb99534b09a96c4de
+
+CHECKS:
+  72/72 PASS
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
