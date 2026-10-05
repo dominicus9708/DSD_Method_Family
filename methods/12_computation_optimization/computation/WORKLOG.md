@@ -1,6 +1,6 @@
 # DSD Computation — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — COMP-CH-006 70/70 PASS / COMP-AUD-001 NEXT**  
+Status: **INTERNALLY STANDARDIZED — COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
 Date: **2026-10-03**  
 Method: **Computation / DSD 계산론**
 
@@ -796,3 +796,55 @@ DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
 ### Next canonical step
 
 Prospectively precommit and execute **COMP-AUD-001**, the frozen-axis internal-standardization audit.
+
+
+## Step 13 — COMP-AUD-001 frozen-axis internal-standardization audit
+
+Date: **2026-10-05**
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  164e302f9b3694daa6fdeefe00bf0fe7ac34495d
+
+AUDIT_PRECOMMIT_BLOB:
+  4f1326e950350d78aee9c5e1ab012e6d372a1a91
+
+AUDIT_RESULT_COMMIT:
+  a1b14dd8557ccfc037970284f51048a72f1b5920
+
+AUDIT_RESULT_BLOB:
+  7727fd69dbb493669ebbe30735fb61005199594c
+
+CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+
+COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Audit axes:
+
+~~~text
+M1-M6: PASS
+M7: CONDITIONAL_PASS
+M8-M13: PASS
+M14: DEFERRED_BY_SEQUENCE
+M15: PASS
+~~~
+
+External applicability, independent validation, independent replication, and performance superiority remain separate open questions.
+
+### Family handoff
+
+Computation internal build/standardization is closed.
+
+Next active internal-build front: **Optimization / DSD 최적화론**.
