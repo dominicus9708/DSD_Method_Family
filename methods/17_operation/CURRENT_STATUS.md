@@ -1,6 +1,6 @@
 # Operation Current Status
 
-Status: **ACTIVE INTERNAL BUILD — OPR-CH-003 99/99 PASS / OPR-CH-004 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPR-CH-004 64/64 PASS / NO_GAIN / OPR-CH-005 NEXT**  
 Date: **2026-10-06**  
 Method: **Operation / DSD 운영론**  
 Canonical path ID: `17`
@@ -46,9 +46,9 @@ BINDING_OPERATION:
   OP1-OP18
 
 DIRECT_OPERATION_PILOTS_ATTEMPTED:
-  3
+  4
 SUCCESSFUL_DIRECT_OPERATION_PILOTS:
-  3
+  4
 POSITIVE_OPERATION_CASES:
   1
 NEGATIVE_OR_UNRESOLVED_OPERATION_CASES:
@@ -70,9 +70,9 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
 SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 BASELINE_OPERATION_CASES:
-  0
+  1
 NO_GAIN_OPERATION_CASES:
-  0
+  1
 REPRODUCIBILITY_CASES:
   0
 
@@ -111,7 +111,7 @@ OPERATION_ESTABLISHED may coexist with OPERATION_NO_GAIN
 
 ## Next
 
-Prospectively precommit and execute **OPR-CH-004**, a competent non-DSD Operation baseline challenge.
+Prospectively precommit and execute **OPR-CH-005**, a strongest-reasonable non-DSD Operation baseline challenge.
 
 
 ## OPR-CH-001 checkpoint
@@ -173,4 +173,22 @@ UNRESOLVED_BOUNDARY_PAIRS:
   0
 PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
   11
+~~~
+
+
+## OPR-CH-004 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  99c150e0759087f4a3b56670964e74ecffb0dd79
+PRECOMMIT_BLOB:
+  8c653f68886fec8f71d8300bee28cf01a99cf1a8
+RESULT_COMMIT:
+  c3c405fed879d1d49dda60aaa6ef467f445f9c05
+RESULT_BLOB:
+  c005eb642d2e9d488c09a491fb02247ea326777d
+CHECKS:
+  64/64 PASS
+OPERATION_METHOD_GAIN_STATUS:
+  OPERATION_NO_GAIN
 ~~~
