@@ -3,7 +3,7 @@
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
 Sync epoch: `MF-SYNC-20261006-OPR-CH005`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `7cb165d6a9f61357fedb85ca7cf61a05b6432e12`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `22777210cffb3c7f5bf7ba5a401af2b23febb07b`  
 Latest completed method event: **OPR-CH-005 strongest-reasonable non-DSD Operation baseline — 82/82 PASS / OPERATION_NO_GAIN**  
 Latest method-result commit: `4ca3c9efa1b9bb73e3ea61aaa4b7832f334787a5`  
 Active internal-build front: **Operation / DSD 운영론**  
