@@ -1,6 +1,6 @@
 # 14. DSD Control / DSD 제어론
 
-Status: **active internal-build front — CTRL-CH-003 90/90 PASS / competent baseline next**
+Status: **active internal-build front — CTRL-CH-004 64/64 PASS / NO_GAIN / strongest-reasonable baseline next**
 
 Task: choose interventions or control actions that move an admissible dynamic system toward declared target states while preserving explicit transition and domain conditions.
 
@@ -139,3 +139,25 @@ This is fixture-bounded separation only.
 ### Next canonical step
 
 Prospectively precommit and execute **CTRL-CH-004**, a competent non-DSD Control baseline challenge.
+
+
+## CTRL-CH-004 — competent non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  d90589a1527e082037a2777904c7e4f27cae14c8
+PRECOMMIT_BLOB:
+  8191ae6b13756d5b8df3b3685b5376fe412190cc
+RESULT_COMMIT:
+  4d1a70b96e33463389fe37d7be475b6c7bcc748d
+RESULT_BLOB:
+  f29de70fd288464841b6eb60683d9ba46bd6784e
+CHECKS:
+  64/64 PASS
+CONTROL_METHOD_GAIN_STATUS:
+  CONTROL_NO_GAIN
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **CTRL-CH-005**, a strongest-reasonable non-DSD Control baseline challenge.
