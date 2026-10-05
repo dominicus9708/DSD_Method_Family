@@ -1,6 +1,6 @@
 # Prediction Current Status — source / registry recovery checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — PRED-CH-003 99/99 PASS / COMPETENT BASELINE NEXT**  
+Status: **ACTIVE INTERNAL BUILD — PRED-CH-004 64/64 PASS / NO_GAIN / STRONGEST-REASONABLE BASELINE NEXT**  
 Date: **2026-10-06**  
 Method: **Prediction / DSD 예측론**  
 Canonical path ID: `18`  
@@ -62,10 +62,10 @@ BINDING_OPERATION:
   P1-P18
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
-  3
+  4
 
 POSITIVE_PREDICTION_CASES:
   1
@@ -98,10 +98,10 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_PREDICTION_CASES:
-  0
+  1
 
 NO_GAIN_PREDICTION_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -200,9 +200,9 @@ PREDICTION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **PRED-CH-004**, a competent non-DSD Prediction baseline challenge.
+Prospectively precommit and execute **PRED-CH-005**, a strongest-reasonable non-DSD Prediction baseline challenge.
 
-PRED-CH-001~003 remain immutable evidence.
+The baseline must be materially stronger than B0 and preserve `PREDICTION_NO_GAIN` as an allowed result.
 
 
 ## PRED-CH-001 checkpoint
@@ -286,4 +286,25 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
 
 SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
+~~~
+
+
+## PRED-CH-004 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  ea475b3eb389761ff476e3a7f5696a2044d88654
+PRECOMMIT_BLOB:
+  2cb8e963bbda7ca8e67822310ffebb9bf6cefca9
+
+RESULT_COMMIT:
+  cefbd117fae8ab54042d188bd179d1d5c3a7109c
+RESULT_BLOB:
+  59f54e5670dfb500874938cf47114fdf66f211b7
+
+CHECKS:
+  64/64 PASS
+
+PREDICTION_METHOD_GAIN_STATUS:
+  PREDICTION_NO_GAIN
 ~~~
