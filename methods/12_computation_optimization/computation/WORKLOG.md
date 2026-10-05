@@ -1,6 +1,6 @@
 # DSD Computation — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — SOURCE / REGISTRY RECOVERY COMPLETE**  
+Status: **ACTIVE INTERNAL BUILD — COMP-CH-006 70/70 PASS / COMP-AUD-001 NEXT**  
 Date: **2026-10-03**  
 Method: **Computation / DSD 계산론**
 
@@ -734,3 +734,65 @@ This strongest-reasonable label is bounded to the frozen constructed comparator 
 ### Next canonical step
 
 Prospectively precommit and execute **COMP-CH-006**, the deterministic same-project retrace of COMP-CH-001~005.
+
+
+## Step 12 — COMP-CH-006 deterministic same-project retrace
+
+Date: **2026-10-05**
+
+Prospective precommit:
+
+~~~text
+PRECOMMIT_COMMIT:
+  c06db625de902fbbd69820f37d6d1c3b5265a57d
+PRECOMMIT_BLOB:
+  45f23122b449a6434074c512544006abaf65b5a1
+~~~
+
+The retrace ledger was derived from Computation Protocol v0.1 and COMP-CH-001~005 precommits only, then frozen before formal comparison:
+
+~~~text
+RETRACE_LEDGER_COMMIT:
+  1a0bfbb17bce48cc9383fd7769cd2987e9a1f574
+RETRACE_LEDGER_BLOB:
+  3f7a7a529859e6dd15ecf4f728c6b14fb7b3a527
+~~~
+
+Formal result:
+
+~~~text
+RESULT_COMMIT:
+  27ce66a5edb231f1f283ecf3a259aafb13bb587f
+
+CHECKS:
+  70/70 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The result is same-project deterministic retrace evidence only.
+
+~~~text
+SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **COMP-AUD-001**, the frozen-axis internal-standardization audit.
