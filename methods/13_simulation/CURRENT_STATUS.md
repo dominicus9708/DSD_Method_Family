@@ -1,6 +1,6 @@
 # Simulation Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — SIM-CH-002 80/80 PASS / ALL PRIMARY+TERMINALS COVERED / SIM-CH-003 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — SIM-CH-003 108/108 PASS / BASELINE NEXT**  
 Date: **2026-10-05**  
 Method: **Simulation / DSD 시뮬레이션론**  
 Legacy path ID: `13`  
@@ -59,10 +59,10 @@ BINDING_OPERATION:
   S1-S18
 
 DIRECT_SIMULATION_PILOTS_ATTEMPTED:
-  2
+  3
 
 SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
-  2
+  3
 
 POSITIVE_SIMULATION_CASES:
   1
@@ -160,9 +160,9 @@ SIMULATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **SIM-CH-003**, the direct neighboring-method boundary challenge.
+Prospectively precommit and execute **SIM-CH-004**, a fair competent non-DSD Simulation baseline challenge.
 
-SIM-CH-001 and SIM-CH-002 remain immutable evidence.
+The baseline must receive equal claim-relevant information and must permit `SIMULATION_NO_GAIN` as a valid result.
 
 
 ## SIM-CH-001 checkpoint
@@ -210,6 +210,45 @@ ALL_SIX_SIMULATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
 
 ALL_SEVEN_SIMULATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
   yes
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+
+## SIM-CH-003 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  28438af12f0e80b441381b45b2cb836e587c4aa3
+PRECOMMIT_BLOB:
+  3f750323283a3525a4925d122f3ffee26211d654
+
+RESULT_COMMIT:
+  abc626363574c8f9bd535a377cb705351e735129
+RESULT_BLOB:
+  a8e8e9f547ccde46196761df146394ce35481e2f
+
+CHECKS:
+  108/108 PASS
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  12
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  12
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
 
 PROTOCOL_REVISION_REQUIRED:
   no
