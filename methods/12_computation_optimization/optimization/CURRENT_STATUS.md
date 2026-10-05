@@ -1,6 +1,6 @@
 # Optimization Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-004 64/64 PASS / NO_GAIN / OPT-CH-005 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-005 82/82 PASS / NO_GAIN / STRONGEST-REASONABLE ESTABLISHED / OPT-CH-006 NEXT**  
 Date: **2026-10-05**  
 Method: **Optimization / DSD 최적화론**  
 Legacy path ID: `12B`  
@@ -59,10 +59,10 @@ BINDING_OPERATION:
   O1-O18
 
 DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_OPTIMIZATION_PILOTS:
-  4
+  5
 
 POSITIVE_OPTIMIZATION_CASES:
   1
@@ -95,10 +95,13 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_OPTIMIZATION_CASES:
-  1
+  2
 
 NO_GAIN_OPTIMIZATION_CASES:
-  1
+  2
+
+STRONGEST_REASONABLE_BASELINE_OPTIMIZATION:
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
   0
@@ -176,9 +179,9 @@ OPTIMIZATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **OPT-CH-005**, a strongest-reasonable non-DSD Optimization baseline challenge.
+Prospectively precommit and execute **OPT-CH-006**, a deterministic same-project retrace of OPT-CH-001~005.
 
-The baseline must be materially stronger than B0, must receive equal claim-relevant information, and must preserve `OPTIMIZATION_NO_GAIN` as an allowed result.
+The reconstruction ledger must be committed before formal comparison with the historical result artifacts.
 
 
 ## OPT-CH-001 checkpoint
@@ -292,6 +295,39 @@ CHECKS:
 
 OPTIMIZATION_METHOD_GAIN_STATUS:
   OPTIMIZATION_NO_GAIN
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+
+## OPT-CH-005 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  a3837f703675b9a7dd6e3d67889435344becbfb8
+PRECOMMIT_BLOB:
+  a69caf6af982efe8e35a5b99dae2bf70e218d6c7
+
+RESULT_COMMIT:
+  75d9a3b91695ada9b6ec1717038d65f4fa9db740
+RESULT_BLOB:
+  f94fe261bfa6896237a775e1b7c8d16e1bfe91bd
+
+CHECKS:
+  82/82 PASS
+
+OPTIMIZATION_METHOD_GAIN_STATUS:
+  OPTIMIZATION_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_OPTIMIZATION:
+  established_at_constructed_evidence_level
 
 EQUAL_INFORMATION_ACCESS:
   yes
