@@ -1,0 +1,136 @@
+# CTRL-CH-003 — Direct Neighboring-Method Control Boundary Precommit
+
+Status: **PRECOMMITTED BEFORE EXECUTION**  
+Date: **2026-10-06**
+
+~~~text
+PROTOCOL_COMMIT:
+  cda84e4298be81993a571f8f1277b3c7530c6057
+PROTOCOL_BLOB:
+  bb22a9b8ebca8d11fd29ae9eb072021e45130881
+~~~
+
+Compare each pair on:
+
+~~~text
+INPUTS
+OPERATION
+OUTPUTS
+FAILURE_OR_NO_GAIN_CRITERIA
+VALIDATION_STANDARD
+~~~
+
+Allowed pair result:
+
+~~~text
+EXACT_COLLAPSE
+PARTIAL_OVERLAP_NOT_COLLAPSE
+UNRESOLVED_BOUNDARY
+~~~
+
+Frozen pairs and guards:
+
+~~~text
+B1 Control vs Simulation
+  SIMULATION_OF_POLICY != POLICY_SELECTION
+
+B2 Control vs Prediction
+  PREDICTION_CLAIM != CONTROL_ACTION
+
+B3 Control vs Optimization
+  ONE_TIME_OPTIMUM != CONTROL_POLICY
+
+B4 Control vs Measurement
+  MEASUREMENT_RESULT != CONTROL_DECISION
+
+B5 Control vs Aggregation
+  AGGREGATE_READOUT != FULL_CONTROL_STATE
+
+B6 Control vs Tracking
+  TRACKING_TRACE != CONTROL_ACTION
+
+B7 Control vs Lineage
+  LINEAGE_HANDOFF != CONTROL_POLICY
+
+B8 Control vs Computation
+  COMPUTATION_PLAN != CONTROL_DECISION
+
+B9 Control vs Operation
+  CONTROL_POLICY != OPERATION_EXECUTION
+
+B10 Control vs Audit
+  AUDIT_VERDICT != CONTROL_ACTION
+~~~
+
+Expected for every pair:
+
+~~~text
+PARTIAL_OVERLAP_NOT_COLLAPSE
+~~~
+
+Source/handoff guards:
+
+~~~text
+DYNAMICS_HANDOFF != CONTROL_POLICY_SELECTION
+SIMULATION_HANDOFF != CONTROL_VALIDITY
+PREDICTION_HANDOFF != CONTROL_ACTION
+OPTIMIZATION_HANDOFF != CONTROL_POLICY_BY_DEFAULT
+MEASUREMENT_HANDOFF != CONTROL_DECISION
+~~~
+
+Scoring:
+
+~~~text
+9 checks per pair
+10 pairs
+TOTAL_REQUIRED_CHECKS:
+  90
+PASS_THRESHOLD:
+  90/90
+PARTIAL_PASS_ALLOWED:
+  no
+~~~
+
+Each pair must preserve:
+1. fair shared information;
+2. input distinction;
+3. operation distinction;
+4. output distinction;
+5. failure/NO_GAIN distinction;
+6. validation-standard distinction;
+7. semantic guard;
+8. expected pair result;
+9. bounded interpretation.
+
+On full pass:
+
+~~~text
+DIRECT_CONTROL_PILOTS_ATTEMPTED:
+  2 -> 3
+SUCCESSFUL_DIRECT_CONTROL_PILOTS:
+  2 -> 3
+METHOD_BOUNDARY_CONTROL_CASES:
+  0 -> 1
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  10
+EXACT_COLLAPSE_PAIRS:
+  0
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  10
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+PROTOCOL_REVISION_REQUIRED:
+  no
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+~~~text
+FIXTURE_BOUNDED_SEPARATION != PERMANENT_METHOD_IRREDUCIBILITY
+PARTIAL_OVERLAP_NOT_COLLAPSE != METHOD_SUPERIORITY
+NO_EXACT_COLLAPSE_IN_THIS_FIXTURE != PERMANENT_REGISTRY_SURVIVAL
+~~~
+
+Next on full pass: CTRL-CH-004 competent non-DSD Control baseline.
