@@ -1,6 +1,6 @@
 # DSD Computation — Planning / Validation Roadmap
 
-Status: **VALIDATION IN PROGRESS — COMP-CH-004 64/64 PASS / NO_GAIN / STRONGEST-REASONABLE BASELINE NEXT**  
+Status: **VALIDATION IN PROGRESS — COMP-CH-005 82/82 PASS / NO_GAIN / DETERMINISTIC RETRACE NEXT**  
 Date: **2026-10-05**  
 Method: **Computation / DSD 계산론**  
 Legacy path ID: `12A`  
@@ -81,8 +81,8 @@ The target is a sound evaluation plan, not automatically a globally minimal-cost
 10. ✅ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — COMP-CH-002 80/80 PASS
 11. ✅ direct neighboring-method boundary challenge — COMP-CH-003 99/99 PASS
 12. ✅ competent non-DSD baseline — COMP-CH-004 64/64 PASS / COMPUTATION_NO_GAIN
-13. ⏸ strongest-reasonable non-DSD baseline — COMP-CH-005 next
-14. ⏸ deterministic same-project retrace
+13. ✅ strongest-reasonable non-DSD baseline — COMP-CH-005 82/82 PASS / COMPUTATION_NO_GAIN
+14. ⏸ deterministic same-project retrace — COMP-CH-006 next
 15. ⏸ frozen-axis internal-standardization audit
 16. ⏸ external applications / independent validation later
 ~~~
@@ -292,10 +292,10 @@ PROTOCOL_BLOB:
   4c4fe0b0616371b7df6aff9ce6a1ff7636c49da4
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
-  4
+  5
 
 METHOD_BOUNDARY_COMPUTATION_CASES:
   1
@@ -316,10 +316,13 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_COMPUTATION_CASES:
-  1
+  2
 
 NO_GAIN_COMPUTATION_CASES:
-  1
+  2
+
+STRONGEST_REASONABLE_BASELINE_COMPUTATION:
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
   0
@@ -350,4 +353,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 COMP-CH-004 completed at 64/64 PASS with equal-information access and `COMPUTATION_NO_GAIN` against `B0_GENERIC_TYPED_COMPUTATION_PLANNER`.
 
-Next, prospectively precommit and execute COMP-CH-005, a strongest-reasonable non-DSD Computation baseline challenge. It must be materially stronger than B0 without importing DSD as theory, receive equal claim-relevant information, and preserve `COMPUTATION_NO_GAIN` as a valid outcome. COMP-CH-001~004 remain immutable evidence.
+COMP-CH-005 completed at 82/82 PASS with `COMPUTATION_NO_GAIN`; the strongest-reasonable baseline is established at the constructed-evidence level only.
+
+Next, prospectively precommit and execute COMP-CH-006, a deterministic same-project retrace of COMP-CH-001~005. The retrace must be reconstructed from frozen repository artifacts before comparison, preserve every mismatch, prohibit post-comparison correction, and keep `SAME_PROJECT_RETRACE != INDEPENDENT_REPLICATION`. COMP-CH-001~005 remain immutable evidence.
