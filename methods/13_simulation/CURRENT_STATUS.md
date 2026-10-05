@@ -1,6 +1,6 @@
-# Simulation Current Status — source/interface recovery checkpoint
+# Simulation Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — TASK INTERFACE v0.1 DRAFT ESTABLISHED / BOUNDARY ATTACK NEXT**  
+Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / SIM-CH-001 NEXT**  
 Date: **2026-10-05**  
 Method: **Simulation / DSD 시뮬레이션론**  
 Legacy path ID: `13`  
@@ -32,10 +32,31 @@ TASK_INTERFACE_STATUS:
   NOT AN EXECUTABLE STANDARD
 
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
-  0
+  18
+
+BOUNDARY_ATTACK_RESULT:
+  12 preserved / 6 nonbreaking refinements / 0 collapse
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+REFINEMENT_GROUPS_ADOPTED:
+  6/6
 
 DEDICATED_SIMULATION_PROTOCOL:
-  not established
+  established v0.1
+
+PROTOCOL_COMMIT:
+  ea271d04eb09d252299d9420d0fb1191564f5bc6
+
+PROTOCOL_BLOB:
+  c3d6f80d99dabb5b84c7a60fd2df3f58bf9dba35
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  S1-S18
 
 DIRECT_SIMULATION_PILOTS_ATTEMPTED:
   0
@@ -62,7 +83,7 @@ SIMULATION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_SIMULATION_EVIDENCE_STATUS:
-  source_and_interface_recovery
+  protocol_frozen
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -124,6 +145,6 @@ SIMULATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Execute a serious pre-protocol boundary attack against the 18 attack targets frozen in `TASK_INTERFACE_v0.1-draft.md`.
+Prospectively precommit and execute **SIM-CH-001**, the positive constructed Simulation challenge.
 
-Once direct boundary attack begins, the Task Interface draft remains immutable historical evidence. Refinements must be recorded separately.
+The frozen protocol should directly exercise regular deterministic evolution, declared branching, hybrid transition handling, static-slice conformance, readout information-loss discipline, bounded numerical approximation, stochastic sample-path semantics, and neighboring-method boundary preservation.
