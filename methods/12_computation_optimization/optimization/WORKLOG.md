@@ -1,6 +1,6 @@
 # DSD Optimization — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-004 64/64 PASS / NO_GAIN / OPT-CH-005 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-005 82/82 PASS / NO_GAIN / OPT-CH-006 NEXT**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -415,3 +415,39 @@ All six frozen gain axes were BASELINE_MATCH.
 ## Next
 
 Prospectively precommit and execute **OPT-CH-005** strongest-reasonable non-DSD baseline.
+
+
+## Step 11 — OPT-CH-005 strongest-reasonable non-DSD baseline
+
+~~~text
+PRECOMMIT_COMMIT:
+  a3837f703675b9a7dd6e3d67889435344becbfb8
+PRECOMMIT_BLOB:
+  a69caf6af982efe8e35a5b99dae2bf70e218d6c7
+
+RESULT_COMMIT:
+  75d9a3b91695ada9b6ec1717038d65f4fa9db740
+RESULT_BLOB:
+  f94fe261bfa6896237a775e1b7c8d16e1bfe91bd
+
+CHECKS:
+  82/82 PASS
+
+BASELINE_OPTIMIZATION_CASES:
+  2
+
+NO_GAIN_OPTIMIZATION_CASES:
+  2
+
+OPTIMIZATION_METHOD_GAIN_STATUS:
+  OPTIMIZATION_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_OPTIMIZATION:
+  established_at_constructed_evidence_level
+~~~
+
+All seven frozen gain axes were BASELINE_MATCH.
+
+## Next
+
+Prospectively precommit and execute **OPT-CH-006** deterministic same-project retrace.
