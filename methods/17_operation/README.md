@@ -1,6 +1,6 @@
 # 17. DSD Operation / DSD 운영론
 
-Status: **active internal-build front — Protocol v0.1 frozen / OPR-CH-001 next**
+Status: **active internal-build front — OPR-CH-001 84/84 PASS / OPR-CH-002 next**
 
 Task: manage a live or repeatedly executed system across its lifecycle by coordinating states, resources, procedures, monitoring, handoffs, and method composition.
 
@@ -66,3 +66,23 @@ OPERATION_ESTABLISHED may coexist with OPERATION_NO_GAIN
 ### Next canonical step
 
 Prospectively precommit and execute **OPR-CH-001**, the positive constructed Operation challenge.
+
+
+## OPR-CH-001 — positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  0d818404dc4497823ad2a64e9ab420e712b28e70
+PRECOMMIT_BLOB:
+  368357f8084e4d3ea9a57d0e84c29251117171ab
+RESULT_COMMIT:
+  3c8582a18ce7ebf881b6fdbea54306bef671dbed
+RESULT_BLOB:
+  b488f243907d7c42e1e7842dfdb3ea768b0948cf
+CHECKS:
+  84/84 PASS
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **OPR-CH-002** status / terminal coverage.
