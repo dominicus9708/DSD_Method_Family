@@ -1,6 +1,6 @@
 # DSD Optimization — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / OPT-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-001 72/72 PASS / OPT-CH-002 NEXT**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -223,3 +223,53 @@ The protocol binds candidate admissibility, objective/constraint registries, exp
 ## Next
 
 Prospectively precommit and execute **OPT-CH-001** positive constructed challenge.
+
+
+## Step 7 — OPT-CH-001 positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  cadaf7abec3a1ed9b4bf313433b9a07734585faf
+PRECOMMIT_BLOB:
+  94393d8b81540b3b2a8d595bf9c2264e2c9b40ae
+
+RESULT_COMMIT:
+  d46f8248ffc9729eb4e8e00daa933b9fab22b0ae
+RESULT_BLOB:
+  ed0fb18bdb84dfed75ee924fb99534b09a96c4de
+
+CHECKS:
+  72/72 PASS
+
+DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_OPTIMIZATION_PILOTS:
+  1
+
+POSITIVE_OPTIMIZATION_CASES:
+  1
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Directly exercised:
+
+~~~text
+unique optimum
+tied optimum set
+Pareto set
+partial-order incomparability
+hard-constraint exclusion
+uncertainty-aware order
+selection-preserving reduced readout
+Computation handoff without substitution
+~~~
+
+## Next
+
+Prospectively precommit and execute **OPT-CH-002** terminal / negative coverage.
