@@ -1,6 +1,6 @@
 # Simulation Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — SIM-CH-003 108/108 PASS / BASELINE NEXT**  
+Status: **ACTIVE INTERNAL BUILD — SIM-CH-004 64/64 PASS / NO_GAIN / STRONGEST-REASONABLE BASELINE NEXT**  
 Date: **2026-10-05**  
 Method: **Simulation / DSD 시뮬레이션론**  
 Legacy path ID: `13`  
@@ -59,10 +59,10 @@ BINDING_OPERATION:
   S1-S18
 
 DIRECT_SIMULATION_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
-  3
+  4
 
 POSITIVE_SIMULATION_CASES:
   1
@@ -77,10 +77,10 @@ ALL_SEVEN_SIMULATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
   yes
 
 BASELINE_SIMULATION_CASES:
-  0
+  1
 
 NO_GAIN_SIMULATION_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -160,9 +160,9 @@ SIMULATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **SIM-CH-004**, a fair competent non-DSD Simulation baseline challenge.
+Prospectively precommit and execute **SIM-CH-005**, a strongest-reasonable non-DSD Simulation baseline challenge.
 
-The baseline must receive equal claim-relevant information and must permit `SIMULATION_NO_GAIN` as a valid result.
+The baseline must be materially stronger than B0, must receive equal claim-relevant information, and must preserve `SIMULATION_NO_GAIN` as an allowed outcome.
 
 
 ## SIM-CH-001 checkpoint
@@ -249,6 +249,36 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
 
 SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+
+## SIM-CH-004 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  7d85d57625f109ba2e1836c000d24b7b5a5fee16
+PRECOMMIT_BLOB:
+  066104319e65f5a5f420a494cf5857df9a6f7c47
+
+RESULT_COMMIT:
+  b0f923f25258cfa877ec68268a5b04275a3ecab8
+RESULT_BLOB:
+  818125814c82a2893510dd6e972ba1633d98ee88
+
+CHECKS:
+  64/64 PASS
+
+SIMULATION_METHOD_GAIN_STATUS:
+  SIMULATION_NO_GAIN
+
+EQUAL_INFORMATION_ACCESS:
+  yes
 
 PROTOCOL_REVISION_REQUIRED:
   no
