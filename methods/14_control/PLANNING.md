@@ -1,6 +1,6 @@
 # DSD Control — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-003 90/90 PASS / CTRL-CH-004 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-005 82/82 PASS / CTRL-CH-006 NEXT**  
 Date: **2026-10-06**
 
 ## Canonical sequence
@@ -16,8 +16,8 @@ Date: **2026-10-06**
 8. ✅ status / terminal coverage — CTRL-CH-002 100/100 PASS
 9. ✅ direct neighboring-method boundary challenge — CTRL-CH-003 90/90 PASS / 10 pairs / exact collapse 0
 10. ✅ competent non-DSD baseline — CTRL-CH-004 64/64 PASS / NO_GAIN
-11. ⏸ strongest-reasonable non-DSD baseline — CTRL-CH-005 next
-12. ⏸ deterministic same-project retrace
+11. ✅ strongest-reasonable non-DSD baseline — CTRL-CH-005 82/82 PASS / NO_GAIN
+12. ⏸ deterministic same-project retrace — CTRL-CH-006 next
 13. ⏸ frozen-axis internal-standardization audit
 14. ⏸ external / independent validation later
 ~~~
@@ -33,9 +33,9 @@ DEDICATED_CONTROL_PROTOCOL:
   established v0.1
 
 DIRECT_CONTROL_PILOTS_ATTEMPTED:
-  4
+  5
 SUCCESSFUL_DIRECT_CONTROL_PILOTS:
-  4
+  5
 POSITIVE_CONTROL_CASES:
   1
 NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
@@ -43,9 +43,9 @@ NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
 METHOD_BOUNDARY_CONTROL_CASES:
   1
 BASELINE_CONTROL_CASES:
-  1
+  2
 NO_GAIN_CONTROL_CASES:
-  1
+  2
 REPRODUCIBILITY_CASES:
   0
 
@@ -75,6 +75,6 @@ Task Interface
 
 ## Next
 
-CTRL-CH-004 completed at 64/64 PASS with `CONTROL_NO_GAIN`.
+CTRL-CH-005 completed at 82/82 PASS with `CONTROL_NO_GAIN` and a constructed-evidence strongest-reasonable baseline.
 
-Next: prospectively precommit and execute **CTRL-CH-005**, the strongest-reasonable non-DSD Control baseline challenge.
+Next: prospectively precommit and execute **CTRL-CH-006**, the deterministic same-project Control retrace.
