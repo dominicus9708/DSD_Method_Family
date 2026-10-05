@@ -6,7 +6,7 @@ Sync epoch: `MF-SYNC-20261006-PRED-CH002`
 Latest claim-relevant source checkpoint before synchronization metadata writes: `c10aad9bea61ef4a3244abdad1fc0bfb2efffe86`  
 Latest completed method event: **PRED-CH-002 Prediction status-coverage challenge — 100/100 PASS / all six primary statuses and all seven task terminals directly exercised**  
 Latest method-result commit: `c1a9b05924918ad77b131bc872f136115ef99108`  
-Active internal-build front: **Prediction / DSD 예측론**  
+Active internal-build front: **Control / DSD 제어론**  
 Next canonical step: **prospectively precommit and execute PRED-CH-003 direct neighboring-method boundary challenge**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
@@ -66,8 +66,8 @@ They are not a cross-method ranking and do not imply independent external valida
 | Computation | Protocol v0.1 internally standardized; COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Optimization | Protocol v0.1 internally standardized; OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Simulation | Protocol v0.1 internally standardized; SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Prediction | active internal-build front; Protocol v0.1 frozen; PRED-CH-001 84/84 PASS; PRED-CH-002 100/100 PASS; all six primary statuses and all seven task terminals directly exercised; PRED-CH-003 next |
-| Control | proposed |
+| Prediction | Protocol v0.1 internally standardized; PRED-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
+| Control | active internal-build front; source/registry recovery next |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
