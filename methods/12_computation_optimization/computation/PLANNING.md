@@ -1,6 +1,6 @@
 # DSD Computation — Planning / Validation Roadmap
 
-Status: **VALIDATION IN PROGRESS — COMP-CH-006 70/70 PASS / INTERNAL-STANDARDIZATION AUDIT NEXT**  
+Status: **INTERNALLY STANDARDIZED — COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
 Date: **2026-10-05**  
 Method: **Computation / DSD 계산론**  
 Legacy path ID: `12A`  
@@ -83,8 +83,8 @@ The target is a sound evaluation plan, not automatically a globally minimal-cost
 12. ✅ competent non-DSD baseline — COMP-CH-004 64/64 PASS / COMPUTATION_NO_GAIN
 13. ✅ strongest-reasonable non-DSD baseline — COMP-CH-005 82/82 PASS / COMPUTATION_NO_GAIN
 14. ✅ deterministic same-project retrace — COMP-CH-006 70/70 PASS / zero mismatch
-15. ⏸ frozen-axis internal-standardization audit — COMP-AUD-001 next
-16. ⏸ external applications / independent validation later
+15. ✅ frozen-axis internal-standardization audit — COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD
+16. ⏸ external applications / independent validation later — separate deferred phase
 ~~~
 
 A protocol may not be frozen before boundary attack and any required prospective amendment.
@@ -346,7 +346,7 @@ INDEPENDENT_REPLICATION:
   not established
 
 COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_COMPUTATION_EVIDENCE_STATUS:
   validation_in_progress
@@ -360,8 +360,22 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-COMP-CH-006 completed at 70/70 PASS with zero claim-relevant mismatch and zero post-comparison correction.
+COMP-AUD-001 completed at 28/28 PASS with `PROMOTE_INTERNAL_STANDARD`.
 
-The retrace is same-project deterministic artifact-consistency evidence only and does not establish independent replication or independent validation.
+~~~text
+COMPUTATION_INTERNAL_STANDARDIZATION_STATUS:
+  established
 
-Next, prospectively precommit and execute COMP-AUD-001, the frozen-axis internal-standardization audit. The audit must keep COMP-CH-001~006 immutable and must not treat the two NO_GAIN baselines as method-failure, deletion, merger, absorption, or permanent-redundancy evidence.
+EXTERNAL_COMPUTATION_APPLICATIONS:
+  0
+
+INDEPENDENT_COMPUTATION_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+~~~
+
+Computation internal build/standardization is closed at Protocol v0.1. External validation remains a separate deferred evidence phase.
+
+The next family-wide internal-build front is Optimization / DSD 최적화론.
