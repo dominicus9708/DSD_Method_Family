@@ -1,6 +1,6 @@
 # DSD Operation — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / OPR-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPR-CH-001 84/84 PASS / OPR-CH-002 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — active-front handoff
@@ -84,3 +84,25 @@ BINDING_OPERATION:
 ## Next
 
 Prospectively precommit and execute **OPR-CH-001** positive constructed Operation challenge.
+
+
+## Step 7 — OPR-CH-001 positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  0d818404dc4497823ad2a64e9ab420e712b28e70
+PRECOMMIT_BLOB:
+  368357f8084e4d3ea9a57d0e84c29251117171ab
+RESULT_COMMIT:
+  3c8582a18ce7ebf881b6fdbea54306bef671dbed
+RESULT_BLOB:
+  b488f243907d7c42e1e7842dfdb3ea768b0948cf
+CHECKS:
+  84/84 PASS
+OPERATION_METHOD_GAIN_STATUS:
+  OPERATION_GAIN_NOT_TESTED
+~~~
+
+## Next
+
+Prospectively precommit and execute **OPR-CH-002** status / terminal coverage.
