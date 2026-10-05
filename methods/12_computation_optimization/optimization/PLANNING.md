@@ -1,6 +1,6 @@
 # DSD Optimization — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — SOURCE / INTERFACE RECOVERY COMPLETE**  
+Status: **ACTIVE INTERNAL BUILD — OPTIMIZATION PROTOCOL v0.1 FROZEN / OPT-CH-001 NEXT**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -11,10 +11,10 @@ Date: **2026-10-05**
 3. ✅ source-derived constraints separated from prospective method construction
 4. ✅ planning / worklog lane
 5. ✅ Optimization Task Interface v0.1 draft
-6. ⏸ serious pre-protocol boundary attack — next
-7. ⏸ Boundary Amendment 001 if required
-8. ⏸ executable Optimization Protocol v0.1
-9. ⏸ positive constructed challenge
+6. ✅ serious pre-protocol boundary attack — 18 attacks / 12 preserved / 6 nonbreaking refinements / 0 collapse
+7. ✅ Boundary Amendment 001 — 6/6 refinements adopted
+8. ✅ executable Optimization Protocol v0.1 — G1-G18 / O1-O18
+9. ⏸ positive constructed challenge — OPT-CH-001 next
 10. ⏸ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage
 11. ⏸ direct neighboring-method boundary challenge
 12. ⏸ competent non-DSD baseline
@@ -107,7 +107,13 @@ Task Interface
 
 ~~~text
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
-  0
+  18
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+DEDICATED_OPTIMIZATION_PROTOCOL:
+  established v0.1
 
 DEDICATED_OPTIMIZATION_PROTOCOL:
   not established
@@ -136,6 +142,6 @@ OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-Execute the serious pre-protocol boundary attack.
+Prospectively precommit and execute **OPT-CH-001** under the frozen Optimization Protocol v0.1.
 
-Do not freeze the executable Optimization Protocol until the attack is scored and any required nonbreaking refinements are explicitly bound by an amendment.
+The positive challenge should exercise multiple positive result forms rather than only a unique optimum, so that tied optimum, Pareto multiplicity, incomparability, uncertainty, reduction-preservation, and explicit handoff boundaries are tested before the negative/terminal challenge.
