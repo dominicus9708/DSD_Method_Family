@@ -1,6 +1,6 @@
 # 17. DSD Operation / DSD 운영론
 
-Status: **active internal-build front — OPR-CH-005 82/82 PASS / NO_GAIN / deterministic retrace next**
+Status: **internally standardized — OPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD / family internal build complete**
 
 Task: manage a live or repeatedly executed system across its lifecycle by coordinating states, resources, procedures, monitoring, handoffs, and method composition.
 
@@ -186,3 +186,42 @@ STRONGEST_REASONABLE_BASELINE_OPERATION:
 ### Next canonical step
 
 Prospectively precommit and execute **OPR-CH-006**, the deterministic same-project Operation retrace.
+
+
+## OPR-AUD-001 — internal-standardization audit
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  cb268429fab634829b29cfaadc02f6c2bafb8bb2
+AUDIT_PRECOMMIT_BLOB:
+  d90754b3c9ea780b5a4ead69f394c062579f4a9c
+AUDIT_RESULT_COMMIT:
+  59105917a92142c09e8c9c6125de6d503e407b9f
+AUDIT_RESULT_BLOB:
+  2657a1420a5ad1d7d5900fe193527ccb22598581
+AUDIT_CHECKS:
+  28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+OPERATION_INTERNAL_STANDARDIZATION_STATUS:
+  established
+~~~
+
+### Family-wide closure
+
+Operation was the final remaining internally unstandardized method.
+
+~~~text
+INTERNALLY_STANDARDIZED_METHODS:
+  22 / 22
+REMAINING_INTERNAL_BUILD_METHODS:
+  0 / 22
+METHOD_FAMILY_INTERNAL_BUILD_STATUS:
+  complete
+~~~
+
+Canonical family closure record:
+
+`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_CLOSURE_20261006.md`
+
+External validation and independent replication remain separate later work.
