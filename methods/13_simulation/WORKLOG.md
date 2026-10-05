@@ -1,6 +1,6 @@
 # DSD Simulation — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — SIM-CH-001 84/84 PASS / SIM-CH-002 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — SIM-CH-002 80/80 PASS / SIM-CH-003 NEXT**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -278,3 +278,40 @@ Simulation-Prediction-Operation boundaries
 ## Next
 
 Prospectively precommit and execute **SIM-CH-002** terminal / negative coverage.
+
+
+## Step 8 — SIM-CH-002 terminal / negative coverage
+
+~~~text
+PRECOMMIT_COMMIT:
+  8db0d4fd374c5576acf4fc80809775d6ea1630f3
+PRECOMMIT_BLOB:
+  f76d39d1e9bd183f948237c4c12e8f7325edee49
+
+RESULT_COMMIT:
+  250232d9a513d6b679746e039c2cda0ad4f57bb7
+RESULT_BLOB:
+  0333f487032c7bd9971e07684cc1fee7e3a576f8
+
+CHECKS:
+  80/80 PASS
+
+DIRECT_SIMULATION_PILOTS_ATTEMPTED:
+  2
+
+SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
+  2
+
+NEGATIVE_OR_UNRESOLVED_SIMULATION_CASES:
+  1
+
+ALL_SIX_SIMULATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_SIMULATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
+~~~
+
+## Next
+
+Prospectively precommit and execute **SIM-CH-003** direct neighboring-method boundary challenge.
