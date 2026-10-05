@@ -1,0 +1,86 @@
+# DSD Operation — Worklog
+
+Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / OPR-CH-001 NEXT**  
+Date: **2026-10-06**
+
+## Step 1 — active-front handoff
+
+~~~text
+PREVIOUS_ACTIVE_METHOD:
+  Control / DSD 제어론
+CTRL_AUD_001:
+  28/28 PASS
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
+NEW_ACTIVE_METHOD:
+  Operation / DSD 운영론
+~~~
+
+## Step 2 — source / registry recovery
+
+~~~text
+SOURCE_REGISTRY_COMMIT:
+  73e007bbce27fbcd241b413908aeac22eff32e90
+SOURCE_REGISTRY_BLOB:
+  ed4fa251935919513f8b14fe8c868ef781c4a4d8
+SOURCE_DERIVED_CONSTRAINTS:
+  OR-01~OR-20
+~~~
+
+## Step 3 — Task Interface v0.1
+
+~~~text
+TASK_INTERFACE_COMMIT:
+  830b8ad7e1ea9d9ff98b6ea0119695472fa7842b
+TASK_INTERFACE_BLOB:
+  e8beafd45dee9715df32ae83445e12ea1b11941b
+TASK_INTERFACE_STATUS:
+  PRE-PROTOCOL HISTORICAL DRAFT
+~~~
+
+## Step 4 — pre-protocol boundary review
+
+~~~text
+BOUNDARY_REVIEW_COMMIT:
+  c578928b1eab3655551b2ca745db856640b0888e
+BOUNDARY_REVIEW_BLOB:
+  fc28b83f874af7676765128d144c0e54172fbcd9
+TOTAL_TESTS:
+  18
+PRESERVED_NO_REFINEMENT:
+  10
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  8
+BOUNDARY_COLLAPSE:
+  0
+~~~
+
+## Step 5 — Boundary Amendment 001
+
+~~~text
+AMENDMENT_COMMIT:
+  8c115eb1a41cca3a8224201d2d909c821ca8deb6
+AMENDMENT_BLOB:
+  5abf44f5b94b8a52539741d1dad70201acfd008c
+REFINEMENT_GROUPS_ADOPTED:
+  8/8
+PROTOCOL_FREEZE_AUTHORIZED:
+  yes
+~~~
+
+## Step 6 — Operation Protocol v0.1
+
+~~~text
+PROTOCOL_COMMIT:
+  f732733fd871cbfed930abe44c6970e8ec34fed6
+PROTOCOL_BLOB:
+  5c6df2773f57ecad85d7ddbc4f06e607b79cc02e
+VALIDITY_GATES:
+  G1-G18
+BINDING_OPERATION:
+  OP1-OP18
+~~~
+
+## Next
+
+Prospectively precommit and execute **OPR-CH-001** positive constructed Operation challenge.
