@@ -1,6 +1,6 @@
 # DSD Optimization / DSD 최적화론
 
-Status: **active internal-build front — OPT-CH-002 80/80 PASS / all statuses+terminals covered / OPT-CH-003 next**
+Status: **active internal-build front — OPT-CH-003 99/99 PASS / 11 pairs / 0 collapse / OPT-CH-004 next**
 Legacy path ID: `12B`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -246,3 +246,42 @@ The challenge preserved evaluable failure, missing required interfaces, conflict
 ### Next canonical step
 
 Prospectively precommit and execute **OPT-CH-003**, the direct neighboring-method boundary challenge.
+
+
+## OPT-CH-003 — direct neighboring-method boundary
+
+~~~text
+PRECOMMIT_COMMIT:
+  d32729c8928f409305d44bdf78f35b3a8b95e223
+PRECOMMIT_BLOB:
+  2b610516e022ab5286ec0e21b17734bed133915f
+
+RESULT_COMMIT:
+  51283efd2b12efae2d98b4a9640501b03c425501
+RESULT_BLOB:
+  272a6a532b3cb4fff528356de3a3b3766831f930
+
+CHECKS:
+  99/99 PASS
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+
+BOUNDARY_STATUS:
+  FIXTURE_BOUNDED_SEPARATION_ESTABLISHED
+~~~
+
+Compared methods: Computation, Comparison, Design, Measurement, Aggregation, Compression, Simulation, Prediction, Control, Operation, Audit.
+
+### Next canonical step
+
+Prospectively precommit and execute **OPT-CH-004**, a fair competent non-DSD Optimization baseline challenge.
