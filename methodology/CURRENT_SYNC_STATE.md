@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-SIM-AUD001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `18559d96c41ed81504f3a5b5930830a5e20fd107`  
-Latest completed method event: **SIM-AUD-001 frozen-axis Simulation audit — 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
-Latest method-result commit: `a72cb6bb05baab5c31f5478fe67d536ad541efc4`  
+Sync epoch: `MF-SYNC-20261006-PRED-TASK-INTERFACE-v0.1`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `3c16ab433d35f23f9cefbbc8bb033b8d51f6cbcc`  
+Latest completed method event: **Prediction source/registry recovery complete and Task Interface v0.1 historical draft established**  
+Latest method-result commit: `b5e4004aeb1b90866e17ad0c26ffdba833b0effe`  
 Active internal-build front: **Prediction / DSD 예측론**  
-Next canonical step: **recover Prediction source/registry constraints and establish the Prediction internal-build lane**  
+Next canonical step: **begin serious pre-protocol boundary attack against Prediction Task Interface v0.1**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -66,7 +66,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Computation | Protocol v0.1 internally standardized; COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Optimization | Protocol v0.1 internally standardized; OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Simulation | Protocol v0.1 internally standardized; SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Prediction | active internal-build front; source/registry recovery next |
+| Prediction | active internal-build front; source/registry recovery complete; Task Interface v0.1 historical draft established; serious pre-protocol boundary attack next |
 | Control | proposed |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
