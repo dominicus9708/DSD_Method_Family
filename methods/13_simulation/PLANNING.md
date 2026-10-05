@@ -1,6 +1,6 @@
 # DSD Simulation — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — SIM-CH-002 80/80 PASS / METHOD-BOUNDARY CHALLENGE NEXT**  
+Status: **ACTIVE INTERNAL BUILD — SIM-CH-003 108/108 PASS / COMPETENT BASELINE NEXT**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -16,8 +16,8 @@ Date: **2026-10-05**
 8. ✅ executable Simulation Protocol v0.1 — G1-G18 / S1-S18
 9. ✅ positive constructed challenge — SIM-CH-001 84/84 PASS
 10. ✅ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — SIM-CH-002 80/80 PASS
-11. ⏸ direct neighboring-method boundary challenge — SIM-CH-003 next
-12. ⏸ competent non-DSD baseline
+11. ✅ direct neighboring-method boundary challenge — SIM-CH-003 108/108 PASS / 12 pairs / exact collapse 0
+12. ⏸ competent non-DSD baseline — SIM-CH-004 next
 13. ⏸ strongest-reasonable non-DSD baseline
 14. ⏸ deterministic same-project retrace
 15. ⏸ frozen-axis internal-standardization audit
@@ -117,10 +117,10 @@ DEDICATED_SIMULATION_PROTOCOL:
   not established
 
 DIRECT_SIMULATION_PILOTS_ATTEMPTED:
-  2
+  3
 
 SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
-  2
+  3
 
 POSITIVE_SIMULATION_CASES:
   1
@@ -158,8 +158,8 @@ SIMULATION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-SIM-CH-002 completed at 80/80 PASS.
+SIM-CH-003 completed at 108/108 PASS.
 
-Across SIM-CH-001 and SIM-CH-002, all six primary Simulation statuses and all seven task terminals have now been directly exercised.
+Twelve neighboring-method pairs were tested with zero exact collapses and zero unresolved boundaries. This is fixture-bounded separation only, not a permanent irreducibility claim.
 
-Next: prospectively precommit and execute **SIM-CH-003**, the direct neighboring-method boundary challenge.
+Next: prospectively precommit and execute **SIM-CH-004**, the fair competent non-DSD Simulation baseline challenge.
