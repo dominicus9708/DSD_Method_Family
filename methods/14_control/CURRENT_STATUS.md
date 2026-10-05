@@ -1,6 +1,6 @@
 # Control Current Status
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / CTRL-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-001 84/84 PASS / CTRL-CH-002 NEXT**  
 Date: **2026-10-06**  
 Method: **Control / DSD 제어론**  
 Canonical path ID: `14`
@@ -46,11 +46,11 @@ BINDING_OPERATION:
   C1-C18
 
 DIRECT_CONTROL_PILOTS_ATTEMPTED:
-  0
+  1
 SUCCESSFUL_DIRECT_CONTROL_PILOTS:
-  0
+  1
 POSITIVE_CONTROL_CASES:
-  0
+  1
 NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
   0
 METHOD_BOUNDARY_CONTROL_CASES:
@@ -72,7 +72,7 @@ INDEPENDENT_REPLICATION:
 CONTROL_INTERNAL_STANDARDIZATION_STATUS:
   developing
 CURRENT_CONTROL_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 PROTOCOL_REVISION_REQUIRED:
   no
@@ -94,4 +94,21 @@ CONTROL_ESTABLISHED may coexist with CONTROL_NO_GAIN
 
 ## Next
 
-Prospectively precommit and execute **CTRL-CH-001**, the positive constructed Control challenge.
+Prospectively precommit and execute **CTRL-CH-002**, the status / terminal coverage challenge.
+
+## CTRL-CH-001 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  e8a8098de206a50dc613f243e7c262595fe67cb4
+PRECOMMIT_BLOB:
+  6266f83c410e598bacb6e57e2bb16725d65360f5
+RESULT_COMMIT:
+  727157f99b32f18bff65668fbbed4b01d8dba2da
+RESULT_BLOB:
+  6c116ac1df1bf874e76de2fc104f1ed29c6cf904
+CHECKS:
+  84/84 PASS
+CONTROL_METHOD_GAIN_STATUS:
+  CONTROL_GAIN_NOT_TESTED
+~~~
