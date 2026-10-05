@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-05 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261005-OPT-CH004`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `e22031ab53963f1b1e31daee6b2b5583bc6c181f`  
-Latest completed method event: **OPT-CH-004 competent non-DSD Optimization baseline — 64/64 PASS / OPTIMIZATION_NO_GAIN / equal-information access**  
-Latest method-result commit: `3b123abe43761ec460c0e002bb16a2a2f84ac9bf`  
+Sync epoch: `MF-SYNC-20261005-OPT-CH005`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `40f0e2efec379760cd91e45e709e61864dd30d11`  
+Latest completed method event: **OPT-CH-005 strongest-reasonable non-DSD Optimization baseline — 82/82 PASS / OPTIMIZATION_NO_GAIN / strongest-reasonable-at-constructed-evidence-level**  
+Latest method-result commit: `75d9a3b91695ada9b6ec1717038d65f4fa9db740`  
 Active internal-build front: **Optimization / DSD 최적화론**  
-Next canonical step: **prospectively precommit and execute OPT-CH-005 strongest-reasonable non-DSD Optimization baseline**  
+Next canonical step: **prospectively precommit and execute OPT-CH-006 deterministic same-project retrace of OPT-CH-001~005**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -64,7 +64,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Compression | Protocol v0.1 internally standardized; CPR-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Measurement | Protocol v0.1 internally standardized; MSR-AUD-001 28/28 PASS; external validation deferred |
 | Computation | Protocol v0.1 internally standardized; COMP-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Optimization | active internal-build front; OPT-CH-001 72/72 PASS; OPT-CH-002 80/80 PASS; OPT-CH-003 99/99 PASS; OPT-CH-004 64/64 PASS / NO_GAIN; OPT-CH-005 strongest-reasonable baseline next |
+| Optimization | active internal-build front; OPT-CH-001 72/72 PASS; OPT-CH-002 80/80 PASS; OPT-CH-003 99/99 PASS; OPT-CH-004 64/64 PASS / NO_GAIN; OPT-CH-005 82/82 PASS / NO_GAIN; strongest-reasonable baseline established at constructed-evidence level; OPT-CH-006 retrace next |
 | Simulation | proposed |
 | Prediction | proposed |
 | Control | proposed |
