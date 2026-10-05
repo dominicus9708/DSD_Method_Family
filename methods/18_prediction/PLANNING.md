@@ -1,6 +1,6 @@
 # DSD Prediction — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / PRED-CH-001 NEXT**  
+Status: **INTERNALLY STANDARDIZED — PRED-AUD-001 28/28 PASS / EXTERNAL VALIDATION DEFERRED**  
 Date: **2026-10-06**
 
 ## 1. Canonical development sequence
@@ -19,9 +19,9 @@ Date: **2026-10-06**
        out-of-scope / partial terminal coverage — PRED-CH-002 100/100 PASS
 11. ✅ direct neighboring-method boundary challenge — PRED-CH-003 99/99 PASS / 11 pairs / exact collapse 0
 12. ✅ competent non-DSD baseline — PRED-CH-004 64/64 PASS / NO_GAIN
-13. ⏸ strongest-reasonable non-DSD baseline — PRED-CH-005 next
-14. ⏸ deterministic same-project retrace
-15. ⏸ frozen-axis internal-standardization audit
+13. ✅ strongest-reasonable non-DSD baseline — PRED-CH-005 82/82 PASS / NO_GAIN
+14. ✅ deterministic same-project retrace — PRED-CH-006 70/70 PASS / mismatch 0
+15. ✅ frozen-axis internal-standardization audit — PRED-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD
 16. ⏸ external applications / independent validation later
 ~~~
 
@@ -115,10 +115,10 @@ DEDICATED_PREDICTION_PROTOCOL:
   established v0.1
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
-  4
+  5
 
 POSITIVE_PREDICTION_CASES:
   1
@@ -139,12 +139,24 @@ METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
   11
 
 BASELINE_PREDICTION_CASES:
-  1
+  2
 
 NO_GAIN_PREDICTION_CASES:
-  1
+  2
+
+STRONGEST_REASONABLE_BASELINE_PREDICTION:
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_PREDICTION_APPLICATIONS:
@@ -154,11 +166,23 @@ INDEPENDENT_PREDICTION_VALIDATION:
   not established
 
 PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 ~~~
 
 ## 7. Next
 
-PRED-CH-004 completed at 64/64 PASS with `PREDICTION_NO_GAIN`.
+Prediction internal build/standardization is closed at Protocol v0.1 after PRED-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
 
-Next: prospectively precommit and execute **PRED-CH-005**, the strongest-reasonable non-DSD Prediction baseline challenge.
+~~~text
+NEXT_FAMILY_INTERNAL_BUILD_FRONT:
+  Control / DSD 제어론
+
+PREDICTION_EXTERNAL_VALIDATION_PHASE:
+  deferred / separate
+
+INDEPENDENT_PREDICTION_VALIDATION:
+  not established
+
+INDEPENDENT_REPLICATION:
+  not established
+~~~
