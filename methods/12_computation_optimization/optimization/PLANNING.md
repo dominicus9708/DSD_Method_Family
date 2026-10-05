@@ -1,6 +1,6 @@
 # DSD Optimization — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-002 80/80 PASS / METHOD-BOUNDARY CHALLENGE NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-003 99/99 PASS / COMPETENT BASELINE NEXT**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -16,8 +16,8 @@ Date: **2026-10-05**
 8. ✅ executable Optimization Protocol v0.1 — G1-G18 / O1-O18
 9. ✅ positive constructed challenge — OPT-CH-001 72/72 PASS
 10. ✅ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — OPT-CH-002 80/80 PASS
-11. ⏸ direct neighboring-method boundary challenge — OPT-CH-003 next
-12. ⏸ competent non-DSD baseline
+11. ✅ direct neighboring-method boundary challenge — OPT-CH-003 99/99 PASS / 11 pairs / 0 collapse
+12. ⏸ competent non-DSD baseline — OPT-CH-004 next
 13. ⏸ strongest-reasonable non-DSD baseline
 14. ⏸ deterministic same-project retrace
 15. ⏸ frozen-axis internal-standardization audit
@@ -134,6 +134,21 @@ ALL_SIX_OPTIMIZATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
 ALL_SEVEN_OPTIMIZATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
   yes
 
+METHOD_BOUNDARY_OPTIMIZATION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  11
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  11
+
 BASELINE_OPTIMIZATION_CASES:
   0
 
@@ -155,8 +170,8 @@ OPTIMIZATION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-OPT-CH-002 completed at 80/80 PASS.
+OPT-CH-003 completed at 99/99 PASS.
 
-Across OPT-CH-001 and OPT-CH-002, all six primary Optimization statuses and all seven task terminals have now been directly exercised.
+The frozen fixture tested Optimization against Computation, Comparison, Design, Measurement, Aggregation, Compression, Simulation, Prediction, Control, Operation, and Audit. All 11 pairs were `PARTIAL_OVERLAP_NOT_COLLAPSE`; exact collapse 0 and unresolved boundary 0.
 
-Next: prospectively precommit and execute **OPT-CH-003**, the direct neighboring-method boundary challenge using the five-interface identity and equal shared-artifact access.
+Next: prospectively precommit and execute **OPT-CH-004**, a fair competent non-DSD Optimization baseline with equal claim-relevant information and an explicit NO_GAIN-allowed scoring rule.
