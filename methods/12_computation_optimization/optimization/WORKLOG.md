@@ -1,6 +1,6 @@
 # DSD Optimization — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-005 82/82 PASS / NO_GAIN / OPT-CH-006 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-006 70/70 PASS / OPT-AUD-001 NEXT**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -451,3 +451,49 @@ All seven frozen gain axes were BASELINE_MATCH.
 ## Next
 
 Prospectively precommit and execute **OPT-CH-006** deterministic same-project retrace.
+
+
+## Step 12 — OPT-CH-006 deterministic same-project retrace
+
+~~~text
+PRECOMMIT_COMMIT:
+  74ff0b217777618830bdafa300c606501649a507
+PRECOMMIT_BLOB:
+  5af5c1282184d56fb94f8ea32b389d502d602fc6
+
+RETRACE_LEDGER_COMMIT:
+  315e834b7c29646b2ff30eab0603ed537f416bc7
+RETRACE_LEDGER_BLOB:
+  c7d94f30b476659fa39b174280a29d6cf43acdf2
+
+RESULT_COMMIT:
+  2edf684b499a1edbc015028e3afe468a6e14fd86
+RESULT_BLOB:
+  f36049137c180f0d76cd31a349d87e5e811a062b
+
+CHECKS:
+  70/70 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+~~~
+
+The result is same-project deterministic retrace evidence only.
+
+~~~text
+SAME_PROJECT_DETERMINISTIC_RETRACE != INDEPENDENT_REPLICATION
+DETERMINISTIC_MATCH != INDEPENDENT_VALIDATION
+~~~
+
+## Next
+
+Prospectively precommit and execute **OPT-AUD-001** frozen-axis internal-standardization audit.
