@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-OPR-PROTOCOL-v0.1`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `607cb2e1b05f37378a6b1e2baddcad050263f520`  
-Latest completed method event: **Operation Protocol v0.1 frozen after 18 boundary tests and Boundary Amendment 001 (8/8 refinements)**  
-Latest method-result commit: `f732733fd871cbfed930abe44c6970e8ec34fed6`  
+Sync epoch: `MF-SYNC-20261006-OPR-CH001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `f85b638586897b7f50b2d4e3d9de0ccde0fa0484`  
+Latest completed method event: **OPR-CH-001 positive constructed Operation challenge — 84/84 PASS**  
+Latest method-result commit: `3c8582a18ce7ebf881b6fdbea54306bef671dbed`  
 Active internal-build front: **Operation / DSD 운영론**  
-Next canonical step: **prospectively precommit and execute OPR-CH-001 positive constructed Operation challenge**  
+Next canonical step: **prospectively precommit and execute OPR-CH-002 status / terminal coverage**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -71,7 +71,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
-| Operation | active internal-build front; Protocol v0.1 frozen; 18 boundary tests / 8 nonbreaking refinements / 0 collapse; OPR-CH-001 next |
+| Operation | active internal-build front; Protocol v0.1 frozen; OPR-CH-001 84/84 PASS; OPR-CH-002 status coverage next |
 
 ## 3. Shared core
 
