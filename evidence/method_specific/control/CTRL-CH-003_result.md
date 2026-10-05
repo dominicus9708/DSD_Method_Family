@@ -1,0 +1,130 @@
+# CTRL-CH-003 — Direct Neighboring-Method Control Boundary Result
+
+Status: **90/90 PASS**  
+Date: **2026-10-06**
+
+~~~text
+PROTOCOL_COMMIT:
+  cda84e4298be81993a571f8f1277b3c7530c6057
+PRECOMMIT_COMMIT:
+  e684473b906a4e1dd0e0bf56a096b4a4dbf47ff3
+PRECOMMIT_BLOB:
+  552020b7ca07f7ff3eaa19818e910845621a6a48
+~~~
+
+Every frozen pair returned:
+
+~~~text
+PARTIAL_OVERLAP_NOT_COLLAPSE
+~~~
+
+Pair set:
+
+~~~text
+B1  Control vs Simulation
+B2  Control vs Prediction
+B3  Control vs Optimization
+B4  Control vs Measurement
+B5  Control vs Aggregation
+B6  Control vs Tracking
+B7  Control vs Lineage
+B8  Control vs Computation
+B9  Control vs Operation
+B10 Control vs Audit
+~~~
+
+Preserved guards:
+
+~~~text
+SIMULATION_OF_POLICY != POLICY_SELECTION
+PREDICTION_CLAIM != CONTROL_ACTION
+ONE_TIME_OPTIMUM != CONTROL_POLICY
+MEASUREMENT_RESULT != CONTROL_DECISION
+AGGREGATE_READOUT != FULL_CONTROL_STATE
+TRACKING_TRACE != CONTROL_ACTION
+LINEAGE_HANDOFF != CONTROL_POLICY
+COMPUTATION_PLAN != CONTROL_DECISION
+CONTROL_POLICY != OPERATION_EXECUTION
+AUDIT_VERDICT != CONTROL_ACTION
+~~~
+
+Source/handoff separation:
+
+~~~text
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+~~~
+
+Frozen score:
+
+~~~text
+B1: 9/9 PASS
+B2: 9/9 PASS
+B3: 9/9 PASS
+B4: 9/9 PASS
+B5: 9/9 PASS
+B6: 9/9 PASS
+B7: 9/9 PASS
+B8: 9/9 PASS
+B9: 9/9 PASS
+B10: 9/9 PASS
+
+TOTAL_REQUIRED_CHECKS:
+  90
+PASSED:
+  90
+FAILED:
+  0
+~~~
+
+Post-state:
+
+~~~text
+DIRECT_CONTROL_PILOTS_ATTEMPTED:
+  3
+SUCCESSFUL_DIRECT_CONTROL_PILOTS:
+  3
+POSITIVE_CONTROL_CASES:
+  1
+NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
+  1
+METHOD_BOUNDARY_CONTROL_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  10
+EXACT_COLLAPSE_PAIRS:
+  0
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  10
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+
+BASELINE_CONTROL_CASES:
+  0
+NO_GAIN_CONTROL_CASES:
+  0
+REPRODUCIBILITY_CASES:
+  0
+EXTERNAL_CONTROL_APPLICATIONS:
+  0
+INDEPENDENT_CONTROL_VALIDATION:
+  not established
+INDEPENDENT_REPLICATION:
+  not established
+
+CONTROL_INTERNAL_STANDARDIZATION_STATUS:
+  developing
+CURRENT_CONTROL_EVIDENCE_STATUS:
+  validation_in_progress
+PROTOCOL_REVISION_REQUIRED:
+  no
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+Interpretation remains fixture-bounded and does not establish permanent irreducibility or superiority.
+
+Next: CTRL-CH-004 competent non-DSD Control baseline.
