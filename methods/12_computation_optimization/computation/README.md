@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — COMP-CH-004 64/64 PASS / NO_GAIN / COMP-CH-005 next**
+Status: **active internal-build front — COMP-CH-005 82/82 PASS / NO_GAIN / COMP-CH-006 next**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -155,9 +155,11 @@ The recovered source constraints do not themselves validate Computation as a met
 
 COMP-CH-004 completed at **64/64 PASS / COMPUTATION_NO_GAIN** against the competent constructed baseline `B0_GENERIC_TYPED_COMPUTATION_PLANNER` under equal-information access.
 
-Prospectively precommit and execute **COMP-CH-005**, a strongest-reasonable non-DSD Computation baseline challenge.
+COMP-CH-005 completed at **82/82 PASS / COMPUTATION_NO_GAIN** against `B1_STRONG_COMPUTATION_PLANNING_ENGINE` under equal-information access.
 
-COMP-CH-001~004 remain immutable evidence.
+Prospectively precommit and execute **COMP-CH-006**, a deterministic same-project retrace of COMP-CH-001~005.
+
+COMP-CH-001~005 remain immutable evidence.
 
 
 ## Pre-protocol boundary attack — 2026-10-03
@@ -414,3 +416,37 @@ COMPUTATION_NO_GAIN != PERMANENT_REDUNDANCY
 ## Next after COMP-CH-004
 
 Prospectively precommit and execute **COMP-CH-005**, a strongest-reasonable non-DSD Computation baseline challenge.
+
+
+## COMP-CH-005 — 2026-10-05
+
+~~~text
+PRECOMMIT_COMMIT:
+  c49c96fe0f54d7f492e21261b30af14450b6c437
+PRECOMMIT_BLOB:
+  086b6cce2d39bc76e901199dcaadfd40e4fdecd4
+RESULT_COMMIT:
+  fd89c3ef37da93a1c4198a6630332bc425403f66
+RESULT_BLOB:
+  2cde47641112eadbc559c44f99a62722a60c91ce
+CHECKS:
+  82/82 PASS
+BASELINE:
+  B1_STRONG_COMPUTATION_PLANNING_ENGINE
+EQUAL_INFORMATION_ACCESS:
+  yes
+METHOD_GAIN_STATUS:
+  COMPUTATION_NO_GAIN
+STRONGEST_REASONABLE_BASELINE_COMPUTATION:
+  established_at_constructed_evidence_level
+PROTOCOL_REVISION_REQUIRED:
+  no
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The materially stronger non-DSD computation-planning engine matched the frozen claim-relevant Computation outputs for versioned dependency semantics, target slicing, semantic reuse/invalidation, noninjective-reduction guards, symbolic coverage, recursive closure, end-to-end error propagation, target-relative resolution, transition invalidation, Optimization handoff, terminal precedence, bounded claims, and deterministic replay metadata.
+
+## Next after COMP-CH-005
+
+Prospectively precommit and execute **COMP-CH-006**, a deterministic same-project retrace of COMP-CH-001~005.
