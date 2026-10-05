@@ -1,6 +1,6 @@
 # Prediction Current Status — source / registry recovery checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / PRED-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — PRED-CH-001 84/84 PASS / PRED-CH-002 NEXT**  
 Date: **2026-10-06**  
 Method: **Prediction / DSD 예측론**  
 Canonical path ID: `18`  
@@ -62,6 +62,18 @@ BINDING_OPERATION:
   P1-P18
 
 DIRECT_PREDICTION_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_PREDICTION_PILOTS:
+  1
+
+POSITIVE_PREDICTION_CASES:
+  1
+
+NEGATIVE_OR_UNRESOLVED_PREDICTION_CASES:
+  0
+
+METHOD_BOUNDARY_PREDICTION_CASES:
   0
 
 BASELINE_PREDICTION_CASES:
@@ -86,7 +98,7 @@ PREDICTION_INTERNAL_STANDARDIZATION_STATUS:
   developing
 
 CURRENT_PREDICTION_EVIDENCE_STATUS:
-  protocol_frozen
+  validation_in_progress
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
@@ -167,6 +179,32 @@ PREDICTION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **PRED-CH-001**, the positive constructed Prediction challenge.
+Prospectively precommit and execute **PRED-CH-002**, the terminal / negative Prediction challenge.
 
-The frozen Protocol v0.1 must not be altered in response to the challenge.
+PRED-CH-001 is frozen at 84/84 PASS and must not be retroactively rewritten.
+
+## PRED-CH-001 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  70660aa399709faff8eab25a15fb9e918857f29c
+PRECOMMIT_BLOB:
+  758988f687ffaa04a33936d8d6947df10df983d0
+
+RESULT_COMMIT:
+  4a674e75312b16dcda1635364f2dcdaee454c641
+RESULT_BLOB:
+  c4000ea9b3b6461a839720244236b7488a320211
+
+CHECKS:
+  84/84 PASS
+
+PREDICTION_METHOD_GAIN_STATUS:
+  PREDICTION_GAIN_NOT_TESTED
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
