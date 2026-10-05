@@ -1,6 +1,6 @@
 # Optimization Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — OPT-CH-001 72/72 PASS / OPT-CH-002 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — OPT-CH-002 80/80 PASS / ALL PRIMARY+TERMINALS COVERED / OPT-CH-003 NEXT**  
 Date: **2026-10-05**  
 Method: **Optimization / DSD 최적화론**  
 Legacy path ID: `12B`  
@@ -59,16 +59,22 @@ BINDING_OPERATION:
   O1-O18
 
 DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
-  1
+  2
 
 SUCCESSFUL_DIRECT_OPTIMIZATION_PILOTS:
-  1
+  2
 
 POSITIVE_OPTIMIZATION_CASES:
   1
 
 NEGATIVE_OR_UNRESOLVED_OPTIMIZATION_CASES:
-  0
+  1
+
+ALL_SIX_OPTIMIZATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_OPTIMIZATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 BASELINE_OPTIMIZATION_CASES:
   0
@@ -152,9 +158,9 @@ OPTIMIZATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **OPT-CH-002**, the negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal-coverage challenge.
+Prospectively precommit and execute **OPT-CH-003**, the direct neighboring-method boundary challenge.
 
-OPT-CH-001 is frozen at 72/72 PASS and must not be retroactively rewritten.
+OPT-CH-001 and OPT-CH-002 remain immutable evidence.
 
 
 ## OPT-CH-001 checkpoint
@@ -172,6 +178,36 @@ RESULT_BLOB:
 
 CHECKS:
   72/72 PASS
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+
+## OPT-CH-002 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  8d778da4289b0a4080e5f93ffecae5ae55256f62
+PRECOMMIT_BLOB:
+  393dbfa5bdc9040cfcd4a07e63899873293dffd9
+
+RESULT_COMMIT:
+  a793aaf451cfca2b7befa8c64f23a2083da4e0f1
+RESULT_BLOB:
+  f3fc516f7d88735ca7195cbf508a2c6336f9f5a1
+
+CHECKS:
+  80/80 PASS
+
+ALL_SIX_OPTIMIZATION_PRIMARY_STATUSES_DIRECTLY_EXERCISED:
+  yes
+
+ALL_SEVEN_OPTIMIZATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
+  yes
 
 PROTOCOL_REVISION_REQUIRED:
   no
