@@ -1,6 +1,6 @@
 # DSD Control — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — PROTOCOL v0.1 FROZEN / CTRL-CH-001 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-002 100/100 PASS / CTRL-CH-003 NEXT**  
 Date: **2026-10-06**
 
 ## Canonical sequence
@@ -13,8 +13,8 @@ Date: **2026-10-06**
 5. ✅ Boundary Amendment 001 — 8/8 adopted
 6. ✅ executable Control Protocol v0.1 — G1-G18 / C1-C18
 7. ✅ positive constructed challenge — CTRL-CH-001 84/84 PASS
-8. ⏸ status / terminal coverage — CTRL-CH-002 next
-9. ⏸ direct neighboring-method boundary challenge
+8. ✅ status / terminal coverage — CTRL-CH-002 100/100 PASS
+9. ⏸ direct neighboring-method boundary challenge — CTRL-CH-003 next
 10. ⏸ competent non-DSD baseline
 11. ⏸ strongest-reasonable non-DSD baseline
 12. ⏸ deterministic same-project retrace
@@ -33,13 +33,13 @@ DEDICATED_CONTROL_PROTOCOL:
   established v0.1
 
 DIRECT_CONTROL_PILOTS_ATTEMPTED:
-  1
+  2
 SUCCESSFUL_DIRECT_CONTROL_PILOTS:
-  1
+  2
 POSITIVE_CONTROL_CASES:
   1
 NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
-  0
+  1
 METHOD_BOUNDARY_CONTROL_CASES:
   0
 BASELINE_CONTROL_CASES:
@@ -75,6 +75,8 @@ Task Interface
 
 ## Next
 
-CTRL-CH-001 completed at 84/84 PASS.
+CTRL-CH-002 completed at 100/100 PASS.
 
-Next: prospectively precommit and execute **CTRL-CH-002** status / terminal coverage.
+Across CTRL-CH-001 and CTRL-CH-002, all six primary Control statuses and all seven task terminals have been directly exercised.
+
+Next: prospectively precommit and execute **CTRL-CH-003** direct neighboring-method boundary challenge.
