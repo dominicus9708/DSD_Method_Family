@@ -1,6 +1,6 @@
 # DSD Optimization / DSD 최적화론
 
-Status: **active internal-build front — Protocol v0.1 frozen / OPT-CH-001 next**
+Status: **active internal-build front — OPT-CH-001 72/72 PASS / OPT-CH-002 next**
 Legacy path ID: `12B`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -174,3 +174,36 @@ BINDING_OPERATION:
 ### Next canonical step
 
 Prospectively precommit and execute **OPT-CH-001** positive constructed challenge.
+
+
+## OPT-CH-001 — positive constructed challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  cadaf7abec3a1ed9b4bf313433b9a07734585faf
+PRECOMMIT_BLOB:
+  94393d8b81540b3b2a8d595bf9c2264e2c9b40ae
+
+RESULT_COMMIT:
+  d46f8248ffc9729eb4e8e00daa933b9fab22b0ae
+RESULT_BLOB:
+  ed0fb18bdb84dfed75ee924fb99534b09a96c4de
+
+CHECKS:
+  72/72 PASS
+
+DIRECT_OPTIMIZATION_PILOTS_ATTEMPTED:
+  1
+
+SUCCESSFUL_DIRECT_OPTIMIZATION_PILOTS:
+  1
+
+POSITIVE_OPTIMIZATION_CASES:
+  1
+~~~
+
+The challenge established positive protocol behavior on unique, tied, and Pareto selections, preserved incomparability separately from underdetermination, and tested uncertainty, reduction-preservation, hard constraints, and Computation handoff.
+
+### Next canonical step
+
+Prospectively precommit and execute **OPT-CH-002** negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage.
