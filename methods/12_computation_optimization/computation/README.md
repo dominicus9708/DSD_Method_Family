@@ -1,6 +1,6 @@
 # DSD Computation / DSD 계산론
 
-Status: **active internal-build front — COMP-CH-003 99/99 PASS / COMP-CH-004 next**
+Status: **active internal-build front — COMP-CH-004 64/64 PASS / NO_GAIN / COMP-CH-005 next**
 Legacy path ID: `12A`
 Higher field: **VII. Computation & Selection / 계산·선택**
 
@@ -153,9 +153,11 @@ The recovered source constraints do not themselves validate Computation as a met
 
 ## Next canonical step
 
-Prospectively precommit and execute **COMP-CH-004**, a fair competent non-DSD Computation baseline challenge.
+COMP-CH-004 completed at **64/64 PASS / COMPUTATION_NO_GAIN** against the competent constructed baseline `B0_GENERIC_TYPED_COMPUTATION_PLANNER` under equal-information access.
 
-COMP-CH-001~003 remain immutable evidence.
+Prospectively precommit and execute **COMP-CH-005**, a strongest-reasonable non-DSD Computation baseline challenge.
+
+COMP-CH-001~004 remain immutable evidence.
 
 
 ## Pre-protocol boundary attack — 2026-10-03
@@ -358,3 +360,57 @@ SHARED_CORE_REOPEN_REQUIRED:
 ~~~
 
 The terminal-coverage challenge directly exercised every remaining non-positive Computation terminal while preserving lower-level statuses beneath task-level precedence.
+
+
+## COMP-CH-004 — 2026-10-05
+
+~~~text
+PRECOMMIT_COMMIT:
+  ba7cb32f760d6d7502cf1056fb20a02a7d830d93
+
+PRECOMMIT_BLOB:
+  f57876c7127953a7d5b81fdefa991f75fb4ebe30
+
+RESULT_COMMIT:
+  3a336a606ff5ae8bba3a47564cd37e77cc45409d
+
+RESULT_BLOB:
+  71b9406413b16f9271690217a1def0c06ee49553
+
+CHECKS:
+  64/64 PASS
+
+BASELINE:
+  B0_GENERIC_TYPED_COMPUTATION_PLANNER
+
+EQUAL_INFORMATION_ACCESS:
+  yes
+
+METHOD_GAIN_STATUS:
+  COMPUTATION_NO_GAIN
+
+BASELINE_COMPUTATION_CASES:
+  1
+
+NO_GAIN_COMPUTATION_CASES:
+  1
+
+PROTOCOL_REVISION_REQUIRED:
+  no
+
+SHARED_CORE_REOPEN_REQUIRED:
+  no
+~~~
+
+The competent non-DSD baseline matched the claim-relevant Computation outcomes for the frozen constructed fixtures covering mixed fresh/reuse/omission planning, symbolic coverage, target-sufficient resolution, information-loss guards, blocked/conflicting/underdetermined states, Optimization handoff, exact PARTIAL semantics, and transition-invalidated reuse.
+
+~~~text
+COMPUTATION_NO_GAIN != METHOD_FAILURE
+COMPUTATION_NO_GAIN != METHOD_DELETION_PROOF
+COMPUTATION_NO_GAIN != METHOD_MERGER_PROOF
+COMPUTATION_NO_GAIN != PERMANENT_REDUNDANCY
+~~~
+
+## Next after COMP-CH-004
+
+Prospectively precommit and execute **COMP-CH-005**, a strongest-reasonable non-DSD Computation baseline challenge.
