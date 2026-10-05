@@ -1,6 +1,6 @@
 # DSD Control — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-005 82/82 PASS / CTRL-CH-006 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-006 70/70 PASS / CTRL-AUD-001 NEXT**  
 Date: **2026-10-06**
 
 ## Step 1 — active-front handoff
@@ -206,3 +206,27 @@ STRONGEST_REASONABLE_BASELINE_CONTROL:
 ## Next
 
 Prospectively precommit and execute **CTRL-CH-006** deterministic same-project Control retrace.
+
+
+## Step 12 — CTRL-CH-006 deterministic same-project retrace
+
+~~~text
+PRECOMMIT_COMMIT:
+  1e96b4d721aaad53b090a906b0631dae6ee05dc9
+RETRACE_LEDGER_COMMIT:
+  0214c47a326366144546aa3c56c2494e504dc0f2
+RESULT_COMMIT:
+  3dcc9bc3dafcd3a979871ee6db562d2e768fbb14
+RESULT_BLOB:
+  6190b505fe3b24530617f83690482caa91d4f987
+CHECKS:
+  70/70 PASS
+CLAIM_RELEVANT_MISMATCHES:
+  0
+POST_COMPARISON_CORRECTIONS:
+  0
+~~~
+
+## Next
+
+Prospectively precommit and execute **CTRL-AUD-001** frozen-axis internal-standardization audit.
