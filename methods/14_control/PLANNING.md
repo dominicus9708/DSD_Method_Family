@@ -15,8 +15,8 @@ Date: **2026-10-06**
 7. ✅ positive constructed challenge — CTRL-CH-001 84/84 PASS
 8. ✅ status / terminal coverage — CTRL-CH-002 100/100 PASS
 9. ✅ direct neighboring-method boundary challenge — CTRL-CH-003 90/90 PASS / 10 pairs / exact collapse 0
-10. ⏸ competent non-DSD baseline — CTRL-CH-004 next
-11. ⏸ strongest-reasonable non-DSD baseline
+10. ✅ competent non-DSD baseline — CTRL-CH-004 64/64 PASS / NO_GAIN
+11. ⏸ strongest-reasonable non-DSD baseline — CTRL-CH-005 next
 12. ⏸ deterministic same-project retrace
 13. ⏸ frozen-axis internal-standardization audit
 14. ⏸ external / independent validation later
@@ -33,9 +33,9 @@ DEDICATED_CONTROL_PROTOCOL:
   established v0.1
 
 DIRECT_CONTROL_PILOTS_ATTEMPTED:
-  3
+  4
 SUCCESSFUL_DIRECT_CONTROL_PILOTS:
-  3
+  4
 POSITIVE_CONTROL_CASES:
   1
 NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
@@ -43,9 +43,9 @@ NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
 METHOD_BOUNDARY_CONTROL_CASES:
   1
 BASELINE_CONTROL_CASES:
-  0
+  1
 NO_GAIN_CONTROL_CASES:
-  0
+  1
 REPRODUCIBILITY_CASES:
   0
 
@@ -75,8 +75,6 @@ Task Interface
 
 ## Next
 
-CTRL-CH-003 completed at 90/90 PASS.
+CTRL-CH-004 completed at 64/64 PASS with `CONTROL_NO_GAIN`.
 
-Ten neighboring-method pairs were tested with zero exact collapses and zero unresolved boundaries. This is fixture-bounded separation only.
-
-Next: prospectively precommit and execute **CTRL-CH-004**, the competent non-DSD Control baseline challenge.
+Next: prospectively precommit and execute **CTRL-CH-005**, the strongest-reasonable non-DSD Control baseline challenge.
