@@ -1,6 +1,6 @@
 # 13. DSD Simulation / DSD 시뮬레이션론
 
-Status: **active internal-build front — source/interface recovery complete / Task Interface v0.1 draft established / pre-protocol boundary attack next**
+Status: **active internal-build front — Protocol v0.1 frozen / SIM-CH-001 next**
 
 Task: generate and compare admissible state trajectories while keeping regular evolution, status/domain transitions, and formation-level transitions distinct.
 
@@ -132,3 +132,51 @@ SHARED_CORE_REOPEN_REQUIRED:
 Execute the serious pre-protocol boundary attack frozen by `TASK_INTERFACE_v0.1-draft.md`.
 
 Once direct attack execution begins, the Task Interface draft remains immutable historical evidence and any refinement must be recorded in a separate amendment.
+
+
+## Boundary attack and protocol freeze — 2026-10-05
+
+~~~text
+BOUNDARY_ATTACK_COMMIT:
+  22ae5d92444d8eb0d27b0437cc9f944eff024e9c
+BOUNDARY_ATTACK_BLOB:
+  2966801192e0a0630ad88387cd314e433ed06ebf
+
+BOUNDARY_ATTACKS:
+  18
+
+PRESERVED_NO_REFINEMENT:
+  12
+
+PRESERVED_WITH_NONBREAKING_REFINEMENT:
+  6
+
+BOUNDARY_COLLAPSE_FOUND:
+  0
+
+AMENDMENT_COMMIT:
+  2c7b22af07c0980472cbbad4c06f113337201374
+AMENDMENT_BLOB:
+  a0b1c47c7334f5420047d7eeeb868a2b6da4a8de
+
+REFINEMENT_GROUPS_ADOPTED:
+  6/6
+
+PROTOCOL_COMMIT:
+  ea271d04eb09d252299d9420d0fb1191564f5bc6
+PROTOCOL_BLOB:
+  c3d6f80d99dabb5b84c7a60fd2df3f58bf9dba35
+
+DEDICATED_SIMULATION_PROTOCOL:
+  established v0.1
+
+VALIDITY_GATES:
+  G1-G18
+
+BINDING_OPERATION:
+  S1-S18
+~~~
+
+### Next canonical step
+
+Prospectively precommit and execute **SIM-CH-001** positive constructed challenge.
