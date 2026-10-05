@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-06 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261006-CTRL-CH005`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `d89517ed6a582a0b6263ee3ec6c05730090a0dd2`  
-Latest completed method event: **CTRL-CH-005 strongest-reasonable non-DSD Control baseline — 82/82 PASS / CONTROL_NO_GAIN**  
-Latest method-result commit: `2a53c45174b0c0dc86af87e63e3e5c35d832a07b`  
+Sync epoch: `MF-SYNC-20261006-CTRL-CH006`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `cd1118abc8850655954faf4dc8cb4c3a5bb563b2`  
+Latest completed method event: **CTRL-CH-006 deterministic same-project Control retrace — 70/70 PASS / mismatch 0 / correction 0**  
+Latest method-result commit: `3dcc9bc3dafcd3a979871ee6db562d2e768fbb14`  
 Active internal-build front: **Control / DSD 제어론**  
-Next canonical step: **prospectively precommit and execute CTRL-CH-006 deterministic same-project Control retrace**  
+Next canonical step: **prospectively precommit and execute CTRL-AUD-001 frozen-axis internal-standardization audit**  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -67,7 +67,7 @@ They are not a cross-method ranking and do not imply independent external valida
 | Optimization | Protocol v0.1 internally standardized; OPT-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Simulation | Protocol v0.1 internally standardized; SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Prediction | Protocol v0.1 internally standardized; PRED-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
-| Control | active internal-build front; Protocol v0.1 frozen; CTRL-CH-005 82/82 PASS / NO_GAIN; strongest-reasonable constructed baseline established; CTRL-CH-006 retrace next |
+| Control | active internal-build front; Protocol v0.1 frozen; CTRL-CH-006 70/70 PASS deterministic retrace / mismatch 0; CTRL-AUD-001 next |
 | Diagnosis | Protocol v0.1 internally standardized; DIAG-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Reconstruction | Protocol v0.1 internally standardized; RECON-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD; external validation deferred |
 | Interpretation | Protocol v0.1 internally standardized; frozen-axis internal audit passed; external validation queued |
