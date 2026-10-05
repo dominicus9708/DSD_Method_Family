@@ -1,6 +1,6 @@
 # DSD Simulation — Worklog
 
-Status: **ACTIVE INTERNAL BUILD — SIM-CH-002 80/80 PASS / SIM-CH-003 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — SIM-CH-003 108/108 PASS / SIM-CH-004 NEXT**  
 Date opened: **2026-10-05**
 
 ## Step 1 — active-front handoff
@@ -315,3 +315,51 @@ ALL_SEVEN_SIMULATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
 ## Next
 
 Prospectively precommit and execute **SIM-CH-003** direct neighboring-method boundary challenge.
+
+
+## Step 9 — SIM-CH-003 direct neighboring-method boundary challenge
+
+~~~text
+PRECOMMIT_COMMIT:
+  28438af12f0e80b441381b45b2cb836e587c4aa3
+PRECOMMIT_BLOB:
+  3f750323283a3525a4925d122f3ffee26211d654
+
+RESULT_COMMIT:
+  abc626363574c8f9bd535a377cb705351e735129
+RESULT_BLOB:
+  a8e8e9f547ccde46196761df146394ce35481e2f
+
+CHECKS:
+  108/108 PASS
+
+DIRECT_SIMULATION_PILOTS_ATTEMPTED:
+  3
+
+SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
+  3
+
+METHOD_BOUNDARY_SIMULATION_CASES:
+  1
+
+METHOD_FAMILY_BOUNDARY_PAIRS_TESTED:
+  12
+
+EXACT_COLLAPSE_PAIRS:
+  0
+
+UNRESOLVED_BOUNDARY_PAIRS:
+  0
+
+PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
+  12
+
+SOURCE_HANDOFF_SEPARATION:
+  established_at_fixture_level
+~~~
+
+No permanent method irreducibility, superiority, deletion, merger, absorption, or redundancy claim follows.
+
+## Next
+
+Prospectively precommit and execute **SIM-CH-004** competent non-DSD Simulation baseline challenge.
