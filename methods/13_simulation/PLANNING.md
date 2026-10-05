@@ -1,6 +1,6 @@
 # DSD Simulation — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — SOURCE / INTERFACE RECOVERY COMPLETE**  
+Status: **ACTIVE INTERNAL BUILD — SIMULATION PROTOCOL v0.1 FROZEN / SIM-CH-001 NEXT**  
 Date: **2026-10-05**
 
 ## 1. Canonical development sequence
@@ -11,10 +11,10 @@ Date: **2026-10-05**
 3. ✅ source-derived constraints separated from prospective method construction
 4. ✅ planning / worklog lane
 5. ✅ Simulation Task Interface v0.1 draft
-6. ⏸ serious pre-protocol boundary attack — next
-7. ⏸ Boundary Amendment 001 if required
-8. ⏸ executable Simulation Protocol v0.1
-9. ⏸ positive constructed challenge
+6. ✅ serious pre-protocol boundary attack — 18 attacks / 12 preserved / 6 nonbreaking refinements / 0 collapse
+7. ✅ Boundary Amendment 001 — 6/6 refinements adopted
+8. ✅ executable Simulation Protocol v0.1 — G1-G18 / S1-S18
+9. ⏸ positive constructed challenge — SIM-CH-001 next
 10. ⏸ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage
 11. ⏸ direct neighboring-method boundary challenge
 12. ⏸ competent non-DSD baseline
@@ -105,7 +105,13 @@ Task Interface
 
 ~~~text
 PRE_PROTOCOL_BOUNDARY_ATTACKS:
-  0
+  18
+
+BOUNDARY_AMENDMENT_001:
+  established
+
+DEDICATED_SIMULATION_PROTOCOL:
+  established v0.1
 
 DEDICATED_SIMULATION_PROTOCOL:
   not established
@@ -134,6 +140,6 @@ SIMULATION_INTERNAL_STANDARDIZATION_STATUS:
 
 ## 7. Next
 
-Execute the serious pre-protocol boundary attack.
+Prospectively precommit and execute **SIM-CH-001** under frozen Simulation Protocol v0.1.
 
-Do not freeze an executable Simulation Protocol until the attack is scored and any required nonbreaking refinements are explicitly bound by an amendment.
+The first positive challenge must exercise both single-trajectory and declared-multiplicity cases so that deterministic execution, branching, numerical approximation, stochastic sample-path semantics, transitions, lineage handoff, and lossy readouts are tested before terminal / negative coverage.
