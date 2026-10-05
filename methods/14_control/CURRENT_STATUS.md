@@ -1,6 +1,6 @@
 # Control Current Status
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-004 64/64 PASS / NO_GAIN / CTRL-CH-005 NEXT**  
+Status: **ACTIVE INTERNAL BUILD — CTRL-CH-005 82/82 PASS / NO_GAIN / CTRL-CH-006 NEXT**  
 Date: **2026-10-06**  
 Method: **Control / DSD 제어론**  
 Canonical path ID: `14`
@@ -46,9 +46,9 @@ BINDING_OPERATION:
   C1-C18
 
 DIRECT_CONTROL_PILOTS_ATTEMPTED:
-  4
+  5
 SUCCESSFUL_DIRECT_CONTROL_PILOTS:
-  4
+  5
 POSITIVE_CONTROL_CASES:
   1
 NEGATIVE_OR_UNRESOLVED_CONTROL_CASES:
@@ -70,9 +70,9 @@ PARTIAL_OVERLAP_NOT_COLLAPSE_PAIRS:
 SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 BASELINE_CONTROL_CASES:
-  1
+  2
 NO_GAIN_CONTROL_CASES:
-  1
+  2
 REPRODUCIBILITY_CASES:
   0
 
@@ -108,7 +108,7 @@ CONTROL_ESTABLISHED may coexist with CONTROL_NO_GAIN
 
 ## Next
 
-Prospectively precommit and execute **CTRL-CH-005**, a strongest-reasonable non-DSD Control baseline challenge.
+Prospectively precommit and execute **CTRL-CH-006**, a deterministic same-project Control retrace.
 
 ## CTRL-CH-001 checkpoint
 
