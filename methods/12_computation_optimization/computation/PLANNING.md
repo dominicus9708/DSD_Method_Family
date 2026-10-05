@@ -1,7 +1,7 @@
 # DSD Computation — Planning / Validation Roadmap
 
-Status: **VALIDATION IN PROGRESS — COMP-CH-003 99/99 PASS / COMPETENT BASELINE NEXT**  
-Date: **2026-10-03**  
+Status: **VALIDATION IN PROGRESS — COMP-CH-004 64/64 PASS / NO_GAIN / STRONGEST-REASONABLE BASELINE NEXT**  
+Date: **2026-10-05**  
 Method: **Computation / DSD 계산론**  
 Legacy path ID: `12A`  
 Higher field: **VII. Computation & Selection / 계산·선택**
@@ -80,8 +80,8 @@ The target is a sound evaluation plan, not automatically a globally minimal-cost
 9. ✅ positive constructed challenge — COMP-CH-001 84/84 PASS
 10. ✅ negative / blocked / conflicting / underdetermined / out-of-scope / partial terminal coverage — COMP-CH-002 80/80 PASS
 11. ✅ direct neighboring-method boundary challenge — COMP-CH-003 99/99 PASS
-12. ⏸ competent non-DSD baseline — COMP-CH-004 next
-13. ⏸ strongest-reasonable non-DSD baseline
+12. ✅ competent non-DSD baseline — COMP-CH-004 64/64 PASS / COMPUTATION_NO_GAIN
+13. ⏸ strongest-reasonable non-DSD baseline — COMP-CH-005 next
 14. ⏸ deterministic same-project retrace
 15. ⏸ frozen-axis internal-standardization audit
 16. ⏸ external applications / independent validation later
@@ -292,10 +292,10 @@ PROTOCOL_BLOB:
   4c4fe0b0616371b7df6aff9ce6a1ff7636c49da4
 
 DIRECT_COMPUTATION_PILOTS_ATTEMPTED:
-  3
+  4
 
 SUCCESSFUL_DIRECT_COMPUTATION_PILOTS:
-  3
+  4
 
 METHOD_BOUNDARY_COMPUTATION_CASES:
   1
@@ -316,10 +316,10 @@ SOURCE_HANDOFF_SEPARATION:
   established_at_fixture_level
 
 BASELINE_COMPUTATION_CASES:
-  0
+  1
 
 NO_GAIN_COMPUTATION_CASES:
-  0
+  1
 
 REPRODUCIBILITY_CASES:
   0
@@ -348,6 +348,6 @@ SHARED_CORE_REOPEN_REQUIRED:
 
 ## 9. Next
 
-Prospectively precommit and execute COMP-CH-004, a fair competent non-DSD Computation baseline challenge.
+COMP-CH-004 completed at 64/64 PASS with equal-information access and `COMPUTATION_NO_GAIN` against `B0_GENERIC_TYPED_COMPUTATION_PLANNER`.
 
-The baseline must receive equal claim-relevant information and must permit COMPUTATION_NO_GAIN as a valid result. COMP-CH-001~003 remain immutable evidence.
+Next, prospectively precommit and execute COMP-CH-005, a strongest-reasonable non-DSD Computation baseline challenge. It must be materially stronger than B0 without importing DSD as theory, receive equal claim-relevant information, and preserve `COMPUTATION_NO_GAIN` as a valid outcome. COMP-CH-001~004 remain immutable evidence.
