@@ -1,6 +1,6 @@
 # DSD Control — Planning / Validation Roadmap
 
-Status: **ACTIVE INTERNAL BUILD — CTRL-CH-006 70/70 PASS / CTRL-AUD-001 NEXT**  
+Status: **INTERNALLY STANDARDIZED — CTRL-AUD-001 28/28 PASS / EXTERNAL VALIDATION DEFERRED**  
 Date: **2026-10-06**
 
 ## Canonical sequence
@@ -18,7 +18,7 @@ Date: **2026-10-06**
 10. ✅ competent non-DSD baseline — CTRL-CH-004 64/64 PASS / NO_GAIN
 11. ✅ strongest-reasonable non-DSD baseline — CTRL-CH-005 82/82 PASS / NO_GAIN
 12. ✅ deterministic same-project retrace — CTRL-CH-006 70/70 PASS / mismatch 0
-13. ⏸ frozen-axis internal-standardization audit — CTRL-AUD-001 next
+13. ✅ frozen-axis internal-standardization audit — CTRL-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD
 14. ⏸ external / independent validation later
 ~~~
 
@@ -62,7 +62,7 @@ INDEPENDENT_CONTROL_VALIDATION:
 INDEPENDENT_REPLICATION:
   not established
 CONTROL_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 ~~~
 
 ## Evidence path
@@ -81,6 +81,15 @@ Task Interface
 
 ## Next
 
-CTRL-CH-006 completed at 70/70 PASS with zero claim-relevant mismatch and zero post-comparison correction.
+Control internal build/standardization is closed at Protocol v0.1 after CTRL-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD.
 
-Next: prospectively precommit and execute **CTRL-AUD-001**, the frozen-axis internal-standardization audit.
+~~~text
+NEXT_FAMILY_INTERNAL_BUILD_FRONT:
+  Operation / DSD 운영론
+CONTROL_EXTERNAL_VALIDATION_PHASE:
+  deferred / separate
+INDEPENDENT_CONTROL_VALIDATION:
+  not established
+INDEPENDENT_REPLICATION:
+  not established
+~~~
