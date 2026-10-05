@@ -1,6 +1,6 @@
 # Simulation Current Status — protocol freeze checkpoint
 
-Status: **ACTIVE INTERNAL BUILD — SIM-CH-004 64/64 PASS / NO_GAIN / STRONGEST-REASONABLE BASELINE NEXT**  
+Status: **INTERNALLY STANDARDIZED — SIM-AUD-001 28/28 PASS / PROMOTE_INTERNAL_STANDARD**  
 Date: **2026-10-05**  
 Method: **Simulation / DSD 시뮬레이션론**  
 Legacy path ID: `13`  
@@ -59,10 +59,10 @@ BINDING_OPERATION:
   S1-S18
 
 DIRECT_SIMULATION_PILOTS_ATTEMPTED:
-  4
+  5
 
 SUCCESSFUL_DIRECT_SIMULATION_PILOTS:
-  4
+  5
 
 POSITIVE_SIMULATION_CASES:
   1
@@ -77,12 +77,24 @@ ALL_SEVEN_SIMULATION_TASK_TERMINALS_DIRECTLY_EXERCISED:
   yes
 
 BASELINE_SIMULATION_CASES:
-  1
+  2
 
 NO_GAIN_SIMULATION_CASES:
-  1
+  2
+
+STRONGEST_REASONABLE_BASELINE_SIMULATION:
+  established_at_constructed_evidence_level
 
 REPRODUCIBILITY_CASES:
+  1
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
   0
 
 EXTERNAL_SIMULATION_APPLICATIONS:
@@ -95,7 +107,7 @@ INDEPENDENT_REPLICATION:
   not established
 
 SIMULATION_INTERNAL_STANDARDIZATION_STATUS:
-  developing
+  established
 
 CURRENT_SIMULATION_EVIDENCE_STATUS:
   validation_in_progress
@@ -160,9 +172,19 @@ SIMULATION_EVIDENCE_BY_DEFAULT
 
 ## 4. Next canonical step
 
-Prospectively precommit and execute **SIM-CH-005**, a strongest-reasonable non-DSD Simulation baseline challenge.
+Simulation internal build/standardization is closed at Protocol v0.1.
 
-The baseline must be materially stronger than B0, must receive equal claim-relevant information, and must preserve `SIMULATION_NO_GAIN` as an allowed outcome.
+Family-wide internal-build handoff:
+
+~~~text
+NEXT_ACTIVE_METHOD:
+  Prediction / DSD 예측론
+
+SIMULATION_EXTERNAL_VALIDATION_PHASE:
+  deferred / separate
+~~~
+
+Internal standardization does not establish external predictive validity or independent replication.
 
 
 ## SIM-CH-001 checkpoint
@@ -285,4 +307,79 @@ PROTOCOL_REVISION_REQUIRED:
 
 SHARED_CORE_REOPEN_REQUIRED:
   no
+~~~
+
+
+## SIM-CH-005 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  da364f3999558c71fb705a8bd87b734c0132a8d6
+PRECOMMIT_BLOB:
+  5a980110d8e2cab5b9fbef654bc4acfe0dbce16b
+
+RESULT_COMMIT:
+  c055c0c1beeb6ff8a5cb91b60a61f06e1869ed1f
+RESULT_BLOB:
+  01c4a5b38da961a7763b0f83b1775618f11b6bdf
+
+CHECKS:
+  82/82 PASS
+
+SIMULATION_METHOD_GAIN_STATUS:
+  SIMULATION_NO_GAIN
+
+STRONGEST_REASONABLE_BASELINE_SIMULATION:
+  established_at_constructed_evidence_level
+~~~
+
+## SIM-CH-006 checkpoint
+
+~~~text
+PRECOMMIT_COMMIT:
+  cccf36124f3eab6cffeb00b5d770bc8a403cf327
+PRECOMMIT_BLOB:
+  c22a0a45ac27eb92de37ef71fe79ae6fae639c9e
+
+RETRACE_LEDGER_COMMIT:
+  655f74d1698a12722c5dd3064aff60823c49c67d
+RETRACE_LEDGER_BLOB:
+  894b8b0b4237f74e7bec2274c373385f3fc4a1a0
+
+RESULT_COMMIT:
+  1afe457facbf9c36b891186f7b20169597a135be
+RESULT_BLOB:
+  fc708095fb3d1c1f6cd500ca7445a9c99a4b8426
+
+CHECKS:
+  70/70 PASS
+
+CLAIM_RELEVANT_MISMATCHES:
+  0
+
+POST_COMPARISON_CORRECTIONS:
+  0
+
+SAME_PROJECT_DETERMINISTIC_RETRACE:
+  established_once
+~~~
+
+## SIM-AUD-001 checkpoint
+
+~~~text
+AUDIT_PRECOMMIT_COMMIT:
+  7c3a1a9058e4573d70b7c67f632bafb144abb661
+AUDIT_PRECOMMIT_BLOB:
+  9bb500a8a1655b66e40b0230b17eb1313189a41a
+
+AUDIT_RESULT_COMMIT:
+  a72cb6bb05baab5c31f5478fe67d536ad541efc4
+AUDIT_RESULT_BLOB:
+  34f40dabaafa7cea7c796a90bf3b19f8d9be79e5
+
+AUDIT_CHECKS:
+  28/28 PASS
+
+FINAL_INTERNAL_STANDARDIZATION_DECISION:
+  PROMOTE_INTERNAL_STANDARD
 ~~~
