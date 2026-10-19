@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-SEC4.3-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `2a03260813f27829762ba5375e93aa5a7b2494df` (Section 4.3 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-G0-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `ec2355a634501a534035f5cdf122469d8a0b01a8` (Section 2 G0 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Next canonical step: **post-standardization FPA / Formation F2 Section 2 primitive typing and foundation (FAS-F2-G0-001), not yet started**; internal-build queue remains empty  
+Next canonical step: **post-standardization FPA / Formation F2 Theorem 3.6 formation-trace characterization (FAS-F2-T3.6-001), not yet started**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,7 +28,40 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
 
-## 0D. Latest FPA Section 4.3 audit — 2026-10-19
+## 0E. Latest FPA Section 2 G0 audit — 2026-10-19
+
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-G0-001
+CASE_ID: FAS-F2-G0-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: fbf51249db4c36f2d9c2135cec40b843ea2696d7
+RESULT_COMMIT: ec2355a634501a534035f5cdf122469d8a0b01a8
+PYTHON_COMMIT: 0cf53f8a87a3b272014ff2a83d59ff4e3f650c0a
+JSON_COMMIT: 5b3f6e1eb6093f868d26ef41db57ab53b19f559e
+SOURCE_ITEMS: Definitions 2.1-2.4; Proposition 2.5
+PROPOSITION_2_5_MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+DEFINITIONS: INTERNALLY_COHERENT_WITH_DECLARED_CONVENTIONS
+FPA_PROCESS_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: CLARIFICATION_OPTIONAL
+SUPPLEMENTARY_COORDINATE_CHECK: 120 triples / 36 pairs
+PREVIOUS_THEOREM_AUDITS_COMPLETED: 3 (T3.3 T4.5 T4.7)
+PREVIOUS_SECTION_4_3_SOURCE_ITEMS_COMPLETED: 7
+CURRENT_SECTION_2_FOUNDATIONAL_AUDIT: completed
+NEXT: FAS-F2-T3.6-001 / NOT_STARTED
+WHOLE_PAPER_F2: NOT_COMPLETE
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+PDF_ZENODO_CHANGE: none
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+- [Source-locked Section 2 prospective precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-G0-001_PRECOMMIT.md)
+- [Section 2 formal audit result](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-G0-001_RESULT.md)
+- [Coordinate-erasure Python supplementary check](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_g0_stage_reductions.py)
+- [Deterministic result JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/g0_stage_reductions.json)
+- [Notion F2-G0 case](https://app.notion.com/p/3fe81f51e7fa81448c14ebbd7c0dc292)
+
+One general proposition was checked using ordinary coordinate-record mathematics. Metatheoretic class-operation language and distinction between arbitrary well-typed Stage-k records and actual full-model truncations are optional clarification notes; no formula is silently revised. The finite index checks are not formal-completeness evidence.
+
+## 0D. Historical FPA Section 4.3 audit — 2026-10-19
 
 ```text
 SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-SEC4.3-001
