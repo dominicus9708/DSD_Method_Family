@@ -77,3 +77,5 @@ Final verdict is PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_N
 Historical T4.7 wording-scope clarification recommendation remains unchanged. Method Family internal standardization remains 22/22. No PDF or Zenodo edits. Whole-F2 FPA remains OPEN.
 
 Next scoped audit: FAS-F2-T6.19-001, symmetry and strict-isomorphism invariance of first branching, NOT_STARTED. Start with a NEW prospective precommit and inspect reversed kind-indexed value maps and why J is arbitrary before Stage 7, but invertible at Stage 7.
+
+[Notion synchronized C6.18 FPA case](https://app.notion.com/p/3fe81f51e7fa81349f77dc0038377ba6)
