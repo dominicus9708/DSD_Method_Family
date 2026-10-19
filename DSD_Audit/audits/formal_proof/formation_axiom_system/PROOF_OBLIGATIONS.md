@@ -28,7 +28,7 @@ Order by mathematical dependency, not by page count: G0 → G1 Theorem 3.3 → G
 8. Do any downstream Property, Static Aggregation, or Dynamics claims import a stronger assertion than the audited Formation interface supplies?
 
 ## Progress and verdict policy
-Completed theorem audits: **0** under this new FPA protocol at preparation time.
-Cases screened: no new FPA mathematical theorem verdict issued.
+Completed theorem audits: **1** under FPA v0.1 — Theorem 3.3 `FAS-F2-T3.3-001`, `PROVED_IN_DECLARED_BACKGROUND` / `PASS_WITH_BOUNDARY` (2026-10-19; [result](THEOREM_AUDITS/FAS-F2-T3.3-001_RESULT.md)). All other theorem audits not yet executed.
+Cases screened: exactly one theorem-level mathematical verdict; no paper-wide F2 certificate issued.
 All previously published manuscript results and historical pre-FPA audits retain their earlier status; do not conflate them with this register.
 Do NOT give a percentage pass rate for registered but unexamined items.
