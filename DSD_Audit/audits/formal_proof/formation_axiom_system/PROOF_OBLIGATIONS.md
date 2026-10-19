@@ -1,5 +1,5 @@
 # Formation F2 — proof-obligation register / 정리별 증명 의무
-Date: 2026-10-19 · Status: **FPA in progress: Theorems 3.3 and 4.5 completed under internal, non-independent FPA; other claims NOT_REVIEWED.**
+Date: 2026-10-19 · Status: **FPA in progress: Theorems 3.3, 4.5, 4.7 internally reviewed; remaining claims NOT_REVIEWED.**
 Exact label inventory below was extracted from the **33-page SHA-256-locked supplied English PDF**, not inferred from a former draft. The manuscript uses four primitive axioms I, II, III, V and closure clauses IV, VI, VII. Labels skipped in the numbering are not missing theorems by default.
 
 ## Grouped registration / 구획별 등록
@@ -7,7 +7,7 @@ Exact label inventory below was extracted from the **33-page SHA-256-locked supp
 |---|---|---|---|
 | FAS-F2-G0, Section 2 | Definitions 2.1–2.4; Proposition 2.5 | Typed carriers, anchor/restriction domains, stage truncations and reductions, composition laws; noncircularity | NOT_REVIEWED |
 | FAS-F2-G1, Section 3 | Primitive Axioms I, II, III, V; Definitional Closure Clauses IV, VI, VII; Theorem 3.3; Definition 3.5; Theorem 3.6 | Split primitive input from derived closure, uniqueness **relative to supplied** post-Stage-VI W and T, construction and converse of primitive reduct; trace nonemptiness iff channel membership | T3.3: PASS_WITH_BOUNDARY (internal FPA); T3.6 and other G1 items: NOT_REVIEWED |
-| FAS-F2-G2, Section 4 | Countermodels 4.1–4.4; Theorems 4.5, 4.7; Proposition 4.6; Corollary 4.8; Countermodel 4.9; Lemmas 4.10, 4.13; Corollaries 4.11, 4.14; Proposition 4.12 | Check each independence witness against all *other* axioms and full typing, identity restriction and anchor inheritance; residual-clause independence distinct from primitive axiom independence; restriction nontransitivity | T4.5: PASS_WITH_BOUNDARY (internal FPA); T4.7 and other G2 claims NOT_REVIEWED |
+| FAS-F2-G2, Section 4 | Countermodels 4.1–4.4; Theorems 4.5, 4.7; Proposition 4.6; Corollary 4.8; Countermodel 4.9; Lemmas 4.10, 4.13; Corollaries 4.11, 4.14; Proposition 4.12 | Check each independence witness against all *other* axioms and full typing, identity restriction and anchor inheritance; residual-clause independence distinct from primitive axiom independence; restriction nontransitivity | T4.5: PASS_WITH_BOUNDARY; T4.7: PASS_WITH_REFINEMENT (CLARIFICATION needed); other G2 items NOT_REVIEWED |
 | FAS-F2-G3, Section 5 | Definition 5.1; Propositions 5.2, 5.4, 5.5, 5.6, 5.8, 5.9, 5.11–5.14; Corollaries 5.3, 5.7; Countermodel 5.10 | Defined-zero vs undefined vs absent channel; declared q domain vs active A*; zero padding and noninjective finite composition; explicit admissible examples | NOT_REVIEWED |
 | FAS-F2-G4, Section 6.1–6.3 | Definitions 6.1, 6.2, 6.4, 6.10; Proposition 6.3; Theorems 6.5, 6.8, 6.14; Corollaries 6.6, 6.7, 6.12; Proposition 6.11 | Strict full descriptor, preservation/reflection under maps, identity and composition, submodel preorder, strict-isomorphism inverse and equivalence properties; no upgrade of coarse output to strict equivalence | NOT_REVIEWED |
 | FAS-F2-G5, Section 6.4–6.5 | Definition 6.15, Theorems 6.16, 6.17, 6.19, 6.20, 6.23; Corollaries 6.18, 6.24–6.26; Definition 6.21; Proposition 6.22 | Common ambient comparison-tuple universe, stagewise nestedness, I3=I4, distinction of unique closure from comparison-equivariant closure, k=0 is bookkeeping, strict-class invariance, same composite without strict equivalence | NOT_REVIEWED |
@@ -28,7 +28,7 @@ Order by mathematical dependency, not by page count: G0 → G1 Theorem 3.3 → G
 8. Do any downstream Property, Static Aggregation, or Dynamics claims import a stronger assertion than the audited Formation interface supplies?
 
 ## Progress and verdict policy
-Completed theorem audits: **2** under FPA v0.1 — Theorem 3.3 `FAS-F2-T3.3-001` ([result](THEOREM_AUDITS/FAS-F2-T3.3-001_RESULT.md)) and Theorem 4.5 `FAS-F2-T4.5-001` ([result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md)); each: `PROVED_IN_DECLARED_BACKGROUND` / `PASS_WITH_BOUNDARY`, internal same-project scope only. All other theorem audits not yet executed.
-Cases screened: exactly two theorem-level mathematical verdicts; no paper-wide F2 certificate issued.
+Completed theorem audits: **3** under FPA v0.1 — Theorem 3.3 ([result](THEOREM_AUDITS/FAS-F2-T3.3-001_RESULT.md)) `PROVED_IN_DECLARED_BACKGROUND/PASS_WITH_BOUNDARY`; Theorem 4.5 ([result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md)) `PROVED_IN_DECLARED_BACKGROUND/PASS_WITH_BOUNDARY`; Theorem 4.7 ([result](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md)) `PROVED_IN_DECLARED_BACKGROUND` **under six-clause residual theory** / `PASS_WITH_REFINEMENT`, with mandatory explicit claim-scope clarification for future manuscript revision. All other F2 claims remain NOT_REVIEWED.
+Cases screened: exactly three theorem-level mathematical verdicts, one scoped expression-refinement issue; no paper-wide F2 certificate issued.
 All previously published manuscript results and historical pre-FPA audits retain their earlier status; do not conflate them with this register.
 Do NOT give a percentage pass rate for registered but unexamined items.
