@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-T4.5-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `5ef5ec99cec050e6b432bb5b6aec41722382a316` (Theorem 4.5 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-T4.7-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `fa032fa64b42ec13ae70cc57a72257ba99f24b09` (Theorem 4.7 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Next canonical step: **post-standardization FPA / Formation F2 Theorem 4.7 (six residual primitive constraints), not yet started**; internal-build queue remains empty  
+Next canonical step: **post-standardization FPA / Formation F2 Section 4.3 consequences and non-implications, not yet started**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,7 +28,36 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
 
-## 0B. Latest FPA proof-audit result — 2026-10-19
+## 0C. Latest FPA proof-audit result — 2026-10-19
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-T4.7-001
+AUDIT_CASE: FAS-F2-T4.7-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: ce1c6e303ebdd9148c80dc08127ed946100bd3e4
+PRECOMMIT_BLOB: dea17056afe9bd40db6aced2ec14ec5d57a76119
+RESULT_COMMIT: fa032fa64b42ec13ae70cc57a72257ba99f24b09
+PYTHON_COMMIT: a337926a84b867099b74ac343d9d6a1ab9c6d93a
+JSON_COMMIT: 2aa196b30dd4b307050183ab322635e91d06cfb6
+RESIDUAL_CLAUSE_COUNTERINTERPRETATIONS: 6/6
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND (residualized six-clause scope)
+DSD_AUDIT_VERDICT: PASS_WITH_REFINEMENT
+REVISION_NEED: CLARIFICATION (original “other primitive axioms” phrase)
+THEOREMS_AUDITED_UNDER_FPA: 3
+F2_FULL_PAPER_VERDICT: not_issued
+NEXT: FAS-F2-SEC4.3-001 / NOT_STARTED
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+ZENODO_CHANGE: none
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+- [Theorem 4.7 precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md)
+- [Theorem 4.7 audit result](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md)
+- [T4.7 finite verifier](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_t47_residual_clauses.py)
+- [T4.7 JSON output](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/t47_residual_clauses.json)
+- [Notion T4.7 theorem audit](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9)
+
+One ambiguity was identified: the intact parent primitive axiom cannot itself be retained while one of its conjunctive residuals is false. This is a future **section-level wording clarification**, not a countermodel to six residual-clause independence. Original PDFs/Zenodo unaffected; all prior history preserved.
+
+## 0B. Historical FPA proof-audit result — 2026-10-19 (T4.5)
 ```text
 CURRENT_SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-T4.5-001
 F2_CASE: FAS-F2-T4.5-001
