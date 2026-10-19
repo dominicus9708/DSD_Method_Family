@@ -73,6 +73,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Original source C6.12 strict map induces C_L→C_M bijection; unequal cardinalities forbid strict iso even for infinite sets. Exact file blob comparison in same runtime confirms portable GitHub Python and deterministic JSON match locally run bytes. Finite controls: equal U role-carrier count but C 1 vs2, 0 vs1, strict equal 1 vs1 and nonstrict equal 1 vs1. No arbitrary b-stage claim. Historical optional T4.7 wording recommendation remains; full F2 OPEN, original PDF/Zenodo unchanged.
 
+- [Notion synchronized F2 Corollary 6.26 FPA case](https://app.notion.com/p/3fe81f51e7fa81db9130f5fc6cc366e6)
+
 ## 0U. Latest FPA Corollary 6.25 — 2026-10-20
 
 \`\`\`text
