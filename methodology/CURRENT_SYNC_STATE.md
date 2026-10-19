@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-T6.17-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `2a98c36957260106b61abe1a0dff53bf6a6997cc` (F2 T6.17 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-C6.18-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `ac5522b18a2f157a17170c0ced0a6e62e2e6cdf0` (F2 C6.18 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-T6.17-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 9 theorem-level FPA audits + Proposition 6.11 + three corollaries (6.6/6.7/6.12) completed.
-Next canonical step: **post-standardization FPA / Formation F2 Corollary 6.18 closure-stage exclusion b≠4 (FAS-F2-C6.18-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-C6.18-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 9 theorem-level FPA audits + Proposition 6.11 + four corollaries (6.6/6.7/6.12/6.18) completed.
+Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.19 symmetry and strict-isomorphism invariance of first branching (FAS-F2-T6.19-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,6 +28,41 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+## 0O. Latest FPA Corollary 6.18 — 2026-10-19
+
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-C6.18-001
+AUDIT_CASE: FAS-F2-C6.18-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: 0ebf06c9eb674ee991f22f624a7efe357c6b94d8
+RESULT_COMMIT: ac5522b18a2f157a17170c0ced0a6e62e2e6cdf0
+PYTHON_COMMIT: 68d5d74807c76b44128432c2da48669d4114c1dd
+JSON_COMMIT: 0c8a538c95fea74e9742de8d211f1afa918035eb
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+DSD_AUDIT_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+GENERAL_COROLLARY_B_NE_4: PROVED
+ABSTRACT_NESTED_PROFILES_EXAMINED: 820
+ABSTRACT_PROFILES_I3_EQUALS_I4: 585
+ABSTRACT_ONLY_NESTED_PROFILES_B_EQUALS_4: 71 (all violate I3=I4)
+REUSED_T6_16_TYPED_FIXTURES: 8
+THEOREM_LEVEL_FPA_COMPLETED: 9
+PROPOSITION_6_11_FPA_COMPLETED: 1
+COROLLARIES_6_6_6_7_6_12_6_18_FPA_COMPLETED: 4
+NEXT: FAS-F2-T6.19-001 / NOT_STARTED
+F2_WHOLE_PAPER: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+
+- [C6.18 prospectively locked audit](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-C6.18-001_PRECOMMIT.md)
+- [C6.18 general mathematical result](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-C6.18-001_RESULT.md)
+- [C6.18 portable finite Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_c618_closure_exclusion.py)
+- [C6.18 finite result JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/c618_closure_exclusion.json)
+
+Conditional b=4 implies I3 nonempty and I4 empty, impossible by T6.17 general I3=I4. Nestedness alone is insufficient (71 abstract nested-only b4 profiles); none are admissible full Formation counterexamples under T6.17. Finite counts computed locally, portable committed Python not externally rerun. Historical T4.7 wording-scope clarification unaffected, full F2 audit OPEN.
 
 ## 0N. Latest FPA Theorem 6.17 — 2026-10-19
 
