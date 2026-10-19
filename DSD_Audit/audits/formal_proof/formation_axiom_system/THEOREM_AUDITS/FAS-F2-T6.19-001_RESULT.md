@@ -148,3 +148,5 @@ The boundaries are fixed-base full Formation descriptors, *strict* representativ
 Historical Theorem 4.7 optional claim-scope wording clarification stays open, unchanged. Neither attached source PDF nor Zenodo was edited. Method Family 22/22 internally standardized status unchanged; F2 full-manuscript FPA still OPEN.
 
 **Next prospective case:** `FAS-F2-T6.20-001` — Theorem 6.20 **Static formation closure**, NOT_STARTED.
+
+[Notion synchronized T6.19 FPA result](https://app.notion.com/p/3fe81f51e7fa810fa32afcf4a8825294)
