@@ -1,6 +1,6 @@
 # Formation Axiom System — F2 / FPA audit case
 
-**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_AND_PROPOSITION_6_11_COMPLETED  
+**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_PROPOSITION_6_11_AND_COROLLARY_6_12_COMPLETED  
 **DATE:** 2026-10-19  
 **SUBJECT_CLASS:** FOUNDATIONAL_THEORY  
 **OWNER_METHOD:** DSD Audit  
@@ -23,7 +23,7 @@ NOTION Formation case: https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296
 
 NOTION completed T3.3 audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
 LATEST: [Theorem 4.5 precommit](THEOREM_AUDITS/FAS-F2-T4.5-001_PRECOMMIT.md), [proof audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md), [finite verifier](scripts/verify_t45_countermodels.py) and [deterministic output](results/t45_axiom_independence.json). MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND; FPA: PASS_WITH_BOUNDARY; no mandatory manuscript change. NOTION: https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2
-NEXT: FAS-F2-C6.12-001 — Corollary 6.12 induced channel and finite-composite preservation, NOT_STARTED. Other F2 obligations remain open.
+NEXT: FAS-F2-T6.14-001 — Theorem 6.14 strict formation equivalence relation, NOT_STARTED. Other F2 obligations remain open.
 
 LATEST FPA AUDIT: [Theorem 4.7 precommit](THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md) and [Theorem 4.7 result](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md). Six residual clauses each have a counterinterpretation satisfying the other five: `PROVED_IN_DECLARED_BACKGROUND` under **residualized** premises, FPA `PASS_WITH_REFINEMENT`, `REVISION_NEED=CLARIFICATION`. Manuscript "other primitive axioms" needs precise rewording; it cannot include the omitted clause's parent axiom unaltered. [Python](scripts/verify_t47_residual_clauses.py) · [JSON](results/t47_residual_clauses.json). [Notion T4.7 audit](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
 
@@ -57,3 +57,6 @@ Notion synchronized T6.8 completed audit: https://app.notion.com/p/3fe81f51e7fa8
 LATEST STRICT-COMPARISON FPA (2026-10-19): [P6.11 prospective precommit](THEOREM_AUDITS/FAS-F2-P6.11-001_PRECOMMIT.md), [P6.11 mathematical audit result](THEOREM_AUDITS/FAS-F2-P6.11-001_RESULT.md), [portable finite verifier](scripts/verify_p611_strict_bijection.py), [finite check JSON](results/p611_strict_bijection.json). Both implications from source E1–E9 and F1–F6/R1–R5, including independent witness reflection and graph-derived E5, are `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE`. Three admitted source channels, 9 partial-graph candidate pairs, legal defined zero vs undefined and adversarial failures of bijectivity/reflection. A separately constructed local concise Python test passed; no claim of independent rerun of the committed code. **Six** audited theorem-level cases, **one** proposition-level P6.11 case, two separately reviewed C6.6/C6.7, Section 2 G0 and Section 4.3 seven-item group. Full F2 remains OPEN; latest next P6.11→**C6.12 / NOT_STARTED**. Historical NEXT fields are retrospective only.
 
 Notion synchronized P6.11 case: https://app.notion.com/p/3fe81f51e7fa815fb7ddee9623cfd92d
+
+
+LATEST COMPLETED COROLLARY AUDIT (2026-10-19): [C6.12 precommit](SECTION_AUDITS/FAS-F2-C6.12-001_PRECOMMIT.md), [C6.12 general mathematical proof](SECTION_AUDITS/FAS-F2-C6.12-001_RESULT.md), [portable finite checker](scripts/verify_c612_channel_composites.py), [recorded finite crosscheck](results/c612_channel_composites.json). PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE for strict-isomorphism induced channel bijection, bijection of finite subset families and J-linear finite sum transport. 32 candidate comparisons, 3 admitted channels, 8 inverse-family and 8 composite checks in independent local interface crosscheck (not all primitive full model axioms), 1 nonempty cancellation. Earlier history preserved. **CURRENT NEXT FAS-F2-T6.14-001 / NOT_STARTED**; F2 whole-paper OPEN and no external independent certification.
