@@ -1,0 +1,157 @@
+{
+  "admitted_channels_each": 2,
+  "all_checks_passed": true,
+  "audit_id": "FAS-F2-C6.24-001",
+  "closure_clauses": [
+    "IV",
+    "VI",
+    "VII"
+  ],
+  "defined_zero_not_undefined": true,
+  "empty_candidate_case": 0,
+  "equal_composites_without_domain_isomorphism": true,
+  "external_validation": false,
+  "finite_not_general_proof": true,
+  "material_incidence_degrees_L": [
+    0,
+    2
+  ],
+  "material_incidence_degrees_M": [
+    1,
+    1
+  ],
+  "negative_comparison_rows": [
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "E5": false,
+      "E6": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "E5": false,
+      "E6": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "E5": false,
+      "E6": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "E5": false,
+      "E6": false,
+      "E9": null,
+      "strict": false
+    }
+  ],
+  "nonvacuous_all_E5_fail": true,
+  "nonvacuous_all_E6_fail": true,
+  "nonvacuous_candidates": 4,
+  "positive_E5_passes": 2,
+  "positive_candidates": 4,
+  "positive_comparison_rows": [
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "E5": true,
+      "E6": true,
+      "E9": true,
+      "strict": true
+    },
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "E5": true,
+      "E6": true,
+      "E9": false,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "E5": false,
+      "E6": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "E5": false,
+      "E6": false,
+      "E9": null,
+      "strict": false
+    }
+  ],
+  "positive_strict_isomorphisms": 1,
+  "primitive_axioms": [
+    "I",
+    "II",
+    "III",
+    "V"
+  ],
+  "same_kind_domain_sizes": [
+    1,
+    1
+  ],
+  "same_total_assignment_edges": 2,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a"
+}
