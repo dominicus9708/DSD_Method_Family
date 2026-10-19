@@ -1,7 +1,7 @@
 # Formation Axiom System — F2 / FPA audit case
 
-**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_6_16_6_17_6_19_PROPOSITION_6_11_AND_COROLLARIES_6_6_6_7_6_12_6_18_COMPLETED  
-**DATE:** 2026-10-19  
+**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_6_16_6_17_6_19_6_20_PROPOSITION_6_11_AND_COROLLARIES_6_6_6_7_6_12_6_18_COMPLETED  
+**DATE:** 2026-10-20  
 **SUBJECT_CLASS:** FOUNDATIONAL_THEORY  
 **OWNER_METHOD:** DSD Audit  
 **PROTOCOL:** [FPA v0.1](../../../protocols/mathematics/FORMAL_PROOF_AUDIT_v0.1.md)  
@@ -23,7 +23,7 @@ NOTION Formation case: https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296
 
 NOTION completed T3.3 audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
 LATEST: [Theorem 4.5 precommit](THEOREM_AUDITS/FAS-F2-T4.5-001_PRECOMMIT.md), [proof audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md), [finite verifier](scripts/verify_t45_countermodels.py) and [deterministic output](results/t45_axiom_independence.json). MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND; FPA: PASS_WITH_BOUNDARY; no mandatory manuscript change. NOTION: https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2
-NEXT: FAS-F2-T6.20-001 — Theorem 6.20 static formation closure, NOT_STARTED. Other F2 obligations remain open.
+NEXT: FAS-F2-P6.22-001 — Definition 6.21 and Proposition 6.22 composite-level coincidence without strict equivalence, NOT_STARTED. Other F2 obligations remain open.
 
 LATEST FPA AUDIT: [Theorem 4.7 precommit](THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md) and [Theorem 4.7 result](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md). Six residual clauses each have a counterinterpretation satisfying the other five: `PROVED_IN_DECLARED_BACKGROUND` under **residualized** premises, FPA `PASS_WITH_REFINEMENT`, `REVISION_NEED=CLARIFICATION`. Manuscript "other primitive axioms" needs precise rewording; it cannot include the omitted clause's parent axiom unaltered. [Python](scripts/verify_t47_residual_clauses.py) · [JSON](results/t47_residual_clauses.json). [Notion T4.7 audit](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
 
@@ -87,3 +87,6 @@ Notion synchronized C6.18 full source-bound audit: https://app.notion.com/p/3fe8
 LATEST FPA THEOREM 6.19 (2026-10-19): [source-locked precommit](THEOREM_AUDITS/FAS-F2-T6.19-001_PRECOMMIT.md), [general mathematical audit](THEOREM_AUDITS/FAS-F2-T6.19-001_RESULT.md), [locally executed Python](scripts/verify_t619_symmetry.py), [result JSON](results/t619_symmetry.json). `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE`. All k=0..7 stagewise nonemptiness symmetric; defined b symmetric; strict isomorphic representative replacement preserves stage nonemptiness and b, via conjugation of full maps. For k<7 J arbitrary and inverse comparison may use **zero map**, at k=7 genuine J^{-1}; correct kind-indexed pointed inverses. Finite selected typed toy: 9 cases, 72 bidirectional stage indicators, 72 representative invariant indicators, 358 explicit inverse-stage witnesses, 3 pre7 nonbijective J examples; not universal proof. **Ten** theorem-level FPA completed, 1 proposition, 4 corollaries; whole Formation F2 OPEN and no external independent certification. **LATEST NEXT T6.20 / NOT_STARTED**; historic NEXT fields are retrospective only.
 
 Notion synchronized Theorem 6.19 FPA case: https://app.notion.com/p/3fe81f51e7fa810fa32afcf4a8825294
+
+
+LATEST FPA SYNTHESIS CASE T6.20 (2026-10-20): [prospective precommit](THEOREM_AUDITS/FAS-F2-T6.20-001_PRECOMMIT.md), [five-part mathematical proof audit](THEOREM_AUDITS/FAS-F2-T6.20-001_RESULT.md), [actually executed portable Python](scripts/verify_t620_static_closure.py), [JSON](results/t620_static_closure.json). `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE`. Original Theorem 6.20 §6.4 p.23 assembles prior source results T3.3, P2.5/T3.6, T6.17, T6.5/C6.6/P6.11/T6.14 and T6.16/C6.18/T6.19, preserving **relative uniqueness W,T** and **Role/W,T as supplied data**. Typed finite integration checker: 72 candidate channel-trace iff, 120 stage reduction triples, 2 admitted channels each with 2 traces, 4 J-linear finite composites; finite evidence not universal proof. **11 theorem-level**, **1 proposition P6.11**, **4 corollaries C6.6/6.7/6.12/6.18** audited; full F2 manuscript still OPEN and external independent review not established. **CURRENT NEXT FAS-F2-P6.22-001 / NOT_STARTED**. Earlier historic NEXT labels are provenance only.
