@@ -1,6 +1,6 @@
 # Formation Axiom System — F2 / FPA audit case
 
-**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_PROPOSITION_6_11_AND_COROLLARIES_6_6_6_7_6_12_COMPLETED  
+**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_6_16_PROPOSITION_6_11_AND_COROLLARIES_6_6_6_7_6_12_COMPLETED  
 **DATE:** 2026-10-19  
 **SUBJECT_CLASS:** FOUNDATIONAL_THEORY  
 **OWNER_METHOD:** DSD Audit  
@@ -23,7 +23,7 @@ NOTION Formation case: https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296
 
 NOTION completed T3.3 audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
 LATEST: [Theorem 4.5 precommit](THEOREM_AUDITS/FAS-F2-T4.5-001_PRECOMMIT.md), [proof audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md), [finite verifier](scripts/verify_t45_countermodels.py) and [deterministic output](results/t45_axiom_independence.json). MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND; FPA: PASS_WITH_BOUNDARY; no mandatory manuscript change. NOTION: https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2
-NEXT: FAS-F2-T6.16-001 — Theorem 6.16 first-branching obstruction, NOT_STARTED. Other F2 obligations remain open.
+NEXT: FAS-F2-T6.17-001 — Theorem 6.17 staged determinacy and nonbranching of definitional closure, NOT_STARTED. Other F2 obligations remain open.
 
 LATEST FPA AUDIT: [Theorem 4.7 precommit](THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md) and [Theorem 4.7 result](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md). Six residual clauses each have a counterinterpretation satisfying the other five: `PROVED_IN_DECLARED_BACKGROUND` under **residualized** premises, FPA `PASS_WITH_REFINEMENT`, `REVISION_NEED=CLARIFICATION`. Manuscript "other primitive axioms" needs precise rewording; it cannot include the omitted clause's parent axiom unaltered. [Python](scripts/verify_t47_residual_clauses.py) · [JSON](results/t47_residual_clauses.json). [Notion T4.7 audit](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
 
@@ -67,3 +67,6 @@ Notion synchronized C6.12 result: https://app.notion.com/p/3fe81f51e7fa81db92b8d
 LATEST STRICT EQUIVALENCE THEOREM FPA (2026-10-19): [T6.14 source-locked precommit](THEOREM_AUDITS/FAS-F2-T6.14-001_PRECOMMIT.md), [T6.14 mathematical audit](THEOREM_AUDITS/FAS-F2-T6.14-001_RESULT.md), [portable selected finite checker](scripts/verify_t614_strict_equivalence.py), [finite JSON](results/t614_strict_equivalence.json). Mathematical `PROVED_IN_DECLARED_BACKGROUND`, FPA `PASS_WITH_BOUNDARY`, revision `NONE`. Reflexivity/symmetry/transitivity checked at all E1–E9 levels. **Important:** inverse value maps must be indexed by target quantity kind, and E7 negligible-status/norm/threshold, E9 channel/linear term transport cannot be suppressed. Three model finite experiment: 3 identities, 15 E1–E9 checks, 6 inverse identities, 16 finite channel subsets, 32 composite equalities, selected invalid-premise cases. Selected finite checks supplement general proof; committed code not independently externally rerun. Seven audited theorem-level cases total. F2 paper-wide remains OPEN; **latest NEXT FAS-F2-T6.16-001 / NOT_STARTED**. Older NEXT fields are history only.
 
 Notion synchronized F2 Theorem 6.14 source-bound audit: https://app.notion.com/p/3fe81f51e7fa81219ecaebac9522c311
+
+
+LATEST FPA THEOREM 6.16 (2026-10-19): [source-locked precommit](THEOREM_AUDITS/FAS-F2-T6.16-001_PRECOMMIT.md), [mathematical result](THEOREM_AUDITS/FAS-F2-T6.16-001_RESULT.md), [executed reproducible Python verifier](scripts/verify_t616_branching.py), [deterministic JSON](results/t616_first_branching.json). `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE` for I_(k+1)⊆I_k, I7 nonempty iff strict formation isomorphism, and conditional least branching index b∈{0,...,7}. Local in-session source-typed finite exhaustive ambient comparison tests: 8 cases / 56 staged inclusions; indices 0,1,2,3,5,6,7 and strict b undefined; even strict-isomorphic pair may have early failing *individual candidates*. J is arbitrary until Stage 7. Stage 4 nonbranching I3=I4 observed only on fixtures, its general theorem T6.17 NOT_STARTED. No whole-paper F2 validation or external independent certification. **LATEST NEXT FAS-F2-T6.17-001 / NOT_STARTED**, historical NEXT entries remain retrospective.
