@@ -1,0 +1,22 @@
+{
+  "admitted_channels_each_model": 2,
+  "all_checks_passed": true,
+  "audit_id": "FAS-F2-T6.17-001",
+  "candidate_membership_equivalences": 72,
+  "defined_zero_channel_present": true,
+  "finite_family_transport_checks": 4,
+  "finite_not_universal_proof": true,
+  "incomplete_stage3_probe_rejected": true,
+  "independent_external_validation": false,
+  "nonempty_zero_sum_families": 1,
+  "pre7_J_not_required_linear": true,
+  "role_requires_independent_supply": true,
+  "selected_full_models": 2,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "stage3_bijection_combinations_tested": 72,
+  "stage3_stage4_equivalence_on_selected_combinations": true,
+  "stage3_survivors_all_stage4": 1,
+  "term_map_requires_independent_supply": true,
+  "typed_candidate_channels_each_model": 72,
+  "undefined_assignment_not_zero": true
+}
