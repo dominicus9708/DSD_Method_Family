@@ -1,0 +1,338 @@
+{
+  "all_checks_passed": true,
+  "all_negative_candidates_E1_to_E7_pass": true,
+  "audit_id": "FAS-F2-C6.25-001",
+  "candidate_trace_equivalences": 16,
+  "closure_clauses_checked": [
+    "IV",
+    "VI",
+    "VII"
+  ],
+  "defined_zero_distinguished_from_undefined": true,
+  "empty_candidate_control": 0,
+  "finite_not_universal_proof": true,
+  "full_family_composite_L": 0,
+  "full_family_composite_M": 0,
+  "independent_external_validation": false,
+  "kinds_each": 2,
+  "negative_E8_preserving_candidates": 0,
+  "negative_admitted_channels_each": 4,
+  "negative_role_edges_each": 4,
+  "negative_rows": [
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    }
+  ],
+  "nonvacuous_role_candidate_bijections": 8,
+  "positive_E8_preserving_candidates": 4,
+  "positive_candidates": 8,
+  "positive_rows": [
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "E1_to_E7": true,
+      "E8": true,
+      "E9": true,
+      "strict": true
+    },
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "E1_to_E7": true,
+      "E8": true,
+      "E9": true,
+      "strict": true
+    },
+    {
+      "material_map": {
+        "a": "a",
+        "b": "b"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "lam",
+        "mu": "mu"
+      },
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "E1_to_E7": true,
+      "E8": true,
+      "E9": false,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "strict": false
+    },
+    {
+      "material_map": {
+        "a": "b",
+        "b": "a"
+      },
+      "kind_map": {
+        "lam": "mu",
+        "mu": "lam"
+      },
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "E1_to_E7": true,
+      "E8": true,
+      "E9": false,
+      "strict": false
+    }
+  ],
+  "positive_strict_isomorphisms": 2,
+  "primitive_axioms_checked": [
+    "I",
+    "II",
+    "III",
+    "V"
+  ],
+  "quantity_graph_edges_each": 4,
+  "role_frequency_each_model": [
+    2,
+    2
+  ],
+  "role_incidence_distinct_roles_per_material_L": [
+    1,
+    1
+  ],
+  "role_incidence_distinct_roles_per_material_M": [
+    2,
+    2
+  ],
+  "roles_each": 2,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a"
+}
