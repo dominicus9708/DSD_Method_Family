@@ -74,6 +74,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Strict Definition 6.10 requires E8 relation iff on all typed role tuples. The finite negative test isolates nonvacuous E8 failure: identical carrier/kind/role cardinalities and four channels each, but role fiber-degree [1,1] versus [2,2] cannot be typed-isomorphic. Eight candidate failures and positive/vacuous controls separated. Source PDF and Zenodo unchanged; full-paper external FPA OPEN. Historical T4.7 optional wording clarification unaffected.
 
+- [Notion synchronized C6.25 FPA case](https://app.notion.com/p/3fe81f51e7fa81f7a548fd06e761453f)
+
 ## 0T. Latest FPA Corollary 6.24 — 2026-10-20
 
 ```text
