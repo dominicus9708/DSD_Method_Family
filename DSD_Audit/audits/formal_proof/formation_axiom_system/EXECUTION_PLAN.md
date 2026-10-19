@@ -1,5 +1,5 @@
 # Formation F2 — execution plan and checkpoints
-Status: IN_PROGRESS — three named theorem audits plus seven source items of Section 4.3 internally audited; whole Formation F2 remains not complete. Date: 2026-10-19.
+Status: IN_PROGRESS — three named theorem audits, seven Section 4.3 items and Section 2 G0 foundation internally audited; whole Formation F2 remains not complete. Date: 2026-10-19.
 
 ## Initial work unit FAS-F2-T3.3-001
 1. Lock Theorem 3.3 exact statement and its proof in the supplied 33-page source (Section 3, PDF page 8; page number must be verified against the source artifact).
@@ -56,4 +56,12 @@ Publication policy: record incremental audits only in method-family GitHub/Notio
 - [Executed same-project finite checker](scripts/verify_sec43.py), commit `23aac767ca055965c89f50cb781e46ad6e540c38`, and [JSON](results/sec43_witnesses.json). Two explicit finite witness constructions (4.9 admissible but not describable; 4.12 nontransitive relation with nonempty admitted-channel kernel).
 - [Notion §4.3 result](https://app.notion.com/p/3fe81f51e7fa81c88b4dfc5f7e936d7d).
 - No actual original manuscript or Zenodo changes; Theorem 4.7's previous `PASS_WITH_REFINEMENT` remains a separate advisory.
-- **STOP.** Next proposed bounded audit `FAS-F2-G0-001`: Section 2 typed signatures, set/class status, primitive/derived boundaries and Proposition 2.5. Prospectively precommit before any verdict. Alternatively execute outstanding Theorem 3.6 after dependency audit. Neither has started. No overall F2 PASS.
+- **HISTORICAL STOP** after Section 4.3: the next G0 case was then not started, but is now completed (see below). Theorem 3.6 remains not started; no overall F2 PASS.
+
+
+## Checkpoint — FAS-F2-G0-001 (2026-10-19)
+- [Prospective precommit](SECTION_AUDITS/FAS-F2-G0-001_PRECOMMIT.md), commit `fbf51249db4c36f2d9c2135cec40b843ea2696d7`.
+- [Section 2 source-bound audit](SECTION_AUDITS/FAS-F2-G0-001_RESULT.md), commit `ec2355a634501a534035f5cdf122469d8a0b01a8`: Definitions 2.1–2.4 internally coherent within typed ZFC background; Proposition 2.5 general coordinate-erasure law `PROVED_IN_DECLARED_BACKGROUND`; FPA `PASS_WITH_BOUNDARY`. Two optional clarifications only: `π` class-map language where `F_k` not a set, and arbitrary typed Stage-k record vs actual full-model reduction.
+- [Stage-reduction supplementary Python](scripts/verify_g0_stage_reductions.py) commit `0cf53f8a87a3b272014ff2a83d59ff4e3f650c0a`, and [deterministic JSON](results/g0_stage_reductions.json) commit `5b3f6e1eb6093f868d26ef41db57ab53b19f559e`: 120 nondecreasing triples, 36 pairs, with no assertion failures in an in-session coordinate model. General proof is independent of the finite smoke test.
+- [Notion G0 case](https://app.notion.com/p/3fe81f51e7fa81448c14ebbd7c0dc292).
+- **STOP.** Next logically dependent case `FAS-F2-T3.6-001` on Definition 3.5 and Theorem 3.6 Formation-trace channel characterization, **NOT STARTED**. New prospective precommit required. Whole paper F2 verdict remains OPEN; prior T4.7 and Countermodel 4.9 optional clarification advice preserved, original manuscript and Zenodo not altered.
