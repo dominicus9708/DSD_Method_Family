@@ -35,3 +35,5 @@ LATEST FOUNDATION AUDIT (2026-10-19): [Section 2 prospective precommit](SECTION_
 
 
 LATEST COMPLETED THEOREM AUDIT (2026-10-19): [Theorem 3.6 precommit](THEOREM_AUDITS/FAS-F2-T3.6-001_PRECOMMIT.md), [Theorem 3.6 proof audit result](THEOREM_AUDITS/FAS-F2-T3.6-001_RESULT.md), [reproducible Python](scripts/verify_t36_formation_traces.py) and [deterministic JSON](results/t36_trace_witnesses.json). Mathematical verdict PROVED_IN_DECLARED_BACKGROUND; FPA PASS_WITH_BOUNDARY; revision NONE. 8/8 finite fixtures, 21 typed candidate equivalences, 3 singleton-composite checks. Full paper remains OPEN. External replication remains unestablished. NEXT FAS-F2-T6.5-001 / NOT_STARTED.
+
+Notion T3.6 completed audit: https://app.notion.com/p/3fe81f51e7fa81c98284ca75776ab8f9
