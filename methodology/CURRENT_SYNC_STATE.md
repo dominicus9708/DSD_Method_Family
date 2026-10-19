@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-T6.16-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `1206a009208695f9f7a45a7b04d3999eca7bd81c` (F2 T6.16 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-T6.17-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `2a98c36957260106b61abe1a0dff53bf6a6997cc` (F2 T6.17 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-T6.16-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 8 theorem-level FPA audits + Proposition 6.11 + three corollaries (6.6/6.7/6.12) completed.
-Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.17 staged determinacy and nonbranching of definitional closure (FAS-F2-T6.17-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-T6.17-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 9 theorem-level FPA audits + Proposition 6.11 + three corollaries (6.6/6.7/6.12) completed.
+Next canonical step: **post-standardization FPA / Formation F2 Corollary 6.18 closure-stage exclusion b≠4 (FAS-F2-C6.18-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,6 +28,42 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+## 0N. Latest FPA Theorem 6.17 — 2026-10-19
+
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-T6.17-001
+AUDIT_CASE: FAS-F2-T6.17-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: e3893b65d5783e160f24a50cd3484a513f81de00
+RESULT_COMMIT: 2a98c36957260106b61abe1a0dff53bf6a6997cc
+EXECUTED_PYTHON_COMMIT: 810994061f9ef17f432cbd3dd4d20dfa7dd978cf
+FINITE_JSON_COMMIT: 5a123ade1a74e39eb6e5ec64b5ab9292fb0dc8de
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+GENERAL_I3_EQUALS_I4: PROVED
+FINITE_CARRIER_EXPR_CFG_BIJECTIONS: 72
+FINITE_STAGE3_SURVIVORS: 1
+FINITE_CANDIDATE_CHANNEL_EQUIVALENCES: 72
+FINITE_ADMITTED_CHANNELS_EACH: 2
+FINITE_FAMILY_TRANSPORT_CHECKS: 4
+THEOREM_LEVEL_FPA_COMPLETED: 9
+PROPOSITION_6_11_FPA_COMPLETED: 1
+COROLLARIES_6_6_6_7_6_12_FPA_COMPLETED: 3
+NEXT: FAS-F2-C6.18-001 / NOT_STARTED
+F2_WHOLE_PAPER: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+
+- [T6.17 source-locked precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T6.17-001_PRECOMMIT.md)
+- [T6.17 full proof-audit result](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T6.17-001_RESULT.md)
+- [T6.17 executed Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_t617_closure_nonbranching.py)
+- [T6.17 deterministic finite JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/t617_closure_nonbranching.json)
+
+Theorem 6.17 general proof now establishes I3=I4 for full fixed-base Formation models by primitive-witness back/forth, with Role/W/T supplied independently for later unique closures. Not a proof of the *still unreviewed* Corollary 6.18 independent case. Source PDF/Zenodo unchanged. Historic T4.7 wording-scope clarification preserved.
 
 ## 0M. Latest FPA Theorem 6.16 — 2026-10-19
 
