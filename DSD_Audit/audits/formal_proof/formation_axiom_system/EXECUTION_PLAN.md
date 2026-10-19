@@ -1,5 +1,5 @@
 # Formation F2 — execution plan and checkpoints
-Status: IN_PROGRESS — Theorems 3.3, 4.5, 4.7 internally audited; whole Formation F2 remains not complete. Date: 2026-10-19.
+Status: IN_PROGRESS — three named theorem audits plus seven source items of Section 4.3 internally audited; whole Formation F2 remains not complete. Date: 2026-10-19.
 
 ## Initial work unit FAS-F2-T3.3-001
 1. Lock Theorem 3.3 exact statement and its proof in the supplied 33-page source (Section 3, PDF page 8; page number must be verified against the source artifact).
@@ -46,5 +46,14 @@ Publication policy: record incremental audits only in method-family GitHub/Notio
 - Exact wording concern: Theorem 4.7's “other primitive axioms” cannot retain its **whole containing parent axiom** while falsifying one clause. Source should say “other five residual constraints” and separately note unaffected whole axioms; do not silently alter source.
 - [Finite reproduction Python](scripts/verify_t47_residual_clauses.py) / [deterministic JSON](results/t47_residual_clauses.json); non-independent bounded evidence. Local same-fixture implementation executed 6/6.
 - [Notion theorem record](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
-- **STOP. NEXT NOT_STARTED: `FAS-F2-SEC4.3-001`** — Corollary 4.8 / Countermodel 4.9 / Lemma 4.10 and subsequent Section 4.3 implications, exact grouping to be locked before review.
+- **HISTORICAL STOP before §4.3:** `FAS-F2-SEC4.3-001` was then NOT_STARTED; it has now been executed, see newest checkpoint below.
 - No paper/Zenodo modification; no manuscript-wide F2 verdict; 22/22 method-family internal-standardization unchanged.
+
+
+## Checkpoint — FAS-F2-SEC4.3-001 (2026-10-19)
+- [Prospective precommit](SECTION_AUDITS/FAS-F2-SEC4.3-001_PRECOMMIT.md) commit `dae15972d8cb3d800bdef4a9f3bcc7d4acfe97b8`.
+- [Seven-item §4.3 mathematical audit](SECTION_AUDITS/FAS-F2-SEC4.3-001_RESULT.md) commit `2a03260813f27829762ba5375e93aa5a7b2494df`: Cor.4.8, Countermodel4.9, Lemma4.10, Cor.4.11, Prop.4.12, Lemma4.13, Cor.4.14. `MATHEMATICAL_VERDICT=PROVED_IN_DECLARED_BACKGROUND` for these scoped claims; FPA `PASS_WITH_BOUNDARY`, optional 4.9 explanatory clarification.
+- [Executed same-project finite checker](scripts/verify_sec43.py), commit `23aac767ca055965c89f50cb781e46ad6e540c38`, and [JSON](results/sec43_witnesses.json). Two explicit finite witness constructions (4.9 admissible but not describable; 4.12 nontransitive relation with nonempty admitted-channel kernel).
+- [Notion §4.3 result](https://app.notion.com/p/3fe81f51e7fa81c88b4dfc5f7e936d7d).
+- No actual original manuscript or Zenodo changes; Theorem 4.7's previous `PASS_WITH_REFINEMENT` remains a separate advisory.
+- **STOP.** Next proposed bounded audit `FAS-F2-G0-001`: Section 2 typed signatures, set/class status, primitive/derived boundaries and Proposition 2.5. Prospectively precommit before any verdict. Alternatively execute outstanding Theorem 3.6 after dependency audit. Neither has started. No overall F2 PASS.
