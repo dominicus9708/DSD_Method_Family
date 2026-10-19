@@ -65,6 +65,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Theorem 6.17 general proof now establishes I3=I4 for full fixed-base Formation models by primitive-witness back/forth, with Role/W/T supplied independently for later unique closures. Not a proof of the *still unreviewed* Corollary 6.18 independent case. Source PDF/Zenodo unchanged. Historic T4.7 wording-scope clarification preserved.
 
+- [Notion synchronized F2 Theorem 6.17 proof audit](https://app.notion.com/p/3fe81f51e7fa81c0a65dcb1005d56f71)
+
 ## 0M. Latest FPA Theorem 6.16 — 2026-10-19
 
 ```text
