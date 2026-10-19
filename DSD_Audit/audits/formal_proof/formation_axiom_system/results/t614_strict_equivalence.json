@@ -1,0 +1,26 @@
+{
+  "case_id": "FAS-F2-T6.14-001",
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "selected_core_models": 3,
+  "core_closure_fixture_checks_passed": true,
+  "admitted_channels_per_model": 4,
+  "reflexivity_identities": 3,
+  "e1_e9_checked_maps": 15,
+  "inverse_strict_maps": 3,
+  "left_right_inverse_composites": 6,
+  "transitivity_composites": 1,
+  "finite_channel_subsets": 16,
+  "finite_composite_equalities": 32,
+  "nontrivial_indexed_value_inverse": true,
+  "nontrivial_J_composite": "-6",
+  "zero_preservation_invalid_premise_detected": true,
+  "other_invalid_premise_probes": [
+    "configuration_reflection",
+    "defined_zero_removed",
+    "negligible_size",
+    "anchored_support"
+  ],
+  "finite_checks_not_general_proof": true,
+  "independent_external_verification": false,
+  "all_checks_passed": true
+}
