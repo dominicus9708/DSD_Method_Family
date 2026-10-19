@@ -2,12 +2,13 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-G0-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `ec2355a634501a534035f5cdf122469d8a0b01a8` (Section 2 G0 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-T3.6-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `e283f01cd8ca57c90a6cfdd0a7dbf4b3d9342f34` (F2 T3.6 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Next canonical step: **post-standardization FPA / Formation F2 Theorem 3.6 formation-trace characterization (FAS-F2-T3.6-001), not yet started**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-T3.6-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 4 theorem-level FPA audits completed.
+Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.5 identity and composition (FAS-F2-T6.5-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -27,6 +28,36 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+## 0F. Latest completed FPA Theorem 3.6 — 2026-10-19
+
+\`\`\`text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-T3.6-001
+AUDIT_CASE: FAS-F2-T3.6-001
+SOURCE_PDF_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: ababf3bd42bd567b731d43d0129c1f04834822f6
+RESULT_COMMIT: e283f01cd8ca57c90a6cfdd0a7dbf4b3d9342f34
+PYTHON_COMMIT: 0e66f49200766fe9f924c95a89bb2e4aa1560c7b
+JSON_COMMIT: 6a6ccd89fd38485bb0554b5c2c40797f8e3e8325
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+DSD_AUDIT_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+FINITE_WITNESS_CASES: 8/8 PASS
+CANDIDATE_EQUIVALENCES: 21
+SINGLETON_COMPOSITES: 3
+THEOREM_LEVEL_FPA_AUDITS_COMPLETED: 4
+NEXT: FAS-F2-T6.5-001 / NOT_STARTED
+WHOLE_PAPER_F2: NOT_COMPLETE
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+PUBLIC_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+\`\`\`
+- [T3.6 frozen precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T3.6-001_PRECOMMIT.md)
+- [T3.6 audit result](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T3.6-001_RESULT.md)
+- [T3.6 finite witness verifier](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_t36_formation_traces.py)
+- [T3.6 finite witness JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/t36_trace_witnesses.json)
+
+Scope-limited internal proof audit of trace nonemptiness/accepted-channel equivalence. Theorem 4.7 historical wording refinement remains open as written. Not a paper-wide theorem certificate or external replication.
 
 ## 0E. Latest FPA Section 2 G0 audit — 2026-10-19
 
