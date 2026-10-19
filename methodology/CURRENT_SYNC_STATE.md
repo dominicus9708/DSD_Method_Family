@@ -62,6 +62,8 @@ METHOD_FAMILY_STANDARDIZATION: 22/22 unchanged
 
 Theorem 6.8: all three on-image embedding consequences are proved relative to the source background; a forward map without independent witness reflection does NOT satisfy the embedding hypothesis. General proof and finite examples are kept separate. No whole-paper F2 verdict or independent external validation.
 
+- [Notion T6.8 source-bound audit](https://app.notion.com/p/3fe81f51e7fa812f83c3c7cc3bd5266d)
+
 ## 0H. Latest FPA Section 6.2 Corollaries 6.6 / 6.7 — 2026-10-19
 
 ```text
