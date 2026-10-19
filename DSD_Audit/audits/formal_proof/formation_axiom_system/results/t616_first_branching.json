@@ -1,0 +1,144 @@
+{
+  "all_56_stage_inclusions_checked": true,
+  "all_8_final_nonempty_equivalences_checked": true,
+  "all_checks_passed": true,
+  "audit_id": "FAS-F2-T6.16-001",
+  "expected_first_branch": {
+    "admission_stage1": 1,
+    "anchor_stage0": 0,
+    "qgraph_stage5": 5,
+    "realization_stage3": 3,
+    "restriction_stage2": 2,
+    "role_stage6": 6,
+    "strict_iso": null,
+    "term_space_stage7": 7
+  },
+  "finite_checks_not_general_proof": true,
+  "full_model_exhaustiveness_not_claimed": true,
+  "independent_external_validation": false,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "stage4_equals_stage3_observed_in_selected_legal_models": true,
+  "strict_pair_contains_bad_individual_tuple_but_still_compatible": true,
+  "typed_selected_cases": {
+    "admission_stage1": {
+      "ambient_count": 8,
+      "b": 1,
+      "bad_early_candidates_in_success_pair": 0,
+      "stage_counts": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "anchor_stage0": {
+      "ambient_count": 8,
+      "b": 0,
+      "bad_early_candidates_in_success_pair": 0,
+      "stage_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "qgraph_stage5": {
+      "ambient_count": 8,
+      "b": 5,
+      "bad_early_candidates_in_success_pair": 0,
+      "stage_counts": [
+        8,
+        8,
+        8,
+        4,
+        4,
+        0,
+        0,
+        0
+      ]
+    },
+    "realization_stage3": {
+      "ambient_count": 8,
+      "b": 3,
+      "bad_early_candidates_in_success_pair": 0,
+      "stage_counts": [
+        8,
+        8,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "restriction_stage2": {
+      "ambient_count": 8,
+      "b": 2,
+      "bad_early_candidates_in_success_pair": 0,
+      "stage_counts": [
+        8,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "role_stage6": {
+      "ambient_count": 8,
+      "b": 6,
+      "bad_early_candidates_in_success_pair": 0,
+      "stage_counts": [
+        8,
+        8,
+        8,
+        4,
+        4,
+        4,
+        0,
+        0
+      ]
+    },
+    "strict_iso": {
+      "ambient_count": 8,
+      "b": null,
+      "bad_early_candidates_in_success_pair": 7,
+      "stage_counts": [
+        8,
+        8,
+        8,
+        4,
+        4,
+        4,
+        4,
+        1
+      ]
+    },
+    "term_space_stage7": {
+      "ambient_count": 32,
+      "b": 7,
+      "bad_early_candidates_in_success_pair": 0,
+      "stage_counts": [
+        32,
+        32,
+        32,
+        16,
+        16,
+        16,
+        16,
+        0
+      ]
+    }
+  }
+}
