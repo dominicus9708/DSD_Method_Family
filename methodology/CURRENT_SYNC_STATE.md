@@ -64,6 +64,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Conditional b=4 implies I3 nonempty and I4 empty, impossible by T6.17 general I3=I4. Nestedness alone is insufficient (71 abstract nested-only b4 profiles); none are admissible full Formation counterexamples under T6.17. Finite counts computed locally, portable committed Python not externally rerun. Historical T4.7 wording-scope clarification unaffected, full F2 audit OPEN.
 
+- [Notion synchronized C6.18 FPA case](https://app.notion.com/p/3fe81f51e7fa81349f77dc0038377ba6)
+
 ## 0N. Latest FPA Theorem 6.17 — 2026-10-19
 
 ```text
