@@ -1,0 +1,34 @@
+{
+  "admitted_channels": 2,
+  "all_checks_passed": true,
+  "candidates_trace_checked": 72,
+  "case": "FAS-F2-T6.20-001",
+  "coherent_reduction_index_triples": 120,
+  "core_count": 1,
+  "defined_zero_assignment_distinct_from_undefined": true,
+  "derived_clauses": [
+    "IV",
+    "VI",
+    "VII"
+  ],
+  "duplicate_same_input_closure_equal": true,
+  "empty_and_cancellation_composites": true,
+  "external_independent_verification": false,
+  "finite_checks_are_not_universal_proof": true,
+  "independent_T_changes_stage7": true,
+  "independent_role_changes_stage6": true,
+  "nonadmitted_candidates_without_T": true,
+  "primitive_axioms_checked": [
+    "I",
+    "II",
+    "III",
+    "V"
+  ],
+  "source_previous_theorems_not_reproved_by_this_test": true,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "strict_identity_and_term_scaling_composites": 4,
+  "trace_sizes_for_admitted_channels": [
+    2,
+    2
+  ]
+}
