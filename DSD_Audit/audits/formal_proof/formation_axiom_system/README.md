@@ -60,3 +60,5 @@ Notion synchronized P6.11 case: https://app.notion.com/p/3fe81f51e7fa815fb7ddee9
 
 
 LATEST COMPLETED COROLLARY AUDIT (2026-10-19): [C6.12 precommit](SECTION_AUDITS/FAS-F2-C6.12-001_PRECOMMIT.md), [C6.12 general mathematical proof](SECTION_AUDITS/FAS-F2-C6.12-001_RESULT.md), [portable finite checker](scripts/verify_c612_channel_composites.py), [recorded finite crosscheck](results/c612_channel_composites.json). PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE for strict-isomorphism induced channel bijection, bijection of finite subset families and J-linear finite sum transport. 32 candidate comparisons, 3 admitted channels, 8 inverse-family and 8 composite checks in independent local interface crosscheck (not all primitive full model axioms), 1 nonempty cancellation. Earlier history preserved. **CURRENT NEXT FAS-F2-T6.14-001 / NOT_STARTED**; F2 whole-paper OPEN and no external independent certification.
+
+Notion synchronized C6.12 result: https://app.notion.com/p/3fe81f51e7fa81db92b8d2386b5b6cee
