@@ -129,3 +129,5 @@ Default output: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/t6
 Do not modify the frozen English PDF/Zenodo. The historical Theorem 4.7 residual-clause wording-clarification recommendation remains open independently.
 
 **Resume from next one-theorem checkpoint:** `FAS-F2-T6.16-001`, First-branching obstruction, currently **NOT_STARTED**. F2 whole-paper audit still OPEN; 22/22 method-family internal standardization unchanged.
+
+[Notion synchronized T6.14 FPA case](https://app.notion.com/p/3fe81f51e7fa81219ecaebac9522c311)
