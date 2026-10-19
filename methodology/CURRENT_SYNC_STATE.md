@@ -74,6 +74,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Theorem6.23/C6.24 source-paired audit: Corollary6.24 is strict Definition6.10 E5 necessary-condition obstruction. E6 under bijective pointed maps already implies E5. Exact nonvacuous source-typed negative model with equal aggregate quantities but different material-kind domain incidence; candidate failures 4/4. Candidate-set empty and genuine positive strict control separate. No automatic first-branch b=5 assertion, no original PDF/Zenodo edit, F2 whole-paper FPA OPEN.
 
+- [Notion synchronized C6.24 audit](https://app.notion.com/p/3fe81f51e7fa8156b493e2e95e8fe987)
+
 ## 0S. Latest FPA Theorem 6.23 — 2026-10-20
 
 ```text
