@@ -59,6 +59,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Scope-limited internal proof audit of trace nonemptiness/accepted-channel equivalence. Theorem 4.7 historical wording refinement remains open as written. Not a paper-wide theorem certificate or external replication.
 
+- [Notion T3.6 FPA result](https://app.notion.com/p/3fe81f51e7fa81c98284ca75776ab8f9)
+
 ## 0E. Latest FPA Section 2 G0 audit — 2026-10-19
 
 ```text
