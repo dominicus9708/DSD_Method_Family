@@ -16,4 +16,5 @@ Files:
 
 Do NOT pre-populate `THEOREM_AUDITS/` with invented pass results. Create a theorem audit file when that theorem's audit actually begins. Preserve old source and audit history; this case does not alter the Formation original or re-open 22/22 internal method-family completion.
 
-NOTION: pending linkage at initial GitHub creation.
+NOTION FPA hub: https://app.notion.com/p/3fe81f51e7fa81afb612fa69387cdeee
+NOTION Formation case: https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296
