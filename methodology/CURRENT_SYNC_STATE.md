@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-T6.14-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `6c033d6e127dd01f2e75f51c981893d3ffa6c400` (F2 T6.14 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-T6.16-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `1206a009208695f9f7a45a7b04d3999eca7bd81c` (F2 T6.16 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-T6.14-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 7 theorem-level FPA audits + Proposition 6.11 + three corollaries (6.6/6.7/6.12) completed.
-Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.16 first-branching obstruction (FAS-F2-T6.16-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-T6.16-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 8 theorem-level FPA audits + Proposition 6.11 + three corollaries (6.6/6.7/6.12) completed.
+Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.17 staged determinacy and nonbranching of definitional closure (FAS-F2-T6.17-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,6 +28,40 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+## 0M. Latest FPA Theorem 6.16 — 2026-10-19
+
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-T6.16-001
+AUDIT_CASE: FAS-F2-T6.16-001
+SOURCE_PDF_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: 4b8fce7fc7b2133aa9d1a85b3a075a77889b42d4
+RESULT_COMMIT: 1206a009208695f9f7a45a7b04d3999eca7bd81c
+PYTHON_COMMIT: 06806b855360fa3a76f5c9e3128938c901f75cfb
+JSON_COMMIT: 4587ba6c86859cdeefa26b055874af69ad6b7287
+MATH_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+FINITE_TYPED_MODEL_PAIRS: 8
+FINITE_INCLUSIONS_TESTED: 56
+FINITE_B_VALUES: 0,1,2,3,5,6,7
+STRICT_PAIR_BRANCH: undefined
+GENERAL_I3_EQUALS_I4: NOT_REVIEWED (Theorem 6.17)
+THEOREM_LEVEL_FPA_COMPLETED: 8
+PROPOSITION_6_11_FPA_COMPLETED: 1
+COROLLARIES_6_6_6_7_6_12_FPA_COMPLETED: 3
+NEXT: FAS-F2-T6.17-001 / NOT_STARTED
+FULL_F2_PAPER: NOT_COMPLETE
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+- [T6.16 source-locked prospective precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T6.16-001_PRECOMMIT.md)
+- [T6.16 mathematical audit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T6.16-001_RESULT.md)
+- [T6.16 actually executed finite Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_t616_branching.py)
+- [T6.16 finite JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/t616_first_branching.json)
+
+The same ambient full tuple population is progressively filtered; J arbitrary until Stage 7. T6.16 has a full general mathematics derivation. Observed I3=I4 finite fixture property DOES NOT count as a general T6.17 proof. Historical T4.7 clarification unaffected.
 
 ## 0L. Latest FPA Theorem 6.14 — 2026-10-19
 
