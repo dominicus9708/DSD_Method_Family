@@ -1,11 +1,11 @@
 # Formation F2 — proof-obligation register / 정리별 증명 의무
-Date: 2026-10-19 · Status: **FPA in progress: Theorems 3.3, 4.5, 4.7 + all seven Section 4.3 source items internally reviewed; other claims NOT_REVIEWED.**
+Date: 2026-10-19 · Status: **FPA in progress: Section 2 definitions/reduction law, Theorems 3.3/4.5/4.7 and seven Section 4.3 source items internally reviewed; remaining claims NOT_REVIEWED.**
 Exact label inventory below was extracted from the **33-page SHA-256-locked supplied English PDF**, not inferred from a former draft. The manuscript uses four primitive axioms I, II, III, V and closure clauses IV, VI, VII. Labels skipped in the numbering are not missing theorems by default.
 
 ## Grouped registration / 구획별 등록
 | Audit group | Exact manuscript items | Main proof-obligation attacks | Status |
 |---|---|---|---|
-| FAS-F2-G0, Section 2 | Definitions 2.1–2.4; Proposition 2.5 | Typed carriers, anchor/restriction domains, stage truncations and reductions, composition laws; noncircularity | NOT_REVIEWED |
+| FAS-F2-G0, Section 2 | Definitions 2.1–2.4; Proposition 2.5 | Typed carriers, anchor/restriction domains, stage truncations and reductions, composition laws; noncircularity | COMPLETED G0: Prop.2.5 PROVED_IN_DECLARED_BACKGROUND; Definitions 2.1–2.4 coherent with background; FPA PASS_WITH_BOUNDARY; 2 optional clarifications |
 | FAS-F2-G1, Section 3 | Primitive Axioms I, II, III, V; Definitional Closure Clauses IV, VI, VII; Theorem 3.3; Definition 3.5; Theorem 3.6 | Split primitive input from derived closure, uniqueness **relative to supplied** post-Stage-VI W and T, construction and converse of primitive reduct; trace nonemptiness iff channel membership | T3.3: PASS_WITH_BOUNDARY (internal FPA); T3.6 and other G1 items: NOT_REVIEWED |
 | FAS-F2-G2, Section 4 | Countermodels 4.1–4.4; Theorems 4.5, 4.7; Proposition 4.6; Corollary 4.8; Countermodel 4.9; Lemmas 4.10, 4.13; Corollaries 4.11, 4.14; Proposition 4.12 | Check each independence witness against all *other* axioms and full typing, identity restriction and anchor inheritance; residual-clause independence distinct from primitive axiom independence; restriction nontransitivity | T4.5: PASS_WITH_BOUNDARY; T4.7: PASS_WITH_REFINEMENT (CLARIFICATION needed); Cor.4.8/Countermodel4.9/Lem.4.10/Cor.4.11/Prop.4.12/Lem.4.13/Cor.4.14: PASS_WITH_BOUNDARY; other G2 items NOT_REVIEWED |
 | FAS-F2-G3, Section 5 | Definition 5.1; Propositions 5.2, 5.4, 5.5, 5.6, 5.8, 5.9, 5.11–5.14; Corollaries 5.3, 5.7; Countermodel 5.10 | Defined-zero vs undefined vs absent channel; declared q domain vs active A*; zero padding and noninjective finite composition; explicit admissible examples | NOT_REVIEWED |
@@ -36,3 +36,7 @@ Do NOT give a percentage pass rate for registered but unexamined items.
 
 ### 2026-10-19 Section 4.3 audit closure
 Completed additional seven **source-item** reviews (not seven new independent Theorem-labeled audits): [FAS-F2-SEC4.3-001](SECTION_AUDITS/FAS-F2-SEC4.3-001_RESULT.md). Cor.4.8, Countermodel4.9, Lemma4.10, Cor.4.11, Prop.4.12, Lemma4.13, Cor.4.14: `PROVED_IN_DECLARED_BACKGROUND` / FPA `PASS_WITH_BOUNDARY`. Explicit legal finite witnesses for 4.9 (including mandatory identity `Res(x,x)`) and 4.12 (nontransitive restriction with admitted active channel). `REVISION_NEED=CLARIFICATION_OPTIONAL`, no mandatory revision. Theorem 4.7's independent earlier clarification recommendation is preserved. Paper-wide F2 remains OPEN; next proposed `FAS-F2-G0-001`.
+
+
+### 2026-10-19 Section 2 foundational audit closure
+[FAS-F2-G0-001 result](SECTION_AUDITS/FAS-F2-G0-001_RESULT.md), [precommit](SECTION_AUDITS/FAS-F2-G0-001_PRECOMMIT.md). Definitions 2.1–2.4 reviewed as *definitions and typed constructs*, NOT converted into 'proved theorems'; Proposition 2.5 proved by general coordinate deletion with 120 triple/36 pair smoke tests [verifier](scripts/verify_g0_stage_reductions.py). FPA verdict `PASS_WITH_BOUNDARY`: optional clarifications (i) `F_k(B,F)` possibly a metatheoretic class and `π` a class-level operation; (ii) arbitrary well-typed staged record need not be a full-model truncation satisfying closure. No manuscript changes or F2 whole-paper verdict. **NEXT FAS-F2-T3.6-001 / NOT_STARTED**.
