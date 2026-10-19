@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-T3.6-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `e283f01cd8ca57c90a6cfdd0a7dbf4b3d9342f34` (F2 T3.6 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-T6.5-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `e4783eb923d9a1fb29597ee0b74bddcb1a0533f7` (F2 T6.5 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-T3.6-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 4 theorem-level FPA audits completed.
-Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.5 identity and composition (FAS-F2-T6.5-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-T6.5-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 5 theorem-level FPA audits completed.
+Next canonical step: **post-standardization FPA / Formation F2 Corollaries 6.6 and 6.7 (FAS-F2-SEC6.2-C6.6-C6.7-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,6 +28,34 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+## 0G. Latest FPA Theorem 6.5 audit — 2026-10-19
+
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-T6.5-001
+AUDIT_CASE: FAS-F2-T6.5-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: d02d18a88b3dff7de7cce3c388408d1d4da5fea8
+RESULT_COMMIT: e4783eb923d9a1fb29597ee0b74bddcb1a0533f7
+PYTHON_COMMIT: de8af7e256a79b325f425be3fe16087bbe91df68
+JSON_COMMIT: 2dbaf97fec24063e00a60bbf389e6922abeed75d
+MATH_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+FINITE_TEST_SCOPE: identity/embedding composition; noninjective forward case; independent witness reflection necessity
+FPA_THEOREM_CASES_COMPLETED: 5
+NEXT: FAS-F2-SEC6.2-C6.6-C6.7-001 / NOT_STARTED
+F2_WHOLE_PAPER: NOT_COMPLETE
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+METHOD_FAMILY_STANDARDIZATION: 22/22 unchanged
+ORIGINAL_PDF_ZENODO: unchanged
+```
+- [T6.5 precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T6.5-001_PRECOMMIT.md)
+- [T6.5 scoped audit result](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T6.5-001_RESULT.md)
+- [T6.5 runnable Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_t65_forward_composition.py)
+- [T6.5 deterministic witness JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/t65_forward_composition.json)
+
+Theorem 6.5 holds under the manuscript's declared typed interfaces. Noninjective forward maps do not imply finite set-composite preservation. Finite testing does not establish the general theorem, separately supported by written proof. Historical T4.7 wording issue unaffected.
 
 ## 0F. Latest completed FPA Theorem 3.6 — 2026-10-19
 
