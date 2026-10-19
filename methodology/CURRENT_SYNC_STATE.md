@@ -67,6 +67,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Static-closure theorem T6.20 is a five-part synthesis of already source-audited dependencies, **not** a new axiomatic closure postulate or paper-wide proof. Relative uniqueness needs supplied W,T; Role and W,T differences may first branch at 6 and 7. Candidate channel identity is distinct from trace multiplicity and equal numerical composite results. Original PDF/Zenodo unchanged. Earlier T4.7 clarification remains separate.
 
+- [Notion synchronized F2 Theorem 6.20](https://app.notion.com/p/3fe81f51e7fa8156b5afebf5d001b1d2)
+
 ## 0P. Latest FPA Theorem 6.19 — 2026-10-19
 
 ```text
