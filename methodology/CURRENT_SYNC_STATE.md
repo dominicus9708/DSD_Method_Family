@@ -69,6 +69,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 The same-base FULL Formation models both satisfy primitive I/II/III/V and definitional IV/VI/VII. Role/channel counts 1 vs 2 obstruct strict isomorphism; prescribed J=id_R nevertheless maps nonempty {c0} and {d+,d−} composites to the same 0. Terms are supplied separately from defined zero assignment. 3/3 finite candidate-trace checks supplement the explicit mathematical proof. T4.7 optional statement-scope clarification remains, F2 whole paper OPEN.
 
+- [Notion synchronized P6.22 FPA case](https://app.notion.com/p/3fe81f51e7fa81468bd0df0551cd8170)
+
 ## 0Q. Latest FPA Theorem 6.20 — 2026-10-20
 
 ```text
