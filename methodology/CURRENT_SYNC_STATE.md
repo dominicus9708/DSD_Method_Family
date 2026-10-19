@@ -64,6 +64,8 @@ ORIGINAL_PDF_ZENODO: unchanged
 
 Channel bijection, finite powerset bijection, and finite J-linear composite equation proved within exact source conditions. Supplemental finite interface case is not full-formation-model or external verification; F2 full manuscript OPEN.
 
+- [Notion C6.12 synchronized FPA result](https://app.notion.com/p/3fe81f51e7fa81db92b8d2386b5b6cee)
+
 ## 0J. Latest FPA Definition 6.10 / Proposition 6.11 — 2026-10-19
 
 ```text
