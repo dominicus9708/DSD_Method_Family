@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""F2 C6.26 selected full-Formation finite models; not a universal proof.
+r"""F2 C6.26 selected full-Formation finite models; not a universal proof.
 
 Windows, from cloned DSD_Method_Family repository root:
   python .\DSD_Audit\audits\formal_proof\formation_axiom_system\scripts\verify_c626_channel_cardinality.py
