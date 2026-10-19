@@ -45,3 +45,5 @@ Notion T6.5 completed audit: https://app.notion.com/p/3fe81f51e7fa8130b7fbe2ebe7
 
 
 LATEST SECTION 6.2 COROLLARY AUDIT (2026-10-19): [C6.6 and C6.7 precommit](SECTION_AUDITS/FAS-F2-SEC6.2-C6.6-C6.7-001_PRECOMMIT.md), [result](SECTION_AUDITS/FAS-F2-SEC6.2-C6.6-C6.7-001_RESULT.md), [Python](scripts/verify_c66_c67.py) and [JSON](results/c66_c67_category_preorder.json). Both source corollaries: PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE. Mathematically establish category axioms, wide subcategory and inclusion-submodel preorder. Finite source-legal empty-expression witnesses show 494 identity, 1,152 associativity, 288 embedding compositions, 4 reflexivity, 20 transitivity; finite tests are not general mathematical proof. Five theorem-level FPA audits plus this pair of corollaries. F2 full-paper OPEN; independent external validation not established. **LATEST NEXT: FAS-F2-T6.8-001 / NOT_STARTED**. Earlier historical NEXT statements remain as checkpoints of earlier epochs.
+
+Notion completed C6.6/C6.7 audit: https://app.notion.com/p/3fe81f51e7fa81fdbccef571bee0537b
