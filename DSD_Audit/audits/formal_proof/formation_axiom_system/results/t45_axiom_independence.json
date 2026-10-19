@@ -1,0 +1,157 @@
+{
+  "audit_id": "FAS-F2-T4.5-001",
+  "cases": {
+    "Countermodel_4.1": {
+      "active_kernel": [
+        "a"
+      ],
+      "admitted_channels": [
+        [
+          "p",
+          "a",
+          "lambda",
+          1,
+          "rho"
+        ]
+      ],
+      "axioms": {
+        "I": false,
+        "II": true,
+        "III": true,
+        "V": true
+      },
+      "describable_configurations": [
+        "p"
+      ],
+      "finite_composite": {
+        "cg": 1,
+        "empty": 0
+      },
+      "violations": {
+        "I": [
+          "x"
+        ],
+        "II": [],
+        "III": [],
+        "V": []
+      }
+    },
+    "Countermodel_4.2": {
+      "active_kernel": [
+        "a"
+      ],
+      "admitted_channels": [
+        [
+          "p",
+          "a",
+          "lambda",
+          1,
+          "rho"
+        ]
+      ],
+      "axioms": {
+        "I": true,
+        "II": false,
+        "III": true,
+        "V": true
+      },
+      "describable_configurations": [
+        "p"
+      ],
+      "finite_composite": {
+        "cg": 1,
+        "empty": 0
+      },
+      "violations": {
+        "I": [],
+        "II": [
+          [
+            "H",
+            "h"
+          ]
+        ],
+        "III": [],
+        "V": []
+      }
+    },
+    "Countermodel_4.3": {
+      "active_kernel": [
+        "a"
+      ],
+      "admitted_channels": [
+        [
+          "p",
+          "a",
+          "lambda",
+          1,
+          "rho"
+        ]
+      ],
+      "axioms": {
+        "I": true,
+        "II": true,
+        "III": false,
+        "V": true
+      },
+      "describable_configurations": [
+        "p"
+      ],
+      "finite_composite": {
+        "cg": 1,
+        "empty": 0
+      },
+      "violations": {
+        "I": [],
+        "II": [],
+        "III": [
+          [
+            "h",
+            "p_prime"
+          ]
+        ],
+        "V": []
+      }
+    },
+    "Countermodel_4.4": {
+      "active_kernel": [
+        "a"
+      ],
+      "admitted_channels": [
+        [
+          "p",
+          "a",
+          "lambda",
+          1,
+          "rho"
+        ]
+      ],
+      "axioms": {
+        "I": true,
+        "II": true,
+        "III": true,
+        "V": false
+      },
+      "describable_configurations": [
+        "p"
+      ],
+      "finite_composite": {
+        "cg": 1,
+        "empty": 0
+      },
+      "violations": {
+        "I": [],
+        "II": [],
+        "III": [],
+        "V": [
+          "b"
+        ]
+      }
+    }
+  },
+  "external_independent_replication": false,
+  "general_automated_theorem_certification": false,
+  "independence_of_four_primitive_axioms": "SUPPORTED_BY_EXPLICIT_FINITE_COUNTERINTERPRETATIONS",
+  "manuscript_section": "4.1",
+  "source_pdf_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "status": "FOUR_FINITE_COUNTERMODELS_REPRODUCED"
+}
