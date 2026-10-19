@@ -7,6 +7,8 @@ Only stdlib; Python >=3.9. Follows the declared typed Formation primitives.
 import hashlib
 import json
 from itertools import product
+from pathlib import Path
+import sys
 
 VALUES = (-1, 0, 1)
 LAMBDA = 'lambda'
@@ -127,7 +129,8 @@ def main():
                'singleton_compositions_checked': sum(x['singleton_compositions_checked'] for x in results),
                'all_passed': all(x['passed'] for x in results), 'results': results}
     b = json.dumps(summary, sort_keys=True, indent=2, ensure_ascii=False) + '\n'
-    out = '/mnt/data/f2_t36/t36_trace_witnesses.json'
+    out = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent / 'results' / 't36_trace_witnesses.json'
+    out.parent.mkdir(parents=True, exist_ok=True)
     with open(out, 'w', encoding='utf-8') as f:
         f.write(b)
     print(f'{summary["fixtures"]}/8 fixtures PASS; '
