@@ -50,3 +50,5 @@ Notion completed C6.6/C6.7 audit: https://app.notion.com/p/3fe81f51e7fa81fdbccef
 
 
 LATEST FPA THEOREM 6.8 (2026-10-19): [Prospective T6.8 obligations](THEOREM_AUDITS/FAS-F2-T6.8-001_PRECOMMIT.md), [general proof audit](THEOREM_AUDITS/FAS-F2-T6.8-001_RESULT.md), [portable Python](scripts/verify_t68_embedding_reflection.py), [selected finite witnesses](results/t68_embedding_reflection.json). `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE`. Eight typed source candidate-channel membership checks and four finite-subset compositions passed in local sample; admissible target-only channel and invalid-without-witness-reflection adversarial case retained. Six theorem-level audits complete. Full F2 paper audit OPEN; no independent external review or manuscript change. Current NEXT FAS-F2-P6.11-001 / NOT_STARTED. Historic earlier NEXT fields are not active instructions.
+
+Notion synchronized T6.8 completed audit: https://app.notion.com/p/3fe81f51e7fa812f83c3c7cc3bd5266d
