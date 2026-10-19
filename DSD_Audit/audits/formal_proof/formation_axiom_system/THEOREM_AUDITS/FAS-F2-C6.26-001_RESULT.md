@@ -116,3 +116,5 @@ Default output: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/c6
 The boundary is limited to source full Formation descriptors and precision of the necessary/not-sufficient assertion, with selected finite execution limits; it is **not a proof gap**. Historical nonurgent Theorem 4.7 wording-scope clarification stays independently open. Original PDF/Zenodo are not changed, and DSD Method Family internal method standardization **22/22** stays unchanged. **F2 whole-paper FPA remains OPEN.**
 
 **Next scoped case (NOT_STARTED): `FAS-F2-T7.1-001`**, Theorem 7.1 *Existence of a full formation model*, source §7.1 printed pp.24–25. Begin with its own prospective precommit; do not use this single corollary to certify later Section 7.
+
+[Notion synchronized FAS-F2-C6.26-001 audit](https://app.notion.com/p/3fe81f51e7fa81db9130f5fc6cc366e6)
