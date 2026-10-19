@@ -109,3 +109,5 @@ Default output: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/p6
 Theorem 4.7's previously noted wording clarification remains recorded. The supplied source PDF and Zenodo unchanged. F2 whole-paper audit OPEN.
 
 **Next one-group checkpoint:** `FAS-F2-C6.12-001`, Corollary 6.12 induced channel and finite-composite preservation; status **NOT_STARTED** pending independent prospective precommit.
+
+[Notion synchronized P6.11 audit](https://app.notion.com/p/3fe81f51e7fa815fb7ddee9623cfd92d)
