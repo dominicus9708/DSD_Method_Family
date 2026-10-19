@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-20 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261020-FAS-F2-P6.22-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `aea05b2ce0ace0e41df70e0a4dc693a3ec61a24e` (F2 P6.22 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261020-FAS-F2-T6.23-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `ec75595bfef0ef3019028470b41bded7f849d48e` (F2 T6.23 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-P6.22-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 11 theorem-level FPA audits + two propositions (6.11/6.22) + four corollaries (6.6/6.7/6.12/6.18) completed.
-Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.23 layerwise obstruction to strict formation equivalence (FAS-F2-T6.23-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-T6.23-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 12 theorem-level FPA audits + two propositions (6.11/6.22) + four corollaries (6.6/6.7/6.12/6.18) completed.
+Next canonical step: **post-standardization FPA / Formation F2 Corollary 6.24 assignment-domain obstruction (FAS-F2-C6.24-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,6 +28,44 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+
+## 0S. Latest FPA Theorem 6.23 — 2026-10-20
+
+```text
+SYNC_EPOCH: MF-SYNC-20261020-FAS-F2-T6.23-001
+AUDIT_CASE: FAS-F2-T6.23-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: 2bc3fbb674a3e043ed3e4ad74195045162e080c1
+RESULT_COMMIT: ec75595bfef0ef3019028470b41bded7f849d48e
+PYTHON_FINAL_COMMIT: 62eca23ecf21073571d2aed17d2de3998d140c15
+JSON_COMMIT: df907c4d2b4f28b70c496bb0c4cfec8d444bbcec
+LOCAL_CHECKER_SHA256: be5262159da834797eb98a3bac1463a87c262d8caf144a27d4cc9b164bc27921
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+FINITE_FULL_MODEL_PAIRS: 7
+FINITE_TYPED_CANDIDATE_ROWS: 12
+FINITE_NONVACUOUS_ALL_FAILED: 5
+FINITE_EMPTY_CAND: 1
+FINITE_STRICT_POSITIVE: 1
+THEOREM_LEVEL_FPA_COMPLETED: 12
+PROPOSITION_LEVEL_FPA_COMPLETED: 2
+COROLLARIES_FPA_COMPLETED: 4
+NEXT: FAS-F2-C6.24-001 / NOT_STARTED
+COROLLARIES_6_25_6_26: NOT_REVIEWED
+F2_FULL_PAPER: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+
+- [T6.23 prospective precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T6.23-001_PRECOMMIT.md)
+- [T6.23 exact logical proof](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T6.23-001_RESULT.md)
+- [T6.23 portable Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_t623_layerwise_obstruction.py)
+- [T6.23 selected finite JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/t623_layerwise_obstruction.json)
+
+Theorem 6.23 is exact negation of strict-isomorphism candidate existence under Definition 6.10. Candidate J is already a linear isomorphism, distinct from stage ambient arbitrary J. No uniform failed Ei or numerical b inferred. Selected full-model finite checks separate from universal proof. Earlier T4.7 wording clarification and full-paper OPEN retained.
 
 ## 0R. Latest FPA Definition 6.21 / Proposition 6.22 — 2026-10-20
 
