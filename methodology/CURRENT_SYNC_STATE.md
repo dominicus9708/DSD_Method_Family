@@ -48,9 +48,9 @@ NEXT_THEOREM_CASE: FAS-F2-T4.5-001 / not_started
 - [Theorem 3.3 source-bound proof audit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T3.3-001_RESULT.md)
 - [Notion theorem result](https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c)
 
-## 0. Current post-standardization checkpoint — 2026-10-19
+## 0. Historical preparation checkpoint — 2026-10-19 (superseded by 0A)
 ```text
-PHASE: post_standardization_application_preparation
+PHASE: post_standardization_application_preparation (snapshot before T3.3 execution)
 INTERNAL_METHOD_REGISTRY: 22/22 complete (unchanged)
 NEW_INDEPENDENT_METHODS: 0
 OWNER_METHOD: DSD_Audit
