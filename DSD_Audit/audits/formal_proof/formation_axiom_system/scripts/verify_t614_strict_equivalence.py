@@ -8,6 +8,7 @@ An optional first argument selects output JSON. Standard library only.
 """
 import json
 import sys
+from copy import deepcopy
 from itertools import product, combinations
 from pathlib import Path
 
@@ -194,6 +195,29 @@ def main():
     try:check(bad)
     except AssertionError:failed=True
     assert failed
+    # Source-legal changes in target data invalidate E-conditions; none is
+    # a counterexample to the theorem with its strict-isomorphism premise.
+    negative=["configuration_reflection","defined_zero_removed",
+              "negligible_size","anchored_support"]
+    for typ in negative:
+        variant=deepcopy(M)
+        variant["name"]=typ
+        if typ=="configuration_reflection":
+            variant["admcfg"].add("P2")
+        elif typ=="defined_zero_removed":
+            del variant["q"][("B","mu")]
+            for key in list(variant["term"]):
+                if key[0]=="P1":del variant["term"][key]
+        elif typ=="negligible_size":
+            variant["size"]={(k,v):2*n for (k,v),n in variant["size"].items()}
+        else:
+            for ex in ("E0","E1"):variant["anchor_mat"][ex]["A"]="s1"
+            variant["anchor_act"]["P0"]["A"]="s1"
+        valid_core(variant)
+        rejected=False
+        try:check(arrow(L,variant))
+        except AssertionError:rejected=True
+        assert rejected, typ
     result={"case_id":"FAS-F2-T6.14-001","source_sha256":SOURCE_SHA,
             "selected_core_models":3,"core_closure_fixture_checks_passed":True,
             "admitted_channels_per_model":4,"reflexivity_identities":3,
@@ -203,6 +227,7 @@ def main():
             "nontrivial_indexed_value_inverse":True,
             "nontrivial_J_composite":"-6",
             "zero_preservation_invalid_premise_detected":True,
+            "other_invalid_premise_probes":negative,
             "finite_checks_not_general_proof":True,
             "independent_external_verification":False,
             "all_checks_passed":True}
