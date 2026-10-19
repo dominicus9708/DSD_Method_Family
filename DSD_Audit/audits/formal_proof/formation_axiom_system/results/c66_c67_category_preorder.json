@@ -1,0 +1,28 @@
+{
+  "all_checks_passed": true,
+  "antisymmetry_not_claimed_or_tested_as_a_corollary_obligation": true,
+  "case_id": "FAS-F2-SEC6.2-C6.6-C6.7-001",
+  "distinct_isomorphic_models_not_literal_submodels": true,
+  "finite_witness_scope": "empty expression/configuration/quantity/role types; zero term space; set-sized material carriers; mathematical proof is separate",
+  "four_full_models_valid_under_vacuous_axioms": true,
+  "genuine_inclusion_preorder_checked": true,
+  "independent_external_verification": false,
+  "large_category_associativity_is_proved_by_mathematical_argument_not_tests": true,
+  "not_every_forward_map_is_an_embedding": true,
+  "source_fixed_base_and_field": true,
+  "source_model_material_sizes": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "tests": {
+    "associativity": 1152,
+    "embedding_composition": 288,
+    "left_right_identity": 494,
+    "submodel_reflexivity": 4,
+    "submodel_transitivity": 20
+  },
+  "wide_subcategory_inclusion_illustrated": true
+}
