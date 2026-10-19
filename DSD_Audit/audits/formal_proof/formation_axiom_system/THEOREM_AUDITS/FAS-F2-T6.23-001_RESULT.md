@@ -125,3 +125,5 @@ Run from the cloned `dominicus9708/DSD_Method_Family` repository root on Windows
 The boundary is the exact Definition 6.10 typed-candidate and source full-model/fixed-base scope and the limits of finite testing. It is **not a missing inference**. Theorem 4.7's earlier **nonurgent optional scope-wording clarification** remains separately open. No source PDF/Zenodo changes, and the DSD Method Family internal 22/22 standardization count is unaffected. **Full Formation F2 manuscript FPA remains OPEN.**
 
 **Resumable next:** `FAS-F2-C6.24-001` — Corollary 6.24 (Assignment-domain obstruction), **NOT_STARTED**. Corollaries 6.25 and 6.26 remain NOT_STARTED as separate future cases.
+
+[Notion synchronized FAS-F2-T6.23-001 FPA case](https://app.notion.com/p/3fe81f51e7fa81a594a8f2113f29779f)
