@@ -1,0 +1,255 @@
+{
+  "audit_id": "FAS-F2-T4.7-001",
+  "automated_general_proof": false,
+  "cases": {
+    "R1": {
+      "A_star": [
+        "a"
+      ],
+      "K_des": [
+        "p"
+      ],
+      "channels": [
+        [
+          "p",
+          "a",
+          "lambda",
+          1,
+          "rho"
+        ]
+      ],
+      "finite_composites": {
+        "empty": 0,
+        "singleton_cg": 1
+      },
+      "residual_truth": {
+        "R1": false,
+        "R2": true,
+        "R3": true,
+        "R4": true,
+        "R5": true,
+        "R6": true
+      },
+      "violations": {
+        "R1": [
+          "x"
+        ],
+        "R2": [],
+        "R3": [],
+        "R4": [],
+        "R5": [],
+        "R6": []
+      }
+    },
+    "R2": {
+      "A_star": [
+        "a"
+      ],
+      "K_des": [
+        "p"
+      ],
+      "channels": [
+        [
+          "p",
+          "a",
+          "lambda",
+          1,
+          "rho"
+        ]
+      ],
+      "finite_composites": {
+        "empty": 0,
+        "singleton_cg": 1
+      },
+      "residual_truth": {
+        "R1": true,
+        "R2": false,
+        "R3": true,
+        "R4": true,
+        "R5": true,
+        "R6": true
+      },
+      "violations": {
+        "R1": [],
+        "R2": [
+          [
+            "H",
+            "h"
+          ]
+        ],
+        "R3": [],
+        "R4": [],
+        "R5": [],
+        "R6": []
+      }
+    },
+    "R3": {
+      "A_star": [
+        "a"
+      ],
+      "K_des": [
+        "p"
+      ],
+      "channels": [
+        [
+          "p",
+          "a",
+          "lambda",
+          1,
+          "rho"
+        ]
+      ],
+      "finite_composites": {
+        "empty": 0,
+        "singleton_cg": 1
+      },
+      "residual_truth": {
+        "R1": true,
+        "R2": true,
+        "R3": false,
+        "R4": true,
+        "R5": true,
+        "R6": true
+      },
+      "violations": {
+        "R1": [],
+        "R2": [],
+        "R3": [
+          [
+            "H",
+            "h"
+          ]
+        ],
+        "R4": [],
+        "R5": [],
+        "R6": []
+      }
+    },
+    "R4": {
+      "A_star": [
+        "a"
+      ],
+      "K_des": [
+        "p"
+      ],
+      "channels": [
+        [
+          "p",
+          "a",
+          "lambda",
+          1,
+          "rho"
+        ]
+      ],
+      "finite_composites": {
+        "empty": 0,
+        "singleton_cg": 1
+      },
+      "residual_truth": {
+        "R1": true,
+        "R2": true,
+        "R3": true,
+        "R4": false,
+        "R5": true,
+        "R6": true
+      },
+      "violations": {
+        "R1": [],
+        "R2": [],
+        "R3": [],
+        "R4": [
+          "h"
+        ],
+        "R5": [],
+        "R6": []
+      }
+    },
+    "R5": {
+      "A_star": [
+        "a"
+      ],
+      "K_des": [
+        "p"
+      ],
+      "channels": [
+        [
+          "p",
+          "a",
+          "lambda",
+          1,
+          "rho"
+        ]
+      ],
+      "finite_composites": {
+        "empty": 0,
+        "singleton_cg": 1
+      },
+      "residual_truth": {
+        "R1": true,
+        "R2": true,
+        "R3": true,
+        "R4": true,
+        "R5": false,
+        "R6": true
+      },
+      "violations": {
+        "R1": [],
+        "R2": [],
+        "R3": [],
+        "R4": [],
+        "R5": [
+          [
+            "h",
+            "p_prime"
+          ]
+        ],
+        "R6": []
+      }
+    },
+    "R6": {
+      "A_star": [
+        "a"
+      ],
+      "K_des": [
+        "p"
+      ],
+      "channels": [
+        [
+          "p",
+          "a",
+          "lambda",
+          1,
+          "rho"
+        ]
+      ],
+      "finite_composites": {
+        "empty": 0,
+        "singleton_cg": 1
+      },
+      "residual_truth": {
+        "R1": true,
+        "R2": true,
+        "R3": true,
+        "R4": true,
+        "R5": true,
+        "R6": false
+      },
+      "violations": {
+        "R1": [],
+        "R2": [],
+        "R3": [],
+        "R4": [],
+        "R5": [],
+        "R6": [
+          "b"
+        ]
+      }
+    }
+  },
+  "checked_cases": 6,
+  "claim_scope": "typed background plus the five other residual clauses, not the intact parent primitive axiom",
+  "independent_external_validation": false,
+  "source_pdf_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "source_section": "Proposition 4.6 and Theorem 4.7 (printed pp.10-11)",
+  "tested_claim": "each residual fails with other five residuals holding"
+}
