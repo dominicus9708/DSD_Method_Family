@@ -1,0 +1,24 @@
+# FAS-F2-C6.25-001 — Prospectively locked audit: Role obstruction
+
+- Date: 2026-10-20 KST.
+- Parent: existing DSD Audit / FPA v0.1, one scoped corollary.
+- Source: Kwon Dominicus, attached `DSD_Formation_Axiom_System_EN(5).pdf` (33 pages), SHA-256 `8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a`.
+- Exact claim: §6.5, printed p.24, **Corollary 6.25 (Role obstruction)**: “If no candidate comparison preserves the role relation, then no strict base-fixed formation isomorphism exists.”
+- Dependency: Definition 6.10 (E8); Theorem 6.23 all-candidate obstruction; Clause VI channel construction. Prior C6.24 complete; C6.25 not yet audited at precommit.
+
+## Locked proof obligations
+
+1. Formalize candidate role relation equivalence for fixed full models over the same `(B,F)`: for all typed material, configuration, quantity-kind and role **bijections** `f_M,f_P,tau_Lambda,tau_R`, check for every tuple `(p,a,lambda,rho)` the iff `Role_L(p,a,lambda,rho) ⇔ Role_M(f_Pp,f_Ma,tau_Lambda lambda,tau_R rho)`. A strict isomorphism satisfies E8; therefore absence of E8-compatible candidates forbids strict isomorphism. All roles must be considered; don't confuse a failed single candidate with all failing.
+2. Precisely distinguish full Definition6.10 typed candidate tuples, including F-linear term-space isomorphism J, from only role-sorted candidate bijections. The stronger hypothesis of no E8-compatible role maps over *all* typed role permutations suffices. If all full candidates are absent (e.g. cardinality obstruction), clarify universal vacuity without claiming a specific E8 failure.
+3. Construct an **explicit nonvacuous source-compatible pair** of complete finite Formation models: common B, same expression/configuration/material carriers, same quantity-kind structure and assignment graphs, equal role carrier sizes and exactly **equal admitted channel counts**; all candidate comparison tuples through E1–E7 satisfiable; **every** role comparison fails E8. Require valid primitive I/II/III/V and derived IV/VI/VII, true trace witnesses.
+4. Prospective example: two materials `a,b`, two kinds `lam,mu`, roles `r,s`, one describable p. All kinds assigned defined value 0 on both materials, identical support/anchors. In L role determined by MATERIAL: both kinds on material a have role r; both kinds on b have s. In M role determined by KIND: both materials at lam have role r; both materials at mu have s. Each has 4 role edges, 4 admitted channels, role counts (2,2) and same term-space data; nevertheless multiset of **distinct role count per material across kinds** is `(1,1)` vs `(2,2)`, invariant under independent bijections of material/kind/role sorts. Enumerate all `2!×2!×2!=8` typed component bijections; verify E8 fails for all. A relabeling that swaps the *sorts* material and kind is not a valid typed comparison.
+5. Compute full E1–E9 on selected bijections where meaningful and show E1–E7 hold for all eight negative candidates, E8 fails and E9 is not forced/evaluated on those failed comparisons. Contrast with positive copy L'=L, where some candidates fail E8 but at least one satisfies E1–E9; equal role counts alone not sufficient.
+6. Include empty-Cand scenario with unequal role carrier size separately. It makes strict isomorphism impossible without an actual candidate E8 witness; distinguish from the **nonvacuous** role obstruction.
+7. Verify source VI: `Chan_L(p,a,lambda,v,rho) ⇔ Des_cfg(p)∧(a,v)∈Gamma_L,lambda(p)∧Role_L(p,a,lambda,rho)`; do not identify assigned zero and undefined. Show `T` is total exactly on C, both families finite, and constructed terms need not equal q.
+8. Explicitly exclude false stronger conclusions: no assertion all failed candidates violate the **same exact role tuple**, no inference of stage b=6 without first checking all previous-stage comparison conditions. No inference that equal aggregate outputs or channel count imply strictness.
+9. Execute **the same exact code intended for GitHub** locally in the current runtime; compute SHA-256, freeze result JSON, then upload matching content. If exact-byte matching unavailable, disclose honestly. Use canonical repo `scripts` and `results` paths. No new method-family slot, no PDF/Zenodo edit.
+10. Classify general proof versus selected finite adversarial test, external independent validation, and whole F2 paper audit status. Historical T4.7 wording suggestion retained.
+
+Verdict options: MATHEMATICAL_VERDICT=PROVED_IN_DECLARED_BACKGROUND|DISPROVED_BY_VALID_COUNTERMODEL|PROOF_GAP|INDETERMINATE; FPA_VERDICT=PASS|PASS_WITH_BOUNDARY|PASS_WITH_REFINEMENT|FAIL|INDETERMINATE; REVISION_NEED=NONE|CLARIFICATION|ASSUMPTION|PROOF|THEOREM|DEPENDENCY_REAUDIT|UNDETERMINED.
+
+**Next bounded audit after this:** `FAS-F2-C6.26-001`, Corollary 6.26 (Channel-cardinality obstruction), NOT_STARTED.
