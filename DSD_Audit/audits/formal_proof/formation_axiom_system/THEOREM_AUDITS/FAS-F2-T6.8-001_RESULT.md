@@ -111,3 +111,5 @@ The source code is standard-library Python, output to sibling results/t68_embedd
 Nothing in this audit requires changing the original English PDF or Zenodo. The separately logged Theorem 4.7 clause-scope wording clarification remains live.
 
 Stop here under the theorem-sized FPA timeout-prevention rule. Next dependency-oriented case: Definition 6.10 + Proposition 6.11 ("Strict formation isomorphism as bijective embedding"), **FAS-F2-P6.11-001 / NOT_STARTED**. The F2 whole-paper verdict remains OPEN and external independent verification is not established.
+
+[Notion synchronized Theorem 6.8 audit](https://app.notion.com/p/3fe81f51e7fa812f83c3c7cc3bd5266d)
