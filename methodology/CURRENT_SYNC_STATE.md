@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-20 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261020-FAS-F2-C6.24-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `c5f04208cfa2785b13e02f53d17432a22f0b39b6` (F2 C6.24 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261020-FAS-F2-C6.25-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `ca080064df4c3fa3ddaa0bafee23289430acd890` (F2 C6.25 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-C6.24-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 12 theorem-level FPA audits + two propositions (6.11/6.22) + five corollaries (6.6/6.7/6.12/6.18/6.24) completed.
-Next canonical step: **post-standardization FPA / Formation F2 Corollary 6.25 role obstruction (FAS-F2-C6.25-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-C6.25-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 12 theorem-level FPA audits + two propositions (6.11/6.22) + six corollaries (6.6/6.7/6.12/6.18/6.24/6.25) completed.
+Next canonical step: **post-standardization FPA / Formation F2 Corollary 6.26 channel-cardinality obstruction (FAS-F2-C6.26-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -30,6 +30,49 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
 
 
+
+## 0U. Latest FPA Corollary 6.25 — 2026-10-20
+
+\`\`\`text
+SYNC_EPOCH: MF-SYNC-20261020-FAS-F2-C6.25-001
+AUDIT_CASE: FAS-F2-C6.25-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: aa20f23212c1cb2570b389d1e3dedb868c3a6b71
+RESULT_COMMIT: ca080064df4c3fa3ddaa0bafee23289430acd890
+PYTHON_COMMIT: 7b479190faf449cf66751c537e3d33e6e291f126
+JSON_COMMIT: 6991638ae5113b948f416064c7b059980f00bfee
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+FINITE_NONVACUOUS_E8_CANDIDATES: 8
+FINITE_NEGATIVE_E1_THROUGH_E7_PASSES: 8
+FINITE_NEGATIVE_E8_PASSES: 0
+FINITE_MATERIAL_ROLE_DEGREES_L: 1,1
+FINITE_MATERIAL_ROLE_DEGREES_M: 2,2
+FINITE_ROLE_LABELS_EACH: 2
+FINITE_ROLE_EDGES_EACH: 4
+FINITE_ADMITTED_CHANNELS_EACH: 4
+FINITE_CANDIDATE_TRACE_MEMBERSHIP_CHECKS: 16
+FINITE_FULL_FAMILY_COMPOSITE_EACH: 0
+FINITE_POSITIVE_E8_PASSES: 4
+FINITE_POSITIVE_STRICT_ISOMORPHISMS: 2
+FINITE_EMPTY_CANDIDATE_CONTROL: 1
+THEOREM_LEVEL_FPA_COMPLETED: 12
+PROPOSITION_LEVEL_FPA_COMPLETED: 2
+COROLLARY_LEVEL_FPA_COMPLETED: 6
+NEXT: FAS-F2-C6.26-001 / NOT_STARTED
+F2_FULL_PAPER: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+\`\`\`
+
+- [C6.25 precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-C6.25-001_PRECOMMIT.md)
+- [C6.25 general proof and source-compatible typed model](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-C6.25-001_RESULT.md)
+- [C6.25 Python verifier](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_c625_role_obstruction.py)
+- [C6.25 selected finite JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/c625_role_obstruction.json)
+
+Strict Definition 6.10 requires E8 relation iff on all typed role tuples. The finite negative test isolates nonvacuous E8 failure: identical carrier/kind/role cardinalities and four channels each, but role fiber-degree [1,1] versus [2,2] cannot be typed-isomorphic. Eight candidate failures and positive/vacuous controls separated. Source PDF and Zenodo unchanged; full-paper external FPA OPEN. Historical T4.7 optional wording clarification unaffected.
 
 ## 0T. Latest FPA Corollary 6.24 — 2026-10-20
 
