@@ -62,6 +62,8 @@ ORIGINAL_PDF_ZENODO: unchanged
 
 E5 definition-domain iff is a theorem-level consequence of E6 graph reflection plus bijective pointed I. Strict ⇒ bijective embedding also proves witness reflection using surjective expression/configuration maps. A local separately constructed concise Python fixture succeeded; no claim of external replication of committed verifier. Full F2 paper OPEN.
 
+- [Notion P6.11 strict-isomorphism FPA case](https://app.notion.com/p/3fe81f51e7fa815fb7ddee9623cfd92d)
+
 ## 0I. Latest FPA Theorem 6.8 — 2026-10-19
 
 ```text
