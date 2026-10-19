@@ -80,3 +80,5 @@ Notion synchronized F2 Theorem 6.17 audit: https://app.notion.com/p/3fe81f51e7fa
 
 
 LATEST FPA COROLLARY 6.18 (2026-10-19): [locked precommit](SECTION_AUDITS/FAS-F2-C6.18-001_PRECOMMIT.md), [general source-bounded derivation](SECTION_AUDITS/FAS-F2-C6.18-001_RESULT.md), [portable Python](scripts/verify_c618_closure_exclusion.py), [finite JSON](results/c618_closure_exclusion.json). PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE: if b defined and b=4, minimum yields I3 nonempty but I4 empty, contradicting Theorem 6.17 I3=I4. Adversarial checks: 820 abstract nested profiles, 585 satisfying I3=I4 (zero b4); 71 violating equality demonstrate nestedness alone insufficient. Reused earlier source-typed 8 T6.16 fixtures, all no b4. GitHub script not independent post-commit rerun. Nine theorem-level audits; four separately audited corollaries C6.6/C6.7/C6.12/C6.18, and P6.11. Full F2 paper OPEN, source PDF/Zenodo unchanged, no external independent audit. CURRENT NEXT FAS-F2-T6.19-001 / NOT_STARTED. Older NEXT entries historical only.
+
+Notion synchronized C6.18 full source-bound audit: https://app.notion.com/p/3fe81f51e7fa81349f77dc0038377ba6
