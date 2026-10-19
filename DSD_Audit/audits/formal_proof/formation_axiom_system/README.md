@@ -1,6 +1,6 @@
 # Formation Axiom System — F2 / FPA audit case
 
-**CASE_STATUS:** IN_PROGRESS_THEOREMS_3_3_4_5_4_7_PLUS_SECTION_4_3_COMPLETED  
+**CASE_STATUS:** IN_PROGRESS_SECTION_2_G0_AND_SECTION_4_3_AND_THEOREMS_3_3_4_5_4_7_COMPLETED  
 **DATE:** 2026-10-19  
 **SUBJECT_CLASS:** FOUNDATIONAL_THEORY  
 **OWNER_METHOD:** DSD Audit  
@@ -10,7 +10,7 @@
 
 Files:
 - [SOURCE_LOCK.md](SOURCE_LOCK.md) — identified attached PDF edition, 33 pages, SHA-256; Zenodo byte identity explicitly unverified.
-- [PROOF_OBLIGATIONS.md](PROOF_OBLIGATIONS.md) — Section 2–7 claim register; three theorem-level audits and one seven-item Section 4.3 group completed; remaining claims NOT_REVIEWED.
+- [PROOF_OBLIGATIONS.md](PROOF_OBLIGATIONS.md) — Section 2 G0 base audit, three theorem-level cases and seven Section 4.3 source items reviewed; remaining claims NOT_REVIEWED.
 - [EXECUTION_PLAN.md](EXECUTION_PLAN.md) — first action Theorem 3.3; resumable checkpoint and downstream impact.
 - [Shared theorem-audit template](../../../templates/FORMAL_PROOF_AUDIT_TEMPLATE.md).
 
@@ -23,9 +23,12 @@ NOTION Formation case: https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296
 
 NOTION completed T3.3 audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
 LATEST: [Theorem 4.5 precommit](THEOREM_AUDITS/FAS-F2-T4.5-001_PRECOMMIT.md), [proof audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md), [finite verifier](scripts/verify_t45_countermodels.py) and [deterministic output](results/t45_axiom_independence.json). MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND; FPA: PASS_WITH_BOUNDARY; no mandatory manuscript change. NOTION: https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2
-NEXT: FAS-F2-G0-001 — Section 2 primitive typing and structure, NOT_STARTED. Other F2 obligations remain open.
+NEXT: FAS-F2-T3.6-001 — Definition 3.5 and Theorem 3.6 formation-trace characterization, NOT_STARTED. Other F2 obligations remain open.
 
 LATEST FPA AUDIT: [Theorem 4.7 precommit](THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md) and [Theorem 4.7 result](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md). Six residual clauses each have a counterinterpretation satisfying the other five: `PROVED_IN_DECLARED_BACKGROUND` under **residualized** premises, FPA `PASS_WITH_REFINEMENT`, `REVISION_NEED=CLARIFICATION`. Manuscript "other primitive axioms" needs precise rewording; it cannot include the omitted clause's parent axiom unaltered. [Python](scripts/verify_t47_residual_clauses.py) · [JSON](results/t47_residual_clauses.json). [Notion T4.7 audit](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
 
 
 LATEST SECTION AUDIT (2026-10-19): [§4.3 precommit](SECTION_AUDITS/FAS-F2-SEC4.3-001_PRECOMMIT.md), [§4.3 seven-item result](SECTION_AUDITS/FAS-F2-SEC4.3-001_RESULT.md), [finite verifier](scripts/verify_sec43.py), [deterministic output](results/sec43_witnesses.json). Verdict `PROVED_IN_DECLARED_BACKGROUND` for these seven source items / `PASS_WITH_BOUNDARY`, with optional Countermodel 4.9 identity-restriction explanation, no mandatory manuscript edit. [Notion audit](https://app.notion.com/p/3fe81f51e7fa81c88b4dfc5f7e936d7d). Theorem 4.7's prior wording clarification remains separately tracked; no silent change to original PDF.
+
+
+LATEST FOUNDATION AUDIT (2026-10-19): [Section 2 prospective precommit](SECTION_AUDITS/FAS-F2-G0-001_PRECOMMIT.md), [Section 2 mathematical audit](SECTION_AUDITS/FAS-F2-G0-001_RESULT.md), [coordinate-erasure verifier](scripts/verify_g0_stage_reductions.py), [120/36 deterministic JSON](results/g0_stage_reductions.json). Mathematical Proposition 2.5 `PROVED_IN_DECLARED_BACKGROUND`; Definitions 2.1–2.4 are internally coherent with the declared typed conventions (definitions are not independent theorems). FPA `PASS_WITH_BOUNDARY`; class-map/set-function and arbitrary well-typed vs full-model truncation are optional explanatory refinements, **no mandatory theorem/axiom revision**. [Notion G0 audit](https://app.notion.com/p/3fe81f51e7fa81448c14ebbd7c0dc292). All post-standardization reviews are internal, not externally independently verified. Existing Zenodo source remains unmodified.
