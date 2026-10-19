@@ -1,5 +1,5 @@
 # Formation F2 — execution plan and checkpoints
-Status: PREPARED_FOR_EXECUTION (not a completed proof audit). Date: 2026-10-19.
+Status: IN_PROGRESS — Theorem 3.3 theorem-local audit complete; full Formation F2 not complete. Date: 2026-10-19.
 
 ## Initial work unit FAS-F2-T3.3-001
 1. Lock Theorem 3.3 exact statement and its proof in the supplied 33-page source (Section 3, PDF page 8; page number must be verified against the source artifact).
@@ -24,3 +24,11 @@ Old Notion 2026-09-10 internal status: PASS-CONDITIONAL, historical.
 Formation companion code: finite witness/regression only; general manuscript theorems not automatically formally certified.
 Current FPA execution status: NOT_STARTED; no false PASS count.
 Publication policy: record incremental audits only in method-family GitHub/Notion, link the manuscript repo; Zenodo version only upon justified material correction or substantive release, with prompt public correction for material errors.
+
+## Checkpoint reached — 2026-10-19 (do not skip)
+- Completed `FAS-F2-T3.3-001` with prospective precommit commit `033fb2159d05635f27059bed6e04c3ad4593f55c` and [theorem audit result](THEOREM_AUDITS/FAS-F2-T3.3-001_RESULT.md) commit `4c6ff68061b530db1ff75e62f543dc29f100d429`.
+- MATHEMATICAL_VERDICT: `PROVED_IN_DECLARED_BACKGROUND` (**only** Theorem 3.3); FPA process `PASS_WITH_BOUNDARY`.
+- Relative uniqueness is restricted to **same** supplied `W_L,T_L`; primitive-core expansion has a zero-F-vector-space witness; no mandatory manuscript correction.
+- Notion audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
+- Next work unit `FAS-F2-T4.5-001` (not started): independently recheck Countermodels 4.1–4.4 against the entire typed background and every other primitive axiom; use a **new prospective precommit** before any result. STOP again after this theorem group.
+- All other F2 propositions and the paper-wide claim remain OPEN/NOT_REVIEWED. No Zenodo changes.
