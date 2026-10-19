@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-P6.11-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `65e013773573723d030d9a38cb8ffee6b3588f5d` (F2 P6.11 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-C6.12-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `c01cf551d5103c8e6e5aa60ee0cbecc6e50a603b` (F2 C6.12 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-P6.11-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 6 theorem-level FPA audits + one Proposition 6.11 + two Section 6.2 corollaries completed.
-Next canonical step: **post-standardization FPA / Formation F2 Corollary 6.12 induced channel and finite-composite preservation (FAS-F2-C6.12-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-C6.12-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 6 theorem-level FPA audits + Proposition 6.11 + three corollaries (6.6/6.7/6.12) completed.
+Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.14 strict formation equivalence relation (FAS-F2-T6.14-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,6 +28,41 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+## 0K. Latest FPA Corollary 6.12 — 2026-10-19
+
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-C6.12-001
+AUDIT_CASE: FAS-F2-C6.12-001
+SOURCE_PDF_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: 61e06af98797f0217e7093c9bf431bbe4b1ec99b
+RESULT_COMMIT: c01cf551d5103c8e6e5aa60ee0cbecc6e50a603b
+PYTHON_COMMIT: 0e3fffc9b8d2ca3f8aeb7f8bdf225696424cee48
+JSON_COMMIT: 03f0b2e3ffc2f86915f3074af61dd5e04a9c7b83
+C6_12_MATH: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+CANDIDATE_EQUIVALENCES_FINITE: 32
+ADMITTED_CHANNELS_EACH: 3
+FINITE_FAMILIES: 8
+INVERSE_FAMILY_CHECKS: 8
+FINITE_COMPOSITE_CHECKS: 8
+NONEMPTY_ZERO_SUM_CASES: 1
+THEOREM_LEVEL_FPA_COMPLETED: 6
+PROPOSITION_6_11_COMPLETED: 1
+COROLLARIES_6_6_6_7_6_12_COMPLETED: 3
+NEXT: FAS-F2-T6.14-001 / NOT_STARTED
+F2_FULL_PAPER: NOT_COMPLETE
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+ORIGINAL_PDF_ZENODO: unchanged
+```
+- [C6.12 prospective obligations](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-C6.12-001_PRECOMMIT.md)
+- [C6.12 mathematical result](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-C6.12-001_RESULT.md)
+- [C6.12 Python finite interface](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_c612_channel_composites.py)
+- [C6.12 JSON finite crosscheck](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/c612_channel_composites.json)
+
+Channel bijection, finite powerset bijection, and finite J-linear composite equation proved within exact source conditions. Supplemental finite interface case is not full-formation-model or external verification; F2 full manuscript OPEN.
 
 ## 0J. Latest FPA Definition 6.10 / Proposition 6.11 — 2026-10-19
 
