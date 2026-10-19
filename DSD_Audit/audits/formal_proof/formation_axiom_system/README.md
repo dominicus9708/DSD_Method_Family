@@ -1,6 +1,6 @@
 # Formation Axiom System — F2 / FPA audit case
 
-**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_6_16_6_17_6_19_6_20_PROPOSITIONS_6_11_6_22_AND_COROLLARIES_6_6_6_7_6_12_6_18_COMPLETED  
+**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_6_16_6_17_6_19_6_20_6_23_PROPOSITIONS_6_11_6_22_AND_COROLLARIES_6_6_6_7_6_12_6_18_COMPLETED  
 **DATE:** 2026-10-20  
 **SUBJECT_CLASS:** FOUNDATIONAL_THEORY  
 **OWNER_METHOD:** DSD Audit  
@@ -23,7 +23,7 @@ NOTION Formation case: https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296
 
 NOTION completed T3.3 audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
 LATEST: [Theorem 4.5 precommit](THEOREM_AUDITS/FAS-F2-T4.5-001_PRECOMMIT.md), [proof audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md), [finite verifier](scripts/verify_t45_countermodels.py) and [deterministic output](results/t45_axiom_independence.json). MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND; FPA: PASS_WITH_BOUNDARY; no mandatory manuscript change. NOTION: https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2
-NEXT: FAS-F2-T6.23-001 — Theorem 6.23 layerwise obstruction to strict formation equivalence, NOT_STARTED. Other F2 obligations remain open.
+NEXT: FAS-F2-C6.24-001 — Corollary 6.24 assignment-domain obstruction, NOT_STARTED. Other F2 obligations remain open.
 
 LATEST FPA AUDIT: [Theorem 4.7 precommit](THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md) and [Theorem 4.7 result](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md). Six residual clauses each have a counterinterpretation satisfying the other five: `PROVED_IN_DECLARED_BACKGROUND` under **residualized** premises, FPA `PASS_WITH_REFINEMENT`, `REVISION_NEED=CLARIFICATION`. Manuscript "other primitive axioms" needs precise rewording; it cannot include the omitted clause's parent axiom unaltered. [Python](scripts/verify_t47_residual_clauses.py) · [JSON](results/t47_residual_clauses.json). [Notion T4.7 audit](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
 
@@ -97,3 +97,6 @@ Notion synchronized F2 Theorem 6.20 formal proof audit: https://app.notion.com/p
 LATEST P6.22 FORMAL PROOF AUDIT (2026-10-20): [precommit](THEOREM_AUDITS/FAS-F2-P6.22-001_PRECOMMIT.md), [complete explicit model proof](THEOREM_AUDITS/FAS-F2-P6.22-001_RESULT.md), [locally executed Python](scripts/verify_p622_composite_coincidence.py), [finite JSON](results/p622_composite_coincidence.json). Original Section6.5 Definition6.21 / Proposition6.22: J=id_R prescribed BEFORE choosing nonempty families {c0} and {d+,d−}; fixed same-base full models with primitive axioms I/II/III/V and clauses IV/VI/VII, role/channel counts 1 vs2, terms 0 vs+1/-1 give equal 0 aggregate without strict isomorphism. `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE`; 3/3 source-typed candidate trace iff checks in selected locally executed finite fixture. Exact real-linearity of id_R proven mathematically, not by finite integer test. Total **11 theorem-level, 2 proposition-level P6.11/P6.22, 4 corollaries**. F2 paper-wide FPA OPEN; external independent certification not established, PDF/Zenodo unchanged. CURRENT NEXT FAS-F2-T6.23-001 / NOT_STARTED. Earlier NEXT statements are historical.
 
 Notion synchronized P6.22 fixed-J nonempty-composite counterexample audit: https://app.notion.com/p/3fe81f51e7fa81468bd0df0551cd8170
+
+
+LATEST T6.23 FORMAL PROOF AUDIT (2026-10-20): [prospective precommit](THEOREM_AUDITS/FAS-F2-T6.23-001_PRECOMMIT.md), [source-defined logical proof](THEOREM_AUDITS/FAS-F2-T6.23-001_RESULT.md), [portable Python](scripts/verify_t623_layerwise_obstruction.py), [finite JSON](results/t623_layerwise_obstruction.json). PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE. Properly typed Cand(L,M) includes F-linear J isomorphism from outset; universal coordinate-failure condition is precisely negation of an all-nine satisfying candidate. Five nonvacuous typed failed pairs, one vacuous empty-Cand pair and one strict positive control in 7 pairs/12 candidate comparisons. An independently written source-typed local Python checker executed; uploaded portable script has not been independently fresh-run. Full F2 paper OPEN, external validation unestablished. **12 theorem-level, 2 propositions, 4 corollaries.** CURRENT NEXT FAS-F2-C6.24-001 / NOT_STARTED; C6.25/6.26 separate. Earlier NEXT entries historical.
