@@ -1,6 +1,6 @@
 # Formation Axiom System — F2 / FPA audit case
 
-**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_6_16_6_17_6_19_6_20_6_23_PROPOSITIONS_6_11_6_22_AND_COROLLARIES_6_6_6_7_6_12_6_18_6_24_6_25_COMPLETED  
+**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_6_16_6_17_6_19_6_20_6_23_PROPOSITIONS_6_11_6_22_AND_COROLLARIES_6_6_6_7_6_12_6_18_6_24_6_25_6_26_COMPLETED  
 **DATE:** 2026-10-20  
 **SUBJECT_CLASS:** FOUNDATIONAL_THEORY  
 **OWNER_METHOD:** DSD Audit  
@@ -23,7 +23,7 @@ NOTION Formation case: https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296
 
 NOTION completed T3.3 audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
 LATEST: [Theorem 4.5 precommit](THEOREM_AUDITS/FAS-F2-T4.5-001_PRECOMMIT.md), [proof audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md), [finite verifier](scripts/verify_t45_countermodels.py) and [deterministic output](results/t45_axiom_independence.json). MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND; FPA: PASS_WITH_BOUNDARY; no mandatory manuscript change. NOTION: https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2
-NEXT: FAS-F2-C6.26-001 — Corollary 6.26 channel-cardinality obstruction, NOT_STARTED. Other F2 obligations remain open.
+NEXT: FAS-F2-T7.1-001 — Theorem 7.1 existence of full formation model, NOT_STARTED. Other F2 obligations remain open.
 
 LATEST FPA AUDIT: [Theorem 4.7 precommit](THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md) and [Theorem 4.7 result](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md). Six residual clauses each have a counterinterpretation satisfying the other five: `PROVED_IN_DECLARED_BACKGROUND` under **residualized** premises, FPA `PASS_WITH_REFINEMENT`, `REVISION_NEED=CLARIFICATION`. Manuscript "other primitive axioms" needs precise rewording; it cannot include the omitted clause's parent axiom unaltered. [Python](scripts/verify_t47_residual_clauses.py) · [JSON](results/t47_residual_clauses.json). [Notion T4.7 audit](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
 
@@ -112,3 +112,6 @@ Notion synchronized C6.24 full source-bound FPA audit: https://app.notion.com/p/
 LATEST FPA COROLLARY C6.25 (2026-10-20): [prospective precommit](THEOREM_AUDITS/FAS-F2-C6.25-001_PRECOMMIT.md), [general proof and nonvacuous model](THEOREM_AUDITS/FAS-F2-C6.25-001_RESULT.md), [portable Python](scripts/verify_c625_role_obstruction.py), [saved finite JSON](results/c625_role_obstruction.json). `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE`. Source E8 role-relation iff is a strict-isomorphism necessity. Finite full typed models with material-vs-kind role patterns have equal role counts, four admitted channels, defined-zero q values, and equal composites, yet all eight candidate role permutations fail E8 with E1–E7 passing; [1,1] vs [2,2] role-degree invariant. Positive strict control: four E8-preserving candidates, two full strict candidates. Source candidate trace iff 16/16. Script and JSON saved/read back; independent short local Python recheck of mapping counts executed; exact remote downloaded script not fresh-run (offline). Whole F2 OPEN, source PDF/Zenodo unchanged, no independent external review. **12 theorem-level, 2 propositions, 6 corollaries audited. CURRENT NEXT FAS-F2-C6.26-001 / NOT_STARTED.** Earlier NEXT fields are historical provenance only.
 
 Notion synchronized C6.25 source-locked FPA result: https://app.notion.com/p/3fe81f51e7fa81f7a548fd06e761453f
+
+
+LATEST FPA COROLLARY 6.26 (2026-10-20): [prospective precommit](THEOREM_AUDITS/FAS-F2-C6.26-001_PRECOMMIT.md), [general mathematical audit](THEOREM_AUDITS/FAS-F2-C6.26-001_RESULT.md), [exact executed Python](scripts/verify_c626_channel_cardinality.py), [verified JSON](results/c626_channel_cardinality.json). `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE`. Original source §6.5 printed p.24: |C_L|≠|C_M| directly contradicts C6.12's strict-formation channel bijection; this holds for any set-sized channel sets, not just finite ones. Local 5 source-typed full models: 1 vs2 channels with equal role-carrier counts and same zero composite, 0 vs1, positive strict 1 vs1 and nonstrict equal 1 vs1 with incompatible T, ten trace iff PASS. Exact Python/JSON Git blob SHA matched actually executed local bytes; no third-party independent replication. **12 theorem-level, 2 propositions, 7 corollaries completed**. Current NEXT **FAS-F2-T7.1-001 / NOT_STARTED**; original PDF/Zenodo unchanged, historical T4.7 wording recommendation maintained, full F2 paper audit OPEN.
