@@ -135,3 +135,5 @@ Default output: \`DSD_Audit/audits/formal_proof/formation_axiom_system/results/c
 These boundaries delimit the source's hypothesis, source typing and selected finite sample; they are **not** an open mathematical proof gap in Corollary 6.25. Whole F2 manuscript FPA remains **OPEN**, original PDF and Zenodo remain unchanged, and DSD Method Family internal-standardization count **22/22** is unchanged.
 
 **Resumable next:** \`FAS-F2-C6.26-001\` — Corollary 6.26 (Channel-cardinality obstruction), **NOT_STARTED**.
+
+[Notion synchronized FAS-F2-C6.25-001 audit](https://app.notion.com/p/3fe81f51e7fa81f7a548fd06e761453f)
