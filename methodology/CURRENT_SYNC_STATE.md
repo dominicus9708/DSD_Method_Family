@@ -67,6 +67,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Theorem 6.23 is exact negation of strict-isomorphism candidate existence under Definition 6.10. Candidate J is already a linear isomorphism, distinct from stage ambient arbitrary J. No uniform failed Ei or numerical b inferred. Selected full-model finite checks separate from universal proof. Earlier T4.7 wording clarification and full-paper OPEN retained.
 
+- [Notion synchronized F2 Theorem 6.23 audit](https://app.notion.com/p/3fe81f51e7fa81a594a8f2113f29779f)
+
 ## 0R. Latest FPA Definition 6.21 / Proposition 6.22 — 2026-10-20
 
 ```text
