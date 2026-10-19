@@ -1,6 +1,6 @@
 # Formation Axiom System — F2 / FPA audit case
 
-**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_AND_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_COMPLETED  
+**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_AND_PROPOSITION_6_11_COMPLETED  
 **DATE:** 2026-10-19  
 **SUBJECT_CLASS:** FOUNDATIONAL_THEORY  
 **OWNER_METHOD:** DSD Audit  
@@ -23,7 +23,7 @@ NOTION Formation case: https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296
 
 NOTION completed T3.3 audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
 LATEST: [Theorem 4.5 precommit](THEOREM_AUDITS/FAS-F2-T4.5-001_PRECOMMIT.md), [proof audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md), [finite verifier](scripts/verify_t45_countermodels.py) and [deterministic output](results/t45_axiom_independence.json). MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND; FPA: PASS_WITH_BOUNDARY; no mandatory manuscript change. NOTION: https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2
-NEXT: FAS-F2-P6.11-001 — Definition 6.10 / Proposition 6.11, NOT_STARTED. Other F2 obligations remain open.
+NEXT: FAS-F2-C6.12-001 — Corollary 6.12 induced channel and finite-composite preservation, NOT_STARTED. Other F2 obligations remain open.
 
 LATEST FPA AUDIT: [Theorem 4.7 precommit](THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md) and [Theorem 4.7 result](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md). Six residual clauses each have a counterinterpretation satisfying the other five: `PROVED_IN_DECLARED_BACKGROUND` under **residualized** premises, FPA `PASS_WITH_REFINEMENT`, `REVISION_NEED=CLARIFICATION`. Manuscript "other primitive axioms" needs precise rewording; it cannot include the omitted clause's parent axiom unaltered. [Python](scripts/verify_t47_residual_clauses.py) · [JSON](results/t47_residual_clauses.json). [Notion T4.7 audit](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
 
@@ -52,3 +52,6 @@ Notion completed C6.6/C6.7 audit: https://app.notion.com/p/3fe81f51e7fa81fdbccef
 LATEST FPA THEOREM 6.8 (2026-10-19): [Prospective T6.8 obligations](THEOREM_AUDITS/FAS-F2-T6.8-001_PRECOMMIT.md), [general proof audit](THEOREM_AUDITS/FAS-F2-T6.8-001_RESULT.md), [portable Python](scripts/verify_t68_embedding_reflection.py), [selected finite witnesses](results/t68_embedding_reflection.json). `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE`. Eight typed source candidate-channel membership checks and four finite-subset compositions passed in local sample; admissible target-only channel and invalid-without-witness-reflection adversarial case retained. Six theorem-level audits complete. Full F2 paper audit OPEN; no independent external review or manuscript change. Current NEXT FAS-F2-P6.11-001 / NOT_STARTED. Historic earlier NEXT fields are not active instructions.
 
 Notion synchronized T6.8 completed audit: https://app.notion.com/p/3fe81f51e7fa812f83c3c7cc3bd5266d
+
+
+LATEST STRICT-COMPARISON FPA (2026-10-19): [P6.11 prospective precommit](THEOREM_AUDITS/FAS-F2-P6.11-001_PRECOMMIT.md), [P6.11 mathematical audit result](THEOREM_AUDITS/FAS-F2-P6.11-001_RESULT.md), [portable finite verifier](scripts/verify_p611_strict_bijection.py), [finite check JSON](results/p611_strict_bijection.json). Both implications from source E1–E9 and F1–F6/R1–R5, including independent witness reflection and graph-derived E5, are `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE`. Three admitted source channels, 9 partial-graph candidate pairs, legal defined zero vs undefined and adversarial failures of bijectivity/reflection. A separately constructed local concise Python test passed; no claim of independent rerun of the committed code. **Six** audited theorem-level cases, **one** proposition-level P6.11 case, two separately reviewed C6.6/C6.7, Section 2 G0 and Section 4.3 seven-item group. Full F2 remains OPEN; latest next P6.11→**C6.12 / NOT_STARTED**. Historical NEXT fields are retrospective only.
