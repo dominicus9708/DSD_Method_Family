@@ -110,3 +110,5 @@ FINAL: MATHEMATICAL_VERDICT=PROVED_IN_DECLARED_BACKGROUND; DSD_AUDIT_VERDICT=PAS
 The prior optional wording-scope clarification for Theorem 4.7 remains separately recorded. F2 whole-paper audit OPEN, original PDF and Zenodo unchanged, DSD Method Family internal 22/22 unchanged.
 
 NEXT: FAS-F2-T6.23-001 — original manuscript Theorem 6.23, Layerwise obstruction to strict formation equivalence, NOT_STARTED. Do not invent a Theorem 6.21: 6.21 is a Definition.
+
+[Notion synchronized FAS-F2-P6.22-001 audit](https://app.notion.com/p/3fe81f51e7fa81468bd0df0551cd8170)
