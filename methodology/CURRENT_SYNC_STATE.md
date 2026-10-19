@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-20 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261020-FAS-F2-T6.20-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `899111ff77b03e74b1b6f1d0210c8daaba25493a` (F2 T6.20 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261020-FAS-F2-P6.22-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `aea05b2ce0ace0e41df70e0a4dc693a3ec61a24e` (F2 P6.22 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-T6.20-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 11 theorem-level FPA audits + Proposition 6.11 + four corollaries (6.6/6.7/6.12/6.18) completed.
-Next canonical step: **post-standardization FPA / Formation F2 Definition 6.21 and Proposition 6.22 composite-level coincidence without strict isomorphism (FAS-F2-P6.22-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-P6.22-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 11 theorem-level FPA audits + two propositions (6.11/6.22) + four corollaries (6.6/6.7/6.12/6.18) completed.
+Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.23 layerwise obstruction to strict formation equivalence (FAS-F2-T6.23-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,6 +28,46 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+## 0R. Latest FPA Definition 6.21 / Proposition 6.22 — 2026-10-20
+
+```text
+SYNC_EPOCH: MF-SYNC-20261020-FAS-F2-P6.22-001
+AUDIT_CASE: FAS-F2-P6.22-001
+SOURCE_PDF_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: 6f375adb5979f10cca3e77f401f78ddf1362f4d4
+RESULT_COMMIT: aea05b2ce0ace0e41df70e0a4dc693a3ec61a24e
+PYTHON_COMMIT: 0fd98592f1dbc3c2dc33773c76e4bbc6013f3188
+JSON_COMMIT: c26ca62a689f4d410d477c8abb129ce3fb3da44f
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+SOURCE_DEFINITION_6_21_REVIEWED: yes
+PRESCRIBED_J: id_R fixed before channel family selection
+FULL_SOURCE_ADMITTED_CHANNELS: 1
+FULL_TARGET_ADMITTED_CHANNELS: 2
+FULL_SOURCE_ROLES: 1
+FULL_TARGET_ROLES: 2
+NONEMPTY_SOURCE_FAMILY_SIZE: 1
+NONEMPTY_TARGET_FAMILY_SIZE: 2
+BOTH_COMPOSITE_VALUES: 0
+FINITE_CANDIDATE_TRACE_EQUIVALENCES: 3
+THEOREM_LEVEL_FPA_COMPLETED: 11
+PROPOSITIONS_6_11_6_22_FPA_COMPLETED: 2
+COROLLARIES_6_6_6_7_6_12_6_18_FPA_COMPLETED: 4
+NEXT: FAS-F2-T6.23-001 / NOT_STARTED
+F2_FULL_MANUSCRIPT_FPA: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+
+- [P6.22 precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-P6.22-001_PRECOMMIT.md)
+- [P6.22 exact mathematical witness](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-P6.22-001_RESULT.md)
+- [P6.22 locally executed Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_p622_composite_coincidence.py)
+- [P6.22 deterministic finite JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/p622_composite_coincidence.json)
+
+The same-base FULL Formation models both satisfy primitive I/II/III/V and definitional IV/VI/VII. Role/channel counts 1 vs 2 obstruct strict isomorphism; prescribed J=id_R nevertheless maps nonempty {c0} and {d+,d−} composites to the same 0. Terms are supplied separately from defined zero assignment. 3/3 finite candidate-trace checks supplement the explicit mathematical proof. T4.7 optional statement-scope clarification remains, F2 whole paper OPEN.
 
 ## 0Q. Latest FPA Theorem 6.20 — 2026-10-20
 
