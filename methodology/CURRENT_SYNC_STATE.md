@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-20 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261020-FAS-F2-T6.23-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `ec75595bfef0ef3019028470b41bded7f849d48e` (F2 T6.23 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261020-FAS-F2-C6.24-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `c5f04208cfa2785b13e02f53d17432a22f0b39b6` (F2 C6.24 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-T6.23-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 12 theorem-level FPA audits + two propositions (6.11/6.22) + four corollaries (6.6/6.7/6.12/6.18) completed.
-Next canonical step: **post-standardization FPA / Formation F2 Corollary 6.24 assignment-domain obstruction (FAS-F2-C6.24-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-C6.24-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 12 theorem-level FPA audits + two propositions (6.11/6.22) + five corollaries (6.6/6.7/6.12/6.18/6.24) completed.
+Next canonical step: **post-standardization FPA / Formation F2 Corollary 6.25 role obstruction (FAS-F2-C6.25-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -29,6 +29,50 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
 
+
+
+## 0T. Latest FPA Corollary 6.24 — 2026-10-20
+
+```text
+SYNC_EPOCH: MF-SYNC-20261020-FAS-F2-C6.24-001
+AUDIT_CASE: FAS-F2-C6.24-001
+SOURCE_PDF_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: 5b84e485525f1c01265dcfaa71421572efb38070
+RESULT_COMMIT: c5f04208cfa2785b13e02f53d17432a22f0b39b6
+PORTABLE_PYTHON_COMMIT: 3f84aa42c5ddcc3e01dcd2cc50635c01cf8bd5bb
+RESULT_JSON_COMMIT: 99491240808177d642df2124eb45e16eb0c2b45b
+INDEPENDENT_LOCAL_CHECKER_SHA256: c2e2c2da8626f1f4616d607161f04f55b1ed2604d4d721c88baca072f73fc5bf
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+NONVACUOUS_CANDIDATE_BIJECTIONS: 4
+E5_E6_FAILS: 4/4 EACH
+SOURCE_MATERIAL_INCIDENT_DEGREES: 0,2
+TARGET_MATERIAL_INCIDENT_DEGREES: 1,1
+PER_KIND_DOMAIN_SIZES_EACH: 1,1
+ASSIGNMENT_EDGES_EACH: 2
+ADMITTED_CHANNELS_EACH: 2
+MATCHING_FULL_COMPOSITE_OUTPUTS: yes (F2 value 1)
+POSITIVE_E5_PASS: 2/4
+POSITIVE_STRICT_ISO: 1
+EMPTY_CANDIDATE_CONTROL: yes
+THEOREM_LEVEL_FPA_COMPLETED: 12
+PROPOSITION_LEVEL_FPA_COMPLETED: 2
+COROLLARY_LEVEL_FPA_COMPLETED: 5
+NEXT: FAS-F2-C6.25-001 / NOT_STARTED
+COROLLARY_C6_26: NOT_REVIEWED
+F2_WHOLE_PAPER: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+
+- [C6.24 prospective precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-C6.24-001_PRECOMMIT.md)
+- [C6.24 full mathematics + selected model audit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-C6.24-001_RESULT.md)
+- [C6.24 portable Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_c624_assignment_domain.py)
+- [C6.24 finite JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/c624_assignment_domain.json)
+
+Theorem6.23/C6.24 source-paired audit: Corollary6.24 is strict Definition6.10 E5 necessary-condition obstruction. E6 under bijective pointed maps already implies E5. Exact nonvacuous source-typed negative model with equal aggregate quantities but different material-kind domain incidence; candidate failures 4/4. Candidate-set empty and genuine positive strict control separate. No automatic first-branch b=5 assertion, no original PDF/Zenodo edit, F2 whole-paper FPA OPEN.
 
 ## 0S. Latest FPA Theorem 6.23 — 2026-10-20
 
