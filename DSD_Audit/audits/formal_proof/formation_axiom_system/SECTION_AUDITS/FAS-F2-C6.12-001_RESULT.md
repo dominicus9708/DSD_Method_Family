@@ -118,3 +118,5 @@ Output: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/c612_chann
 **Final scoped verdict:** `PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED=NONE`. The boundary is the exact strict-isomorphism/fixed-base/finitely supported family premise and finite-test limitation; it is **not** a missing proof obligation.
 
 Earlier **Theorem 4.7** statement-scope clarification remains a distinct recorded issue. Frozen F2 PDF and Zenodo unchanged. **Stop this two-stage (mathematical derivation + finite supplement) corollary unit under timeout-prevention rule.** Next: `FAS-F2-T6.14-001`, Theorem 6.14 strict formation equivalence as an equivalence relation, NOT_STARTED. F2 full-manuscript FPA remains OPEN.
+
+[Notion synchronized C6.12 source-bound audit](https://app.notion.com/p/3fe81f51e7fa81db92b8d2386b5b6cee)
