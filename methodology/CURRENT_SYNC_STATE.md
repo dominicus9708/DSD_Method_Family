@@ -2,12 +2,12 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-T4.7-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `fa032fa64b42ec13ae70cc57a72257ba99f24b09` (Theorem 4.7 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-SEC4.3-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `2a03260813f27829762ba5375e93aa5a7b2494df` (Section 4.3 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Next canonical step: **post-standardization FPA / Formation F2 Section 4.3 consequences and non-implications, not yet started**; internal-build queue remains empty  
+Next canonical step: **post-standardization FPA / Formation F2 Section 2 primitive typing and foundation (FAS-F2-G0-001), not yet started**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,7 +28,38 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
 
-## 0C. Latest FPA proof-audit result — 2026-10-19
+## 0D. Latest FPA Section 4.3 audit — 2026-10-19
+
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-SEC4.3-001
+CASE_ID: FAS-F2-SEC4.3-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: dae15972d8cb3d800bdef4a9f3bcc7d4acfe97b8
+RESULT_COMMIT: 2a03260813f27829762ba5375e93aa5a7b2494df
+PYTHON_COMMIT: 23aac767ca055965c89f50cb781e46ad6e540c38
+JSON_COMMIT: 770b57a309134bfb90c35f143f441eb2e957aa67
+SEVEN_SOURCE_ITEMS: Cor4.8, CM4.9, Lem4.10, Cor4.11, Prop4.12, Lem4.13, Cor4.14
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND (these seven scoped items only)
+DSD_AUDIT_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: CLARIFICATION_OPTIONAL (Countermodel 4.9 identity restriction)
+PREVIOUS_T4_7_CLARIFICATION_ADVISORY: preserved / nonurgent
+THEOREM_LEVEL_FPA_CASES: 3 (unchanged)
+SECTION_FPA_CASES: 1 (seven source items)
+NEXT_CASE: FAS-F2-G0-001 / NOT_STARTED
+WHOLE_PAPER_F2: NOT_COMPLETE
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+ORIGINAL_PDF_ZENODO_CHANGE: none
+INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+- [Section 4.3 prospective precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC4.3-001_PRECOMMIT.md)
+- [Seven-item source-bound mathematical audit](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC4.3-001_RESULT.md)
+- [Finite witness verification code](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_sec43.py)
+- [Finite witness deterministic JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/sec43_witnesses.json)
+- [Notion Section 4.3 result](https://app.notion.com/p/3fe81f51e7fa81c88b4dfc5f7e936d7d)
+
+Mathematical truth standard remains classical mathematics relative to fixed typed background. The written general derivations and bounded executed witnesses are separate. Full F2 certification is still open. No re-opening of the 22-method internal standardization.
+
+## 0C. Historical FPA proof-audit result — 2026-10-19 (T4.7)
 ```text
 SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-T4.7-001
 AUDIT_CASE: FAS-F2-T4.7-001
