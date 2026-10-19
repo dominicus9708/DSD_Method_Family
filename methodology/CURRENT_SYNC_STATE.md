@@ -66,6 +66,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 For symmetry at k<7, choose a zero reverse-J; do not invert an arbitrary pre-7 J. At k=7 use its genuine F-linear inverse. For representative invariance use A:L'→L, B:M→M' and the conjugate BΘA; converse from inverse strict maps. Conditional first-branch index b respects these symmetries. Selected toy finite tests are not general/full-model validation. Historical T4.7 optional wording clarification remains, F2 paper-wide FPA OPEN.
 
+- [Notion synchronized T6.19 FPA case](https://app.notion.com/p/3fe81f51e7fa810fa32afcf4a8825294)
+
 ## 0O. Latest FPA Corollary 6.18 — 2026-10-19
 
 ```text
