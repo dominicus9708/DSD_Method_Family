@@ -63,6 +63,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 The same ambient full tuple population is progressively filtered; J arbitrary until Stage 7. T6.16 has a full general mathematics derivation. Observed I3=I4 finite fixture property DOES NOT count as a general T6.17 proof. Historical T4.7 clarification unaffected.
 
+- [Notion synchronized FAS-F2-T6.16-001 audit](https://app.notion.com/p/3fe81f51e7fa81b88d06d901cd345200)
+
 ## 0L. Latest FPA Theorem 6.14 — 2026-10-19
 
 ```text
