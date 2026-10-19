@@ -109,3 +109,5 @@ Default output: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/t6
 This is an **integration/synthesis theorem**: successful verification does not turn past FPA checks into an external proof of the entire F2 manuscript. The earlier Theorem 4.7 minor scope-wording clarification remains recorded independently. Source PDF/Zenodo unchanged; the existing DSD Method Family 22/22 internal-standardization count is not modified.
 
 **Next unstarted bounded case:** `FAS-F2-P6.22-001`, Definition 6.21 and Proposition 6.22, *Composite-level coincidence does not imply strict formation equivalence*, **NOT_STARTED**. Do not invent a “Theorem 6.21” (the original manuscript's 6.21 is a Definition).
+
+[Notion synchronized Theorem 6.20 FPA case](https://app.notion.com/p/3fe81f51e7fa8156b5afebf5d001b1d2)
