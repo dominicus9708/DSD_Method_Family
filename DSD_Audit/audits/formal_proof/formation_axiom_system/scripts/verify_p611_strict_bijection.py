@@ -57,6 +57,7 @@ def target(extra=False, changed_status=False, broken_graph=False):
         d["admcfg"].add("P2")  # forward holds but reflection fails
     if broken_graph:
         del d["q"]["beta"]  # zero assignment -> undefined: source graph mismatch
+        del d["term"][("P1", "beta", "R0")]  # T exists on admitted channels only
     if extra:
         d["mat"].add("z")
         d["expr"].add("E3")
