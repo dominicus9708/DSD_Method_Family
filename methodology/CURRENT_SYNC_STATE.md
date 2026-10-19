@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-C6.6-C6.7-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `2a6215c794aad7f466e27935fab755f005226d6a` (F2 C6.6/C6.7 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-T6.8-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `f3313780e4573ab72a49b1ec1f9dfe7afa4eb479` (F2 T6.8 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-SEC6.2-C6.6-C6.7-001 / BOTH PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 5 theorem-level FPA audits + two Section 6.2 corollaries completed.
-Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.8 embedding preservation and reflection (FAS-F2-T6.8-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-T6.8-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 6 theorem-level FPA audits + two Section 6.2 corollaries completed.
+Next canonical step: **post-standardization FPA / Formation F2 Definition 6.10 and Proposition 6.11 strict formation isomorphism (FAS-F2-P6.11-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,6 +28,39 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+## 0I. Latest FPA Theorem 6.8 — 2026-10-19
+
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-T6.8-001
+AUDIT_CASE: FAS-F2-T6.8-001
+SOURCE_PDF_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: d80b9306b0f780374262e2132160013d94d646f4
+RESULT_COMMIT: f3313780e4573ab72a49b1ec1f9dfe7afa4eb479
+PYTHON_FINAL_COMMIT: 9b2ddd734bef5e7319fd2b47906ad7218ace863a
+JSON_COMMIT: 28109d6d4f5154926de0cc1f7e06cf81581fadb1
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+FINITE_CANDIDATE_CHANNEL_EQUIVALENCES: 8
+FINITE_SUBSET_COMPOSITES: 4
+SRC_ADMITTED_CHANNELS: 2
+TARGET_ADMITTED_CHANNELS: 3
+WITNESS_REFLECTION_NECESSITY: independently exhibited
+THEOREM_LEVEL_FPA_CASES_COMPLETED: 6
+ADDITIONAL_SECTION_6_2_COROLLARIES_DONE: 2
+NEXT: FAS-F2-P6.11-001 / NOT_STARTED
+F2_FULL_PAPER: NOT_COMPLETE
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_STANDARDIZATION: 22/22 unchanged
+```
+- [Prospective source-bound T6.8 criteria](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T6.8-001_PRECOMMIT.md)
+- [General T6.8 mathematical audit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-T6.8-001_RESULT.md)
+- [Finite Python fixture](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_t68_embedding_reflection.py)
+- [Finite JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/t68_embedding_reflection.json)
+
+Theorem 6.8: all three on-image embedding consequences are proved relative to the source background; a forward map without independent witness reflection does NOT satisfy the embedding hypothesis. General proof and finite examples are kept separate. No whole-paper F2 verdict or independent external validation.
 
 ## 0H. Latest FPA Section 6.2 Corollaries 6.6 / 6.7 — 2026-10-19
 
