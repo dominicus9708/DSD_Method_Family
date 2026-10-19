@@ -124,3 +124,5 @@ Default result: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/c6
 The boundary concerns the exact quantified source hypothesis, full strict candidate requirements, the E5/E6 dependence and selected finite evidence, **not** a missing mathematical proof. F2 whole-paper audit still OPEN, public PDF/Zenodo unchanged and existing DSD Method Family 22/22 internal standardization unaffected.
 
 **Next resumable audit:** `FAS-F2-C6.25-001`, source Corollary 6.25 **Role obstruction**, NOT_STARTED. Corollary 6.26 (channel-cardinality) is independently NOT_REVIEWED.
+
+[Notion synchronized C6.24 audit](https://app.notion.com/p/3fe81f51e7fa8156b493e2e95e8fe987)
