@@ -60,3 +60,13 @@ Domain indexes are navigation aids. Historical audit records remain at their ori
 ## Historical paths / 기존 경로
 
 Older audit methodology and records may still exist in previous repository locations. They are preserved as historical/legacy paths and should not be silently rewritten. New audit methodology and new audit cases should use this `DSD_Audit/` structure.
+
+## Post-standardization proof-audit application / 형식 증명 감사
+On 2026-10-19, the Audit method registered an executable **FPA v0.1** mathematics specialization and a **Formation F2 source/obligation/plan packet**. This is an *application-preparation event*, not a completed theorem audit:
+- [Mathematics FPA protocol](protocols/mathematics/FORMAL_PROOF_AUDIT_v0.1.md)
+- [Formal proof audit template](templates/FORMAL_PROOF_AUDIT_TEMPLATE.md)
+- [Formation F2 case registry](audits/formal_proof/formation_axiom_system/README.md)
+- [Notion FPA hub](https://app.notion.com/p/3fe81f51e7fa81afb612fa69387cdeee)
+- [Notion Formation F2 case](https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296)
+
+Mathematical validity verdict and DSD Audit execution verdict are kept separate; no F2 general-proof PASS is claimed at preparation time.
