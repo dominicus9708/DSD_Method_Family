@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-20 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261020-FAS-F2-C6.25-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `ca080064df4c3fa3ddaa0bafee23289430acd890` (F2 C6.25 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261020-FAS-F2-C6.26-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `ee4fa30c2db957f3e132431280c199b5a38f37d3` (F2 C6.26 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-C6.25-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 12 theorem-level FPA audits + two propositions (6.11/6.22) + six corollaries (6.6/6.7/6.12/6.18/6.24/6.25) completed.
-Next canonical step: **post-standardization FPA / Formation F2 Corollary 6.26 channel-cardinality obstruction (FAS-F2-C6.26-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-C6.26-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 12 theorem-level FPA audits + two propositions (6.11/6.22) + seven corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26) completed.
+Next canonical step: **post-standardization FPA / Formation F2 Theorem 7.1 existence of full formation model (FAS-F2-T7.1-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -30,6 +30,48 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
 
 
+
+## 0V. Latest FPA Corollary 6.26 — 2026-10-20
+
+```text
+SYNC_EPOCH: MF-SYNC-20261020-FAS-F2-C6.26-001
+AUDIT_CASE: FAS-F2-C6.26-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: b52c46bf24077d891e44cac2487593b844ced066
+RESULT_COMMIT: ee4fa30c2db957f3e132431280c199b5a38f37d3
+PYTHON_FINAL_COMMIT: 4dfe6f3cffa73d7dfb31dc61edb7fb1490267c22
+PYTHON_EXACT_GIT_BLOB_SHA: 5eee91f7f09a617906558467510e124dee2bd33f
+PYTHON_SHA256: 83aab72820a9961f4538fbd3b920c8f9494ae2d0275a3d633aaef40366fa130b
+JSON_COMMIT: 98c126c897f24cae3af9526923222eef45dbe473
+JSON_EXACT_GIT_BLOB_SHA: 2b08002eeba3756d1d463f23561ff99ee06d6f7f
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+DSD_AUDIT_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+GENERAL_CHANNEL_CARDINALITY_OBSTRUCTION: PROVED
+FINITE_FULL_MODELS: 5
+FINITE_TYPED_CANDIDATE_TRACE_CHECKS: 10
+FINITE_NEGATIVE_CHANNEL_COUNTS: 1,2
+FINITE_SAME_ROLE_CARRIER_COUNTS: 2,2
+FINITE_NEGATIVE_COMPOSITES: 0,0
+FINITE_EMPTY_VS_SINGLETON_C: 0,1
+FINITE_STRICT_POSITIVE_1_VS_1: 1
+FINITE_EQUAL_CHANNEL_BUT_NONSTRICT: verified
+THEOREM_LEVEL_FPA_COMPLETED: 12
+PROPOSITION_LEVEL_FPA_COMPLETED: 2
+COROLLARY_LEVEL_FPA_COMPLETED: 7
+NEXT: FAS-F2-T7.1-001 / NOT_STARTED
+F2_FULL_PAPER: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+
+- [C6.26 precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-C6.26-001_PRECOMMIT.md)
+- [C6.26 general proof and exact result](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-C6.26-001_RESULT.md)
+- [C6.26 exactly executed Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_c626_channel_cardinality.py)
+- [C6.26 exactly verified JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/c626_channel_cardinality.json)
+
+Original source C6.12 strict map induces C_L→C_M bijection; unequal cardinalities forbid strict iso even for infinite sets. Exact file blob comparison in same runtime confirms portable GitHub Python and deterministic JSON match locally run bytes. Finite controls: equal U role-carrier count but C 1 vs2, 0 vs1, strict equal 1 vs1 and nonstrict equal 1 vs1. No arbitrary b-stage claim. Historical optional T4.7 wording recommendation remains; full F2 OPEN, original PDF/Zenodo unchanged.
 
 ## 0U. Latest FPA Corollary 6.25 — 2026-10-20
 
