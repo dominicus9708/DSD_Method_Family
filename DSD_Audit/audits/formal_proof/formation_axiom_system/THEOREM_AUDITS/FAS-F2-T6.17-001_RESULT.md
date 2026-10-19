@@ -183,3 +183,5 @@ Default output: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/t6
 **No** original PDF or Zenodo edit. Historic Theorem 4.7 wording-clarification recommendation remains separately open. **The full Formation F2 manuscript remains not completely audited.** The user's previously standardized 22/22 DSD Method Family methods remain unchanged.
 
 **Resumable checkpoint:** `FAS-F2-C6.18-001`, Corollary 6.18 (closure-stage exclusion, b≠4), **NOT_STARTED** pending its own prospective precommit.
+
+[Notion synchronized FAS-F2-T6.17-001 audit](https://app.notion.com/p/3fe81f51e7fa81c0a65dcb1005d56f71)
