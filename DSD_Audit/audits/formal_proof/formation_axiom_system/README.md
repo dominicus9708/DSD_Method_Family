@@ -1,6 +1,6 @@
 # Formation Axiom System — F2 / FPA audit case
 
-**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_6_16_6_17_PROPOSITION_6_11_AND_COROLLARIES_6_6_6_7_6_12_COMPLETED  
+**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_6_16_6_17_PROPOSITION_6_11_AND_COROLLARIES_6_6_6_7_6_12_6_18_COMPLETED  
 **DATE:** 2026-10-19  
 **SUBJECT_CLASS:** FOUNDATIONAL_THEORY  
 **OWNER_METHOD:** DSD Audit  
@@ -23,7 +23,7 @@ NOTION Formation case: https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296
 
 NOTION completed T3.3 audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
 LATEST: [Theorem 4.5 precommit](THEOREM_AUDITS/FAS-F2-T4.5-001_PRECOMMIT.md), [proof audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md), [finite verifier](scripts/verify_t45_countermodels.py) and [deterministic output](results/t45_axiom_independence.json). MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND; FPA: PASS_WITH_BOUNDARY; no mandatory manuscript change. NOTION: https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2
-NEXT: FAS-F2-C6.18-001 — Corollary 6.18 closure-stage exclusion b≠4, NOT_STARTED. Other F2 obligations remain open.
+NEXT: FAS-F2-T6.19-001 — Theorem 6.19 branching symmetry/strict-isomorphism invariance, NOT_STARTED. Other F2 obligations remain open.
 
 LATEST FPA AUDIT: [Theorem 4.7 precommit](THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md) and [Theorem 4.7 result](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md). Six residual clauses each have a counterinterpretation satisfying the other five: `PROVED_IN_DECLARED_BACKGROUND` under **residualized** premises, FPA `PASS_WITH_REFINEMENT`, `REVISION_NEED=CLARIFICATION`. Manuscript "other primitive axioms" needs precise rewording; it cannot include the omitted clause's parent axiom unaltered. [Python](scripts/verify_t47_residual_clauses.py) · [JSON](results/t47_residual_clauses.json). [Notion T4.7 audit](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
 
@@ -77,3 +77,6 @@ Notion synchronized Theorem 6.16 source-bound FPA audit: https://app.notion.com/
 LATEST COMPLETED FPA T6.17 (2026-10-19): [prospective precommit](THEOREM_AUDITS/FAS-F2-T6.17-001_PRECOMMIT.md), [complete mathematical proof audit](THEOREM_AUDITS/FAS-F2-T6.17-001_RESULT.md), [locally executed Python](scripts/verify_t617_closure_nonbranching.py), [JSON](results/t617_closure_nonbranching.json). PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE. Claims (i) Stage4/6/7 unique **relative to supplied Role,W,T**, (ii) **general** I3=I4, (iii) I6 bijective candidate/admitted channel transport, (iv) I7 bijective finite-family and finite-composite preservation all audited separately. Finite selected fixture: 72 carrier/expression/config bijection triples, 1 valid I3+I4, 72 candidate channel membership equivalences, 4 finite composites. This **upgrades previous finite-only I3=I4 observation** to the source-bounded general proof, not C6.18's own completed audit. Nine theorem-level audits complete. F2 whole-paper OPEN, independent external verification not established. CURRENT NEXT FAS-F2-C6.18-001 / NOT_STARTED; earlier historical NEXT labels remain provenance.
 
 Notion synchronized F2 Theorem 6.17 audit: https://app.notion.com/p/3fe81f51e7fa81c0a65dcb1005d56f71
+
+
+LATEST FPA COROLLARY 6.18 (2026-10-19): [locked precommit](SECTION_AUDITS/FAS-F2-C6.18-001_PRECOMMIT.md), [general source-bounded derivation](SECTION_AUDITS/FAS-F2-C6.18-001_RESULT.md), [portable Python](scripts/verify_c618_closure_exclusion.py), [finite JSON](results/c618_closure_exclusion.json). PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE: if b defined and b=4, minimum yields I3 nonempty but I4 empty, contradicting Theorem 6.17 I3=I4. Adversarial checks: 820 abstract nested profiles, 585 satisfying I3=I4 (zero b4); 71 violating equality demonstrate nestedness alone insufficient. Reused earlier source-typed 8 T6.16 fixtures, all no b4. GitHub script not independent post-commit rerun. Nine theorem-level audits; four separately audited corollaries C6.6/C6.7/C6.12/C6.18, and P6.11. Full F2 paper OPEN, source PDF/Zenodo unchanged, no external independent audit. CURRENT NEXT FAS-F2-T6.19-001 / NOT_STARTED. Older NEXT entries historical only.
