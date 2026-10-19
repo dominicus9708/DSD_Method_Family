@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-T6.8-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `f3313780e4573ab72a49b1ec1f9dfe7afa4eb479` (F2 T6.8 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-P6.11-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `65e013773573723d030d9a38cb8ffee6b3588f5d` (F2 P6.11 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-T6.8-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 6 theorem-level FPA audits + two Section 6.2 corollaries completed.
-Next canonical step: **post-standardization FPA / Formation F2 Definition 6.10 and Proposition 6.11 strict formation isomorphism (FAS-F2-P6.11-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-P6.11-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 6 theorem-level FPA audits + one Proposition 6.11 + two Section 6.2 corollaries completed.
+Next canonical step: **post-standardization FPA / Formation F2 Corollary 6.12 induced channel and finite-composite preservation (FAS-F2-C6.12-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,6 +28,39 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+## 0J. Latest FPA Definition 6.10 / Proposition 6.11 — 2026-10-19
+
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-P6.11-001
+AUDIT_CASE: FAS-F2-P6.11-001
+SOURCE_PDF_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: f782a7930206b344ae58e7eaf69e0e72be2aa9d5
+RESULT_COMMIT: 65e013773573723d030d9a38cb8ffee6b3588f5d
+PYTHON_COMMIT: 6bfa5ea887e58f2515d9da433bdea9ee6017b3b2
+JSON_COMMIT: b583d1ae5a98ad7628c19212c309372ab389f7a2
+PROPOSITION_6_11_MATH: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+STRICT_CLAUSE_SET: E1-E9 (9)
+FINITE_SOURCE_ADMITTED_CHANNELS: 3
+FINITE_GRAPH_INPUT_VALUE_PAIRS: 9
+DEFINED_ZERO_VS_UNDEFINED: distinguished
+THEOREM_LEVEL_FPA_COMPLETED: 6
+NEW_PROPOSITION_LEVEL_FPA_COMPLETED: 1
+C6_6_C6_7_FPA_COMPLETED: 2
+NEXT: FAS-F2-C6.12-001 / NOT_STARTED
+F2_FULL_PAPER: NOT_COMPLETE
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+ORIGINAL_PDF_ZENODO: unchanged
+```
+- [P6.11 immutable prospective precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-P6.11-001_PRECOMMIT.md)
+- [P6.11 detailed audit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-P6.11-001_RESULT.md)
+- [P6.11 portable verifier](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_p611_strict_bijection.py)
+- [P6.11 finite JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/p611_strict_bijection.json)
+
+E5 definition-domain iff is a theorem-level consequence of E6 graph reflection plus bijective pointed I. Strict ⇒ bijective embedding also proves witness reflection using surjective expression/configuration maps. A local separately constructed concise Python fixture succeeded; no claim of external replication of committed verifier. Full F2 paper OPEN.
 
 ## 0I. Latest FPA Theorem 6.8 — 2026-10-19
 
