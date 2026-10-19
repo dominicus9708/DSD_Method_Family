@@ -104,3 +104,5 @@ The fixtures exercise only a narrowly chosen legal subclass. They do not computa
 `WITH_BOUNDARY` refers to the original fixed-base/full-model category scope, large-class bookkeeping and the difference between arbitrary embeddings and literal inclusion submodels. It does **not** signify an incomplete proof for either source corollary. No release of new F2/Zenodo version is justified on this finding alone.
 
 **Checkpoint:** end this bounded two-corollary unit. Next anticipated case: `FAS-F2-T6.8-001`, Theorem 6.8 embedding preservation/reflection, NOT_STARTED. Full F2 paper audit OPEN. Previously recorded Theorem 4.7 clarification issue remains separate.
+
+[Notion synchronized case](https://app.notion.com/p/3fe81f51e7fa81fdbccef571bee0537b)
