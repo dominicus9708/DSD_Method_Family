@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-19 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261019-FAS-F2-T6.5-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `e4783eb923d9a1fb29597ee0b74bddcb1a0533f7` (F2 T6.5 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261019-FAS-F2-C6.6-C6.7-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `2a6215c794aad7f466e27935fab755f005226d6a` (F2 C6.6/C6.7 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-T6.5-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 5 theorem-level FPA audits completed.
-Next canonical step: **post-standardization FPA / Formation F2 Corollaries 6.6 and 6.7 (FAS-F2-SEC6.2-C6.6-C6.7-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-SEC6.2-C6.6-C6.7-001 / BOTH PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 5 theorem-level FPA audits + two Section 6.2 corollaries completed.
+Next canonical step: **post-standardization FPA / Formation F2 Theorem 6.8 embedding preservation and reflection (FAS-F2-T6.8-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -28,6 +28,41 @@ Canonical closure record: [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_C
 It does not replace method-specific READMEs, immutable precommits, protocols, evidence records, audits, or historical worklogs.
 
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
+
+## 0H. Latest FPA Section 6.2 Corollaries 6.6 / 6.7 — 2026-10-19
+
+```text
+SYNC_EPOCH: MF-SYNC-20261019-FAS-F2-C6.6-C6.7-001
+AUDIT_CASE: FAS-F2-SEC6.2-C6.6-C6.7-001
+SOURCE_PDF_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: aaaaee5ea100a4915ecd25a5bd44ceca4509ecd8
+RESULT_COMMIT: 2a6215c794aad7f466e27935fab755f005226d6a
+PYTHON_COMMIT: 7fc37cafa0a5033c648b110df9908bad55b91d3b
+JSON_COMMIT: 4972e91fcb397acf9b7a0ab290e06c62121d172e
+C6_6_MATH: PROVED_IN_DECLARED_BACKGROUND
+C6_7_MATH: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+FINITE_IDENTITY_CASES: 494
+FINITE_ASSOCIATIVITY_CASES: 1152
+FINITE_EMBEDDING_COMPOSITES: 288
+FINITE_SUBMODEL_REFLEXIVITY: 4
+FINITE_SUBMODEL_TRANSITIVITY: 20
+THEOREM_LEVEL_FPA_AUDITS_DONE: 5
+SECTION_6_2_COROLLARY_RESULTS_DONE: 2
+NEXT: FAS-F2-T6.8-001 / NOT_STARTED
+F2_WHOLE_PAPER: NOT_COMPLETE
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+ORIGINAL_PDF_ZENODO: unchanged
+```
+
+- [C6.6/C6.7 precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC6.2-C6.6-C6.7-001_PRECOMMIT.md)
+- [C6.6/C6.7 audit result](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC6.2-C6.6-C6.7-001_RESULT.md)
+- [Reproducible Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_c66_c67.py)
+- [Finite-test JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/c66_c67_category_preorder.json)
+
+Source conditions: fixed (B,F), full formation model objects, source-declared forward maps and embeddings, literal inclusion submodel. Wide subcategory does not mean all forward maps are embeddings. Finite toy runs are not general proofs. Theorem 4.7 earlier wording clarification remains preserved.
 
 ## 0G. Latest FPA Theorem 6.5 audit — 2026-10-19
 
