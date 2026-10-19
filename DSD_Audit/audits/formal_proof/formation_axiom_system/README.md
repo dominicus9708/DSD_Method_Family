@@ -1,6 +1,6 @@
 # Formation Axiom System — F2 / FPA audit case
 
-**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_AND_THEOREMS_3_3_3_6_4_5_4_7_COMPLETED  
+**CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_AND_THEOREMS_3_3_3_6_4_5_4_7_6_5_COMPLETED  
 **DATE:** 2026-10-19  
 **SUBJECT_CLASS:** FOUNDATIONAL_THEORY  
 **OWNER_METHOD:** DSD Audit  
@@ -23,7 +23,7 @@ NOTION Formation case: https://app.notion.com/p/3fe81f51e7fa811a9645d2c684661296
 
 NOTION completed T3.3 audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
 LATEST: [Theorem 4.5 precommit](THEOREM_AUDITS/FAS-F2-T4.5-001_PRECOMMIT.md), [proof audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md), [finite verifier](scripts/verify_t45_countermodels.py) and [deterministic output](results/t45_axiom_independence.json). MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND; FPA: PASS_WITH_BOUNDARY; no mandatory manuscript change. NOTION: https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2
-NEXT: FAS-F2-T6.5-001 — Theorem 6.5 forward-map/embedding identity and composition laws, NOT_STARTED. Other F2 obligations remain open.
+NEXT: FAS-F2-SEC6.2-C6.6-C6.7-001 — Category and submodel-preorder corollaries, NOT_STARTED. Other F2 obligations remain open.
 
 LATEST FPA AUDIT: [Theorem 4.7 precommit](THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md) and [Theorem 4.7 result](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md). Six residual clauses each have a counterinterpretation satisfying the other five: `PROVED_IN_DECLARED_BACKGROUND` under **residualized** premises, FPA `PASS_WITH_REFINEMENT`, `REVISION_NEED=CLARIFICATION`. Manuscript "other primitive axioms" needs precise rewording; it cannot include the omitted clause's parent axiom unaltered. [Python](scripts/verify_t47_residual_clauses.py) · [JSON](results/t47_residual_clauses.json). [Notion T4.7 audit](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
 
@@ -34,6 +34,9 @@ LATEST SECTION AUDIT (2026-10-19): [§4.3 precommit](SECTION_AUDITS/FAS-F2-SEC4.
 LATEST FOUNDATION AUDIT (2026-10-19): [Section 2 prospective precommit](SECTION_AUDITS/FAS-F2-G0-001_PRECOMMIT.md), [Section 2 mathematical audit](SECTION_AUDITS/FAS-F2-G0-001_RESULT.md), [coordinate-erasure verifier](scripts/verify_g0_stage_reductions.py), [120/36 deterministic JSON](results/g0_stage_reductions.json). Mathematical Proposition 2.5 `PROVED_IN_DECLARED_BACKGROUND`; Definitions 2.1–2.4 are internally coherent with the declared typed conventions (definitions are not independent theorems). FPA `PASS_WITH_BOUNDARY`; class-map/set-function and arbitrary well-typed vs full-model truncation are optional explanatory refinements, **no mandatory theorem/axiom revision**. [Notion G0 audit](https://app.notion.com/p/3fe81f51e7fa81448c14ebbd7c0dc292). All post-standardization reviews are internal, not externally independently verified. Existing Zenodo source remains unmodified.
 
 
-LATEST COMPLETED THEOREM AUDIT (2026-10-19): [Theorem 3.6 precommit](THEOREM_AUDITS/FAS-F2-T3.6-001_PRECOMMIT.md), [Theorem 3.6 proof audit result](THEOREM_AUDITS/FAS-F2-T3.6-001_RESULT.md), [reproducible Python](scripts/verify_t36_formation_traces.py) and [deterministic JSON](results/t36_trace_witnesses.json). Mathematical verdict PROVED_IN_DECLARED_BACKGROUND; FPA PASS_WITH_BOUNDARY; revision NONE. 8/8 finite fixtures, 21 typed candidate equivalences, 3 singleton-composite checks. Full paper remains OPEN. External replication remains unestablished. NEXT FAS-F2-T6.5-001 / NOT_STARTED.
+LATEST COMPLETED THEOREM AUDIT (2026-10-19): [Theorem 3.6 precommit](THEOREM_AUDITS/FAS-F2-T3.6-001_PRECOMMIT.md), [Theorem 3.6 proof audit result](THEOREM_AUDITS/FAS-F2-T3.6-001_RESULT.md), [reproducible Python](scripts/verify_t36_formation_traces.py) and [deterministic JSON](results/t36_trace_witnesses.json). Mathematical verdict PROVED_IN_DECLARED_BACKGROUND; FPA PASS_WITH_BOUNDARY; revision NONE. 8/8 finite fixtures, 21 typed candidate equivalences, 3 singleton-composite checks. Full paper remains OPEN. External replication remains unestablished. NEXT FAS-F2-SEC6.2-C6.6-C6.7-001 / NOT_STARTED.
 
 Notion T3.6 completed audit: https://app.notion.com/p/3fe81f51e7fa81c98284ca75776ab8f9
+
+
+LATEST COMPLETED MAP-ALGEBRA AUDIT (2026-10-19): [Theorem 6.5 precommit](THEOREM_AUDITS/FAS-F2-T6.5-001_PRECOMMIT.md), [Theorem 6.5 result](THEOREM_AUDITS/FAS-F2-T6.5-001_RESULT.md), [finite Python](scripts/verify_t65_forward_composition.py), [JSON](results/t65_forward_composition.json). VERDICT: PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE. Embedding composition proof includes explicit R1 intersection identity, indexed I-lambda, and witness-reflection two-step. Noninjective forward-map example correctly demonstrates why finite set-aggregate preservation requires separate injectivity. F2 whole-paper audit OPEN; external independent validation not established. NEXT short proof unit: FAS-F2-SEC6.2-C6.6-C6.7-001 / NOT_STARTED.
