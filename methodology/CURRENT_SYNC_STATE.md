@@ -57,6 +57,8 @@ ORIGINAL_PDF_ZENODO: unchanged
 
 Theorem 6.5 holds under the manuscript's declared typed interfaces. Noninjective forward maps do not imply finite set-composite preservation. Finite testing does not establish the general theorem, separately supported by written proof. Historical T4.7 wording issue unaffected.
 
+- [Notion T6.5 FPA audit](https://app.notion.com/p/3fe81f51e7fa8130b7fbe2ebe7f43b53)
+
 ## 0F. Latest completed FPA Theorem 3.6 — 2026-10-19
 
 \`\`\`text
