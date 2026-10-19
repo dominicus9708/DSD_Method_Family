@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Finite typed witness audit of F2 Theorem 6.8. Not a universal proof.
+r"""Finite typed witness audit of F2 Theorem 6.8. Not a universal proof.
 
 Run from DSD_Method_Family root:
   python .\DSD_Audit\audits\formal_proof\formation_axiom_system\scripts\verify_t68_embedding_reflection.py
