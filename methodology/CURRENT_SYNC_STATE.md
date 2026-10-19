@@ -65,6 +65,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Strict base-fixed formation isomorphism is an equivalence relation in the original full descriptor class; inverse kind-indexing, E7 size/threshold, E9 channel terms verified. Selected finite examples do not substitute external certification. Historical T4.7 wording scope remains OPEN.
 
+- [Notion synchronized T6.14 FPA case](https://app.notion.com/p/3fe81f51e7fa81219ecaebac9522c311)
+
 ## 0K. Latest FPA Corollary 6.12 — 2026-10-19
 
 ```text
