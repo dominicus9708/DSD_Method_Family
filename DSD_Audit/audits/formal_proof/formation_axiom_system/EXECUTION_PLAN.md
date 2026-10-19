@@ -1,5 +1,5 @@
 # Formation F2 — execution plan and checkpoints
-Status: IN_PROGRESS — Theorem 3.3 theorem-local audit complete; full Formation F2 not complete. Date: 2026-10-19.
+Status: IN_PROGRESS — Theorems 3.3 and 4.5 internally audited; full Formation F2 not complete. Date: 2026-10-19.
 
 ## Initial work unit FAS-F2-T3.3-001
 1. Lock Theorem 3.3 exact statement and its proof in the supplied 33-page source (Section 3, PDF page 8; page number must be verified against the source artifact).
@@ -30,5 +30,12 @@ Publication policy: record incremental audits only in method-family GitHub/Notio
 - MATHEMATICAL_VERDICT: `PROVED_IN_DECLARED_BACKGROUND` (**only** Theorem 3.3); FPA process `PASS_WITH_BOUNDARY`.
 - Relative uniqueness is restricted to **same** supplied `W_L,T_L`; primitive-core expansion has a zero-F-vector-space witness; no mandatory manuscript correction.
 - Notion audit: https://app.notion.com/p/3fe81f51e7fa815698c1df6ab625ad8c
-- Next work unit `FAS-F2-T4.5-001` (not started): independently recheck Countermodels 4.1–4.4 against the entire typed background and every other primitive axiom; use a **new prospective precommit** before any result. STOP again after this theorem group.
+- That next work unit `FAS-F2-T4.5-001` has now been executed and checkpointed on 2026-10-19; its precommit and result are linked below. No historical verdict was overwritten.
 - All other F2 propositions and the paper-wide claim remain OPEN/NOT_REVIEWED. No Zenodo changes.
+
+## Checkpoint reached — FAS-F2-T4.5-001 (2026-10-19)
+- Prospective precommit: `4d7ed1e6a16c01f0bc2a4d17fc5d3bc1a0472f45` / blob `89993ec145be104eace74049098a94c9b5e0abe1`.
+- [Theorem 4.5 audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md) commit `5ef5ec99cec050e6b432bb5b6aec41722382a316`: mathematical `PROVED_IN_DECLARED_BACKGROUND`; FPA `PASS_WITH_BOUNDARY`; no required revision.
+- [Python finite verifier](scripts/verify_t45_countermodels.py) and [deterministic JSON](results/t45_axiom_independence.json): 4/4 source-listed nonvacuous counterinterpretations reproduce the four distinct axiom-failure cases; project-internal not external replication.
+- [Notion Theorem 4.5 audit](https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2).
+- **STOP.** Next bounded unit: `FAS-F2-T4.7-001`, the six residual clauses after Proposition 4.6, NOT_STARTED. Create a new prospective precommit before review. Keep Theorem 4.7 separate from Theorem 4.5; no paper-wide F2 verdict or Zenodo change.
