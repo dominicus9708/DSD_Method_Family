@@ -89,3 +89,10 @@ Every domain audit ends with three separate summaries:
 3. **Correspondence and limits**
 
 Do not combine them into a single success percentage or validation rate.
+
+## Active mathematics protocol / 시행 준비된 수학 프로토콜 (2026-10-19)
+- [FPA v0.1 — Formal Proof Audit](mathematics/FORMAL_PROOF_AUDIT_v0.1.md): theorem-level proof-obligation and countermodel audit, using the target domain's mathematical standards rather than DSD-internal success as a truth criterion.
+- [Formation F2 first case](../audits/formal_proof/formation_axiom_system/README.md): **prepared, not executed**. No mathematical theorem verdict issued.
+- Notion: https://app.notion.com/p/3fe81f51e7fa81afb612fa69387cdeee
+
+This specialized Audit protocol does not create an independent 23rd method, re-open the 22/22 internal build, or imply external independent validation.
