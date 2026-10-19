@@ -123,3 +123,5 @@ Default output is `DSD_Audit/audits/formal_proof/formation_axiom_system/results/
 The preexisting Theorem 4.7 residual-constraint wording-clarification recommendation remains unchanged. No original English PDF or Zenodo revision is required by this scoped finding. The 22/22 method-family internal standardization is unaffected. **F2 full-manuscript audit remains OPEN.**
 
 **Resumable checkpoint:** `FAS-F2-T6.17-001`, *Staged determinacy and nonbranching of definitional closure* (including `I3=I4` as a **general** theorem), **NOT_STARTED**. Do not assert it completed based on these finite samples.
+
+[Notion synchronized FAS-F2-T6.16-001 case](https://app.notion.com/p/3fe81f51e7fa81b88d06d901cd345200)
