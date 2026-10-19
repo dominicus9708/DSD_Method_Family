@@ -8,7 +8,7 @@ From a cloned DSD_Method_Family root on Windows:
   python .\DSD_Audit\audits\formal_proof\formation_axiom_system\scripts\verify_t623_layerwise_obstruction.py
 Optional first CLI argument changes the JSON output path.
 """
-from itertools import permutations, product
+from itertools import permutations, product, combinations
 from pathlib import Path
 import json, sys
 
@@ -38,6 +38,11 @@ def model(tag, role_labels=("r0","r1"), active=("r0",), value=None,
     d["C"]={c for c in d["U"] if d["psi"][c[0]] and c[1] in d["act"][c[0]]
        and (c[1],c[2],c[3]) in d["gamma"] and (c[0],c[1],c[2],c[4]) in d["roles"]}
     d["T"]={c:value[c[4]] for c in d["C"]}
+    # Clause VII: all finite admitted-channel families, including the empty set.
+    d["Dcomp"]={frozenset(s) for n in range(len(d["C"])+1)
+       for s in combinations(sorted(d["C"]),n)}
+    d["Comp"]={F:sum(d["T"][c] for c in F)%2 for F in d["Dcomp"]}
+    assert d["Comp"][frozenset()]==0
     # Primitive Axioms I, II, III, V and definitionally produced IV,VI,VII.
     assert d["des_e"]<=d["adm_e"]
     assert all((h,h) in d["res"] for h in d["adm_e"])
@@ -99,7 +104,7 @@ def status(L,M,p):
         E9=set(mapped)==M["C"] and all(mapped[z]==M["T"][z] for z in mapped)
     else:
         E9=None  # E9 presupposes a channel bijection induced by E1–E8.
-    return list(first)+(E9,)
+    return list(first)+[E9]
 
 def evaluate(L,M):
     rows=[status(L,M,p) for p in candidates(L,M)]
