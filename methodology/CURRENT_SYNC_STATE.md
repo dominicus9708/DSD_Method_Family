@@ -64,6 +64,8 @@ ORIGINAL_PDF_ZENODO: unchanged
 
 Source conditions: fixed (B,F), full formation model objects, source-declared forward maps and embeddings, literal inclusion submodel. Wide subcategory does not mean all forward maps are embeddings. Finite toy runs are not general proofs. Theorem 4.7 earlier wording clarification remains preserved.
 
+- [Notion C6.6/C6.7 completed FPA audit](https://app.notion.com/p/3fe81f51e7fa81fdbccef571bee0537b)
+
 ## 0G. Latest FPA Theorem 6.5 audit — 2026-10-19
 
 ```text
