@@ -1,0 +1,116 @@
+{
+  "all_checks_passed": true,
+  "audit_id": "FAS-F2-C6.26-001",
+  "closure_clauses": [
+    "IV",
+    "VI",
+    "VII"
+  ],
+  "defined_zero_is_not_absence": true,
+  "empty_vs_singleton_channels": [
+    0,
+    1
+  ],
+  "finite_example_not_universal_proof": true,
+  "independent_external_validation": false,
+  "models_checked": 5,
+  "negative_E8_passes": 0,
+  "negative_channel_counts": [
+    1,
+    2
+  ],
+  "negative_full_family_composites": [
+    0,
+    0
+  ],
+  "negative_role_carrier_counts": [
+    2,
+    2
+  ],
+  "negative_role_map_rows": [
+    {
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "strict": false
+    },
+    {
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "strict": false
+    }
+  ],
+  "nonvacuous_role_map_candidates": 2,
+  "positive_channel_counts": [
+    1,
+    1
+  ],
+  "positive_role_map_rows": [
+    {
+      "E1_to_E7": true,
+      "E8": true,
+      "E9": true,
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "strict": true
+    },
+    {
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "strict": false
+    }
+  ],
+  "positive_strict_isomorphisms": 1,
+  "primitive_axioms": [
+    "I",
+    "II",
+    "III",
+    "V"
+  ],
+  "same_cardinality_but_term_mismatch_counts": [
+    1,
+    1
+  ],
+  "same_cardinality_but_term_mismatch_strict": false,
+  "same_count_bad_rows": [
+    {
+      "E1_to_E7": true,
+      "E8": true,
+      "E9": false,
+      "role_map": {
+        "r": "r",
+        "s": "s"
+      },
+      "strict": false
+    },
+    {
+      "E1_to_E7": true,
+      "E8": false,
+      "E9": null,
+      "role_map": {
+        "r": "s",
+        "s": "r"
+      },
+      "strict": false
+    }
+  ],
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "trace_equivalences": 10,
+  "typed_channel_candidates_per_model": 2
+}
