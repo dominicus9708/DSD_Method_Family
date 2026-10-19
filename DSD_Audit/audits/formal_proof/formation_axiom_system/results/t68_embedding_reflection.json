@@ -1,0 +1,15 @@
+{
+  "all_finite_checks_passed": true,
+  "audit_id": "FAS-F2-T6.8-001",
+  "candidate_channel_equivalences": 8,
+  "component_terms_not_identified_with_assignment_values": true,
+  "defined_zero_assignment_present": true,
+  "external_independent_verification": false,
+  "finite_checks_not_universal_proof": true,
+  "finite_subset_composites": 4,
+  "source_admitted_channels": 2,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "target_admitted_channels": 3,
+  "target_only_admitted_channels": 1,
+  "witness_reflection_independent_necessity_shown": true
+}
