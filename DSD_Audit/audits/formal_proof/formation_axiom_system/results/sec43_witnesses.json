@@ -1,0 +1,85 @@
+{
+  "audit_id": "FAS-F2-SEC4.3-001",
+  "countermodel_4_9": {
+    "A_star": [],
+    "K_des": [],
+    "admitted": [
+      "x"
+    ],
+    "axioms": {
+      "I": true,
+      "II": true,
+      "III": true,
+      "V": true
+    },
+    "channels": [],
+    "checked_finite_chains": 1,
+    "checked_restriction_realization_pairs": 0,
+    "checked_two_step_pairs": 1,
+    "composites": {
+      "all_channels": 0,
+      "empty": 0
+    },
+    "describable": [],
+    "not_describable_configs": [
+      "p0"
+    ],
+    "restriction_pairs": 1
+  },
+  "independent_external_validation": false,
+  "nontransitive_proposition_4_12": {
+    "A_star": [
+      "a"
+    ],
+    "K_des": [
+      "p"
+    ],
+    "admitted": [
+      "H",
+      "g0",
+      "h",
+      "t"
+    ],
+    "axioms": {
+      "I": true,
+      "II": true,
+      "III": true,
+      "V": true
+    },
+    "channels": [
+      [
+        "p",
+        "a",
+        "lambda",
+        1,
+        "rho"
+      ]
+    ],
+    "checked_finite_chains": 18,
+    "checked_restriction_realization_pairs": 1,
+    "checked_two_step_pairs": 9,
+    "composites": {
+      "all_channels": 1,
+      "empty": 0
+    },
+    "describable": [
+      "g0"
+    ],
+    "not_describable_configs": [
+      "p_blocked",
+      "p_nowitness"
+    ],
+    "restriction_pairs": 6
+  },
+  "proof_coverage": "finite witnesses plus universal reasoning recorded separately",
+  "source_pdf_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "source_sections": [
+    "4.8",
+    "4.9",
+    "4.10",
+    "4.11",
+    "4.12",
+    "4.13",
+    "4.14"
+  ]
+}
