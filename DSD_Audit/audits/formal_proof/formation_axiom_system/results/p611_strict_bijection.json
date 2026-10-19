@@ -1,0 +1,16 @@
+{
+  "admitted_channel_bijection_count": 3,
+  "all_checks_passed": true,
+  "case": "FAS-F2-P6.11-001",
+  "defined_zero_vs_undefined": true,
+  "embedding_conditions": {},
+  "external_independent_verification": false,
+  "forward_bijective_maps_do_not_imply_reflection": true,
+  "graph_mismatch_fails_e5_e6_r4": true,
+  "graph_pairs_checked": 9,
+  "inverse_bijections_checked": 5,
+  "mathematical_proof_is_separate": true,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "strict_conditions": {},
+  "target_extra_channel_under_non_surjective_embedding": true
+}
