@@ -3,7 +3,15 @@
   "all_checks_passed": true,
   "case": "FAS-F2-P6.11-001",
   "defined_zero_vs_undefined": true,
-  "embedding_conditions": {},
+  "embedding_conditions": {
+    "FORWARD_F1_F6": true,
+    "R1": true,
+    "R2": true,
+    "R3": true,
+    "R4": true,
+    "R5": true,
+    "WITNESS_REFLECTION": true
+  },
   "external_independent_verification": false,
   "forward_bijective_maps_do_not_imply_reflection": true,
   "graph_mismatch_fails_e5_e6_r4": true,
@@ -11,6 +19,16 @@
   "inverse_bijections_checked": 5,
   "mathematical_proof_is_separate": true,
   "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
-  "strict_conditions": {},
+  "strict_conditions": {
+    "E1": true,
+    "E2": true,
+    "E3": true,
+    "E4": true,
+    "E5": true,
+    "E6": true,
+    "E7": true,
+    "E8": true,
+    "E9": true
+  },
   "target_extra_channel_under_non_surjective_embedding": true
 }
