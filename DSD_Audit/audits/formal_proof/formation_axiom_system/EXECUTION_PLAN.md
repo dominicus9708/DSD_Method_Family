@@ -1,5 +1,5 @@
 # Formation F2 — execution plan and checkpoints
-Status: IN_PROGRESS — Theorems 3.3 and 4.5 internally audited; full Formation F2 not complete. Date: 2026-10-19.
+Status: IN_PROGRESS — Theorems 3.3, 4.5, 4.7 internally audited; whole Formation F2 remains not complete. Date: 2026-10-19.
 
 ## Initial work unit FAS-F2-T3.3-001
 1. Lock Theorem 3.3 exact statement and its proof in the supplied 33-page source (Section 3, PDF page 8; page number must be verified against the source artifact).
@@ -22,7 +22,7 @@ Status: IN_PROGRESS — Theorems 3.3 and 4.5 internally audited; full Formation 
 Manuscript proven claims: author statements not FPA-verified yet.
 Old Notion 2026-09-10 internal status: PASS-CONDITIONAL, historical.
 Formation companion code: finite witness/regression only; general manuscript theorems not automatically formally certified.
-Current FPA execution status: NOT_STARTED; no false PASS count.
+Historical preparation status before FPA began: NOT_STARTED; current 2026-10-19 checkpoint: three theorem audits completed, no paper-wide PASS.
 Publication policy: record incremental audits only in method-family GitHub/Notion, link the manuscript repo; Zenodo version only upon justified material correction or substantive release, with prompt public correction for material errors.
 
 ## Checkpoint reached — 2026-10-19 (do not skip)
@@ -38,4 +38,13 @@ Publication policy: record incremental audits only in method-family GitHub/Notio
 - [Theorem 4.5 audit result](THEOREM_AUDITS/FAS-F2-T4.5-001_RESULT.md) commit `5ef5ec99cec050e6b432bb5b6aec41722382a316`: mathematical `PROVED_IN_DECLARED_BACKGROUND`; FPA `PASS_WITH_BOUNDARY`; no required revision.
 - [Python finite verifier](scripts/verify_t45_countermodels.py) and [deterministic JSON](results/t45_axiom_independence.json): 4/4 source-listed nonvacuous counterinterpretations reproduce the four distinct axiom-failure cases; project-internal not external replication.
 - [Notion Theorem 4.5 audit](https://app.notion.com/p/3fe81f51e7fa811eb18ff1e5428d7fb2).
-- **STOP.** Next bounded unit: `FAS-F2-T4.7-001`, the six residual clauses after Proposition 4.6, NOT_STARTED. Create a new prospective precommit before review. Keep Theorem 4.7 separate from Theorem 4.5; no paper-wide F2 verdict or Zenodo change.
+- Theorem 4.7 was executed and recorded in the next checkpoint; retain this older step as historical instruction. No paper-wide F2 verdict or Zenodo change.
+
+## Checkpoint — FAS-F2-T4.7-001 (2026-10-19)
+- Prospectively locked [Theorem 4.7 challenge protocol](THEOREM_AUDITS/FAS-F2-T4.7-001_PRECOMMIT.md), commit `ce1c6e303ebdd9148c80dc08127ed946100bd3e4` / blob `dea17056afe9bd40db6aced2ec14ec5d57a76119`.
+- [Formal mathematical audit](THEOREM_AUDITS/FAS-F2-T4.7-001_RESULT.md), commit `fa032fa64b42ec13ae70cc57a72257ba99f24b09`: six residual clause non-entailments established via six explicit finite typed interpretations; `MATHEMATICAL_VERDICT=PROVED_IN_DECLARED_BACKGROUND` for **residualized six-clause theory**. `DSD_AUDIT_VERDICT=PASS_WITH_REFINEMENT`, `REVISION_NEED=CLARIFICATION`.
+- Exact wording concern: Theorem 4.7's “other primitive axioms” cannot retain its **whole containing parent axiom** while falsifying one clause. Source should say “other five residual constraints” and separately note unaffected whole axioms; do not silently alter source.
+- [Finite reproduction Python](scripts/verify_t47_residual_clauses.py) / [deterministic JSON](results/t47_residual_clauses.json); non-independent bounded evidence. Local same-fixture implementation executed 6/6.
+- [Notion theorem record](https://app.notion.com/p/3fe81f51e7fa8182ac05f470ddc5c0d9).
+- **STOP. NEXT NOT_STARTED: `FAS-F2-SEC4.3-001`** — Corollary 4.8 / Countermodel 4.9 / Lemma 4.10 and subsequent Section 4.3 implications, exact grouping to be locked before review.
+- No paper/Zenodo modification; no manuscript-wide F2 verdict; 22/22 method-family internal-standardization unchanged.
