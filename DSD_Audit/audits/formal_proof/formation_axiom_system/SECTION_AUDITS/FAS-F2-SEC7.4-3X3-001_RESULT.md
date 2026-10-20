@@ -110,3 +110,5 @@ Default output goes to DSD_Audit/audits/formal_proof/formation_axiom_system/resu
 This proves source-specific finite indexed model and its first branching and aggregation examples under the declared background; it is not an independent certification of the entire Formation F2 manuscript. Original PDF and Zenodo unchanged, method-family internal standardization 22/22 unchanged, F2 full paper OPEN.
 
 **NEXT: FAS-F2-SEC8-DISC-001 / NOT_STARTED**, bounded audit of source Section 8 Discussion conclusions against prior theorem audits.
+
+[Notion synchronized original §7.4 3×3 indexed witness FPA](https://app.notion.com/p/3ff81f51e7fa81a4bc45e17779e37921)
