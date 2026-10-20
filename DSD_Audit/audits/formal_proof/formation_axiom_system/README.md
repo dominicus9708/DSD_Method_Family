@@ -1,5 +1,7 @@
 # Formation Axiom System — F2 / FPA audit case
 
+**LATEST CHECKPOINT (2026-10-20):** [Appendix C finite construction and witness reconstruction source FPA](SECTION_AUDITS/FAS-F2-APPC-CONSTRUCT-001_RESULT.md) completed: 10 selected standard finite typed fixtures, all 512 specifically supplied indexed 3×3 cases, 768/1536 channels, 387 structural mismatches, 127 mismatched full-family equal sums, 252 all-index equal sums; `SOURCE_CONSTRUCTION_PROTOCOL_ALIGNED_WITH_DECLARED_FINITE_MODELS / PASS_WITH_BOUNDARY / REVISION_NEED NONE`. [Executed Python](scripts/verify_appc_construction.py) and [deterministic JSON](results/appc_construction.json) verified Git blobs against local executed files; [prospective precommit](SECTION_AUDITS/FAS-F2-APPC-CONSTRUCT-001_PRECOMMIT.md). **Next FAS-F2-APPD-RESTRICT-001 / NOT_STARTED; F2 full OPEN; named 14 theorem / 2 proposition / 9 corollary and 7 original unnumbered audits; external independent validation not established; original PDF/Zenodo unchanged; 22/22 method internal standardization unchanged.**
+
 **CASE_STATUS:** IN_PROGRESS_G0_SEC4_3_SEC7_3_D2_SEC7_4_3X3_SEC8_DISC_SEC9_CONC_APPA_TYP_APPB_STAT_THEOREMS_3_3_3_6_4_5_4_7_6_5_6_8_6_14_6_16_6_17_6_19_6_20_6_23_7_1_7_3_PROPOSITIONS_6_11_6_22_AND_COROLLARIES_6_6_6_7_6_12_6_18_6_24_6_25_6_26_7_2_7_4_COMPLETED  
 **DATE:** 2026-10-20  
 **SUBJECT_CLASS:** FOUNDATIONAL_THEORY  
