@@ -53,7 +53,7 @@ def orthogonal_l2_boundary():
     for N in (8,16,32,64):
         tail_sq=sum((Fraction(1,n*n) for n in range(N+1,4*N+1)),Fraction())
         assert tail_sq <= Fraction(1,N)
-        tests.append({'lower_index_exclusive':N,'finite_tail_squared_norm':str(tail_sq),
+        tests.append({'lower_index_exclusive':N,'finite_tail_squared_norm_approx':format(float(tail_sq),'.10g'),
                       'all_later_finite_subset_squared_norm_upper_bound':str(Fraction(1,N))})
     return {'space':'ell2','family':'e_n/n, n>=1', 'absolute_norm_sum_diverges':True,
             'unconditional_sum_converges':True,'selected_tail_checks':tests}
@@ -66,7 +66,7 @@ def conditional_harmonic_obstruction():
         block=sum(Fraction(1,2*k-1) for k in range(N+1,2*N+1))
         assert block > Fraction(1,4)
         checks.append({'N':N,'odd_positive_index_block_lower_bound':'1/4',
-                       'observed_block':str(block)})
+                       'observed_block_approx':format(float(block),'.10g')})
     return {'ordered_alternating_harmonic_converges':True,
             'positive_odd_index_subfamily_diverges':True,
             'unconditional_convergence':False,'selected_blocks':checks}
