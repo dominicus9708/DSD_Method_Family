@@ -156,3 +156,5 @@ NEXT: FAS-F2-SEC9-CONC-001 / NOT_STARTED
 ```
 
 The previous optional Theorem4.7 wording and §7.3 inherited boundary-record/coordinate naming clarifications remain separate. **Numbered FPA counts unchanged:** 14 theorems, 2 propositions, 9 corollaries; unnumbered §7.3/7.4/8 cases now three separately audited. No PDF/Zenodo change, outside independent review or whole-paper F2 certification is claimed.
+
+[Notion synchronized §8 Discussion claim ledger and exact counterexample report](https://app.notion.com/p/3ff81f51e7fa81509422e3d61ae97a32)
