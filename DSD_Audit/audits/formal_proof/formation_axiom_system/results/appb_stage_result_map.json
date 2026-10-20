@@ -1,0 +1,124 @@
+{
+  "all_selected_checks_passed": true,
+  "any_claim_of_absolute_W_T_unique_closure": false,
+  "any_claim_of_physical_or_external_completeness": false,
+  "appendix": "B Formation-Stage Status and Result Map",
+  "audit_id": "FAS-F2-APPB-STAT-001",
+  "config_witness_includes_three_admission_gates": true,
+  "defined_zero_not_undefined_or_channel_absence": true,
+  "global_partial_assignment_and_role_required_for_channel": true,
+  "independent_external_validation": false,
+  "necessary_expression_admission_not_sufficient": true,
+  "noninjective_forward_map_can_fail_finite_set_sum": true,
+  "original_pdf_zenodo_modified": false,
+  "primitive_independence_typed_residual_six": true,
+  "printed_page": 31,
+  "prior_discussion_fixed_J_clarification_remains_separate": true,
+  "rows": [
+    {
+      "id": "B01",
+      "qualification": "primitive packages, residual six typed",
+      "source": "Thm4.5; Prop4.6; Thm4.7",
+      "stage": "I,II,III,V"
+    },
+    {
+      "id": "B02",
+      "qualification": "relative W,T closure",
+      "source": "Thm3.3",
+      "stage": "IV,VI,VII"
+    },
+    {
+      "id": "B03",
+      "qualification": "typed finite input only",
+      "source": "Thm7.1; Cor7.2; Thm7.3; Cor7.4",
+      "stage": "I-VII"
+    },
+    {
+      "id": "B04",
+      "qualification": "not admitted means not describable",
+      "source": "Primitive I",
+      "stage": "I"
+    },
+    {
+      "id": "B05",
+      "qualification": "sound restriction inheritance",
+      "source": "Primitive II",
+      "stage": "II"
+    },
+    {
+      "id": "B06",
+      "qualification": "realization inheritance",
+      "source": "Primitive III",
+      "stage": "II-III"
+    },
+    {
+      "id": "B07",
+      "qualification": "full witness and three gates",
+      "source": "Def2.1; Closure IV",
+      "stage": "I-IV"
+    },
+    {
+      "id": "B08",
+      "qualification": "describability distinct from q",
+      "source": "Closure IV; Primitive V",
+      "stage": "IV-V"
+    },
+    {
+      "id": "B09",
+      "qualification": "Psi, Gamma, Role all required",
+      "source": "Closure VI",
+      "stage": "IV-VI"
+    },
+    {
+      "id": "B10",
+      "qualification": "undefined, absent, zero distinct",
+      "source": "Primitive V; Closures VI,VII",
+      "stage": "V-VII"
+    },
+    {
+      "id": "B11",
+      "qualification": "reduction and trace iff",
+      "source": "Prop2.5; Thm3.6",
+      "stage": "I-VII+Defs2.4,3.5"
+    },
+    {
+      "id": "B12",
+      "qualification": "injectivity for composite sums",
+      "source": "Prop6.3; Thm6.5; Cor6.6",
+      "stage": "I-VII+Def6.2"
+    },
+    {
+      "id": "B13",
+      "qualification": "embedding reflection, inclusion preorder",
+      "source": "Thm6.8; Prop6.11",
+      "stage": "I-VII+Def6.4"
+    },
+    {
+      "id": "B14",
+      "qualification": "all-comparison earliest failure",
+      "source": "Thm6.14; Thm6.16",
+      "stage": "I-VII+Defs6.10,6.15"
+    },
+    {
+      "id": "B15",
+      "qualification": "Stage4 fixed by3; Stage6 role; Stage7 W,T",
+      "source": "Thm6.17",
+      "stage": "IV,VI,VII+Thm6.17"
+    },
+    {
+      "id": "B16",
+      "qualification": "symmetry and fixed B,F static scope",
+      "source": "Thm6.19; Thm6.20",
+      "stage": "I-VII+Thms6.19,6.20"
+    }
+  ],
+  "source_rows": 16,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "source_to_result_rows_aligned": 16,
+  "source_type_or_logical_map_mismatch_count": 0,
+  "stage4_has_no_independent_first_branch": true,
+  "stage6_depends_on_role_beyond_stage5": true,
+  "stage7_depends_on_supplied_W_T": true,
+  "standard_finite_realization_requires_well_typed_seed": true,
+  "table_not_an_independent_new_theorem": true
+}
