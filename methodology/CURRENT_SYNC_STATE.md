@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-20 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261020-FAS-F2-C7.4-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `0fc60a4d30694a557938bf8cee10e305b400a575` (F2 C7.4 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261020-FAS-F2-SEC7.3-D2-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `961217af582980bf2954735f0d9efc73dd423ee4` (F2 unnumbered §7.3 D2 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-C7.4-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 14 theorem-level FPA audits + two propositions (6.11/6.22) + nine corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26/7.2/7.4) completed.
-Next canonical step: **post-standardization FPA / original unnumbered Formation F2 §7.3 fully specified formation-finite D2 early-branch model (FAS-F2-SEC7.3-D2-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-SEC7.3-D2-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_REFINEMENT / REVISION_NEED CLARIFICATION**. 14 theorem-level FPA audits + two propositions (6.11/6.22) + nine corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26/7.2/7.4) + one separate unnumbered §7.3 D2 audit completed.
+Next canonical step: **post-standardization FPA / original unnumbered Formation F2 §7.4 fully specified synthetic 3×3 indexed witness (FAS-F2-SEC7.4-3X3-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -30,6 +30,57 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
 
 
+
+## 0AA. Latest FPA unnumbered Section 7.3 D2 example — 2026-10-20
+
+```text
+SYNC_EPOCH: MF-SYNC-20261020-FAS-F2-SEC7.3-D2-001
+AUDIT_CASE: FAS-F2-SEC7.3-D2-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: 7e4d88b145e598a4ed5cdd7d100bc46997996a28
+RESULT_COMMIT: 961217af582980bf2954735f0d9efc73dd423ee4
+EXECUTED_PYTHON_COMMIT: ed2cf28e1d153b01dba4784fd7f9aa57aed16da2
+PYTHON_GIT_BLOB: 5949d6c21cab61c2194bbcd9dfcf0eaf058fc9b6
+PYTHON_SHA256: 5c0782961bf41992f6247e7032fcbf3b6f103755a0b2e19dacb3691e9a070516
+EXECUTED_JSON_COMMIT: 9e5e6bcc87e2166dd3ca62d130d3889fc4202372
+JSON_GIT_BLOB: b1fa5dcca82bf8f377f6027ef5c7dbd425a723a5
+JSON_SHA256: f5da7b3a5e19ad93f669a9ec9ecc0045671080d79bc3d7cf664756e1966c837a
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+DSD_AUDIT_VERDICT: PASS_WITH_REFINEMENT
+REVISION_NEED: CLARIFICATION
+BRANCH_INDEX_B: 3
+MATERIAL_UNIVERSE: 57 = 9 vertex + 12 undirected edge + 36 potential boundary-slot
+H_RETAINED: 57
+H_SMALL_RETAINED: 9 = 2 vertex + 1 nearest-neighbor edge + 6 exposed slots
+K_DES_PLUS_MINUS: 1,0
+A_STAR_PLUS_MINUS: 9,0
+Q_PLUS_MINUS: 1,0
+ADMITTED_CHANNELS_PLUS_MINUS: 1,0
+STAGE_I0_I1_I2: NONEMPTY
+STAGE_I3_I4_I5_I6_I7: EMPTY
+W_PLUS_W_MINUS: real field
+COMP_PLUS: 0,1
+COMP_MINUS: 0
+CONSISTENT_INHERITED_BOUNDARY_ANNOTATION_COMPLETION: provided; source under-specified for literal exact data
+COORDINATE_AXIS_HORIZONAL_LABEL: needs clarification under row-column convention
+PRIMITIVE_BC_DIFFERENCE_NOT_DERIVED_FROM_GRID_PHYSICS: yes
+THEOREM_LEVEL_FPA_COMPLETED: 14
+PROPOSITION_LEVEL_FPA_COMPLETED: 2
+COROLLARY_LEVEL_FPA_COMPLETED: 9
+UNNUMBERED_SEC7_3_AUDIT_COMPLETED: 1
+NEXT: FAS-F2-SEC7.4-3X3-001 / NOT_STARTED
+F2_FULL_PAPER: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+
+- [D2 source case prospective precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC7.3-D2-001_PRECOMMIT.md)
+- [D2 §7.3 stage3 nonisomorphism proof and clarification](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC7.3-D2-001_RESULT.md)
+- [D2 exact executed Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_sec73_d2_early_branch.py)
+- [D2 exact executed JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/sec73_d2_early_branch.json)
+
+Original §7.3 D2 early branching: two regimes share fixed typed 3×3 material/anchor/Res/Realize, but p* has primitive BC true/false, so I0,I1,I2 nonempty while I3 empty. Thus b=3 and the pair is strictly nonequivalent. A consistent inherited blocked-annotation record makes all full Formation axioms legal; the original source still needs clarity on literal H/h/p boundary mark inheritance and the internal edge named horizontal when selected S* is vertically adjacent in row/column coordinates. Unnumbered section count separate from 14 theorem/2 proposition/9 corollary. Full F2 manuscript OPEN, no external independent certification.
 
 ## 0Z. Latest FPA Corollary 7.4 — 2026-10-20
 
