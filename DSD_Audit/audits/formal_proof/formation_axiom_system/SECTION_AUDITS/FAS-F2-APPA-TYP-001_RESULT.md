@@ -119,3 +119,5 @@ Default output: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/ap
 Existing named FPA results **14 theorems / 2 propositions / 9 corollaries** unchanged. The unnumbered original §§7.3,7.4,8,9 audits plus this **Appendix A** bring the separate source-section tally to **5**, and must not be counted as new theorems. The full F2 manuscript FPA remains **OPEN**, external independent verification is not established, Method Family internal standardization **22/22 unchanged**.
 
 **NEXT NOT_STARTED:** `FAS-F2-APPB-STAT-001` — Appendix B *Formation-Stage Status and Result Map*, first prospectively freeze its original exact table.
+
+[Notion synchronized Appendix A typed crosswalk source-audit](https://app.notion.com/p/3ff81f51e7fa81598afdf636e3a923a1)
