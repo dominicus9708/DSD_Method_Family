@@ -81,3 +81,6 @@ NEXT: FAS-F2-APPE-INFINITE-001 / NOT_STARTED
 ```
 
 Previous independent advisories remain outstanding: T4.7 residual-six wording; Section 7.3 D2 boundary inheritance; Section 8 fixed-J logical-strength comparison. The successful optional Appendix D audit does **not** clear them. The Appendix E infinite-family extension is the next independently precommitted unit, not yet begun.
+
+
+**Notion reciprocal audit page:** https://app.notion.com/p/3ff81f51e7fa816aaf76e9d9fc7ee857
