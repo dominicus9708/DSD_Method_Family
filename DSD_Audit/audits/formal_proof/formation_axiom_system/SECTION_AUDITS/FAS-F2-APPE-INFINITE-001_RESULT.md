@@ -80,3 +80,6 @@ NEXT: FAS-F2-G3-SEC5-001 / NOT_STARTED
 ```
 
 **Next independent FPA unit:** manuscript Section 5's numbered propositions/corollaries about defined-zero vs missing q, status, padding, and finite composite collisions. The original Appendix E is the last numbered-letter mathematical appendix, but that does **not** close uncovered Section 5 source claims or the full-paper dependency audit. Any Section 5 case needs its own prospective source lock and correctly inventoried source labels before a mathematical verdict.
+
+
+**Notion reciprocal audit page:** https://app.notion.com/p/3ff81f51e7fa81a39030c792fa4d68ba
