@@ -76,6 +76,8 @@ DSD_METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 For every n≥1 one fixed singleton-support B and field F suffice. n distinct materials anchored to the same s, T7.3 forms all 2^n subset expressions/configurations and C of cardinality n, hence formation-finite full models of every finite size. Different n have no typed material bijection; valid finite partial role/assignment inputs also permitted. Selected 26 small checks and exact committed blob matches are not universal proof. Next original unnumbered §7.3 D2 early-branch section not yet source-audited. Historic T4.7 optional wording recommendation and whole F2 OPEN retained.
 
+- [Notion synchronized F2 Corollary 7.4 bounded source-audit](https://app.notion.com/p/3ff81f51e7fa81eba5cad76eabf9d58d)
+
 ## 0Y. Latest FPA Theorem 7.3 — 2026-10-20
 
 ```text
