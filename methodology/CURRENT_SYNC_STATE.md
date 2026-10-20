@@ -79,6 +79,8 @@ METHOD_FAMILY_STANDARDIZATION: 22/22 unchanged
 
 All 19 table rows align with exact body declared types, including domain restriction of global q and T only on admitted channels C, stage records vs metatheoretic classes, and forward component-sum injectivity caveat. Selected exact executable checked 120 reduction index triples and a noninjective forward role-collapse (2 source terms versus 1 target finite set term), all PASS. This appendix is a selective summary, so optional W/J/Role/Chan notation rows are not mandated fixes. Whole F2 still OPEN, §8 D10 and §7.3 historical scope clarifications separate.
 
+- [Notion synchronized Appendix A 19-row type-source audit](https://app.notion.com/p/3ff81f51e7fa81598afdf636e3a923a1) · 19/19 source matches, 120 stage index triples and correct forward-family sum injectivity guard; NEXT Appendix B NOT_STARTED.
+
 ## 0AA. Latest FPA unnumbered Section 7.3 D2 example — 2026-10-20
 
 ```text
