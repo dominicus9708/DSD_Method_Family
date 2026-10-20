@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-20 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261020-FAS-F2-T7.3-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `e1037735f4dd528a381b89a0da7aba383f593b46` (F2 T7.3 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261020-FAS-F2-C7.4-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `0fc60a4d30694a557938bf8cee10e305b400a575` (F2 C7.4 FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-T7.3-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 14 theorem-level FPA audits + two propositions (6.11/6.22) + eight corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26/7.2) completed.
-Next canonical step: **post-standardization FPA / Formation F2 Corollary 7.4 arbitrarily large finite formation types (FAS-F2-C7.4-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-C7.4-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 14 theorem-level FPA audits + two propositions (6.11/6.22) + nine corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26/7.2/7.4) completed.
+Next canonical step: **post-standardization FPA / original unnumbered Formation F2 §7.3 fully specified formation-finite D2 early-branch model (FAS-F2-SEC7.3-D2-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -30,6 +30,51 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 **Live-sync rule:** every claim-relevant state change must update GitHub and Notion in the same work unit before it is reported as synchronized. If either surface cannot be updated, record `SYNC_PENDING` explicitly. Synchronization-only metadata writes inside one sync epoch do not recursively open a new epoch.
 
 
+
+## 0Z. Latest FPA Corollary 7.4 — 2026-10-20
+
+```text
+SYNC_EPOCH: MF-SYNC-20261020-FAS-F2-C7.4-001
+AUDIT_CASE: FAS-F2-C7.4-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: ba241da61811d6455d442cf7d12188a302c15ab1
+RESULT_COMMIT: 0fc60a4d30694a557938bf8cee10e305b400a575
+PYTHON_COMMIT: 72784a9285972a50e6c4a87dd278f34022455510
+PYTHON_SHA256: 882c27ed0815477103befd208eba65461abe67eb78632b46cbc38bd09f53013a
+PYTHON_GIT_BLOB: eea7e91d616c2c4d85f600160b4da737a9561562
+JSON_COMMIT: 29e999990ef537bcc6c4d1a7ab0975fd5a468e2d
+JSON_SHA256: 4a94a05bf7ac8ce5fbd7ba7a3ed634deaa38896b6d38f0f0c3dd8852c150a8fe
+JSON_GIT_BLOB: 02354094d8db36af7a9609520e2b31781fd69e6e
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+ALL_N_GREATER_EQUAL_ONE_FULL_FINITE_FORMATION_TYPES: PROVED
+COMMON_B_AND_F_ACROSS_N: yes
+EXPRESSION_CONFIGURATION_COUNTS_FOR_N: 2^n EACH
+ADMITTED_CHANNELS_POSITIVE_WITNESS_FOR_N: n
+DIFFERENT_MATERIAL_CARDINALITY_NO_STRICT_ISO: PROVED
+FINITE_SAMPLED_N: 1,2,3,4,5,6
+FINITE_SAMPLED_FIELDS: F2,Q
+FINITE_SOURCE_TYPED_MODELS: 26
+FINITE_SUM_ADMITTED_CHANNELS: 66
+FINITE_SUM_CHANNEL_FAMILIES: 310
+FINITE_DIFFERENT_SIZE_PAIRS_PER_FIELD: 15
+THEOREM_LEVEL_FPA_COMPLETED: 14
+PROPOSITION_LEVEL_FPA_COMPLETED: 2
+COROLLARY_LEVEL_FPA_COMPLETED: 9
+NEXT: FAS-F2-SEC7.3-D2-001 / NOT_STARTED
+F2_FULL_PAPER: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+SOURCE_PDF_ZENODO: unchanged
+DSD_METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+
+- [C7.4 prospectively locked precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-C7.4-001_PRECOMMIT.md)
+- [C7.4 universal proof, hostile controls](../DSD_Audit/audits/formal_proof/formation_axiom_system/THEOREM_AUDITS/FAS-F2-C7.4-001_RESULT.md)
+- [C7.4 exactly executed Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_c74_arbitrarily_large_finite.py)
+- [C7.4 exactly saved JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/c74_arbitrarily_large_finite.json)
+
+For every n≥1 one fixed singleton-support B and field F suffice. n distinct materials anchored to the same s, T7.3 forms all 2^n subset expressions/configurations and C of cardinality n, hence formation-finite full models of every finite size. Different n have no typed material bijection; valid finite partial role/assignment inputs also permitted. Selected 26 small checks and exact committed blob matches are not universal proof. Next original unnumbered §7.3 D2 early-branch section not yet source-audited. Historic T4.7 optional wording recommendation and whole F2 OPEN retained.
 
 ## 0Y. Latest FPA Theorem 7.3 — 2026-10-20
 
