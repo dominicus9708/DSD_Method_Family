@@ -1,0 +1,43 @@
+{
+  "admitted_channels": 1,
+  "all_checks_passed": true,
+  "base_support_elements": 1,
+  "candidate_channels": 1,
+  "case": "FAS-F2-C7.2-001",
+  "closure_clauses_verified": [
+    "IV",
+    "VI",
+    "VII"
+  ],
+  "composite_graph_pairs": 2,
+  "configuration_count": 1,
+  "counterexample_controls": [
+    "empty support outside theorem",
+    "missing identity invalid particular core"
+  ],
+  "encoded_descriptor_components": 34,
+  "expression_count": 1,
+  "external_independent_validation": false,
+  "field": "F2",
+  "field_elements": 2,
+  "finite_families": 2,
+  "finite_field_axioms_checked": true,
+  "finite_field_operation_graph_entries": 8,
+  "hereditarily_finite_pure_set_encoding": true,
+  "kuratowski_pair_order_test": true,
+  "material_count": 1,
+  "not_machine_checked_ZFC_derivation": true,
+  "primitive_axioms_verified": [
+    "I",
+    "II",
+    "III",
+    "V"
+  ],
+  "program_is_not_ZFC_formal_proof": true,
+  "quantity_zero_distinct_from_term_zero": true,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "term_map_pairs": 1,
+  "theorem_claim": "ZFC proves existence under standard definitional expansion",
+  "trace_witnesses": 1,
+  "zero_vector_space_cardinality": 1
+}
