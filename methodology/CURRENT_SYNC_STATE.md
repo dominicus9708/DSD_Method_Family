@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-20 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261020-FAS-F2-SEC9-CONC-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `095567507f10c24a99af9e2f733c24ce5f813441` (F2 unnumbered §9 Conclusion 13-claim cross-audit result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261020-FAS-F2-APPA-TYP-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `2f37bd64de14779167f112ee7c8e12c8df9384a2` (F2 Appendix A 19-row type crosswalk FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-SEC9-CONC-001 / SUPPORTED_BY_PREVIOUSLY_AUDITED_RESULTS_WITH_DECLARED_SCOPES / PASS_WITH_REFINEMENT / REVISION_NEED CLARIFICATION (INHERITED FROM §7.3)**. 14 theorem-level FPA audits + two propositions (6.11/6.22) + nine corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26/7.2/7.4) + four unnumbered §7.3/§7.4/§8/§9 source audits completed.
-Next canonical step: **post-standardization FPA / original Formation F2 Appendix A Typing and Notation (FAS-F2-APPA-TYP-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-APPA-TYP-001 / SOURCE_NOTATION_CONSISTENT_WITH_DECLARED_TYPING / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 14 theorem-level FPA audits + two propositions (6.11/6.22) + nine corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26/7.2/7.4) + five unnumbered §§7.3/7.4/8/9/Appendix A source audits completed.
+Next canonical step: **post-standardization FPA / original Formation F2 Appendix B Formation-Stage Status and Result Map (FAS-F2-APPB-STAT-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -38,6 +38,46 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 - [F2 Conclusion §9 current FPA](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC9-CONC-001_RESULT.md) · 13 claims source-supported (9 directly, 3 with scope, one with old §7.3 inherited clarity). §9 does not repeat §8 D10 logical strength overclaim; final equal composite non-isomorphism is existential and valid. NEXT Appendix A NOT_STARTED.
 
 - [Notion §9 Conclusion 13-claim audit](https://app.notion.com/p/3ff81f51e7fa8134bc19e9e06994ca58) · §9 does not repeat §8's logical hierarchy flaw; historical §7.3 fully-specified D2 clarity caveat persists · NEXT Appendix A NOT_STARTED.
+
+## 0AD. Latest FPA Appendix A Typing and Notation — 2026-10-20
+
+```text
+SYNC_EPOCH: MF-SYNC-20261020-FAS-F2-APPA-TYP-001
+AUDIT_CASE: FAS-F2-APPA-TYP-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+SOURCE_LOCUS: Appendix A, printed p30
+PRECOMMIT_COMMIT: 519211d8208a3d06a3460d8404db87dad48a8234
+RESULT_COMMIT: 2f37bd64de14779167f112ee7c8e12c8df9384a2
+PYTHON_COMMIT: d51cc838c5eec3dc6ab17d0be4fe9c83291ef1c9
+PYTHON_SHA256: fb3c11ccf9c119d39b000ede78c12529b2dd7e7d6f090c5ae3d2dde70f6e0296
+PYTHON_GIT_BLOB: d8576d1f1b25676e6ee4db70cd90463b71dc8041
+JSON_COMMIT: 3310ce012c342fd861e15b8796d80c59cfea7f8f
+JSON_SHA256: ebf1816c66774b070c7c6f2d47b9f582737e998391e2bcce9a66f1972493770b
+JSON_GIT_BLOB: 73468b7eb755d14b588874ea94a5cc4b1c1356a6
+MATHEMATICAL_VERDICT: SOURCE_NOTATION_CONSISTENT_WITH_DECLARED_TYPING
+FPA_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+SOURCE_GROUPED_NOTATION_ROWS_MATCHED: 19/19
+REDUCTION_TRIPLES_FINITE_CHECKED: 120
+SOURCE_TYPE_MISMATCHES: 0
+GLOSSARY_EXTRA_ROWS: optional_not_required
+THEOREM_LEVEL_FPA_COMPLETED: 14
+PROPOSITION_LEVEL_FPA_COMPLETED: 2
+COROLLARY_LEVEL_FPA_COMPLETED: 9
+UNNUMBERED_7_3_7_4_8_9_APPA_COMPLETED: 5
+NEXT: FAS-F2-APPB-STAT-001 / NOT_STARTED
+F2_FULL_PAPER: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+PDF_ZENODO: unchanged
+METHOD_FAMILY_STANDARDIZATION: 22/22 unchanged
+```
+
+- [Appendix A precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-APPA-TYP-001_PRECOMMIT.md)
+- [Appendix A full 19-row crosswalk](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-APPA-TYP-001_RESULT.md)
+- [Appendix A executed Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_appa_typing_notation.py)
+- [Appendix A JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/appa_typing_notation.json)
+
+All 19 table rows align with exact body declared types, including domain restriction of global q and T only on admitted channels C, stage records vs metatheoretic classes, and forward component-sum injectivity caveat. Selected exact executable checked 120 reduction index triples and a noninjective forward role-collapse (2 source terms versus 1 target finite set term), all PASS. This appendix is a selective summary, so optional W/J/Role/Chan notation rows are not mandated fixes. Whole F2 still OPEN, §8 D10 and §7.3 historical scope clarifications separate.
 
 ## 0AA. Latest FPA unnumbered Section 7.3 D2 example — 2026-10-20
 
