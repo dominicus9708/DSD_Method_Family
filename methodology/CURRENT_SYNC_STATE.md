@@ -37,6 +37,8 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 
 - [F2 Conclusion §9 current FPA](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC9-CONC-001_RESULT.md) · 13 claims source-supported (9 directly, 3 with scope, one with old §7.3 inherited clarity). §9 does not repeat §8 D10 logical strength overclaim; final equal composite non-isomorphism is existential and valid. NEXT Appendix A NOT_STARTED.
 
+- [Notion §9 Conclusion 13-claim audit](https://app.notion.com/p/3ff81f51e7fa8134bc19e9e06994ca58) · §9 does not repeat §8's logical hierarchy flaw; historical §7.3 fully-specified D2 clarity caveat persists · NEXT Appendix A NOT_STARTED.
+
 ## 0AA. Latest FPA unnumbered Section 7.3 D2 example — 2026-10-20
 
 ```text
