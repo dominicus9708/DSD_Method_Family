@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-20 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261020-FAS-F2-SEC7.4-3X3-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `22a3b39d62bb4c9ebb698549e70e8d552b9324e8` (F2 unnumbered §7.4 3×3 indexed witness FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261020-FAS-F2-SEC8-DISC-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `6af91c964867d9466f70a703897036663b7e410e` (F2 unnumbered §8 Discussion claim-scope FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-SEC7.4-3X3-001 / PROVED_IN_DECLARED_BACKGROUND / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 14 theorem-level FPA audits + two propositions (6.11/6.22) + nine corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26/7.2/7.4) + two unnumbered §7.3 / §7.4 source section audits completed.
-Next canonical step: **post-standardization FPA / original unnumbered Formation F2 Section 8 Discussion cross-audit (FAS-F2-SEC8-DISC-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-SEC8-DISC-001 / PARTIALLY_SUPPORTED_WITH_VALID_COUNTEREXAMPLE_TO_UNQUALIFIED_COMPARISON / PASS_WITH_REFINEMENT / REVISION_NEED CLARIFICATION**. 14 theorem-level FPA audits + two propositions (6.11/6.22) + nine corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26/7.2/7.4) + three unnumbered §7.3/§7.4/§8 source audits completed.
+Next canonical step: **post-standardization FPA / original Formation F2 §9 Conclusion consistency cross-audit (FAS-F2-SEC9-CONC-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -32,6 +32,8 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 
 
 - [Latest Notion FAS-F2-SEC7.4-3X3-001 audit](https://app.notion.com/p/3ff81f51e7fa81a4bc45e17779e37921) · [GitHub proof](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC7.4-3X3-001_RESULT.md) · b=5; Q=768/1536; 127 mismatched, 252 total scalar coincidences
+
+- [Latest original §8 FPA individual Notion case](https://app.notion.com/p/3ff81f51e7fa81509422e3d61ae97a32) · [GitHub detailed source-claim audit](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC8-DISC-001_RESULT.md): 11/12 Discussion claims supported within declared scope; one §8 unqualified "strictly weaker" fixed-J logical relation needs wording correction. Full-form one-channel strict identity J=-id and zero-channel strict identity J=id counterexamples executed. **Proposition6.22 remains valid.** Next §9 NOT_STARTED.
 
 ## 0AA. Latest FPA unnumbered Section 7.3 D2 example — 2026-10-20
 
