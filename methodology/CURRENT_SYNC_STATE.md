@@ -73,6 +73,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Source §7.1 Corollary 7.2 is parameter-free existential `ZFC |- sigma_DSD`: F2 finite field, singleton-support base and fully set-coded T7.1 Formation witness satisfy source Definition2.2. Kuratowski pairs / nested tuples, 34 hereditarily finite components and field operation graphs. Standard definitional expansion is possible in ZFC, but neither manuscript nor audit has a literal expanded ∈-only sentence plus machine-proof certificate; finite Python is only a witness check. No claim that ZFC proves its own consistency. Whole F2 OPEN, T4.7 optional clarification retained.
 
+- [Notion synchronized C7.2 set-coded satisfiability audit](https://app.notion.com/p/3ff81f51e7fa81a2a6d7e547dcdde54f)
+
 ## 0W. Latest FPA Theorem 7.1 — 2026-10-20
 
 ```text
