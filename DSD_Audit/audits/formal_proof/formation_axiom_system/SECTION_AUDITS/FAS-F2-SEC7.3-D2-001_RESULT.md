@@ -161,3 +161,5 @@ Default output: \`DSD_Audit/audits/formal_proof/formation_axiom_system/results/s
 The mathematically decisive result **\`b(L+,L−)=3\` survives**. The remaining issue is **source specification completeness / coordinate terminology**, not a valid countermodel or new axiom need. In any future manuscript revision (not in this audit), make the inherited blocked annotation explicit and either call r* the joining nearest-neighbor edge or fix a coordinate convention. Existing optional T4.7 wording clarification is a separate historical action. F2 whole-manuscript FPA remains **OPEN**, independent external validation not established.
 
 **NEXT source-bounded case NOT_STARTED:** \`FAS-F2-SEC7.4-3X3-001\`, unnumbered §7.4 “Fully specified synthetic formation-finite 3×3 indexed witness.” A separate precommit is required.
+
+[Notion synchronized §7.3 D2 boundary and branch FPA case](https://app.notion.com/p/3ff81f51e7fa81b2842affbdae09d613)
