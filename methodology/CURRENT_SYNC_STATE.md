@@ -2,13 +2,13 @@
 
 Synchronized: **2026-10-20 KST**  
 Repository: `dominicus9708/DSD_Method_Family`  
-Sync epoch: `MF-SYNC-20261020-FAS-F2-APPA-TYP-001`  
-Latest claim-relevant source checkpoint before synchronization metadata writes: `2f37bd64de14779167f112ee7c8e12c8df9384a2` (F2 Appendix A 19-row type crosswalk FPA result; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
+Sync epoch: `MF-SYNC-20261020-FAS-F2-APPB-STAT-001`  
+Latest claim-relevant source checkpoint before synchronization metadata writes: `0b56c93d4336eeb96e766341306b27e4febe45c8` (F2 Appendix B 16-row result-map FPA report; internal-build closure remains `cce705230724941629d4927f064ca7900386e8ba`)  
 Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**  
 Latest method-result commit: `59105917a92142c09e8c9c6125de6d503e407b9f`  
 Active internal-build front: **none — 22/22 internal-build program complete**  
-Latest post-standardization FPA result: **FAS-F2-APPA-TYP-001 / SOURCE_NOTATION_CONSISTENT_WITH_DECLARED_TYPING / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 14 theorem-level FPA audits + two propositions (6.11/6.22) + nine corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26/7.2/7.4) + five unnumbered §§7.3/7.4/8/9/Appendix A source audits completed.
-Next canonical step: **post-standardization FPA / original Formation F2 Appendix B Formation-Stage Status and Result Map (FAS-F2-APPB-STAT-001), NOT_STARTED**; internal-build queue remains empty  
+Latest post-standardization FPA result: **FAS-F2-APPB-STAT-001 / SOURCE_RESULT_MAP_ALIGNED_WITH_DECLARED_THEOREM_SCOPES / PASS_WITH_BOUNDARY / REVISION_NEED NONE**. 14 theorem-level FPA audits + two propositions (6.11/6.22) + nine corollaries (6.6/6.7/6.12/6.18/6.24/6.25/6.26/7.2/7.4) + six unnumbered §§7.3/7.4/8/9/Appendices A/B source audits completed.
+Next canonical step: **post-standardization FPA / original Formation F2 Appendix C Finite-Construction and Witness Reconstruction Protocol (FAS-F2-APPC-CONSTRUCT-001), NOT_STARTED**; internal-build queue remains empty  
 Live synchronization policy: [`methodology/LIVE_SYNC_POLICY.md`](LIVE_SYNC_POLICY.md)  
 Canonical Notion root: https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16
 Canonical Notion synchronization page: https://app.notion.com/p/3e281f51e7fa811fa626e62c57d5cf07
@@ -38,6 +38,44 @@ It does not replace method-specific READMEs, immutable precommits, protocols, ev
 - [F2 Conclusion §9 current FPA](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-SEC9-CONC-001_RESULT.md) · 13 claims source-supported (9 directly, 3 with scope, one with old §7.3 inherited clarity). §9 does not repeat §8 D10 logical strength overclaim; final equal composite non-isomorphism is existential and valid. NEXT Appendix A NOT_STARTED.
 
 - [Notion §9 Conclusion 13-claim audit](https://app.notion.com/p/3ff81f51e7fa8134bc19e9e06994ca58) · §9 does not repeat §8's logical hierarchy flaw; historical §7.3 fully-specified D2 clarity caveat persists · NEXT Appendix A NOT_STARTED.
+
+## 0AE. Latest FPA original Appendix B 16-row stage/result map — 2026-10-20
+
+```text
+SYNC_EPOCH: MF-SYNC-20261020-FAS-F2-APPB-STAT-001
+AUDIT_CASE: FAS-F2-APPB-STAT-001
+SOURCE_SHA256: 8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a
+PRECOMMIT_COMMIT: df98dc7b9c5b908874ef52491bcc5d3c48afae8b
+RESULT_COMMIT: 0b56c93d4336eeb96e766341306b27e4febe45c8
+PYTHON_COMMIT: 1cd1898f842677119f34e1bcc5ba326d053888c6
+PYTHON_SHA256: 4efd29b2fb2ff27ad9f8fb7755ab4ede7e2d05180f366a5d32c90d94704d13d2
+PYTHON_GIT_BLOB: e4b9a2862a28ba6c1461850c1bd01d32f1dd1070
+JSON_COMMIT: 26ed2705157a1c17921b77843961b01dbd817109
+JSON_SHA256: 24244befd22bc97c33526ec763f54c704330604aa7e5f752aa98d05d799e9479
+JSON_GIT_BLOB: d27f9f50ee523a6e8b34362083e08f94ebbf0416
+MATHEMATICAL_VERDICT: SOURCE_RESULT_MAP_ALIGNED_WITH_DECLARED_THEOREM_SCOPES
+DSD_AUDIT_VERDICT: PASS_WITH_BOUNDARY
+REVISION_NEED: NONE
+ORIGINAL_APPB_STAGE_RESULT_ROWS: 16
+SOURCE_ALIGNED_ROWS: 16
+IDENTIFIED_REQUIRED_MISMATCHES: 0
+NAMED_THEOREMS_COMPLETED: 14
+NAMED_PROPOSITIONS_COMPLETED: 2
+NAMED_COROLLARIES_COMPLETED: 9
+UNNUMBERED_SOURCE_SECTIONS_COMPLETED: 6
+NEXT: FAS-F2-APPC-CONSTRUCT-001 / NOT_STARTED
+F2_FULL_FPA: OPEN
+INDEPENDENT_EXTERNAL_VALIDATION: not_established
+ORIGINAL_PDF_ZENODO: unchanged
+METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
+```
+
+- [Appendix B precommit](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-APPB-STAT-001_PRECOMMIT.md)
+- [Appendix B original 16-row crosswalk and proof dependencies](../DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-APPB-STAT-001_RESULT.md)
+- [Appendix B local-executed byte-identical Python](../DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_appb_stage_result_map.py)
+- [Appendix B local-executed byte-identical JSON](../DSD_Audit/audits/formal_proof/formation_axiom_system/results/appb_stage_result_map.json)
+
+Sixteen printed source rows matched within prior theorem hypotheses: independent primitive packages and typed residual six; post-VI W/T-relative closure; properly typed role seeds; config Ψ witnesses and separate assignment; forward finite sums require admitted-channel-map injectivity; Stage4 is not first independent branch; Stage6 additionally needs Role and Stage7 needs W,T. “Completes declared static theory” does not claim external, physical or logical completeness. Selected Python executed exactly and its JSON matched GitHub blobs. Prior §8 logical-order word note and §7.3 D2 inherited boundary clarification remain separate. Next Appendix C not started.
 
 ## 0AD. Latest FPA Appendix A Typing and Notation — 2026-10-20
 
