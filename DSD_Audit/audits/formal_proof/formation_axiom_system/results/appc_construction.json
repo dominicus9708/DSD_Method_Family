@@ -1,0 +1,115 @@
+{
+  "case": "FAS-F2-APPC-CONSTRUCT-001",
+  "finite_fixture_count": 10,
+  "finite_fixtures": [
+    {
+      "channels": 0,
+      "dense": false,
+      "empty_channels": true,
+      "n": 0,
+      "restriction_pairs": 1,
+      "subsets": 1
+    },
+    {
+      "channels": 0,
+      "dense": true,
+      "empty_channels": true,
+      "n": 0,
+      "restriction_pairs": 1,
+      "subsets": 1
+    },
+    {
+      "channels": 1,
+      "dense": false,
+      "empty_channels": false,
+      "n": 1,
+      "restriction_pairs": 3,
+      "subsets": 2
+    },
+    {
+      "channels": 2,
+      "dense": true,
+      "empty_channels": false,
+      "n": 1,
+      "restriction_pairs": 3,
+      "subsets": 2
+    },
+    {
+      "channels": 2,
+      "dense": false,
+      "empty_channels": false,
+      "n": 2,
+      "restriction_pairs": 9,
+      "subsets": 4
+    },
+    {
+      "channels": 8,
+      "dense": true,
+      "empty_channels": false,
+      "n": 2,
+      "restriction_pairs": 9,
+      "subsets": 4
+    },
+    {
+      "channels": 8,
+      "dense": false,
+      "empty_channels": false,
+      "n": 3,
+      "restriction_pairs": 27,
+      "subsets": 8
+    },
+    {
+      "channels": 24,
+      "dense": true,
+      "empty_channels": false,
+      "n": 3,
+      "restriction_pairs": 27,
+      "subsets": 8
+    },
+    {
+      "channels": 16,
+      "dense": false,
+      "empty_channels": false,
+      "n": 4,
+      "restriction_pairs": 81,
+      "subsets": 16
+    },
+    {
+      "channels": 64,
+      "dense": true,
+      "empty_channels": false,
+      "n": 4,
+      "restriction_pairs": 81,
+      "subsets": 16
+    }
+  ],
+  "full_F2": "OPEN",
+  "independent_external_validation": false,
+  "indexed_3x3": {
+    "G_channels": 1536,
+    "G_sum_distribution": {
+      "0": 512
+    },
+    "H_case_channels": [
+      375,
+      62,
+      319,
+      12
+    ],
+    "H_channels": 768,
+    "H_sum_distribution": {
+      "0": 252,
+      "1": 254,
+      "2": 6
+    },
+    "coincidences_all": 252,
+    "coincidences_mismatch": 127,
+    "material_items": 1545,
+    "site_subsets": 512,
+    "stage5_domain_cardinality_obstruction": true,
+    "structure_mismatches": 387,
+    "vertical_only": 62
+  },
+  "invalid_role_seed_rejected": true,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a"
+}
