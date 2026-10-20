@@ -106,3 +106,5 @@ Default output: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/ap
 Numbered source theorem-level FPA **14**, propositions **2**, corollaries **9**, all unchanged. Now **six** separately audited original unnumbered source sections §§7.3,7.4,8,9, Appendix A and Appendix B. Whole F2 FPA OPEN, independent external evaluation not established, source PDF and Zenodo unchanged, method-family 22/22 internal standardization unchanged.
 
 **NEXT:** original Appendix C “Finite-Construction and Witness Reconstruction Protocol,” `FAS-F2-APPC-CONSTRUCT-001 / NOT_STARTED` (original printed pp31–32), a separate source and separately precommitted FPA unit.
+
+[Notion synchronized Appendix B 16-row source-stage FPA](https://app.notion.com/p/3ff81f51e7fa812fb441dca8ed6fd05a)
