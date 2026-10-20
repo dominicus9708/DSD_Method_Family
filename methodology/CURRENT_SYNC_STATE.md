@@ -82,6 +82,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Original §7.3 D2 early branching: two regimes share fixed typed 3×3 material/anchor/Res/Realize, but p* has primitive BC true/false, so I0,I1,I2 nonempty while I3 empty. Thus b=3 and the pair is strictly nonequivalent. A consistent inherited blocked-annotation record makes all full Formation axioms legal; the original source still needs clarity on literal H/h/p boundary mark inheritance and the internal edge named horizontal when selected S* is vertically adjacent in row/column coordinates. Unnumbered section count separate from 14 theorem/2 proposition/9 corollary. Full F2 manuscript OPEN, no external independent certification.
 
+- [Notion synchronized F2 §7.3 unnumbered D2 source audit](https://app.notion.com/p/3ff81f51e7fa81b2842affbdae09d613)
+
 ## 0Z. Latest FPA Corollary 7.4 — 2026-10-20
 
 ```text
