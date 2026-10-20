@@ -5,22 +5,22 @@
 ## Frozen source, execution provenance, independent status
 
 - AUTHOR: Kwon Dominicus
-- PDF: \`DSD_Formation_Axiom_System_EN(5).pdf\`
-- PDF SHA256: \`8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a\`
+- PDF: `DSD_Formation_Axiom_System_EN(5).pdf`
+- PDF SHA256: `8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a`
 - ORIGINAL SOURCE: Appendix C *Finite-Construction and Witness Reconstruction Protocol* (printed pp31–32), with Section 7.2 Theorem 7.3 and Section 7.4 synthetic 3×3 witness as source references.
-- PROSPECTIVE PRECOMMIT: \`45543bb9c77dad8c00f409d84bd7dbef298e5008\`, [precommit](FAS-F2-APPC-CONSTRUCT-001_PRECOMMIT.md), made before executing new selected fixtures.
-- EXECUTED SCRIPT COMMIT: \`277daa1bab10b86c8887f901afbfe042c5ef71a4\`
-- EXECUTED SCRIPT SHA256: \`0bef9402c69b27deaee2020d93d2baebd7e80693e2dab253e41877c437d2756c\`, bytes: 4386, git blob \`3959544bedf234a5f3510d86fbd3aecdfc286b1e\`
-- DETERMINISTIC JSON COMMIT: \`17bddca50c0e0313eb6a3038f43800fe66701653\`
-- JSON SHA256: \`3eb4c9c1db8bdcb4919f15afdbb949b6caf1236881c1d82180d640fa24466445\`, bytes: 2289, git blob \`bf0bf1a27e4cfc965dfc7eee8bc8e660f514cc2f\`
+- PROSPECTIVE PRECOMMIT: `45543bb9c77dad8c00f409d84bd7dbef298e5008`, [precommit](FAS-F2-APPC-CONSTRUCT-001_PRECOMMIT.md), made before executing new selected fixtures.
+- EXECUTED SCRIPT COMMIT: `277daa1bab10b86c8887f901afbfe042c5ef71a4`
+- EXECUTED SCRIPT SHA256: `0bef9402c69b27deaee2020d93d2baebd7e80693e2dab253e41877c437d2756c`, bytes: 4386, git blob `3959544bedf234a5f3510d86fbd3aecdfc286b1e`
+- DETERMINISTIC JSON COMMIT: `17bddca50c0e0313eb6a3038f43800fe66701653`
+- JSON SHA256: `3eb4c9c1db8bdcb4919f15afdbb949b6caf1236881c1d82180d640fa24466445`, bytes: 2289, git blob `bf0bf1a27e4cfc965dfc7eee8bc8e660f514cc2f`
 - Script and JSON GitHub blobs checked against exact local executed bytes.
-- MATHEMATICAL_VERDICT: \`SOURCE_CONSTRUCTION_PROTOCOL_ALIGNED_WITH_DECLARED_FINITE_MODELS\`
-- DSD_AUDIT_VERDICT: \`PASS_WITH_BOUNDARY\`
-- REVISION_NEED: \`NONE\` **for Appendix C itself**
-- INDEPENDENT_EXTERNAL_VALIDATION: \`not_established\`
-- FULL_F2_MANUSCRIPT_FPA: \`OPEN\`
-- ORIGINAL_PDF_ZENODO: \`unchanged\`
-- METHOD_FAMILY_INTERNAL_STANDARDIZATION: \`22/22 unchanged\`
+- MATHEMATICAL_VERDICT: `SOURCE_CONSTRUCTION_PROTOCOL_ALIGNED_WITH_DECLARED_FINITE_MODELS`
+- DSD_AUDIT_VERDICT: `PASS_WITH_BOUNDARY`
+- REVISION_NEED: `NONE` **for Appendix C itself**
+- INDEPENDENT_EXTERNAL_VALIDATION: `not_established`
+- FULL_F2_MANUSCRIPT_FPA: `OPEN`
+- ORIGINAL_PDF_ZENODO: `unchanged`
+- METHOD_FAMILY_INTERNAL_STANDARDIZATION: `22/22 unchanged`
 
 ## 1. General standard realization: independent source-typed reasoning
 
@@ -29,7 +29,7 @@ Theorem 7.3 assumes a finite relational material record M with carrier M, one an
 Construct distinct e_A and p_A for each A⊆M with mat(e_A)=act(p_A)=A and anchors alpha|A. Endow each retained subset with its induced relational material record. Declare all expressions admitted and describable. Put Res(e_A,e_B) and Realize(e_A,p_B) **iff B⊆A**. Declare all three configuration gates true. For each p_A, (e_A,e_A,p_A) supplies the complete configuration witness. Thus K_des={p_A:A⊆M} and A*=A_L=M, even when M=empty (there is the empty-subset configuration, while A*=empty).
 
 Under source role typing, q is well-defined for every selected role tuple. Definition/Closure VI yields exactly
-\`C_L={(p_A,a,lambda,q_lambda(a),rho):(A,a,lambda,rho)∈R0}\`.
+`C_L={(p_A,a,lambda,q_lambda(a),rho):(A,a,lambda,rho)∈R0}`.
 The map from the role-seed tuples to operational channels is one-to-one (coordinates A,a,lambda,rho are retained). W_L is the **free F-vector space on finite C_L** (zero vector space for C_L empty), and T_L(c)=e_c is post-Stage-VI supplied term data; Clause VII then gives finite sets and sums. Primitive I, II, III and V hold because all expressions are admitted, subset restriction and realization preserve anchors/material records and identity restrictions, and D_lambda⊆M=A*. No additional restriction transitivity axiom is needed even though this particular constructed model happens to have a transitive subset restriction.
 
 All carriers, expression and configuration families and C_L are finite; the value carriers and F may remain infinite and formation-finiteness is still satisfied. The result is relative to the **stated typing** of the role seed and relational material records; it is not a statement that *arbitrary untyped* assignment/role inputs admit such a model.
@@ -53,17 +53,17 @@ The reconstructed exhaustive 512-case table is exhaustive **only for the fixed s
 
 - [Exact locally executed script](../scripts/verify_appc_construction.py)
 - [Exact deterministic output JSON](../results/appc_construction.json)
-- Executed \`python -W error -m py_compile\` and \`python -W error\` followed by SHA256 and git-blob hash comparisons.
+- Executed `python -W error -m py_compile` and `python -W error` followed by SHA256 and git-blob hash comparisons.
 - Script manually reconstructs the source rules; it does not parse the source PDF or implement a general logical proof calculus. There are 10 selected ordinary finite model fixtures, the explicit invalid seed guard, and all 512 *specified* synthetic indices.
 - This is project-internal source-bound validation, not an external independent reproduction or formal machine proof.
 
 Windows 11, from the cloned repository root:
 
-\`\`\`powershell
+```powershell
 python .\DSD_Audit\audits\formal_proof\formation_axiom_system\scripts\verify_appc_construction.py
-\`\`\`
+```
 
-Output by default: \`DSD_Audit/audits/formal_proof/formation_axiom_system/results/appc_construction.json\`. Optional first command-line argument is an alternative output path.
+Output by default: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/appc_construction.json`. Optional first command-line argument is an alternative output path.
 
 ## 4. Boundary verdict and outstanding historical issues
 
@@ -73,4 +73,4 @@ C01–C10 precommitted scope obligations reviewed. No Appendix C internal source
 
 Prior counts remain **14 named theorem audits / 2 proposition audits / 9 corollary audits**. Separately audited original unnumbered sections/appendices increase from six to **seven**: §7.3, §7.4, §8, §9, Appendix A, Appendix B, **Appendix C**. The whole F2 remains OPEN and independent outside validation unestablished; underlying original PDF/Zenodo unchanged.
 
-**NEXT NOT_STARTED:** \`FAS-F2-APPD-RESTRICT-001\` — original Appendix D *Optional Restriction Coherence Extension*, requiring a new prospective precommit. Do not count its optional transitivity as a primitive core axiom.
+**NEXT NOT_STARTED:** `FAS-F2-APPD-RESTRICT-001` — original Appendix D *Optional Restriction Coherence Extension*, requiring a new prospective precommit. Do not count its optional transitivity as a primitive core axiom.
