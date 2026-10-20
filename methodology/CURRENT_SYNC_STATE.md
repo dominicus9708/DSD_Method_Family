@@ -77,6 +77,8 @@ METHOD_FAMILY_INTERNAL_STANDARDIZATION: 22/22 unchanged
 
 Sixteen printed source rows matched within prior theorem hypotheses: independent primitive packages and typed residual six; post-VI W/T-relative closure; properly typed role seeds; config Ψ witnesses and separate assignment; forward finite sums require admitted-channel-map injectivity; Stage4 is not first independent branch; Stage6 additionally needs Role and Stage7 needs W,T. “Completes declared static theory” does not claim external, physical or logical completeness. Selected Python executed exactly and its JSON matched GitHub blobs. Prior §8 logical-order word note and §7.3 D2 inherited boundary clarification remain separate. Next Appendix C not started.
 
+- [Notion synchronized original Appendix B 16-row FPA](https://app.notion.com/p/3ff81f51e7fa812fb441dca8ed6fd05a) · matched 16/16 within theorem input scopes; no required corrections; NEXT Appendix C NOT_STARTED.
+
 ## 0AD. Latest FPA Appendix A Typing and Notation — 2026-10-20
 
 ```text
