@@ -1,0 +1,106 @@
+{
+  "all_selected_checks_passed": true,
+  "audit_id": "FAS-F2-SEC9-CONC-001",
+  "claim_count": 13,
+  "claims": [
+    {
+      "claim": "seven-stage typed chain",
+      "id": "C01",
+      "source": "Definitions 2.2/2.4",
+      "status": "supported"
+    },
+    {
+      "claim": "four independent primitive plus three derived clauses",
+      "id": "C02",
+      "source": "Theorems 4.5/4.7 and 3.3",
+      "status": "supported_with_scope"
+    },
+    {
+      "claim": "admission and globally partial quantity distinct",
+      "id": "C03",
+      "source": "Primitive I/III/V; Closure IV/VI",
+      "status": "supported"
+    },
+    {
+      "claim": "stage reductions and nonempty formation traces",
+      "id": "C04",
+      "source": "Proposition 2.5 and Theorem 3.6",
+      "status": "supported"
+    },
+    {
+      "claim": "one-point ZFC existence and arbitrary finite realizations",
+      "id": "C05",
+      "source": "Theorem 7.1; Corollary 7.2; Theorem 7.3; Corollary 7.4",
+      "status": "supported_with_scope"
+    },
+    {
+      "claim": "forward maps, embeddings, category, strict equivalence",
+      "id": "C06",
+      "source": "Theorems 6.5/6.8/6.14; Proposition 6.11",
+      "status": "supported_with_scope"
+    },
+    {
+      "claim": "first branching requires failure of every tuple",
+      "id": "C07",
+      "source": "Definition 6.15 and Theorem 6.16",
+      "status": "supported"
+    },
+    {
+      "claim": "first branch symmetry and strict-iso invariance",
+      "id": "C08",
+      "source": "Theorem 6.19",
+      "status": "supported"
+    },
+    {
+      "claim": "no first independent branch at Stage 4",
+      "id": "C09",
+      "source": "Theorem 6.17 and Corollary 6.18",
+      "status": "supported"
+    },
+    {
+      "claim": "static closure collects prior results",
+      "id": "C10",
+      "source": "Theorem 6.20",
+      "status": "supported"
+    },
+    {
+      "claim": "D2 first branching Stage 3",
+      "id": "C11",
+      "source": "Section 7.3 case audit",
+      "status": "supported_with_prior_clarification"
+    },
+    {
+      "claim": "indexed 3x3 first branching Stage 5",
+      "id": "C12",
+      "source": "Section 7.4 case audit",
+      "status": "supported"
+    },
+    {
+      "claim": "equal indexed outputs may coexist with strict non-equivalence",
+      "id": "C13",
+      "source": "Section 7.4, Definition 6.21 and Proposition 6.22",
+      "status": "supported"
+    }
+  ],
+  "first_branch_indices": [
+    3,
+    5
+  ],
+  "independent_external_validation": false,
+  "mathematical_conclusion_proof_is_prior_theorem_dependency": true,
+  "mathematical_implication_counterexample_is_in_section8_not_new_section9": false,
+  "not_machine_checked_formal_proof": true,
+  "original_section73_fully_specified_wording_needs_inherited_clarification": true,
+  "prior_sections_required": [
+    "2",
+    "3",
+    "4",
+    "6",
+    "7"
+  ],
+  "section9_coexistence_supported_by_section74": true,
+  "section9_repeats_section8_unconditional_strict_weakness": false,
+  "source_revision_executed": false,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "stage4_excluded_as_first_independent_branch": true
+}
