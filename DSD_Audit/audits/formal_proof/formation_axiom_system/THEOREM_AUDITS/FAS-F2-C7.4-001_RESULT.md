@@ -143,3 +143,5 @@ Output by default: \`DSD_Audit/audits/formal_proof/formation_axiom_system/result
 The boundary is the original input typing, distinction between unbounded **finite model sizes** and an **infinite model**, and separation between general proof and selected tests; it is **not** a gap in source Corollary 7.4. Original PDF/Zenodo unchanged, 22/22 DSD Method Family internal standardization unchanged. Whole Formation F2 manuscript FPA still OPEN.
 
 **Next bounded original source audit, NOT_STARTED:** \`FAS-F2-SEC7.3-D2-001\` — §7.3, “Fully specified formation-finite D2 early-branch model” (a source section, **not** an invented theorem label). Start with its own precommit.
+
+[Notion synchronized FAS-F2-C7.4-001 audit](https://app.notion.com/p/3ff81f51e7fa81eba5cad76eabf9d58d)
