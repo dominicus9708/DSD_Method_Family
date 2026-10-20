@@ -136,3 +136,5 @@ The default output is `DSD_Audit/audits/formal_proof/formation_axiom_system/resu
 These boundaries reflect **ordinary definitional formalizability versus a printed membership-only formal syntax/proof certificate** and selected finite testing, **not** a mathematical existence gap. A fully mechanically checked `σ_DSD` file could be an optional future enhancement but is not required for the manuscript's ordinary mathematical statement. Earlier optional Theorem 4.7 wording clarification stays recorded separately. Source PDF and Zenodo unchanged. Whole F2 FPA remains OPEN; 22/22 DSD Method Family internal standardization unchanged.
 
 **Next unstarted:** `FAS-F2-T7.3-001` — Theorem 7.3, *Standard finite-data realization*, §7.2 printed p.25.
+
+[Notion synchronized Corollary 7.2 FPA case](https://app.notion.com/p/3ff81f51e7fa81a2a6d7e547dcdde54f)
