@@ -114,3 +114,5 @@ Default output: DSD_Audit/audits/formal_proof/formation_axiom_system/results/sec
 **REVISION_NEED = CLARIFICATION (INHERITED FROM §7.3; no new §9-specific formal contradiction)**
 
 This report is one **unnumbered source-section** audit. **Named theorem 14, proposition 2, corollary 9 counts remain unchanged**; original unnumbered §7.3, §7.4, §8 and now §9 audits completed separately (4). The next unstarted original-source unit is **FAS-F2-APPA-TYP-001 — Appendix A Typing and Notation**, followed by Appendices B/C/D/E, statements of Declarations and bibliography/source-reference consistency checks.
+
+[Notion synchronized original §9 Conclusion FPA audit](https://app.notion.com/p/3ff81f51e7fa8134bc19e9e06994ca58)
