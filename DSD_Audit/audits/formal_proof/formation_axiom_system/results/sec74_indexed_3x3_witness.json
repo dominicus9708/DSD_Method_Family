@@ -1,0 +1,61 @@
+{
+  "C_G": 1536,
+  "C_H": 768,
+  "G_all_composites_zero": true,
+  "H_composite_histogram": {
+    "0": 252,
+    "1": 254,
+    "2": 6
+  },
+  "admitted_configurations_each": 512,
+  "all_checks_passed": true,
+  "all_index_composite_coincidences": 252,
+  "audit_id": "FAS-F2-SEC7.4-3X3-001",
+  "distinct_indexed_configurations": 512,
+  "earliest_branch": 5,
+  "expressions_each": 512,
+  "full_pdf_or_external_independent_validation": false,
+  "global_Q_G": 1536,
+  "global_Q_H": 768,
+  "global_active_items_each": 1545,
+  "global_channel_family_cardinalities_as_powers_of_two": [
+    768,
+    1536
+  ],
+  "grid_sites": 9,
+  "index_checks": {
+    "all_composite_equal": 252,
+    "different_channels": 387,
+    "different_channels_but_equal_comp": 127,
+    "same_channels": 125,
+    "vertical_without_horizontal": 62,
+    "zero_valued_admitted": 127
+  },
+  "material_items": 1545,
+  "mismatch_composite_coincidences": 127,
+  "regime_H_source_partition": {
+    "H": 319,
+    "HV": 6,
+    "HVD": 125,
+    "V": 62
+  },
+  "scalar_value_and_term_space": "R (integer elements evaluated exactly)",
+  "source_compatible_support_completion": true,
+  "source_lacks_explicit_base_support_member_enumeration": true,
+  "source_roles_each": 1536,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "stages_nonempty": {
+    "I0": true,
+    "I1": true,
+    "I2": true,
+    "I3": true,
+    "I4": true,
+    "I5": false,
+    "I6": false,
+    "I7": false
+  },
+  "strict_obstruction": "no_bijection_Q_768_vs_1536_under_E5",
+  "trace_G": 1536,
+  "trace_H": 768,
+  "whole_global_powersets_not_enumerated": true
+}
