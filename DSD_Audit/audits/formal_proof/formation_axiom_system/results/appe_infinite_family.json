@@ -1,0 +1,140 @@
+{
+  "case": "FAS-F2-APPE-INFINITE-001",
+  "complex_finite_case": {
+    "finite_terms_checked": 8,
+    "map": "J(z)=i*z",
+    "source_sum_components": [
+      "255/256",
+      "-3280/6561"
+    ],
+    "target_sum_components": [
+      "3280/6561",
+      "255/256"
+    ],
+    "termwise_equality": true
+  },
+  "conditionally_convergent_obstruction": {
+    "ordered_alternating_harmonic_converges": true,
+    "positive_odd_index_subfamily_diverges": true,
+    "selected_blocks": [
+      {
+        "N": 8,
+        "observed_block_approx": "0.346330277",
+        "odd_positive_index_block_lower_bound": "1/4"
+      },
+      {
+        "N": 32,
+        "observed_block_approx": "0.3465583347",
+        "odd_positive_index_block_lower_bound": "1/4"
+      },
+      {
+        "N": 128,
+        "observed_block_approx": "0.3465726366",
+        "odd_positive_index_block_lower_bound": "1/4"
+      },
+      {
+        "N": 512,
+        "observed_block_approx": "0.3465735307",
+        "odd_positive_index_block_lower_bound": "1/4"
+      }
+    ],
+    "unconditional_convergence": false
+  },
+  "external_independent_validation": false,
+  "mathematical_proof_is_analytic_not_numerical": true,
+  "method_family_internally_standardized": 22,
+  "orthogonal_unconditional_not_absolute": {
+    "absolute_norm_sum_diverges": true,
+    "family": "e_n/n, n>=1",
+    "selected_tail_checks": [
+      {
+        "all_later_finite_subset_squared_norm_upper_bound": "1/8",
+        "finite_tail_squared_norm_approx": "0.08674521067",
+        "lower_index_exclusive": 8
+      },
+      {
+        "all_later_finite_subset_squared_norm_upper_bound": "1/16",
+        "finite_tail_squared_norm_approx": "0.04508396796",
+        "lower_index_exclusive": 16
+      },
+      {
+        "all_later_finite_subset_squared_norm_upper_bound": "1/32",
+        "finite_tail_squared_norm_approx": "0.02298474213",
+        "lower_index_exclusive": 32
+      },
+      {
+        "all_later_finite_subset_squared_norm_upper_bound": "1/64",
+        "finite_tail_squared_norm_approx": "0.0116049349",
+        "lower_index_exclusive": 64
+      }
+    ],
+    "space": "ell2",
+    "unconditional_sum_converges": true
+  },
+  "real_geometric_family": {
+    "finite_subsets_checked": 4096,
+    "prefix_tail_certificates": [
+      {
+        "N": 1,
+        "source_partial": "1/2",
+        "source_tail_bound": "1/2",
+        "target_partial": "1",
+        "target_tail_bound": "1"
+      },
+      {
+        "N": 2,
+        "source_partial": "3/4",
+        "source_tail_bound": "1/4",
+        "target_partial": "3/2",
+        "target_tail_bound": "1/2"
+      },
+      {
+        "N": 4,
+        "source_partial": "15/16",
+        "source_tail_bound": "1/16",
+        "target_partial": "15/8",
+        "target_tail_bound": "1/8"
+      },
+      {
+        "N": 8,
+        "source_partial": "255/256",
+        "source_tail_bound": "1/256",
+        "target_partial": "255/128",
+        "target_tail_bound": "1/128"
+      },
+      {
+        "N": 12,
+        "source_partial": "4095/4096",
+        "source_tail_bound": "1/4096",
+        "target_partial": "4095/2048",
+        "target_tail_bound": "1/2048"
+      },
+      {
+        "N": 24,
+        "source_partial": "16777215/16777216",
+        "source_tail_bound": "1/16777216",
+        "target_partial": "16777215/8388608",
+        "target_tail_bound": "1/8388608"
+      },
+      {
+        "N": 32,
+        "source_partial": "4294967295/4294967296",
+        "source_tail_bound": "1/4294967296",
+        "target_partial": "4294967295/2147483648",
+        "target_tail_bound": "1/2147483648"
+      }
+    ],
+    "source_infinite_sum_exact": "1",
+    "target_infinite_sum_exact": "2",
+    "transport_J": "J(x)=2x"
+  },
+  "repeated_index_boundary": {
+    "empty_index_sum": "0",
+    "finite_core_set_sum": "1",
+    "finite_indexed_duplicate_sum": "2",
+    "infinite_repeated_nonzero_unconditional": false,
+    "infinite_repeated_zero_unconditional": true
+  },
+  "source_pdf_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "whole_formation_f2": "OPEN"
+}
