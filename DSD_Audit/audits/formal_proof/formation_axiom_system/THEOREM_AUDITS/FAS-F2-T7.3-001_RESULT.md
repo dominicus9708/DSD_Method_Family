@@ -114,3 +114,5 @@ Default output: \`DSD_Audit/audits/formal_proof/formation_axiom_system/results/t
 Original PDF/Zenodo unchanged; internal standardization 22/22 unchanged. No F2 whole-paper certification.
 
 **NEXT: \`FAS-F2-C7.4-001\` — Corollary 7.4 Arbitrarily large finite formation types, NOT_STARTED.**
+
+[Notion synchronized FAS-F2-T7.3-001 audit](https://app.notion.com/p/3ff81f51e7fa815bb310dfd973196494)
