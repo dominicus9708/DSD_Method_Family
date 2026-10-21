@@ -60,3 +60,5 @@ python .\DSD_Audit\audits\formal_proof\formation_axiom_system\versions\2026-10-2
 ```
 
 The generated JSON resides in `DSD_Audit/audits/formal_proof/formation_axiom_system/versions/2026-10-22/results/n3_source_diff.json` unless an explicit third path is passed. Input names shown above are **placeholders**, not claims about user-local Windows folders.
+
+**Reciprocal Notion record:** https://app.notion.com/p/40081f51e7fa8157b6bbefe0b8adafbb
