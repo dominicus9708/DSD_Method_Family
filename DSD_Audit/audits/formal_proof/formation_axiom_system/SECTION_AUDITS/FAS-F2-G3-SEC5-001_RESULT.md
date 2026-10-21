@@ -68,7 +68,8 @@ Default output: `DSD_Audit/audits/formal_proof/formation_axiom_system/results/se
 ```text
 CASE: FAS-F2-G3-SEC5-001
 ITEM_COUNT: definition 1 / proposition 10 / corollary 2 / countermodel 1
-MATHEMATICAL_VERDICT: MIXED — 5.13 unqualified universal nonfaithfulness DISPROVED_BY_VALID_COUNTERMODEL; conditional 5.13 true; other items PROVED_IN_DECLARED_BACKGROUND or LEGAL_MODEL_RECONSTRUCTED
+MATHEMATICAL_VERDICT: PROVED_IN_DECLARED_BACKGROUND (Section 5 source claims on their exact conditional reading; existential witnesses reconstructed)
+UNQUALIFIED_STRENGTHENING_OF_5_13: DISPROVED_BY_VALID_COUNTERMODEL (not imposed by the original formation core)
 DSD_AUDIT_VERDICT: PASS_WITH_REFINEMENT
 REVISION_NEED: CLARIFICATION (Proposition 5.13 quantifier/existence and "channel-faithful" scope)
 SOURCE_PDF_OR_ZENODO_CHANGED: no
