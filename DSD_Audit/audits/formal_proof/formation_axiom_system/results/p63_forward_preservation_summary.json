@@ -1,0 +1,84 @@
+{
+  "case": "FAS-F2-P6.3-FORWARD-001",
+  "source_pdf_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "source_printed_pages": [
+    15,
+    16
+  ],
+  "test_suite_status": "selected six full-model pairs executed in the local audit implementation; GitHub script published for reproducibility",
+  "typed_model_pairs": 6,
+  "finite_source_families_checked": 16,
+  "fixtures": [
+    {
+      "name": "noninjective_nonzero_collapse",
+      "source_channels": 2,
+      "target_channels": 1,
+      "finite_subsets": 4,
+      "global_channel_injection": false,
+      "all_family_sums_equal": false,
+      "source_all_channel_sum": "2",
+      "target_image_set_sum": "1",
+      "F1_F6": "verified"
+    },
+    {
+      "name": "injective_J_twice",
+      "source_channels": 2,
+      "target_channels": 2,
+      "finite_subsets": 4,
+      "global_channel_injection": true,
+      "all_family_sums_equal": true,
+      "J": "x -> 2x",
+      "F1_F6": "verified"
+    },
+    {
+      "name": "noninjective_zero_fiber",
+      "source_channels": 2,
+      "target_channels": 1,
+      "finite_subsets": 4,
+      "global_channel_injection": false,
+      "all_family_sums_equal": true,
+      "collapsed_target_term": "0",
+      "F1_F6": "verified"
+    },
+    {
+      "name": "target_only_witness",
+      "source_channels": 0,
+      "target_channels": 0,
+      "finite_subsets": 1,
+      "reflected_describability": false,
+      "source_A_star_size": 0,
+      "target_A_star_size": 2,
+      "F1_F6": "verified"
+    },
+    {
+      "name": "no_channels",
+      "source_channels": 0,
+      "target_channels": 0,
+      "finite_subsets": 1,
+      "describable_configurations_both_nonempty": true,
+      "empty_composites_equal": true,
+      "F1_F6": "verified"
+    },
+    {
+      "name": "target_additional_channel",
+      "source_channels": 1,
+      "target_channels": 2,
+      "finite_subsets": 2,
+      "source_image_A_star_proper_subset": true,
+      "all_family_sums_equal": true,
+      "F1_F6": "verified"
+    }
+  ],
+  "logical_results": {
+    "forall_forward_psi": true,
+    "forall_forward_active_union": true,
+    "forall_forward_channel_admission": true,
+    "forall_finite_composite_if_channel_injective": true,
+    "counterexample_without_injectivity_exists": true,
+    "global_injectivity_not_necessary_for_all_finite_composites_in_special_zero_fibers": true,
+    "no_reflection_or_reverse_active_union_assumed": true
+  },
+  "f2_full": "OPEN",
+  "independent_external_validation": "not_established",
+  "original_pdf_zenodo_changed": false
+}
