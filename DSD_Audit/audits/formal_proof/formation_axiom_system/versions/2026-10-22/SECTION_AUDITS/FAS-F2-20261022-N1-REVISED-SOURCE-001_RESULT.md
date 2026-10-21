@@ -63,3 +63,5 @@ ZENODO_NEW_VERSION_PUBLISHED: not_verified
 INDEPENDENT_EXTERNAL_VALIDATION: not_established
 NEXT: FAS-F2-20261022-N2-FOUR-SECTION-REAUDIT-001 / NOT_STARTED
 ```
+
+**Reciprocal Notion N1 page:** https://app.notion.com/p/40081f51e7fa81ed834ad58a02ff7326
