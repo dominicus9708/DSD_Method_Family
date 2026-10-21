@@ -84,3 +84,6 @@ NEXT: FAS-F2-G4-CLAIM-INVENTORY-001 / NOT_STARTED
 **Counting caution:** Previously reported 14/2/9 represented separately identified audit cases, and did not count, e.g., Proposition 4.12 or Corollaries 4.8/4.11/4.14 reviewed within the grouped Section 4.3 audit, nor some Section 2 and Section 4 source items. Therefore simply adding 10 and 2 to 2 and 9 **does not produce a trustworthy all-paper count of distinct audited numbered labels**. The next G4 step must reconcile every source-labelled definition, theorem, proposition, lemma, corollary and countermodel against evidence and distinguish `standalone` vs `bundled` vs `not reviewed` rather than announcing all claims cleared.
 
 Historical independent advisories retained without silent resolution: Theorem 4.7 six-clause independence phrasing; §7.3 D2 exposure/boundary detail; §8 fixed-J comparison overstrength. This case adds a localized Proposition 5.13 wording-scope advisory. No new primitive-axiom contradiction discovered and no external-independent validation.
+
+
+**Reciprocal Notion case:** https://app.notion.com/p/40081f51e7fa8148b69ec47a9898b7f6
