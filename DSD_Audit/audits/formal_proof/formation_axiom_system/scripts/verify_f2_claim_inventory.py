@@ -92,7 +92,7 @@ def run(pdf):
             cited=case or context
             found.append({'label':label,'source_heading':kind+' '+num,
                           'title':title,'kind':kind,'pdf_page':page_no,
-                          'printed_page':page_no-2,'status':status,
+                          'printed_page':page_no,'status':status,
                           'case_id':cited,'evidence_path':ROOT+EVIDENCE[cited] if cited else None})
     labels=[x['label'] for x in found]
     if len(labels)!=69 or len(set(labels))!=69: raise AssertionError('Expected exactly 69 distinct source headings')
