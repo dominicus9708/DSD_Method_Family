@@ -249,6 +249,5 @@ def main():
                           grid_branch=checks['Section 7.3 D2']['first_branching_index'],
                           comparison_boundaries=4, result='ALL_SELECTED_ASSERTIONS_PASS'),sort_keys=True))
 
-
 if __name__ == '__main__':
     main()
