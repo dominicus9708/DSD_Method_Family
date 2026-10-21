@@ -1,0 +1,41 @@
+{
+  "admitted_vs_global_transitivity": {
+    "admitted_subrelation_preorder_before_extension": true,
+    "global_clause_still_not_satisfied": true
+  },
+  "audit_id": "FAS-F2-APPD-RESTRICT-001",
+  "external_independent_validation": false,
+  "finite_scope_only": true,
+  "full_F2": "OPEN",
+  "induced_subexpression_checks": {
+    "all_pass": true,
+    "nested_triples_checked": 341,
+    "nonunique_tag_selection_counterexample": true
+  },
+  "nontransitive_with_active_channel": {
+    "axiom_ii_inheritance": true,
+    "nontransitive_legal_core": true,
+    "optional_new_edge": [
+      "H",
+      "g"
+    ],
+    "same_describability_and_one_channel": true,
+    "traces_after": 3,
+    "traces_before": 2
+  },
+  "reflexive_relation_exhaustive": {
+    "3": {
+      "nontransitive": 35,
+      "preorders": 29,
+      "preorders_nonantisymmetric": 10,
+      "reflexive": 64
+    },
+    "4": {
+      "nontransitive": 3741,
+      "preorders": 355,
+      "preorders_nonantisymmetric": 136,
+      "reflexive": 4096
+    }
+  },
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a"
+}

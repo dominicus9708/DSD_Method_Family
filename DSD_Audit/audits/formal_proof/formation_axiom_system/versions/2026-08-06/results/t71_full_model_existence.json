@@ -1,0 +1,135 @@
+{
+  "all_checks_passed": true,
+  "arbitrary_field_general_proof_separate_from_selected_checks": true,
+  "audit_id": "FAS-F2-T7.1-001",
+  "cases": [
+    {
+      "admitted_channels": 1,
+      "alternative_without_q_is_full_model_with_empty_C": true,
+      "anchor": "s0",
+      "closure_clauses": [
+        "IV",
+        "VI",
+        "VII"
+      ],
+      "composites_zero": 2,
+      "configuration_count": 1,
+      "expression_count": 1,
+      "field": "F2",
+      "finite_channel_families": 2,
+      "material_count": 1,
+      "operational_candidates": 1,
+      "primitive_axioms": [
+        "I",
+        "II",
+        "III",
+        "V"
+      ],
+      "psi_witness_count": 1,
+      "support_size": 1,
+      "typed_zeros_distinct": true,
+      "valid_trace_witnesses": 1,
+      "zero_space_scalar_samples": 2
+    },
+    {
+      "admitted_channels": 1,
+      "alternative_without_q_is_full_model_with_empty_C": true,
+      "anchor": "s0",
+      "closure_clauses": [
+        "IV",
+        "VI",
+        "VII"
+      ],
+      "composites_zero": 2,
+      "configuration_count": 1,
+      "expression_count": 1,
+      "field": "F2",
+      "finite_channel_families": 2,
+      "material_count": 1,
+      "operational_candidates": 1,
+      "primitive_axioms": [
+        "I",
+        "II",
+        "III",
+        "V"
+      ],
+      "psi_witness_count": 1,
+      "support_size": 3,
+      "typed_zeros_distinct": true,
+      "valid_trace_witnesses": 1,
+      "zero_space_scalar_samples": 2
+    },
+    {
+      "admitted_channels": 1,
+      "alternative_without_q_is_full_model_with_empty_C": true,
+      "anchor": "s0",
+      "closure_clauses": [
+        "IV",
+        "VI",
+        "VII"
+      ],
+      "composites_zero": 2,
+      "configuration_count": 1,
+      "expression_count": 1,
+      "field": "Q",
+      "finite_channel_families": 2,
+      "material_count": 1,
+      "operational_candidates": 1,
+      "primitive_axioms": [
+        "I",
+        "II",
+        "III",
+        "V"
+      ],
+      "psi_witness_count": 1,
+      "support_size": 1,
+      "typed_zeros_distinct": true,
+      "valid_trace_witnesses": 1,
+      "zero_space_scalar_samples": 4
+    },
+    {
+      "admitted_channels": 1,
+      "alternative_without_q_is_full_model_with_empty_C": true,
+      "anchor": "s0",
+      "closure_clauses": [
+        "IV",
+        "VI",
+        "VII"
+      ],
+      "composites_zero": 2,
+      "configuration_count": 1,
+      "expression_count": 1,
+      "field": "Q",
+      "finite_channel_families": 2,
+      "material_count": 1,
+      "operational_candidates": 1,
+      "primitive_axioms": [
+        "I",
+        "II",
+        "III",
+        "V"
+      ],
+      "psi_witness_count": 1,
+      "support_size": 3,
+      "typed_zeros_distinct": true,
+      "valid_trace_witnesses": 1,
+      "zero_space_scalar_samples": 4
+    }
+  ],
+  "external_independent_validation": false,
+  "full_model_validity_checks": 4,
+  "selected_fields": [
+    "F2",
+    "Q"
+  ],
+  "selected_instances": 4,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "support_sizes": [
+    1,
+    3
+  ],
+  "total_admitted_channels": 4,
+  "total_finite_family_checks": 8,
+  "total_legal_alternative_empty_C_models": 4,
+  "total_trace_witnesses": 4
+}

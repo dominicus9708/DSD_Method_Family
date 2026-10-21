@@ -1,0 +1,290 @@
+{
+  "audit_id": "FAS-F2-T6.23-001",
+  "source_pdf_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "all_checks_passed": true,
+  "case_count": 7,
+  "candidate_comparisons": 12,
+  "nonvacuous_failed_model_pairs": 5,
+  "empty_candidate_pairs": 1,
+  "strict_positive_pairs": 1,
+  "case_details": {
+    "strict_positive": {
+      "candidates": 2,
+      "strict": true,
+      "universal_failure": false,
+      "failed_indices": [
+        [],
+        [
+          8
+        ]
+      ],
+      "condition_rows": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          null
+        ]
+      ],
+      "fully_strict_candidates": 1
+    },
+    "anchor_E1": {
+      "candidates": 2,
+      "strict": false,
+      "universal_failure": true,
+      "failed_indices": [
+        [
+          1
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "condition_rows": [
+        [
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          null
+        ],
+        [
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          null
+        ]
+      ],
+      "fully_strict_candidates": 0
+    },
+    "assignment_E5_E6": {
+      "candidates": 2,
+      "strict": false,
+      "universal_failure": true,
+      "failed_indices": [
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          6,
+          8
+        ]
+      ],
+      "condition_rows": [
+        [
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          true,
+          null
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          true,
+          false,
+          null
+        ]
+      ],
+      "fully_strict_candidates": 0
+    },
+    "negligible_E7": {
+      "candidates": 2,
+      "strict": false,
+      "universal_failure": true,
+      "failed_indices": [
+        [
+          7
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "condition_rows": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          true,
+          null
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          false,
+          null
+        ]
+      ],
+      "fully_strict_candidates": 0
+    },
+    "role_E8": {
+      "candidates": 2,
+      "strict": false,
+      "universal_failure": true,
+      "failed_indices": [
+        [
+          8
+        ],
+        [
+          8
+        ]
+      ],
+      "condition_rows": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          null
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          null
+        ]
+      ],
+      "fully_strict_candidates": 0
+    },
+    "terms_E8_or_E9": {
+      "candidates": 2,
+      "strict": false,
+      "universal_failure": true,
+      "failed_indices": [
+        [
+          9
+        ],
+        [
+          8
+        ]
+      ],
+      "condition_rows": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          false,
+          null
+        ]
+      ],
+      "fully_strict_candidates": 0
+    },
+    "no_candidates_role_size": {
+      "candidates": 0,
+      "strict": false,
+      "universal_failure": true,
+      "failed_indices": [],
+      "condition_rows": [],
+      "fully_strict_candidates": 0
+    }
+  },
+  "abstract_quantifier_swap_truth_vectors": [
+    [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  ],
+  "abstract_truth_vectors_not_full_formation_models": true,
+  "Cand_requires_linear_isomorphism_J_at_entry": true,
+  "primitive_axioms_checked": [
+    "I",
+    "II",
+    "III",
+    "V"
+  ],
+  "closure_clauses_checked": [
+    "IV",
+    "VI",
+    "VII"
+  ],
+  "finite_tests_are_not_general_proof": true,
+  "external_independent_validation": false
+}

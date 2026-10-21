@@ -1,0 +1,149 @@
+{
+  "F_k_of_B_F_is_metatheoretic_not_python_enumerated": true,
+  "T_domain_is_admitted_C_not_candidate_U": true,
+  "all_selected_checks_passed": true,
+  "appendix": "A Typing and Notation",
+  "appendix_table_is_selective_not_exhaustive": true,
+  "audit_id": "FAS-F2-APPA-TYP-001",
+  "candidate_trace_iff_admitted": true,
+  "composite_empty_family_zero": true,
+  "finite_channel_family_contains_empty": true,
+  "forward_channel_map_collision_preserves_terms_not_finite_set_sums": true,
+  "forward_sum_preservation_requires_injective_channel_map": true,
+  "independent_external_validation": false,
+  "nonlisted_typed_symbols": [
+    "W",
+    "J",
+    "Role",
+    "Chan",
+    "Des_cfg",
+    "Lambda_delta",
+    "size",
+    "delta"
+  ],
+  "not_a_mathematical_proof_certificate": true,
+  "one_global_partial_q_defined_zero_not_undefined": true,
+  "outstanding_source_type_mismatch_count": 0,
+  "primary_type_crosswalk": [
+    {
+      "id": "A01",
+      "scope": "set-sized base and typed support",
+      "source": "2.1-2.2",
+      "symbol": "B / Supp(B)"
+    },
+    {
+      "id": "A02",
+      "scope": "material structure distinct from carrier",
+      "source": "2.2",
+      "symbol": "M_L / M_B^L"
+    },
+    {
+      "id": "A03",
+      "scope": "all candidate expressions and configurations",
+      "source": "2.2",
+      "symbol": "E_B^L / P_B^L"
+    },
+    {
+      "id": "A04",
+      "scope": "two expression predicates",
+      "source": "2.2,3.1",
+      "symbol": "Adm_expr / Des_expr"
+    },
+    {
+      "id": "A05",
+      "scope": "configuration primitive gates",
+      "source": "2.2,3.1",
+      "symbol": "Adm_cfg / LC / BC"
+    },
+    {
+      "id": "A06",
+      "scope": "expression-expression / expression-configuration",
+      "source": "2.2,3.1",
+      "symbol": "Res / Realize"
+    },
+    {
+      "id": "A07",
+      "scope": "derived primitive-vocabulary witness and union",
+      "source": "2.2 Def2.1",
+      "symbol": "Psi / A_star"
+    },
+    {
+      "id": "A08",
+      "scope": "derived describable configurations and union",
+      "source": "3.1 IV",
+      "symbol": "K_des / A"
+    },
+    {
+      "id": "A09",
+      "scope": "pointed set, not generally scalar space",
+      "source": "2.2",
+      "symbol": "V_lambda / zero_lambda"
+    },
+    {
+      "id": "A10",
+      "scope": "one global partial assignment and graph",
+      "source": "3.2 V",
+      "symbol": "Q_lambda / q_lambda / Gamma_lambda"
+    },
+    {
+      "id": "A11",
+      "scope": "candidate/admitted channels; term defined on C",
+      "source": "3.2 VI-VII",
+      "symbol": "U / C / T"
+    },
+    {
+      "id": "A12",
+      "scope": "finite admitted-channel sets and sums",
+      "source": "3.2 VII",
+      "symbol": "D_comp / Comp"
+    },
+    {
+      "id": "A13",
+      "scope": "stage records/class and erasures",
+      "source": "2.3 Def2.4",
+      "symbol": "F_le_k / F_k(B,F) / pi_j_i"
+    },
+    {
+      "id": "A14",
+      "scope": "candidate formation-trace set",
+      "source": "3.3 Def3.5",
+      "symbol": "Tr(c)"
+    },
+    {
+      "id": "A15",
+      "scope": "full candidate-level descriptor",
+      "source": "6.1 Def6.1",
+      "symbol": "Sigma_L"
+    },
+    {
+      "id": "A16",
+      "scope": "metatheoretic class of set-coded descriptors",
+      "source": "2.1,6.1",
+      "symbol": "FormDesc_B_F"
+    },
+    {
+      "id": "A17",
+      "scope": "forward and induced candidate-channel maps",
+      "source": "6.2 Def6.2",
+      "symbol": "Phi / Phi_hat"
+    },
+    {
+      "id": "A18",
+      "scope": "strict base-fixed formation isomorphism",
+      "source": "6.3 Def6.10",
+      "symbol": "iso_fix_B"
+    },
+    {
+      "id": "A19",
+      "scope": "comparison sets and earliest failure index",
+      "source": "6.4 Def6.15",
+      "symbol": "I_k / b"
+    }
+  ],
+  "printed_page": 30,
+  "source_edit_performed": false,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "source_table_rows": 19,
+  "stage_reduction_triples_checked": 120,
+  "zero_term_admitted_channel_distinct_from_absent_channel": true
+}

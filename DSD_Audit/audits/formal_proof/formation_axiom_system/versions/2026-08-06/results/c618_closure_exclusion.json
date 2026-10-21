@@ -1,0 +1,78 @@
+{
+  "all_abstract_nested_profiles": 820,
+  "all_checks_passed": true,
+  "ambient_cardinalities_exhausted": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "audit_id": "FAS-F2-C6.18-001",
+  "by_ambient_cardinality": {
+    "0": {
+      "i3_equals_i4": 1,
+      "nested_only_first_b4": 0,
+      "total": 1
+    },
+    "1": {
+      "i3_equals_i4": 8,
+      "nested_only_first_b4": 1,
+      "total": 9
+    },
+    "2": {
+      "i3_equals_i4": 64,
+      "nested_only_first_b4": 9,
+      "total": 81
+    },
+    "3": {
+      "i3_equals_i4": 512,
+      "nested_only_first_b4": 61,
+      "total": 729
+    }
+  },
+  "countercase_to_nestedness_alone": {
+    "drop_labels": [
+      4
+    ],
+    "stage_counts": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "earlier_t616_all_satisfy_I3_equal_I4": true,
+  "earlier_t616_fixture_first_branch_indices": {
+    "admission_stage1": 1,
+    "anchor_stage0": 0,
+    "qgraph_stage5": 5,
+    "realization_stage3": 3,
+    "restriction_stage2": 2,
+    "role_stage6": 6,
+    "strict_iso": null,
+    "term_space_stage7": 7
+  },
+  "earlier_t616_source_typed_fixture_cases": 8,
+  "finite_computation_not_general_proof": true,
+  "independent_external_validation": false,
+  "nestedness_alone_is_insufficient": true,
+  "no_circular_use_of_corollary_6_18": true,
+  "profiles_with_I3_equal_I4": 585,
+  "profiles_with_I3_equal_I4_and_b4": 0,
+  "profiles_with_nestedness_only_and_b4": 71,
+  "source_compatible_branch_values": [
+    "undefined",
+    0,
+    1,
+    2,
+    3,
+    5,
+    6,
+    7
+  ],
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a"
+}

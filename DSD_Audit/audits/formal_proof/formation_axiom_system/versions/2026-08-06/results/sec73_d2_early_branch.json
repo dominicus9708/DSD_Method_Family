@@ -1,0 +1,59 @@
+{
+  "all_selected_checks_passed": true,
+  "audit_id": "FAS-F2-SEC7.3-D2-001",
+  "consistent_blocked_annotation_completion_used": true,
+  "exposed_boundary_slots": 6,
+  "finite_test_not_external_formal_certification": true,
+  "first_branch_index": 3,
+  "grid_nearest_neighbor_edges": 12,
+  "grid_vertices": 9,
+  "independent_external_validation": false,
+  "material_universe": 57,
+  "minus_active_material": 0,
+  "minus_admitted_channels": 0,
+  "minus_composite_values": [
+    0
+  ],
+  "minus_describable_configs": 0,
+  "minus_global_assignment_edges": 0,
+  "negative_bc_repaired_first_branch_index": 5,
+  "original_boundary_record_coding_fully_explicit": false,
+  "original_invalid_q_minus_violates_primitive_V": true,
+  "plus_active_material": 9,
+  "plus_admitted_channels": 1,
+  "plus_composite_values": [
+    0,
+    1
+  ],
+  "plus_describable_configs": 1,
+  "plus_global_assignment_edges": 1,
+  "potential_boundary_slots": 36,
+  "realization_edges": 1,
+  "restriction_edges": 3,
+  "retained_internal_edges": 1,
+  "retained_material_items": 9,
+  "retained_vertices": 2,
+  "row_col_interpretation_of_named_horizontal_edge": "vertical",
+  "source_closure_clauses": [
+    "IV",
+    "VI",
+    "VII"
+  ],
+  "source_primitive_axioms": [
+    "I",
+    "II",
+    "III",
+    "V"
+  ],
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "stage_comparison_nonempty": {
+    "I0": true,
+    "I1": true,
+    "I2": true,
+    "I3": false,
+    "I4": false,
+    "I5": false,
+    "I6": false,
+    "I7": false
+  }
+}

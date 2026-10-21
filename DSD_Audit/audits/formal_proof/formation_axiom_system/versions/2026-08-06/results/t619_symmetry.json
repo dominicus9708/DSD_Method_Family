@@ -1,0 +1,438 @@
+{
+  "all_checks_passed": true,
+  "audit_id": "FAS-F2-T6.19-001",
+  "explicit_reverse_tuple_witnesses": 358,
+  "external_independent_validation": false,
+  "finite_not_general_proof": true,
+  "full_case_records": {
+    "admission_stage1": {
+      "forward": {
+        "b": 1,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "reverse": {
+        "b": 1,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "strict_representative_replacement": {
+        "b": 1,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      }
+    },
+    "anchor_stage0": {
+      "forward": {
+        "b": 0,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "reverse": {
+        "b": 0,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "strict_representative_replacement": {
+        "b": 0,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      }
+    },
+    "assignment_stage5": {
+      "forward": {
+        "b": 5,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "reverse": {
+        "b": 5,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "strict_representative_replacement": {
+        "b": 5,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      }
+    },
+    "realization_stage3": {
+      "forward": {
+        "b": 3,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "reverse": {
+        "b": 3,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "strict_representative_replacement": {
+        "b": 3,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      }
+    },
+    "restriction_stage2": {
+      "forward": {
+        "b": 2,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "reverse": {
+        "b": 2,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "strict_representative_replacement": {
+        "b": 2,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "strict": false
+      }
+    },
+    "role_stage6": {
+      "forward": {
+        "b": 6,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          4,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "reverse": {
+        "b": 6,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          4,
+          0,
+          0
+        ],
+        "strict": false
+      },
+      "strict_representative_replacement": {
+        "b": 6,
+        "pre7_noninvertible_survives": false,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          4,
+          0,
+          0
+        ],
+        "strict": false
+      }
+    },
+    "strict_iso": {
+      "forward": {
+        "b": null,
+        "pre7_noninvertible_survives": true,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          4,
+          4,
+          1
+        ],
+        "strict": true
+      },
+      "reverse": {
+        "b": null,
+        "pre7_noninvertible_survives": true,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          4,
+          4,
+          1
+        ],
+        "strict": true
+      },
+      "strict_representative_replacement": {
+        "b": null,
+        "pre7_noninvertible_survives": true,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          4,
+          4,
+          1
+        ],
+        "strict": true
+      }
+    },
+    "strict_nonzero_channel": {
+      "forward": {
+        "b": null,
+        "pre7_noninvertible_survives": true,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          4,
+          4,
+          1
+        ],
+        "strict": true
+      },
+      "reverse": {
+        "b": null,
+        "pre7_noninvertible_survives": true,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          4,
+          4,
+          1
+        ],
+        "strict": true
+      },
+      "strict_representative_replacement": {
+        "b": null,
+        "pre7_noninvertible_survives": true,
+        "stage_counts": [
+          8,
+          8,
+          8,
+          4,
+          4,
+          4,
+          4,
+          1
+        ],
+        "strict": true
+      }
+    },
+    "term_stage7": {
+      "forward": {
+        "b": 7,
+        "pre7_noninvertible_survives": true,
+        "stage_counts": [
+          32,
+          32,
+          32,
+          16,
+          16,
+          16,
+          16,
+          0
+        ],
+        "strict": false
+      },
+      "reverse": {
+        "b": 7,
+        "pre7_noninvertible_survives": true,
+        "stage_counts": [
+          32,
+          32,
+          32,
+          16,
+          16,
+          16,
+          16,
+          0
+        ],
+        "strict": false
+      },
+      "strict_representative_replacement": {
+        "b": 7,
+        "pre7_noninvertible_survives": true,
+        "stage_counts": [
+          32,
+          32,
+          32,
+          16,
+          16,
+          16,
+          16,
+          0
+        ],
+        "strict": false
+      }
+    }
+  },
+  "pre7_noninvertible_J_examples": 3,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "stage_nonemptiness_bidirectional_checks": 72,
+  "strict_representative_stage_checks": 72,
+  "typed_renaming_is_strict_in_selected_fixtures": true,
+  "typed_selected_cases": 9
+}

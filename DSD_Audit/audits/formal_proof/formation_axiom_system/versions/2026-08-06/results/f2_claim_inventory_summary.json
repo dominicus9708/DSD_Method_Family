@@ -1,0 +1,73 @@
+{
+  "audit_case": "FAS-F2-G4-CLAIM-INVENTORY-001",
+  "source": {
+    "file": "DSD_Formation_Axiom_System_EN(5).pdf",
+    "pages": 33,
+    "sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a"
+  },
+  "heading_counts": {
+    "Theorem": 14,
+    "Proposition": 16,
+    "Corollary": 14,
+    "Lemma": 2,
+    "Countermodel": 6,
+    "Definition": 12,
+    "Remark": 5,
+    "total": 69
+  },
+  "audit_record_cases": {
+    "theorem_audits_results": 21,
+    "section_audits_results": 15,
+    "total_distinct_result_reports": 36,
+    "numbered_source_evidence_reports": 27,
+    "unnumbered_section_or_appendix_reports": 9
+  },
+  "coverage": {
+    "explicit_mathematical_audit": 51,
+    "definition_typed_review": 12,
+    "context_only": 2,
+    "no_explicit_audit_found": 4
+  },
+  "open_or_context_labels": [
+    {
+      "label": "Proposition 6.3",
+      "status": "context_only",
+      "known_context_case": "FAS-F2-T6.5-001",
+      "next": "independent proof audit"
+    },
+    {
+      "label": "Remark 3.4",
+      "status": "context_only",
+      "known_context_case": "FAS-F2-T3.3-001",
+      "next": "source prose scope review"
+    },
+    {
+      "label": "Remark 3.1",
+      "status": "no_explicit_audit_found",
+      "next": "expository claim check"
+    },
+    {
+      "label": "Remark 3.2",
+      "status": "no_explicit_audit_found",
+      "next": "expository claim check"
+    },
+    {
+      "label": "Remark 6.9",
+      "status": "no_explicit_audit_found",
+      "next": "expository claim check"
+    },
+    {
+      "label": "Remark 6.13",
+      "status": "no_explicit_audit_found",
+      "next": "expository claim check"
+    }
+  ],
+  "evidence_row_crosswalk_script": "DSD_Audit/audits/formal_proof/formation_axiom_system/scripts/verify_f2_claim_inventory.py",
+  "exhaustive_69_row_report": "DSD_Audit/audits/formal_proof/formation_axiom_system/SECTION_AUDITS/FAS-F2-G4-CLAIM-INVENTORY-001_RESULT.md",
+  "caution": "A citation is not a per-claim mathematical audit; typed-definition review is not theorem proof; successful evidence crosswalk is not independent external proof validation.",
+  "source_or_zenodo_modified": false,
+  "whole_F2": "OPEN",
+  "external_independent_validation": "not_established",
+  "method_family_internally_standardized": 22,
+  "next": "FAS-F2-P6.3-FORWARD-001 / NOT_STARTED"
+}

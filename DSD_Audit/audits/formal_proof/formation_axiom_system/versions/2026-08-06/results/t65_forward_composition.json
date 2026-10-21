@@ -1,0 +1,17 @@
+{
+  "all_fixture_assertions_passed": true,
+  "audit_id": "FAS-F2-T6.5-001",
+  "channel_composition_identity": true,
+  "finite_test_not_universal_proof": true,
+  "identity_embedding": true,
+  "image_intersection_r1_tested": true,
+  "nested_embeddings_L_M_N": true,
+  "noninjective_forward_composition": true,
+  "noninjective_image_composite": 11,
+  "noninjective_source_channels": 2,
+  "noninjective_source_composite": 22,
+  "noninjective_target_channels": 1,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "two_step_embedding_composition": true,
+  "witness_reflection_not_redundant": true
+}

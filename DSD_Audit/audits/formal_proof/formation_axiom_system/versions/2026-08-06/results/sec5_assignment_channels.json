@@ -1,0 +1,50 @@
+{
+  "assignment_status": {
+    "assignment_status": {
+      "defined_nonzero_large": 1,
+      "defined_nonzero_small": 1,
+      "defined_zero": 1,
+      "undefined": 1
+    },
+    "channels": 4,
+    "defined_nonzero_without_role_gives_no_channel": true,
+    "defined_zero_supports_channels": true,
+    "nonexhaustive_U_Z_N": true,
+    "role_multiplicity_distinct_channels": 3,
+    "undefined_even_with_role_gives_no_channel": true,
+    "zero_padding_collision": true
+  },
+  "case": "FAS-F2-G3-SEC5-001",
+  "empty_domain_and_empty_channels": {
+    "absent_term_is_undefined": true,
+    "defined_value_without_role_no_channel": true,
+    "describable_without_assignment": true,
+    "describable_without_channels": true,
+    "empty_channels_composable_families": 1,
+    "empty_composite_is_defined_zero": true
+  },
+  "evidence_scope": "selected full typed 1-configuration models plus all 2^3 finite channel subsets; not arbitrary model proof",
+  "external_independent_validation": false,
+  "noninjective_composition": {
+    "F1_sum": "0",
+    "F2_sum": "0",
+    "channel_count": 3,
+    "finite_families_enumerated": 8,
+    "source_F1_distinct_F2": true,
+    "unordered_distinct_family_equal_composite_pairs": 8
+  },
+  "source_items": {
+    "corollaries": 2,
+    "countermodels": 1,
+    "definition": 1,
+    "propositions": 10
+  },
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "whole_F2": "OPEN",
+  "zero_extension_scope": {
+    "absent_plus_admitted_zero_collision": true,
+    "legal_countermodel_with_zero_extension_value_detecting_membership": true,
+    "status_of_source_prop_5_13": "conditional interpretation valid; blanket universal loses-membership claim needs explicit qualification",
+    "zero_term_need_not_have_zero_assignment": true
+  }
+}

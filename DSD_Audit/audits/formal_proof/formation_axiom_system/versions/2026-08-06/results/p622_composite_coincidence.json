@@ -1,0 +1,35 @@
+{
+  "all_checks_passed": true,
+  "case_id": "FAS-F2-P6.22-001",
+  "compared_field": "R",
+  "composite_equality": true,
+  "defined_zero_assignment": true,
+  "derived_clauses": [
+    "IV",
+    "VI",
+    "VII"
+  ],
+  "empty_family_not_used_in_definition": true,
+  "every_target_singleton_composite_nonzero": true,
+  "finite_arithmetic_not_full_real_vector_space_verification": true,
+  "independent_external_validation": false,
+  "nonempty_families": true,
+  "prescribed_J": "identity on R (fixed before families)",
+  "primitive_axioms": [
+    "I",
+    "II",
+    "III",
+    "V"
+  ],
+  "source_admitted_channels": 1,
+  "source_composite": 0,
+  "source_nonempty_family_size": 1,
+  "source_roles": 1,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "strict_isomorphism_possible": false,
+  "target_admitted_channels": 2,
+  "target_composite": 0,
+  "target_nonempty_family_size": 2,
+  "target_roles": 2,
+  "trace_membership_equivalences": 3
+}

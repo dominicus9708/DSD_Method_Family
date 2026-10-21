@@ -1,0 +1,105 @@
+{
+  "all_passed": true,
+  "candidate_channels_checked": 21,
+  "case_id": "FAS-F2-T3.6-001",
+  "fixtures": 8,
+  "results": [
+    {
+      "admitted_channels": 1,
+      "candidate_channels": 3,
+      "candidate_equivalences_checked": 3,
+      "case": "A_single_sound_witness",
+      "passed": true,
+      "q_defined_zero_count": 0,
+      "singleton_compositions_checked": 1,
+      "trace_witnesses": 1,
+      "witnesses_for_admitted": [
+        1
+      ]
+    },
+    {
+      "admitted_channels": 1,
+      "candidate_channels": 3,
+      "candidate_equivalences_checked": 3,
+      "case": "B_two_sound_witnesses_one_channel",
+      "passed": true,
+      "q_defined_zero_count": 0,
+      "singleton_compositions_checked": 1,
+      "trace_witnesses": 2,
+      "witnesses_for_admitted": [
+        2
+      ]
+    },
+    {
+      "admitted_channels": 0,
+      "candidate_channels": 3,
+      "candidate_equivalences_checked": 3,
+      "case": "C_no_realization_witness",
+      "passed": true,
+      "q_defined_zero_count": 0,
+      "singleton_compositions_checked": 0,
+      "trace_witnesses": 0,
+      "witnesses_for_admitted": []
+    },
+    {
+      "admitted_channels": 0,
+      "candidate_channels": 3,
+      "candidate_equivalences_checked": 3,
+      "case": "D_describable_but_undefined_assignment",
+      "passed": true,
+      "q_defined_zero_count": 0,
+      "singleton_compositions_checked": 0,
+      "trace_witnesses": 0,
+      "witnesses_for_admitted": []
+    },
+    {
+      "admitted_channels": 0,
+      "candidate_channels": 3,
+      "candidate_equivalences_checked": 3,
+      "case": "E_role_missing",
+      "passed": true,
+      "q_defined_zero_count": 0,
+      "singleton_compositions_checked": 0,
+      "trace_witnesses": 0,
+      "witnesses_for_admitted": []
+    },
+    {
+      "admitted_channels": 1,
+      "candidate_channels": 3,
+      "candidate_equivalences_checked": 3,
+      "case": "F_defined_zero_with_component_term_seven",
+      "passed": true,
+      "q_defined_zero_count": 1,
+      "singleton_compositions_checked": 1,
+      "trace_witnesses": 1,
+      "witnesses_for_admitted": [
+        1
+      ]
+    },
+    {
+      "admitted_channels": 0,
+      "candidate_channels": 0,
+      "candidate_equivalences_checked": 0,
+      "case": "G_empty_candidate_universe",
+      "passed": true,
+      "q_defined_zero_count": 0,
+      "singleton_compositions_checked": 0,
+      "trace_witnesses": 0,
+      "witnesses_for_admitted": []
+    },
+    {
+      "admitted_channels": 0,
+      "candidate_channels": 3,
+      "candidate_equivalences_checked": 3,
+      "case": "H_configuration_coherence_blocked",
+      "passed": true,
+      "q_defined_zero_count": 0,
+      "singleton_compositions_checked": 0,
+      "trace_witnesses": 0,
+      "witnesses_for_admitted": []
+    }
+  ],
+  "singleton_compositions_checked": 3,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "test_scope": "finite illustrative structures only; universal mathematical proof is separate"
+}

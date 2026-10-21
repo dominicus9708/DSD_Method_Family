@@ -1,0 +1,18 @@
+{
+  "admitted_channels_each_side": 3,
+  "all_checks_passed": true,
+  "candidate_source_image_equivalences": 32,
+  "case_id": "FAS-F2-C6.12-001",
+  "composite_checks": 8,
+  "defined_zero_channel_included": true,
+  "finite_checks_not_universal_proof": true,
+  "finite_families_each_side": 8,
+  "finite_scope": "typed Clause VI/E1-E9 interface fixture, not full-model general theorem proof",
+  "independent_external_validation": false,
+  "inverse_finite_family_checks": 8,
+  "linearity_J_example": "J(x)=2*x over R",
+  "nonempty_zero_sum_families": 1,
+  "role_reflection_removed_strict_premise_fails": true,
+  "role_reflection_removed_target_channels": 4,
+  "source_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a"
+}

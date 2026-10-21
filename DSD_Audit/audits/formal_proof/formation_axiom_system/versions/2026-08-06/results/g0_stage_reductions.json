@@ -1,0 +1,14 @@
+{
+  "all_assertions_passed": true,
+  "audit_id": "FAS-F2-G0-001",
+  "formation_stage_count": 7,
+  "general_mathematical_proof": false,
+  "independent_external_replication": false,
+  "reduction_composition_triples_verified": 120,
+  "role_relation_in_stage_six": true,
+  "roles_carrier_in_stage_zero": true,
+  "source_pdf_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "stage_count_including_bookkeeping_zero": 8,
+  "test_type": "coordinate-record combinatorial smoke test",
+  "truncation_pairs_verified": 36
+}
