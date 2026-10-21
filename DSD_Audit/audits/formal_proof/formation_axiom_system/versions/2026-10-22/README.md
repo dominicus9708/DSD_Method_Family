@@ -19,3 +19,6 @@
 
 ## Audit method
 Use existing FPA v0.1 and earlier archived verifier scripts **with explicit source-hash/version reruns**, saving new evidence under this folder's own `SECTION_AUDITS/`, `THEOREM_AUDITS/`, `scripts/`, `results/`. Avoid writing revised-edition audit results into the historical 2026-08-06 archive or legacy root.
+
+## N1 first source-bound intake (executed 2026-10-21)
+[N1 PDF identity, 69 source headings and G7 preview text-parity result](SECTION_AUDITS/FAS-F2-20261022-N1-REVISED-SOURCE-001_RESULT.md) confirms the newly attached 34-page PDF has identical **normalized extracted full text** to the G7 EN PDF preview after changing only cover `2026.08.06`→`2026.10.22`. These PDFs differ in bytes and the revised EN/KR TeX drafts still carry the old date. **N1 is an intake PROCESS PASS_WITH_BOUNDARY; not a new mathematical proof PASS**. Next source-math N2 four-section re-audit, not started. [New-edition Notion folder](https://app.notion.com/p/40081f51e7fa812d95f1f7e1e6ae9f88); [Notion N1](https://app.notion.com/p/40081f51e7fa81ed834ad58a02ff7326).
