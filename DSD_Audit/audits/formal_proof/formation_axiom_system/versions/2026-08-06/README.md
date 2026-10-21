@@ -24,3 +24,6 @@
 
 ## Counting and preservation
 The preserved directory subtrees are snapshot references to the exact Git tree/blob objects already saved to the repository and are not reconstructions from the assistant's memory. Filenames, internal relative links, scripts and machine-produced JSON remain intact.
+
+## Notion source folder
+Historical F2 ledger and all prior case child pages were moved under [2026-08-06 F2 historical audit folder](https://app.notion.com/p/40081f51e7fa8174ba9ed023f2120b41); old public page IDs and old GitHub URLs remain functional.
