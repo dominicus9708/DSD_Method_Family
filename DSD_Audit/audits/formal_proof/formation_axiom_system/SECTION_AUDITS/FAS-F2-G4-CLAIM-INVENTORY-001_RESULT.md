@@ -149,3 +149,6 @@ ORIGINAL_PDF_ZENODO: unchanged
 DSD_METHOD_FAMILY_STANDARDIZATION: 22/22 unchanged
 NEXT: FAS-F2-P6.3-FORWARD-001 / NOT_STARTED
 ```
+
+
+**Reciprocal Notion inventory page:** https://app.notion.com/p/40081f51e7fa812eb61bf5af18bca463
