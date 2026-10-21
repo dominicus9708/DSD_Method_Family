@@ -102,3 +102,6 @@ NEXT: FAS-F2-G6-REVISION-SCOPE-001 / NOT_STARTED
 \`\`\`
 
 **Outstanding independent manuscript-source issues NOT changed:** Theorem 4.7 six residual constraints' comparison against "other primitive axioms" needs a clarified relative residual framework; original §7.3 D2 exposure/boundary conditions need clarification; §8 Discussion's unqualified "strictly weaker" relation under fixed J was found overstrong in prior source audit; Proposition 5.13's blanket channel-membership loss reading requires conditional scope. These should be reconciled in a dedicated G6 revision-scope audit before any full-F2 closure. The 69 original numbered headings now have attached source-bound audit evidence, but this does not automatically close the manuscript-wide dependency graph or constitute formal machine proof / external independent verification.
+
+
+**Reciprocal Notion case:** https://app.notion.com/p/40081f51e7fa81b3adeedb76f41eaf3c
