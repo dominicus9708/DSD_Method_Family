@@ -4,10 +4,10 @@
 
 ## Source/provenance and prospective boundary
 
-- Original 33-page `DSD_Formation_Axiom_System_EN(5).pdf`; SHA256 `8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a`; PDF headings extracted by actual locally executed PyMuPDF script, independently compared with `pdftotext -layout`. PDF printed pages = rendered page numbers minus 2 in this edition.
+- Original 33-page `DSD_Formation_Axiom_System_EN(5).pdf`; SHA256 `8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a`; PDF headings extracted by actual locally executed PyMuPDF script, independently compared with `pdftotext -layout`. Original printed page numbers equal the PDF-rendered 1-based page numbers in this edition.
 - [Precommit](FAS-F2-G4-CLAIM-INVENTORY-001_PRECOMMIT.md) commit `ee67a6a51a4632be19314bfdec74fe1184cb6b5e`, created before crosswalk execution.
-- [Actual executed Python](../scripts/verify_f2_claim_inventory.py), commit `5249363303bed60b6b0b7325d6134f68ce0974e5`, locally executed source SHA256 `7e7ed3a1cefaa2f78550e0055886fc9626349343d12d91d551d3e5be5efff03d`, Git blob `aa633e0fbb9eb25e25f44333c0657f238d352c6e`, confirmed same GitHub exact bytes.
-- Local full PDF-driven 69-row deterministic JSON generated with SHA256 `050dde7e3336065af8b723ba03c417213a16a7b1d60ce1a17ea2297d43919aba` and Git blob `a5e6eb5a687c57264cb2b5cce3f6ea33ffbf301f`. **This full PDF-extracted JSON was generated locally and is reproducible by the uploaded script; unlike the GitHub summary, it has not been committed to this repository.**
+- [Actual executed Python](../scripts/verify_f2_claim_inventory.py), commit `5249363303bed60b6b0b7325d6134f68ce0974e5`, locally executed source SHA256 `106486f1bf4d985c66c64749db32a1e317b128ceeb5843e1f62659a3c603004e`, Git blob `5410a493492b9cdfb35cf6dc4e7645cdb8bc197c`, confirmed same GitHub exact bytes.
+- Local full PDF-driven 69-row deterministic JSON generated with SHA256 `d6fc8becb8837e0f35ac10a9c527ba7b2c1dea613ea6ce0d9a8a22f6c7dc59e2` and Git blob `bba9df5507b542c6f679252c33cedfae648b17fa`. **This full PDF-extracted JSON was generated locally and is reproducible by the uploaded script; unlike the GitHub summary, it has not been committed to this repository.**
 - [GitHub summary JSON](../results/f2_claim_inventory_summary.json), commit `9bee550d1e5ab2266431a65053766364c9af8895`. The GitHub summary is a distinct compact file, not a byte-identical substitution for the full locally emitted 69-row JSON.
 
 ## 1. Source census and evidence denominator
@@ -38,75 +38,75 @@ Status abbreviations: `Explicit mathematical audit` = original labelled claim di
 
 | 원문 항목 | 인쇄쪽 | 증거 수준 | 감사 사례 |
 |---|---:|---|---|
-| Definition 2.1 | 3 | Definition typed review | G0 |
-| Definition 2.2 | 3 | Definition typed review | G0 |
-| Definition 2.3 | 3 | Definition typed review | G0 |
-| Definition 2.4 | 4 | Definition typed review | G0 |
-| Proposition 2.5 | 4 | Explicit mathematical audit | G0 |
-| Remark 3.1 | 5 | NO EXPLICIT AUDIT | — |
-| Remark 3.2 | 5 | NO EXPLICIT AUDIT | — |
-| Theorem 3.3 | 6 | Explicit mathematical audit | T3.3 |
-| Remark 3.4 | 7 | Context citation only | T3.3 |
-| Definition 3.5 | 7 | Definition typed review | T3.6 |
-| Theorem 3.6 | 7 | Explicit mathematical audit | T3.6 |
-| Countermodel 4.1 | 8 | Explicit mathematical audit | T4.5 |
-| Countermodel 4.2 | 8 | Explicit mathematical audit | T4.5 |
-| Countermodel 4.3 | 8 | Explicit mathematical audit | T4.5 |
-| Countermodel 4.4 | 8 | Explicit mathematical audit | T4.5 |
-| Theorem 4.5 | 8 | Explicit mathematical audit | T4.5 |
-| Proposition 4.6 | 8 | Explicit mathematical audit | T4.7 |
-| Theorem 4.7 | 9 | Explicit mathematical audit, refinement | T4.7 |
-| Corollary 4.8 | 9 | Explicit mathematical audit | S4.3 |
-| Countermodel 4.9 | 9 | Explicit mathematical audit | S4.3 |
-| Lemma 4.10 | 10 | Explicit mathematical audit | S4.3 |
-| Corollary 4.11 | 10 | Explicit mathematical audit | S4.3 |
-| Proposition 4.12 | 10 | Explicit mathematical audit | S4.3 |
-| Lemma 4.13 | 10 | Explicit mathematical audit | S4.3 |
-| Corollary 4.14 | 10 | Explicit mathematical audit | S4.3 |
-| Definition 5.1 | 10 | Definition typed review | S5 |
-| Proposition 5.2 | 10 | Explicit mathematical audit | S5 |
-| Corollary 5.3 | 11 | Explicit mathematical audit | S5 |
-| Proposition 5.4 | 11 | Explicit mathematical audit | S5 |
-| Proposition 5.5 | 11 | Explicit mathematical audit | S5 |
-| Proposition 5.6 | 11 | Explicit mathematical audit | S5 |
-| Corollary 5.7 | 11 | Explicit mathematical audit | S5 |
-| Proposition 5.8 | 11 | Explicit mathematical audit | S5 |
-| Proposition 5.9 | 11 | Explicit mathematical audit | S5 |
-| Countermodel 5.10 | 11 | Explicit mathematical audit | S5 |
-| Proposition 5.11 | 12 | Explicit mathematical audit | S5 |
-| Proposition 5.12 | 12 | Explicit mathematical audit | S5 |
-| Proposition 5.13 | 12 | Explicit mathematical audit, refinement | S5 |
-| Proposition 5.14 | 12 | Explicit mathematical audit | S5 |
-| Definition 6.1 | 13 | Definition typed review | T6.5 |
-| Definition 6.2 | 13 | Definition typed review | T6.5 |
-| Proposition 6.3 | 14 | CONTEXT ONLY; separate proof missing | T6.5 |
-| Definition 6.4 | 14 | Definition typed review | T6.5 |
-| Theorem 6.5 | 15 | Explicit mathematical audit | T6.5 |
-| Corollary 6.6 | 15 | Explicit mathematical audit | S6.6-6.7 |
-| Corollary 6.7 | 15 | Explicit mathematical audit | S6.6-6.7 |
-| Theorem 6.8 | 15 | Explicit mathematical audit | T6.8 |
-| Remark 6.9 | 16 | NO EXPLICIT AUDIT | — |
-| Definition 6.10 | 16 | Definition typed review | P6.11 |
-| Proposition 6.11 | 17 | Explicit mathematical audit | P6.11 |
-| Corollary 6.12 | 18 | Explicit mathematical audit | C6.12 |
-| Remark 6.13 | 18 | NO EXPLICIT AUDIT | — |
-| Theorem 6.14 | 18 | Explicit mathematical audit | T6.14 |
-| Definition 6.15 | 18 | Definition typed review | T6.16 |
-| Theorem 6.16 | 19 | Explicit mathematical audit | T6.16 |
-| Theorem 6.17 | 19 | Explicit mathematical audit | T6.17 |
-| Corollary 6.18 | 20 | Explicit mathematical audit | C6.18 |
-| Theorem 6.19 | 20 | Explicit mathematical audit | T6.19 |
-| Theorem 6.20 | 21 | Explicit mathematical audit | T6.20 |
-| Definition 6.21 | 21 | Definition typed review | P6.22 |
-| Proposition 6.22 | 21 | Explicit mathematical audit | P6.22 |
-| Theorem 6.23 | 21 | Explicit mathematical audit | T6.23 |
-| Corollary 6.24 | 22 | Explicit mathematical audit | C6.24 |
-| Corollary 6.25 | 22 | Explicit mathematical audit | C6.25 |
-| Corollary 6.26 | 22 | Explicit mathematical audit | C6.26 |
-| Theorem 7.1 | 22 | Explicit mathematical audit | T7.1 |
-| Corollary 7.2 | 22 | Explicit mathematical audit | C7.2 |
-| Theorem 7.3 | 23 | Explicit mathematical audit | T7.3 |
-| Corollary 7.4 | 23 | Explicit mathematical audit | C7.4 |
+| Definition 2.1 | 5 | Definition typed review | G0 |
+| Definition 2.2 | 5 | Definition typed review | G0 |
+| Definition 2.3 | 5 | Definition typed review | G0 |
+| Definition 2.4 | 6 | Definition typed review | G0 |
+| Proposition 2.5 | 6 | Explicit mathematical audit | G0 |
+| Remark 3.1 | 7 | NO EXPLICIT AUDIT | — |
+| Remark 3.2 | 7 | NO EXPLICIT AUDIT | — |
+| Theorem 3.3 | 8 | Explicit mathematical audit | T3.3 |
+| Remark 3.4 | 9 | Context citation only | T3.3 |
+| Definition 3.5 | 9 | Definition typed review | T3.6 |
+| Theorem 3.6 | 9 | Explicit mathematical audit | T3.6 |
+| Countermodel 4.1 | 10 | Explicit mathematical audit | T4.5 |
+| Countermodel 4.2 | 10 | Explicit mathematical audit | T4.5 |
+| Countermodel 4.3 | 10 | Explicit mathematical audit | T4.5 |
+| Countermodel 4.4 | 10 | Explicit mathematical audit | T4.5 |
+| Theorem 4.5 | 10 | Explicit mathematical audit | T4.5 |
+| Proposition 4.6 | 10 | Explicit mathematical audit | T4.7 |
+| Theorem 4.7 | 11 | Explicit mathematical audit, refinement | T4.7 |
+| Corollary 4.8 | 11 | Explicit mathematical audit | S4.3 |
+| Countermodel 4.9 | 11 | Explicit mathematical audit | S4.3 |
+| Lemma 4.10 | 12 | Explicit mathematical audit | S4.3 |
+| Corollary 4.11 | 12 | Explicit mathematical audit | S4.3 |
+| Proposition 4.12 | 12 | Explicit mathematical audit | S4.3 |
+| Lemma 4.13 | 12 | Explicit mathematical audit | S4.3 |
+| Corollary 4.14 | 12 | Explicit mathematical audit | S4.3 |
+| Definition 5.1 | 12 | Definition typed review | S5 |
+| Proposition 5.2 | 12 | Explicit mathematical audit | S5 |
+| Corollary 5.3 | 13 | Explicit mathematical audit | S5 |
+| Proposition 5.4 | 13 | Explicit mathematical audit | S5 |
+| Proposition 5.5 | 13 | Explicit mathematical audit | S5 |
+| Proposition 5.6 | 13 | Explicit mathematical audit | S5 |
+| Corollary 5.7 | 13 | Explicit mathematical audit | S5 |
+| Proposition 5.8 | 13 | Explicit mathematical audit | S5 |
+| Proposition 5.9 | 13 | Explicit mathematical audit | S5 |
+| Countermodel 5.10 | 13 | Explicit mathematical audit | S5 |
+| Proposition 5.11 | 14 | Explicit mathematical audit | S5 |
+| Proposition 5.12 | 14 | Explicit mathematical audit | S5 |
+| Proposition 5.13 | 14 | Explicit mathematical audit, refinement | S5 |
+| Proposition 5.14 | 14 | Explicit mathematical audit | S5 |
+| Definition 6.1 | 15 | Definition typed review | T6.5 |
+| Definition 6.2 | 15 | Definition typed review | T6.5 |
+| Proposition 6.3 | 16 | CONTEXT ONLY; separate proof missing | T6.5 |
+| Definition 6.4 | 16 | Definition typed review | T6.5 |
+| Theorem 6.5 | 17 | Explicit mathematical audit | T6.5 |
+| Corollary 6.6 | 17 | Explicit mathematical audit | S6.6-6.7 |
+| Corollary 6.7 | 17 | Explicit mathematical audit | S6.6-6.7 |
+| Theorem 6.8 | 17 | Explicit mathematical audit | T6.8 |
+| Remark 6.9 | 18 | NO EXPLICIT AUDIT | — |
+| Definition 6.10 | 18 | Definition typed review | P6.11 |
+| Proposition 6.11 | 19 | Explicit mathematical audit | P6.11 |
+| Corollary 6.12 | 20 | Explicit mathematical audit | C6.12 |
+| Remark 6.13 | 20 | NO EXPLICIT AUDIT | — |
+| Theorem 6.14 | 20 | Explicit mathematical audit | T6.14 |
+| Definition 6.15 | 20 | Definition typed review | T6.16 |
+| Theorem 6.16 | 21 | Explicit mathematical audit | T6.16 |
+| Theorem 6.17 | 21 | Explicit mathematical audit | T6.17 |
+| Corollary 6.18 | 22 | Explicit mathematical audit | C6.18 |
+| Theorem 6.19 | 22 | Explicit mathematical audit | T6.19 |
+| Theorem 6.20 | 23 | Explicit mathematical audit | T6.20 |
+| Definition 6.21 | 23 | Definition typed review | P6.22 |
+| Proposition 6.22 | 23 | Explicit mathematical audit | P6.22 |
+| Theorem 6.23 | 23 | Explicit mathematical audit | T6.23 |
+| Corollary 6.24 | 24 | Explicit mathematical audit | C6.24 |
+| Corollary 6.25 | 24 | Explicit mathematical audit | C6.25 |
+| Corollary 6.26 | 24 | Explicit mathematical audit | C6.26 |
+| Theorem 7.1 | 24 | Explicit mathematical audit | T7.1 |
+| Corollary 7.2 | 24 | Explicit mathematical audit | C7.2 |
+| Theorem 7.3 | 25 | Explicit mathematical audit | T7.3 |
+| Corollary 7.4 | 25 | Explicit mathematical audit | C7.4 |
 
 The original section and appendix source audits are tracked as **separate unnumbered cases** and must not be appended to or subtracted from these 69 source-labelled rows.
 
