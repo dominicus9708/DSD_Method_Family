@@ -1,0 +1,39 @@
+{
+  "case": "FAS-F2-G5-REMARK-SCOPE-001",
+  "external_independent_validation": false,
+  "full_F2": "OPEN",
+  "remarks_tested": 5,
+  "scope": "bounded exact fixtures plus separate source logic; not general theorem proof",
+  "selected_fixtures": {
+    "Remark 3.1": {
+      "II_without_I_typed_witness": true,
+      "I_without_II_typed_witness": true,
+      "these_are_not_full_original_models": true
+    },
+    "Remark 3.2": {
+      "H_equal_h_can_support_full_Psi": true,
+      "identity_Res_available_from_I_II": true,
+      "witness_without_realization_not_sufficient": true,
+      "witness_without_three_gates_not_sufficient": true
+    },
+    "Remark 3.4": {
+      "first_nonempty_composite": 1,
+      "post_VI_term_data_not_uniquely_determined_by_primitive_core": true,
+      "same_supplied_data_unique_derived_closure": true,
+      "second_nonempty_composite": 2
+    },
+    "Remark 6.13": {
+      "anchor_incompatible_permutation_rejected": true,
+      "changed_internal_coordinate_names_allowed": true,
+      "material_incidence_preserved": true,
+      "same_external_support_anchors_preserved": true
+    },
+    "Remark 6.9": {
+      "not_every_induced_subset_forms_submodel": true,
+      "retained_q_outside_new_Astar_invalid": true,
+      "source_full_model_consistent": true,
+      "witness_removed_full_reduct_not_witness_reflecting": true
+    }
+  },
+  "source_pdf_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a"
+}
