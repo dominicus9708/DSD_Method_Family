@@ -122,3 +122,5 @@ DSD_Audit/audits/formal_proof/formation_axiom_system/versions/2026-10-22/results
 ```
 
 The verifier uses the Python standard library only and supports an optional alternative destination path as its first positional argument.
+
+**Reciprocal Notion N2 audit record:** https://app.notion.com/p/40081f51e7fa8172858de07166cdae17
