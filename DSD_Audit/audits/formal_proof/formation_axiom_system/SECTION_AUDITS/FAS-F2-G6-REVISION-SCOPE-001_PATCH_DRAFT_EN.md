@@ -35,12 +35,12 @@ The collision is real **when** an absent candidate and an admitted zero-term cha
 **Proposed full replacement statement:**
 
 > Proposition 5.13 (Conditional membership loss under zero extension).
-> Let \\(\overline{T}_L\\) extend \\(T_L:C_L\\to W_L\\) to the candidate-channel universe \\(U_L\\) by assigning \\(0_{W_L}\\) to every candidate outside \\(C_L\\).
-> If there are \\(u\\in U_L\\setminus C_L\\) and \\(c_0\\in C_L\\) with \\(T_L(c_0)=0_{W_L}\\), then \\(\overline{T}_L(u)=\overline{T}_L(c_0)\\) although only \\(c_0\\) is admitted.
+> Let \(\overline{T}_L\) extend \(T_L:C_L\to W_L\) to the candidate-channel universe \(U_L\) by assigning \(0_{W_L}\) to every candidate outside \(C_L\).
+> If there are \(u\in U_L\setminus C_L\) and \(c_0\in C_L\) with \(T_L(c_0)=0_{W_L}\), then \(\overline{T}_L(u)=\overline{T}_L(c_0)\) although only \(c_0\) is admitted.
 > Therefore the value of this zero extension alone cannot determine channel membership in every model.
 > No claim of inevitable loss in each model is made.
 
-**Source-preserving mathematical nuance:** if every admitted component term is nonzero, membership is recovered by \\(c\\in C_L\\iff\overline{T}_L(c)\\ne0\\).
+**Source-preserving mathematical nuance:** if every admitted component term is nonzero, membership is recovered by \(c\in C_L\iff\overline{T}_L(c)\ne0\).
 This is a condition on the **component term**, not on the originally assigned quantity value.
 The original distinction “absent channel ≠ admitted channel with a zero term” is unaffected.
 
@@ -52,39 +52,39 @@ The original distinction “absent channel ≠ admitted channel with a zero term
 The label “horizontal” for the edge joining (0,0) and (1,0) is coordinate-convention sensitive.
 The source's branching claim at Stage 3 uses the **primitive regime-specific BC predicate** rather than a physical boundary law calculated from geometry.
 
-**Proposed insertion after defining \\(S_*=\{(0,0),(1,0)\}\\):**
+**Proposed insertion after defining \(S_*=\{(0,0),(1,0)\}\):**
 
-> Use the row-column convention for ordered grid coordinates and let \\(r_*\\) denote the nearest-neighbor edge joining the two vertices of \\(S_*\\).
+> Use the row-column convention for ordered grid coordinates and let \(r_*\) denote the nearest-neighbor edge joining the two vertices of \(S_*\).
 > The common typed material carrier contains nine vertex items, twelve undirected nearest-neighbor edge items, and thirty-six directional boundary-slot items, totaling fifty-seven material items.
-> The restricted expression \\(h_*\\) and the configuration \\(p_*\\) retain exactly the two selected vertex items, their joining edge item, and the six directional boundary slots exposed by \\(S_*\\), totaling nine active material items.
-> Supply one common boundary annotation on the material records: mark those six exposed slots blocked and the remaining thirty slots transmissive; inherit the corresponding restrictions into \\(h_*\\) and \\(p_*\\).
+> The restricted expression \(h_*\) and the configuration \(p_*\) retain exactly the two selected vertex items, their joining edge item, and the six directional boundary slots exposed by \(S_*\), totaling nine active material items.
+> Supply one common boundary annotation on the material records: mark those six exposed slots blocked and the remaining thirty slots transmissive; inherit the corresponding restrictions into \(h_*\) and \(p_*\).
 > Both regimes have the same material records and inherited boundary annotations.
-> Their primitive boundary-compatibility predicates differ because \\(L_+\\) admits the selected blocked boundary configuration while \\(L_-\\) does not.
-> Consequently \\(BC_{L_+}(p_*)\\) holds and \\(BC_{L_-}(p_*)\\) fails.
+> Their primitive boundary-compatibility predicates differ because \(L_+\) admits the selected blocked boundary configuration while \(L_-\) does not.
+> Consequently \(BC_{L_+}(p_*)\) holds and \(BC_{L_-}(p_*)\) fails.
 
 **Proposed terminology change:** “their internal horizontal relation” → “their joining nearest-neighbor edge relation”.
 This avoids choosing a geometrically misleading axis orientation.
 
-**Unchanged claim:** the retained witnesses, original \\(K_{L_+}^{des}=\{p_*\}\\), \\(K_{L_-}^{des}=\varnothing\\), the absence of admitted channels on \\(L_-\\), and first branching index \\(b(L_+,L_-)=3\\).
+**Unchanged claim:** the retained witnesses, original \(K_{L_+}^{des}=\{p_*\}\), \(K_{L_-}^{des}=\varnothing\), the absence of admitted channels on \(L_-\), and first branching index \(b(L_+,L_-)=3\).
 The explicit annotation map above is a **proposed consistent completion**; it is not literally enumerated in the originally published PDF.
 
 ---
 
 ## 4. Section 8 Discussion — Fixed-J coincidence versus strict equivalence (printed p.29)
 
-**Original issue:** “composite-level coincidence ... is therefore strictly weaker than strict formation equivalence” can be read as a universally valid logical implication comparison for an arbitrarily prescribed \\(J\\).
+**Original issue:** “composite-level coincidence ... is therefore strictly weaker than strict formation equivalence” can be read as a universally valid logical implication comparison for an arbitrarily prescribed \(J\).
 This reading is false.
 
 **Proposed replacement for the two sentences beginning “By contrast, composite-level coincidence…”:**
 
-> By contrast, composite-level coincidence under Definition 6.21 tests selected nonempty admitted-channel families under an independently prescribed linear isomorphism \\(J\\), rather than the entire candidate-level formation structure.
+> By contrast, composite-level coincidence under Definition 6.21 tests selected nonempty admitted-channel families under an independently prescribed linear isomorphism \(J\), rather than the entire candidate-level formation structure.
 > Proposition 6.22 establishes that such coincidence does not imply strict formation equivalence.
-> Conversely, a strict formation isomorphism transports corresponding finite composites under its **own** term map, provided that admitted channels are nonempty, but it need not produce coincidence for an arbitrary independently fixed \\(J\\).
-> Because empty admitted-channel sets also fail Definition 6.21's nonempty-family requirement, the two relations do not have an unconditional implication ordering for fixed \\(J\\).
+> Conversely, a strict formation isomorphism transports corresponding finite composites under its **own** term map, provided that admitted channels are nonempty, but it need not produce coincidence for an arbitrary independently fixed \(J\).
+> Because empty admitted-channel sets also fail Definition 6.21's nonempty-family requirement, the two relations do not have an unconditional implication ordering for fixed \(J\).
 > In this structural-information sense only, agreement of selected composite outputs records less than full strict formation equivalence.
 
-**Source-typed counterexample to the removed overstatement:** Let \\(L=M\\) be a one-channel model with term 1 and \\(W_L=W_M=\\mathbb R\\).
-The descriptors are strictly formation-equivalent via identity, but under independently prescribed \\(J=-\mathrm{id}_{\\mathbb R}\\) their only nonempty full-family composites are -1 and +1, so fixed-J coincidence fails.
+**Source-typed counterexample to the removed overstatement:** Let \(L=M\) be a one-channel model with term 1 and \(W_L=W_M=\mathbb R\).
+The descriptors are strictly formation-equivalent via identity, but under independently prescribed \(J=-\mathrm{id}_{\mathbb R}\) their only nonempty full-family composites are -1 and +1, so fixed-J coincidence fails.
 Also a strictly equivalent empty-channel pair has no nonempty family under Definition 6.21.
 Both are compatible with Proposition 6.22's unchanged one-way nonimplication.
 
