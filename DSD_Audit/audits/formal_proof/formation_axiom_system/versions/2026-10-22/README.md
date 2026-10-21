@@ -22,3 +22,14 @@ Use existing FPA v0.1 and earlier archived verifier scripts **with explicit sour
 
 ## N1 first source-bound intake (executed 2026-10-21)
 [N1 PDF identity, 69 source headings and G7 preview text-parity result](SECTION_AUDITS/FAS-F2-20261022-N1-REVISED-SOURCE-001_RESULT.md) confirms the newly attached 34-page PDF has identical **normalized extracted full text** to the G7 EN PDF preview after changing only cover `2026.08.06`→`2026.10.22`. These PDFs differ in bytes and the revised EN/KR TeX drafts still carry the old date. **N1 is an intake PROCESS PASS_WITH_BOUNDARY; not a new mathematical proof PASS**. Next source-math N2 four-section re-audit, not started. [New-edition Notion folder](https://app.notion.com/p/40081f51e7fa812d95f1f7e1e6ae9f88); [Notion N1](https://app.notion.com/p/40081f51e7fa81ed834ad58a02ff7326).
+
+## N2 completed 2026-10-22 — corrected four-section source-bound re-audit
+
+[Mathematical N2 result](SECTION_AUDITS/FAS-F2-20261022-N2-FOUR-SECTION-REAUDIT-001_RESULT.md) follows [prospective proof obligations](SECTION_AUDITS/FAS-F2-20261022-N2-FOUR-SECTION-REAUDIT-001_PRECOMMIT.md) for the exact new PDF SHA256 `af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe`.
+- §4.2 Theorem 4.7 six residual clauses: 6/6 typed clausewise-independence interpretations with a nonempty admitted-channel kernel, each falsifying only one residual; no false full-axiom interpretation.
+- §5 Proposition 5.13: exact conditional zero-extension collision and value-only decodability boundary, 16/16 toy candidates.
+- §7.3 D2: 57 material identifiers, 9 selected (six exposed blocked), 30 remaining transmissive slots; inherited anchors/annotations; `I_2≠empty`, `I_3=empty`, `b=3`.
+- §8 Discussion: arbitrary fixed-J strict⇒coincidence false; strict empty-channel case excluded by nonempty-family requirement; Proposition 6.22 one-way coincidence⇒strict failure unchanged; strict nonempty pair under **its own J** transports finite families.
+- Exact [executed Python](scripts/verify_n2_four_sections.py) SHA256 `06218533b3bf38072edf7a09fbaa5315a3f938f2006aaf8c97f0f3914bd48380` / Git blob `562cad9ae7399c8c81b64c793f0afea43c7a726d`, and [its produced JSON](results/n2_four_sections.json) SHA256 `4ee1a38e0e1eab76df8cfa14ed15513592db8cd53a8d47317b2c744a3d8a35db` / blob `844113c067a9c487607663dd7d39b738264a2b8d`, verified **byte-identical** to the actual local execution. [Notion N2](https://app.notion.com/p/40081f51e7fa8172858de07166cdae17).
+- **MATHEMATICAL_VERDICT FOUR_REVISED_LOCI_SUPPORTED_IN_DECLARED_BACKGROUND; FPA PASS_WITH_BOUNDARY on revised loci only.** This does not close the revised whole-paper F2 review; new-version dependency regression [N3] is **NOT_STARTED** and external independent validation is not established.
+- **NEXT FAS-F2-20261022-N3-MANUSCRIPT-DEPENDENCY-REGRESSION-001 / NOT_STARTED**. Zenodo release status not verified; Korean revised manuscript not separately certified; original 2026-08-06 archive untouched.
