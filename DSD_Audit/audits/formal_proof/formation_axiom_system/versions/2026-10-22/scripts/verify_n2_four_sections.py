@@ -173,8 +173,10 @@ def grid_d2():
     anchh = {item: anchH[item] for item in selectedmat}
     anchp = anchh.copy()
     assert all(anchH[a] == anchh[a] == anchp[a] for a in selectedmat)
-    assert {k: v for k, v in annotations.items() if k in selectedmat} == {
-        k: v for k, v in annotations.items() if k in selectedmat}
+    inherited_h = {k: annotations[k] for k in selectedmat if k in annotations}
+    inherited_p = {k: inherited_h[k] for k in selectedmat if k in inherited_h}
+    assert inherited_h == inherited_p and set(inherited_h) == exposed
+    assert all(inherited_p[k] == 'blocked' for k in exposed)
     res = {('H', 'h'), ('H', 'H'), ('h', 'h')}
     real = {('h', 'p')}
     descriptive_expr = {'h'}
