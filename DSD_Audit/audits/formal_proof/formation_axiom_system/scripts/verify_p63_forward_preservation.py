@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Source-bound FAS-F2-P6.3-FORWARD-001 finite fixtures (not a universal proof).
+r"""Source-bound FAS-F2-P6.3-FORWARD-001 finite fixtures (not a universal proof).
 Source: Kwon Dominicus, DSD_Formation_Axiom_System_EN(5).pdf, pp.15-16.
 Windows repo-root command:
 python .\DSD_Audit\audits\formal_proof\formation_axiom_system\scripts\verify_p63_forward_preservation.py
