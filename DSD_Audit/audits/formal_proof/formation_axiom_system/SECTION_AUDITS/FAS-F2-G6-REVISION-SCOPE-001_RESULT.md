@@ -136,3 +136,5 @@ NEXT: FAS-F2-G7-REVISION-INTEGRATION-READINESS-001 / NOT_STARTED
 ```
 
 **G6 is closed as an audit of correction requirements. The four manuscript edit actions remain OPEN** until a versioned, author-controlled source edit and subsequent source-by-source re-audit.
+
+Notion individual G6 audit case: https://app.notion.com/p/40081f51e7fa8122b038e43866d4b1c8
