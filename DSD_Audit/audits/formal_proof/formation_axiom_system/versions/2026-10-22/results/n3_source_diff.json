@@ -1,0 +1,23 @@
+{
+  "case": "FAS-F2-20261022-N3-MANUSCRIPT-DEPENDENCY-REGRESSION-001",
+  "changed_heading_id": "Proposition 5.13",
+  "cover_date_change": true,
+  "external_independent_validation": "not_established",
+  "full_F2_paper_FPA": "OPEN",
+  "mathematical_proofs_reestablished_by_text_diff": false,
+  "numbered_headings": 69,
+  "outside_named_regions_text_identical": true,
+  "source_changes": [
+    "date",
+    "Theorem 4.7 preamble",
+    "Theorem 4.7 proof",
+    "Proposition 5.13",
+    "Section 7.3 D2",
+    "Section 8"
+  ],
+  "source_new_sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+  "source_old_sha256": "8856fc426941c0facc8dcf63e35e9a4630ebd0b05e5e25e4165c1e260d26b93a",
+  "substantive_changed_regions": 5,
+  "unchanged_heading_ids": 67,
+  "unchanged_normalized_text_lines": 1820
+}
