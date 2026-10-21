@@ -133,3 +133,5 @@ NEXT: FAS-F2-G5-REMARK-SCOPE-001 / NOT_STARTED
 Previously recorded, independent source-language advisories remain unresolved by this theorem: T4.7 residual-six qualification, §7.3 D2 boundary inheritance, §8 fixed-J comparison phrase, and P5.13 zero-extension universal-scope wording.
 
 **Important distinction:** every *numbered mathematical claim* now has recorded source-bound audit coverage, but this does not constitute theorem-prover certification, proof-dependency closure, correction of the four scope advisories, prose Remark reviews, independent external vetting, or a full-F2 manuscript-wide PASS. The next source task should check the five Remarks one by one, not invent new theorem numbers.
+
+**Reciprocal Notion case:** https://app.notion.com/p/40081f51e7fa8113903ae405d6a4a4ae
