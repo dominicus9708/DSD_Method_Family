@@ -5,7 +5,7 @@ Independent mathematics is written in the accompanying result; finite assertions
 are not proof of universally quantified original propositions.
 
 Windows 11 from root of repository:
-python .\DSD_Audit\audits\formal_proof\formation_axiom_system\scripts\verify_sec5_assignment_channels.py
+python .\\DSD_Audit\\audits\\formal_proof\\formation_axiom_system\\scripts\\verify_sec5_assignment_channels.py
 """
 import itertools
 import json
