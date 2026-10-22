@@ -34,3 +34,5 @@ NEXT: PA-P1-20260901-TYPED-PREMODEL-001 / NOT_STARTED
 ```
 
 **No revision of the original PDF, Zenodo or existing Python algorithms was made at P0.** Any future newly discovered version of the PDF must be independently SHA-locked and compared; do not overwrite this edition's evidence.
+
+**Reciprocal Notion audit case:** [PA-P0 2026.09.01](https://app.notion.com/p/40181f51e7fa81328754d162447fa282).
