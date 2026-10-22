@@ -20,3 +20,5 @@ P1_TYPED_PREMODEL_AUDIT: NOT_STARTED
 KOREAN_PARITY: UNVERIFIED
 EXTERNAL_VALIDATION: not_established
 ```
+
+**Notion new-edition source-audit ledger:** [General Property P0 (2026-09-01)](https://app.notion.com/p/40181f51e7fa81328754d162447fa282).
