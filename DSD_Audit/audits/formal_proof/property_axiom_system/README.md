@@ -22,3 +22,15 @@ EXTERNAL_VALIDATION: not_established
 ```
 
 **Notion new-edition source-audit ledger:** [General Property P0 (2026-09-01)](https://app.notion.com/p/40181f51e7fa81328754d162447fa282).
+
+## 2026-10-22 — P1–P8 progressed in one source-locked bounded audit session
+
+Exact user-uploaded English source `DSD_Property_Axiom_System_EN(4).pdf`, 23 pp, SHA256 `03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c`.
+
+- [P1–P4 typed data, two independent primitive axioms, status partition and C1 inverse laws](versions/2026-09-01/P1_P4_PRIMITIVE_COMPLETION_RESULT.md): **SUPPORTED_IN_DECLARED_SCOPE**, no immediate source-axiom failure detected.
+- [P5–P7 maps, strict isomorphism, staged branches, finite summary](versions/2026-09-01/P5_P7_COMPARISON_RESULT.md): discovered **two specific manuscript scope problems** (F3–F5 should be guarded for declared *and profile-available* kinds; carrierwise bijective embedding does not itself imply available-sort set/property-declaration set equality S2/S3). Stage 2/3/4 finite branching, I4=I5, and finite summary nonclassification supported.
+- [P8 Theorem 11.1 thirteen-item dependency map and release scope](versions/2026-09-01/P8_MANUSCRIPT_DEPENDENCY_RESULT.md): dependent category and strict-isomorphism headlines should be revised with the missing conditions. [Section-wise English proposed amendments](versions/2026-09-01/PATCH_PROPOSAL_EN.md), **NOT APPLIED TO PDF/LATEX**.
+- [New original-script GitHub Actions #39733865420](https://github.com/dominicus9708/Property_Axiom_System/actions/runs/39733865420), Python **3.10/3.12 both SUCCESS and 7/7 tests each**. Original executable sources and expected values unchanged; [replay audit result](https://github.com/dominicus9708/Property_Axiom_System/blob/main/audits/2026-09-01/PA-P1-P7-ORIGINAL-CODE-REPLAY_RESULT.md).
+- [Notion parent with P1–P8 cases](https://app.notion.com/p/40181f51e7fa81328754d162447fa282). **56 source-numbered item inventory does not imply 56 formally reviewed proofs**. English general-property FPA **OPEN**, external independent review not established; matching Korean PDF and editable bilingual .tex were not verified in the accessible source inventory.
+
+**NEXT PA-P9-SECTIONWISE-TEX-INTEGRATION-READINESS-001 / BLOCKED_ON_EDITABLE_SOURCE** for actual author-source bilingual edits, XeLaTeX/revised-source evidence, dependent theorem and subsection audit. Formation 2026-08-06/2026-10-22 archives and historical realized-axis specialization remain separate. No Zenodo files updated.
