@@ -1,0 +1,36 @@
+name: Property FPA P15 C1-Premodel Independence Semantics
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p15.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p15_c1_premodel_semantics.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p15_c1_premodel_semantics.json'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run finite raw-predicate and C1 status-partition audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/scripts/verify_p15_c1_premodel_semantics.py"
+          python -W error "$ROOT/scripts/verify_p15_c1_premodel_semantics.py" "$RUNNER_TEMP/p15.json"
+          echo P15_JSON_BEGIN
+          cat "$RUNNER_TEMP/p15.json"
+          echo P15_JSON_END
+          if [[ -f "$ROOT/results/p15_c1_premodel_semantics.json" ]]; then
+            python -c 'import json,sys; a=json.load(open(sys.argv[1])); b=json.load(open(sys.argv[2])); assert a==b,(a,b); print("P15 ARCHIVED JSON MATCH")' "$RUNNER_TEMP/p15.json" "$ROOT/results/p15_c1_premodel_semantics.json"
+          else
+            echo "P15 ARCHIVE NOT YET COMMITTED"
+          fi
+          sha256sum "$ROOT/scripts/verify_p15_c1_premodel_semantics.py" "$RUNNER_TEMP/p15.json"
