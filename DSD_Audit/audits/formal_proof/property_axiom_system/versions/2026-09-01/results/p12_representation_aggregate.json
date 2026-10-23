@@ -1,0 +1,36 @@
+{
+  "aggregate_equality_implies_core_strict_equivalence": false,
+  "case": "PA-P12-20260901-REPRESENTATION-AGGREGATE-EDGE-001",
+  "cases": 14,
+  "checks": {
+    "active_empty_selected_domain_vacuous": true,
+    "active_vs_inactive_distinguished": true,
+    "base_core_strict_iso_A_B_C": true,
+    "core_iso_does_not_imply_arbitrary_aggregate_equal": true,
+    "different_active_representation_labels_prevent_lift": true,
+    "different_selected_record_domains_prevent_lift": true,
+    "equal_aggregate_can_hide_nonisomorphic_cores": true,
+    "inactive_empty_package_vacuous": true,
+    "repeated_record_tuple_and_mixed_kind_labels": true,
+    "representation_composition": true,
+    "representation_identity": true,
+    "representation_inverse": true,
+    "same_core_different_encoding_not_rep_isomorphic": true,
+    "transported_equivariant_bridge_yields_aggregate_equality": true
+  },
+  "core_strict_equivalence_implies_independent_aggregate_equality": false,
+  "core_strict_equivalence_implies_representation_lift": false,
+  "full_FPA": "OPEN",
+  "manuscript_modified": false,
+  "original_experiment_modified": false,
+  "source_6_10_rep_signature_labels": [
+    "j",
+    "k"
+  ],
+  "source_general_machine_proof_completed": false,
+  "source_pdf_sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+  "two_representation_arities": [
+    1,
+    2
+  ]
+}
