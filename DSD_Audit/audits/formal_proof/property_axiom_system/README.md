@@ -34,3 +34,17 @@ Exact user-uploaded English source `DSD_Property_Axiom_System_EN(4).pdf`, 23 pp,
 - [Notion parent with P1–P8 cases](https://app.notion.com/p/40181f51e7fa81328754d162447fa282). **56 source-numbered item inventory does not imply 56 formally reviewed proofs**. English general-property FPA **OPEN**, external independent review not established; matching Korean PDF and editable bilingual .tex were not verified in the accessible source inventory.
 
 **NEXT PA-P9-SECTIONWISE-TEX-INTEGRATION-READINESS-001 / BLOCKED_ON_EDITABLE_SOURCE** for actual author-source bilingual edits, XeLaTeX/revised-source evidence, dependent theorem and subsection audit. Formation 2026-08-06/2026-10-22 archives and historical realized-axis specialization remain separate. No Zenodo files updated.
+
+## 2026-10-23 — P9A / P9B1 completed under timeout-safe checkpoints
+
+- [P9A 53-core finite model checker result](versions/2026-09-01/P9A_FINITE_MORPHISM_EXHAUSTIVE_RESULT.md) and [preregistered obligations](versions/2026-09-01/P9A_FINITE_MORPHISM_EXHAUSTIVE_PRECOMMIT.md). Exact uploaded [Python](versions/2026-09-01/scripts/verify_p9a_finite_morphisms.py) / [JSON](versions/2026-09-01/results/p9a_finite_morphisms.json) successfully executed independently under Python 3.10/3.12 in [GitHub Actions run #39897341069](https://github.com/dominicus9708/DSD_Method_Family/actions/runs/39897341069). **53 legal cores, 2809 ordered pairs, 148877 triples; 854 guarded forward maps, 347 component-bijective embeddings, 53 strict S1–S4 maps; two P5 logic/typing boundaries confirmed.** Finite data are NOT a universal theorem proof. [Notion P9A](https://app.notion.com/p/40281f51e7fa811995bbd98c38a221e7).
+- [P9B1 first 26 numbered source items (§§2–5) individually scoped](versions/2026-09-01/P9B_FIRST26_RESULT.md), after [preregistration](versions/2026-09-01/P9B_FIRST26_PRECOMMIT.md). No new fatal contradiction in this source batch; nonfatal C1 counterinterpretation-scope note. This does NOT assert mechanized proofs of 26 universal items. [Notion P9B1](https://app.notion.com/p/40281f51e7fa81e7b9f1e9fe88bb910e).
+- **Remaining:** 30 original numbered headings; next source item-by-item batch [P9B2 twelve Section-6 items, NOT_EXECUTED / PRECOMMITTED](versions/2026-09-01/P9B2_SECTION6_PRECOMMIT.md), then §7 (6), §8 (8), §9 (3), §11 (1) = 18.
+- Source print date 2026.09.01, PDF SHA256 `03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c`. Original manuscript, Zenodo record, prior experimental Python and historical axis specialization remain unchanged.
+
+```text
+P9A finite verifier: PASS_WITH_BOUNDARY
+P9B1 item inventory and scoped source audit: 26/56
+P9B2: preregistered, NOT_EXECUTED
+Full general-property formal proof audit: OPEN
+```
