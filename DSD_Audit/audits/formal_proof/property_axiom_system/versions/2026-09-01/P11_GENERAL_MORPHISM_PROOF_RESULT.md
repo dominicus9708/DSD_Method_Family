@@ -118,3 +118,15 @@ WHOLE_PROPERTY_FPA: OPEN
 \`\`\`
 
 **Next source-only gate:** controlled boundary check on *available-but-empty vs unavailable*, inherited-sort identity and ≥2 prerequisite sets; then revisit which prior proof statuses can be upgraded from conditional to complete only if the missing hypotheses are made part of the actual manuscript. Do not undertake author source edits as part of this mathematical audit.
+
+## I. Supplemental actual source-aligned edge execution, completed after general proof audit
+
+**New independent program:** [verify_p11_empty_dependency_edges.py](scripts/verify_p11_empty_dependency_edges.py) and [its exact archived JSON](results/p11_empty_dependency_edges.json).
+- Exact code SHA256 `949e3a65c497ad923b7b249bcf12f2fdf8e2f8525ed69609b95d074b7816274f`;
+- Output SHA256 `5d4ed8c0d09adce312f86bc1d6e33edc0e72a160e33b5982e37b5c5fc444d24e`;
+- New [GitHub Actions run **#39944973202**](https://github.com/dominicus9708/DSD_Method_Family/actions/runs/39944973202), pinned push commit `8664794d87e7b6a4055ca1a68fa2e6e8cd38cccb`; status **completed / success**.
+- Python **3.12** job `120385283087` and **3.10** job `120385283522` both successfully executed the exact GitHub script, each printing `P11 EDGE CHECK PASS 10 source-specific cases` and `P11 fresh output matches archived JSON` with the **same source and result SHA**.
+- The **10** explicit edge tests differentiate supplied-empty vs unavailable, available-empty strict identity, unavailable→supplied-empty one-way forward map, empty→singleton non-strict embedding, declaration-mismatched componentwise bijection, two prerequisites and zero/nonzero definitions, repeated sort `(u,u)`, inherited-sort identity in `(h,u)`, mixed sort `(v,u)`, inverse two-element carrier swap, and rejection of assignment not satisfying its second prerequisite.
+- The checker uses an explicitly supplied finite integer value carrier with values `0,2` and two prerequisite kinds. This is separate finite evidence; **no claim to automated universal proof or exhaustive enumeration** is made.
+
+**Final P11 combined audit:** general mathematical arguments **conditional on G** (above) + 10 independent finite source edge checks **PASS**, without changing the author's manuscript, historical Python, or Zenodo. The uncorrected printed Definition 6.1 and Theorem 6.8 remain **two open manuscript-condition issues**. Whole-paper general FPA **OPEN**.
