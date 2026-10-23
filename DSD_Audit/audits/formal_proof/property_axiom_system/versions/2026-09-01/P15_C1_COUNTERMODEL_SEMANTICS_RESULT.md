@@ -61,7 +61,7 @@ As §1 proves, `C1^{exclusive}` implies PI and PII. In this class there can be n
 
 New separate [source-locked P15 checker](scripts/verify_p15_c1_premodel_semantics.py), with actual [archived JSON](results/p15_c1_premodel_semantics.json). It constructs **every subset** `Ap,DepSat,D⊆X` for X of sizes 0,1,2,3. For one prerequisite d, choosing `Sat_{varpi,d}=DepSat` realizes every tested DepSat, so the tested set triples are typed primitive presentations (with any fixed defined assignment value on D). All source countermodel truth assignments are included.
 
-| |X| | Number of typed premodels | Both PI & PII | Exclusive status partitions | Overlapping-status premodels |
+| Cardinality of X | Typed premodels | Both PI & PII | Exclusive status partitions | Overlapping-status premodels |
 | --- | ---: | ---: | ---: | ---: |
 | 0 | 1 | 1 | 1 | 0 |
 | 1 | 8 | 5 | 5 | 3 |
