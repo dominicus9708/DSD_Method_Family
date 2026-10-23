@@ -48,3 +48,14 @@ P9B1 item inventory and scoped source audit: 26/56
 P9B2: preregistered, NOT_EXECUTED
 Full general-property formal proof audit: OPEN
 ```
+
+## 2026-10-23 — Full 56-heading *source-scope* cycle complete (P9B1–P9B5)
+
+Using exact `DSD_Property_Axiom_System_EN(4).pdf` (2026.09.01, 23 pp, SHA256 `03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c`) and prospective case locks, we recorded **all 56 numbered source items** with typed well-formedness/proof-dependency judgments:
+- [P9B1](versions/2026-09-01/P9B_FIRST26_RESULT.md): 26 items, §§2–5. [Notion](https://app.notion.com/p/40281f51e7fa81e7b9f1e9fe88bb910e).
+- [P9B2](versions/2026-09-01/P9B2_SECTION6_RESULT.md): 12 items, §6. [Notion](https://app.notion.com/p/40281f51e7fa81b4b0e0c68f3b3aa4d4).
+- [P9B3](versions/2026-09-01/P9B3_SECTION7_RESULT.md): 6 items, §7; and [P9B4](versions/2026-09-01/P9B4_SECTION8_RESULT.md): 8 items, §8. [Notion](https://app.notion.com/p/40281f51e7fa8149a5ffd4bfbc536941).
+- [P9B5](versions/2026-09-01/P9B5_SECTION9_11_RESULT.md): 4 items, §§9,11. [Notion](https://app.notion.com/p/40281f51e7fa8136884ced4eebb99dcd).
+- **Next independent non-edit stress gate:** [P10 two-auxiliary-sort + mixed-profile checker preregistration](versions/2026-09-01/P10_CROSS_SORT_MORPHISM_PRECOMMIT.md), `NOT_STARTED`.
+
+**Crucial distinction:** `56/56 NUMBERED SOURCE CLAIMS SCOPE-REVIEWED` != `56/56 FULL GENERAL PROOFS FORMALLY VERIFIED`. Original P5 §6 sources retain **two issues**: unguarded F3–F5 on declared/unavailable profile and the bare bijective-embedding shorthand lacking S2/S3. Existing P9A finite counterexamples and CI remain valid. Whole manuscript FPA **OPEN**; author manuscript/Python/Zenodo unchanged. Edit/proof/EN-KR parity gates remain separate.
