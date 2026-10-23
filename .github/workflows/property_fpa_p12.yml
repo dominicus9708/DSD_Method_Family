@@ -1,0 +1,36 @@
+name: Property FPA P12 Representation and Aggregate Audit
+on:
+  push:
+    paths:
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p12_representation_aggregate.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p12_representation_aggregate.json'
+      - '.github/workflows/property_fpa_p12.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile and execute bounded P12 examples
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/scripts/verify_p12_representation_aggregate.py"
+          python -W error "$ROOT/scripts/verify_p12_representation_aggregate.py" "$RUNNER_TEMP/p12.json"
+          echo 'P12_JSON_BEGIN'
+          cat "$RUNNER_TEMP/p12.json"
+          echo 'P12_JSON_END'
+          if [[ -f "$ROOT/results/p12_representation_aggregate.json" ]]; then
+            python -c 'import json,sys; a=json.load(open(sys.argv[1])); b=json.load(open(sys.argv[2])); assert a==b; print("P12 archived JSON matches fresh computation")' "$RUNNER_TEMP/p12.json" "$ROOT/results/p12_representation_aggregate.json"
+          else
+            echo 'P12 output archive not yet committed: initial run only'
+          fi
+          sha256sum "$ROOT/scripts/verify_p12_representation_aggregate.py" "$RUNNER_TEMP/p12.json"
