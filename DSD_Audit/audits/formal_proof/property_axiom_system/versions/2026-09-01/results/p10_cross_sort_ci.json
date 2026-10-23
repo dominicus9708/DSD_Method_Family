@@ -1,0 +1,43 @@
+{
+  "FPA": "OPEN",
+  "P5_A_illtyped_declared_unavailable_reproduced": true,
+  "P5_B_componentwise_bijective_embedding_not_strict_reproduced": true,
+  "all_assertions_pass": true,
+  "all_general_theorems_formally_proved": false,
+  "case": "P10-CROSS-SORT",
+  "composition_counts": {
+    "embedding": 34589,
+    "forward": 629926,
+    "strict": 336
+  },
+  "core_iso_does_not_force_representation_iso": true,
+  "declaration_patterns": 6,
+  "first_branch_pair_counts": {
+    "1": 10064,
+    "2": 1294,
+    "3": 150,
+    "4": 48
+  },
+  "locked_pdf_sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+  "manuscript_modified": false,
+  "map_counts": {
+    "candidate": 30318,
+    "embedding": 3054,
+    "forward": 9253,
+    "strict": 168
+  },
+  "models": 108,
+  "nontrivial_two_element_carrier_permutation_tested": true,
+  "ordered_mixed_profiles_tested": true,
+  "ordered_pairs": 11664,
+  "original_experiment_Python_changed": false,
+  "profiles": {
+    "p": [0, 1],
+    "q": [1, 0],
+    "r": [0, 0]
+  },
+  "property_labels_not_swapped": true,
+  "sizes_per_sort": [0, 1, 2],
+  "sorts": ["u", "v"],
+  "template_modes": 4
+}
