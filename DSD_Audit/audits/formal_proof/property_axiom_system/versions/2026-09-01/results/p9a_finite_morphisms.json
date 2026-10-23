@@ -1,0 +1,77 @@
+{
+  "assertions": {
+    "all_embedding_compositions_well_typed": true,
+    "all_forward_compositions_well_typed": true,
+    "all_identity_forward_embedding_strict": true,
+    "all_strict_compositions_well_typed": true,
+    "first_branch_exists_at_each_of_1_2_3_4_in_family": true,
+    "stage4_equals_stage5_all_pairs": true,
+    "stage4_nonempty_iff_strict_all_pairs": true,
+    "stage_nested_all_pairs": true,
+    "stage_profiles_invariant_under_strict_all_pairs": true,
+    "stage_profiles_symmetric_all_pairs": true,
+    "strict_symmetric": true
+  },
+  "carrierwise_bijective_embedding_not_strict_witness": {
+    "source": {
+      "available_aux_u": false,
+      "property_data": {
+        "p": {
+          "state": "undeclared"
+        },
+        "q": {
+          "state": "undeclared"
+        }
+      }
+    },
+    "target": {
+      "available_aux_u": false,
+      "property_data": {
+        "p": {
+          "state": "undeclared"
+        },
+        "q": {
+          "state": "declared_profile_unavailable"
+        }
+      }
+    }
+  },
+  "case": "PA-P9A-20260901-FINITE-MORPHISM-EXHAUSTIVE-001",
+  "core_breakdown": {
+    "aux_u_singleton": 49,
+    "aux_u_unavailable": 4
+  },
+  "counts": {
+    "branch_counts": {
+      "1": 392,
+      "2": 1044,
+      "3": 1200,
+      "4": 120
+    },
+    "carrierwise_bijective_embedding": 347,
+    "embedding": 347,
+    "forward": 854,
+    "pairs": 2809,
+    "strict": 53,
+    "strict_equivalence_classes": 53
+  },
+  "family": "fixed Formation Stage-VI, one auxiliary sort, two fixed unary property kinds, singleton-or-unavailable sort, prerequisite d, values 0/1",
+  "full_paper_FPA": "OPEN",
+  "general_model_theorem_proved_by_finite_search": false,
+  "legal_cores": 53,
+  "manuscript_PDF_or_TEX_changed": false,
+  "original_experiment_source_changed": false,
+  "reading_boundary": "Guard F3-F5 for source declared AND profile available; interpret S2/S3 as extra to componentwise bijection",
+  "source_literal_F3_illtyped_identity_witness": {
+    "available_aux_u": false,
+    "property_data": {
+      "p": {
+        "state": "declared_profile_unavailable"
+      },
+      "q": {
+        "state": "undeclared"
+      }
+    }
+  },
+  "source_pdf_sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c"
+}
