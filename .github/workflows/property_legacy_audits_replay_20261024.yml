@@ -60,7 +60,11 @@ jobs:
           assert a['legal_cores']==53 and a['counts']['pairs']==2809
           assert sum(a['counts']['branch_counts'].values())+a['counts']['strict']==2809
           assert b['models']==108 and b['ordered_pairs']==11664
-          assert sum(b['first_branch_pair_counts'].values())+b['map_counts']['strict']==11664
+          # Branches count model PAIRS, but strict count counts individual MAPS.
+          # A pair can admit multiple strict maps (carrier automorphisms).
+          branch_pairs=sum(b['first_branch_pair_counts'].values())
+          strict_pairs=b['ordered_pairs']-branch_pairs
+          assert strict_pairs==108 and 0<strict_pairs<=b['map_counts']['strict']
           assert b['map_counts']['candidate']>=b['map_counts']['forward']>=b['map_counts']['embedding']>=b['map_counts']['strict']
           assert c['tested_edge_cases']==10 and c['all_pass'] and all(c['checks'].values())
           assert d['cases']==14 and all(d['checks'].values())
