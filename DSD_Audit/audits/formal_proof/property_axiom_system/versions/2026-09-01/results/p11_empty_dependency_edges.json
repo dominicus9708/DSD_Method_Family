@@ -1,0 +1,22 @@
+{
+  "FPA": "OPEN",
+  "all_pass": true,
+  "case": "PA-P11-20260901-EMPTY-MULTIDEPENDENCY-EDGES",
+  "checks": {
+    "assignment_failing_second_prerequisite_rejected": true,
+    "available_empty_injects_into_singleton_not_strict": true,
+    "bijective_embedding_not_strict_when_declarations_differ": true,
+    "declared_available_empty_has_empty_product": true,
+    "declared_unavailable_has_no_product": true,
+    "empty_identity_is_strict": true,
+    "inherited_sort_identity_and_repeated_coordinates": true,
+    "mixed_repeated_inherited_swap_strict_both_directions": true,
+    "two_prerequisites_intersection_and_zero_nonzero": true,
+    "unavailable_to_available_empty_is_one_way_forward": true
+  },
+  "general_theorem_machine_proof": false,
+  "manuscript_modified": false,
+  "original_experiment_modified": false,
+  "source_sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+  "tested_edge_cases": 10
+}
