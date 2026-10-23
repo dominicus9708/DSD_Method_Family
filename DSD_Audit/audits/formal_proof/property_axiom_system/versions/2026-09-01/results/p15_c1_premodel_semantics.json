@@ -1,0 +1,63 @@
+{
+  "FPA": "OPEN",
+  "author_manuscript_modified": false,
+  "case": "PA-P15-20260901-C1-COUNTERMODEL-SEMANTICS-001",
+  "countermodels": {
+    "countermodel_4_1": {
+      "active_status_predicates": [
+        "defined",
+        "inapplicable"
+      ],
+      "axiom_i": false,
+      "axiom_ii": true
+    },
+    "countermodel_4_2": {
+      "active_status_predicates": [
+        "defined",
+        "prerequisite_unsatisfied"
+      ],
+      "axiom_i": true,
+      "axiom_ii": false
+    }
+  },
+  "exclusive_status_partition_iff_pi_and_pii_in_tested_universe": true,
+  "fully_general_proof_assistant_verification": false,
+  "literal_C1_full_core_only_extended_to_premodels_automatically": false,
+  "original_Python_modified": false,
+  "per_cardinality": {
+    "0": {
+      "at_least_one_primitive_violation": 0,
+      "both_axioms": 1,
+      "overlap_witnesses": 0,
+      "premodels": 1,
+      "status_partitions": 1
+    },
+    "1": {
+      "at_least_one_primitive_violation": 3,
+      "both_axioms": 5,
+      "overlap_witnesses": 3,
+      "premodels": 8,
+      "status_partitions": 5
+    },
+    "2": {
+      "at_least_one_primitive_violation": 39,
+      "both_axioms": 25,
+      "overlap_witnesses": 39,
+      "premodels": 64,
+      "status_partitions": 25
+    },
+    "3": {
+      "at_least_one_primitive_violation": 387,
+      "both_axioms": 125,
+      "overlap_witnesses": 387,
+      "premodels": 512,
+      "status_partitions": 125
+    }
+  },
+  "range": "all subsets Ap,DepSat,D of X, cardinalities 0,1,2,3",
+  "raw_status_predicates_unique_by_definition_on_each_premodel": true,
+  "source_pdf_sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+  "total_overlapping_premodels": 429,
+  "total_partition_models": 156,
+  "total_premodels_checked": 585
+}
