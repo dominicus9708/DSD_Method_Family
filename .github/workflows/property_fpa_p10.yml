@@ -1,0 +1,29 @@
+name: Property FPA P10 Multi-Sort Checker
+on:
+  push:
+    paths:
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p10_cross_sort.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p10_cross_sort_ci.json'
+      - '.github/workflows/property_fpa_p10.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile, execute and compare archived finite-model result
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/scripts/verify_p10_cross_sort.py"
+          python -W error "$ROOT/scripts/verify_p10_cross_sort.py" "$RUNNER_TEMP/p10.json"
+          python -c 'import json,sys; a=json.load(open(sys.argv[1]));b=json.load(open(sys.argv[2]));assert a==b,(a,b);print("P10 archived JSON equals fresh GitHub CI calculation")' "$RUNNER_TEMP/p10.json" "$ROOT/results/p10_cross_sort_ci.json"
+          sha256sum "$ROOT/scripts/verify_p10_cross_sort.py" "$RUNNER_TEMP/p10.json"
