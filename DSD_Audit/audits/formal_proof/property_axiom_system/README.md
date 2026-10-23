@@ -59,3 +59,12 @@ Using exact `DSD_Property_Axiom_System_EN(4).pdf` (2026.09.01, 23 pp, SHA256 `03
 - **Next independent non-edit stress gate:** [P10 two-auxiliary-sort + mixed-profile checker preregistration](versions/2026-09-01/P10_CROSS_SORT_MORPHISM_PRECOMMIT.md), `NOT_STARTED`.
 
 **Crucial distinction:** `56/56 NUMBERED SOURCE CLAIMS SCOPE-REVIEWED` != `56/56 FULL GENERAL PROOFS FORMALLY VERIFIED`. Original P5 §6 sources retain **two issues**: unguarded F3–F5 on declared/unavailable profile and the bare bijective-embedding shorthand lacking S2/S3. Existing P9A finite counterexamples and CI remain valid. Whole manuscript FPA **OPEN**; author manuscript/Python/Zenodo unchanged. Edit/proof/EN-KR parity gates remain separate.
+
+## 2026-10-23 — P10 cross-sort finite stress audit completed
+
+- [P10 report](versions/2026-09-01/P10_CROSS_SORT_MORPHISM_RESULT.md): **108 distinct legal finite property-core templates**, two auxiliary sorts `u,v` (unavailable/1/2-element), ordered profiles `(u,v),(v,u),(u,u)`, 11,664 ordered pairs and 30,318 candidate carrier mappings.
+- [Exact Python source](versions/2026-09-01/scripts/verify_p10_cross_sort.py), [executed JSON](versions/2026-09-01/results/p10_cross_sort_ci.json). Verified [GitHub Actions #39923494959](https://github.com/dominicus9708/DSD_Method_Family/actions/runs/39923494959) success in **Python 3.10 + 3.12**, with freshly computed JSON equal to the archived file.
+- Guarded forward maps **9,253**, embeddings **3,054**, strict S1–S4 maps **168**; composable pairs of maps, embeddings and strict maps **629,926 / 34,589 / 336**, all checked. The existing two Section-6 typing/bijective-embedding source gaps remain open. No new third contradiction in **this bounded family**; full ZFC proof is NOT established.
+- [Notion P10 ledger](https://app.notion.com/p/40281f51e7fa816692bbf2b6108a920b).
+- Next non-edit gate: [P11 general ordered-profile map proof preregistration](versions/2026-09-01/P11_UNIVERSAL_MORPHISM_PROOF_PRECOMMIT.md), **NOT_EXECUTED**. Includes available-but-empty carriers, more abstract typed inputs and universal quantifier clarification; whole general Property FPA **OPEN**.
+- Manuscript PDF, LaTeX, Zenodo and original `dominicus9708/Property_Axiom_System` numerical Python all unchanged.
