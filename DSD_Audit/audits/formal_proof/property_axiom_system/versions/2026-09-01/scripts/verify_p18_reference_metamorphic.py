@@ -138,7 +138,7 @@ def audit():
     ok("C1_does_not_mutate_primitives",before==afterdata)
     return {"case":"PA-P18-20260901-DIFFERENTIAL-VALIDATOR-METAMORPHIC-AUDIT-001",
      "locked_pdf_sha256":SOURCE,"number_checks":len(tests),"checks":tests,
-     "all_metamo​​rphic_checks_pass":True,
+     "all_metamorphic_checks_pass":True,
      "general_machine_proof":False,"original_p17_or_legacy_src_modified":False,
      "author_pdf_tex_zenodo_modified":False,"FPA":"OPEN"}
 
