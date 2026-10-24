@@ -1,0 +1,53 @@
+name: Property P19 Reference Validator Limits Audit
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p19.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p19_reference_limits.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p19_reference_limits.json'
+  workflow_dispatch:
+jobs:
+  negative-controls:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check P17 original source frozen
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          test "$(git hash-object "$ROOT/scripts/verify_p17_typed_reference_validator.py")" = "d5e796022133bf066b6d485950044f93b5d656ca"
+          echo "P17 reference source locked unchanged"
+      - name: Run P19 expected failures and positive controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/scripts/verify_p17_typed_reference_validator.py" "$ROOT/scripts/verify_p19_reference_limits.py"
+          python -W error "$ROOT/scripts/verify_p19_reference_limits.py" "$RUNNER_TEMP/p19.json"
+          echo P19_JSON_BEGIN
+          cat "$RUNNER_TEMP/p19.json"
+          echo P19_JSON_END
+          python - "$RUNNER_TEMP/p19.json" <<'PY'
+          import json,sys
+          x=json.load(open(sys.argv[1]))
+          assert x["all_expected_observations_reproduced"]
+          assert x["expected_observations_count"]>=18
+          assert x["witnesses"]["C1_noninjective_summary"]["same_completion_summary"]
+          assert x["witnesses"]["repr_key_collision"]["input_product_cardinality"]==2
+          assert x["witnesses"]["repr_key_collision"]["status_dictionary_entry_count"]==1
+          print("P19 INDEPENDENT EVIDENCE CHECK PASS")
+          PY
+          if [[ -f "$ROOT/results/p19_reference_limits.json" ]]; then
+            python -c 'import json,sys;a=json.load(open(sys.argv[1]));b=json.load(open(sys.argv[2]));assert a==b,(a,b);print("P19 ARCHIVED JSON MATCH")' "$RUNNER_TEMP/p19.json" "$ROOT/results/p19_reference_limits.json"
+          else
+            echo P19_FIRST_RUN_FOR_ARCHIVE
+          fi
+          sha256sum "$ROOT/scripts/verify_p19_reference_limits.py" "$RUNNER_TEMP/p19.json"
