@@ -12,6 +12,8 @@ It grew from the existing DSD Analysis work and preserves established Analysis, 
 - [`methodology/LIVE_SYNC_POLICY.md`](methodology/LIVE_SYNC_POLICY.md) — 상태 변화가 발생한 같은 작업 단위에서 GitHub와 Notion을 함께 갱신하는 필수 실시간 동기화 규칙.
 - [`methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_CLOSURE_20261006.md`](methodology/METHOD_FAMILY_INTERNAL_STANDARDIZATION_CLOSURE_20261006.md) — **22 / 22 내부 구축·표준화 완료 정본 기록**.
 - Current sync epoch: `MF-SYNC-20261006-METHOD-FAMILY-22OF22`
+- Post-standardization Formation 2026-10-22 version-impact audit (2026-10-25): [`MF-REG-20261025-001_RESULT.md`](methodology/post_standardization/2026-10-25/MF-REG-20261025-001_RESULT.md) — 22 method entrypoints/4 correction loci, 14/14 limited machine source checks, 0 confirmed interface contradictions, historical profile source-version migration required; no independent case-level validation inferred.
+- New-case source compatibility: [`Formation 2026-10-22 overlay`](methodology/post_standardization/2026-10-25/FORMATION_20261022_COMPATIBILITY_OVERLAY.md). Historical 2026-09-05 interface profile remains preserved.
 - Latest claim-relevant source checkpoint at adoption: `cce705230724941629d4927f064ca7900386e8ba`
 - Latest completed method event: **OPR-AUD-001 — 28/28 PASS / PROMOTE_INTERNAL_STANDARD; 22/22 methods internally standardized**.
 - Next canonical step: **no remaining method in the internal-build queue; any continuation is a separately labeled post-standardization phase**.
