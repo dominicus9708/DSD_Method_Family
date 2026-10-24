@@ -1,0 +1,37 @@
+name: Property P21 Full C1 Adversarial Serialization Audit
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p21.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p21_adversarial_full_completion.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p21_full_completion_adversarial.json'
+  workflow_dispatch:
+jobs:
+  adversarial:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify original P20 code unchanged
+        run: |
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          test "$(git hash-object "$ROOT/scripts/verify_p20_full_c1_inverse.py")" = "9fac2c171834f126b9af12d8fedde3e0fbc59b23"
+      - name: Run independent P21 adversarial controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/scripts/verify_p21_adversarial_full_completion.py"
+          python -W error "$ROOT/scripts/verify_p21_adversarial_full_completion.py" "$RUNNER_TEMP/p21.json"
+          echo P21_JSON_BEGIN
+          cat "$RUNNER_TEMP/p21.json"
+          echo P21_JSON_END
+          if [[ -f "$ROOT/results/p21_full_completion_adversarial.json" ]]; then
+            python -c 'import json,sys;a=json.load(open(sys.argv[1]));b=json.load(open(sys.argv[2]));assert a==b;print("P21 ARCHIVED JSON MATCH")' "$RUNNER_TEMP/p21.json" "$ROOT/results/p21_full_completion_adversarial.json"
+          fi
