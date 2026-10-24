@@ -1,0 +1,7 @@
+{
+  "case": "PA-P21-20260901-FULL-COMPLETION-ADVERSARIAL-SERIALIZATION-001",
+  "checks_count": 30,
+  "all_expected_observations_reproduced": true,
+  "source_pdf_sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+  "full_property_FPA": "OPEN"
+}
