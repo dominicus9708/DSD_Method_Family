@@ -1,0 +1,36 @@
+name: Property FPA P18 Independent Validator Metamorphic Audit
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p18.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p18_reference_metamorphic.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p18_reference_metamorphic.json'
+  workflow_dispatch:
+jobs:
+  metamorphic:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: P18 independently challenge P17 reference validator
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/scripts/verify_p17_typed_reference_validator.py" "$ROOT/scripts/verify_p18_reference_metamorphic.py"
+          python -W error "$ROOT/scripts/verify_p18_reference_metamorphic.py" "$RUNNER_TEMP/p18.json"
+          echo P18_JSON_BEGIN
+          cat "$RUNNER_TEMP/p18.json"
+          echo P18_JSON_END
+          if [[ -f "$ROOT/results/p18_reference_metamorphic.json" ]]; then
+            python -c 'import json,sys; a=json.load(open(sys.argv[1]));b=json.load(open(sys.argv[2]));assert a==b,(a,b);print("P18 ARCHIVED JSON MATCH")' "$RUNNER_TEMP/p18.json" "$ROOT/results/p18_reference_metamorphic.json"
+          else
+            echo P18_FIRST_RUN_FOR_ARCHIVE
+          fi
+          sha256sum "$ROOT/scripts/verify_p17_typed_reference_validator.py" "$ROOT/scripts/verify_p18_reference_metamorphic.py" "$RUNNER_TEMP/p18.json"
