@@ -1,0 +1,69 @@
+{
+  "P17_completion_return_injective_on_primitive_cores": false,
+  "P17_original_reference_modified": false,
+  "P17_summary_completion_equivalent_to_full_CompProp": false,
+  "P19_negative_input_crashes_mean_source_axiom_false": false,
+  "all_expected_observations_reproduced": true,
+  "case": "PA-P19-20260901-REFERENCE-VALIDATOR-LIMITS-AND-RELEASE-GATE-001",
+  "expected_observations": {
+    "C1_summary_same_for_different_nonzero_values": true,
+    "baseline_core_valid": true,
+    "completion_does_not_modify_original_primitives": true,
+    "distinct_cores_both_admitted": true,
+    "distinct_same_repr_elements_well_typed": true,
+    "five_coordinates_all_statuses_counted": true,
+    "five_coordinates_typed_and_admitted": true,
+    "malformed_graph_handled": true,
+    "none_ap_raises": true,
+    "none_declarations_raises": true,
+    "none_sat_raises": true,
+    "none_xi_raises": true,
+    "nonset_inherited_carrier_rejected": true,
+    "overlap_inherited_aux_rejected": true,
+    "reference_completion_has_no_exact_defined_record_values": true,
+    "same_repr_status_key_collision": true,
+    "surplus_both_modes_distinct": true,
+    "surplus_ignore_mode_admits": true,
+    "surplus_reject_mode_detects": true,
+    "unhashable_aux_element_raises": true
+  },
+  "expected_observations_count": 20,
+  "full_property_FPA": "OPEN",
+  "global_machine_checked_full_FPA": false,
+  "original_manuscript_and_original_experiment_modified": false,
+  "source_pdf_sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+  "witnesses": {
+    "C1_noninjective_summary": {
+      "logical_status": "reference completion output not a full CompProp model",
+      "primitive_values": [
+        1,
+        2
+      ],
+      "same_completion_summary": true
+    },
+    "none_ap": {
+      "exception_class": "TypeError",
+      "outcome": "exception"
+    },
+    "none_declarations": {
+      "exception_class": "TypeError",
+      "outcome": "exception"
+    },
+    "none_sat": {
+      "exception_class": "TypeError",
+      "outcome": "exception"
+    },
+    "none_xi": {
+      "exception_class": "TypeError",
+      "outcome": "exception"
+    },
+    "repr_key_collision": {
+      "input_product_cardinality": 2,
+      "status_dictionary_entry_count": 1
+    },
+    "unhashable_aux_element": {
+      "exception_class": "TypeError",
+      "outcome": "exception"
+    }
+  }
+}
