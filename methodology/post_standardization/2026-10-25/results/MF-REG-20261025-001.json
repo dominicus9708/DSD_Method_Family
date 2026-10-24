@@ -1,0 +1,213 @@
+{
+  "author": "Kwon Dominicus",
+  "decision": "SOURCE_ANCHOR_PASS_WITH_BOUNDARY; PROFILE_MIGRATION_REQUIRED; METHOD_CASE_RETEST_OPEN",
+  "fail_count": 0,
+  "id": "MF-REG-20261025-001",
+  "manual_guards": [
+    "historical profile dated 2026-09-05 and cites Formation 2026-08-06; requires prospective migration overlay",
+    "original older Formation PDF not rerun",
+    "not mathematical proof / not independent evaluator validation",
+    "old records immutable"
+  ],
+  "matrix": [
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "M",
+      "F4_fixed_J": "M",
+      "method": "Analysis"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "C",
+      "F3_D2": "M",
+      "F4_fixed_J": "M",
+      "method": "Comparison"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "C",
+      "F3_D2": "C",
+      "F4_fixed_J": "M",
+      "method": "Classification"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "C",
+      "F3_D2": "-",
+      "F4_fixed_J": "C",
+      "method": "Interpretation"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "C",
+      "F4_fixed_J": "C",
+      "method": "Specification"
+    },
+    {
+      "F1_T4.7": "C",
+      "F2_P5.13": "M",
+      "F3_D2": "M",
+      "F4_fixed_J": "M",
+      "method": "Audit"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "C",
+      "F3_D2": "C",
+      "F4_fixed_J": "C",
+      "method": "Design"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "-",
+      "F4_fixed_J": "M",
+      "method": "Synthesis"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "C",
+      "F4_fixed_J": "C",
+      "method": "Transformation"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "M",
+      "F4_fixed_J": "M",
+      "method": "Measurement"
+    },
+    {
+      "F1_T4.7": "C",
+      "F2_P5.13": "C",
+      "F3_D2": "-",
+      "F4_fixed_J": "C",
+      "method": "Tracking"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "C",
+      "F3_D2": "C",
+      "F4_fixed_J": "C",
+      "method": "Lineage"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "C",
+      "F4_fixed_J": "M",
+      "method": "Aggregation"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "-",
+      "F4_fixed_J": "M",
+      "method": "Compression"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "C",
+      "F3_D2": "C",
+      "F4_fixed_J": "C",
+      "method": "Diagnosis"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "C",
+      "F4_fixed_J": "M",
+      "method": "Reconstruction"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "M",
+      "F4_fixed_J": "C",
+      "method": "Computation"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "C",
+      "F3_D2": "C",
+      "F4_fixed_J": "C",
+      "method": "Optimization"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "C",
+      "F4_fixed_J": "C",
+      "method": "Simulation"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "C",
+      "F3_D2": "-",
+      "F4_fixed_J": "C",
+      "method": "Prediction"
+    },
+    {
+      "F1_T4.7": "-",
+      "F2_P5.13": "M",
+      "F3_D2": "C",
+      "F4_fixed_J": "C",
+      "method": "Control"
+    },
+    {
+      "F1_T4.7": "C",
+      "F2_P5.13": "C",
+      "F3_D2": "C",
+      "F4_fixed_J": "C",
+      "method": "Operation"
+    }
+  ],
+  "matrix_counts": {
+    "-": 24,
+    "C": 38,
+    "M": 26
+  },
+  "pass_count": 14,
+  "scope": "source-anchor checks and reviewed 22-method impact triage only",
+  "sources": {
+    "aggregation": {
+      "pages": 23,
+      "pass": true,
+      "sha256": "9121703b4f2a9c144eddfa81ad5527585ca16b2469dd50c72ac4babc1bbe8c4d"
+    },
+    "dynamics": {
+      "pages": 38,
+      "pass": true,
+      "sha256": "9994af76a1a0694e7c020ee2959d920966a4417940b0470e32068c43fa692176"
+    },
+    "formation": {
+      "pages": 34,
+      "pass": true,
+      "sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe"
+    },
+    "property": {
+      "pages": 23,
+      "pass": true,
+      "sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c"
+    }
+  },
+  "tests": {
+    "G01_pdf_sha_page_locks": true,
+    "G03_D2_boundary_source": true,
+    "G03_P5.13_conditional_zero_extension_source": true,
+    "G03_T4.7_relative_independence_source": true,
+    "G03_arbitrary_J_source": true,
+    "G04_22x4_matrix_complete": true,
+    "G05_no_parent_independence_upgrade_guard": true,
+    "G06_conditional_zero_term_collision_probe": true,
+    "G06_no_universal_loss_nonzero_probe": true,
+    "G07_D2_57_9_6_arithmetic": true,
+    "G08_arbitrary_fixed_J_adversarial_probe": true,
+    "G09_dynamics_lineage": true,
+    "G09_property_stage_VI_context": true,
+    "G09_static_aggregation_downstream": true
+  }
+}
