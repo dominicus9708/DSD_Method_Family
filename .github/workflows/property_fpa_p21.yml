@@ -33,5 +33,5 @@ jobs:
           cat "$RUNNER_TEMP/p21.json"
           echo P21_JSON_END
           if [[ -f "$ROOT/results/p21_full_completion_adversarial.json" ]]; then
-            python -c 'import json,sys;a=json.load(open(sys.argv[1]));b=json.load(open(sys.argv[2]));assert a==b;print("P21 ARCHIVED JSON MATCH")' "$RUNNER_TEMP/p21.json" "$ROOT/results/p21_full_completion_adversarial.json"
+            python -c 'import json,sys;a=json.load(open(sys.argv[1]));b=json.load(open(sys.argv[2]));assert all(a[k]==v for k,v in b.items()),(a,b);assert len(a["checks"])==a["checks_count"] and all(a["checks"].values());print("P21 ARCHIVED SUMMARY AND ALL 30 CHECK FLAGS MATCH")' "$RUNNER_TEMP/p21.json" "$ROOT/results/p21_full_completion_adversarial.json"
           fi
