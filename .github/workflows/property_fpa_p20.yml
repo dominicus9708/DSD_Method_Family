@@ -1,0 +1,53 @@
+name: Property P20 Full C1 Completion Reduction Inverse Audit
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p20.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p20_full_c1_inverse.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p20_full_c1_inverse.json'
+  workflow_dispatch:
+jobs:
+  inverses:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check unchanged P17 admission validator
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          test "$(git hash-object "$ROOT/scripts/verify_p17_typed_reference_validator.py")" = "d5e796022133bf066b6d485950044f93b5d656ca"
+      - name: Execute full primitive-preserving completion and reduction tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/scripts/verify_p20_full_c1_inverse.py"
+          python -W error "$ROOT/scripts/verify_p20_full_c1_inverse.py" "$RUNNER_TEMP/p20.json"
+          echo P20_JSON_BEGIN
+          cat "$RUNNER_TEMP/p20.json"
+          echo P20_JSON_END
+          python - "$RUNNER_TEMP/p20.json" <<'PY'
+          import json,sys
+          o=json.load(open(sys.argv[1]))
+          assert o['all_checks_pass'] and all(o['checks'].values())
+          assert o['checks_count']>=30
+          assert o['checks']['different_nonzero_values_do_not_collapse']
+          assert o['checks']['same_repr_two_status_keys_retained']
+          assert o['checks']['tampered_full_model_reduction_refused']
+          assert o['full_property_FPA']=='OPEN'
+          print('P20 INDEPENDENT INVERSE AND NEGATIVE AUDIT PASS')
+          PY
+          if [[ -f "$ROOT/results/p20_full_c1_inverse.json" ]]; then
+            python -c 'import json,sys;a=json.load(open(sys.argv[1]));b=json.load(open(sys.argv[2]));assert a==b;print("P20 ARCHIVED JSON MATCH")' "$RUNNER_TEMP/p20.json" "$ROOT/results/p20_full_c1_inverse.json"
+          else
+            echo P20_FIRST_RUN_FOR_ARCHIVE
+          fi
+          sha256sum "$ROOT/scripts/verify_p20_full_c1_inverse.py" "$RUNNER_TEMP/p20.json"
