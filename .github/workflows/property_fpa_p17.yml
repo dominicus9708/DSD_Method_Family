@@ -1,0 +1,59 @@
+name: Property P17 Independent Typed Reference Validator
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p17.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p17_typed_reference_validator.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p17_typed_reference_validator.json'
+  workflow_dispatch:
+jobs:
+  source-vs-reference:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout unchanged original property experiment
+        uses: actions/checkout@v4
+        with:
+          repository: dominicus9708/Property_Axiom_System
+          path: original-experiment
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Ensure frozen original experiment implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C original-experiment hash-object src/property_axiom_reproduction.py)" = "04844beca113c24267660fcbb09bc8f833403a28"
+          echo 'P17 ORIGINAL EXPERIMENT SOURCE FROZEN'
+      - name: Run reference self/negative cases and all actual original constructor witnesses
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/scripts/verify_p17_typed_reference_validator.py"
+          python -W error "$ROOT/scripts/verify_p17_typed_reference_validator.py" "$RUNNER_TEMP/p17.json" --original-src original-experiment/src
+          echo P17_JSON_BEGIN
+          cat "$RUNNER_TEMP/p17.json"
+          echo P17_JSON_END
+          python - "$RUNNER_TEMP/p17.json" <<'PY'
+          import json,sys
+          a=json.load(open(sys.argv[1]))
+          assert a['differential_executed']
+          assert a['original_constructor_functions']==8
+          assert a['original_concrete_models_checked']==13
+          assert a['self_tests_count']==30
+          assert sum(x=='typed_premodel' for x in a['original_differential'].values())==2
+          assert sum(x=='admitted_core' for x in a['original_differential'].values())==11
+          print('P17 INDEPENDENT ACTUAL-ORIGINAL DIFFERENTIAL PASS')
+          PY
+          if [[ -f "$ROOT/results/p17_typed_reference_validator.json" ]]; then
+            python -c 'import json,sys; a=json.load(open(sys.argv[1])); b=json.load(open(sys.argv[2])); assert a==b,(a,b); print("P17 ARCHIVED JSON MATCH")' "$RUNNER_TEMP/p17.json" "$ROOT/results/p17_typed_reference_validator.json"
+          else
+            echo 'P17 JSON FIRST RUN (ARCHIVE TO BE COMMITTED)'
+          fi
+          sha256sum "$ROOT/scripts/verify_p17_typed_reference_validator.py" "$RUNNER_TEMP/p17.json"
