@@ -1,0 +1,106 @@
+{
+  "audit_id": "MF-REG-20261025-006",
+  "boundary": "Historical D/E 18 score rows only; auxiliary original-channel algebraic witness does not modify COLLISION_NOT_TESTED in archived AGG-CH-001.",
+  "counts": {
+    "cumulative_distinct_original_rows_005_006_if_pass": 42,
+    "historical_64_reused_as_new_pass": 0,
+    "original_D_rows_pass": 8,
+    "original_E_rows_pass": 10,
+    "original_rows_pass": 18,
+    "original_rows_rerun_this_audit": 18,
+    "prior_005_distinct_BC_rows": 24,
+    "remaining_A_F_G_rows_not_reexecuted": 22
+  },
+  "derived": {
+    "combined": [
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "formation_sum": [
+      1,
+      4
+    ],
+    "historical_collision_ledger": "COLLISION_NOT_TESTED",
+    "property_sum": [
+      3,
+      2
+    ],
+    "sidecar_status": {
+      "channel": true,
+      "negative": true,
+      "property": true
+    },
+    "support_witness": {
+      "F_original": [
+        "c1",
+        "c2",
+        "c0"
+      ],
+      "F_without_admitted_zero": [
+        "c1",
+        "c2"
+      ],
+      "different_support_same_output": true,
+      "sum_original": [
+        1,
+        4
+      ],
+      "sum_without_zero": [
+        1,
+        4
+      ]
+    }
+  },
+  "independent_validation_increment": 0,
+  "old_formation_pdf_direct_comparison": "BLOCKED_SOURCE_NOT_AVAILABLE",
+  "row_results": {
+    "D1": true,
+    "D2": true,
+    "D3": true,
+    "D4": true,
+    "D5": true,
+    "D6": true,
+    "D7": true,
+    "D8": true,
+    "E1": true,
+    "E10": true,
+    "E2": true,
+    "E3": true,
+    "E4": true,
+    "E5": true,
+    "E6": true,
+    "E7": true,
+    "E8": true,
+    "E9": true
+  },
+  "source_anchors": {
+    "formation.conditional_zero_loss": true,
+    "formation.finite_composition": true,
+    "property.typed_and_undefined": true,
+    "static.aggregation_source": true
+  },
+  "source_lock": {
+    "aggregation": {
+      "pages": 23,
+      "sha256": "9121703b4f2a9c144eddfa81ad5527585ca16b2469dd50c72ac4babc1bbe8c4d",
+      "verified": true
+    },
+    "formation": {
+      "pages": 34,
+      "sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+      "verified": true
+    },
+    "property": {
+      "pages": 23,
+      "sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+      "verified": true
+    }
+  },
+  "verdict": "PASS_WITH_BOUNDARY"
+}
