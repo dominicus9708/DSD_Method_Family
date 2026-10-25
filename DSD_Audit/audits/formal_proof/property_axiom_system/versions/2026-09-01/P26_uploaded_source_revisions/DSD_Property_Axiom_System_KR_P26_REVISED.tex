@@ -1,0 +1,1384 @@
+\documentclass[11pt]{article}
+
+\usepackage{kotex}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[
+colorlinks=true,
+linkcolor=blue,
+citecolor=blue,
+urlcolor=blue,
+pdftitle={차원구조 기술가능성 속성공리계},
+pdfauthor={Kwon Dominicus},
+pdfsubject={DSD 단계 VI 형성 기록 위의 정적 유형화 속성공리계},
+pdfkeywords={차원구조 기술가능성, 속성공리계, 유형화 속성 프로파일, 부분 할당, 적용 가능성, 문맥적 의존성, 속성 매장, 엄격한 속성 동형사상, 유한 실현}
+]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\setlist{nosep}
+
+% ---------표기----------
+\newcommand{\FVI}{\mathcal F_{L}^{\le 6}}
+\newcommand{\Sin}{\mathcal S_{L}^{\mathrm{inh}}}
+\newcommand{\Saux}{\mathcal S_{L}^{\mathrm{aux}}}
+\newcommand{\Sprop}{\mathcal S_{L}^{\mathrm{prop}}}
+\newcommand{\Pihat}{\widehat{\Pi}_{L}}
+\newcommand{\PiZero}{\widehat{\Pi}_{L}^{0}}
+\newcommand{\Dep}{\Delta_{L}}
+\newcommand{\Ap}{\operatorname{Ap}}
+\newcommand{\DepSat}{\operatorname{DepSat}}
+\newcommand{\Sat}{\operatorname{Sat}}
+\newcommand{\Dom}{\operatorname{Dom}}
+\newcommand{\Stat}{\operatorname{Stat}}
+\newcommand{\PropRec}{\mathcal R^{\mathrm{prop}}}
+\newcommand{\CompProp}{\operatorname{CompProp}}
+\newcommand{\RedProp}{\operatorname{RedProp}}
+\newcommand{\Enc}{\operatorname{Enc}}
+\newcommand{\Pfin}{\mathcal P_{\mathrm{fin}}}
+
+% ---------정리 환경----------
+\newtheorem{axiom}{원시 공리}
+\renewcommand{\theaxiom}{\Roman{axiom}}
+\newtheorem{closureclause}{정의적 폐쇄 조항}
+\renewcommand{\theclosureclause}{C\arabic{closureclause}}
+\newtheorem{theorem}{정리}[section]
+\newtheorem{proposition}[theorem]{명제}
+\newtheorem{lemma}[theorem]{보조정리}
+\newtheorem{corollary}[theorem]{따름정리}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{정의}
+\newtheorem{model}[theorem]{모형}
+\newtheorem{countermodel}[theorem]{반모형}
+\newtheorem{construction}[theorem]{구성}
+\newtheorem{example}[theorem]{예시}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{주석}
+\renewcommand{\proofname}{증명}
+\renewcommand{\abstractname}{초록}
+\renewcommand{\refname}{참고문헌}
+\renewcommand{\contentsname}{목차}
+
+\title{차원구조 기술가능성 속성공리계\\[0.35em]
+\large 형성공리계의 유형화 적용 가능성·의존성 확장}
+\author{Kwon Dominicus\\\small 대한민국 인천, 독립 연구자}
+\date{2026.09.01\\[0.4em]\small\href{mailto:mincuk0808@gmail.com}{\texttt{mincuk0808@gmail.com}}}
+
+\begin{document}
+\maketitle
+
+% ---------초록----------
+\begin{abstract}
+이 논문은 고정된 형성공리계 모형의 단계 VI 채널 완성 절단 위에서 차원구조 기술가능성(DSD)의 일반 속성공리계를 정식화한다.
+형성 층은 어떤 배치, 할당, 역할 및 작동 채널이 허용되었는지를 정하며, 여기서 제시하는 정적 확장은 그 상속 기록에서 출발하여 어떤 추가 속성을 선언할 수 있는지, 어떤 유형화 입력에 적용할 수 있는지, 어떤 문맥적 선행조건을 요구하는지, 그리고 그 값이 실제로 어디에서 정의되는지를 묻는다.
+속성 종류는 유형화되지 않은 항수만이 아니라 유한한 유형화 입력 프로파일을 가지며, 프로파일의 종류(sort)는 축, 선, 부분공간, 법선 또는 그 밖의 1차원 기하 특수화로 제한되지 않는다.
+형성 기록이 공급하는 상속 종류와 속성 확장이 공급하는 보조 종류를 분리하고, 값 운반체와 0을 갖는 속성 종류는 공유 속성 시그니처가 고정한다.
+유형화의 귀결을 제거한 뒤에는 두 개의 잔여 원시 공리가 남는다.
+속성 적용 건전성은 정의된 모든 속성 할당이 선언된 적용 가능 영역 안에 놓일 것을 요구하고, 문맥적 의존성 건전성은 정의된 모든 할당이 해당 속성 종류에 선언된 각 선행조건을 만족할 것을 요구한다.
+그 역방향 함의는 요구하지 않으므로 적용 가능하지만 미정의인 입력은 적용 불가 입력, 선행조건 미충족 입력, 정의된 0, 그리고 정의된 비영값 또는 그 밖의 정의된 값과 구분된다.
+두 원시 공리는 한 입력 유한 반모형으로 서로 도출되지 않음이 보이며, 단순한 유형화의 귀결도 아니다.
+정의적 완성은 모든 원시 속성 핵심으로부터 할당 정의역, 의존성 충족 영역, 상태 자료, 정의된 유형화 속성 기록의 완전 집합을 유일하게 복원하고, 원시 환원은 원래 핵심을 되찾는다.
+순방향 속성 사상은 큰 범주일 수 있는 범주를 이루고, 속성 매장은 넓은 부분범주를 이루며 부분모형 준순서를 유도한다. 단계 VI 고정·시그니처 고정의 엄격한 속성 동형사상은 사용 가능한 보조 종류 집합과 선언된 속성 종류 집합이 일치하는 전단사 매장이며, 항등사상·역사상·합성에 대한 폐쇄성으로부터 엄격한 속성 동치가 동치관계를 이룸이 따라온다.
+중첩된 속성 단계 비교 집합은 엄격하게 동형이 아닌 쌍의 첫 분기 지수를 정의하며, 순수하게 정의적인 완성 단계는 독립적인 첫 분기를 만들 수 없다.
+모든 단계 VI 형성 기록은 자명한 속성 확장을 허용하고, 모든 유한한 양립 가능 원시 제시는 표준 유한 실현을 가지며, 명시적 유한 증인은 선언·적용 가능성/의존성·할당 층에서의 분기를 실현한다.
+마지막으로 속성별 요약 계수의 동일성만으로 엄격한 속성 동치를 결정할 수는 없는데, 요약 통계가 속성 간 상관 구조를 지울 수 있기 때문이다.
+따라서 이전의 실현축 속성 체계는 보편 속성 핵심이 아니라 기하학적 특수화로 보존된다.
+\end{abstract}
+
+\noindent\textbf{핵심어:} 차원구조 기술가능성; 속성공리계; 유형화 속성 프로파일; 부분 속성 할당; 적용 가능성; 문맥적 의존성; 속성 매장; 엄격한 속성 동형사상; 첫 분기; 유한 실현
+
+\clearpage
+\hypersetup{linkcolor=black}
+\tableofcontents
+\hypersetup{linkcolor=blue}
+\clearpage
+
+% ---------Section 1. 서론----------
+\section{서론}
+\label{sec:introduction}
+
+공리적 제시는 모든 편리한 좌표를 같은 논리적 지위로 끌어올리기보다 원시 자료, 실질적 제약, 정의 및 귀결을 구분해야 한다 \cite{TarskiLogic}.
+차원구조 기술가능성(DSD)의 형성공리계는 이 원칙을 구조적 허용, 건전한 제한, 실현, 배치 기술가능성, 양 종류별 부분 할당, 작동 채널 형성 및 유한 합성에 적용한다 \cite{KwonFormation}.
+이 논문은 같은 원칙을 다음 정적 층, 즉 고정된 단계 VI 형성 기록 위에서 구성된 유형화 입력에 할당되는 속성에 적용한다.
+
+동기는 단순하지만 구조적으로 중요하다.
+형성된 객체가 존재한다고 해서 그 객체에 모든 후보 속성이 선언되는 것은 아니며, 어떤 속성 종류가 선언되었다고 해서 그 속성이 모든 올바르게 유형화된 입력에 적용되는 것도 아니다. 또한 적용 가능하다고 해서 모든 문맥적 선행조건이 충족되는 것은 아니고, 선행조건이 충족되었다고 해서 실제 값이 할당되었다는 뜻도 아니다.
+따라서
+\[
+\text{미선언}\neq\text{적용 불가}\neq\text{선행조건 미충족}\neq\text{미정의}\neq\text{정의된 0}.
+\]
+이 구분 가운데 어느 하나라도 합쳐버리는 속성 이론은 이후의 집계나 동역학이 시작되기도 전에 정보를 잃는다.
+
+이전 DSD 논문은 축선, 선 민감·태그 민감 자료, 대칭 쌍선형 자료, 법선, 축 랭크 및 순환 폐쇄를 포함한 실현축 특수화 안에서 이러한 구분을 전개했다 \cite{KwonAxisProperty}.
+그 구조들은 해당 특수화 안에서는 여전히 수학적으로 의미가 있지만 일반적인 속성 구조의 선행조건은 아니다.
+따라서 이번 개정은 축에 독립적인 핵심을 추출하고 실현축 구조를 후속 기하학적 특수화로 취급한다.
+
+일반화는 세 가지 변화를 도입한다.
+첫째, 입력 종류 우주는 열려 있다. 속성은 1차원 운반체를 가정하지 않은 채 형성에서 상속된 종류, 확장이 공급한 보조 종류, 또는 이들의 유한 혼합을 입력으로 받을 수 있다.
+둘째, 이전의 배치 색인(configuration index)을 모든 속성 할당에 숨은 외부 좌표로 강제하지 않는다. 배치 또는 배치쌍이 속성 입력의 일부라면 유형화 프로파일 안에 명시적으로 나타난다.
+셋째, 두 잔여 원시 공리를 모든 특수화 뒤에도 살아남는 층위, 즉 적용 건전성과 문맥적 의존성 건전성에서 다시 정식화한다.
+
+주요 결과는 두 공리의 상호 비도출성, 유일한 명시적 완성과 원시 환원, 모형 존재와 표준 유한 실현, 구조 보존 순방향 사상과 매장, 부분모형 준순서, 엄격한 속성 동치, 단계별 첫 분기 및 유한 압축 장애를 확립한다.
+선택적 행렬, 텐서, 연산자, 그래프 또는 그 밖의 표현은 추상 속성 구조와 동일시하지 않고 별도의 표현 확장에 둔다.
+이후의 집계, 동역학 및 기하학적 특수화는 별도의 인터페이스를 통해 들어온다.
+
+절~\ref{sec:formal-setting}에서는 단계 VI 형성 인터페이스와 일반 속성 시그니처를 고정한다.
+절~\ref{sec:axioms}에서는 두 원시 공리와 명시적 완성을 제시한다.
+절~\ref{sec:independence}에서는 독립성과 잔여 최소성을 증명한다.
+절~\ref{sec:descriptor-representation}에서는 완전 속성 기술자와 선택적 표현 확장을 정의한다.
+절~\ref{sec:maps}에서는 순방향 사상, 매장, 부분모형 및 엄격한 동치를 전개한다.
+절~\ref{sec:branching}에서는 속성 단계 절단과 첫 분기를 정의한다.
+절~\ref{sec:finite}에서는 존재와 유한 실현을 증명한다.
+절~\ref{sec:compression}에서는 분류 장애를 제시한다.
+절~\ref{sec:specialization}에서는 실현축 특수화 및 이후 DSD 층과의 관계를 기록한다.
+절~\ref{sec:main-theorem}에서는 핵심 결과를 하나의 정리로 모은다.
+
+% ---------Section 2. 형성 인터페이스, 시그니처 및 속성 예비모형----------
+\section{형성 인터페이스, 시그니처 및 속성 예비모형}
+\label{sec:formal-setting}
+
+% ---------Section 2.1. 고정된 단계 VI 형성 배경----------
+\subsection{고정된 단계 VI 형성 배경}
+
+스칼라체 \(\mathbb F\) 위의 완전 DSD 형성 모형을 고정하고, 그 단계 VI 채널 완성 절단만을 유지한다.
+\[
+\FVI.
+\]
+현재 이론은 이 기록에 매개변수화된다.
+특히 단계 VI 이후의 항공간, 성분항 사상, 유한 합성 정의역 및 합성 기술 연산자는 속성 핵심의 좌표가 아니다.
+상속된 단계 VI 기록에는 후보 및 기술 가능한 배치 자료, 물질 및 할당 자료, 역할, 후보 채널 우주, 그리고 채널 동일성
+\[
+c=(p,a,\lambda,v,\rho)
+\]
+을 갖는 허용 작동 채널 집합 \(\mathfrak C_L\)이 포함된다.
+속성 층은 이러한 할당, 역할, 채널 또는 형성 추적을 변경하지 않는다.
+
+모든 운반체, 속성 종류, 의존성 종류, 사상, 관계 및 개별 기술자는 고정된 배경 집합론의 집합이며, 여기서는 ZFC를 취한다 \cite{JechSetTheory}.
+고정된 배경 위의 모든 속성 모형 모음은 집합 크기의 비교족을 따로 고정하지 않는 한 메타이론적 클래스일 수 있다.
+다중 종류 운반체와 구조 보존 사상의 사용은 표준 집합론적 모형 관행을 따른다 \cite{HodgesModelTheory}. 부분 속성 할당은 통상적인 집합론적 부분함수이며 그 그래프로 동등하게 표현할 수 있다 \cite{FarmerPartial}.
+
+% ---------Section 2.2. 공유 일반 속성 시그니처----------
+\subsection{공유 일반 속성 시그니처}
+
+\begin{definition}[공유 속성 시그니처]
+\label{def:signature}
+\(\FVI\) 위의 공유 속성 시그니처는 다음 튜플이다.
+\[
+\Sprop=
+\left(
+\Sin,\Saux,
+\{X_L^{\mathrm{inh}}(s)\}_{s\in\Sin},
+\Pihat,\sigma_L,
+\{Z_{L,\varpi}\}_{\varpi\in\Pihat},
+\PiZero,\{0_{L,\varpi}\}_{\varpi\in\PiZero},
+\Dep,\delta_L
+\right),
+\]
+여기서:
+\begin{enumerate}[label=(\arabic*)]
+\item \(\Sin\)은 운반체가 이미 \(\FVI\)에 의해 정해진 상속 입력 종류 표지의 집합이다.
+\item \(\Saux\)는 속성 확장이 운반체를 공급할 수 있는 보조 입력 종류 표지의 서로소 집합이다.
+\item \(X_L^{\mathrm{inh}}(s)\)는 \(s\in\Sin\)의 상속 운반체이다.
+\item \(\Pihat\)은 후보 속성 종류 우주이다.
+\item 모든 \(\varpi\in\Pihat\)에 대하여
+\[
+\sigma_L(\varpi)=(s_1,\ldots,s_m)\in(\Sin\sqcup\Saux)^m,
+\qquad m\ge 1,
+\]
+은 그 유한 유형화 입력 프로파일이다.
+\item \(Z_{L,\varpi}\)는 \(\varpi\)의 값 운반체이다.
+\item \(\PiZero\subseteq\Pihat\)는 0을 갖는 부분족이며, 모든 \(\varpi\in\PiZero\)에 대하여 \(0_{L,\varpi}\in Z_{L,\varpi}\)를 구별된 원소로 둔다.
+\item \(\Dep\)는 문맥적 선행조건 종류의 우주이다.
+\item \(\delta_L(\varpi)\in\Pfin(\Dep)\)는 공유 시그니처가 \(\varpi\)에 선언한 유한 선행조건 집합이다.
+\end{enumerate}
+\end{definition}
+
+이 시그니처는 의도적으로 \(\mathrm{tag}\), \(\mathrm{line}\), \(\mathrm{sub}\), \(\mathrm{normal}\) 같은 표지를 요구하지 않는다.
+이러한 표지는 이후 특수화에서 보조 종류로 도입될 수 있지만 보편 속성 좌표는 아니다.
+마찬가지로 속성 프로파일에는 하나의 배치, 두 배치, 채널과 보조 상태, 또는 공유 시그니처가 허용하는 그 밖의 유한 유형화 조합이 들어갈 수 있다.
+
+\begin{remark}[속성 이름은 수학을 결정하지 않는다]
+후보 표지 \(\varpi\)는 그 이름만으로 어떠한 수학 법칙도 갖지 않는다.
+현재 체계에서 그 형식적 역할은 프로파일, 값 운반체, 0 보유 여부, 선행조건 집합, 모형 수준의 선언, 적용 가능성 관계 및 부분 할당에 의해 정해진다.
+응용은 추가 의미론, 대칭성, 반대칭성, 연속성, 구성적 의미 또는 경험적 해석을 부과할 수 있지만 어느 것도 표지 이름에서 추론하지 않는다.
+\end{remark}
+
+% ---------Section 2.3. 운반체 가용성과 유형화 입력 곱----------
+\subsection{운반체 가용성과 유형화 입력 곱}
+
+\begin{definition}[보조 운반체 공급]
+속성 제시 \(A\)는 부분 운반체 사상
+\[
+X_A^{\mathrm{aux}}:\Saux\rightharpoonup \mathbf{Set}
+\]
+을 공급하며, 정의된 모든 값 \(X_A^{\mathrm{aux}}(s)\)는 집합이다.
+결합 운반체 해석을
+\[
+X_A(s):=
+\begin{cases}
+X_L^{\mathrm{inh}}(s), & s\in\Sin,\\
+X_A^{\mathrm{aux}}(s), & s\in\Dom(X_A^{\mathrm{aux}})
+\end{cases}
+\]
+로 정의한다.
+\(\Dom(X_A^{\mathrm{aux}})\) 밖의 보조 종류는 \(A\)에서 사용할 수 없다.
+\end{definition}
+
+\begin{definition}[프로파일 가용성]
+\(\sigma_L(\varpi)=(s_1,\ldots,s_m)\)라 하자.
+모든 \(X_A(s_r)\)가 정의될 때 \(\varpi\)의 프로파일이 \emph{\(A\)에서 사용 가능하다}고 한다.
+사용 가능할 때 유형화 입력 곱을
+\[
+X_{A,\varpi}:=\prod_{r=1}^{m}X_A(s_r)
+\]
+로 정의한다.
+추가 대칭 조건을 이후 확장이 제공하지 않는 한 좌표의 순서는 유지한다.
+\end{definition}
+
+이 정의는 문맥 좌표를 명시적으로 만든다.
+모든 속성 사상에 필수적으로 붙는 외부 배치 색인 \(p\)는 없다.
+속성이 배치, 배치쌍, 채널, 물질 항목 또는 그 밖의 상속 객체에 의존한다면 해당 종류가 \(\sigma_L(\varpi)\) 안에 나타난다.
+
+% ---------Section 2.4. 속성 예비모형과 원시 제시----------
+\subsection{속성 예비모형과 원시 제시}
+
+\begin{definition}[속성 예비모형]
+\label{def:premodel}
+\((\FVI,\Sprop)\) 위의 \emph{속성 예비모형}은 다음 유형화 요건을 만족하는 집합 부호화 튜플이다.
+\[
+A^{\mathrm{pre}}=
+\left(
+X_A^{\mathrm{aux}},
+\Pi_A,
+\{\Ap_{A,\varpi}\},
+\{\Sat_{A,\varpi,d}\},
+\{\Xi_{A,\varpi}\}
+\right).
+\]
+\begin{enumerate}[label=(\arabic*)]
+\item \(\Pi_A\subseteq\Pihat\)는 \(A\)에서 선언된 속성 종류의 집합이다.
+\item \(\varpi\in\Pi_A\)이고 그 프로파일이 사용 가능하면
+\[
+\Ap_{A,\varpi}\subseteq X_{A,\varpi}
+\]
+는 원시 적용 가능 집합이다.
+\item 모든 \(d\in\delta_L(\varpi)\)에 대하여
+\[
+\Sat_{A,\varpi,d}\subseteq X_{A,\varpi}
+\]
+는 선행조건 \(d\)를 만족하는 입력의 원시 집합이다.
+\item 원시 속성 할당은 부분함수
+\[
+\Xi_{A,\varpi}:X_{A,\varpi}\rightharpoonup Z_{L,\varpi}
+\]
+이다.
+\end{enumerate}
+\(\varpi\)가 선언되지 않았거나 그 프로파일을 사용할 수 없다면 \(\varpi\)의 적용 가능 집합, 선행조건 충족 집합 또는 할당 사상을 요구하지 않는다.
+예비모형은 아래에서 도입하는 원시 공리 가운데 하나를 위반할 수 있다.
+\end{definition}
+
+\begin{definition}[원시 속성 핵심]
+\emph{원시 속성 핵심}은 원시 공리 I과 II를 만족하는 올바르게 유형화된 속성 예비모형이다.
+\emph{완전 속성 모형}은 정의적 폐쇄 조항 C1의 유일하게 결정되는 유도 좌표를 갖춘 원시 속성 핵심이다.
+\end{definition}
+
+% ---------Section 2.5. 속성 단계----------
+\subsection{속성 단계}
+
+\begin{definition}[속성 단계 절단]
+\label{def:property-stages}
+완전 속성 모형 \(A\)에 대하여 누적 속성 단계 기록
+\[
+\mathcal P_A^{\le0},\ldots,\mathcal P_A^{\le5}
+\]
+을 다음과 같이 정의한다.
+\[
+\begin{aligned}
+\mathcal P_A^{\le0}&:=(\FVI,\Sprop),\\
+\mathcal P_A^{\le1}&:=(\mathcal P_A^{\le0};X_A^{\mathrm{aux}}),\\
+\mathcal P_A^{\le2}&:=(\mathcal P_A^{\le1};\Pi_A),\\
+\mathcal P_A^{\le3}&:=(\mathcal P_A^{\le2};\{\Ap_{A,\varpi}\},\{\Sat_{A,\varpi,d}\}),\\
+\mathcal P_A^{\le4}&:=(\mathcal P_A^{\le3};\{\Xi_{A,\varpi}\}),\\
+\mathcal P_A^{\le5}&:=(\mathcal P_A^{\le4};\text{모든 유도 완성 좌표}).
+\end{aligned}
+\]
+단계 번호는 물리적 시간이 아니라 의존 순서를 기록한다.
+\end{definition}
+
+% ---------Section 3. 원시 공리와 정의적 완성----------
+\section{원시 공리와 정의적 완성}
+\label{sec:axioms}
+
+% ---------Section 3.1. 속성 적용 건전성----------
+\subsection{속성 적용 건전성}
+
+\begin{axiom}[속성 적용 건전성]
+\label{ax:application}
+프로파일을 사용할 수 있는 모든 선언 속성 종류 \(\varpi\)에 대하여
+\[
+\Dom(\Xi_{A,\varpi})\subseteq\Ap_{A,\varpi}.
+\]
+역포함은 요구하지 않는다.
+\end{axiom}
+
+원시 공리 I은 속성 제시 자체가 적용 불가라고 선언한 입력에 속성값을 정의할 수 없음을 말한다.
+모든 적용 가능 입력에 반드시 값을 두도록 강제하지는 않는다.
+따라서
+\[
+x\in\Ap_{A,\varpi}\setminus\Dom(\Xi_{A,\varpi})
+\]
+는 허용되며 적용 가능하지만 미정의인 입력을 기록한다.
+
+% ---------Section 3.2. 문맥적 의존성 건전성----------
+\subsection{문맥적 의존성 건전성}
+
+\begin{definition}[의존성 충족 영역]
+프로파일을 사용할 수 있는 선언 속성 종류 \(\varpi\)에 대하여
+\[
+\DepSat_{A,\varpi}:=
+\bigcap_{d\in\delta_L(\varpi)}\Sat_{A,\varpi,d}
+\]
+로 정의한다.
+\(\delta_L(\varpi)=\varnothing\)일 때는 공집합 교집합 관례를 사용하여
+\[
+\DepSat_{A,\varpi}:=X_{A,\varpi}
+\]
+로 둔다.
+\end{definition}
+
+\begin{axiom}[문맥적 의존성 건전성]
+\label{ax:dependency}
+프로파일을 사용할 수 있는 모든 선언 속성 종류 \(\varpi\)에 대하여
+\[
+\Dom(\Xi_{A,\varpi})\subseteq\DepSat_{A,\varpi}.
+\]
+동등하게, \(\Xi_{A,\varpi}(x)\)가 정의되어 있고 \(d\in\delta_L(\varpi)\)이면
+\[
+x\in\Sat_{A,\varpi,d}.
+\]
+\end{axiom}
+
+핵심 체계의 선행조건 관계는 비재귀적이다.
+이는 유형화 입력에서 선언된 문맥적 선행조건이 충족되는지를 기록할 뿐, 다른 속성을 재귀적으로 평가하여 한 속성을 정의하지 않는다.
+속성 간 재귀, 고정점 또는 순환 의존성은 별도의 확장을 요구하며 여기서는 가정하지 않는다.
+
+% ---------Section 3.3. 유도 정의역, 상태 및 기록----------
+\subsection{유도 정의역, 상태 및 기록}
+
+\begin{definition}[할당 정의역]
+프로파일을 사용할 수 있는 모든 선언 속성 종류에 대하여
+\[
+D_{A,\varpi}:=\Dom(\Xi_{A,\varpi})
+\]
+로 정의한다.
+\end{definition}
+
+\begin{definition}[속성 상태]
+\label{def:status}
+후보 속성 종류 \(\varpi\)의 상태는 다음과 같이 정한다.
+\begin{enumerate}[label=(\arabic*)]
+\item \(\varpi\notin\Pi_A\)이면 상태는 \emph{미선언}이다.
+\item \(\varpi\in\Pi_A\)이지만 프로파일을 사용할 수 없으면 상태는 \emph{프로파일 사용 불가}이다.
+\item 프로파일을 사용할 수 있고 \(x\notin\Ap_{A,\varpi}\)이면 입력 상태는 \emph{적용 불가}이다.
+\item \(x\in\Ap_{A,\varpi}\setminus\DepSat_{A,\varpi}\)이면 입력 상태는 \emph{선행조건 미충족}이다.
+\item \(x\in\Ap_{A,\varpi}\cap\DepSat_{A,\varpi}\setminus D_{A,\varpi}\)이면 입력 상태는 \emph{적용 가능하지만 미정의}이다.
+\item \(x\in D_{A,\varpi}\)이면 상태는 \emph{정의됨}이다. \(\varpi\in\PiZero\)인 경우 \(\Xi_{A,\varpi}(x)=0_{L,\varpi}\)이면 \emph{정의된 0}, 그렇지 않으면 \emph{정의된 비영값}으로 세분한다.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[정의된 속성 기록]
+정의된 유형화 속성 기록의 집합은
+\[
+\PropRec_A:=
+\left\{
+(\varpi,x,z):
+\varpi\in\Pi_A,
+\ x\in D_{A,\varpi},
+\ z=\Xi_{A,\varpi}(x)
+\right\}.
+\]
+속성 종류, 순서가 보존된 완전 유형화 입력 및 할당값을 모두 유지한다.
+\end{definition}
+
+\begin{remark}[형성 할당은 속성 할당이 아니다]
+사상 \(\Xi_{A,\varpi}\)는 확장 층의 속성 할당이다.
+이는 어떠한 형성 할당 \(q_{L,\lambda}\)도 수정하지 않고, 역할을 추가하지 않으며, \(\FVI\) 안에 새로운 작동 채널을 만들지도 않는다.
+속성값을 형성 채널 동일성으로 승격하려면 새로운 형성 모형 또는 명시적 해석 인터페이스가 필요하다.
+\end{remark}
+
+% ---------Section 3.4. 명시적 완성----------
+\subsection{명시적 완성}
+
+\begin{closureclause}[유일한 명시적 속성 완성]
+\label{cl:completion}
+원시 속성 핵심이 주어지면 위의 공식으로 모든 할당 정의역 \(D_{A,\varpi}\), 모든 의존성 충족 영역 \(\DepSat_{A,\varpi}\), 정의~\ref{def:status}의 모든 상태 및 정의된 속성 기록 집합 \(\PropRec_A\)를 정의한다.
+그 결과 얻는 완전 속성 모형을 원시 핵심의 \emph{명시적 완성}이라 하고 \(\CompProp(A^{\mathrm{prim}})\)으로 나타낸다.
+\end{closureclause}
+
+\begin{definition}[원시 환원]
+완전 속성 모형의 원시 환원 \(\RedProp(A)\)은 유도 정의역, 의존성 교집합, 상태 및 정의된 기록 집합만 잊고, 단계 VI 기반, 공유 시그니처, 보조 운반체, 선언, 원시 적용 가능 집합, 원시 선행조건 충족 집합 및 원시 할당 사상은 유지한다.
+\end{definition}
+
+\begin{theorem}[완성-환원 역법칙]
+\label{thm:completion-inverse}
+모든 원시 속성 핵심 \(P\)에 대하여
+\[
+\RedProp(\CompProp(P))=P.
+\]
+모든 완전 속성 모형 \(A\)에 대하여
+\[
+\CompProp(\RedProp(A))=A.
+\]
+따라서 명시적 완성은 유일하며 원시 속성 핵심의 클래스에 추가 제한을 부과하지 않는다.
+\end{theorem}
+
+\begin{proof}
+폐쇄 조항 C1의 모든 유도 좌표는 원시 좌표로부터 함수적인 집합론적 정의로 주어진다.
+환원은 정확히 그 유도 좌표만 제거하고 모든 원시 좌표를 바꾸지 않으므로 첫 번째 항등식이 성립한다.
+반대로 완전 속성 모형은 각 유도 좌표를 같은 정의로 해석해야 하므로 다시 완성하면 잊었던 모든 좌표가 유일하게 복원된다.
+\end{proof}
+
+\begin{remark}[핵심에는 정초성 공리가 필요하지 않다]
+\(\Sat_{A,\varpi,d}\)는 다른 속성의 재귀적 평가가 아니라 원시 선행조건 충족 자료이므로 폐쇄 조항 C1에는 재귀적 의존 사슬이 없다.
+따라서 핵심 체계에는 정초성 또는 동시 고정점 조건이 필요하지 않다.
+이러한 조건은 이후의 재귀 의존성 확장에서만 필요해질 수 있다.
+\end{remark}
+
+% ---------Section 4. 원시 독립성과 잔여 최소성----------
+\section{원시 독립성과 잔여 최소성}
+\label{sec:independence}
+% ----- P26 audited revision (Section 4) -----
+
+% ---------Section 4.1. 공통 유한 배경----------
+\subsection{공통 유한 배경}
+
+하나의 보조 종류 \(u\), 하나의 후보 속성 종류 \(\varpi\), 프로파일
+\[
+\sigma_L(\varpi)=(u),
+\]
+값 운반체 \(Z_{L,\varpi}=\mathbb R\), 그리고
+\[
+\delta_L(\varpi)=\{d\}
+\]
+를 만족하는 하나의 선행조건 종류 \(d\)를 갖는 공유 시그니처를 고정한다.
+또
+\[
+X_A(u)=\{x\},
+\qquad
+\Pi_A=\{\varpi\}
+\]
+로 둔다.
+이 공통 한 입력 배경은 공집합이 아니고 올바르게 유형화되어 있으며 어떠한 축, 선, 쌍선형 형식, 법선 또는 주위 기하 운반체에도 의존하지 않는다.
+
+% ---------Section 4.2. 공리 독립성----------
+\subsection{공리 독립성}
+
+\begin{countermodel}[원시 공리 II는 만족하지만 원시 공리 I은 실패하는 경우]
+\label{cm:pi}
+다음과 같이 둔다.
+\[
+\Ap_{A,\varpi}=\varnothing,
+\qquad
+\Sat_{A,\varpi,d}=\{x\},
+\qquad
+\Xi_{A,\varpi}(x)=1.
+\]
+그러면
+\[
+\Dom(\Xi_{A,\varpi})=\{x\}\not\subseteq\Ap_{A,\varpi}
+\]
+이므로 원시 공리 I은 실패한다. 반면
+\[
+\Dom(\Xi_{A,\varpi})\subseteq\Sat_{A,\varpi,d}
+\]
+이므로 원시 공리 II는 성립한다.
+\end{countermodel}
+
+\begin{countermodel}[원시 공리 I은 만족하지만 원시 공리 II는 실패하는 경우]
+\label{cm:pii}
+다음과 같이 둔다.
+\[
+\Ap_{A,\varpi}=\{x\},
+\qquad
+\Sat_{A,\varpi,d}=\varnothing,
+\qquad
+\Xi_{A,\varpi}(x)=1.
+\]
+그러면 원시 공리 I은 성립하지만
+\[
+\Dom(\Xi_{A,\varpi})=\{x\}\not\subseteq\DepSat_{A,\varpi}=\varnothing
+\]
+이므로 원시 공리 II는 실패한다.
+\end{countermodel}
+
+\begin{theorem}[상호 비도출성]
+\label{thm:independence}
+공유 유형화 예비모형 배경에서 원시 공리 I과 II는 서로 도출되지 않는다.
+\end{theorem}
+
+\begin{proof}
+반모형~\ref{cm:pi}는 원시 공리 II를 만족하고 원시 공리 I을 위반한다.
+반모형~\ref{cm:pii}는 원시 공리 I을 만족하고 원시 공리 II를 위반한다.
+둘 다 동일한 한 입력 시그니처 아래에서 올바르게 유형화되어 있다.
+각 반모형은 두 공리 중 하나를 위반하므로 원시 속성 핵심이 아니다.
+정의적 폐쇄 조항 C1은 두 공리를 모두 충족하는 허용된 원시 핵심에 조건부로 적용되며, 여기의 유형화 반예비모형에 부과한 전제가 아니다.
+\end{proof}
+
+% ---------Section 4.3. 유형화 귀결과 잔여 공리----------
+\subsection{유형화 귀결과 잔여 공리}
+
+\begin{proposition}[원시 공리는 유형화 항진식이 아니다]
+다음의 유형화 사실만으로 원시 공리 I 또는 II가 따라오지는 않는다.
+\[
+\Ap_{A,\varpi},\Sat_{A,\varpi,d}\subseteq X_{A,\varpi}
+\]
+및
+\[
+\Xi_{A,\varpi}:X_{A,\varpi}\rightharpoonup Z_{L,\varpi}
+\]
+가 부분함수라는 사실만으로는 충분하지 않다.
+\end{proposition}
+
+\begin{proof}
+위 두 반모형은 모두 이러한 유형화 사실을 만족한다.
+그럼에도 각각 하나의 원시 공리를 위반한다.
+따라서 잔여 제약은 유형화를 다시 말하는 것이 아니라 허용되는 유형화 예비모형의 클래스를 실제로 제한한다.
+\end{proof}
+
+\begin{proposition}[숨은 역방향 함의는 없다]
+핵심 체계는 다음 어느 포함도 함의하지 않는다.
+\[
+\Ap_{A,\varpi}\subseteq\Dom(\Xi_{A,\varpi})
+\]
+또는
+\[
+\DepSat_{A,\varpi}\subseteq\Dom(\Xi_{A,\varpi}).
+\]
+\end{proposition}
+
+\begin{proof}
+사용 가능한 한 점 프로파일을 갖는 선언 속성을 하나 취하고, 적용 가능 집합과 모든 선행조건 충족 집합을 \(\{x\}\)로 두되 \(\Xi_{A,\varpi}\)의 정의역은 공집합으로 둔다.
+두 원시 공리는 모두 성립하지만 위에 표시한 두 역포함은 모두 실패한다.
+\end{proof}
+
+\begin{corollary}[적용 가능하지만 미정의인 상태는 공허하지 않다]
+적용 가능하고 선언된 모든 선행조건을 만족하지만 정의된 속성값은 없는 입력을 포함하는 완전 속성 모형이 존재한다.
+\end{corollary}
+
+% ---------Section 5. 완전 속성 기술자와 선택적 표현----------
+\section{완전 속성 기술자와 선택적 표현}
+\label{sec:descriptor-representation}
+
+% ---------Section 5.1. 완전 핵심 기술자----------
+\subsection{완전 핵심 기술자}
+
+\begin{definition}[완전 핵심 속성 기술자]
+\label{def:descriptor}
+완전 속성 모형 \(A\)의 완전 핵심 속성 기술자를 다음과 같이 정의한다.
+\[
+\begin{aligned}
+\Sigma_A^{\mathrm{prop}}:=\bigl(&\FVI,\Sprop;
+X_A^{\mathrm{aux}},\Pi_A,
+\{\Ap_{A,\varpi}\},\{\Sat_{A,\varpi,d}\},\\
+&\{\Xi_{A,\varpi}\},\{D_{A,\varpi}\},
+\{\DepSat_{A,\varpi}\},\{\Stat_{A,\varpi}\},\PropRec_A\bigr).
+\end{aligned}
+\]
+이 기술자는 정의된 값만 남기는 것이 아니라 원시 좌표와 상태 민감 유도 좌표를 함께 보존한다.
+\end{definition}
+
+\begin{remark}[미정의성도 구조적 자료이다]
+두 속성 제시는 모든 정의된 값에서 일치하더라도 한쪽이 추가 속성 종류를 선언하거나, 추가 보조 운반체를 공급하거나, 어떤 입력을 적용 가능으로 표시하거나, 값이 정의되지 않은 입력에서 선행조건을 만족시키는 경우 서로 다를 수 있다.
+따라서 엄격한 비교는 수치 출력값의 집합만으로 복원할 수 없다.
+\end{remark}
+
+% ---------Section 5.2. 일반 선택적 표현 확장----------
+\subsection{일반 선택적 표현 확장}
+
+\begin{definition}[공유 표현 시그니처]
+공유 선택적 표현 시그니처는 표현 표지의 집합 \(J_L\), 각 \(j\in J_L\)에 대한 양의 정수 \(n_j\), 그리고 각 표지에 대한 표현 운반체 \(E_{L,j}\)로 이루어진다.
+\end{definition}
+
+\begin{definition}[표현 패키지]
+완전 속성 모형 \(A\)가 주어졌을 때 선택적 표현 패키지는 선언된 부분족 \(J_A\subseteq J_L\)를 공급하고, 모든 \(j\in J_A\)에 대하여 선택된 기록 정의역
+\[
+Y_{A,j}\subseteq(\PropRec_A)^{n_j}
+\]
+과 부호화 사상
+\[
+\Enc_{A,j}:Y_{A,j}\longrightarrow E_{L,j}
+\]
+을 공급한다.
+명시적으로 선언되지 않은 표현 표지는 활성화되지 않는다.
+\end{definition}
+
+행렬, 텐서, 연산자, 그래프, 사원수, 좌표 배열 또는 그 밖의 부호화는 응용이 해당 운반체와 부호화 규칙을 제공할 때 이러한 패키지를 통해 도입할 수 있다.
+추상 속성 체계는 어떠한 표현도 그것이 부호화하는 속성 구조 자체와 동일시하지 않는다.
+
+\begin{proposition}[표현 망각]
+표현 패키지를 잊어도 올바르게 정의된 완전 핵심 속성 모형이 남는다.
+반대로 완전 핵심 속성 모형은 비공허한 표현 패키지를 가질 필요가 없다.
+\end{proposition}
+
+\begin{proof}
+원시 공리와 폐쇄 조항 C1은 핵심 속성 좌표만 언급한다.
+따라서 표현 선언과 부호화 사상은 기반 핵심이 모형인지 여부에 아무 조건도 부과하지 않는다.
+공집합 표현 선언 \(J_A=\varnothing\)은 항상 가능하다.
+\end{proof}
+
+% ---------Section 6. 구조 보존 사상, 매장 및 엄격한 동치----------
+\section{구조 보존 사상, 매장 및 엄격한 동치}
+\label{sec:maps}
+% ----- P26 audited revision (Section 6) -----
+
+이 절에서는 항상 같은 고정 \(\FVI\)와 같은 공유 속성 시그니처 \(\Sprop\) 위의 모형을 비교한다.
+따라서 상속 운반체는 고정되어 있고 그 비교 사상은 항등사상이다.
+
+% ---------Section 6.1. 순방향 속성 사상----------
+\subsection{순방향 속성 사상}
+
+\begin{definition}[순방향 속성 사상]
+\label{def:forward-map}
+순방향 속성 사상
+\[
+\Phi:A\longrightarrow B
+\]
+는 \(A\)에서 사용 가능한 모든 보조 종류에 대한 사상
+\[
+\phi_s:X_A(s)\longrightarrow X_B(s)
+\]
+과 상속 종류에 대한 항등사상으로 이루어지며, 다음 조건을 만족한다.
+\begin{enumerate}[label=(F\arabic*)]
+\item \(A\)에서 사용 가능한 모든 보조 종류는 \(B\)에서도 사용 가능하다.
+\item \(\Pi_A\subseteq\Pi_B\).
+\item \(A\)에서 선언되고 프로파일을 이용할 수 있는 모든 \(\varpi\in\Pi_A\)에 대하여 그 프로파일이 유도하는 곱사상
+\[
+\phi_{\varpi}:X_{A,\varpi}\longrightarrow X_{B,\varpi}
+\]
+은
+\[
+\phi_{\varpi}(\Ap_{A,\varpi})\subseteq\Ap_{B,\varpi}
+\]
+를 만족한다.
+\item 그러한 모든 \(\varpi\)와 각각의 \(d\in\delta_L(\varpi)\)에 대하여
+\[
+\phi_{\varpi}(\Sat_{A,\varpi,d})\subseteq\Sat_{B,\varpi,d}.
+\]
+\item 그러한 모든 \(\varpi\)에 대하여 \(x\in D_{A,\varpi}\)이면 \(\phi_{\varpi}(x)\in D_{B,\varpi}\)이고
+\[
+\Xi_{B,\varpi}(\phi_{\varpi}(x))=\Xi_{A,\varpi}(x).
+\]
+\end{enumerate}
+(F4)--(F5)에서 ``그러한 \(\varpi\)''는 (F3)의 출발 모형에서 선언되고 프로파일을 이용할 수 있는 속성 종류를 가리킨다.
+(F1)은 그러한 출발 프로파일이 목표 모형에서도 이용 가능함을 보장한다.
+출발 프로파일을 이용할 수 없는 선언 종류에는 곱사상 조건을 부과하지 않는다.
+\end{definition}
+
+순방향 사상은 성공적으로 정의된 속성 자료를 보존하지만 적용 가능성, 선행조건 충족 또는 정의됨을 반영할 필요는 없다.
+
+\begin{proposition}[속성 모형의 범주]
+항등사상은 순방향 속성 사상이고, 순방향 속성 사상의 성분별 합성도 순방향 속성 사상이다.
+따라서 고정 \((\FVI,\Sprop)\) 위의 완전 속성 모형과 그 순방향 속성 사상은 큰 범주일 수 있는 범주를 이룬다.
+\end{proposition}
+
+\begin{proof}
+항등사상은 출발 모형에서 선언되고 프로파일을 이용할 수 있는 속성 종류에 대해 (F1)--(F5)를 만족한다.
+이용할 수 없는 출발 프로파일에는 곱사상 조건이 없다.
+합성의 경우 가용성과 선언의 포함관계는 합성된다.
+(F1)--(F2)에 따라 처음 출발 모형에서 선언되고 프로파일을 이용할 수 있는 종류는 중간 목표에서도 선언되고 이용 가능하므로 곱사상은 좌표별로 합성된다.
+적용 가능 집합과 선행조건 충족 집합의 상은 집합 포함의 추이성에 의해 여전히 포함된다.
+값 보존은 안쪽 사상에 먼저 (F5)를 적용하고 이어 바깥 사상에 적용하면 얻어진다.
+\end{proof}
+
+% ---------Section 6.2. 속성 매장과 부분모형----------
+\subsection{속성 매장과 부분모형}
+
+\begin{definition}[속성 매장]
+순방향 속성 사상 \(\Phi:A\to B\)가 모든 보조 운반체 사상에서 단사이고, \(A\)에서 선언되고 프로파일을 이용할 수 있는 모든 \(\varpi\in\Pi_A\)의 각 출발 입력 \(x\in X_{A,\varpi}\)에 대하여
+\[
+\begin{aligned}
+x\in\Ap_{A,\varpi}
+&\Longleftrightarrow
+\phi_{\varpi}(x)\in\Ap_{B,\varpi},\\
+x\in\Sat_{A,\varpi,d}
+&\Longleftrightarrow
+\phi_{\varpi}(x)\in\Sat_{B,\varpi,d},\\
+x\in D_{A,\varpi}
+&\Longleftrightarrow
+\phi_{\varpi}(x)\in D_{B,\varpi},
+\end{aligned}
+\]
+를 만족하며 할당 정의역에서 (F5)의 값 보존 등식이 성립하면 \(\Phi\)를 \emph{속성 매장}이라 한다.
+\end{definition}
+
+\begin{proposition}[넓은 매장 부분범주]
+속성 매장은 항등사상과 합성에 대해 닫혀 있으므로 순방향 사상 범주의 넓은 부분범주를 이룬다.
+\end{proposition}
+
+\begin{proof}
+단사 사상의 합성은 단사이고, 각 반영 멤버십 동치는 대입에 의해 합성된다.
+항등사상은 모든 멤버십 관계를 자명하게 반영한다.
+\end{proof}
+
+\begin{definition}[포함 부분모형]
+모든 \(A\)의 보조 운반체가 대응하는 \(B\)의 운반체의 문자 그대로의 부분집합이고, 모든 출발 선언이 목표의 선언이며, 포함사상들이 속성 매장을 이룰 때
+\[
+A\preccurlyeq B
+\]
+라고 쓴다.
+\end{definition}
+
+\begin{theorem}[속성 부분모형 준순서]
+관계 \(\preccurlyeq\)는 반사적이고 추이적이다.
+\end{theorem}
+
+\begin{proof}
+반사성은 항등 포함사상으로 얻어진다.
+\(A\preccurlyeq B\)이고 \(B\preccurlyeq C\)이면 운반체 포함과 선언 포함은 추이적이며, \(A\to C\)의 포함 매장은 \(A\to B\)와 \(B\to C\) 포함 매장의 합성이다.
+\end{proof}
+
+% ---------Section 6.3. 엄격한 속성 동형사상----------
+\subsection{엄격한 속성 동형사상}
+
+\begin{definition}[엄격한 핵심 속성 동형사상]
+\label{def:strict-iso}
+속성 매장 \(\Phi:A\to B\)가 다음을 만족하면 \emph{엄격한 단계 VI 고정·시그니처 고정 속성 동형사상}이라 한다.
+\begin{enumerate}[label=(S\arabic*)]
+\item 모든 보조 운반체 사상은 전단사이다.
+\item 사용 가능한 보조 종류 집합이 서로 같다.
+\item \(\Pi_A=\Pi_B\).
+\item 역운반체 사상 아래에서도 매장 조건이 양방향으로 성립한다.
+\end{enumerate}
+다음과 같이 쓴다.
+\[
+A\cong_{L,\mathrm{prop}} B.
+\]
+엄격한 속성 동치란 이러한 동형사상이 존재함을 뜻한다.
+\end{definition}
+
+\begin{theorem}[엄격한 속성 동치는 동치관계이다]
+\label{thm:strict-equivalence}
+엄격한 단계 VI 고정·시그니처 고정 속성 동형사상은 반사적, 대칭적, 추이적이다.
+동등하게, 엄격한 속성 동형사상은 (S1)--(S3), 즉 이용 가능한 보조 운반체 사상의 전단사성, 보조 종류 가용성 집합의 일치 및 선언된 속성 종류 집합의 일치를 만족하는 속성 매장과 정확히 일치하며, 이때 (S4)가 따라온다.
+\end{theorem}
+
+\begin{proof}
+항등 매장은 성분별 전단사이고 보조 종류 가용성 및 선언 집합이 일치하므로 엄격하다.
+(S1)--(S3)을 만족하는 매장 \(\Phi:A\to B\)를 취하자.
+(S1)--(S2)에 따라 이용 가능한 보조 운반체의 전단사에는 역함수가 있고 양쪽의 이용 가능 종류 집합이 같다. 상속 운반체 사상은 항등사상이다.
+(S3)에 의해 선언 종류 집합이 일치하고, 가용 종류 집합이 같으므로 프로파일 이용 가능성도 일치한다.
+따라서 양쪽에서 선언되고 프로파일을 이용할 수 있는 각 종류의 유도 곱사상은 전단사이다.
+적용 가능성, 각 선행조건 충족 집합 및 할당 정의역에 대한 매장의 쌍조건은 역곱사상에 대입해도 성립하고, (F5)의 값 보존 등식도 반영된 할당 정의역에서 대입으로 역방향 보존된다.
+프로파일을 이용할 수 없는 종류에 대해서는 어느 방향에서도 곱사상 조건을 요구하지 않는다.
+그러므로 역사상족 역시 매장이 되어 (S4)가 성립한다.
+항등·역·합성은 이 조건들을 보존하므로 엄격한 속성 동형은 반사적·대칭적·추이적이다.
+\end{proof}
+
+\begin{proposition}[엄격한 동형사상은 완성을 보존한다]
+엄격한 핵심 속성 동형사상은 할당 정의역, 의존성 충족 영역, 정의~\ref{def:status}의 모든 상태 및 완전한 정의 속성 기록 집합 \(\PropRec_A\)를 보존한다.
+\end{proposition}
+
+\begin{proof}
+정의역은 매장 정의에 의해 반영되고, 의존성 충족 영역은 반영되는 선행조건 충족 집합의 유한 교집합이다. 각 상태 경우는 선언, 프로파일 가용성, 적용 가능성, 의존성 충족, 정의역 및 값에 의해 정해진다.
+따라서 기록 집합은
+\[
+(\varpi,x,z)\longmapsto(\varpi,\phi_{\varpi}(x),z)
+\]
+에 의해 전단사적으로 운반된다.
+\end{proof}
+
+% ---------Section 6.4. 표현 포함 엄격한 동치----------
+\subsection{표현 포함 엄격한 동치}
+
+\begin{definition}[표현 보존 승격]
+\(A\)와 \(B\)가 같은 공유 표현 시그니처 위의 패키지를 가진다고 하자.
+엄격한 핵심 동형사상 \(\Phi:A\to B\)가 \(J_A=J_B\)를 만족하고, 모든 \(j\in J_A\)에 대해 기록 튜플 위의 유도 사상이 \(Y_{A,j}\)를 \(Y_{B,j}\)로 전단사적으로 보내며
+\[
+\Enc_{B,j}(\Phi^{(n_j)}(y))=\Enc_{A,j}(y)
+\qquad
+(y\in Y_{A,j})
+\]
+를 만족하면 표현 보존적으로 승격된다고 한다.
+\end{definition}
+
+\begin{theorem}[표현 포함 엄격한 동치]
+표현 보존 엄격한 속성 동형사상은 고정된 핵심 및 표현 시그니처 위의 표현된 속성 모형에서 동치관계를 이룬다.
+\end{theorem}
+
+\begin{proof}
+항등, 역 및 합성 핵심 동형사상은 선택된 표현 정의역을 각각 항등, 역 및 합성으로 운반한다.
+부호화 등식도 같은 연산 아래에서 보존된다.
+\end{proof}
+
+\begin{remark}[추상 비교와 표현 비교]
+두 속성 모형은 추상 핵심 수준에서 엄격하게 동치이면서도 서로 다른 선택적 표현을 가질 수 있다.
+따라서 표현 포함 엄격한 동치는 의도적으로 핵심 엄격한 동치보다 더 세밀하다.
+\end{remark}
+
+% ---------Section 7. 단계별 비교와 첫 분기----------
+\section{단계별 비교와 첫 분기}
+\label{sec:branching}
+
+% ---------Section 7.1. 중첩 비교 집합----------
+\subsection{중첩 비교 집합}
+
+같은 \((\FVI,\Sprop)\) 위의 두 완전 속성 모형 \(A\)와 \(B\)를 고정한다.
+
+\begin{definition}[단계 비교 집합]
+\(k=1,\ldots,5\)에 대하여 \(I_k(A,B)\)를 속성 단계 \(\mathcal P^{\le k}\)까지 보이는 엄격 비교 조건을 만족하는 모든 운반체 전단사족의 집합으로 둔다.
+따라서:
+\begin{itemize}
+\item \(I_1\)은 보조 운반체 가용성과 기수 구조를 비교한다.
+\item \(I_2\)는 여기에 선언 보존을 추가한다.
+\item \(I_3\)는 적용 가능성과 모든 선행조건 충족 집합의 보존·반영을 추가한다.
+\item \(I_4\)는 할당 정의역과 값의 보존·반영을 추가한다.
+\item \(I_5\)는 명시적으로 완성된 모든 좌표의 보존을 추가한다.
+\end{itemize}
+\end{definition}
+
+\begin{proposition}[중첩성]
+\[
+I_5(A,B)\subseteq I_4(A,B)\subseteq I_3(A,B)\subseteq I_2(A,B)\subseteq I_1(A,B).
+\]
+또한
+\[
+I_4(A,B)=I_5(A,B).
+\]
+\end{proposition}
+
+\begin{proof}
+각 후속 단계는 모든 이전 좌표를 유지하므로 중첩성이 성립한다.
+정리~\ref{thm:completion-inverse}에 따라 모든 단계 5 좌표는 단계 4와 그 이전의 원시 자료의 함수이다.
+따라서 단계 4의 원시 자료를 보존하는 비교는 완성된 정의역, 의존성 교집합, 상태 및 속성 기록 집합도 자동으로 보존한다.
+그러므로 단계 5에서는 새로운 비교 조건이 추가되지 않는다.
+\end{proof}
+
+\begin{corollary}[마지막 원시 단계에서의 엄격 비교]
+\[
+A\cong_{L,\mathrm{prop}}B
+\Longleftrightarrow
+I_4(A,B)\neq\varnothing
+\Longleftrightarrow
+I_5(A,B)\neq\varnothing.
+\]
+\end{corollary}
+
+% ---------Section 7.2. 첫 분기 지수----------
+\subsection{첫 분기 지수}
+
+\begin{definition}[첫 분기 지수]
+\(A\)와 \(B\)가 엄격하게 속성 동형이 아니면
+\[
+b_{\mathrm{prop}}(A,B):=
+\min\{k\in\{1,2,3,4\}:I_k(A,B)=\varnothing\}
+\]
+로 정의한다.
+이는 그 단계까지 보이는 모든 좌표와 양립하는 완전 운반체 전단사족이 더 이상 남지 않는 가장 이른 속성 단계이다.
+\end{definition}
+
+\begin{theorem}[분기의 대칭성과 불변성]
+\label{thm:branching-invariance}
+엄격하게 동형이 아닌 \(A,B\)에 대하여
+\[
+b_{\mathrm{prop}}(A,B)=b_{\mathrm{prop}}(B,A).
+\]
+또 \(A\cong A'\), \(B\cong B'\)이면
+\[
+b_{\mathrm{prop}}(A,B)=b_{\mathrm{prop}}(A',B').
+\]
+명시적 완성 단계 5는 독립적인 첫 분기가 될 수 없다.
+\end{theorem}
+
+\begin{proof}
+\(I_k(A,B)\)의 각 비교 튜플은 운반체 전단사들로 이루어져 있고 \(I_k(B,A)\) 안에 역튜플을 가지므로 비공허성은 단계별로 대칭이다.
+엄격한 동형사상은 비교 튜플을 사전·사후 합성으로 운반하므로 단계별 비공허성을 보존한다.
+마지막으로 앞의 명제에 의해 \(I_4=I_5\)이므로 단계 5는 비교 집합이 처음 공집합이 되는 단계일 수 없다.
+\end{proof}
+
+\begin{remark}[하나의 실패한 사상만으로 첫 분기가 증명되지는 않는다]
+분기 지수는 선택된 하나의 후보 전단사의 실패가 아니라 전체 비교 집합 \(I_k(A,B)\)의 공허성으로 정의된다.
+이 구분은 임의로 고른 좌표 사상의 실패를 양립 가능한 사상이 전혀 없다는 증명으로 오인하는 것을 막는다.
+\end{remark}
+
+% ---------Section 8. 모형 존재와 유한 실현----------
+\section{모형 존재와 유한 실현}
+\label{sec:finite}
+
+% ---------Section 8.1. 자명 모형과 한 입력 모형----------
+\subsection{자명 모형과 한 입력 모형}
+
+\begin{theorem}[모든 단계 VI 형성 기록 위의 자명 확장]
+\label{thm:trivial-extension}
+모든 고정 \(\FVI\)와 공유 속성 시그니처는 완전 속성 모형을 허용한다.
+\end{theorem}
+
+\begin{proof}
+보조 운반체를 공급하지 않고 속성 종류도 선언하지 않는다.
+\[
+\Dom(X_A^{\mathrm{aux}})=\varnothing,
+\qquad
+\Pi_A=\varnothing.
+\]
+활성화된 적용 가능성, 의존성 또는 할당 좌표가 없으므로 두 원시 공리는 공허하게 성립한다.
+폐쇄 조항 C1이 유일한 완전 완성을 준다.
+\end{proof}
+
+\begin{construction}[한 입력 비자명 속성 모형]
+공유 시그니처에 보조 종류 \(u\)와 프로파일 \((u)\)인 속성 종류 \(\varpi\), 그리고 값 \(z\in Z_{L,\varpi}\)가 있다고 하자.
+다음과 같이 공급한다.
+\[
+X_A(u)=\{x\},
+\qquad
+\Pi_A=\{\varpi\},
+\qquad
+\Ap_{A,\varpi}=\{x\}.
+\]
+모든 \(d\in\delta_L(\varpi)\)에 대하여
+\[
+\Sat_{A,\varpi,d}=\{x\}
+\]
+로 두고
+\[
+\Xi_{A,\varpi}(x)=z
+\]
+로 정의한다.
+두 원시 공리가 성립하며 완성 후 하나의 정의된 속성 기록을 갖는 비자명 완전 속성 모형을 얻는다.
+\end{construction}
+
+% ---------Section 8.2. 표준 유한 실현----------
+\subsection{표준 유한 실현}
+
+\begin{definition}[유한 원시 속성 자료]
+공급된 보조 운반체, 선언된 속성 집합, 각 적용 가능 집합, 각 선행조건 충족 집합 및 각 할당 정의역이 유한이면 원시 제시를 \emph{속성 유한}이라 한다.
+외부 값 운반체 자체는 유한일 필요가 없다.
+\end{definition}
+
+\begin{theorem}[표준 유한 실현]
+\label{thm:finite-realization}
+고정된 단계 VI 형성 기록과 공유 시그니처 위에서 유한 보조 운반체, 유한 선언 속성족, 유한 적용 가능 집합과 선행조건 충족 집합, 유한 부분 할당 사상이 주어졌다고 하자.
+프로파일을 사용할 수 있는 모든 선언 종류에 대하여
+\[
+\Dom(\Xi_{A,\varpi})
+\subseteq
+\Ap_{A,\varpi}\cap\DepSat_{A,\varpi}
+\]
+가 성립하면, 공급된 원시 자료는 유일한 속성 유한 완전 모형을 정한다.
+\end{theorem}
+
+\begin{proof}
+표시된 포함관계는 정확히 원시 공리 I과 II의 결합이다.
+따라서 공급된 자료는 원시 속성 핵심을 이룬다.
+그 뒤 폐쇄 조항 C1은 정리~\ref{thm:completion-inverse}에 따라 하나뿐인 완전 완성을 준다.
+유도 정의역, 공급된 유한 입력 조각 위의 상태표 및 정의된 기록 집합의 유한성은 원시 자료의 유한성에서 따라온다.
+\end{proof}
+
+% ---------Section 8.3. 유한 명세 첫 분기 증인----------
+\subsection{유한 명세 첫 분기 증인}
+
+\begin{construction}[단계 2 선언 분기]
+두 모형이 같은 한 점 보조 운반체 \(X(u)=\{x\}\)를 공유한다고 하자.
+\(A\)는 \(\varpi\)를 선언하고 \(B\)는 \(\varpi\)를 선언하지 않는다.
+그러면 \(I_1(A,B)\neq\varnothing\)이지만 \(I_2(A,B)=\varnothing\)이므로
+\[
+b_{\mathrm{prop}}(A,B)=2.
+\]
+\end{construction}
+
+\begin{construction}[단계 3 적용 가능성 분기]
+\(X(u)=\{a,b\}\)로 두고, 선행조건이 없고 할당이 비어 있는 단항 속성 종류 \(\varpi_1,\varpi_2\)를 선언한다.
+\(A\)에서는
+\[
+\Ap_{A,\varpi_1}=\{a\},
+\qquad
+\Ap_{A,\varpi_2}=\{a\}
+\]
+로 두고, \(B\)에서는
+\[\Ap_{B,\varpi_1}=\{a\},
+\qquad
+\Ap_{B,\varpi_2}=\{b\}
+\]
+로 둔다.
+첫 번째 적용 가능 집합은 모든 단계 3 비교 전단사가 \(a\)를 고정하도록 강제하지만, 두 번째 적용 가능 집합은 같은 사상이 \(a\)를 \(b\)로 보내야 한다고 요구한다.
+따라서 \(I_2(A,B)\neq\varnothing\)이지만 \(I_3(A,B)=\varnothing\)이고
+\[
+b_{\mathrm{prop}}(A,B)=3.
+\]
+\end{construction}
+
+\begin{construction}[단계 4 할당 분기]
+\(X(u)=\{a,b\}\)로 두고, 값 운반체 \(\{0,1\}\), 선행조건 없음, 전체 적용 가능성을 갖는 두 개의 0 보유 단항 속성 종류 \(\varpi_1,\varpi_2\)를 선언한다.
+\(A\)에서는
+\[
+\begin{aligned}
+\Xi_{A,\varpi_1}(a)&=0,&\Xi_{A,\varpi_1}(b)&=1,\\
+\Xi_{A,\varpi_2}(a)&=0,&\Xi_{A,\varpi_2}(b)&=1
+\end{aligned}
+\]
+로 정의하고, \(B\)에서는
+\[
+\begin{aligned}
+\Xi_{B,\varpi_1}(a)&=0,&\Xi_{B,\varpi_1}(b)&=1,\\
+\Xi_{B,\varpi_2}(a)&=1,&\Xi_{B,\varpi_2}(b)&=0
+\end{aligned}
+\]
+로 정의한다.
+모든 단계 3 자료는 일치한다.
+\(\varpi_1\)의 보존은 비교 사상이 \(a\)와 \(b\)를 각각 고정하도록 강제하지만, 그러면 \(\varpi_2\)는 보존되지 않는다.
+따라서
+\[
+I_3(A,B)\neq\varnothing,
+\qquad
+I_4(A,B)=\varnothing,
+\]
+이고
+\[
+b_{\mathrm{prop}}(A,B)=4.
+\]
+\end{construction}
+
+\begin{corollary}[독립적인 단계 5 증인은 없다]
+다음을 만족하는 완전 속성 모형쌍은 존재하지 않는다.
+\[
+I_4(A,B)\neq\varnothing
+\quad\text{and}\quad
+I_5(A,B)=\varnothing.
+\]
+\end{corollary}
+
+% ---------Section 9. 압축 및 분류 장애----------
+\section{압축 및 분류 장애}
+\label{sec:compression}
+% ----- P26 audited revision (Section 9) -----
+
+% ---------Section 9.1. 유한 요약 충돌----------
+\subsection{유한 요약 충돌}
+
+\begin{definition}[단순 유한 속성 요약]
+유한한 0 보유 속성 모형에 대하여 요약
+\[
+\mathfrak S(A):=
+\left(
+|\Pi_A|,
+\left\{
+\bigl(|D_{A,\varpi}|,N^0_{A,\varpi},N^{\neq0}_{A,\varpi}\bigr)
+:\varpi\in\Pi_A
+\right\}
+\right)
+\]
+을 정의한다.
+여기서 \(N^0_{A,\varpi}\)와 \(N^{\neq0}_{A,\varpi}\)는 각각 \(\varpi\)에서 정의된 0 입력과 정의된 비영 입력의 수이다.
+속성 표지는 각 삼중항과 연결된 채 유지하며, 입력 위치 사이의 속성 간 상관관계만 잊는다.
+\end{definition}
+
+\begin{theorem}[요약 동일성은 엄격한 속성 구조를 분류하지 못한다]
+\label{thm:compression}
+다음을 만족하는 속성 유한 모형 \(A,B\)가 존재한다.
+\[
+\mathfrak S(A)=\mathfrak S(B)
+\]
+이지만
+\[
+A\not\cong_{L,\mathrm{prop}}B.
+\]
+\end{theorem}
+
+\begin{proof}
+위의 단계 4 할당 분기 모형을 사용한다.
+두 모형은 각각 두 속성을 선언하며, 각 속성의 정의역 크기는 2이고 정의된 0 하나와 정의된 비영값 하나를 갖는다.
+따라서 속성별 요약은 서로 같다.
+그럼에도 \(\varpi_1\) 보존은 두 입력점을 고정하지만 그 경우 \(\varpi_2\)가 일치하지 않으므로 엄격한 속성 동형사상은 존재하지 않는다.
+\end{proof}
+
+\begin{remark}[요약이 잃는 것]
+이 장애는 수치값 자체만 때문에 생기는 것이 아니다.
+요약은 서로 다른 속성 종류의 값 패턴이 같은 유형화 입력 위에서 어떻게 상관되는지를 잊는다.
+별도의 복원 정리가 선택한 모형 클래스에서 단사성을 증명하지 않는 한 더 복잡한 스칼라, 벡터, 행렬 크기, 랭크 또는 계수 요약도 같은 이유로 실패할 수 있다.
+\end{remark}
+
+% ---------Section 9.2. 후속 집계와의 관계----------
+\subsection{후속 집계와의 관계}
+
+정의된 기록
+\[
+(\varpi,x,z)\in\PropRec_A
+\]
+은 이미 유형화되어 있으며 단항, 이항, 고차 또는 혼합 입력 프로파일을 가질 수 있다.
+따라서 후속 집계 논문은 선택된 유한 집합 \(\mathcal G_A\subseteq\PropRec_A\) 또는 그러한 기록의 유한 튜플 위에 명시적 다리
+\[
+\Theta_A:\mathcal G_A\longrightarrow U
+\]
+를 공급하고, 선택한 해석적 운반체에서 그 다리의 출력을 집계할 수 있다.
+현재 속성 체계는 다중 입력 속성 기록을 단항 형성 채널 항으로 바꾸도록 강제하지 않는다.
+따라서 별도로 선택한 집계 출력의 동일성만으로는 일반적으로 엄격한 속성 동치를 복원할 수 없으며, 더 강한 결론에는 원천 구조를 고려한 복원 또는 단사성 가정이 필요하다.
+서로 독립적으로 임의 선택한 외부 다리에 대해서는 반대 방향의 무조건적 함의를 주장하지 않는다.
+
+% ---------Section 10. 실현축 특수화 및 후속 DSD 층과의 관계----------
+\section{실현축 특수화 및 후속 DSD 층과의 관계}
+\label{sec:specialization}
+
+% ---------Section 10.1. 이전 실현축 속성 체계의 지위----------
+\subsection{이전 실현축 속성 체계의 지위}
+
+이전의 실현축 속성 체계 \cite{KwonAxisProperty}는 추가 기하 가설을 채택하는 경우 유효한 특수화로 남는다.
+그 체계의 축 선택, 1차원 선 실현, 태그된 축 기록, 선 불변성, 실현축 생성공간과 랭크, 대칭 쌍선형 형식, 직교성, 법선 및 순환 삼항 폐쇄는 현재 핵심의 보편 좌표로 유지하지 않는다.
+대신 현재 속성공리계 위의 보조 종류 및 선행조건 확장으로 표현할 수 있다.
+
+예를 들어 축 특수화는 다음과 같은 보조 표지를 도입할 수 있다.
+\[
+\mathrm{axis\mbox{-}candidate},\quad
+\mathrm{realized\mbox{-}line},\quad
+\mathrm{subspace},\quad
+\mathrm{normal}.
+\]
+그에 대응하는 운반체를 공급하고 이러한 종류를 프로파일에서 사용하는 속성 종류를 선언할 수 있다.
+이때 쌍선형 선행조건은 \(d\in\Dep\)인 하나의 의존성 종류 사례가 되며, \(\Sat_{A,\varpi,d}\)를 판정하는 기하는 해당 특수화에 속한다.
+이전 축 실현 총성 공리는 일반 속성 핵심의 일부가 아니라 축 실현 모듈의 공리 또는 구성 규칙으로 남는다.
+
+% ---------Section 10.2. 정적 집계----------
+\subsection{정적 집계}
+
+채널 색인 정적 집계 층은 Bochner 적분이나 유한합 구성을 변경하지 않고 명시적 유형화 다리를 통해 \(\PropRec_A\)를 상속할 수 있다.
+주요 인터페이스 변화는 용어와 구조에 있다. 후속 논증은 모든 속성 모형에 실현축이 있다고 가정하지 말고 일반 속성 모형을 참조해야 한다.
+축 정보를 사용하는 채널 다리는 축 특수화가 별도로 공급된 경우에만 사용할 수 있다.
+
+% ---------Section 10.3. 구조 재구성 동역학----------
+\subsection{구조 재구성 동역학}
+
+후속 동역학 층은 선언된 상태 구간 동안 상속 형성 기록을 고정한 채 일반 속성값, 적용 가능 영역 또는 그 밖의 선언 상태 좌표를 변화시킬 수 있다.
+형성 채널 동일성을 바꾸는 변화는 일반 속성값의 변화가 아니라 형성 층의 전이로 남는다.
+축선 운동, 축 랭크 변화, 법선 변화 또는 그 밖의 축 기하 전이는 일반 속성 핵심이 아니라 실현축 특수화에 속한다.
+
+% ---------Section 11. 주 속성 폐쇄 정리----------
+\section{주 속성 폐쇄 정리}
+\label{sec:main-theorem}
+% ----- P26 audited revision (Section 11) -----
+
+\begin{theorem}[정적 유형화 속성 폐쇄 정리]
+\label{thm:main}
+단계 VI DSD 형성 기록 \(\FVI\)와 공유 속성 시그니처 \(\Sprop\)를 고정하자.
+그러면 이 논문에서 정의한 속성공리계는 다음 성질을 갖는다.
+\begin{enumerate}[label=(\arabic*)]
+\item 속성 종류는 축 또는 1차원 운반체를 요구하지 않고 상속 종류와 보조 종류 위의 유한 유형화 프로파일을 갖는다.
+\item 원시 공리 I은 정의된 할당이 원시 적용 가능 영역 안에 있을 것을 요구하고, 원시 공리 II는 정의된 할당이 선언된 모든 문맥적 선행조건을 만족할 것을 요구한다.
+\item 두 원시 공리는 공유 유형화 배경에 상대적으로 서로 도출되지 않으며 단순한 유형화의 귀결도 아니다.
+\item 적용 가능하지만 미정의, 적용 불가, 선행조건 미충족, 정의된 0, 정의된 비영값 또는 그 밖의 정의된 상태는 서로 구별된다.
+\item 모든 원시 속성 핵심은 유일한 명시적 완성을 가지며, 원시 환원과 완성은 각각의 모형 클래스에서 서로 역연산이다.
+\item 순방향 속성 사상은 큰 범주일 수 있는 범주를 이룬다. 속성 매장은 넓은 부분범주를 이루며 부분모형 준순서를 유도한다.
+\item 엄격한 단계 VI 고정·시그니처 고정 속성 동형사상은 전단사 운반체·가용성 집합 일치·선언 집합 일치의 (S1)--(S3)을 만족하는 속성 매장과 정확히 일치하며 역매장 조건 (S4)가 따라오고 동치관계를 이룬다.
+\item 고정된 선택적 표현 시그니처 아래에서 표현 보존 엄격한 속성 동형사상도 동치관계를 이루며 추상 핵심 동치보다 더 세밀하다.
+\item 중첩된 단계 비교 집합은 엄격하게 동형이 아닌 모든 쌍에 대해 대칭이고 엄격한 동형사상에 불변인 첫 분기 지수를 정의하며, 명시적 완성 단계는 독립적인 첫 분기를 만들 수 없다.
+\item 모든 단계 VI 형성 기록은 자명 속성 확장을 허용하고, 모든 유한한 양립 가능 원시 제시는 유일한 표준 속성 유한 실현을 갖는다.
+\item 유한 모형은 선언, 적용 가능성/의존성 및 할당 단계에서 첫 분기를 실현한다.
+\item 단순 속성별 요약 계수의 동일성은 엄격한 속성 동치를 함의하지 않는다.
+\item 이 이론은 고정된 단계 VI 형성 기록을 통해 인수분해되며 형성 할당, 작동 채널 동일성 또는 단계 VI 이후의 항과 합성 좌표를 변경하지 않는다.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+항목 (1)--(2)는 정의~\ref{def:signature}, \ref{def:premodel} 및 원시 공리 I--II에서 따른다.
+항목 (3)은 정리~\ref{thm:independence}와 그 유형화 따름결과이다.
+항목 (4)는 정의~\ref{def:status}와 절~\ref{sec:independence}의 역방향 비함의 명제에서 따른다.
+항목 (5)는 정리~\ref{thm:completion-inverse}이다.
+항목 (6)--(8)은 절~\ref{sec:maps}의 사상, 매장, 부분모형 및 동치 결과이다.
+항목 (9)는 정리~\ref{thm:branching-invariance}이다.
+항목 (10)은 정리~\ref{thm:trivial-extension}과 \ref{thm:finite-realization}에서 따른다.
+항목 (11)은 절~\ref{sec:finite}의 유한 구성으로 주어진다.
+항목 (12)는 정리~\ref{thm:compression}이다.
+항목 (13)은 절~\ref{sec:formal-setting}의 고정 기반 관례와 모든 속성 좌표가 \(\FVI\) 위의 확장 층 자료라는 사실에서 따른다.
+\end{proof}
+
+% ---------Section 12. 논의와 범위----------
+\section{논의와 범위}
+\label{sec:discussion}
+
+% ---------Section 12.1. 이 체계가 확립하는 것----------
+\subsection{이 체계가 확립하는 것}
+
+이 체계는 단계 VI 형성과 이후의 집계, 동역학 또는 물리적 특수화 사이에 정적 유형화 층을 확립한다.
+핵심 구분은 어떤 속성값이 사용되기 전에 필요한 형식 상태들 사이의 구분이다. 즉 선언, 유형화 프로파일 가용성, 적용 가능성, 문맥적 선행조건 충족 및 실제 부분 할당을 구분한다.
+이러한 층별 분리는 선호 기하를 가정하지 않고도 완전 상태 민감 기술자, 구조 보존 비교, 유한 실현 및 정보 손실 결과를 지지하기에 충분하다.
+
+두 원시 공리는 의도적으로 최소화되어 있다.
+이들은 속성함수의 총성을 강제하지 않고 모든 선언 속성이 모든 곳에 적용된다고 주장하지도 않는다.
+다만 구조적으로 건전하지 않은 두 상황, 즉 적용 불가로 선언된 입력에 값을 정의하는 경우와 그 속성에 필요하다고 선언한 선행조건이 충족되지 않았는데도 값을 정의하는 경우만 배제한다.
+핵심의 나머지는 유형화, 공급된 원시 자료 또는 명시적 완성이다.
+
+% ---------Section 12.2. 범위 경계----------
+\subsection{범위 경계}
+
+핵심은 고정된 단계 VI 형성 배경 위에서 속성 선언, 유형화 입력, 적용 가능성, 문맥적 선행조건 및 부분 할당을 정한다.
+응용별 의미, 정칙성 조건, 동역학 법칙 및 표현 선택은 필요한 경우 명시적으로 공급된 확장을 통해 들어온다.
+보조 종류는 명시적 형성 인터페이스가 형성 층의 역할을 부여하기 전까지 속성 층의 입력으로 남는다.
+
+현재 형식체계는 ZFC에서 해석되는 유형화 집합론적 스키마이다.
+공유 시그니처는 하나의 비교 계열에서 사용하는 어휘를 고정하며, 추가 종류·선행조건·규칙은 특수화가 명시적으로 확장할 수 있다.
+
+% ---------Section 13. 결론----------
+\section{결론}
+\label{sec:conclusion}
+
+DSD 형성공리계는 구조 물질이 허용된 배치, 할당, 역할 및 작동 채널의 수준에 도달하는 조건을 정한다.
+여기서 전개한 속성공리계는 그 고정된 단계 VI 결과에서 시작하여 실현축이나 다른 1차원 기하를 가정하지 않은 일반적·비동역학적·집계 이전 속성 층을 추가한다.
+
+그 결과 사슬은 다음과 같다.
+\[
+\begin{gathered}
+\text{단계 VI 형성}
+\longrightarrow
+\text{유형화 속성 선언}
+\longrightarrow
+\text{적용 가능성과 선행조건}\\
+\longrightarrow
+\text{부분 속성 할당}
+\longrightarrow
+\text{명시적 완성}.
+\end{gathered}
+\]
+두 독립 원시 공리가 이 사슬을 제한한다. 정의된 값은 적용 가능한 입력에서만 나타나야 하고 선언된 모든 문맥적 선행조건이 충족된 곳에서만 나타나야 한다.
+그 뒤 명시적 완성은 정의역, 의존성 충족 영역, 상태 및 정의된 속성 기록을 유일하게 정한다.
+순방향 사상, 매장, 부분모형, 엄격한 동치 및 첫 분기는 이에 대응하는 비교 이론을 제공하며, 유한 구성과 압축 장애는 이 틀이 공허하지 않고 축약 요약이 완전한 유형화 속성 구조를 반드시 복원하지는 못함을 보인다.
+
+이전 실현축 속성 체계는 폐기하지 않고 특수화로 보존한다.
+그 체계의 축선, 쌍선형 자료, 법선, 랭크 및 폐쇄 구성은 필요한 경우 보조 종류, 선행조건 및 특수화 전용 공리를 통해 도입할 수 있다.
+따라서 일반 속성공리계는 DSD 계층에서 형성과 후속 정적 집계 또는 동역학 사이에 위치하며, 기하학적 특수화는 실제로 사용되는 층에서 명시적으로 공급한다.
+
+% ---------Appendix A. 유형화와 표기----------
+\appendix
+\section{유형화와 표기}
+\label{app:notation}
+
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}X@{}}
+\toprule
+기호 & 의미\\
+\midrule
+\(\FVI\) & 고정된 단계 VI 채널 완성 DSD 형성 기록.\\
+\(\Sin\) & 운반체가 형성 기록에 의해 고정된 상속 입력 종류 표지.\\
+\(\Saux\) & 속성 확장이 운반체를 공급할 수 있는 보조 입력 종류 표지.\\
+\(X_A(s)\) & 속성 모형 \(A\)에서 입력 종류 \(s\)를 해석하는 운반체.\\
+\(\Pihat\) & 후보 속성 종류 우주.\\
+\(\Pi_A\) & 모형 \(A\)에서 선언된 속성 종류.\\
+\(\sigma_L(\varpi)\) & 속성 종류 \(\varpi\)의 유한 순서 유형화 입력 프로파일.\\
+\(X_{A,\varpi}\) & \(\varpi\)의 프로파일을 해석하는 곱운반체.\\
+\(Z_{L,\varpi}\) & 속성 종류 \(\varpi\)의 값 운반체.\\
+\(\PiZero\) & 0을 갖는 후보 속성 종류.\\
+\(\Dep\) & 문맥적 선행조건 종류 우주.\\
+\(\delta_L(\varpi)\) & \(\varpi\)에 선언된 유한 선행조건 집합.\\
+\(\Ap_{A,\varpi}\) & 원시 적용 가능 집합.\\
+\(\Sat_{A,\varpi,d}\) & 선행조건 \(d\)를 만족하는 입력의 원시 집합.\\
+\(\DepSat_{A,\varpi}\) & 모든 선행조건 충족 집합의 유도 교집합.\\
+\(\Xi_{A,\varpi}\) & 원시 부분 속성 할당.\\
+\(D_{A,\varpi}\) & 유도 할당 정의역 \(\Dom(\Xi_{A,\varpi})\).\\
+\(\PropRec_A\) & 정의된 유형화 속성 기록 집합.\\
+\(\Sigma_A^{\mathrm{prop}}\) & 완전 핵심 속성 기술자.\\
+\(\Phi\) & 순방향 속성 사상 또는 명시된 경우 속성 매장/동형사상.\\
+\(I_k(A,B)\) & 단계 \(k\) 엄격 비교 집합.\\
+\(b_{\mathrm{prop}}(A,B)\) & 엄격하게 동형이 아닌 쌍의 첫 분기 지수.\\
+\bottomrule
+\end{tabularx}
+
+% ---------Appendix B. 공리, 정의 및 의존성 지도----------
+\section{공리, 정의 및 의존성 지도}
+\label{app:dependency-map}
+
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.19\textwidth}X@{}}
+\toprule
+층 & 논리적 지위 & 주요 출력\\
+\midrule
+단계 VI 형성 배경 & 상속 & 배치, 할당, 역할, 채널 및 형성 출처.\\
+공유 속성 시그니처 & 고정 유형화 자료 & 후보 종류, 프로파일, 값 운반체, 0 보유 종류, 선행조건 종류.\\
+보조 운반체 공급 & 원시 제시 & 선택적 입력 종류에 대한 모형별 운반체.\\
+속성 선언 & 원시 제시 & 선언된 속성 종류 부분족.\\
+적용 가능성 & 원시 제시 & 선언 속성이 적용될 수 있는 입력.\\
+선행조건 충족 & 원시 제시 & 선언된 각 문맥적 선행조건을 만족하는 입력.\\
+원시 공리 I & 잔여 공리 & 정의된 할당은 적용 가능한 입력에서만 나타난다.\\
+원시 공리 II & 잔여 공리 & 정의된 할당은 모든 선행조건이 충족된 곳에서만 나타난다.\\
+부분 속성 할당 & 원시 제시 & 부분 정의역 위의 정의된 속성값.\\
+명시적 완성 & 정의적 폐쇄 & 정의역, 의존성 교집합, 상태, 정의된 기록.\\
+선택적 표현 & 후속 확장 & 선택된 속성 기록 튜플의 부호화.\\
+정적 집계 & 후속 층 & 축약된 스칼라, 벡터, 함수형 또는 그 밖의 집계 판독.\\
+동역학 및 특수화 & 후속 층 & 변화, 수송, 구성 규칙 또는 기하학적 실현.\\
+\bottomrule
+\end{tabularx}
+
+% ---------Appendix C. 유한 명세 재구성 절차----------
+\section{유한 명세 재구성 절차}
+\label{app:finite-protocol}
+
+유한하게 명세된 핵심 속성 증인은 다음 순서로 재구성한다.
+\begin{enumerate}
+\item 상속된 단계 VI 형성 기록과 공유 속성 시그니처를 고정한다.
+\item 증인이 사용하는 모든 보조 운반체를 공급한다.
+\item 증인이 사용하는 유한 속성 종류 부분족을 선언한다.
+\item 프로파일을 사용할 수 있는 각 선언 종류에 대해 유한 유형화 입력 곱을 형성한다.
+\item 적용 가능 집합과 모든 선행조건 충족 집합을 공급한다.
+\item 유한 부분 할당표를 공급한다.
+\item 모든 선언 종류에 대해
+\[
+\Dom(\Xi_{A,\varpi})
+\subseteq
+\Ap_{A,\varpi}\cap\DepSat_{A,\varpi}
+\]
+를 확인하여 원시 공리 I과 II를 검사한다.
+\item 폐쇄 조항 C1에 따라 할당 정의역, 의존성 충족 영역, 상태 및 정의된 속성 기록 집합을 계산한다.
+\item 완전 핵심 기술자를 조립한다.
+\item 표현 패키지를 사용한다면 핵심 기술자의 완성이 끝난 뒤에만 추가한다.
+\item 절~\ref{sec:maps}의 엄격 동형사상 조건 또는 절~\ref{sec:branching}의 단계별 비교 집합으로 유한 모형을 비교한다.
+\end{enumerate}
+
+% ---------선언----------
+\section*{선언}
+
+\noindent\textbf{연구비.} 이 연구는 외부 연구비를 지원받지 않았다.
+
+\noindent\textbf{이해상충.} 저자는 이해상충이 없음을 선언한다.
+
+\noindent\textbf{저자 기여.} 저자는 개념화, 형식 전개, 분석 및 원고 작성 전반을 담당하였다.
+
+\noindent\textbf{자료 및 코드 이용 가능성.} 외부 경험 데이터셋은 사용하지 않았다.
+일반 집합론적 결과에 필요한 모든 공리, 반모형, 모형 구성 및 유한 증인은 원고에 명시되어 있다.
+일반 속성공리계를 위한 별도의 재현성 저장소는 최종 공개본과 함께 제공될 예정이다.
+이전 실현축 재현성 저장소는 선행 특수화의 계산 동반 자료로 남는다.
+
+% ---------참고문헌----------
+\begin{thebibliography}{9}
+
+\bibitem{KwonFormation}
+K. Dominicus,
+\textit{Formation Axiom System: Dimensional-Structural Describability},
+Zenodo record, 2026.
+\url{https://doi.org/10.5281/zenodo.18466754}
+
+\bibitem{KwonAxisProperty}
+K. Dominicus,
+\textit{Axioms for the Property Structure of Realized Axes in Dimensional-Structural Describability: A Typed Property-Profile Extension of the Formation Axiom System},
+Zenodo record, 2026.
+\url{https://doi.org/10.5281/zenodo.21859261}
+
+\bibitem{TarskiLogic}
+A. Tarski,
+\textit{Introduction to Logic and to the Methodology of Deductive Sciences},
+4th ed., Dover Publications, Mineola, NY, 1994.
+
+\bibitem{JechSetTheory}
+T. Jech,
+\textit{Set Theory: The Third Millennium Edition, Revised and Expanded},
+Springer, Berlin, 2003.
+
+\bibitem{HodgesModelTheory}
+W. Hodges,
+\textit{Model Theory},
+Cambridge University Press, Cambridge, 1993.
+
+\bibitem{FarmerPartial}
+W. M. Farmer,
+``Reasoning about Partial Functions with the Aid of a Computer,''
+\textit{Erkenntnis}, vol. 43, no. 3, pp. 279--294, 1995.
+\url{https://doi.org/10.1007/BF01135375}
+
+\end{thebibliography}
+
+\end{document}
