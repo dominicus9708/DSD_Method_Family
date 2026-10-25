@@ -1,0 +1,298 @@
+{
+  "audit_id": "MF-REG-20261025-006",
+  "author": "Kwon Dominicus",
+  "original_historic": {
+    "precommit_ref": "00e4afd77d7f10855f6c4d62eacbeaa154c3a2ce",
+    "precommit_blob": "a59810b90b2b93a0e3b63ba7f23dc59178bef566",
+    "protocol_ref": "85b4263ad47cd10acd2230add542f381bd5d6a05",
+    "protocol_blob": "5ac926aa40594126b42dac99762ff33fe87450f1",
+    "result_blob": "7e5d071936d52655886a8a91141785cf7ed580f9",
+    "source_005_fixture_blob": "0ea761a96d01bec563a6bee08f246dca57246b61",
+    "precommit_006_commit": "00d1690792acc9ce6e5317014d88fe99b2f2a22a",
+    "source_archived_original_result_path": "evidence/method_specific/aggregation/AGG-CH-001_positive-constructed.md"
+  },
+  "source_files": {
+    "formation": {
+      "filename": "DSD_Formation_Axiom_System_EN.pdf",
+      "sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+      "pages": 34
+    },
+    "property": {
+      "filename": "DSD_Property_Axiom_System_EN(4).pdf",
+      "sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+      "pages": 23
+    },
+    "aggregation": {
+      "filename": "DSD_Channel_Indexed_Static_Aggregation_EN(9).pdf",
+      "sha256": "9121703b4f2a9c144eddfa81ad5527585ca16b2469dd50c72ac4babc1bbe8c4d",
+      "pages": 23
+    }
+  },
+  "channel_ledger": {
+    "c1": {
+      "admitted": true,
+      "selected": true,
+      "term": [
+        2,
+        1
+      ],
+      "status": "CHANNEL_PRESENT_TERM_DEFINED_NONZERO",
+      "provenance": "CH-TERM-01",
+      "zero_extended": false
+    },
+    "c2": {
+      "admitted": true,
+      "selected": true,
+      "term": [
+        -1,
+        3
+      ],
+      "status": "CHANNEL_PRESENT_TERM_DEFINED_NONZERO",
+      "provenance": "CH-TERM-02",
+      "zero_extended": false
+    },
+    "c0": {
+      "admitted": true,
+      "selected": true,
+      "term": [
+        0,
+        0
+      ],
+      "status": "CHANNEL_PRESENT_TERM_DEFINED_ZERO",
+      "provenance": "CH-TERM-00",
+      "zero_extended": false
+    },
+    "cX": {
+      "admitted": false,
+      "selected": false,
+      "term": null,
+      "status": "CHANNEL_ABSENT",
+      "provenance": "CHANNEL_REGISTER_ABSENCE",
+      "zero_extended": false
+    }
+  },
+  "property_ledger": {
+    "i1": {
+      "selected": true,
+      "in_defined_carrier": true,
+      "kind": "p_unary",
+      "typed_inputs": [
+        "x1"
+      ],
+      "term": [
+        4,
+        0
+      ],
+      "status": "PROPERTY_DEFINED_NONZERO",
+      "provenance": "PROP-01",
+      "zero_padded": false
+    },
+    "i2": {
+      "selected": true,
+      "in_defined_carrier": true,
+      "kind": "p_binary",
+      "typed_inputs": [
+        "x1",
+        "x2"
+      ],
+      "term": [
+        -1,
+        2
+      ],
+      "status": "PROPERTY_DEFINED_NONZERO",
+      "provenance": "PROP-02",
+      "zero_padded": false
+    },
+    "i0": {
+      "selected": true,
+      "in_defined_carrier": true,
+      "kind": "p_zero",
+      "typed_inputs": [
+        "x0"
+      ],
+      "term": [
+        0,
+        0
+      ],
+      "status": "PROPERTY_DEFINED_ZERO",
+      "provenance": "PROP-00",
+      "zero_padded": false
+    },
+    "u1": {
+      "selected": false,
+      "in_defined_carrier": false,
+      "kind": "p_pending",
+      "typed_inputs": [
+        "x3"
+      ],
+      "term": null,
+      "status": "PROPERTY_APPLICABLE_UNDEFINED",
+      "provenance": "PROP-UNDEF-01",
+      "zero_padded": false
+    }
+  },
+  "selected_channel_support": [
+    "c1",
+    "c2",
+    "c0"
+  ],
+  "selected_property_support": [
+    "i1",
+    "i2",
+    "i0"
+  ],
+  "negative_property_status_sidecar": [
+    "u1"
+  ],
+  "descriptor": {
+    "ordered_coordinates": [
+      "formation",
+      "property"
+    ],
+    "formation": {
+      "family": "F",
+      "value": [
+        1,
+        4
+      ],
+      "source_id": "B-AGG-001",
+      "support": [
+        "c1",
+        "c2",
+        "c0"
+      ],
+      "operator": "FINITE_UNNORMALIZED_SUM"
+    },
+    "property": {
+      "family": "G",
+      "value": [
+        3,
+        2
+      ],
+      "source_id": "A-AGG-001",
+      "support": [
+        "i1",
+        "i2",
+        "i0"
+      ],
+      "operator": "FINITE_UNNORMALIZED_SUM"
+    },
+    "source_relation": "DISTINCT_TYPED_COORDINATES",
+    "domain": "FINITE",
+    "countable_extension_requested": false,
+    "combined_claim": "COMBINED_STATIC_DESCRIPTOR_ESTABLISHED"
+  },
+  "sidecars": {
+    "H_channel": {
+      "c1": {
+        "value": [
+          2,
+          1
+        ],
+        "status": "CHANNEL_PRESENT_TERM_DEFINED_NONZERO",
+        "provenance": "CH-TERM-01"
+      },
+      "c2": {
+        "value": [
+          -1,
+          3
+        ],
+        "status": "CHANNEL_PRESENT_TERM_DEFINED_NONZERO",
+        "provenance": "CH-TERM-02"
+      },
+      "c0": {
+        "value": [
+          0,
+          0
+        ],
+        "status": "CHANNEL_PRESENT_TERM_DEFINED_ZERO",
+        "provenance": "CH-TERM-00"
+      }
+    },
+    "H_property": {
+      "i1": {
+        "value": [
+          4,
+          0
+        ],
+        "status": "PROPERTY_DEFINED_NONZERO",
+        "typed_inputs": [
+          "x1"
+        ],
+        "kind": "p_unary",
+        "provenance": "PROP-01"
+      },
+      "i2": {
+        "value": [
+          -1,
+          2
+        ],
+        "status": "PROPERTY_DEFINED_NONZERO",
+        "typed_inputs": [
+          "x1",
+          "x2"
+        ],
+        "kind": "p_binary",
+        "provenance": "PROP-02"
+      },
+      "i0": {
+        "value": [
+          0,
+          0
+        ],
+        "status": "PROPERTY_DEFINED_ZERO",
+        "typed_inputs": [
+          "x0"
+        ],
+        "kind": "p_zero",
+        "provenance": "PROP-00"
+      }
+    },
+    "negative_property": {
+      "u1": {
+        "value": null,
+        "status": "PROPERTY_APPLICABLE_UNDEFINED",
+        "typed_inputs": [
+          "x3"
+        ],
+        "kind": "p_pending",
+        "provenance": "PROP-UNDEF-01"
+      }
+    }
+  },
+  "claim_interface": {
+    "source_identity_from_aggregate": false,
+    "support_identity_from_aggregate": false,
+    "reconstruction_from_aggregate": false,
+    "channel_support_required": true,
+    "property_support_required": true,
+    "negative_status_required": true
+  },
+  "optional_ledgers": {
+    "collision": "COLLISION_NOT_TESTED",
+    "injectivity": "INJECTIVITY_NOT_TESTED",
+    "reconstruction": "RECONSTRUCTION_NOT_CLAIMED"
+  },
+  "expected_rows": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E7",
+    "E8",
+    "E9",
+    "E10"
+  ],
+  "expected_each_row_pass": true,
+  "scope_note": "Original AGG-CH-001 D/E 18 criteria, prospective typed-sidecar consistency and supplemental algebraic support witness from original admitted channels. The auxiliary witness is NOT the original task's requested collision ledger; COLLISION_NOT_TESTED is retained."
+}
