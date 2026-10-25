@@ -1,0 +1,400 @@
+{
+  "id": "MF-REG-20261025-003",
+  "author": "Kwon Dominicus",
+  "precommit": "ade2d269ed25d41c9cf7cb597beb4f9b41f60e63",
+  "source_locks": {
+    "formation": {
+      "sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+      "pages": 34
+    },
+    "property": {
+      "sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+      "pages": 23
+    },
+    "aggregation": {
+      "sha256": "9121703b4f2a9c144eddfa81ad5527585ca16b2469dd50c72ac4babc1bbe8c4d",
+      "pages": 23
+    },
+    "dynamics": {
+      "sha256": "9994af76a1a0694e7c020ee2959d920966a4417940b0470e32068c43fa692176",
+      "pages": 38
+    }
+  },
+  "historic_documents": [
+    {
+      "method": "Comparison",
+      "pre_path": "evidence/method_specific/comparison/CMP-CH-001_precommit.md",
+      "pre_commit": "16c4b15f93d66299a2a3890f436e1aff0076713c",
+      "pre_blob": "1c87d4261022a07175796bce16e794f9d0c77f31",
+      "result_path": "evidence/method_specific/comparison/CMP-CH-001_positive-direct-comparison.md",
+      "result_blob": "3ec8f4dc7f3095ec5fa9f1522d064e74f70e35af"
+    },
+    {
+      "method": "Aggregation",
+      "pre_path": "evidence/method_specific/aggregation/AGG-CH-001_precommit.md",
+      "pre_commit": "00e4afd77d7f10855f6c4d62eacbeaa154c3a2ce",
+      "pre_blob": "a59810b90b2b93a0e3b63ba7f23dc59178bef566",
+      "result_path": "evidence/method_specific/aggregation/AGG-CH-001_positive-constructed.md",
+      "result_blob": "7e5d071936d52655886a8a91141785cf7ed580f9"
+    },
+    {
+      "method": "Compression",
+      "pre_path": "evidence/method_specific/compression/CPR-CH-001_precommit.md",
+      "pre_commit": "8d19e2672854926afef33b9aea16df213dfe6a4f",
+      "pre_blob": "49788325989be77aa1d5ac69eba5a18a5ae6ec25",
+      "result_path": "evidence/method_specific/compression/CPR-CH-001_positive-constructed.md",
+      "result_blob": "1e341af810f9b19fe9bd17209cc1c7431a23cee1"
+    },
+    {
+      "method": "Reconstruction",
+      "pre_path": "evidence/method_specific/reconstruction/RECON-CH-001_precommit.md",
+      "pre_commit": "f56cce9a1228384b5607b89ce9092606053696bf",
+      "pre_blob": "88058d72c76ff953e75dc18f179c64f040f8e51d",
+      "result_path": "evidence/method_specific/reconstruction/RECON-CH-001_positive-constructed.md",
+      "result_blob": "3fdd1e3a0541febb643b22c5bd738464594b7e9b"
+    }
+  ],
+  "cases": [
+    {
+      "id": "CMP-T1",
+      "method": "Comparison",
+      "original_case": "CMP-CH-001/T1",
+      "kind": "typed_graph_strict",
+      "left": {
+        "nodes": [
+          "a0",
+          "a1",
+          "a2"
+        ],
+        "edges": [
+          [
+            "a0",
+            "a1"
+          ],
+          [
+            "a1",
+            "a2"
+          ]
+        ],
+        "status": [
+          "DEFINED_ZERO",
+          "DEFINED_NONZERO",
+          "DEFINED_ZERO"
+        ]
+      },
+      "right": {
+        "nodes": [
+          "b0",
+          "b1",
+          "b2"
+        ],
+        "edges": [
+          [
+            "b0",
+            "b1"
+          ],
+          [
+            "b1",
+            "b2"
+          ]
+        ],
+        "status": [
+          "DEFINED_ZERO",
+          "DEFINED_NONZERO",
+          "DEFINED_ZERO"
+        ]
+      },
+      "map": {
+        "a0": "b0",
+        "a1": "b1",
+        "a2": "b2"
+      },
+      "expected": {
+        "bijective": true,
+        "edge_forward_preserved": true,
+        "edge_inverse_preserved": true,
+        "status_preserved": true,
+        "strict_equivalent": true,
+        "correspondence_class": "STRICT_EQUIVALENT",
+        "terminal": "COMPARISON_RESOLVED"
+      }
+    },
+    {
+      "id": "CMP-T4",
+      "method": "Comparison",
+      "original_case": "CMP-CH-001/T4",
+      "kind": "aggregate_vs_support",
+      "left": [
+        1,
+        1,
+        2
+      ],
+      "right": [
+        4
+      ],
+      "expected": {
+        "left_sum": 4,
+        "right_sum": 4,
+        "aggregate_equal": true,
+        "bijective_support_map_possible": false,
+        "strict_equivalent": false,
+        "correspondence_class": "NONCORRESPONDENCE",
+        "terminal": "COMPARISON_RESOLVED"
+      }
+    },
+    {
+      "id": "AGG-001",
+      "method": "Aggregation",
+      "original_case": "AGG-CH-001",
+      "kind": "combined_static",
+      "channels": {
+        "c1": [
+          2,
+          1
+        ],
+        "c2": [
+          -1,
+          3
+        ],
+        "c0": [
+          0,
+          0
+        ]
+      },
+      "absent_channels": [
+        "cX"
+      ],
+      "property": {
+        "i1": [
+          4,
+          0
+        ],
+        "i2": [
+          -1,
+          2
+        ],
+        "i0": [
+          0,
+          0
+        ]
+      },
+      "undefined_property": [
+        "u1"
+      ],
+      "selected_channels": [
+        "c1",
+        "c2",
+        "c0"
+      ],
+      "selected_property": [
+        "i1",
+        "i2",
+        "i0"
+      ],
+      "expected": {
+        "comp": [
+          1,
+          4
+        ],
+        "agg": [
+          3,
+          2
+        ],
+        "descriptor": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "channel_average": [
+          "1/3",
+          "4/3"
+        ],
+        "zero_channel_distinct_from_absence": true,
+        "property_defined_zero_distinct_from_undefined": true,
+        "terminal": "AGGREGATION_TASK_ESTABLISHED"
+      }
+    },
+    {
+      "id": "CPR-001",
+      "method": "Compression",
+      "original_case": "CPR-CH-001",
+      "kind": "purpose_safe_drop_detail",
+      "data": {
+        "x1": [
+          "A",
+          "a1",
+          "NONZERO"
+        ],
+        "x2": [
+          "A",
+          "a2",
+          "NONZERO"
+        ],
+        "x3": [
+          "B",
+          "b1",
+          "ZERO"
+        ],
+        "x4": [
+          "B",
+          "b2",
+          "ZERO"
+        ]
+      },
+      "retained_indices": [
+        0,
+        2
+      ],
+      "expected": {
+        "out": {
+          "x1": [
+            "A",
+            "NONZERO"
+          ],
+          "x2": [
+            "A",
+            "NONZERO"
+          ],
+          "x3": [
+            "B",
+            "ZERO"
+          ],
+          "x4": [
+            "B",
+            "ZERO"
+          ]
+        },
+        "safe_collisions": [
+          [
+            "x1",
+            "x2"
+          ],
+          [
+            "x3",
+            "x4"
+          ]
+        ],
+        "required_distinctions_preserved": true,
+        "original_cost": 12,
+        "reduced_cost": 8,
+        "strict_reduction": true,
+        "terminal": "COMPRESSION_TASK_ESTABLISHED"
+      }
+    },
+    {
+      "id": "RECON-A",
+      "method": "Reconstruction",
+      "original_case": "RECON-CH-001-A",
+      "kind": "bounded_readout_fiber",
+      "data": {
+        "a1": [
+          1,
+          2
+        ],
+        "a2": [
+          2,
+          1
+        ],
+        "a3": [
+          0,
+          0
+        ]
+      },
+      "observed_readout": 3,
+      "expected": {
+        "readouts": {
+          "a1": 3,
+          "a2": 3,
+          "a3": 0
+        },
+        "compatible": [
+          "a1",
+          "a2"
+        ],
+        "excluded": [
+          "a3"
+        ],
+        "unique_within_class": false,
+        "set_outcome": "RECONSTRUCTION_SET_MULTIPLE_COMPATIBLE",
+        "terminal": "RECONSTRUCTION_TASK_ESTABLISHED"
+      }
+    },
+    {
+      "id": "RECON-B",
+      "method": "Reconstruction",
+      "original_case": "RECON-CH-001-B",
+      "kind": "bounded_prior_marker_transition",
+      "data": {
+        "b1": {
+          "marker": "RED",
+          "transition_to_C": false
+        },
+        "b2": {
+          "marker": "BLUE",
+          "transition_to_C": true
+        },
+        "b3": {
+          "marker": "BLUE",
+          "transition_to_C": false
+        }
+      },
+      "observed_marker": "BLUE",
+      "expected": {
+        "compatible": [
+          "b2"
+        ],
+        "excluded": [
+          "b1",
+          "b3"
+        ],
+        "unique_within_class": true,
+        "global_historical_unique_claim": false,
+        "set_outcome": "RECONSTRUCTION_SET_UNIQUE_WITHIN_DECLARED_CLASS",
+        "terminal": "RECONSTRUCTION_TASK_ESTABLISHED"
+      }
+    },
+    {
+      "id": "RECON-C",
+      "method": "Reconstruction",
+      "original_case": "RECON-CH-001-C",
+      "kind": "complete_interface_collision",
+      "data": {
+        "u1": [
+          1,
+          0
+        ],
+        "u2": [
+          0,
+          1
+        ]
+      },
+      "observed_readout": 1,
+      "interface_complete_for_claim": true,
+      "expected": {
+        "readouts": {
+          "u1": 1,
+          "u2": 1
+        },
+        "compatible": [
+          "u1",
+          "u2"
+        ],
+        "distinct_sources_same_readout": true,
+        "unrecoverable_on_declared_interface": true,
+        "globally_unrecoverable_claim": false,
+        "set_outcome": "RECONSTRUCTION_SET_MULTIPLE_COMPATIBLE",
+        "terminal": "RECONSTRUCTION_TASK_ESTABLISHED"
+      }
+    }
+  ],
+  "bounds": [
+    "This packet is a normalized manual transcription of specific committed historical precommit fields; original source linked by Git blob. It is not the entire original method case.",
+    "Full old Formation PDF unavailable; no OLD_PDF->NEW_PDF output parity.",
+    "Original historical method terminals are references and bounded consistency checks, not a fresh execution of all protocol scoring rules."
+  ]
+}
