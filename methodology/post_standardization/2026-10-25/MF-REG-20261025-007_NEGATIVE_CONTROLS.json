@@ -1,0 +1,57 @@
+{
+  "audit_id": "MF-REG-20261025-007-NC",
+  "detected_count": 8,
+  "immutable_006_fixture_unchanged": true,
+  "immutable_frozen_fixture_unchanged": true,
+  "mutations": [
+    {
+      "actual_status": "FAIL",
+      "detected": true,
+      "id": "NC1_wrong_task_version",
+      "target_original_row": "A2"
+    },
+    {
+      "actual_status": "FAIL",
+      "detected": true,
+      "id": "NC2_wrong_aggsum_operator",
+      "target_original_row": "A6"
+    },
+    {
+      "actual_status": "FAIL",
+      "detected": true,
+      "id": "NC3_false_F_average",
+      "target_original_row": "F1"
+    },
+    {
+      "actual_status": "FAIL",
+      "detected": true,
+      "id": "NC4_illicit_collision_claim",
+      "target_original_row": "F5"
+    },
+    {
+      "actual_status": "FAIL",
+      "detected": true,
+      "id": "NC5_wrong_terminal",
+      "target_original_row": "G1"
+    },
+    {
+      "actual_status": "FAIL",
+      "detected": true,
+      "id": "NC6_unbounded_identity_claim",
+      "target_original_row": "G4"
+    },
+    {
+      "actual_status": "BLOCKED_EVIDENCE",
+      "detected": true,
+      "id": "NC7_false_governance_true",
+      "target_original_row": "G5"
+    },
+    {
+      "actual_status": "FAIL_WITH_EVIDENCE",
+      "detected": true,
+      "id": "NC8_bad_formation_sha",
+      "target_original_row": null
+    }
+  ],
+  "total_count": 8
+}
