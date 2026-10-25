@@ -1,0 +1,382 @@
+{
+  "audit_id": "MF-REG-20261025-003",
+  "cases": {
+    "AGG-001": {
+      "expected": {
+        "agg": [
+          3,
+          2
+        ],
+        "channel_average": [
+          "1/3",
+          "4/3"
+        ],
+        "comp": [
+          1,
+          4
+        ],
+        "descriptor": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "property_defined_zero_distinct_from_undefined": true,
+        "terminal": "AGGREGATION_TASK_ESTABLISHED",
+        "zero_channel_distinct_from_absence": true
+      },
+      "field_checks": {
+        "agg": true,
+        "channel_average": true,
+        "comp": true,
+        "descriptor": true,
+        "property_defined_zero_distinct_from_undefined": true,
+        "terminal": true,
+        "zero_channel_distinct_from_absence": true
+      },
+      "historical_case": "AGG-CH-001",
+      "method": "Aggregation",
+      "old_source_PDF_to_new_source_PDF": "BLOCKED_SOURCE_NOT_AVAILABLE",
+      "pass": true,
+      "replayed": {
+        "agg": [
+          3,
+          2
+        ],
+        "channel_average": [
+          "1/3",
+          "4/3"
+        ],
+        "comp": [
+          1,
+          4
+        ],
+        "descriptor": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "property_defined_zero_distinct_from_undefined": true,
+        "terminal": "AGGREGATION_TASK_ESTABLISHED",
+        "zero_channel_distinct_from_absence": true
+      }
+    },
+    "CMP-T1": {
+      "expected": {
+        "bijective": true,
+        "correspondence_class": "STRICT_EQUIVALENT",
+        "edge_forward_preserved": true,
+        "edge_inverse_preserved": true,
+        "status_preserved": true,
+        "strict_equivalent": true,
+        "terminal": "COMPARISON_RESOLVED"
+      },
+      "field_checks": {
+        "bijective": true,
+        "correspondence_class": true,
+        "edge_forward_preserved": true,
+        "edge_inverse_preserved": true,
+        "status_preserved": true,
+        "strict_equivalent": true,
+        "terminal": true
+      },
+      "historical_case": "CMP-CH-001/T1",
+      "method": "Comparison",
+      "old_source_PDF_to_new_source_PDF": "BLOCKED_SOURCE_NOT_AVAILABLE",
+      "pass": true,
+      "replayed": {
+        "bijective": true,
+        "correspondence_class": "STRICT_EQUIVALENT",
+        "edge_forward_preserved": true,
+        "edge_inverse_preserved": true,
+        "status_preserved": true,
+        "strict_equivalent": true,
+        "terminal": "COMPARISON_RESOLVED"
+      }
+    },
+    "CMP-T4": {
+      "expected": {
+        "aggregate_equal": true,
+        "bijective_support_map_possible": false,
+        "correspondence_class": "NONCORRESPONDENCE",
+        "left_sum": 4,
+        "right_sum": 4,
+        "strict_equivalent": false,
+        "terminal": "COMPARISON_RESOLVED"
+      },
+      "field_checks": {
+        "aggregate_equal": true,
+        "bijective_support_map_possible": true,
+        "correspondence_class": true,
+        "left_sum": true,
+        "right_sum": true,
+        "strict_equivalent": true,
+        "terminal": true
+      },
+      "historical_case": "CMP-CH-001/T4",
+      "method": "Comparison",
+      "old_source_PDF_to_new_source_PDF": "BLOCKED_SOURCE_NOT_AVAILABLE",
+      "pass": true,
+      "replayed": {
+        "aggregate_equal": true,
+        "bijective_support_map_possible": false,
+        "correspondence_class": "NONCORRESPONDENCE",
+        "left_sum": 4,
+        "right_sum": 4,
+        "strict_equivalent": false,
+        "terminal": "COMPARISON_RESOLVED"
+      }
+    },
+    "CPR-001": {
+      "expected": {
+        "original_cost": 12,
+        "out": {
+          "x1": [
+            "A",
+            "NONZERO"
+          ],
+          "x2": [
+            "A",
+            "NONZERO"
+          ],
+          "x3": [
+            "B",
+            "ZERO"
+          ],
+          "x4": [
+            "B",
+            "ZERO"
+          ]
+        },
+        "reduced_cost": 8,
+        "required_distinctions_preserved": true,
+        "safe_collisions": [
+          [
+            "x1",
+            "x2"
+          ],
+          [
+            "x3",
+            "x4"
+          ]
+        ],
+        "strict_reduction": true,
+        "terminal": "COMPRESSION_TASK_ESTABLISHED"
+      },
+      "field_checks": {
+        "original_cost": true,
+        "out": true,
+        "reduced_cost": true,
+        "required_distinctions_preserved": true,
+        "safe_collisions": true,
+        "strict_reduction": true,
+        "terminal": true
+      },
+      "historical_case": "CPR-CH-001",
+      "method": "Compression",
+      "old_source_PDF_to_new_source_PDF": "BLOCKED_SOURCE_NOT_AVAILABLE",
+      "pass": true,
+      "replayed": {
+        "original_cost": 12,
+        "out": {
+          "x1": [
+            "A",
+            "NONZERO"
+          ],
+          "x2": [
+            "A",
+            "NONZERO"
+          ],
+          "x3": [
+            "B",
+            "ZERO"
+          ],
+          "x4": [
+            "B",
+            "ZERO"
+          ]
+        },
+        "reduced_cost": 8,
+        "required_distinctions_preserved": true,
+        "safe_collisions": [
+          [
+            "x1",
+            "x2"
+          ],
+          [
+            "x3",
+            "x4"
+          ]
+        ],
+        "strict_reduction": true,
+        "terminal": "COMPRESSION_TASK_ESTABLISHED"
+      }
+    },
+    "RECON-A": {
+      "expected": {
+        "compatible": [
+          "a1",
+          "a2"
+        ],
+        "excluded": [
+          "a3"
+        ],
+        "readouts": {
+          "a1": 3,
+          "a2": 3,
+          "a3": 0
+        },
+        "set_outcome": "RECONSTRUCTION_SET_MULTIPLE_COMPATIBLE",
+        "terminal": "RECONSTRUCTION_TASK_ESTABLISHED",
+        "unique_within_class": false
+      },
+      "field_checks": {
+        "compatible": true,
+        "excluded": true,
+        "readouts": true,
+        "set_outcome": true,
+        "terminal": true,
+        "unique_within_class": true
+      },
+      "historical_case": "RECON-CH-001-A",
+      "method": "Reconstruction",
+      "old_source_PDF_to_new_source_PDF": "BLOCKED_SOURCE_NOT_AVAILABLE",
+      "pass": true,
+      "replayed": {
+        "compatible": [
+          "a1",
+          "a2"
+        ],
+        "excluded": [
+          "a3"
+        ],
+        "readouts": {
+          "a1": 3,
+          "a2": 3,
+          "a3": 0
+        },
+        "set_outcome": "RECONSTRUCTION_SET_MULTIPLE_COMPATIBLE",
+        "terminal": "RECONSTRUCTION_TASK_ESTABLISHED",
+        "unique_within_class": false
+      }
+    },
+    "RECON-B": {
+      "expected": {
+        "compatible": [
+          "b2"
+        ],
+        "excluded": [
+          "b1",
+          "b3"
+        ],
+        "global_historical_unique_claim": false,
+        "set_outcome": "RECONSTRUCTION_SET_UNIQUE_WITHIN_DECLARED_CLASS",
+        "terminal": "RECONSTRUCTION_TASK_ESTABLISHED",
+        "unique_within_class": true
+      },
+      "field_checks": {
+        "compatible": true,
+        "excluded": true,
+        "global_historical_unique_claim": true,
+        "set_outcome": true,
+        "terminal": true,
+        "unique_within_class": true
+      },
+      "historical_case": "RECON-CH-001-B",
+      "method": "Reconstruction",
+      "old_source_PDF_to_new_source_PDF": "BLOCKED_SOURCE_NOT_AVAILABLE",
+      "pass": true,
+      "replayed": {
+        "compatible": [
+          "b2"
+        ],
+        "excluded": [
+          "b1",
+          "b3"
+        ],
+        "global_historical_unique_claim": false,
+        "set_outcome": "RECONSTRUCTION_SET_UNIQUE_WITHIN_DECLARED_CLASS",
+        "terminal": "RECONSTRUCTION_TASK_ESTABLISHED",
+        "unique_within_class": true
+      }
+    },
+    "RECON-C": {
+      "expected": {
+        "compatible": [
+          "u1",
+          "u2"
+        ],
+        "distinct_sources_same_readout": true,
+        "globally_unrecoverable_claim": false,
+        "readouts": {
+          "u1": 1,
+          "u2": 1
+        },
+        "set_outcome": "RECONSTRUCTION_SET_MULTIPLE_COMPATIBLE",
+        "terminal": "RECONSTRUCTION_TASK_ESTABLISHED",
+        "unrecoverable_on_declared_interface": true
+      },
+      "field_checks": {
+        "compatible": true,
+        "distinct_sources_same_readout": true,
+        "globally_unrecoverable_claim": true,
+        "readouts": true,
+        "set_outcome": true,
+        "terminal": true,
+        "unrecoverable_on_declared_interface": true
+      },
+      "historical_case": "RECON-CH-001-C",
+      "method": "Reconstruction",
+      "old_source_PDF_to_new_source_PDF": "BLOCKED_SOURCE_NOT_AVAILABLE",
+      "pass": true,
+      "replayed": {
+        "compatible": [
+          "u1",
+          "u2"
+        ],
+        "distinct_sources_same_readout": true,
+        "globally_unrecoverable_claim": false,
+        "readouts": {
+          "u1": 1,
+          "u2": 1
+        },
+        "set_outcome": "RECONSTRUCTION_SET_MULTIPLE_COMPATIBLE",
+        "terminal": "RECONSTRUCTION_TASK_ESTABLISHED",
+        "unrecoverable_on_declared_interface": true
+      }
+    }
+  },
+  "counts": {
+    "cases_passed": 7,
+    "cases_total": 7,
+    "direct_old_vs_new_PDF_cases": 0,
+    "fields_matched": 47,
+    "fields_total": 47,
+    "source_locks_passed": 4
+  },
+  "decision": "ARCHIVED_FIXTURE_REPLAY_PASS_WITH_BOUNDARY",
+  "formation_source_anchors": {
+    "Corollary 6.26": true,
+    "Proposition 5.13": true,
+    "Proposition 5.14": true,
+    "Proposition 6.22": true,
+    "This loss is not asserted for every formation model": true,
+    "independently prescribed J": true
+  },
+  "scope": "7 historical finite subcases from 4 methods; NOT complete scoring-gate reruns, formal proof or independent evaluation",
+  "source_locks": {
+    "aggregation": true,
+    "dynamics": true,
+    "formation": true,
+    "property": true
+  }
+}
