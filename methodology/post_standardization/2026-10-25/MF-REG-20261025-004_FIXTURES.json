@@ -1,0 +1,173 @@
+{
+  "id": "MF-REG-20261025-004",
+  "author": "Kwon Dominicus",
+  "precommit_commit": "8af0e825f54a12133d4ac466a149eadd11c7fb8e",
+  "formation": {
+    "sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+    "pages": 34
+  },
+  "historic": {
+    "pre_path": "evidence/method_specific/comparison/CMP-CH-001_precommit.md",
+    "pre_commit": "16c4b15f93d66299a2a3890f436e1aff0076713c",
+    "pre_blob": "1c87d4261022a07175796bce16e794f9d0c77f31",
+    "result_path": "evidence/method_specific/comparison/CMP-CH-001_positive-direct-comparison.md",
+    "result_blob": "3ec8f4dc7f3095ec5fa9f1522d064e74f70e35af"
+  },
+  "tasks": [
+    {
+      "id": "T2",
+      "case": "CMP-CH-001/T2",
+      "kind": "direct_injective_non_surjective",
+      "src_nodes": [
+        "x0",
+        "x1"
+      ],
+      "src_edges": [
+        [
+          "x0",
+          "x1"
+        ]
+      ],
+      "src_status": {
+        "x0": "DEFINED_ZERO",
+        "x1": "DEFINED_NONZERO"
+      },
+      "tgt_nodes": [
+        "y0",
+        "y1",
+        "y2"
+      ],
+      "tgt_edges": [
+        [
+          "y0",
+          "y1"
+        ],
+        [
+          "y1",
+          "y2"
+        ]
+      ],
+      "tgt_status": {
+        "y0": "DEFINED_ZERO",
+        "y1": "DEFINED_NONZERO",
+        "y2": "DEFINED_ZERO"
+      },
+      "map": {
+        "x0": "y0",
+        "x1": "y1"
+      },
+      "bridge": null,
+      "expected": {
+        "injective": true,
+        "surjective_full_target": false,
+        "preserved_src_edges": true,
+        "preserved_mapped_status": true,
+        "unmapped_target_nodes": [
+          "y2"
+        ],
+        "strict_equivalence_under_frozen_criterion": false,
+        "correspondence_class": "DIRECT_CORRESPONDENCE",
+        "structural_equivalence_result": "no",
+        "terminal": "COMPARISON_RESOLVED",
+        "conformance": "CONFORMANT",
+        "gain": "NOT_ASSESSED"
+      }
+    },
+    {
+      "id": "T3",
+      "case": "CMP-CH-001/T3",
+      "kind": "supplied_encoding_equivalence",
+      "src_nodes": [
+        "0",
+        "1"
+      ],
+      "src_edges": [
+        [
+          "0",
+          "1"
+        ]
+      ],
+      "src_status": {
+        "0": "DEFINED_ZERO",
+        "1": "DEFINED_NONZERO"
+      },
+      "tgt_nodes": [
+        "OFF",
+        "ON"
+      ],
+      "tgt_edges": [
+        [
+          "OFF",
+          "ON"
+        ]
+      ],
+      "tgt_status": {
+        "OFF": "DEFINED_ZERO",
+        "ON": "DEFINED_NONZERO"
+      },
+      "map": {
+        "0": "OFF",
+        "1": "ON"
+      },
+      "bridge": {
+        "0": "OFF",
+        "1": "ON",
+        "source": "supplied_e"
+      },
+      "expected": {
+        "injective": true,
+        "surjective_full_target": true,
+        "preserved_src_edges": true,
+        "preserved_inverse_edges": true,
+        "preserved_mapped_status": true,
+        "literal_label_equality": false,
+        "explicit_bridge_used": true,
+        "correspondence_class": "ENCODED_CORRESPONDENCE",
+        "structural_equivalence_result": "equivalent_under_supplied_encoding_only",
+        "terminal": "COMPARISON_RESOLVED",
+        "conformance": "CONFORMANT",
+        "gain": "NOT_ASSESSED"
+      }
+    }
+  ],
+  "historical_protocol_score_registry": [
+    {
+      "method": "Comparison",
+      "original_case": "CMP-CH-001",
+      "historic_passed": 40,
+      "historic_required": 40,
+      "historic_result_path": "evidence/method_specific/comparison/CMP-CH-001_positive-direct-comparison.md",
+      "new_full_gate_replay": false
+    },
+    {
+      "method": "Aggregation",
+      "original_case": "AGG-CH-001",
+      "historic_passed": 64,
+      "historic_required": 64,
+      "historic_result_path": "evidence/method_specific/aggregation/AGG-CH-001_positive-constructed.md",
+      "new_full_gate_replay": false
+    },
+    {
+      "method": "Compression",
+      "original_case": "CPR-CH-001",
+      "historic_passed": 72,
+      "historic_required": 72,
+      "historic_result_path": "evidence/method_specific/compression/CPR-CH-001_positive-constructed.md",
+      "new_full_gate_replay": false
+    },
+    {
+      "method": "Reconstruction",
+      "original_case": "RECON-CH-001",
+      "historic_passed": 80,
+      "historic_required": 80,
+      "historic_result_path": "evidence/method_specific/reconstruction/RECON-CH-001_positive-constructed.md",
+      "new_full_gate_replay": false
+    }
+  ],
+  "old_source_available": false,
+  "limits": [
+    "two archived input subcases newly reexecuted, not the historical full 40-check Comparison challenge",
+    "strict-equivalence under Comparison frozen criterion is not entire Formation strict isomorphism",
+    "old 2026-08-06 Formation PDF missing; no direct paired old-PDF/new-PDF replay"
+  ]
+}
