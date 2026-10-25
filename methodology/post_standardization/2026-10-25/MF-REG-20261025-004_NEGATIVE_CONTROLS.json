@@ -1,0 +1,29 @@
+{
+  "audit_id": "MF-REG-20261025-004-NEG",
+  "controls": [
+    {
+      "id": "NC1-false-T2-surjective",
+      "mutation_detected": true
+    },
+    {
+      "id": "NC2-false-T2-strict",
+      "mutation_detected": true
+    },
+    {
+      "id": "NC3-remove-T3-bridge",
+      "mutation_detected": true
+    },
+    {
+      "id": "NC4-false-T3-direct",
+      "mutation_detected": true
+    },
+    {
+      "id": "NC5-false-paper-hash",
+      "mutation_detected": true
+    }
+  ],
+  "detected": 5,
+  "immutable_fixture_sha256": "a95fc701f26bfe57652e0fd4cad08147327366d87cf21de23f3622bbe8bc801a",
+  "immutable_source_unchanged": true,
+  "total": 5
+}
