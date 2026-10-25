@@ -1,0 +1,52 @@
+{
+  "author": "Kwon Dominicus",
+  "status": "revised EN/KR candidate; not published / entire FPA open",
+  "matching_edit_operation_ids": [
+    "ABSTRACT_STRICT",
+    "TH43_SCOPE",
+    "TH43_PROOF",
+    "DEF61_F3",
+    "DEF61_F4",
+    "DEF61_F5",
+    "DEF61_GUARD_EXPLANATION",
+    "PROP62_PROOF",
+    "DEF63_GUARD",
+    "TH68_CONDITION",
+    "TH68_PROOF",
+    "TH111_ITEM7",
+    "AGGREGATION_SCOPE"
+  ],
+  "sources": {
+    "EN": {
+      "input": "/mnt/data/DSD_Property_Axiom_System_EN(3).tex",
+      "original_sha256": "bbcff0c2f7047ddbffb737040f25d171438f6ac2934344a8bcafb8fbc160b8d3",
+      "revised_file": "DSD_Property_Axiom_System_EN_P26_REVISED.tex",
+      "revised_sha256": "f4b5c7dcce1f6b50ab9d1dbea51260cd64be9a91c0359acb5842f5026ef7e0a5",
+      "original_numbered_items": 56,
+      "revised_numbered_items": 56,
+      "changed_sections": [
+        4,
+        6,
+        9,
+        11
+      ],
+      "metadata_and_labels_preserved": true
+    },
+    "KR": {
+      "input": "/mnt/data/DSD_Property_Axiom_System_KR(3).tex",
+      "original_sha256": "91f42dc00bcc653f18a8329bbcfeeb7daf8f8c3ec2032f48abd4f115ee33b241",
+      "revised_file": "DSD_Property_Axiom_System_KR_P26_REVISED.tex",
+      "revised_sha256": "8f15435d8e3f122ae45c378b4c4a98cd908d8551faeffa2a2ecb3d2e66a7ecf9",
+      "original_numbered_items": 56,
+      "revised_numbered_items": 56,
+      "changed_sections": [
+        4,
+        6,
+        9,
+        11
+      ],
+      "metadata_and_labels_preserved": true
+    }
+  },
+  "original_files_modified": false
+}}
