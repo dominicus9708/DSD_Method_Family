@@ -1,0 +1,25 @@
+name: Property P25 Source Compilation
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p25_candidate.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P25_integrated_manuscript_candidate/*.tex'
+  workflow_dispatch:
+jobs:
+  en-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-fonts-recommended poppler-utils latexmk
+      - run: |
+          cd DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P25_integrated_manuscript_candidate
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error LIBRARY_EN_2_INDEXED_RECONSTRUCTION.tex
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error P25_EN_CANDIDATE_CORRECTED_FROM_LIBRARY_EN_2.tex
+          pdfinfo LIBRARY_EN_2_INDEXED_RECONSTRUCTION.pdf | grep Pages
+          pdfinfo P25_EN_CANDIDATE_CORRECTED_FROM_LIBRARY_EN_2.pdf | grep Pages
+      - uses: actions/upload-artifact@v4
+        with:
+          name: property-p25-EN-candidate-PDFs
+          path: |
+            DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P25_integrated_manuscript_candidate/LIBRARY_EN_2_INDEXED_RECONSTRUCTION.pdf
+            DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P25_integrated_manuscript_candidate/P25_EN_CANDIDATE_CORRECTED_FROM_LIBRARY_EN_2.pdf
