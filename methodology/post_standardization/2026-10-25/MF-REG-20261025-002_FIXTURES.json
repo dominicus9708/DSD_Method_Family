@@ -1,0 +1,253 @@
+{
+  "case_id": "MF-REG-20261025-002",
+  "author": "Kwon Dominicus",
+  "date": "2026-10-25",
+  "precommit": "4c5ee1b24e48111ad8c30447e4571c9c8dd623f6",
+  "correction": "0da58f90687378058ce7caef6f8ce2e9c9812d15",
+  "source_locks": {
+    "formation": {
+      "sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+      "pages": 34
+    },
+    "property": {
+      "sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+      "pages": 23
+    },
+    "aggregation": {
+      "sha256": "9121703b4f2a9c144eddfa81ad5527585ca16b2469dd50c72ac4babc1bbe8c4d",
+      "pages": 23
+    },
+    "dynamics": {
+      "sha256": "9994af76a1a0694e7c020ee2959d920966a4417940b0470e32068c43fa692176",
+      "pages": 38
+    }
+  },
+  "methods_in_scope": [
+    "Comparison",
+    "Analysis",
+    "Specification",
+    "Aggregation",
+    "Compression",
+    "Reconstruction",
+    "Measurement",
+    "Computation",
+    "Synthesis",
+    "Audit"
+  ],
+  "cases": [
+    {
+      "id": "Z0",
+      "kind": "zero_extension",
+      "universe": [
+        "u",
+        "c0"
+      ],
+      "admitted": [
+        "c0"
+      ],
+      "terms": {
+        "c0": 0
+      },
+      "expected": {
+        "values": {
+          "u": 0,
+          "c0": 0
+        },
+        "collision_with_membership_difference": true,
+        "output_membership_discriminates": false
+      }
+    },
+    {
+      "id": "Z1",
+      "kind": "zero_extension",
+      "universe": [
+        "u",
+        "c1"
+      ],
+      "admitted": [
+        "c1"
+      ],
+      "terms": {
+        "c1": 2
+      },
+      "expected": {
+        "values": {
+          "u": 0,
+          "c1": 2
+        },
+        "collision_with_membership_difference": false,
+        "output_membership_discriminates": true
+      }
+    },
+    {
+      "id": "Z2",
+      "kind": "zero_extension_sidecar",
+      "universe": [
+        "u",
+        "c0"
+      ],
+      "admitted": [
+        "c0"
+      ],
+      "terms": {
+        "c0": 0
+      },
+      "expected": {
+        "values": {
+          "u": 0,
+          "c0": 0
+        },
+        "collision_with_membership_difference": true,
+        "extended_status_discriminates": true
+      }
+    },
+    {
+      "id": "A0",
+      "kind": "finite_aggregate_fibers",
+      "channels": {
+        "c1": 1,
+        "c2": -1,
+        "c3": 0
+      },
+      "families": [
+        [
+          "c1",
+          "c2"
+        ],
+        [
+          "c3"
+        ]
+      ],
+      "expected": {
+        "outputs": [
+          0,
+          0
+        ],
+        "support_difference": true,
+        "noninjective_on_declared_class": true,
+        "inverse_fiber_cardinality_at_zero": 2,
+        "unique_source_from_output_only": false,
+        "support_sidecar_unique": true
+      }
+    },
+    {
+      "id": "J0",
+      "kind": "strict_identity_with_prescribed_j",
+      "source_total": 1,
+      "target_total": 1,
+      "strict_identity": true,
+      "j_multiplier": -1,
+      "expected": {
+        "mapped_source": -1,
+        "j_composite_coincidence": false,
+        "strict_identity": true
+      }
+    },
+    {
+      "id": "J1",
+      "kind": "strict_identity_with_prescribed_j",
+      "source_total": 1,
+      "target_total": 1,
+      "strict_identity": true,
+      "j_multiplier": 1,
+      "expected": {
+        "mapped_source": 1,
+        "j_composite_coincidence": true,
+        "strict_identity": true
+      }
+    },
+    {
+      "id": "J2",
+      "kind": "unequal_channel_cardinality",
+      "source_channels": {
+        "a0": 0
+      },
+      "target_channels": {
+        "bplus": 1,
+        "bminus": -1
+      },
+      "j_multiplier": 1,
+      "expected": {
+        "source_composite": 0,
+        "target_composite": 0,
+        "j_composite_coincidence": true,
+        "strict_formation_isomorphism_possible": false
+      }
+    },
+    {
+      "id": "B0",
+      "kind": "nested_stage_first_branch",
+      "stage_nonempty": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": false,
+        "7": false
+      },
+      "expected": {
+        "first_justified_branch": 3,
+        "stage_three_empty": true,
+        "closure_exclusion_at_stage_four": true
+      }
+    },
+    {
+      "id": "B1",
+      "kind": "nested_stage_first_branch",
+      "stage_nonempty": {
+        "0": true,
+        "1": null,
+        "2": null,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": false,
+        "7": false
+      },
+      "expected": {
+        "first_justified_branch": null,
+        "stage_three_empty": true,
+        "closure_exclusion_at_stage_four": true
+      }
+    },
+    {
+      "id": "S0",
+      "kind": "formation_sum_vs_domain_synthesis",
+      "channels": {
+        "c1": 1,
+        "c2": -1
+      },
+      "family": [
+        "c1",
+        "c2"
+      ],
+      "domain_composition_bridge_supplied": false,
+      "expected": {
+        "formation_composite": 0,
+        "formation_composite_defined": true,
+        "domain_synthesis_terminal": "BLOCKED"
+      }
+    },
+    {
+      "id": "P0",
+      "kind": "zero_term_pruning",
+      "channels": {
+        "c0": 0
+      },
+      "required_output": [
+        "channel_membership"
+      ],
+      "candidate_channel": "c0",
+      "expected": {
+        "raw_value": 0,
+        "prune_as_irrelevant": false
+      }
+    }
+  ],
+  "scope": {
+    "expected_scores": "each expected field is a prospectively locked exact-value assertion",
+    "boundary": "source-based finite examples, not full Formation proof, not full frozen ten protocol executions, not independent validation"
+  }
+}
