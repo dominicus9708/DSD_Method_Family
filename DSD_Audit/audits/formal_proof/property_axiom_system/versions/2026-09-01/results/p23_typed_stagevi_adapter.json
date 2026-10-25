@@ -27,9 +27,10 @@
     "stageVII_term_wrong_domain": true,
     "tampered_derived_channel_injection": true,
     "tampered_derived_describable": true,
-    "tampered_derived_trace": true
+    "tampered_derived_trace": true,
+    "unavailable_surplus_policy_reject": true
   },
-  "expected_negative_count": 25,
+  "expected_negative_count": 26,
   "finite_source_faithful_restricted_constructor": true,
   "formation_pdf_sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
   "full_ZFC_or_arbitrary_StageVI_models_proved": false,
@@ -65,9 +66,10 @@
     "two_witnesses_one_operational_channel": true,
     "unavailable_aux_sort_not_empty": true,
     "unavailable_distinguished_from_available_empty": true,
+    "unavailable_surplus_ignored_when_no_source_prohibition": true,
     "undefined_assignment_removes_channel_not_creates_zero": true
   },
-  "positive_count": 28,
+  "positive_count": 29,
   "property_pdf_sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
   "source_section6_two_gaps": "OPEN",
   "source_theorem4_3_C1_scope": "OPEN"
