@@ -1,0 +1,27 @@
+{
+  "audit_id": "MF-REG-20261025-007-006-PUBLISHED-SCRIPT-REPLAY",
+  "author": "Kwon Dominicus",
+  "boundaries": [
+    "resolves published-006-script exact execution parity item, not old Formation PDF availability",
+    "no independent third-party validation; same underlying project source and inputs"
+  ],
+  "exact_published_python_blob": "2ea1c2fe3a4d74b7c4c5b66c24955d1402a0ce0e",
+  "executed_python_blob_matches_publication": true,
+  "executed_python_byte_count": 9082,
+  "frozen_006_fixture_blob": "0563f8fef12e914cd5f444c01162cca0b8f53384",
+  "full_negative_json_byte_identical": true,
+  "full_primary_json_byte_identical": true,
+  "historical_audit": "MF-REG-20261025-006",
+  "negative_controls": "7/7",
+  "original_negative_json_sha256": "6444bf71e0b5cfd1ae7b8f02e9612022f3389df094d93a013e42baa2a1f6bce6",
+  "original_primary_json_sha256": "102f5a762539fbe4f0f0e8e535788668d02803a241f6eac9d16e11d150f5c928",
+  "paper_source_lock": {
+    "formation_sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+    "property_sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+    "static_sha256": "9121703b4f2a9c144eddfa81ad5527585ca16b2469dd50c72ac4babc1bbe8c4d"
+  },
+  "positive_original_D_E_score_rows": "18/18",
+  "published_script_new_negative_json_sha256": "6444bf71e0b5cfd1ae7b8f02e9612022f3389df094d93a013e42baa2a1f6bce6",
+  "published_script_new_primary_json_sha256": "102f5a762539fbe4f0f0e8e535788668d02803a241f6eac9d16e11d150f5c928",
+  "verdict": "EXACT_PUBLISHED_SCRIPT_REPLAY_VERIFIED"
+}
