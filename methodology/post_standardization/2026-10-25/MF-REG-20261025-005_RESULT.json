@@ -1,0 +1,87 @@
+{
+  "audit_id": "MF-REG-20261025-005",
+  "author": "Kwon Dominicus",
+  "counts": {
+    "blocked_or_failed_original_rows": 0,
+    "historical_orig_64_result_reused_as_new_check": 0,
+    "passed_original_rows": 24,
+    "remaining_original_AGG_CH_001_rows_not_executed": 40,
+    "selected_original_rows": 24
+  },
+  "derived": {
+    "c0_admitted_zero": true,
+    "cX_absent": true,
+    "formation_sum": [
+      1,
+      4
+    ],
+    "property_sum": [
+      3,
+      2
+    ],
+    "selected_channel_support": [
+      "c1",
+      "c2",
+      "c0"
+    ],
+    "selected_property_support": [
+      "i1",
+      "i2",
+      "i0"
+    ],
+    "u1_undefined_not_in_carrier": true
+  },
+  "direct_old_to_new_paper_pdf_comparison": "BLOCKED_SOURCE_NOT_AVAILABLE",
+  "original_fixture_sha256": "8b062f47aa38e6e0d5fee9582152669481f15ea9545132bd6c25650628acb400",
+  "row_verdicts": {
+    "B1": true,
+    "B10": true,
+    "B11": true,
+    "B12": true,
+    "B2": true,
+    "B3": true,
+    "B4": true,
+    "B5": true,
+    "B6": true,
+    "B7": true,
+    "B8": true,
+    "B9": true,
+    "C1": true,
+    "C10": true,
+    "C11": true,
+    "C12": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "C5": true,
+    "C6": true,
+    "C7": true,
+    "C8": true,
+    "C9": true
+  },
+  "scope": "Only original 24 B/C scoring rows of the AGG-CH-001 64-row precommit; current Formation, Property and Static Aggregation source identity locked. No full original 64, independence or external validation.",
+  "source_anchors": {
+    "formation.P5.13": true,
+    "formation.finite_component_sum": true,
+    "property.typed_property_domain": true,
+    "static.property_channel_handoff": true
+  },
+  "source_lock": {
+    "aggregation": {
+      "page_count": 23,
+      "sha256": "9121703b4f2a9c144eddfa81ad5527585ca16b2469dd50c72ac4babc1bbe8c4d",
+      "source_locked": true
+    },
+    "formation": {
+      "page_count": 34,
+      "sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+      "source_locked": true
+    },
+    "property": {
+      "page_count": 23,
+      "sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+      "source_locked": true
+    }
+  },
+  "verdict": "PASS_WITH_BOUNDARY"
+}
