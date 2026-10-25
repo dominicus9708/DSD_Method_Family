@@ -1,0 +1,39 @@
+name: Property P24 Source Revision Countermodel Audit
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p24.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p24_paper_change_countermodels.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p24_paper_change_countermodels.json'
+  workflow_dispatch:
+jobs:
+  p24:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run source-specific P24 finite countermodels
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/scripts/verify_p24_paper_change_countermodels.py"
+          python -W error "$ROOT/scripts/verify_p24_paper_change_countermodels.py" "$RUNNER_TEMP/p24.json"
+          python -c 'import json,sys; a=json.load(open(sys.argv[1]));assert a["checks_count"]==len(a["checks"]) and all(a["checks"].values());print("P24 ALL EXPECTED FLAGS MATCH",a["checks_count"])' "$RUNNER_TEMP/p24.json"
+          if [[ -f "$ROOT/results/p24_paper_change_countermodels.json" ]]; then
+            python -c 'import json,sys;a=json.load(open(sys.argv[1]));b=json.load(open(sys.argv[2]));assert a==b;print("P24 ARCHIVED FULL JSON REPLAY EXACT")' "$RUNNER_TEMP/p24.json" "$ROOT/results/p24_paper_change_countermodels.json"
+          fi
+          echo P24_JSON_BEGIN
+          cat "$RUNNER_TEMP/p24.json"
+          echo P24_JSON_END
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p24-python-${{ matrix.python-version }}
+          path: ${{ runner.temp }}/p24.json
+          retention-days: 30
