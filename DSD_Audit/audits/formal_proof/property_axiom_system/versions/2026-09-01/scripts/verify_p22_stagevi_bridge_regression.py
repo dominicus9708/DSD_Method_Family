@@ -110,8 +110,15 @@ def main():
     expect("Property_unavailable_kind_not_empty_kind", a.unavailable_kinds == frozenset({"unavailable"}))
     expect("Property_unavailable_product_absent", ref.product(p.signature, p.prem, "unavailable") is None)
     expect("Property_stageVI_string_anchor_not_full_fas", isinstance(p.stage_vi_anchor, str))
-    expect("StageVII_term_changes_do_not_change_StageVI", formation_key(f) == formation_key(f) and
-           compatible(f, p)) # term data deliberately absent from fixture
+    term_map_1 = {f.channels[0]: 7}
+    term_map_2 = {f.channels[0]: 9}
+    expect("StageVII_term_changes_do_not_change_StageVI",
+           term_map_1 != term_map_2 and compatible(f, p))
+    absent = ("p", "b", "lambda", 0, "rho")
+    zero_extension = lambda c: 0 if c not in f.channels else 0
+    expect("FAS_v45_P513_zero_padding_loses_membership_conditionally",
+           absent not in f.channels and f.channels[0] in f.channels and
+           zero_extension(absent) == zero_extension(f.channels[0]))
     undef = replace(f, assignment_domain=(), channels=())
     expect("FAS_undefined_assignment_produces_no_channel", valid_stagevi(undef) and not undef.channels)
     expect("Property_empty_inherited_channel_carrier_valid", compatible(undef, bound_property(undef)))
