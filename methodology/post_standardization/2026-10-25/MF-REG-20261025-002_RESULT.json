@@ -1,0 +1,389 @@
+{
+  "audit_id": "MF-REG-20261025-002",
+  "author": "Kwon Dominicus",
+  "case_results": {
+    "A0": {
+      "actual": {
+        "inverse_fiber_cardinality_at_zero": 2,
+        "noninjective_on_declared_class": true,
+        "outputs": [
+          0,
+          0
+        ],
+        "support_difference": true,
+        "support_sidecar_unique": true,
+        "unique_source_from_output_only": false
+      },
+      "expected": {
+        "inverse_fiber_cardinality_at_zero": 2,
+        "noninjective_on_declared_class": true,
+        "outputs": [
+          0,
+          0
+        ],
+        "support_difference": true,
+        "support_sidecar_unique": true,
+        "unique_source_from_output_only": false
+      },
+      "field_checks": {
+        "inverse_fiber_cardinality_at_zero": true,
+        "noninjective_on_declared_class": true,
+        "outputs": true,
+        "support_difference": true,
+        "support_sidecar_unique": true,
+        "unique_source_from_output_only": true
+      },
+      "kind": "finite_aggregate_fibers",
+      "pass": true
+    },
+    "B0": {
+      "actual": {
+        "closure_exclusion_at_stage_four": true,
+        "first_justified_branch": 3,
+        "stage_three_empty": true
+      },
+      "expected": {
+        "closure_exclusion_at_stage_four": true,
+        "first_justified_branch": 3,
+        "stage_three_empty": true
+      },
+      "field_checks": {
+        "closure_exclusion_at_stage_four": true,
+        "first_justified_branch": true,
+        "stage_three_empty": true
+      },
+      "kind": "nested_stage_first_branch",
+      "pass": true
+    },
+    "B1": {
+      "actual": {
+        "closure_exclusion_at_stage_four": true,
+        "first_justified_branch": null,
+        "stage_three_empty": true
+      },
+      "expected": {
+        "closure_exclusion_at_stage_four": true,
+        "first_justified_branch": null,
+        "stage_three_empty": true
+      },
+      "field_checks": {
+        "closure_exclusion_at_stage_four": true,
+        "first_justified_branch": true,
+        "stage_three_empty": true
+      },
+      "kind": "nested_stage_first_branch",
+      "pass": true
+    },
+    "J0": {
+      "actual": {
+        "j_composite_coincidence": false,
+        "mapped_source": -1,
+        "strict_identity": true
+      },
+      "expected": {
+        "j_composite_coincidence": false,
+        "mapped_source": -1,
+        "strict_identity": true
+      },
+      "field_checks": {
+        "j_composite_coincidence": true,
+        "mapped_source": true,
+        "strict_identity": true
+      },
+      "kind": "strict_identity_with_prescribed_j",
+      "pass": true
+    },
+    "J1": {
+      "actual": {
+        "j_composite_coincidence": true,
+        "mapped_source": 1,
+        "strict_identity": true
+      },
+      "expected": {
+        "j_composite_coincidence": true,
+        "mapped_source": 1,
+        "strict_identity": true
+      },
+      "field_checks": {
+        "j_composite_coincidence": true,
+        "mapped_source": true,
+        "strict_identity": true
+      },
+      "kind": "strict_identity_with_prescribed_j",
+      "pass": true
+    },
+    "J2": {
+      "actual": {
+        "j_composite_coincidence": true,
+        "source_composite": 0,
+        "strict_formation_isomorphism_possible": false,
+        "target_composite": 0
+      },
+      "expected": {
+        "j_composite_coincidence": true,
+        "source_composite": 0,
+        "strict_formation_isomorphism_possible": false,
+        "target_composite": 0
+      },
+      "field_checks": {
+        "j_composite_coincidence": true,
+        "source_composite": true,
+        "strict_formation_isomorphism_possible": true,
+        "target_composite": true
+      },
+      "kind": "unequal_channel_cardinality",
+      "pass": true
+    },
+    "P0": {
+      "actual": {
+        "prune_as_irrelevant": false,
+        "raw_value": 0
+      },
+      "expected": {
+        "prune_as_irrelevant": false,
+        "raw_value": 0
+      },
+      "field_checks": {
+        "prune_as_irrelevant": true,
+        "raw_value": true
+      },
+      "kind": "zero_term_pruning",
+      "pass": true
+    },
+    "S0": {
+      "actual": {
+        "domain_synthesis_terminal": "BLOCKED",
+        "formation_composite": 0,
+        "formation_composite_defined": true
+      },
+      "expected": {
+        "domain_synthesis_terminal": "BLOCKED",
+        "formation_composite": 0,
+        "formation_composite_defined": true
+      },
+      "field_checks": {
+        "domain_synthesis_terminal": true,
+        "formation_composite": true,
+        "formation_composite_defined": true
+      },
+      "kind": "formation_sum_vs_domain_synthesis",
+      "pass": true
+    },
+    "Z0": {
+      "actual": {
+        "collision_with_membership_difference": true,
+        "output_membership_discriminates": false,
+        "values": {
+          "c0": 0,
+          "u": 0
+        }
+      },
+      "expected": {
+        "collision_with_membership_difference": true,
+        "output_membership_discriminates": false,
+        "values": {
+          "c0": 0,
+          "u": 0
+        }
+      },
+      "field_checks": {
+        "collision_with_membership_difference": true,
+        "output_membership_discriminates": true,
+        "values": true
+      },
+      "kind": "zero_extension",
+      "pass": true
+    },
+    "Z1": {
+      "actual": {
+        "collision_with_membership_difference": false,
+        "output_membership_discriminates": true,
+        "values": {
+          "c1": 2,
+          "u": 0
+        }
+      },
+      "expected": {
+        "collision_with_membership_difference": false,
+        "output_membership_discriminates": true,
+        "values": {
+          "c1": 2,
+          "u": 0
+        }
+      },
+      "field_checks": {
+        "collision_with_membership_difference": true,
+        "output_membership_discriminates": true,
+        "values": true
+      },
+      "kind": "zero_extension",
+      "pass": true
+    },
+    "Z2": {
+      "actual": {
+        "collision_with_membership_difference": true,
+        "extended_status_discriminates": true,
+        "values": {
+          "c0": 0,
+          "u": 0
+        }
+      },
+      "expected": {
+        "collision_with_membership_difference": true,
+        "extended_status_discriminates": true,
+        "values": {
+          "c0": 0,
+          "u": 0
+        }
+      },
+      "field_checks": {
+        "collision_with_membership_difference": true,
+        "extended_status_discriminates": true,
+        "values": true
+      },
+      "kind": "zero_extension_sidecar",
+      "pass": true
+    }
+  },
+  "caveats": [
+    "not original old-version run: 2026-08-06 source PDF not mounted",
+    "projections are finite logical guards, not full frozen method-protocol execution",
+    "no construction or independent audit of full D2 57-element witness",
+    "source text anchoring is not a theorem proof",
+    "none of these cases is independent evaluator or new real-world evidence"
+  ],
+  "counts": {
+    "case_families": 11,
+    "case_families_pass": 11,
+    "exact_output_keyset_checks_pass": 11,
+    "expected_fields_checked": 36,
+    "expected_fields_pass": 36,
+    "method_guard_projections_pass": 10,
+    "method_guard_projections_total": 10,
+    "source_anchors_pass": 8,
+    "source_locks_pass": 4
+  },
+  "frozen_fixture_commit": "07bcf6e70333a0e5862d4e271b99f90ef0ee163f",
+  "frozen_precommit": "4c5ee1b24e48111ad8c30447e4571c9c8dd623f6",
+  "method_guard_projections": {
+    "Aggregation": {
+      "bounded_guard_retrace_pass": true,
+      "fixture_ids": [
+        "A0",
+        "Z0",
+        "Z1"
+      ]
+    },
+    "Analysis": {
+      "bounded_guard_retrace_pass": true,
+      "fixture_ids": [
+        "Z0",
+        "Z1",
+        "Z2",
+        "A0"
+      ]
+    },
+    "Audit": {
+      "bounded_guard_retrace_pass": true,
+      "fixture_ids": [
+        "Z0",
+        "A0",
+        "J0",
+        "B1",
+        "S0"
+      ]
+    },
+    "Comparison": {
+      "bounded_guard_retrace_pass": true,
+      "fixture_ids": [
+        "J0",
+        "J1",
+        "J2",
+        "B0",
+        "B1"
+      ]
+    },
+    "Compression": {
+      "bounded_guard_retrace_pass": true,
+      "fixture_ids": [
+        "A0",
+        "Z2"
+      ]
+    },
+    "Computation": {
+      "bounded_guard_retrace_pass": true,
+      "fixture_ids": [
+        "P0",
+        "B0",
+        "B1",
+        "Z1"
+      ]
+    },
+    "Measurement": {
+      "bounded_guard_retrace_pass": true,
+      "fixture_ids": [
+        "Z0",
+        "Z1",
+        "B0",
+        "B1"
+      ]
+    },
+    "Reconstruction": {
+      "bounded_guard_retrace_pass": true,
+      "fixture_ids": [
+        "A0",
+        "Z0",
+        "Z2"
+      ]
+    },
+    "Specification": {
+      "bounded_guard_retrace_pass": true,
+      "fixture_ids": [
+        "Z0",
+        "Z1",
+        "Z2"
+      ]
+    },
+    "Synthesis": {
+      "bounded_guard_retrace_pass": true,
+      "fixture_ids": [
+        "S0",
+        "A0"
+      ]
+    }
+  },
+  "preexecution_correction": "0da58f90687378058ce7caef6f8ce2e9c9812d15",
+  "source_anchors": {
+    "D2_arithmetic_57_9_6": true,
+    "D2_supplied_material_boundary": true,
+    "P5.13_conditional_zero_extension": true,
+    "P5.14_noninjective_finite_composition": true,
+    "P6.22_6.26_cardinality_obstruction": true,
+    "S6.15_6.16_nestedness": true,
+    "T4.7_residual_independence": true,
+    "discussion_fixed_J_nonimplication": true
+  },
+  "sources": {
+    "aggregation": {
+      "hash_and_pages_match": true,
+      "pages": 23,
+      "sha256": "9121703b4f2a9c144eddfa81ad5527585ca16b2469dd50c72ac4babc1bbe8c4d"
+    },
+    "dynamics": {
+      "hash_and_pages_match": true,
+      "pages": 38,
+      "sha256": "9994af76a1a0694e7c020ee2959d920966a4417940b0470e32068c43fa692176"
+    },
+    "formation": {
+      "hash_and_pages_match": true,
+      "pages": 34,
+      "sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe"
+    },
+    "property": {
+      "hash_and_pages_match": true,
+      "pages": 23,
+      "sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c"
+    }
+  },
+  "verdict": "PASS_WITH_BOUNDARY"
+}
