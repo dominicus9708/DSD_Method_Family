@@ -38,6 +38,15 @@ jobs:
           echo P23_JSON_BEGIN
           cat "$RUNNER_TEMP/p23.json"
           echo P23_JSON_END
+      - name: Regression replay P20 and P22 against prior archives
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error "$ROOT/scripts/verify_p20_full_c1_inverse.py" "$RUNNER_TEMP/p20.json"
+          python -W error "$ROOT/scripts/verify_p22_stagevi_bridge_regression.py" "$RUNNER_TEMP/p22.json"
+          python -c 'import json,sys; a=json.load(open(sys.argv[1])); b=json.load(open(sys.argv[2])); assert a==b; print("P20 LEGACY FULL JSON REPLAY EXACT")' "$RUNNER_TEMP/p20.json" "$ROOT/results/p20_full_c1_inverse.json"
+          python -c 'import json,sys; a=json.load(open(sys.argv[1])); b=json.load(open(sys.argv[2])); assert a==b; print("P22 PREVIOUS REGRESSION FULL JSON REPLAY EXACT")' "$RUNNER_TEMP/p22.json" "$ROOT/results/p22_stagevi_regression.json"
       - uses: actions/upload-artifact@v4
         with:
           name: p23-${{ matrix.python-version }}
