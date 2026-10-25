@@ -32,12 +32,13 @@ jobs:
           python -W error -m py_compile "$ROOT/scripts/verify_p23_typed_stagevi_adapter.py"
           python -W error "$ROOT/scripts/verify_p23_typed_stagevi_adapter.py" "$RUNNER_TEMP/p23.json"
           python -c 'import json,sys; j=json.load(open(sys.argv[1])); assert j["all_expected_observations_reproduced"]; assert len(j["positive_checks"])==j["positive_count"] and all(j["positive_checks"].values());assert len(j["expected_negative_checks"])==j["expected_negative_count"] and all(j["expected_negative_checks"].values());print("P23 ALL FLAG CHECKS MATCH")' "$RUNNER_TEMP/p23.json"
-          if [[ -f "$ROOT/results/p23_typed_stagevi_adapter.json" ]]; then
-            python -c 'import json,sys;assert json.load(open(sys.argv[1]))==json.load(open(sys.argv[2]));print("P23 ARCHIVED FULL JSON EXACT MATCH")' "$RUNNER_TEMP/p23.json" "$ROOT/results/p23_typed_stagevi_adapter.json"
-          fi
           echo P23_JSON_BEGIN
           cat "$RUNNER_TEMP/p23.json"
           echo P23_JSON_END
+          if [[ -f "$ROOT/results/p23_typed_stagevi_adapter.json" ]]; then
+            python -c 'import json,sys;assert json.load(open(sys.argv[1]))==json.load(open(sys.argv[2]));print("P23 ARCHIVED FULL JSON EXACT MATCH")' "$RUNNER_TEMP/p23.json" "$ROOT/results/p23_typed_stagevi_adapter.json"
+          fi
+
       - name: Regression replay P20 and P22 against prior archives
         shell: bash
         run: |
