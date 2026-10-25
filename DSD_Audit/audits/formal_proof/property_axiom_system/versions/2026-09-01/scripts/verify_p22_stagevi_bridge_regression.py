@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""P22 non-edit finite Stage-VI/Property interface regression, NOT full FAS formalization.
+r"""P22 non-edit finite Stage-VI/Property interface regression, NOT full FAS formalization.
 From DSD_Method_Family root:
  python DSD_Audit\audits\formal_proof\property_axiom_system\versions\2026-09-01\scripts\verify_p22_stagevi_bridge_regression.py OUTPUT_JSON
 """
