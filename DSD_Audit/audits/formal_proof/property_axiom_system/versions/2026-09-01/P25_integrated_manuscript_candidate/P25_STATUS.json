@@ -1,0 +1,33 @@
+{
+  "case": "PA-P25-INTEGRATED-EN-SOURCE-REGRESSION",
+  "author": "Kwon Dominicus",
+  "baseline_source": "Library EN(2) indexed reconstruction, not authenticated EN(4) raw TeX",
+  "original_locked_pdf": "EN(4), 23 pages",
+  "baseline_build_pages": 22,
+  "amended_build_pages": 23,
+  "amended_sha256": "098e518faf2f123a8da69d7c014a07ac688d36d46593c3519bf94f00a6d476d0",
+  "changed_body_sections": [
+    4,
+    6,
+    9,
+    11
+  ],
+  "numbered_environments": 56,
+  "appendices": 3,
+  "compiled_CI": 40205701637,
+  "python_historical_regression_CI": 40206184870,
+  "python_versions": [
+    "3.10",
+    "3.12"
+  ],
+  "replayed_archived_P": [
+    20,
+    22,
+    23,
+    24
+  ],
+  "en_candidate_compiled": true,
+  "kr_candidate_compiled": false,
+  "original_public_manuscript_edited": false,
+  "whole_fpa": "OPEN"
+}
