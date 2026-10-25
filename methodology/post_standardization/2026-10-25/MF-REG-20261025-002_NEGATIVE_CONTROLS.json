@@ -1,0 +1,45 @@
+{
+  "audit_id": "MF-REG-20261025-002-NC",
+  "negative_controls": [
+    {
+      "mutated_case": "Z0",
+      "mutated_field": "collision_with_membership_difference",
+      "negative_control": "NC1_false_zero_collision",
+      "original_fixture_preserved": true,
+      "process_returncode": 1,
+      "rejected": true,
+      "verdict": "FAIL_WITH_EVIDENCE"
+    },
+    {
+      "mutated_case": "J0",
+      "mutated_field": "j_composite_coincidence",
+      "negative_control": "NC2_false_J_coincidence",
+      "original_fixture_preserved": true,
+      "process_returncode": 1,
+      "rejected": true,
+      "verdict": "FAIL_WITH_EVIDENCE"
+    },
+    {
+      "mutated_case": "B1",
+      "mutated_field": "first_justified_branch",
+      "negative_control": "NC3_false_first_branch",
+      "original_fixture_preserved": true,
+      "process_returncode": 1,
+      "rejected": true,
+      "verdict": "FAIL_WITH_EVIDENCE"
+    },
+    {
+      "mutated_case": "__SOURCE__",
+      "mutated_field": "formation_sha256",
+      "negative_control": "NC4_corrupt_formation_hash",
+      "original_fixture_preserved": true,
+      "process_returncode": 1,
+      "rejected": true,
+      "verdict": "FAIL_WITH_EVIDENCE"
+    }
+  ],
+  "rejected_count": 4,
+  "source_fixture_sha256": "38dad988dd7f0a1d93391f43501d7bcdab99719313a93f6783d644b0993f14c6",
+  "total": 4,
+  "verdict": "4_OF_4_DETECTED"
+}
