@@ -1,0 +1,205 @@
+{
+  "audit_id": "MF-REG-20261025-007",
+  "counts": {
+    "A_pass": 8,
+    "F_pass": 8,
+    "G_pass": 4,
+    "cumulative_distinct_original_rows_passed": 62,
+    "historical_64_of_64_archived_not_reused_as_new_score": true,
+    "original_007_rows_blocked": 2,
+    "original_007_rows_failed": 0,
+    "original_007_rows_pass": 20,
+    "original_007_rows_total": 22,
+    "previous_distinct_BCDE_rows_passed": 42,
+    "remaining_governance_rows_unverified": [
+      "G5",
+      "G6"
+    ]
+  },
+  "frozen_fixture_sha256": "51a89d6fc076ac71b938c7d71f71d0f66d245c18dedc468deb2da40497e0923d",
+  "historical_64_row_result_unchanged": true,
+  "independent_external_evaluator_increment": 0,
+  "old_pdf_pair_replay": "BLOCKED_SOURCE_NOT_AVAILABLE",
+  "rows": {
+    "A1": {
+      "signal": true,
+      "status": "PASS",
+      "why": "Original protocol/precommit/result SHA-and-blob identities must match connector-verified Git history."
+    },
+    "A2": {
+      "signal": [
+        "AGG-CH-001",
+        1
+      ],
+      "status": "PASS",
+      "why": "Frozen original task identifier and version."
+    },
+    "A3": {
+      "signal": "COMBINED_STATIC_DESCRIPTOR",
+      "status": "PASS",
+      "why": "No post-result change of single primary claim level."
+    },
+    "A4": {
+      "signal": true,
+      "status": "PASS",
+      "why": "Both frozen source model IDs and original interface ID match."
+    },
+    "A5": {
+      "signal": [
+        [
+          "c1",
+          "c2",
+          "c0"
+        ],
+        [
+          "i1",
+          "i2",
+          "i0"
+        ]
+      ],
+      "status": "PASS",
+      "why": "Original selected finite channel and property supports match copied prior input."
+    },
+    "A6": {
+      "signal": "AGG-SUM-v1",
+      "status": "PASS",
+      "why": "Original declared sum-operator ID and coordinate/output types preserved."
+    },
+    "A7": {
+      "signal": true,
+      "status": "PASS",
+      "why": "Required actual full typed status and provenance sidecars available."
+    },
+    "A8": {
+      "signal": 44.0,
+      "status": "PASS",
+      "why": "Git-result commit direct parent is old precommit, created 44 sec later; bounds only captured commit chain."
+    },
+    "F1": {
+      "signal": [
+        "1/3",
+        "4/3"
+      ],
+      "status": "PASS",
+      "why": "Exact Fraction arithmetic on three admitted channels, not float rounding."
+    },
+    "F2": {
+      "signal": "EQUAL_WEIGHT_CHANNEL_AVERAGE-v1",
+      "status": "PASS",
+      "why": "Postprocessing has separately frozen readout ID and type."
+    },
+    "F3": {
+      "signal": [
+        [
+          1,
+          4
+        ],
+        [
+          "1/3",
+          "4/3"
+        ]
+      ],
+      "status": "PASS",
+      "why": "Normalized average does not replace finite direct component sum."
+    },
+    "F4": {
+      "signal": "NOT_REQUESTED",
+      "status": "PASS",
+      "why": "No illicit countable extension."
+    },
+    "F5": {
+      "signal": "COLLISION_NOT_TESTED",
+      "status": "PASS",
+      "why": "Historic collision ledger preserved as untested despite separate limited 006 witness."
+    },
+    "F6": {
+      "signal": "INJECTIVITY_NOT_TESTED",
+      "status": "PASS",
+      "why": "No injectivity promotion."
+    },
+    "F7": {
+      "signal": "RECONSTRUCTION_NOT_CLAIMED",
+      "status": "PASS",
+      "why": "No source reconstruction claim."
+    },
+    "F8": {
+      "signal": [
+        "NOT_REQUESTED",
+        "NOT_REQUESTED"
+      ],
+      "status": "PASS",
+      "why": "No dynamic/stability or specialized readout promoted."
+    },
+    "G1": {
+      "signal": true,
+      "status": "PASS",
+      "why": "Conditional task terminal bounded by verified finite inputs; prior B/C D/E historical row evidence is separate."
+    },
+    "G2": {
+      "signal": true,
+      "status": "PASS",
+      "why": "Finite-case protocol conformance under frozen scope and separate row attestations, not global method certification."
+    },
+    "G3": {
+      "signal": "AGGREGATION_METHOD_GAIN_NOT_ASSESSED",
+      "status": "PASS",
+      "why": "Method gain neither approved nor rejected."
+    },
+    "G4": {
+      "signal": true,
+      "status": "PASS",
+      "why": "Maximum supported claim restricted to finite F/G sums, descriptor and separately declared average."
+    },
+    "G5": {
+      "signal": null,
+      "status": "BLOCKED_EVIDENCE",
+      "why": "Historical result says no revision/reopening, but no independently verifiable governance approval or signed evidence was supplied. Do not promote an archived assertion to a fresh positive check."
+    },
+    "G6": {
+      "signal": null,
+      "status": "BLOCKED_EVIDENCE",
+      "why": "Historical result says no revision/reopening, but no independently verifiable governance approval or signed evidence was supplied. Do not promote an archived assertion to a fresh positive check."
+    }
+  },
+  "signals": {
+    "bounded_claim": true,
+    "exact_average": [
+      "1/3",
+      "4/3"
+    ],
+    "finite_interface_ok": true,
+    "formation_sum": [
+      1,
+      4
+    ],
+    "git_result_offset_seconds": 44.0,
+    "historical_git_parent_direct": true,
+    "prior_BCDE_row_ref_verified": true,
+    "property_sum": [
+      3,
+      2
+    ],
+    "sidecars_equal_original_sources": true
+  },
+  "source_locks": {
+    "aggregation": {
+      "locked": true,
+      "pages": 23,
+      "sha256": "9121703b4f2a9c144eddfa81ad5527585ca16b2469dd50c72ac4babc1bbe8c4d",
+      "text_anchor": true
+    },
+    "formation": {
+      "locked": true,
+      "pages": 34,
+      "sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe",
+      "text_anchor": true
+    },
+    "property": {
+      "locked": true,
+      "pages": 23,
+      "sha256": "03a7e5693b73f0332e71a5eb83483e4f3539fc940d5368d5eec1523867e3d79c",
+      "text_anchor": true
+    }
+  },
+  "verdict": "PASS_WITH_BOUNDARY_AND_GOVERNANCE_EVIDENCE_OPEN"
+}
