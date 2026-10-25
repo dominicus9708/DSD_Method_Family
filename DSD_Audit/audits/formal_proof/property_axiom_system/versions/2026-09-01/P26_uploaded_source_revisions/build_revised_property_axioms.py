@@ -146,4 +146,4 @@ if __name__=='__main__':
     p.add_argument('--kr',type=Path,required=True)
     p.add_argument('--out',type=Path,required=True)
     a=p.parse_args()
-    main(a.en,a.kr,a.out)    main(a.en,a.kr,a.out)
+    main(a.en,a.kr,a.out)
