@@ -1,0 +1,180 @@
+{
+  "audit_id": "MF-REG-20261025-007",
+  "author": "Kwon Dominicus",
+  "date_kst": "2026-10-25",
+  "precommit_git_commit": "27a417c26ec2596e015a608affcc5c0ec105b114",
+  "preexecution_date_correction_commit": "6b733404413fe198fe5e017b489f62083f34e054",
+  "source_006_fixture": {
+    "path": "methodology/post_standardization/2026-10-25/MF-REG-20261025-006_FIXTURES.json",
+    "blob": "0563f8fef12e914cd5f444c01162cca0b8f53384",
+    "sha256": "4617ec39a8dd0444be45cf4884cb944c07bfbcfa167eada2d23638fc22bad51a"
+  },
+  "historic_source_identity": {
+    "original_protocol": {
+      "commit": "85b4263ad47cd10acd2230add542f381bd5d6a05",
+      "blob": "5ac926aa40594126b42dac99762ff33fe87450f1",
+      "verified_original_commit": true
+    },
+    "original_precommit": {
+      "commit": "00e4afd77d7f10855f6c4d62eacbeaa154c3a2ce",
+      "blob": "a59810b90b2b93a0e3b63ba7f23dc59178bef566",
+      "verified_original_commit": true,
+      "timestamp_utc": "2026-09-25T19:03:04Z"
+    },
+    "original_result": {
+      "commit": "21b54077a7fe48f690b7528b2ad0025d6b8a1325",
+      "blob": "7e5d071936d52655886a8a91141785cf7ed580f9",
+      "verified_original_commit": true,
+      "timestamp_utc": "2026-09-25T19:03:48Z",
+      "direct_parent": "00e4afd77d7f10855f6c4d62eacbeaa154c3a2ce"
+    }
+  },
+  "frozen_task": {
+    "id": "AGG-CH-001",
+    "version": 1,
+    "claim_level": "COMBINED_STATIC_DESCRIPTOR",
+    "formation_background_id": "B-AGG-001",
+    "property_model_id": "A-AGG-001",
+    "source_interface_id": "AGG-CH-001-SOURCE-v1",
+    "operator_id": "AGG-SUM-v1",
+    "domain": "finite",
+    "W": "R^2",
+    "U": "R^2",
+    "output": "R^2 x R^2",
+    "F": [
+      "c1",
+      "c2",
+      "c0"
+    ],
+    "G": [
+      "i1",
+      "i2",
+      "i0"
+    ],
+    "support_sidecar_required": true,
+    "negative_status_sidecar_required": true
+  },
+  "frozen_postprocessing": {
+    "id": "EQUAL_WEIGHT_CHANNEL_AVERAGE-v1",
+    "separate": true,
+    "average": [
+      "1/3",
+      "4/3"
+    ],
+    "core_replaced": false
+  },
+  "optional_ledger": {
+    "countable_extension": "NOT_REQUESTED",
+    "collision": "COLLISION_NOT_TESTED",
+    "injectivity": "INJECTIVITY_NOT_TESTED",
+    "reconstruction": "RECONSTRUCTION_NOT_CLAIMED",
+    "static_stability": "NOT_REQUESTED",
+    "specialized_readout": "NOT_REQUESTED"
+  },
+  "frozen_result_scope": {
+    "terminal": "AGGREGATION_TASK_ESTABLISHED",
+    "conformance": "AGGREGATION_PROTOCOL_CONFORMANT",
+    "method_gain": "AGGREGATION_METHOD_GAIN_NOT_ASSESSED",
+    "claim_scope": "FINITE_AGGREGATES_COMBINED_DESCRIPTOR_SEPARATE_AVERAGE_ONLY",
+    "source_identity_claim": false,
+    "support_reconstruction_claim": false,
+    "global_injectivity_claim": false,
+    "external_validation_claim": false
+  },
+  "governance_external_attestation": {
+    "G5_protocol_revision_not_required": null,
+    "G6_shared_core_reopening_not_required": null,
+    "status": "NO_INDEPENDENT_EVIDENCE_AVAILABLE"
+  },
+  "prior_separate_audits": {
+    "005": {
+      "row_ids": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8",
+        "B9",
+        "B10",
+        "B11",
+        "B12",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12"
+      ],
+      "passed": 24,
+      "original_row_result_blob": "485d30075b52085df2f8a68e222446e79f49a845"
+    },
+    "006": {
+      "row_ids": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "D8",
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9",
+        "E10"
+      ],
+      "passed": 18,
+      "original_row_result_blob": "773e9a3f3a4176dcb758985e34b543a2ab9d6af0"
+    }
+  },
+  "expected_rows": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6",
+    "F7",
+    "F8",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6"
+  ],
+  "prospective_status_policy": {
+    "A1_A8": "PASS_IF_SOURCE_EVIDENCE_AND_CASE_LOCK_VERIFIED",
+    "F1_F8": "PASS_IF_EXACT_ARITHMETIC_AND_OPTIONAL_SCOPE",
+    "G1_G4": "PASS_IF_BOUNDED_TERMINAL_AND_CLAIM_BOUNDARY",
+    "G5_G6": "BLOCKED_EVIDENCE_WHEN_INDEPENDENT_GOVERNANCE_ATTESTATION_NULL"
+  },
+  "limits": [
+    "Old Formation 2026-08-06 PDF unavailable; no paired old-paper/new-paper execution",
+    "Existing archived 64/64 original case outcome unchanged; this audit independent only at selected row predicate level",
+    "Block G5/G6 when original outcome simply states no revision/no core reopening but independent governance justification missing"
+  ]
+}
