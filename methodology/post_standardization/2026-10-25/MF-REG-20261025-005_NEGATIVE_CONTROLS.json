@@ -1,0 +1,44 @@
+{
+  "audit_id": "MF-REG-20261025-005-NC",
+  "controls": [
+    {
+      "failure_row": "B3",
+      "name": "NC01_c0_not_admitted",
+      "rejected": true,
+      "specific_failure_detected": true
+    },
+    {
+      "failure_row": "B6",
+      "name": "NC02_cX_falsely_zero_extended",
+      "rejected": true,
+      "specific_failure_detected": true
+    },
+    {
+      "failure_row": "B7",
+      "name": "NC03_c1_wrong_component_term",
+      "rejected": true,
+      "specific_failure_detected": true
+    },
+    {
+      "failure_row": "C4",
+      "name": "NC04_u1_undefined_changed_to_zero",
+      "rejected": true,
+      "specific_failure_detected": true
+    },
+    {
+      "failure_row": "C7",
+      "name": "NC05_i2_input_order_swapped",
+      "rejected": true,
+      "specific_failure_detected": true
+    },
+    {
+      "failure_row": null,
+      "name": "NC06_property_pdf_hash_corrupt",
+      "rejected": true,
+      "specific_failure_detected": true
+    }
+  ],
+  "original_fixture_byte_identical": true,
+  "rejected": 6,
+  "total": 6
+}
