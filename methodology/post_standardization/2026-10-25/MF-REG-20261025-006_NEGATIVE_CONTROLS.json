@@ -1,0 +1,51 @@
+{
+  "audit_id": "MF-REG-20261025-006-NC",
+  "controls": [
+    {
+      "id": "NC1_corrupt_combined_property_coordinate",
+      "rejected": true,
+      "specific_target_failed": true,
+      "target_row": "D1"
+    },
+    {
+      "id": "NC2_swap_coordinate_roles",
+      "rejected": true,
+      "specific_target_failed": true,
+      "target_row": "D2"
+    },
+    {
+      "id": "NC3_erase_H_channel_c0",
+      "rejected": true,
+      "specific_target_failed": true,
+      "target_row": "E1"
+    },
+    {
+      "id": "NC4_drop_undefined_sidecar",
+      "rejected": true,
+      "specific_target_failed": true,
+      "target_row": "E3"
+    },
+    {
+      "id": "NC5_admitted_zero_reclassified_absent",
+      "rejected": true,
+      "specific_target_failed": true,
+      "target_row": "E4"
+    },
+    {
+      "id": "NC6_promote_reconstruction_from_aggregate",
+      "rejected": true,
+      "specific_target_failed": true,
+      "target_row": "E9"
+    },
+    {
+      "id": "NC7_corrupt_formation_sha",
+      "rejected": true,
+      "specific_target_failed": true,
+      "target_row": null
+    }
+  ],
+  "detected": 7,
+  "fixture_sha256": "4617ec39a8dd0444be45cf4884cb944c07bfbcfa167eada2d23638fc22bad51a",
+  "immutable_fixture_unchanged": true,
+  "total": 7
+}
