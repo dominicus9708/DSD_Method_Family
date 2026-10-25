@@ -1,0 +1,45 @@
+name: Property P23 Typed Formation Stage-VI Adapter Audit
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p23.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p23_typed_stagevi_adapter.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p23_typed_stagevi_adapter.json'
+  workflow_dispatch:
+jobs:
+  finite-p23:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check prior P22 implementation unchanged
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          test "$(git hash-object "$ROOT/scripts/verify_p22_stagevi_bridge_regression.py")" = "f67469a2bf42953866c64e6faf68a6ad2bb532e3"
+      - name: Run independently defined P23 finite model
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/scripts/verify_p23_typed_stagevi_adapter.py"
+          python -W error "$ROOT/scripts/verify_p23_typed_stagevi_adapter.py" "$RUNNER_TEMP/p23.json"
+          python -c 'import json,sys; j=json.load(open(sys.argv[1])); assert j["all_expected_observations_reproduced"]; assert len(j["positive_checks"])==j["positive_count"] and all(j["positive_checks"].values());assert len(j["expected_negative_checks"])==j["expected_negative_count"] and all(j["expected_negative_checks"].values());print("P23 ALL FLAG CHECKS MATCH")' "$RUNNER_TEMP/p23.json"
+          if [[ -f "$ROOT/results/p23_typed_stagevi_adapter.json" ]]; then
+            python -c 'import json,sys;assert json.load(open(sys.argv[1]))==json.load(open(sys.argv[2]));print("P23 ARCHIVED FULL JSON EXACT MATCH")' "$RUNNER_TEMP/p23.json" "$ROOT/results/p23_typed_stagevi_adapter.json"
+          fi
+          echo P23_JSON_BEGIN
+          cat "$RUNNER_TEMP/p23.json"
+          echo P23_JSON_END
+      - uses: actions/upload-artifact@v4
+        with:
+          name: p23-${{ matrix.python-version }}
+          path: ${{ runner.temp }}/p23.json
+          retention-days: 30
