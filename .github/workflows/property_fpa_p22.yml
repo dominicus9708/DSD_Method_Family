@@ -4,6 +4,7 @@ on:
     paths:
       - '.github/workflows/property_fpa_p22.yml'
       - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/scripts/verify_p22_stagevi_bridge_regression.py'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results/p22_stagevi_regression.json'
   workflow_dispatch:
 jobs:
   p22:
@@ -29,6 +30,7 @@ jobs:
           python -W error -m py_compile "$ROOT/scripts/verify_p22_stagevi_bridge_regression.py"
           python -W error "$ROOT/scripts/verify_p22_stagevi_bridge_regression.py" "$RUNNER_TEMP/p22.json"
           python -c 'import json,sys; j=json.load(open(sys.argv[1])); assert len(j["checks"])==j["checks_count"] and all(j["checks"].values());print("P22 check flags verified:",j["checks_count"]);print("REGRESSION: source gaps stay OPEN")' "$RUNNER_TEMP/p22.json"
+          python -c 'import json,sys;a=json.load(open(sys.argv[1]));b=json.load(open(sys.argv[2]));assert a==b;print("P22 ARCHIVED DETAILED JSON EXACT MATCH")' "$RUNNER_TEMP/p22.json" "$ROOT/results/p22_stagevi_regression.json"
           cat "$RUNNER_TEMP/p22.json"
       - uses: actions/upload-artifact@v4
         with:
