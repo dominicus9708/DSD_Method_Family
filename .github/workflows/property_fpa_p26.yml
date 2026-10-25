@@ -1,0 +1,65 @@
+name: Property P26 Uploaded EN KR Source Revision Regression
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p26.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P26_uploaded_source_revisions/**'
+  workflow_dispatch:
+jobs:
+  source-and-historical:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Rebuild EN KR source byte-identically from uploaded originals
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P26_uploaded_source_revisions
+          python -W error -m py_compile "$DIR/build_revised_property_axioms.py"
+          python -W error "$DIR/build_revised_property_axioms.py" --en "$DIR/locked_upload/DSD_Property_Axiom_System_EN(3).tex" --kr "$DIR/locked_upload/DSD_Property_Axiom_System_KR(3).tex" --out "$RUNNER_TEMP/P26"
+          cmp "$DIR/DSD_Property_Axiom_System_EN_P26_REVISED.tex" "$RUNNER_TEMP/P26/DSD_Property_Axiom_System_EN_P26_REVISED.tex"
+          cmp "$DIR/DSD_Property_Axiom_System_KR_P26_REVISED.tex" "$RUNNER_TEMP/P26/DSD_Property_Axiom_System_KR_P26_REVISED.tex"
+          echo "P26 SOURCE EN KR EXACT BYTE REPLAY PASS"
+      - name: Re-run older P20 P22 P23 P24 archived JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error "$ROOT/scripts/verify_p20_full_c1_inverse.py" "$RUNNER_TEMP/p20_full_c1_inverse.json"
+          python -W error "$ROOT/scripts/verify_p22_stagevi_bridge_regression.py" "$RUNNER_TEMP/p22_stagevi_regression.json"
+          python -W error "$ROOT/scripts/verify_p23_typed_stagevi_adapter.py" "$RUNNER_TEMP/p23_typed_stagevi_adapter.json"
+          python -W error "$ROOT/scripts/verify_p24_paper_change_countermodels.py" "$RUNNER_TEMP/p24_paper_change_countermodels.json"
+          python -c 'import json,os,pathlib; p=pathlib.Path(os.environ["RUNNER_TEMP"]); r=pathlib.Path("DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/results"); names=("p20_full_c1_inverse","p22_stagevi_regression","p23_typed_stagevi_adapter","p24_paper_change_countermodels"); assert all(json.loads((p/(n+".json")).read_text())==json.loads((r/(n+".json")).read_text()) for n in names); print("P26 PRIOR P20 P22 P23 P24 ARCHIVED FULL JSON EXACT PASS")'
+  latex-pair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XeLaTeX English and Korean packages
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-lang-korean texlive-fonts-recommended fonts-unfonts-core latexmk poppler-utils
+      - name: Compile two locked original and two amended sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P26_uploaded_source_revisions
+          cd "$DIR"
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error DSD_Property_Axiom_System_EN_P26_REVISED.tex
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error DSD_Property_Axiom_System_KR_P26_REVISED.tex
+          python -c 'import pathlib,subprocess,re; a=pathlib.Path("DSD_Property_Axiom_System_EN_P26_REVISED.pdf"); b=pathlib.Path("DSD_Property_Axiom_System_KR_P26_REVISED.pdf"); assert a.is_file() and b.is_file(); ca=int(re.search(r"Pages:\s*(\d+)",subprocess.check_output(["pdfinfo",str(a)],text=True)).group(1)); cb=int(re.search(r"Pages:\s*(\d+)",subprocess.check_output(["pdfinfo",str(b)],text=True)).group(1)); print("P26 GITHUB XELATEX PAIR PASS",ca,cb)'
+          sha256sum DSD_Property_Axiom_System_*_P26_REVISED.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: P26-bilingual-revised-PDFs
+          path: |
+            DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P26_uploaded_source_revisions/DSD_Property_Axiom_System_EN_P26_REVISED.pdf
+            DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P26_uploaded_source_revisions/DSD_Property_Axiom_System_KR_P26_REVISED.pdf
+          retention-days: 30
