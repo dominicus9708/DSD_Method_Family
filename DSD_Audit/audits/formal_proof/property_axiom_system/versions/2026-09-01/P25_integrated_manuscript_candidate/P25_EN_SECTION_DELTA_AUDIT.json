@@ -1,0 +1,126 @@
+{
+  "case": "P25-LIBRARY-EN2-INTEGRATED-SOURCE-CANDIDATE-SECTION-DELTA",
+  "source_provenance": "indexed Library EN(2); NOT verified exact author editing source of EN(4) PDF",
+  "numbered_original": 56,
+  "numbered_candidate": 56,
+  "original_sections": 13,
+  "appendices": 3,
+  "sections": [
+    {
+      "section": "§1",
+      "title": "Introduction",
+      "changed": false,
+      "original_chars": 4160,
+      "candidate_chars": 4160
+    },
+    {
+      "section": "§2",
+      "title": "Formation Interface, Signature, and Property Premodels",
+      "changed": false,
+      "original_chars": 7681,
+      "candidate_chars": 7681
+    },
+    {
+      "section": "§3",
+      "title": "Primitive Axioms and Definitional Completion",
+      "changed": false,
+      "original_chars": 6136,
+      "candidate_chars": 6136
+    },
+    {
+      "section": "§4",
+      "title": "Primitive Independence and Residual Minimality",
+      "changed": true,
+      "original_chars": 3425,
+      "candidate_chars": 3633
+    },
+    {
+      "section": "§5",
+      "title": "Complete Property Descriptors and Optional Representations",
+      "changed": false,
+      "original_chars": 2915,
+      "candidate_chars": 2915
+    },
+    {
+      "section": "§6",
+      "title": "Structure-Preserving Maps, Embeddings, and Strict Equivalence",
+      "changed": true,
+      "original_chars": 7418,
+      "candidate_chars": 8936
+    },
+    {
+      "section": "§7",
+      "title": "Staged Comparison and First Branching",
+      "changed": false,
+      "original_chars": 3369,
+      "candidate_chars": 3369
+    },
+    {
+      "section": "§8",
+      "title": "Model Existence and Finite Realization",
+      "changed": false,
+      "original_chars": 4669,
+      "candidate_chars": 4669
+    },
+    {
+      "section": "§9",
+      "title": "Compression and Classification Obstructions",
+      "changed": true,
+      "original_chars": 2638,
+      "candidate_chars": 2814
+    },
+    {
+      "section": "§10",
+      "title": "Relation to the Realized-Axis Specialization and Later DSD Layers",
+      "changed": false,
+      "original_chars": 2669,
+      "candidate_chars": 2669
+    },
+    {
+      "section": "§11",
+      "title": "Main Property-Closure Theorem",
+      "changed": true,
+      "original_chars": 3371,
+      "candidate_chars": 3536
+    },
+    {
+      "section": "§12",
+      "title": "Discussion and Scope",
+      "changed": false,
+      "original_chars": 1991,
+      "candidate_chars": 1991
+    },
+    {
+      "section": "§13",
+      "title": "Conclusion",
+      "changed": false,
+      "original_chars": 1870,
+      "candidate_chars": 1870
+    },
+    {
+      "section": "Appendix A",
+      "title": "Typing and Notation",
+      "changed": false,
+      "original_chars": 1818,
+      "candidate_chars": 1818
+    },
+    {
+      "section": "Appendix B",
+      "title": "Axiom, Definition, and Dependency Map",
+      "changed": false,
+      "original_chars": 1745,
+      "candidate_chars": 1745
+    },
+    {
+      "section": "Appendix C",
+      "title": "Finitely Specified Reconstruction Protocol",
+      "changed": false,
+      "original_chars": 3223,
+      "candidate_chars": 3223
+    }
+  ],
+  "changed_only_expected_sections": true,
+  "author_preserved": true,
+  "complete_document": true,
+  "source_pdf_tex_zenodo_unmodified": true
+}
