@@ -1,0 +1,135 @@
+{
+  "audit_id": "MF-REG-20261025-004",
+  "case_results": [
+    {
+      "case": "CMP-CH-001/T2",
+      "expected": {
+        "conformance": "CONFORMANT",
+        "correspondence_class": "DIRECT_CORRESPONDENCE",
+        "gain": "NOT_ASSESSED",
+        "injective": true,
+        "preserved_mapped_status": true,
+        "preserved_src_edges": true,
+        "strict_equivalence_under_frozen_criterion": false,
+        "structural_equivalence_result": "no",
+        "surjective_full_target": false,
+        "terminal": "COMPARISON_RESOLVED",
+        "unmapped_target_nodes": [
+          "y2"
+        ]
+      },
+      "field_match": {
+        "conformance": true,
+        "correspondence_class": true,
+        "gain": true,
+        "injective": true,
+        "preserved_mapped_status": true,
+        "preserved_src_edges": true,
+        "strict_equivalence_under_frozen_criterion": true,
+        "structural_equivalence_result": true,
+        "surjective_full_target": true,
+        "terminal": true,
+        "unmapped_target_nodes": true
+      },
+      "id": "T2",
+      "observed": {
+        "conformance": "CONFORMANT",
+        "correspondence_class": "DIRECT_CORRESPONDENCE",
+        "gain": "NOT_ASSESSED",
+        "injective": true,
+        "preserved_mapped_status": true,
+        "preserved_src_edges": true,
+        "strict_equivalence_under_frozen_criterion": false,
+        "structural_equivalence_result": "no",
+        "surjective_full_target": false,
+        "terminal": "COMPARISON_RESOLVED",
+        "unmapped_target_nodes": [
+          "y2"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "case": "CMP-CH-001/T3",
+      "expected": {
+        "conformance": "CONFORMANT",
+        "correspondence_class": "ENCODED_CORRESPONDENCE",
+        "explicit_bridge_used": true,
+        "gain": "NOT_ASSESSED",
+        "injective": true,
+        "literal_label_equality": false,
+        "preserved_inverse_edges": true,
+        "preserved_mapped_status": true,
+        "preserved_src_edges": true,
+        "structural_equivalence_result": "equivalent_under_supplied_encoding_only",
+        "surjective_full_target": true,
+        "terminal": "COMPARISON_RESOLVED"
+      },
+      "field_match": {
+        "conformance": true,
+        "correspondence_class": true,
+        "explicit_bridge_used": true,
+        "gain": true,
+        "injective": true,
+        "literal_label_equality": true,
+        "preserved_inverse_edges": true,
+        "preserved_mapped_status": true,
+        "preserved_src_edges": true,
+        "structural_equivalence_result": true,
+        "surjective_full_target": true,
+        "terminal": true
+      },
+      "id": "T3",
+      "observed": {
+        "conformance": "CONFORMANT",
+        "correspondence_class": "ENCODED_CORRESPONDENCE",
+        "explicit_bridge_used": true,
+        "gain": "NOT_ASSESSED",
+        "injective": true,
+        "literal_label_equality": false,
+        "preserved_inverse_edges": true,
+        "preserved_mapped_status": true,
+        "preserved_src_edges": true,
+        "structural_equivalence_result": "equivalent_under_supplied_encoding_only",
+        "surjective_full_target": true,
+        "terminal": "COMPARISON_RESOLVED"
+      },
+      "pass": true
+    }
+  ],
+  "counts": {
+    "cases": 2,
+    "cases_passed": 2,
+    "fields": 23,
+    "fields_passed": 23
+  },
+  "historic_result_counts_prior_only": {
+    "Aggregation": 64,
+    "Comparison": 40,
+    "Compression": 72,
+    "Reconstruction": 80
+  },
+  "historical_full_gate_replay": {
+    "Aggregation": "NOT_EXECUTED",
+    "Comparison": "NOT_EXECUTED",
+    "Compression": "NOT_EXECUTED",
+    "Reconstruction": "NOT_EXECUTED"
+  },
+  "limits": [
+    "two archived input subcases newly reexecuted, not the historical full 40-check Comparison challenge",
+    "strict-equivalence under Comparison frozen criterion is not entire Formation strict isomorphism",
+    "old 2026-08-06 Formation PDF missing; no direct paired old-PDF/new-PDF replay"
+  ],
+  "old_formation_pdf_direct_replay": "BLOCKED_SOURCE_NOT_AVAILABLE",
+  "source": {
+    "matched_frozen_version": true,
+    "pages": 34,
+    "sha256": "af721c4188a853880fcc896b80da494e4caa6000ab0af3131ee64cd0770fddfe"
+  },
+  "source_anchors": {
+    "Definition 6.15": true,
+    "Proposition 6.22": true,
+    "Theorem 6.16": true
+  },
+  "verdict": "PASS_WITH_BOUNDARY"
+}
