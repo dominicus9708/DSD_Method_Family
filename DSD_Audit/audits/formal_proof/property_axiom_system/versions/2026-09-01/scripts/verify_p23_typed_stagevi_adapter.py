@@ -210,6 +210,7 @@ class PropertyInput:
     applicability:tuple[tuple[str,frozenset[tuple]],...]
     satisfied:tuple[tuple[tuple[str,str],frozenset[tuple]],...]
     assignments:tuple[tuple[str,tuple[tuple[tuple,int],...]],...]
+    surplus_policy:str="ignore"  # no-required primitive != source-forbidden surplus
 
 def property_baseline(s, empty=False):
     c=s.channels[0] if s.channels else None
@@ -237,6 +238,8 @@ def complete(s,p):
     ap=mapping(p.applicability)
     sat=mapping(p.satisfied)
     ass=mapping(p.assignments)
+    require(p.surplus_policy in ("ignore","reject"),"surplus_policy")
+    allowed_ap=set(); allowed_sat=set(); allowed_ass=set()
     states={}
     for k in p.declared:
         kind=kinds[k]
@@ -244,11 +247,11 @@ def complete(s,p):
         if kind.zero is not None:
             require(kind.zero in kind.values,"zero_outside_property_values")
         if any(a not in ins and a not in aux for a in kind.profile):
-            require(k not in ap and k not in ass and all(t[0]!=k for t in sat),
-                    "unavailable_no_required_primitive")
             states[k]="unavailable"
             continue
         X=frozenset(product(*(sorted(ins[a] if a in ins else aux[a],key=repr) for a in kind.profile)))
+        allowed_ap.add(k); allowed_ass.add(k)
+        for d in kind.dependencies: allowed_sat.add((k,d))
         require(k in ap and k in ass,"primitive_coordinate_required")
         require(ap[k]<=X,"applicability_type")
         for d in kind.dependencies:
@@ -268,6 +271,9 @@ def complete(s,p):
             elif kind.zero is not None:ss[x]="defined-zero" if xi[x]==kind.zero else "defined-nonzero"
             else:ss[x]="defined"
         states[k]=ss
+    if p.surplus_policy=="reject":
+        require(set(ap)<=allowed_ap and set(ass)<=allowed_ass and set(sat)<=allowed_sat,
+                "surplus_primitive_coordinates_rejected_by_declared_policy")
     return states
 
 def compose_after_stageVI(s,terms):
@@ -325,6 +331,11 @@ def main():
     statesfull=complete(s,full)
     check("supplied_empty_aux_profile_valid",statesfull["unsupplied"]=={})
     check("unavailable_distinguished_from_available_empty",statesfull["unsupplied"]!=states["unsupplied"])
+    surplus=replace(p,applicability=p.applicability+(("unsupplied",frozenset()),))
+    check("unavailable_surplus_ignored_when_no_source_prohibition",
+          complete(s,surplus)["unsupplied"]=="unavailable")
+    reject("unavailable_surplus_policy_reject",
+           lambda:complete(s,replace(surplus,surplus_policy="reject")))
     check("stageVII_map_not_stageVI_identity",compose_after_stageVI(s,{ch:4})==4 and compose_after_stageVI(s,{ch:8})==8 and valid_stage(s))
     # Non-describable candidate is still part of full Stage-VI, even if admitted-channel set unchanged.
     f_alt=replace(f,expressions=f.expressions[:-1]+(replace(f.expressions[-1],name="unused2"),))
