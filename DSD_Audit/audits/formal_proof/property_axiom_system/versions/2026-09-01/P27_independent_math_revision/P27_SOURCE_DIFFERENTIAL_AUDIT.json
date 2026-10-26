@@ -1,0 +1,26 @@
+{
+  "EN": {
+    "original_sha256": "f4b5c7dcce1f6b50ab9d1dbea51260cd64be9a91c0359acb5842f5026ef7e0a5",
+    "revised_sha256": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "total_sections": 13,
+    "appendices": 3,
+    "numbered_items": 56,
+    "labels": 36,
+    "changed_sections": [
+      6,
+      9
+    ]
+  },
+  "KR": {
+    "original_sha256": "8f15435d8e3f122ae45c378b4c4a98cd908d8551faeffa2a2ecb3d2e66a7ecf9",
+    "revised_sha256": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb",
+    "total_sections": 13,
+    "appendices": 3,
+    "numbered_items": 56,
+    "labels": 36,
+    "changed_sections": [
+      6,
+      9
+    ]
+  }
+}
