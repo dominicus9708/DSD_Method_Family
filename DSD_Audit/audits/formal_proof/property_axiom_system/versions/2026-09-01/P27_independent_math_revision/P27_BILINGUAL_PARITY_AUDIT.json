@@ -1,0 +1,11 @@
+{
+  "display_math_each": 78,
+  "normalized_display_alignment": 78,
+  "inline_math_each": 222,
+  "labels_each": 36,
+  "source_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "note": "Display comparison removes translated \\text{...} and period/comma differences. This is not semantic certification of all translated sentences."
+}
