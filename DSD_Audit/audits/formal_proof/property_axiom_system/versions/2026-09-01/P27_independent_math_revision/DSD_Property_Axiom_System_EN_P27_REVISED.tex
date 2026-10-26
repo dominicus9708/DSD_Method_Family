@@ -1,0 +1,1365 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[
+colorlinks=true,
+linkcolor=blue,
+citecolor=blue,
+urlcolor=blue,
+pdftitle={Property Axiom System in Dimensional-Structural Describability},
+pdfauthor={Kwon Dominicus},
+pdfsubject={A static typed property axiom system over Stage-VI DSD formation records},
+pdfkeywords={Dimensional-Structural Describability, property axiom system, typed property profiles, partial assignment, applicability, contextual dependency, property embedding, strict property isomorphism, finite realization}
+]{hyperref}
+
+\setlength{\emergencystretch}{3em}
+\setlist{nosep}
+
+% ---------Notation----------
+\newcommand{\FVI}{\mathcal F_{L}^{\le 6}}
+\newcommand{\Sin}{\mathcal S_{L}^{\mathrm{inh}}}
+\newcommand{\Saux}{\mathcal S_{L}^{\mathrm{aux}}}
+\newcommand{\Sprop}{\mathcal S_{L}^{\mathrm{prop}}}
+\newcommand{\Pihat}{\widehat{\Pi}_{L}}
+\newcommand{\PiZero}{\widehat{\Pi}_{L}^{0}}
+\newcommand{\Dep}{\Delta_{L}}
+\newcommand{\Ap}{\operatorname{Ap}}
+\newcommand{\DepSat}{\operatorname{DepSat}}
+\newcommand{\Sat}{\operatorname{Sat}}
+\newcommand{\Dom}{\operatorname{Dom}}
+\newcommand{\Stat}{\operatorname{Stat}}
+\newcommand{\PropRec}{\mathcal R^{\mathrm{prop}}}
+\newcommand{\CompProp}{\operatorname{CompProp}}
+\newcommand{\RedProp}{\operatorname{RedProp}}
+\newcommand{\Enc}{\operatorname{Enc}}
+\newcommand{\Pfin}{\mathcal P_{\mathrm{fin}}}
+
+% ---------Theorem environments----------
+\newtheorem{axiom}{Primitive Axiom}
+\renewcommand{\theaxiom}{\Roman{axiom}}
+\newtheorem{closureclause}{Definitional Closure Clause}
+\renewcommand{\theclosureclause}{C\arabic{closureclause}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{model}[theorem]{Model}
+\newtheorem{countermodel}[theorem]{Countermodel}
+\newtheorem{construction}[theorem]{Construction}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{Property Axiom System in Dimensional-Structural Describability\\[0.35em]
+\large A Typed Applicability-and-Dependency Extension of the Formation Axiom System}
+\author{Kwon Dominicus\\\small Independent Researcher, Incheon, Republic of Korea}
+\date{2026.09.01\\[0.4em]\small\href{mailto:mincuk0808@gmail.com}{\texttt{mincuk0808@gmail.com}}}
+
+\begin{document}
+\maketitle
+
+% ---------Abstract----------
+\begin{abstract}
+This paper formulates a general Property Axiom System for Dimensional-Structural Describability (DSD) over the Stage-VI channel-complete truncation of a fixed Formation Axiom System model.
+The formation layer determines which configurations, assignments, roles, and operational channels have been admitted; the present static extension begins from that inherited record and asks which additional properties may be declared, on which typed inputs they are applicable, which contextual prerequisites they require, and where their values are actually defined.
+Property kinds carry finite typed input profiles rather than untyped arity alone, and the profile sorts are not restricted to axes, lines, subspaces, normals, or any other one-dimensional geometric specialization.
+Inherited sorts supplied by the formation record are separated from auxiliary sorts supplied by a property extension, while value carriers and zero-bearing property kinds are fixed by the shared property signature.
+Two residual primitive axioms remain after typing consequences are removed.
+Property-application soundness requires every defined property assignment to lie inside its declared applicability region, and contextual-dependency soundness requires every defined assignment to satisfy each prerequisite declared for that property kind.
+The converse implications are not imposed, so applicable but undefined inputs remain distinguishable from inapplicable inputs, prerequisite-unsatisfied inputs, defined zero, and defined nonzero or otherwise defined values.
+The two primitive axioms are mutually non-derivable by one-input finite countermodels and are not consequences of typing alone.
+A definitional completion uniquely reconstructs assignment domains, dependency-satisfied regions, status records, and the complete set of defined typed property records from every primitive property core, while primitive reduction recovers the original core.
+Forward property maps form a possibly large category, property embeddings form a wide subcategory and induce a submodel preorder, and strict Stage-VI-fixed, signature-fixed property isomorphisms are exactly the bijective embeddings with matching auxiliary-sort availability and property-kind declarations; closure under identities, inverses, and composition makes strict property equivalence an equivalence relation.
+Nested property-stage comparison sets define the first branching index of a strictly nonisomorphic pair, and the purely definitional completion stage cannot create an independent first branch.
+Every Stage-VI formation record admits a trivial property extension, every finite compatible primitive presentation has a standard finite realization, and explicit finite witnesses realize branching at declaration, applicability/dependency, and assignment levels.
+Finally, equal per-property summary counts need not determine strict property equivalence, because summary statistics can erase cross-property correlation structure.
+The earlier realized-axis property system is therefore retained as a geometric specialization rather than as the universal property core.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Dimensional-Structural Describability; Property Axiom System; typed property profile; partial property assignment; applicability; contextual dependency; property embedding; strict property isomorphism; first branching; finite realization
+
+\clearpage
+\hypersetup{linkcolor=black}
+\tableofcontents
+\hypersetup{linkcolor=blue}
+\clearpage
+
+% ---------Section 1. Introduction----------
+\section{Introduction}
+\label{sec:introduction}
+
+An axiomatic presentation should distinguish primitive data, genuine constraints, definitions, and consequences rather than promoting every convenient coordinate to the same logical status \cite{TarskiLogic}.
+The Formation Axiom System for Dimensional-Structural Describability (DSD) applies that discipline to structural admission, sound restriction, realization, configuration describability, quantity-specific partial assignment, operational-channel formation, and finite composition \cite{KwonFormation}.
+The present paper applies the same discipline to the next static layer: properties assigned to typed inputs built over a fixed Stage-VI formation record.
+
+The motivating issue is simple but structurally important.
+The existence of a formed object does not imply that every candidate property is declared for that object, declaration of a property kind does not imply that the property applies to every well-typed input, applicability does not imply that every contextual prerequisite is available, and satisfaction of those prerequisites does not imply that a value has actually been assigned.
+Consequently,
+\[
+\text{undeclared}\neq\text{inapplicable}\neq\text{prerequisite-unsatisfied}\neq\text{undefined}\neq\text{defined zero}.
+\]
+A property theory that collapses any of these distinctions loses information before later aggregation or dynamics begins.
+
+An earlier DSD paper developed these distinctions inside a realized-axis specialization, with axis lines, line-sensitive and tag-sensitive records, symmetric bilinear data, normals, axis rank, and cyclic closure \cite{KwonAxisProperty}.
+Those structures remain mathematically meaningful inside that specialization, but they are not prerequisites for property structure in general.
+The present revision therefore extracts the axis-independent core and treats the realized-axis machinery as a downstream geometric specialization.
+
+The generalization makes three changes.
+First, the input-sort universe is open: a property may accept formation-inherited sorts, extension-supplied auxiliary sorts, or finite mixtures of them, without assuming a one-dimensional carrier.
+Second, the earlier configuration index is not imposed as a hidden outer coordinate on every property assignment; if a configuration or pair of configurations is part of the property input, it appears explicitly in the typed profile.
+Third, the two residual primitive axioms are reformulated at the level that survives every specialization: application soundness and contextual-dependency soundness.
+
+The principal results establish mutual non-derivability of those two axioms, unique explicit completion and primitive reduction, model existence and finite standard realization, structure-preserving forward maps and embeddings, a submodel preorder, strict property equivalence, staged first branching, and finite compression obstructions.
+Optional matrices, tensors, operators, graphs, or other representations are placed in a separate representation extension rather than identified with the abstract property structure.
+Later aggregation, dynamics, and geometric specializations enter through separate interfaces.
+
+Section~\ref{sec:formal-setting} fixes the Stage-VI formation interface and the general property signature.
+Section~\ref{sec:axioms} states the two primitive axioms and the explicit completion.
+Section~\ref{sec:independence} proves independence and residual minimality.
+Section~\ref{sec:descriptor-representation} defines complete property descriptors and the optional representation extension.
+Section~\ref{sec:maps} develops forward maps, embeddings, submodels, and strict equivalence.
+Section~\ref{sec:branching} defines property-stage truncations and first branching.
+Section~\ref{sec:finite} proves existence and finite realization.
+Section~\ref{sec:compression} gives classification obstructions.
+Section~\ref{sec:specialization} records the relation to the realized-axis specialization and later DSD layers.
+Section~\ref{sec:main-theorem} collects the core results.
+
+% ---------Section 2. Formation Interface, Signature, and Property Premodels----------
+\section{Formation Interface, Signature, and Property Premodels}
+\label{sec:formal-setting}
+
+% ---------Section 2.1. Fixed Stage-VI formation background----------
+\subsection{Fixed Stage-VI formation background}
+
+Fix a full DSD formation model over a scalar field \(\mathbb F\), and retain only its Stage-VI channel-complete truncation
+\[
+\FVI.
+\]
+The present theory is parameterized by this record.
+In particular, the post-Stage-VI term space, component-term map, finite composition domain, and composite-description operator are not coordinates of the property core.
+The inherited Stage-VI record includes the candidate and describable configuration data, material and assignment data, roles, the candidate-channel universe, and the admitted operational-channel set \(\mathfrak C_L\) with channel identity
+\[
+c=(p,a,\lambda,v,\rho).
+\]
+The property layer does not alter those assignments, roles, channels, or formation traces.
+
+All carriers, property kinds, dependency kinds, maps, relations, and individual descriptors are sets in a fixed background set theory, taken here to be ZFC \cite{JechSetTheory}.
+Collections of all property models over a fixed background may be metatheoretic classes unless a set-sized comparison family is fixed.
+The use of many-sorted carriers and structure-preserving maps follows standard set-theoretic model practice \cite{HodgesModelTheory}; partial property assignments are ordinary set-theoretic partial functions, equivalently represented by their graphs \cite{FarmerPartial}.
+
+% ---------Section 2.2. Shared general property signature----------
+\subsection{Shared general property signature}
+
+\begin{definition}[Shared property signature]
+\label{def:signature}
+A shared property signature over \(\FVI\) is a tuple
+\[
+\Sprop=
+\left(
+\Sin,\Saux,
+\{X_L^{\mathrm{inh}}(s)\}_{s\in\Sin},
+\Pihat,\sigma_L,
+\{Z_{L,\varpi}\}_{\varpi\in\Pihat},
+\PiZero,\{0_{L,\varpi}\}_{\varpi\in\PiZero},
+\Dep,\delta_L
+\right),
+\]
+where:
+\begin{enumerate}[label=(\arabic*)]
+\item \(\Sin\) is the set of inherited input-sort labels whose carriers are already determined by \(\FVI\);
+\item \(\Saux\) is a disjoint set of auxiliary input-sort labels whose carriers may be supplied by a property extension;
+\item \(X_L^{\mathrm{inh}}(s)\) is the inherited carrier of \(s\in\Sin\);
+\item \(\Pihat\) is the candidate property-kind universe;
+\item for every \(\varpi\in\Pihat\),
+\[
+\sigma_L(\varpi)=(s_1,\ldots,s_m)\in(\Sin\sqcup\Saux)^m,
+\qquad m\ge 1,
+\]
+is its finite typed input profile;
+\item \(Z_{L,\varpi}\) is the value carrier of \(\varpi\);
+\item \(\PiZero\subseteq\Pihat\) is the zero-bearing subfamily and \(0_{L,\varpi}\in Z_{L,\varpi}\) is distinguished for every \(\varpi\in\PiZero\);
+\item \(\Dep\) is the universe of contextual prerequisite kinds; and
+\item \(\delta_L(\varpi)\in\Pfin(\Dep)\) is the finite prerequisite set declared by the shared signature for \(\varpi\).
+\end{enumerate}
+\end{definition}
+
+The signature deliberately does not require labels such as \(\mathrm{tag}\), \(\mathrm{line}\), \(\mathrm{sub}\), or \(\mathrm{normal}\).
+Such labels may be introduced by a later specialization as auxiliary sorts, but they are not universal property coordinates.
+Likewise, a property profile may contain one configuration, two configurations, a channel and an auxiliary state, or any other finite typed combination admitted by the shared signature.
+
+\begin{remark}[Property names do not determine mathematics]
+A candidate label \(\varpi\) carries no mathematical law merely because of its name.
+Its formal role in the present system is fixed by its profile, value carrier, zero-bearing status, prerequisite set, model-level declaration, applicability relation, and partial assignment.
+An application may impose further semantics, symmetry, antisymmetry, continuity, constitutive meaning, or empirical interpretation, but none is inferred from the label alone.
+\end{remark}
+
+% ---------Section 2.3. Carrier availability and typed input products----------
+\subsection{Carrier availability and typed input products}
+
+\begin{definition}[Auxiliary carrier supply]
+A property presentation \(A\) supplies a partial carrier map
+\[
+X_A^{\mathrm{aux}}:\Saux\rightharpoonup \mathbf{Set},
+\]
+where every defined value \(X_A^{\mathrm{aux}}(s)\) is a set.
+Define the combined carrier interpretation
+\[
+X_A(s):=
+\begin{cases}
+X_L^{\mathrm{inh}}(s), & s\in\Sin,\\
+X_A^{\mathrm{aux}}(s), & s\in\Dom(X_A^{\mathrm{aux}}).
+\end{cases}
+\]
+An auxiliary sort outside \(\Dom(X_A^{\mathrm{aux}})\) is unavailable in \(A\).
+\end{definition}
+
+\begin{definition}[Profile availability]
+Let \(\sigma_L(\varpi)=(s_1,\ldots,s_m)\).
+The profile of \(\varpi\) is \emph{available in \(A\)} when every \(X_A(s_r)\) is defined.
+When available, define the typed input product
+\[
+X_{A,\varpi}:=\prod_{r=1}^{m}X_A(s_r).
+\]
+The order of coordinates is retained unless an additional symmetry condition is supplied by a later extension.
+\end{definition}
+
+This definition makes contextual coordinates explicit.
+There is no mandatory external configuration index \(p\) attached to every property map.
+If a property depends on a configuration, configuration pair, channel, material item, or other inherited object, that sort appears in \(\sigma_L(\varpi)\).
+
+% ---------Section 2.4. Property premodels and primitive presentations----------
+\subsection{Property premodels and primitive presentations}
+
+\begin{definition}[Property premodel]
+\label{def:premodel}
+A \emph{property premodel} over \((\FVI,\Sprop)\) is a set-coded tuple
+\[
+A^{\mathrm{pre}}=
+\left(
+X_A^{\mathrm{aux}},
+\Pi_A,
+\{\Ap_{A,\varpi}\},
+\{\Sat_{A,\varpi,d}\},
+\{\Xi_{A,\varpi}\}
+\right)
+\]
+satisfying the following typing requirements.
+\begin{enumerate}[label=(\arabic*)]
+\item \(\Pi_A\subseteq\Pihat\) is the set of property kinds declared in \(A\).
+\item If \(\varpi\in\Pi_A\) and its profile is available, then
+\[
+\Ap_{A,\varpi}\subseteq X_{A,\varpi}
+\]
+is the primitive applicability set.
+\item For every \(d\in\delta_L(\varpi)\),
+\[
+\Sat_{A,\varpi,d}\subseteq X_{A,\varpi}
+\]
+is the primitive set of inputs satisfying prerequisite \(d\).
+\item The primitive property assignment is a partial function
+\[
+\Xi_{A,\varpi}:X_{A,\varpi}\rightharpoonup Z_{L,\varpi}.
+\]
+\end{enumerate}
+If \(\varpi\) is undeclared or its profile is unavailable, no applicability set, prerequisite-satisfaction set, or assignment map for \(\varpi\) is required.
+A premodel may fail either primitive axiom introduced below.
+\end{definition}
+
+\begin{definition}[Primitive property core]
+A \emph{primitive property core} is a well-typed property premodel satisfying Primitive Axioms~I and II.
+A \emph{full property model} is a primitive property core equipped with the uniquely determined derived coordinates of Definitional Closure Clause~C1.
+\end{definition}
+
+% ---------Section 2.5. Property stages----------
+\subsection{Property stages}
+
+\begin{definition}[Property-stage truncations]
+\label{def:property-stages}
+For a full property model \(A\), define the cumulative property-stage records
+\[
+\mathcal P_A^{\le0},\ldots,\mathcal P_A^{\le5}
+\]
+by
+\[
+\begin{aligned}
+\mathcal P_A^{\le0}&:=(\FVI,\Sprop),\\
+\mathcal P_A^{\le1}&:=(\mathcal P_A^{\le0};X_A^{\mathrm{aux}}),\\
+\mathcal P_A^{\le2}&:=(\mathcal P_A^{\le1};\Pi_A),\\
+\mathcal P_A^{\le3}&:=(\mathcal P_A^{\le2};\{\Ap_{A,\varpi}\},\{\Sat_{A,\varpi,d}\}),\\
+\mathcal P_A^{\le4}&:=(\mathcal P_A^{\le3};\{\Xi_{A,\varpi}\}),\\
+\mathcal P_A^{\le5}&:=(\mathcal P_A^{\le4};\text{all derived completion coordinates}).
+\end{aligned}
+\]
+The stage numbers record dependency order rather than physical time.
+\end{definition}
+
+% ---------Section 3. Primitive Axioms and Definitional Completion----------
+\section{Primitive Axioms and Definitional Completion}
+\label{sec:axioms}
+
+% ---------Section 3.1. Property-application soundness----------
+\subsection{Property-application soundness}
+
+\begin{axiom}[Property-application soundness]
+\label{ax:application}
+For every declared property kind \(\varpi\) whose profile is available,
+\[
+\Dom(\Xi_{A,\varpi})\subseteq\Ap_{A,\varpi}.
+\]
+The converse inclusion is not required.
+\end{axiom}
+
+Primitive Axiom~I states that a property value cannot be defined on an input that the property presentation itself declares inapplicable.
+It does not force every applicable input to carry a value.
+Hence
+\[
+x\in\Ap_{A,\varpi}\setminus\Dom(\Xi_{A,\varpi})
+\]
+is permitted and records an applicable but undefined input.
+
+% ---------Section 3.2. Contextual-dependency soundness----------
+\subsection{Contextual-dependency soundness}
+
+\begin{definition}[Dependency-satisfied region]
+For a declared property kind \(\varpi\) with available profile, define
+\[
+\DepSat_{A,\varpi}:=
+\bigcap_{d\in\delta_L(\varpi)}\Sat_{A,\varpi,d}.
+\]
+When \(\delta_L(\varpi)=\varnothing\), use the empty-intersection convention
+\[
+\DepSat_{A,\varpi}:=X_{A,\varpi}.
+\]
+\end{definition}
+
+\begin{axiom}[Contextual-dependency soundness]
+\label{ax:dependency}
+For every declared property kind \(\varpi\) whose profile is available,
+\[
+\Dom(\Xi_{A,\varpi})\subseteq\DepSat_{A,\varpi}.
+\]
+Equivalently, if \(\Xi_{A,\varpi}(x)\) is defined and \(d\in\delta_L(\varpi)\), then
+\[
+x\in\Sat_{A,\varpi,d}.
+\]
+\end{axiom}
+
+The prerequisite relation is nonrecursive in the core system.
+It records whether a declared contextual prerequisite is satisfied at a typed input; it does not define one property by recursively evaluating another property.
+Property-to-property recursion, fixed points, or cyclic dependencies require a separate extension and are not assumed here.
+
+% ---------Section 3.3. Derived domains, statuses, and records----------
+\subsection{Derived domains, statuses, and records}
+
+\begin{definition}[Assignment domain]
+For every declared property kind with available profile, define
+\[
+D_{A,\varpi}:=\Dom(\Xi_{A,\varpi}).
+\]
+\end{definition}
+
+\begin{definition}[Property status]
+\label{def:status}
+For a candidate property kind \(\varpi\), the status is determined as follows.
+\begin{enumerate}[label=(\arabic*)]
+\item If \(\varpi\notin\Pi_A\), its status is \emph{undeclared}.
+\item If \(\varpi\in\Pi_A\) but its profile is unavailable, its status is \emph{profile unavailable}.
+\item If the profile is available and \(x\notin\Ap_{A,\varpi}\), the input status is \emph{inapplicable}.
+\item If \(x\in\Ap_{A,\varpi}\setminus\DepSat_{A,\varpi}\), the input status is \emph{prerequisite unsatisfied}.
+\item If \(x\in\Ap_{A,\varpi}\cap\DepSat_{A,\varpi}\setminus D_{A,\varpi}\), the input status is \emph{applicable but undefined}.
+\item If \(x\in D_{A,\varpi}\), the status is \emph{defined}. For \(\varpi\in\PiZero\), this refines to \emph{defined zero} when \(\Xi_{A,\varpi}(x)=0_{L,\varpi}\) and \emph{defined nonzero} otherwise.
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Defined property records]
+The set of defined typed property records is
+\[
+\PropRec_A:=
+\left\{
+(\varpi,x,z):
+\varpi\in\Pi_A,
+\ x\in D_{A,\varpi},
+\ z=\Xi_{A,\varpi}(x)
+\right\}.
+\]
+The property kind, the complete ordered typed input, and the assigned value are all retained.
+\end{definition}
+
+\begin{remark}[Formation assignments are not property assignments]
+The map \(\Xi_{A,\varpi}\) is an extension-level property assignment.
+It does not modify any formation assignment \(q_{L,\lambda}\), does not add a role, and does not create a new operational channel in \(\FVI\).
+Promoting a property value into formation-channel identity requires a new formation model or an explicit interpretation interface.
+\end{remark}
+
+% ---------Section 3.4. Explicit completion----------
+\subsection{Explicit completion}
+
+\begin{closureclause}[Unique explicit property completion]
+\label{cl:completion}
+Given a primitive property core, define every assignment domain \(D_{A,\varpi}\), every dependency-satisfied region \(\DepSat_{A,\varpi}\), every status in Definition~\ref{def:status}, and the defined property-record set \(\PropRec_A\) by the formulas above.
+The resulting full property model is called the \emph{explicit completion} of the primitive core and is denoted \(\CompProp(A^{\mathrm{prim}})\).
+\end{closureclause}
+
+\begin{definition}[Primitive reduction]
+The primitive reduction \(\RedProp(A)\) of a full property model forgets only the derived domains, dependency intersections, statuses, and defined-record set, retaining the Stage-VI base, shared signature, auxiliary carriers, declarations, primitive applicability sets, primitive prerequisite-satisfaction sets, and primitive assignment maps.
+\end{definition}
+
+\begin{theorem}[Completion-reduction inverse laws]
+\label{thm:completion-inverse}
+For every primitive property core \(P\),
+\[
+\RedProp(\CompProp(P))=P.
+\]
+For every full property model \(A\),
+\[
+\CompProp(\RedProp(A))=A.
+\]
+Hence the explicit completion is unique and adds no additional restriction to the class of primitive property cores.
+\end{theorem}
+
+\begin{proof}
+Every derived coordinate in Closure Clause~C1 is given by a functional set-theoretic definition from the primitive coordinates.
+Reduction removes exactly those derived coordinates and leaves every primitive coordinate unchanged, proving the first identity.
+Conversely, a full property model is required to interpret each derived coordinate by those same definitions, so recompletion reconstructs every forgotten coordinate uniquely.
+\end{proof}
+
+\begin{remark}[No core well-foundedness axiom]
+Because \(\Sat_{A,\varpi,d}\) is primitive prerequisite-satisfaction data rather than a recursive evaluation of another property, Closure Clause~C1 contains no recursive dependency chain.
+A well-foundedness or simultaneous-fixed-point condition is therefore unnecessary in the core system.
+Such a condition may become necessary only in a later recursive dependency extension.
+\end{remark}
+
+% ---------Section 4. Primitive Independence and Residual Minimality----------
+\section{Primitive Independence and Residual Minimality}
+\label{sec:independence}
+% ----- P26 audited revision (Section 4) -----
+
+% ---------Section 4.1. Common finite background----------
+\subsection{Common finite background}
+
+Fix a shared signature with one auxiliary sort \(u\), one candidate property kind \(\varpi\), profile
+\[
+\sigma_L(\varpi)=(u),
+\]
+value carrier \(Z_{L,\varpi}=\mathbb R\), and one prerequisite kind \(d\) with
+\[
+\delta_L(\varpi)=\{d\}.
+\]
+Let
+\[
+X_A(u)=\{x\},
+\qquad
+\Pi_A=\{\varpi\}.
+\]
+This common one-input background is nonempty, well typed, and independent of any axis, line, bilinear form, normal, or ambient geometric carrier.
+
+% ---------Section 4.2. Axiom independence----------
+\subsection{Axiom independence}
+
+\begin{countermodel}[Primitive Axiom I fails while Primitive Axiom II holds]
+\label{cm:pi}
+Set
+\[
+\Ap_{A,\varpi}=\varnothing,
+\qquad
+\Sat_{A,\varpi,d}=\{x\},
+\qquad
+\Xi_{A,\varpi}(x)=1.
+\]
+Then
+\[
+\Dom(\Xi_{A,\varpi})=\{x\}\not\subseteq\Ap_{A,\varpi},
+\]
+so Primitive Axiom~I fails, while
+\[
+\Dom(\Xi_{A,\varpi})\subseteq\Sat_{A,\varpi,d}
+\]
+and Primitive Axiom~II holds.
+\end{countermodel}
+
+\begin{countermodel}[Primitive Axiom II fails while Primitive Axiom I holds]
+\label{cm:pii}
+Set
+\[
+\Ap_{A,\varpi}=\{x\},
+\qquad
+\Sat_{A,\varpi,d}=\varnothing,
+\qquad
+\Xi_{A,\varpi}(x)=1.
+\]
+Then Primitive Axiom~I holds but
+\[
+\Dom(\Xi_{A,\varpi})=\{x\}\not\subseteq\DepSat_{A,\varpi}=\varnothing,
+\]
+so Primitive Axiom~II fails.
+\end{countermodel}
+
+\begin{theorem}[Mutual non-derivability]
+\label{thm:independence}
+Relative to the shared typed-premodel background, Primitive Axioms~I and II are mutually non-derivable.
+\end{theorem}
+
+\begin{proof}
+Countermodel~\ref{cm:pi} satisfies Primitive Axiom~II and violates Primitive Axiom~I.
+Countermodel~\ref{cm:pii} satisfies Primitive Axiom~I and violates Primitive Axiom~II.
+Both are well typed under the same one-input signature.
+Neither countermodel is a primitive property core because each violates one of the axioms.
+Definitional Closure Clause~C1 applies conditionally to admitted primitive cores satisfying both axioms and is not a premise imposed on these typed counterpremodels.
+\end{proof}
+
+% ---------Section 4.3. Typing consequences versus residual axioms----------
+\subsection{Typing consequences versus residual axioms}
+
+\begin{proposition}[The primitive axioms are not typing tautologies]
+Neither Primitive Axiom~I nor Primitive Axiom~II follows merely from the facts that
+\[
+\Ap_{A,\varpi},\Sat_{A,\varpi,d}\subseteq X_{A,\varpi}
+\]
+and
+\[
+\Xi_{A,\varpi}:X_{A,\varpi}\rightharpoonup Z_{L,\varpi}
+\]
+is a partial function.
+\end{proposition}
+
+\begin{proof}
+Both countermodels above satisfy these typing facts.
+Each nevertheless violates one primitive axiom.
+Thus the residual constraints restrict the admitted class of typed premodels rather than restating typing.
+\end{proof}
+
+\begin{proposition}[No hidden converse]
+The core system does not imply either
+\[
+\Ap_{A,\varpi}\subseteq\Dom(\Xi_{A,\varpi})
+\]
+or
+\[
+\DepSat_{A,\varpi}\subseteq\Dom(\Xi_{A,\varpi}).
+\]
+\end{proposition}
+
+\begin{proof}
+Take a declared property with an available one-point profile, set applicability and every prerequisite-satisfaction set equal to \(\{x\}\), and let \(\Xi_{A,\varpi}\) have empty domain.
+Both primitive axioms hold, while both displayed converse inclusions fail.
+\end{proof}
+
+\begin{corollary}[Applicable but undefined status is nonvacuous]
+There are full property models containing an input that is applicable, satisfies every declared prerequisite, and nevertheless has no defined property value.
+\end{corollary}
+
+% ---------Section 5. Complete Property Descriptors and Optional Representations----------
+\section{Complete Property Descriptors and Optional Representations}
+\label{sec:descriptor-representation}
+
+% ---------Section 5.1. Complete core descriptor----------
+\subsection{Complete core descriptor}
+
+\begin{definition}[Complete core property descriptor]
+\label{def:descriptor}
+The complete core property descriptor of a full property model \(A\) is
+\[
+\begin{aligned}
+\Sigma_A^{\mathrm{prop}}:=\bigl(&\FVI,\Sprop;
+X_A^{\mathrm{aux}},\Pi_A,
+\{\Ap_{A,\varpi}\},\{\Sat_{A,\varpi,d}\},\\
+&\{\Xi_{A,\varpi}\},\{D_{A,\varpi}\},
+\{\DepSat_{A,\varpi}\},\{\Stat_{A,\varpi}\},\PropRec_A\bigr).
+\end{aligned}
+\]
+The descriptor retains primitive and derived status-sensitive coordinates rather than only the defined values.
+\end{definition}
+
+\begin{remark}[Undefinedness is structural data]
+Two property presentations can agree on every defined value and still differ because one declares an additional kind, supplies an additional auxiliary carrier, marks an input applicable, or satisfies a prerequisite on an input where no value is defined.
+Strict comparison therefore cannot be reconstructed from the set of numerical outputs alone.
+\end{remark}
+
+% ---------Section 5.2. Generic optional representation extension----------
+\subsection{Generic optional representation extension}
+
+\begin{definition}[Shared representation signature]
+A shared optional representation signature consists of a set \(J_L\) of representation labels, a positive integer \(n_j\) for each \(j\in J_L\), and a representation carrier \(E_{L,j}\) for each label.
+\end{definition}
+
+\begin{definition}[Representation package]
+Given a full property model \(A\), an optional representation package supplies a declared subfamily \(J_A\subseteq J_L\) and, for every \(j\in J_A\), a selected record domain
+\[
+Y_{A,j}\subseteq(\PropRec_A)^{n_j}
+\]
+and an encoding map
+\[
+\Enc_{A,j}:Y_{A,j}\longrightarrow E_{L,j}.
+\]
+No representation label is active unless explicitly declared.
+\end{definition}
+
+Matrices, tensors, operators, graphs, quaternions, coordinate arrays, or other encodings may be introduced through such a package when an application provides the corresponding carriers and encoding rules.
+The abstract property system does not identify any representation with the property structure it encodes.
+
+\begin{proposition}[Representation forgetting]
+Forgetting a representation package leaves a well-defined full core property model.
+Conversely, a full core property model need not possess any nonempty representation package.
+\end{proposition}
+
+\begin{proof}
+The primitive axioms and Closure Clause~C1 mention only core property coordinates.
+Representation declarations and encoding maps therefore impose no condition on whether the underlying core is a model.
+The empty representation declaration \(J_A=\varnothing\) is always available.
+\end{proof}
+
+% ---------Section 6. Structure-Preserving Maps, Embeddings, and Strict Equivalence----------
+\section{Structure-Preserving Maps, Embeddings, and Strict Equivalence}
+\label{sec:maps}
+% ----- P26 audited revision (Section 6) -----
+
+Throughout this section, models are compared over the same fixed \(\FVI\) and the same shared property signature \(\Sprop\).
+Inherited carriers are therefore fixed and their comparison maps are identities.
+
+% ---------Section 6.1. Forward property maps----------
+\subsection{Forward property maps}
+
+\begin{definition}[Forward property map]
+\label{def:forward-map}
+A forward property map
+\[
+\Phi:A\longrightarrow B
+\]
+consists of maps
+\[
+\phi_s:X_A(s)\longrightarrow X_B(s)
+\]
+for every auxiliary sort available in \(A\), with identity maps on inherited sorts, subject to the following conditions.
+\begin{enumerate}[label=(F\arabic*)]
+\item Every auxiliary sort available in \(A\) is available in \(B\).
+\item \(\Pi_A\subseteq\Pi_B\).
+\item For every \(\varpi\in\Pi_A\) whose profile is available in \(A\), the product map induced by its profile,
+\[
+\phi_{\varpi}:X_{A,\varpi}\longrightarrow X_{B,\varpi},
+\]
+satisfies
+\[
+\phi_{\varpi}(\Ap_{A,\varpi})\subseteq\Ap_{B,\varpi}.
+\]
+\item For every such \(\varpi\) and every \(d\in\delta_L(\varpi)\),
+\[
+\phi_{\varpi}(\Sat_{A,\varpi,d})\subseteq\Sat_{B,\varpi,d}.
+\]
+\item For every such \(\varpi\), if \(x\in D_{A,\varpi}\), then \(\phi_{\varpi}(x)\in D_{B,\varpi}\) and
+\[
+\Xi_{B,\varpi}(\phi_{\varpi}(x))=\Xi_{A,\varpi}(x).
+\]
+\end{enumerate}
+The qualification ``such \(\varpi\)'' in (F4)--(F5) refers to the source-declared, profile-available kinds in (F3).
+Condition (F1) ensures each such source profile is also available in the target.
+No product-map condition is imposed for a declared kind with an unavailable source profile.
+\end{definition}
+
+Forward maps preserve successful property data but need not reflect applicability, prerequisite satisfaction, or definedness.
+
+\begin{proposition}[Category of property models]
+Identity maps are forward property maps and the componentwise composition of forward property maps is a forward property map.
+Consequently, the full property models over fixed \((\FVI,\Sprop)\) and their forward property maps form a possibly large category.
+\end{proposition}
+
+\begin{proof}
+Identity maps satisfy (F1)--(F5) for each source-declared, profile-available kind; unavailable source profiles impose no product-map condition.
+For composition, availability and declaration inclusions compose.
+By (F1)--(F2), a kind declared with an available profile in the first source remains declared with an available profile in the intermediate target, so its induced product maps compose coordinatewise.
+Applicability and prerequisite-satisfaction images remain included by transitivity of set inclusion.
+Value preservation follows by applying (F5) first to the inner and then to the outer map.
+\end{proof}
+
+% ---------Section 6.2. Property embeddings and submodels----------
+\subsection{Property embeddings and submodels}
+
+\begin{definition}[Property embedding]
+A forward property map \(\Phi:A\to B\) is a \emph{property embedding} when every auxiliary carrier map is injective and, for every \(\varpi\in\Pi_A\) whose profile is available in \(A\) and every source input \(x\in X_{A,\varpi}\), the following hold:
+\[
+\begin{aligned}
+\text{(E1)}\quad x\in\Ap_{A,\varpi}
+&\Longleftrightarrow
+\phi_{\varpi}(x)\in\Ap_{B,\varpi},\\
+\text{(E2)}\quad x\in\Sat_{A,\varpi,d}
+&\Longleftrightarrow
+\phi_{\varpi}(x)\in\Sat_{B,\varpi,d}
+\quad\text{for every }d\in\delta_L(\varpi),\\
+\text{(E3)}\quad x\in D_{A,\varpi}
+&\Longleftrightarrow
+\phi_{\varpi}(x)\in D_{B,\varpi}.
+\end{aligned}
+\]
+The value-preservation equation of (F5) also holds on the source assignment domain.
+In particular, if \(\delta_L(\varpi)=\varnothing\), (E2) is vacuous but (E1) and (E3) remain mandatory.
+\end{definition}
+
+\begin{proposition}[Wide embedding subcategory]
+Property embeddings are closed under identities and composition and therefore form a wide subcategory of the forward-map category.
+\end{proposition}
+
+\begin{proof}
+Injective maps compose, and each reflected membership equivalence composes by substitution.
+The identity map reflects every membership relation trivially.
+\end{proof}
+
+\begin{definition}[Inclusion submodel]
+Write
+\[
+A\preccurlyeq B
+\]
+when every auxiliary carrier of \(A\) is literally a subset of the corresponding carrier of \(B\), every source declaration is a target declaration, and the inclusion maps form a property embedding.
+\end{definition}
+
+\begin{theorem}[Property-submodel preorder]
+The relation \(\preccurlyeq\) is reflexive and transitive.
+\end{theorem}
+
+\begin{proof}
+Reflexivity uses identity inclusions.
+If \(A\preccurlyeq B\) and \(B\preccurlyeq C\), then carrier inclusion and declaration inclusion are transitive, while the inclusion embedding \(A\to C\) is the composite of the inclusion embeddings \(A\to B\) and \(B\to C\).
+\end{proof}
+
+% ---------Section 6.3. Strict property isomorphism----------
+\subsection{Strict property isomorphism}
+
+\begin{definition}[Strict core property isomorphism]
+\label{def:strict-iso}
+A property embedding \(\Phi:A\to B\) is a \emph{strict Stage-VI-fixed, signature-fixed property isomorphism} when:
+\begin{enumerate}[label=(S\arabic*)]
+\item every auxiliary carrier map is bijective;
+\item the available auxiliary-sort sets agree;
+\item \(\Pi_A=\Pi_B\); and
+\item the embedding conditions hold in both directions under the inverse carrier maps.
+\end{enumerate}
+Write
+\[
+A\cong_{L,\mathrm{prop}} B.
+\]
+Strict property equivalence means existence of such an isomorphism.
+\end{definition}
+
+\begin{theorem}[Strict property equivalence is an equivalence relation]
+\label{thm:strict-equivalence}
+Strict Stage-VI-fixed, signature-fixed property isomorphism is reflexive, symmetric, and transitive.
+Equivalently, they are exactly the property embeddings satisfying (S1)--(S3): bijective available auxiliary carrier maps, equal available auxiliary-sort sets, and equal declared property-kind sets; (S4) follows under these hypotheses.
+\end{theorem}
+
+\begin{proof}
+The identity embedding has bijective components and matching auxiliary-sort availability and declaration sets, hence is strict.
+Suppose an embedding \(\Phi:A\to B\) satisfies (S1)--(S3).
+By (S1)--(S2), the auxiliary carrier bijections have inverses over precisely the same available sorts, while inherited carrier maps are identities.
+By (S3), the declared kinds coincide, and profile availability agrees because the supplied sorts agree.
+For every common declared kind with available profile, the induced product map is bijective.
+The embedding biconditionals for applicability, each prerequisite and assignment-domain membership reverse under the inverse product map; value preservation (F5) reverses on the reflected assignment domains by substitution.
+For unavailable profiles neither direction requires product-map conditions.
+Thus the inverse family is an embedding, proving (S4).
+The identity, inverse and composition of strict isomorphisms preserve these conditions, proving reflexivity, symmetry and transitivity.
+\end{proof}
+
+\begin{proposition}[Strict isomorphism preserves completion]
+A strict core property isomorphism preserves assignment domains, dependency-satisfied regions, every status in Definition~\ref{def:status}, and the complete defined-record set \(\PropRec_A\).
+\end{proposition}
+
+\begin{proof}
+Domains are reflected by the embedding definition, dependency-satisfied regions are finite intersections of reflected prerequisite-satisfaction sets, and each status case is determined by declarations, profile availability, applicability, dependency satisfaction, domains, and values.
+The record set is therefore transported bijectively by
+\[
+(\varpi,x,z)\longmapsto(\varpi,\phi_{\varpi}(x),z).
+\]
+\end{proof}
+
+% ---------Section 6.4. Representation-inclusive strict equivalence----------
+\subsection{Representation-inclusive strict equivalence}
+
+\begin{definition}[Representation-preserving lift]
+Suppose \(A\) and \(B\) carry packages over the same shared representation signature.
+A strict core isomorphism \(\Phi:A\to B\) lifts representation-preservingly when \(J_A=J_B\) and, for every \(j\in J_A\), the induced map on record tuples sends \(Y_{A,j}\) bijectively onto \(Y_{B,j}\) and satisfies
+\[
+\Enc_{B,j}(\Phi^{(n_j)}(y))=\Enc_{A,j}(y)
+\qquad
+(y\in Y_{A,j}).
+\]
+\end{definition}
+
+\begin{theorem}[Representation-inclusive strict equivalence]
+Representation-preserving strict property isomorphism is an equivalence relation on represented property models over a fixed core and representation signature.
+\end{theorem}
+
+\begin{proof}
+Identity, inverse, and composite core isomorphisms transport the selected representation domains by identity, inverse, and composition, respectively.
+The encoding equality is stable under the same operations.
+\end{proof}
+
+\begin{remark}[Abstract versus represented comparison]
+Two property models may be strictly equivalent at the abstract core level while carrying different optional representations.
+Representation-inclusive strict equivalence is therefore intentionally finer than core strict equivalence.
+\end{remark}
+
+% ---------Section 7. Staged Comparison and First Branching----------
+\section{Staged Comparison and First Branching}
+\label{sec:branching}
+
+% ---------Section 7.1. Nested comparison sets----------
+\subsection{Nested comparison sets}
+
+Fix two full property models \(A\) and \(B\) over the same \((\FVI,\Sprop)\).
+
+\begin{definition}[Stage-comparison sets]
+For \(k=1,\ldots,5\), let \(I_k(A,B)\) be the set of all carrier-bijection families that satisfy the strict-comparison conditions visible through property stage \(\mathcal P^{\le k}\).
+Thus:
+\begin{itemize}
+\item \(I_1\) compares auxiliary-carrier availability and cardinal structure;
+\item \(I_2\) additionally preserves declarations;
+\item \(I_3\) additionally preserves and reflects applicability and every prerequisite-satisfaction set;
+\item \(I_4\) additionally preserves and reflects assignment domains and values; and
+\item \(I_5\) additionally preserves all explicitly completed coordinates.
+\end{itemize}
+\end{definition}
+
+\begin{proposition}[Nestedness]
+\[
+I_5(A,B)\subseteq I_4(A,B)\subseteq I_3(A,B)\subseteq I_2(A,B)\subseteq I_1(A,B).
+\]
+Moreover,
+\[
+I_4(A,B)=I_5(A,B).
+\]
+\end{proposition}
+
+\begin{proof}
+Each later stage retains every earlier coordinate, giving nestedness.
+By Theorem~\ref{thm:completion-inverse}, every Stage-5 coordinate is a function of the Stage-4 and earlier primitive data.
+A comparison preserving the Stage-4 primitive data therefore preserves the completed domains, dependency intersections, statuses, and property-record set automatically.
+Hence no further comparison condition is introduced at Stage~5.
+\end{proof}
+
+\begin{corollary}[Strict comparison at the final primitive stage]
+\[
+A\cong_{L,\mathrm{prop}}B
+\Longleftrightarrow
+I_4(A,B)\neq\varnothing
+\Longleftrightarrow
+I_5(A,B)\neq\varnothing.
+\]
+\end{corollary}
+
+% ---------Section 7.2. First branching index----------
+\subsection{First branching index}
+
+\begin{definition}[First branching index]
+If \(A\) and \(B\) are not strictly property-isomorphic, define
+\[
+b_{\mathrm{prop}}(A,B):=
+\min\{k\in\{1,2,3,4\}:I_k(A,B)=\varnothing\}.
+\]
+This is the earliest property stage at which no full carrier-bijection family remains compatible with all coordinates visible to that stage.
+\end{definition}
+
+\begin{theorem}[Branching symmetry and invariance]
+\label{thm:branching-invariance}
+For strictly nonisomorphic \(A,B\),
+\[
+b_{\mathrm{prop}}(A,B)=b_{\mathrm{prop}}(B,A).
+\]
+If \(A\cong A'\) and \(B\cong B'\), then
+\[
+b_{\mathrm{prop}}(A,B)=b_{\mathrm{prop}}(A',B').
+\]
+The explicit completion stage \(5\) cannot be an independent first branch.
+\end{theorem}
+
+\begin{proof}
+Every comparison tuple in \(I_k(A,B)\) consists of carrier bijections and has an inverse tuple in \(I_k(B,A)\), so nonemptiness is symmetric stage by stage.
+Strict isomorphisms transport comparison tuples by pre- and post-composition, preserving stagewise nonemptiness.
+Finally, \(I_4=I_5\) by the previous proposition, so Stage~5 cannot be the first stage at which comparison becomes empty.
+\end{proof}
+
+\begin{remark}[One failed map does not prove first branching]
+The branching index is defined by the emptiness of the entire comparison set \(I_k(A,B)\), not by the failure of one selected candidate bijection.
+This distinction prevents a chosen coordinate map from being mistaken for a proof that no compatible map exists.
+\end{remark}
+
+% ---------Section 8. Model Existence and Finite Realization----------
+\section{Model Existence and Finite Realization}
+\label{sec:finite}
+
+% ---------Section 8.1. Trivial and one-input models----------
+\subsection{Trivial and one-input models}
+
+\begin{theorem}[Trivial extension over every Stage-VI formation record]
+\label{thm:trivial-extension}
+Every fixed \(\FVI\) and shared property signature admit a full property model.
+\end{theorem}
+
+\begin{proof}
+Take no auxiliary carriers and declare no property kinds:
+\[
+\Dom(X_A^{\mathrm{aux}})=\varnothing,
+\qquad
+\Pi_A=\varnothing.
+\]
+There are no active applicability, dependency, or assignment coordinates, so both primitive axioms hold vacuously.
+Closure Clause~C1 gives the unique full completion.
+\end{proof}
+
+\begin{construction}[One-input nontrivial property model]
+Suppose the shared signature contains an auxiliary sort \(u\) and a property kind \(\varpi\) with profile \((u)\) and value \(z\in Z_{L,\varpi}\).
+Supply
+\[
+X_A(u)=\{x\},
+\qquad
+\Pi_A=\{\varpi\},
+\qquad
+\Ap_{A,\varpi}=\{x\}.
+\]
+For every \(d\in\delta_L(\varpi)\), set
+\[
+\Sat_{A,\varpi,d}=\{x\},
+\]
+and define
+\[
+\Xi_{A,\varpi}(x)=z.
+\]
+Both primitive axioms hold and completion yields a nontrivial full property model with one defined property record.
+\end{construction}
+
+% ---------Section 8.2. Standard finite realization----------
+\subsection{Standard finite realization}
+
+\begin{definition}[Finite primitive property data]
+A primitive presentation is \emph{property-finite} when the supplied auxiliary carriers, declared property set, each applicability set, each prerequisite-satisfaction set, and each assignment domain are finite.
+The external value carriers need not be finite.
+\end{definition}
+
+\begin{theorem}[Standard finite realization]
+\label{thm:finite-realization}
+Let finite auxiliary carriers, a finite declared property family, finite applicability and prerequisite-satisfaction sets, and finite partial assignment maps be given over a fixed Stage-VI formation record and shared signature.
+If
+\[
+\Dom(\Xi_{A,\varpi})
+\subseteq
+\Ap_{A,\varpi}\cap\DepSat_{A,\varpi}
+\]
+for every declared kind with available profile, then the supplied primitive data determine a unique property-finite full model.
+\end{theorem}
+
+\begin{proof}
+The displayed inclusion is exactly the conjunction of Primitive Axioms~I and II.
+Thus the supplied data form a primitive property core.
+Closure Clause~C1 then gives one and only one full completion by Theorem~\ref{thm:completion-inverse}.
+Finiteness of the derived domains, status tables on the supplied finite input fragments, and defined-record set follows from finiteness of the primitive data.
+\end{proof}
+
+% ---------Section 8.3. Finitely specified first-branch witnesses----------
+\subsection{Finitely specified first-branch witnesses}
+
+\begin{construction}[Stage-2 declaration branch]
+Let two models share the same one-point auxiliary carrier \(X(u)=\{x\}\).
+Let \(A\) declare \(\varpi\) and \(B\) leave \(\varpi\) undeclared.
+Then \(I_1(A,B)\neq\varnothing\) but \(I_2(A,B)=\varnothing\), so
+\[
+b_{\mathrm{prop}}(A,B)=2.
+\]
+\end{construction}
+
+\begin{construction}[Stage-3 applicability branch]
+Let \(X(u)=\{a,b\}\) and declare two unary property kinds \(\varpi_1,\varpi_2\) with no prerequisites and empty assignments.
+In \(A\), set
+\[
+\Ap_{A,\varpi_1}=\{a\},
+\qquad
+\Ap_{A,\varpi_2}=\{a\},
+\]
+while in \(B\), set
+\[
+\Ap_{B,\varpi_1}=\{a\},
+\qquad
+\Ap_{B,\varpi_2}=\{b\}.
+\]
+The first applicability set forces every Stage-3 comparison bijection to fix \(a\), while the second would require it to send \(a\) to \(b\).
+Hence \(I_2(A,B)\neq\varnothing\) but \(I_3(A,B)=\varnothing\), and
+\[
+b_{\mathrm{prop}}(A,B)=3.
+\]
+\end{construction}
+
+\begin{construction}[Stage-4 assignment branch]
+Let \(X(u)=\{a,b\}\), declare two zero-bearing unary property kinds \(\varpi_1,\varpi_2\) with value carrier \(\{0,1\}\), no prerequisites, and full applicability.
+Define in \(A\)
+\[
+\begin{aligned}
+\Xi_{A,\varpi_1}(a)&=0,&\Xi_{A,\varpi_1}(b)&=1,\\
+\Xi_{A,\varpi_2}(a)&=0,&\Xi_{A,\varpi_2}(b)&=1,\end{aligned}
+\]
+and in \(B\)
+\[
+\begin{aligned}
+\Xi_{B,\varpi_1}(a)&=0,&\Xi_{B,\varpi_1}(b)&=1,\\
+\Xi_{B,\varpi_2}(a)&=1,&\Xi_{B,\varpi_2}(b)&=0.
+\end{aligned}
+\]
+All Stage-3 data agree.
+Preservation of \(\varpi_1\) forces a comparison to fix \(a\) and \(b\), but then \(\varpi_2\) is not preserved.
+Thus
+\[
+I_3(A,B)\neq\varnothing,
+\qquad
+I_4(A,B)=\varnothing,
+\]
+and
+\[
+b_{\mathrm{prop}}(A,B)=4.
+\]
+\end{construction}
+
+\begin{corollary}[No independent Stage-5 witness]
+There is no pair of full property models with
+\[
+I_4(A,B)\neq\varnothing
+\quad\text{and}\quad
+I_5(A,B)=\varnothing.
+\]
+\end{corollary}
+
+% ---------Section 9. Compression and Classification Obstructions----------
+\section{Compression and Classification Obstructions}
+\label{sec:compression}
+% ----- P26 audited revision (Section 9) -----
+
+% ---------Section 9.1. A finite summary collision----------
+\subsection{A finite summary collision}
+
+\begin{definition}[Simple finite property summary]
+For a property-finite full property model \(A\) whose declared kinds all have available profiles and designated zero elements, that is,
+\(\Pi_A\subseteq\PiZero\) and every \(\varpi\in\Pi_A\) has an available profile, define the label-retaining summary
+\[
+\mathfrak S(A):=
+\left(
+|\Pi_A|,
+\left\{
+\bigl(\varpi,|D_{A,\varpi}|,N^0_{A,\varpi},N^{\neq0}_{A,\varpi}\bigr)
+:\varpi\in\Pi_A
+\right\}
+\right),
+\]
+where \(N^0_{A,\varpi}\) and \(N^{\neq0}_{A,\varpi}\) count the inputs assigned zero and nonzero values, respectively, for \(\varpi\).
+The explicit kind label in each tuple retains the association between each property and its counts, while cross-property correlations among input locations are forgotten.
+For kinds without a designated zero or without an available profile, this particular summary is not defined without an additional convention.
+\end{definition}
+
+\begin{theorem}[Summary equality does not classify strict property structure]
+\label{thm:compression}
+There exist property-finite models \(A,B\) with
+\[
+\mathfrak S(A)=\mathfrak S(B)
+\]
+but
+\[
+A\not\cong_{L,\mathrm{prop}}B.
+\]
+\end{theorem}
+
+\begin{proof}
+Use the Stage-4 assignment-branch models above.
+Each model has two declared properties; each property has domain size two, one defined zero, and one defined nonzero value.
+Thus the summaries agree property by property.
+Nevertheless, preservation of \(\varpi_1\) fixes the two input points while \(\varpi_2\) then disagrees, so no strict property isomorphism exists.
+\end{proof}
+
+\begin{remark}[What the summary loses]
+The obstruction is not caused by the numerical values alone.
+The summary forgets how the value patterns of different property kinds are correlated on the same typed inputs.
+More elaborate scalar, vector, matrix-size, rank, or count summaries can fail for the same reason unless a separate reconstruction theorem proves injectivity on the chosen model class.
+\end{remark}
+
+% ---------Section 9.2. Relation to downstream aggregation----------
+\subsection{Relation to downstream aggregation}
+
+The defined records
+\[
+(\varpi,x,z)\in\PropRec_A
+\]
+are already typed and may have unary, binary, higher-order, or mixed input profiles.
+A downstream aggregation paper may therefore supply an explicit bridge
+\[
+\Theta_A:\mathcal G_A\longrightarrow U
+\]
+on a selected finite set \(\mathcal G_A\subseteq\PropRec_A\) or on finite tuples of such records and aggregate the bridge outputs in a chosen analytic carrier.
+Nothing in the present property system forces a multi-input property record to be converted into a unary formation-channel term.
+Equality of separately chosen aggregate outputs alone does not generally reconstruct strict property equivalence; a stronger conclusion requires source-aware reconstruction or injectivity hypotheses.
+No unconditional comparison in the converse direction is asserted for arbitrarily and independently chosen external bridges.
+
+% ---------Section 10. Relation to the Realized-Axis Specialization and Later DSD Layers----------
+\section{Relation to the Realized-Axis Specialization and Later DSD Layers}
+\label{sec:specialization}
+
+% ---------Section 10.1. Status of the earlier realized-axis property system----------
+\subsection{Status of the earlier realized-axis property system}
+
+The earlier realized-axis property system \cite{KwonAxisProperty} remains a valid specialization when its additional geometric hypotheses are adopted.
+Its axis selection, one-dimensional line realization, tagged-axis records, line invariance, realized-axis span and rank, symmetric bilinear forms, orthogonality, normals, and cyclic triadic closure are not retained as universal coordinates of the present core.
+Instead, they can be represented by an auxiliary-sort and prerequisite extension over the present Property Axiom System.
+
+For example, an axis specialization may introduce auxiliary labels such as
+\[
+\mathrm{axis\mbox{-}candidate},\quad
+\mathrm{realized\mbox{-}line},\quad
+\mathrm{subspace},\quad
+\mathrm{normal},
+\]
+provide the corresponding carriers, and declare property kinds whose profiles use those sorts.
+A bilinear prerequisite then becomes one instance of a dependency kind \(d\in\Dep\), while the geometry that decides \(\Sat_{A,\varpi,d}\) belongs to that specialization.
+The earlier axis-realization totality axiom remains an axiom or constitutive rule of the axis-realization module rather than part of the general property core.
+
+% ---------Section 10.2. Static aggregation----------
+\subsection{Static aggregation}
+
+The channel-indexed static aggregation layer can inherit \(\PropRec_A\) through an explicit typed bridge without changing its Bochner-integral or finite-sum constructions.
+The principal interface change is terminological and structural: downstream arguments should refer to a general property model rather than assume that every property model contains realized axes.
+Axis-informed channel bridges remain available only when the axis specialization has separately been supplied.
+
+% ---------Section 10.3. Structural reorganization dynamics----------
+\subsection{Structural reorganization dynamics}
+
+A later dynamics layer may evolve general property values, applicability regions, or other declared state coordinates while keeping the inherited formation record fixed during a declared state interval.
+Changes that alter formation-channel identity remain formation-level transitions rather than ordinary property-value evolution.
+Axis-line motion, axis-rank change, normal evolution, or other axis-geometric transitions belong to the realized-axis specialization rather than to the general property core.
+
+% ---------Section 11. Main Property-Closure Theorem----------
+\section{Main Property-Closure Theorem}
+\label{sec:main-theorem}
+% ----- P26 audited revision (Section 11) -----
+
+\begin{theorem}[Static typed property-closure theorem]
+\label{thm:main}
+Fix a Stage-VI DSD formation record \(\FVI\) and a shared property signature \(\Sprop\).
+Then the Property Axiom System defined in this paper has the following properties.
+\begin{enumerate}[label=(\arabic*)]
+\item Property kinds have finite typed profiles over inherited and auxiliary sorts without requiring an axis or one-dimensional carrier.
+\item Primitive Axiom~I requires defined assignments to lie in the primitive applicability region, while Primitive Axiom~II requires them to satisfy every declared contextual prerequisite.
+\item The two primitive axioms are mutually non-derivable relative to the shared typed background and are not consequences of typing alone.
+\item Applicable but undefined, inapplicable, prerequisite-unsatisfied, defined-zero, and defined-nonzero or otherwise defined statuses remain distinct.
+\item Every primitive property core has a unique explicit completion, and primitive reduction and completion are inverse operations on their respective model classes.
+\item Forward property maps form a possibly large category; property embeddings form a wide subcategory and induce a submodel preorder.
+\item Strict Stage-VI-fixed, signature-fixed property isomorphism is exactly property embedding satisfying the bijective-carrier, equal-availability and equal-declaration requirements (S1)--(S3); the inverse condition (S4) follows, and strict equivalence is an equivalence relation.
+\item Under a fixed optional representation signature, representation-preserving strict property isomorphism is also an equivalence relation and is finer than abstract core equivalence.
+\item Nested stage-comparison sets define a symmetric, strict-isomorphism-invariant first branching index for every strictly nonisomorphic pair, and the explicit completion stage cannot create an independent first branch.
+\item Every Stage-VI formation record admits a trivial property extension; every finite compatible primitive presentation has a unique standard property-finite realization.
+\item Finite models realize first branching at declaration, applicability/dependency, and assignment stages.
+\item Equality of simple per-property summary counts does not imply strict property equivalence.
+\item The theory factors through the fixed Stage-VI formation record and does not alter formation assignments, operational-channel identity, or post-Stage-VI term and composition coordinates.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Items (1)--(2) are Definitions~\ref{def:signature}, \ref{def:premodel}, and Primitive Axioms~I--II.
+Item (3) is Theorem~\ref{thm:independence} and its typing corollary.
+Item (4) is Definition~\ref{def:status} together with the non-converse proposition of Section~\ref{sec:independence}.
+Item (5) is Theorem~\ref{thm:completion-inverse}.
+Items (6)--(8) are the map, embedding, submodel, and equivalence results of Section~\ref{sec:maps}.
+Item (9) is Theorem~\ref{thm:branching-invariance}.
+Item (10) follows from Theorems~\ref{thm:trivial-extension} and \ref{thm:finite-realization}.
+Item (11) is supplied by the finite constructions of Section~\ref{sec:finite}.
+Item (12) is Theorem~\ref{thm:compression}.
+Item (13) follows from the fixed-base convention of Section~\ref{sec:formal-setting} and the fact that every property coordinate is extension-level data over \(\FVI\).
+\end{proof}
+
+% ---------Section 12. Discussion and Scope----------
+\section{Discussion and Scope}
+\label{sec:discussion}
+
+% ---------Section 12.1. What the system establishes----------
+\subsection{What the system establishes}
+
+The system establishes a static typed layer between Stage-VI formation and later aggregation, dynamics, or physical specialization.
+Its central distinction is between the formal states required before any property value can be used: declaration, typed profile availability, applicability, contextual prerequisite satisfaction, and actual partial assignment.
+This layered separation is sufficient to support complete status-sensitive descriptors, structure-preserving comparison, finite realization, and loss-of-information results without assuming a preferred geometry.
+
+The two primitive axioms are deliberately minimal.
+They do not force total property functions and do not assert that every declared property applies everywhere.
+They only rule out two structurally unsound situations: defining a value on an input declared inapplicable, and defining a value while a prerequisite declared necessary for that property is unsatisfied.
+Everything else in the core is typing, supplied primitive data, or explicit completion.
+
+% ---------Section 12.2. Scope boundary----------
+\subsection{Scope boundary}
+
+The core fixes property declarations, typed inputs, applicability, contextual prerequisites, and partial assignments over a fixed Stage-VI formation background.
+Application-specific semantics, regularity conditions, dynamical laws, and representation choices enter only through explicitly supplied extensions when they are needed.
+Auxiliary sorts remain property-layer inputs unless an explicit formation interface assigns them a formation-level role.
+
+The formalism is a typed set-theoretic schema interpreted in ZFC.
+The shared signature fixes the vocabulary used within a comparison class, while further sorts, prerequisites, or rules may be added explicitly by a specialization.
+
+% ---------Section 13. Conclusion----------
+\section{Conclusion}
+\label{sec:conclusion}
+
+The DSD Formation Axiom System determines when structural material reaches the level of admitted configurations, assignments, roles, and operational channels.
+The Property Axiom System developed here begins from that fixed Stage-VI result and adds a general, non-dynamical, pre-aggregation property layer without assuming realized axes or any other one-dimensional geometry.
+
+The resulting chain is
+\[
+\begin{gathered}
+\text{Stage-VI formation}
+\longrightarrow
+\text{typed property declaration}
+\longrightarrow
+\text{applicability and prerequisites}\\
+\longrightarrow
+\text{partial property assignment}
+\longrightarrow
+\text{explicit completion}.
+\end{gathered}
+\]
+Two independent primitive axioms constrain this chain: defined values must occur only on applicable inputs and only where every declared contextual prerequisite is satisfied.
+The explicit completion then determines domains, dependency-satisfied regions, statuses, and defined property records uniquely.
+Forward maps, embeddings, submodels, strict equivalence, and first branching provide the corresponding comparison theory, while finite constructions and compression obstructions show that the framework is nonempty and that reduced summaries need not reconstruct full typed property structure.
+
+The earlier realized-axis property system is retained as a specialization rather than discarded.
+Its axis lines, bilinear data, normals, ranks, and closure constructions can be introduced through auxiliary sorts, prerequisites, and specialization-specific axioms when required.
+The general Property Axiom System therefore occupies the DSD hierarchy between formation and downstream static aggregation or dynamics, with geometric specializations supplied explicitly at the layer where they are used.
+
+% ---------Appendix A. Typing and Notation----------
+\appendix
+\section{Typing and Notation}
+\label{app:notation}
+
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}X@{}}
+\toprule
+Symbol & Meaning\\
+\midrule
+\(\FVI\) & Fixed Stage-VI channel-complete DSD formation record.\\
+\(\Sin\) & Inherited input-sort labels with carriers fixed by the formation record.\\
+\(\Saux\) & Auxiliary input-sort labels whose carriers may be supplied by a property extension.\\
+\(X_A(s)\) & Carrier interpreting input sort \(s\) in property model \(A\).\\
+\(\Pihat\) & Candidate property-kind universe.\\
+\(\Pi_A\) & Property kinds declared in model \(A\).\\
+\(\sigma_L(\varpi)\) & Finite ordered typed input profile of property kind \(\varpi\).\\
+\(X_{A,\varpi}\) & Product carrier interpreting the profile of \(\varpi\).\\
+\(Z_{L,\varpi}\) & Value carrier of property kind \(\varpi\).\\
+\(\PiZero\) & Zero-bearing candidate property kinds.\\
+\(\Dep\) & Contextual prerequisite-kind universe.\\
+\(\delta_L(\varpi)\) & Finite prerequisite set declared for \(\varpi\).\\
+\(\Ap_{A,\varpi}\) & Primitive applicability set.\\
+\(\Sat_{A,\varpi,d}\) & Primitive set of inputs satisfying prerequisite \(d\).\\
+\(\DepSat_{A,\varpi}\) & Derived intersection of all prerequisite-satisfaction sets.\\
+\(\Xi_{A,\varpi}\) & Primitive partial property assignment.\\
+\(D_{A,\varpi}\) & Derived assignment domain \(\Dom(\Xi_{A,\varpi})\).\\
+\(\PropRec_A\) & Defined typed property-record set.\\
+\(\Sigma_A^{\mathrm{prop}}\) & Complete core property descriptor.\\
+\(\Phi\) & Forward property map or, when specified, property embedding/isomorphism.\\
+\(I_k(A,B)\) & Stage-\(k\) strict comparison set.\\
+\(b_{\mathrm{prop}}(A,B)\) & First branching index of a strictly nonisomorphic pair.\\
+\bottomrule
+\end{tabularx}
+
+% ---------Appendix B. Axiom, Definition, and Dependency Map----------
+\section{Axiom, Definition, and Dependency Map}
+\label{app:dependency-map}
+
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.19\textwidth}X@{}}
+\toprule
+Layer & Logical status & Main output\\
+\midrule
+Stage-VI formation background & Inherited & Configurations, assignments, roles, channels, and formation provenance.\\
+Shared property signature & Fixed typed data & Candidate kinds, profiles, value carriers, zero-bearing kinds, prerequisite kinds.\\
+Auxiliary carrier supply & Primitive presentation & Model-specific carriers for optional input sorts.\\
+Property declaration & Primitive presentation & Declared property-kind subfamily.\\
+Applicability & Primitive presentation & Inputs on which a declared property may apply.\\
+Prerequisite satisfaction & Primitive presentation & Inputs satisfying each declared contextual prerequisite.\\
+Primitive Axiom I & Residual axiom & Defined assignments occur only on applicable inputs.\\
+Primitive Axiom II & Residual axiom & Defined assignments occur only where all prerequisites are satisfied.\\
+Partial property assignment & Primitive presentation & Defined property values on a partial domain.\\
+Explicit completion & Definitional closure & Domains, dependency intersections, statuses, defined records.\\
+Optional representation & Downstream extension & Encodings of selected property-record tuples.\\
+Static aggregation & Downstream layer & Reduced scalar, vector, functional, or other aggregate readouts.\\
+Dynamics and specialization & Downstream layer & Evolution, transport, constitutive rules, or geometric realization.\\
+\bottomrule
+\end{tabularx}
+
+% ---------Appendix C. Finitely Specified Reconstruction Protocol----------
+\section{Finitely Specified Reconstruction Protocol}
+\label{app:finite-protocol}
+
+A finitely specified core property witness is reconstructed in the following order.
+\begin{enumerate}
+\item Fix the inherited Stage-VI formation record and shared property signature.
+\item Supply every auxiliary carrier used by the witness.
+\item Declare the finite property-kind subfamily used by the witness.
+\item For each declared kind with available profile, form the finite typed input product.
+\item Supply the applicability set and every prerequisite-satisfaction set.
+\item Supply the finite partial assignment table.
+\item Check Primitive Axioms~I and II by verifying
+\[
+\Dom(\Xi_{A,\varpi})
+\subseteq
+\Ap_{A,\varpi}\cap\DepSat_{A,\varpi}
+\]
+for every declared kind.
+\item Compute assignment domains, dependency-satisfied regions, statuses, and the defined property-record set by Closure Clause~C1.
+\item Assemble the complete core descriptor.
+\item If a representation package is used, add it only after the core descriptor has been completed.
+\item Compare finite models by the strict-isomorphism conditions of Section~\ref{sec:maps} or by the staged comparison sets of Section~\ref{sec:branching}.
+\end{enumerate}
+
+% ---------Declarations----------
+\section*{Declarations}
+
+\noindent\textbf{Funding.} This research received no external funding.
+
+\noindent\textbf{Competing interests.} The author declares no competing interests.
+
+\noindent\textbf{Author contributions.} The author is responsible for the conceptualization, formal development, analysis, and preparation of the manuscript.
+
+\noindent\textbf{Data and code availability.} No external empirical dataset is used.
+All axioms, countermodels, model constructions, and finite witnesses required for the general set-theoretic results are specified in the manuscript.
+A separate reproducibility repository for the general Property Axiom System is intended to accompany the final public version.
+The earlier realized-axis reproducibility repository remains the computational companion to the predecessor specialization.
+
+% ---------References----------
+\begin{thebibliography}{9}
+
+\bibitem{KwonFormation}
+K. Dominicus,
+\textit{Formation Axiom System: Dimensional-Structural Describability},
+Zenodo record, 2026.
+\url{https://doi.org/10.5281/zenodo.18466754}
+
+\bibitem{KwonAxisProperty}
+K. Dominicus,
+\textit{Axioms for the Property Structure of Realized Axes in Dimensional-Structural Describability: A Typed Property-Profile Extension of the Formation Axiom System},
+Zenodo record, 2026.
+\url{https://doi.org/10.5281/zenodo.21859261}
+
+\bibitem{TarskiLogic}
+A. Tarski,
+\textit{Introduction to Logic and to the Methodology of Deductive Sciences},
+4th ed., Dover Publications, Mineola, NY, 1994.
+
+\bibitem{JechSetTheory}
+T. Jech,
+\textit{Set Theory: The Third Millennium Edition, Revised and Expanded},
+Springer, Berlin, 2003.
+
+\bibitem{HodgesModelTheory}
+W. Hodges,
+\textit{Model Theory},
+Cambridge University Press, Cambridge, 1993.
+
+\bibitem{FarmerPartial}
+W. M. Farmer,
+``Reasoning about Partial Functions with the Aid of a Computer,''
+\textit{Erkenntnis}, vol. 43, no. 3, pp. 279--294, 1995.
+\url{https://doi.org/10.1007/BF01135375}
+
+\end{thebibliography}
+
+\end{document}
