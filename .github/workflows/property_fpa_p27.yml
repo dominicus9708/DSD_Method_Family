@@ -1,0 +1,85 @@
+name: Property P27 Independent Math Audit and Bilingual Build
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p27.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision/**'
+  workflow_dispatch:
+jobs:
+  source-and-proof-regression:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Rebuild bilingual P27 source from archived P26
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          OUT="$RUNNER_TEMP/P27"
+          python -W error -m py_compile "$ROOT/P27_independent_math_revision/build_p27_bilingual.py"
+          python -W error "$ROOT/P27_independent_math_revision/build_p27_bilingual.py" --source-dir "$ROOT/P26_uploaded_source_revisions" --out "$OUT"
+          cmp "$ROOT/P27_independent_math_revision/DSD_Property_Axiom_System_EN_P27_REVISED.tex" "$OUT/DSD_Property_Axiom_System_EN_P27_REVISED.tex"
+          cmp "$ROOT/P27_independent_math_revision/DSD_Property_Axiom_System_KR_P27_REVISED.tex" "$OUT/DSD_Property_Axiom_System_KR_P27_REVISED.tex"
+          python - "$ROOT" "$OUT" <<'PY'
+          import json, pathlib,sys
+          root=pathlib.Path(sys.argv[1]); out=pathlib.Path(sys.argv[2])
+          a=json.loads((root/"P27_independent_math_revision/P27_SOURCE_DIFFERENTIAL_AUDIT.json").read_text())
+          b=json.loads((out/"P27_SOURCE_DIFFERENTIAL_AUDIT.json").read_text())
+          assert a==b
+          print("P27 EN/KR SOURCE AND SECTION MANIFEST EXACT")
+          PY
+      - name: Independent finite model pair exhaustive checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01
+          python -W error -m py_compile "$ROOT/P27_independent_math_revision/verify_p27_independent_math.py"
+          python -W error "$ROOT/P27_independent_math_revision/verify_p27_independent_math.py" "$RUNNER_TEMP/P27_INDEPENDENT_FINITE_CHECKS.json"
+          python - "$ROOT" "$RUNNER_TEMP/P27_INDEPENDENT_FINITE_CHECKS.json" <<'PY'
+          import json,pathlib,sys
+          a=json.loads((pathlib.Path(sys.argv[1])/"P27_independent_math_revision/P27_INDEPENDENT_FINITE_CHECKS.json").read_text())
+          b=json.loads(pathlib.Path(sys.argv[2]).read_text())
+          assert a==b
+          assert b["cases"]["ordered_model_pair_checks"]==396898
+          assert b["cases"]["typed_axiom_and_C1_idempotence"]==672
+          print("P27 INDEPENDENT 396898 PAIRS ARCHIVED FULL JSON EXACT")
+          PY
+  latex-pair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XeLaTeX and Korean fonts
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-lang-korean texlive-fonts-recommended fonts-unfonts-core latexmk poppler-utils
+      - name: Compile P27 EN and KR
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error DSD_Property_Axiom_System_EN_P27_REVISED.tex
+          latexmk -xelatex -interaction=nonstopmode -halt-on-error DSD_Property_Axiom_System_KR_P27_REVISED.tex
+          python - <<'PY'
+          import re,subprocess,pathlib
+          for q,pages in [('EN',24),('KR',21)]:
+            path=pathlib.Path('DSD_Property_Axiom_System_'+q+'_P27_REVISED.pdf')
+            assert path.is_file()
+            count=int(re.search(r'Pages:\s*(\d+)',subprocess.check_output(['pdfinfo',str(path)],text=True)).group(1))
+            assert count==pages,(q,count)
+          print('P27 BILINGUAL XELATEX 24/21 PAGES PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: P27-bilingual-revised-PDFs
+          path: |
+            DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision/DSD_Property_Axiom_System_EN_P27_REVISED.pdf
+            DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision/DSD_Property_Axiom_System_KR_P27_REVISED.pdf
+          retention-days: 30
