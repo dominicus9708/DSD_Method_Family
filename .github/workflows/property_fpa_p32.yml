@@ -1,0 +1,42 @@
+name: Property FPA P32 - surplus primitive coordinate semantics
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p32.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P32_surplus_primitive_semantics/**'
+  workflow_dispatch:
+jobs:
+  p32-audit:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10','3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Lock immutable P27 manuscript source
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(sha256sum 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision/DSD_Property_Axiom_System_EN_P27_REVISED.tex' | awk '{print $1}')" = '51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb'
+          test "$(sha256sum 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision/DSD_Property_Axiom_System_KR_P27_REVISED.tex' | awk '{print $1}')" = 'a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb'
+          echo 'P27 EN/KR manuscript unchanged'
+      - name: Replay conditional finite countermodels, verify complete archival JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          python 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P32_surplus_primitive_semantics/verify_p32_surplus_semantics.py' "$RUNNER_TEMP/P32_EVIDENCE.json"
+          python - "$RUNNER_TEMP/P32_EVIDENCE.json" 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P32_surplus_primitive_semantics/P32_EXPECTED_EVIDENCE.json' <<'PY'
+          import json,sys
+          from pathlib import Path
+          actual=json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
+          expected=json.loads(Path(sys.argv[2]).read_text(encoding='utf-8'))
+          assert actual==expected,'P32 full JSON evidence mismatch'
+          assert actual['check_count']==17 and actual['passed']==17
+          assert actual['whole_FPA']=='OPEN'
+          assert actual['source_policy_not_fixed'] is True
+          print('P32 17/17 conditional observations exact, FPA remains OPEN')
+          PY
