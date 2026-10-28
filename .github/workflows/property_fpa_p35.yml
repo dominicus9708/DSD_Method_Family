@@ -1,0 +1,36 @@
+name: Property P35 Frozen Source and FPA Closure Ledger Audit
+on:
+  push:
+    paths:
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P35_integrated_fpa_closure_ledger/**'
+      - '.github/workflows/property_fpa_p35.yml'
+  workflow_dispatch:
+jobs:
+  validate-frozen-p27-ledger:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify locked P27 source and prior mathematical boundary evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          root="DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01"
+          python "$root/P35_integrated_fpa_closure_ledger/verify_p35_fpa_ledger.py" --out "$RUNNER_TEMP/p35-ledger.json"
+          python - "$RUNNER_TEMP/p35-ledger.json" "$root/P35_integrated_fpa_closure_ledger/P35_LEDGER_RESULT.json" <<'PY'
+          import json,sys
+          with open(sys.argv[1],encoding="utf-8") as f: actual=json.load(f)
+          with open(sys.argv[2],encoding="utf-8") as f: expected=json.load(f)
+          assert actual==expected, "P35 source-locked ledger differs from archived evidence"
+          assert actual["whole_property_fpa"]=="OPEN"
+          assert actual["unresolved_clusters_count"]==4
+          assert actual["passed_checks"]==actual["check_count"]==16
+          assert actual["manuscript_edited"] is False
+          print("P35 EXACT JSON MATCH / 16 CHECKS / FOUR OPEN OBLIGATIONS / P27 FROZEN")
+          PY
