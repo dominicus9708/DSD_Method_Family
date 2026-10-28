@@ -1,0 +1,107 @@
+{
+  "audit_id": "PA-P35-20261029-INTEGRATED-FPA-CLOSURE-LEDGER",
+  "source_lock": {
+    "EN": {
+      "source_bytes": 68175,
+      "main_theorem_items": 13,
+      "sha256": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb"
+    },
+    "KR": {
+      "source_bytes": 71189,
+      "main_theorem_items": 13,
+      "sha256": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+    }
+  },
+  "item_statuses": {
+    "1": "DEFINITIONAL_SUPPORTED",
+    "2": "AXIOM_CONTENT_SUPPORTED",
+    "3": "BLOCKED_S04",
+    "4": "DEFINITIONAL_STATUS_SUPPORTED",
+    "5": "CONDITIONAL_S01",
+    "6": "CONDITIONAL_S01",
+    "7": "CONDITIONAL_S01",
+    "8": "CONDITIONAL_FIXED_REPRESENTATION_SIGNATURE",
+    "9": "CONDITIONAL_S01_S03",
+    "10": "CONDITIONAL_S02",
+    "11": "BLOCKED_S04",
+    "12": "BLOCKED_S04",
+    "13": "SUPPORTED_FIXED_STAGEVI_INTERFACE"
+  },
+  "unresolved_clusters": {
+    "S-01": {
+      "items": [
+        5,
+        6,
+        7,
+        9
+      ],
+      "status": "SEMANTIC_CONVENTION_NOT_FIXED",
+      "question": "Restrict primitive families to active declared available profiles, or retain surplus raw presentations with separate core comparison?"
+    },
+    "S-02": {
+      "items": [
+        10
+      ],
+      "status": "EXPLICIT_TYPED_PREMISE_REQUIRED",
+      "question": "Does finite primitive presentation expressly inherit all Def2.5 typed-premodel constraints beyond PI/PII?"
+    },
+    "S-03": {
+      "items": [
+        9
+      ],
+      "status": "I_K_SOURCE_EQUIVALENCE_NOT_CERTIFIED",
+      "depends_on": [
+        "S-01"
+      ],
+      "question": "Is Def7.1 stage-comparison over active primitive coordinates (P33 proof) rather than all raw coordinates?"
+    },
+    "S-04": {
+      "items": [
+        3,
+        11,
+        12
+      ],
+      "status": "UNIVERSAL_FIXED_SIGNATURE_VERSION_DISPROVED",
+      "question": "Separate universal per-fixed-signature structural claims from existential family-level witnesses."
+    }
+  },
+  "unresolved_clusters_count": 4,
+  "independent_blocker_branches": [
+    [
+      "S-01",
+      "S-03"
+    ],
+    [
+      "S-02"
+    ],
+    [
+      "S-04"
+    ]
+  ],
+  "checks": {
+    "EN_Def2_5_not_required_source_present": true,
+    "EN_main_theorem_has_13_items": true,
+    "EN_section11_has_fixed_base": true,
+    "EN_source_frozen_SHA256_match": true,
+    "KR_Def2_5_not_required_source_present": true,
+    "KR_main_theorem_has_13_items": true,
+    "KR_section11_has_fixed_base": true,
+    "KR_source_frozen_SHA256_match": true,
+    "P32_17_finite_conditional_expectations_pass": true,
+    "P32_semantics_not_decided": true,
+    "P34_15_finite_conditional_expectations_pass": true,
+    "P34_quantifier_counterexample_still_open": true,
+    "P34_refers_to_same_frozen_P27": true,
+    "dependency_S03_requires_S01": true,
+    "exactly_13_distinct_theorem_items": true,
+    "four_unresolved_source_obligation_clusters": true
+  },
+  "passed_checks": 16,
+  "check_count": 16,
+  "no_new_mathematical_proof_from_this_script": true,
+  "audit_readiness": "SOURCE_LOCKED_DEPENDENCY_LEDGER_COMPLETE__AUTHOR_SCOPE_DECISION_OPEN",
+  "manuscript_edited": false,
+  "whole_property_fpa": "OPEN",
+  "closure_rule": "P27 FPA not CLOSED on frozen literal source; first finish review, then batch-revise and re-audit final revised paper before CLOSED.",
+  "external_review": "NOT_ESTABLISHED"
+}
