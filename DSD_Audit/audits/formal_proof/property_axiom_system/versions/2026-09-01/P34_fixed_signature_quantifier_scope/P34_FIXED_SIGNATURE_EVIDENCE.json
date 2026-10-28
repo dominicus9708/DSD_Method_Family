@@ -1,0 +1,33 @@
+{
+  "audit_id": "PA-P34-20261029-FIXED-SIGNATURE-QUANTIFIER-SCOPE",
+  "checks": {
+    "auxiliary_availability_summary_collision": true,
+    "common_signature_PII_counterpremodel": true,
+    "common_signature_PI_counterpremodel": true,
+    "dependency_free_PII_tautology": true,
+    "dependency_free_PI_can_fail": true,
+    "empty_inherited_factor_blocks_assignment_and_stage3": true,
+    "empty_signature_no_nontrivial_branch": true,
+    "empty_signature_one_canonical_model": true,
+    "empty_signature_trivial_summary": true,
+    "empty_value_carrier_still_stage3": true,
+    "one_zero_kind_summary_collision": true,
+    "one_zero_kind_summary_is_labelled": true,
+    "stage2_one_candidate_unavailable": true,
+    "stage3_one_kind_one_input": true,
+    "stage4_one_kind_one_input_one_value": true
+  },
+  "claims": {
+    "existential_witnesses": "SUPPORTED_WITH_EXPLICIT_SIGNATURE_HYPOTHESES",
+    "fixed_signature_universal_3_11_12": "DISPROVED_BY_EMPTY_SIGNATURE",
+    "main_theorem_revision": "DEFERRED_SOURCE_FROZEN",
+    "whole_property_FPA": "OPEN"
+  },
+  "frozen_p27_source_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "limitations": "One-or-zero-auxiliary-sort small explicit witnesses; no proof of general ZFC mathematical necessity, no manuscript or Zenodo modification.",
+  "passed": 15,
+  "total": 15
+}
