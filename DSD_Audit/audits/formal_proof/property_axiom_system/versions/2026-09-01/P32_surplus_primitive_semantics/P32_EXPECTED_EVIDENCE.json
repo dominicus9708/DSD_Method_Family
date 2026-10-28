@@ -1,0 +1,30 @@
+{
+  "audit_id": "PA-P32-20261028-SURPLUS-PRIMITIVE-SEMANTICS",
+  "check_count": 17,
+  "checks": {
+    "C1_derived_data_unchanged_by_normalization": true,
+    "C1_empty_domain_on_explicit_empty": true,
+    "both_undeclared_profiles_have_no_active_kinds": true,
+    "canonical_restriction_equal": true,
+    "canonicalizing_completion_would_break_raw_inverse": true,
+    "exact_C1_reduction_works_if_surplus_retained": true,
+    "explicit_empty_active_coordinate_admitted": true,
+    "missing_required_active_coordinate_rejected": true,
+    "normalization_idempotent": true,
+    "normalization_is_noninjective": true,
+    "raw_complete_descriptor_difference_does_not_imply_active_nonisomorphism": true,
+    "raw_relation_stage3_vs_strict_core_comparison_disagree": true,
+    "raw_stage3_records_differ": true,
+    "raw_surplus_input_is_well_typed_if_treated_as_extra": true,
+    "raw_surplus_models_differ": true,
+    "shared_signature_has_one_candidate_and_inherited_typed_input": true,
+    "strict_identity_core_iso_conditional_extended_class": true
+  },
+  "conclusion": "Exact C1 inverse survives under primitive-preserving extended-presentation semantics; strict identity core isomorphism ignores optional undeclared data. If raw stage3 families are compared literally, stage comparison differs. Canonical normalization idempotent but not injective, so cannot silently substitute for exact primitive retention.",
+  "mathematical_verdict": "PRESENTATION_SCOPE_AMBIGUOUS / AXIOMS_NOT_REFUTED / C1_CONDITIONAL_PROOF",
+  "passed": 17,
+  "revision_need": "SPECIFY_ACTIVE_PRIMITIVE_COORDINATE_DOMAIN_AND_RELATION_TO_DESCRIPTORS",
+  "scope": "finite conditional source discriminator; no user manuscript modified",
+  "source_policy_not_fixed": true,
+  "whole_FPA": "OPEN"
+}
