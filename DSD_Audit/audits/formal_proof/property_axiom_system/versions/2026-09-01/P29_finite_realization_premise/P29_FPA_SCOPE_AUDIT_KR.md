@@ -6,7 +6,7 @@
 - 영문 P27 SHA256: `51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb`
 - 국문 P27 SHA256: `a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb`
 
-## 1. 새로 확인한 증명 의무: §8.2 정리 8.5 표준 유한 실현
+## 1. 새로 확인한 증명 의무: §8.2 정리 8.4 표준 유한 실현
 
 영문 원문은 “Let finite auxiliary carriers, a finite declared property family, finite applicability and prerequisite-satisfaction sets, and finite partial assignment maps be given over a fixed Stage-VI formation record and shared signature. If ... Dom(Ξ)⊆Ap∩DepSat ... then ... unique property-finite full model”이라고 명시한다. 국문판의 같은 정리도 유사한 문장을 사용한다. 반면 증명 첫 두 문장은 포함관계가 PI·PII라는 점에서 곧바로 **supplied data form a primitive property core**라고 추론한다.
 
