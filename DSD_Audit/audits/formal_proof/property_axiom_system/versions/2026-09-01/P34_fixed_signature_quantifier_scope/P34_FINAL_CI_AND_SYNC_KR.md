@@ -1,0 +1,11 @@
+# PA-P34 — 재현 CI 검증 및 증거 동기화
+- 감사 날짜: 2026-10-29 KST
+- P27 원고: 영문·국문 TeX, PDF, Zenodo **수정 없음**. 기존 명시된 SHA256 기준 고정.
+- [GitHub Actions 실행 #40728102664](https://github.com/dominicus9708/DSD_Method_Family/actions/runs/40728102664): **completed / success**.
+- 두 작업: Python 3.10, Python 3.12 모두 SUCCESS. 두 잡의 실제 로그에서 `DSD_Property_Axiom_System_EN_P27_REVISED.tex: OK`, `DSD_Property_Axiom_System_KR_P27_REVISED.tex: OK`, `P34_15_EXPECTED_FINITE_CHECKS_REPRODUCED_WITH_FULL_JSON_MATCH` 확인.
+- 수학 결과: 공백 고정 시그니처는 §11 (3)/(11)/(12)의 보편적 고정시그니처 해석에 반모형. 적절 시그니처의 존재 증명은 유지. Stage3/4 및 비분류의 원래 두 종류·두 점 예시는 최소 자원 필요 조건이 아님; 더 작은 유한 모델이 있음. **새 원시공리 모순을 주장하지 않음**.
+- 실증은 정규 제한 원시좌표 가족 해석에 상대적인 유한 검사이며, 집합론적 일반 증명과 논문 원문 정리 전칭 양화는 별도.
+- [수학 감사보고서](P34_FIXED_SIGNATURE_QUANTIFIER_AUDIT_KR.md), [검증 Python](verify_p34_fixed_signature_scope.py), [검증 JSON](P34_FIXED_SIGNATURE_EVIDENCE.json).
+- [노션 P34](https://app.notion.com/p/40781f51e7fa81178f09cb9be260b0fc).
+- 판정: MATHEMATICAL_VERDICT=FIXED_SIGNATURE_UNIVERSAL_DISPROVED/EXISTENTIAL_CONDITIONAL_PROVED; DSD_AUDIT_VERDICT=PASS_WITH_REFINEMENT; REVISION_NEED=CLARIFICATION_DEFERRED; WHOLE_PROPERTY_FPA=OPEN; EXTERNAL_VALIDATION=not_established.
+- 다음: P35 잔여증명 의무 S-01..S-04 및 원고 종결 전 경계 정리.
