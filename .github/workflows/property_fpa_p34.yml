@@ -1,0 +1,42 @@
+name: Property FPA P34 Fixed Signature Witness Audit
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p34.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P34_fixed_signature_quantifier_scope/**'
+  workflow_dispatch:
+jobs:
+  frozen-source-and-scope:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10','3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify frozen P27 English and Korean source SHA256
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT='DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision'
+          echo "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb  $ROOT/DSD_Property_Axiom_System_EN_P27_REVISED.tex" | sha256sum --check
+          echo "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb  $ROOT/DSD_Property_Axiom_System_KR_P27_REVISED.tex" | sha256sum --check
+      - name: Replay bounded independent P34 finite countermodels
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT='DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P34_fixed_signature_quantifier_scope'
+          python -W error -m py_compile "$ROOT/verify_p34_fixed_signature_scope.py"
+          python "$ROOT/verify_p34_fixed_signature_scope.py" "$RUNNER_TEMP/p34_actual.json"
+          python - "$RUNNER_TEMP/p34_actual.json" "$ROOT/P34_FIXED_SIGNATURE_EVIDENCE.json" <<'PY'
+          import json,sys
+          a=json.load(open(sys.argv[1],encoding='utf-8'))
+          b=json.load(open(sys.argv[2],encoding='utf-8'))
+          assert a == b, 'P34 source/result JSON disagreement'
+          assert a['passed'] == a['total'] == 15
+          assert a['claims']['whole_property_FPA'] == 'OPEN'
+          print('P34_15_EXPECTED_FINITE_CHECKS_REPRODUCED_WITH_FULL_JSON_MATCH')
+          PY
