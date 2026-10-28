@@ -1,0 +1,51 @@
+name: Property FPA P29 Frozen Source and Finite Realization Premises
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p29.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P29_finite_realization_premise/**'
+  workflow_dispatch:
+jobs:
+  source-frozen-and-premise-audit:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10','3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: P27 original English Korean LaTeX SHA256 freeze
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib,pathlib
+          base=pathlib.Path('DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision')
+          expected={
+            'DSD_Property_Axiom_System_EN_P27_REVISED.tex':'51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb',
+            'DSD_Property_Axiom_System_KR_P27_REVISED.tex':'a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb'
+          }
+          for name,sha in expected.items():
+              got=hashlib.sha256((base/name).read_bytes()).hexdigest()
+              assert got==sha,(name,got,sha)
+          print('P29 P27 MANUSCRIPT EN/KR FROZEN EXACT SHA256')
+          PY
+      - name: Reproduce independent finite-premise audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE=DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P29_finite_realization_premise
+          python -W error -m py_compile "$BASE/verify_p29_finite_realization_premise.py"
+          python -W error "$BASE/verify_p29_finite_realization_premise.py" "$RUNNER_TEMP/p29-result.json"
+          python - "$RUNNER_TEMP/p29-result.json" "$BASE/p29_finite_realization_evidence.json" <<'PY'
+          import json,sys
+          got=json.load(open(sys.argv[1]))
+          expected=json.load(open(sys.argv[2]))
+          assert got==expected,'P29 FULL_JSON_MISMATCH'
+          assert got['displayed_inclusion_is_not_sufficient_without_typing']
+          assert sum(x['well_typed_cores'] for x in got['typed_core_enumeration'].values())==43
+          assert len(got['negative_cases'])==4
+          print('P29 EXPECTED 4 NEGATIVES / 43 TYPED CORES / FULL JSON EXACT')
+          PY
