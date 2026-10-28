@@ -1,0 +1,41 @@
+name: Property P31 Section 11 Fixed-Signature Countermodel Audit
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p31.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P31_section11_reverse_dependency/**'
+  workflow_dispatch:
+jobs:
+  p31-independent-check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Assert exact P27 bilingual frozen manuscripts
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb  DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision/DSD_Property_Axiom_System_EN_P27_REVISED.tex" | sha256sum --check --status
+          echo "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb  DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision/DSD_Property_Axiom_System_KR_P27_REVISED.tex" | sha256sum --check --status
+          echo P27_FROZEN_MANUSCRIPTS_IDENTICAL
+      - name: Re-execute independent P31 finite countermodels and exact JSON regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P31_section11_reverse_dependency/verify_p31_main_theorem_scope.py'
+          python 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P31_section11_reverse_dependency/verify_p31_main_theorem_scope.py' "$RUNNER_TEMP/p31.json"
+          python - "$RUNNER_TEMP/p31.json" 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P31_section11_reverse_dependency/P31_EXPECTED_EVIDENCE.json' <<'PY'
+          import json,sys
+          from pathlib import Path
+          actual,archived=(json.loads(Path(p).read_text(encoding='utf-8')) for p in sys.argv[1:])
+          assert actual == archived, 'P31_DIFFERS_FROM_ARCHIVED_FULL_JSON'
+          assert actual['passed']==13 and all(actual['checks'].values())
+          assert actual['p27_manuscript_edited'] is False
+          print('P31_13_EXPECTED_OBSERVATIONS_EXACT_FULL_JSON_PASS')
+          PY
