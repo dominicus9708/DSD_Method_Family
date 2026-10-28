@@ -1,0 +1,70 @@
+{
+  "case_id": "PA-P29-20261028-FINITE-REALIZATION-TYPED-PREMISE-001",
+  "displayed_inclusion_is_not_sufficient_without_typing": true,
+  "mathematical_scope": "bounded unary finite controls; general theorem remains proof obligation",
+  "negative_cases": {
+    "ill_typed_applicability_empty_assignment": {
+      "displayed_inclusion": true,
+      "input_product_cardinality": 1,
+      "primitive_core": false,
+      "well_typed": false
+    },
+    "ill_typed_prerequisite_empty_assignment": {
+      "displayed_inclusion": true,
+      "input_product_cardinality": 1,
+      "primitive_core": false,
+      "well_typed": false
+    },
+    "out_of_codomain_value": {
+      "displayed_inclusion": true,
+      "input_product_cardinality": 1,
+      "primitive_core": false,
+      "well_typed": false
+    },
+    "wrong_arity_applicability_empty_assignment": {
+      "displayed_inclusion": true,
+      "input_product_cardinality": 1,
+      "primitive_core": false,
+      "well_typed": false
+    }
+  },
+  "paper": "Property Axiom System EN P27 (frozen; no changes)",
+  "positive_cases": {
+    "no_prerequisites_vacuous_dependency_satisfied": {
+      "displayed_inclusion": true,
+      "input_product_cardinality": 1,
+      "primitive_core": true,
+      "well_typed": true
+    },
+    "typed_defined_assignment": {
+      "displayed_inclusion": true,
+      "input_product_cardinality": 1,
+      "primitive_core": true,
+      "well_typed": true
+    },
+    "typed_empty_assignment": {
+      "displayed_inclusion": true,
+      "input_product_cardinality": 1,
+      "primitive_core": true,
+      "well_typed": true
+    }
+  },
+  "primitive_axioms_unchanged": true,
+  "source_tex_edited": false,
+  "test_result": "ALL_EXPECTED_OBSERVATIONS_PASS",
+  "typed_core_enumeration": {
+    "0": {
+      "completion_reduction_identity_checks": 1,
+      "well_typed_cores": 1
+    },
+    "1": {
+      "completion_reduction_identity_checks": 6,
+      "well_typed_cores": 6
+    },
+    "2": {
+      "completion_reduction_identity_checks": 36,
+      "well_typed_cores": 36
+    }
+  },
+  "whole_property_fpa": "OPEN"
+}
