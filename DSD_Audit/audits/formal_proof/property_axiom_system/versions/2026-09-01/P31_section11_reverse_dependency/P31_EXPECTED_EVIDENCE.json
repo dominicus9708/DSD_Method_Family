@@ -1,0 +1,25 @@
+{
+  "all_expected": 13,
+  "audit": "PA-P31-FROZEN-P27-SECTION11-QUANTIFIER-DEPENDENCY-001",
+  "checks": {
+    "empty_signature_PI_PII_both_vacuous": true,
+    "empty_signature_has_no_stage_2_3_4_branch_pair": true,
+    "empty_signature_has_no_summary_collision_noniso_pair": true,
+    "empty_signature_stage1_through_4_identity": true,
+    "fixed_signature_universal_branching_not_supported": true,
+    "fixed_signature_universal_independence_not_supported": true,
+    "fixed_signature_universal_summary_nonclassification_not_supported": true,
+    "shared_witness_signature_PII_independent_of_PI": true,
+    "shared_witness_signature_PI_independent_of_PII": true,
+    "stage2_witness_exists_when_kind_available": true,
+    "stage3_witness_exists_when_two_kinds_available": true,
+    "stage4_witness_exists_when_two_kinds_two_values": true,
+    "zero_prerequisites_PII_tautological_even_on_PI_counterpremodel": true
+  },
+  "finite_examples_only": true,
+  "interpretation": "Existential witnesses vary signature. The displayed §11 fixed-signature theorem requires a scope distinction; no axiom inconsistency inferred.",
+  "p27_manuscript_edited": false,
+  "passed": 13,
+  "scope": "Single fixed Stage-VI record; empty, 1-kind and 2-kind signatures; 0/1/2-element carriers; limited displayed countermodels",
+  "whole_property_fpa": "OPEN"
+}
