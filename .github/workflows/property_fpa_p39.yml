@@ -1,0 +1,23 @@
+name: Property P39 frozen 56-item audit
+on:
+  push:
+    paths:
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P39_global_56_item_dependency/**'
+      - '.github/workflows/property_fpa_p39.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify P27 frozen source, 56 items, references and Stage 3 witness
+        run: |
+          python DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P39_global_56_item_dependency/verify_p39_56_item_ledger.py
