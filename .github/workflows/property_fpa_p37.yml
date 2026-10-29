@@ -1,0 +1,45 @@
+name: Property P37 Fixed-Signature Audit (P27 Frozen)
+on:
+  push:
+    paths:
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P37_s02_s04_fixed_signature/**'
+      - '.github/workflows/property_fpa_p37.yml'
+  workflow_dispatch:
+jobs:
+  p37-check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify P27 bilingual source is still frozen
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision'
+          echo '51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb  '"$base"'/DSD_Property_Axiom_System_EN_P27_REVISED.tex' | sha256sum -c
+          echo 'a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb  '"$base"'/DSD_Property_Axiom_System_KR_P27_REVISED.tex' | sha256sum -c
+      - name: Independently regenerate P37 result
+        shell: bash
+        run: |
+          set -euo pipefail
+          base='DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P37_s02_s04_fixed_signature'
+          python "$base/verify_p37_fixed_signature.py" --out "$RUNNER_TEMP/P37_FIXED_SIGNATURE_EVIDENCE.json"
+          python - "$base/P37_FIXED_SIGNATURE_EVIDENCE.json" "$RUNNER_TEMP/P37_FIXED_SIGNATURE_EVIDENCE.json" <<'PY'
+          import json, sys
+          with open(sys.argv[1], encoding='utf-8') as f: expected=json.load(f)
+          with open(sys.argv[2], encoding='utf-8') as f: actual=json.load(f)
+          assert expected==actual, 'P37 archived evidence differs from fresh replay'
+          assert actual['checked_signature_classes']==76
+          assert actual['checks']==380
+          assert actual['typed_premodels_enumerated']==608
+          assert actual['admissible_primitive_cores_enumerated']==520
+          assert actual['S01_semantics_selected'] is False
+          assert actual['whole_FPA']=='OPEN'
+          print('P37 REPLAY PASS: 76 signatures; 380 conditions; 608 typed premodels; 520 legal cores')
+          PY
