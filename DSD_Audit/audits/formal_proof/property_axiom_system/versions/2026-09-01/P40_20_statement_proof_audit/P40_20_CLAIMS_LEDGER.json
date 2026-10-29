@@ -1,0 +1,287 @@
+{
+  "audit_id": "PA-P40-20261029-20-PROOF-CLAIMS",
+  "basis": "P27_EN_KR_FROZEN",
+  "source_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "source_items": 56,
+  "claims": 20,
+  "proof_environments": 17,
+  "direct_corollaries_without_proof": [
+    "4.6",
+    "7.3",
+    "8.8"
+  ],
+  "types": {
+    "theorem": 10,
+    "proposition": 7,
+    "corollary": 3
+  },
+  "assessments": [
+    {
+      "number": "3.7",
+      "kind": "theorem",
+      "title": "Completion-reduction inverse laws",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "audit_status": "CONDITIONAL_GENERAL_PROOF",
+      "assessment": "C1의 원시자료 정확 보존; A/B 각각 보존 명시 시 양쪽 역법칙.",
+      "open_requirement": "정규화 N과 완성 Comp 구별"
+    },
+    {
+      "number": "4.3",
+      "kind": "theorem",
+      "title": "Mutual non-derivability",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-04"
+      ],
+      "audit_status": "WITNESS_PROVED_SCOPE_OPEN",
+      "assessment": "§4의 한 공통 증인 시그니처에서는 PI/PII 상호 비도출. 모든 고정 시그니처 전칭 해석은 반례로 거짓.",
+      "open_requirement": "고정 시그니처 vs 전체 계열의 양화 구분"
+    },
+    {
+      "number": "4.4",
+      "kind": "proposition",
+      "title": "The primitive axioms are not typing tautologies",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-04"
+      ],
+      "audit_status": "WITNESS_PROVED_SCOPE_OPEN",
+      "assessment": "4.1·4.2 적법 typed counterpremodel로 독립성 증명. 독립성을 모든 고정 시그니처로 확대 금지.",
+      "open_requirement": "정리4.3 증인 범위 승계"
+    },
+    {
+      "number": "4.5",
+      "kind": "proposition",
+      "title": "No hidden converse",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [],
+      "audit_status": "GENERAL_WITNESS_SUPPORTED",
+      "assessment": "Ap=Sat={a}, Xi=∅인 한 원소 코어가 두 역포함을 동시에 부정.",
+      "open_requirement": "빈 할당 도메인과 진공성 확인"
+    },
+    {
+      "number": "4.6",
+      "kind": "corollary",
+      "title": "Applicable but undefined status is nonvacuous",
+      "has_explicit_proof": false,
+      "source_refs": [],
+      "risk": [],
+      "audit_status": "DIRECT_COROLLARY_SUPPORTED",
+      "assessment": "4.5의 동일 적법 코어를 C1으로 완성하면 applicable-but-undefined 사례.",
+      "open_requirement": "4.5의 모델 존재와 C1 연결"
+    },
+    {
+      "number": "5.5",
+      "kind": "proposition",
+      "title": "Representation forgetting",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [],
+      "audit_status": "GENERAL_ARGUMENT_SUPPORTED",
+      "assessment": "표현자료는 원시공리/C1에 없고 J=∅ 패키지 가능.",
+      "open_requirement": "표현표지·부가 패키지의 독립성"
+    },
+    {
+      "number": "6.2",
+      "kind": "proposition",
+      "title": "Category of property models",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "audit_status": "GENERAL_CONDITIONAL_S01",
+      "assessment": "F1–F5 출발 활성 프로필에 대한 항등·합성 보존; raw 전체 보존 주장 아님.",
+      "open_requirement": "B raw 제시에서 사상 범위"
+    },
+    {
+      "number": "6.4",
+      "kind": "proposition",
+      "title": "Wide embedding subcategory",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "audit_status": "GENERAL_CONDITIONAL_S01",
+      "assessment": "E1–E3 반영 등식·단사 사상의 합성으로 매장 부분범주.",
+      "open_requirement": "활성 프로필 적용"
+    },
+    {
+      "number": "6.6",
+      "kind": "theorem",
+      "title": "Property-submodel preorder",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "audit_status": "GENERAL_CONDITIONAL_S01",
+      "assessment": "집합 포함과 매장 합성이 전이·반사성을 줌.",
+      "open_requirement": "부분모형 의미론 제한"
+    },
+    {
+      "number": "6.8",
+      "kind": "theorem",
+      "title": "Strict property equivalence is an equivalence relation",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "audit_status": "GENERAL_CONDITIONAL_S01",
+      "assessment": "S1–S3 만족 매장은 역사상도 매장(S4); 활성 strict에 대한 동치.",
+      "open_requirement": "B2 raw 강화 동형과 구별"
+    },
+    {
+      "number": "6.9",
+      "kind": "proposition",
+      "title": "Strict isomorphism preserves completion",
+      "has_explicit_proof": true,
+      "source_refs": [
+        "def:status"
+      ],
+      "risk": [
+        "S-01"
+      ],
+      "audit_status": "GENERAL_CONDITIONAL_S01",
+      "assessment": "DepSat/상태/PropRec가 활성 좌표 함수이므로 strict가 보존.",
+      "open_requirement": "raw 잉여 좌표 전체로 확대 금지"
+    },
+    {
+      "number": "6.11",
+      "kind": "theorem",
+      "title": "Representation-inclusive strict equivalence",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [],
+      "audit_status": "GENERAL_ARGUMENT_SUPPORTED",
+      "assessment": "표현 시그니처 고정 시 J/Y/Enc의 항등·역·합성 보존으로 동치.",
+      "open_requirement": "표현 서명 및 표현자료 typing"
+    },
+    {
+      "number": "7.2",
+      "kind": "proposition",
+      "title": "Nestedness",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "audit_status": "GENERAL_CONDITIONAL_S01_S03",
+      "assessment": "명시 I_k 및 C1 파생좌표 조건 아래 nestedness 및 I4=I5.",
+      "open_requirement": "A/B1 활성 vs B2 raw 비교 명시"
+    },
+    {
+      "number": "7.3",
+      "kind": "corollary",
+      "title": "Strict comparison at the final primitive stage",
+      "has_explicit_proof": false,
+      "source_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "audit_status": "DIRECT_COROLLARY_CONDITIONAL",
+      "assessment": "I4 비공집합↔기존 strict 동형은 A/B1에서만; B2는 강화 raw strict 대응.",
+      "open_requirement": "B2를 기존 strict로 동일시하면 거짓"
+    },
+    {
+      "number": "7.5",
+      "kind": "theorem",
+      "title": "Branching symmetry and invariance",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "audit_status": "GENERAL_CONDITIONAL_S01_S03",
+      "assessment": "동형의 전후합성 및 역전단사로 최초분기 대칭·불변.",
+      "open_requirement": "I_k 정의와 strict 일치 필요"
+    },
+    {
+      "number": "8.1",
+      "kind": "theorem",
+      "title": "Trivial extension over every Stage-VI formation record",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [],
+      "audit_status": "GENERAL_FIXED_BASE_SUPPORTED",
+      "assessment": "선언·보조 공급 모두 ∅인 적법 완전모형을 C1 완성.",
+      "open_requirement": "임의 정당한 Stage VI·공유 시그니처"
+    },
+    {
+      "number": "8.4",
+      "kind": "theorem",
+      "title": "Standard finite realization",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-02",
+        "S-01"
+      ],
+      "audit_status": "TYPING_PREMISE_SCOPE_OPEN",
+      "assessment": "typed finite presentation T, finiteness F, PI/PII inclusion I에서 완성 유일.",
+      "open_requirement": "포함식만으로 타입 적법성 추론 불가"
+    },
+    {
+      "number": "8.8",
+      "kind": "corollary",
+      "title": "No independent Stage-5 witness",
+      "has_explicit_proof": false,
+      "source_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "audit_status": "DIRECT_COROLLARY_CONDITIONAL",
+      "assessment": "7.2의 I4=I5로 독립 Stage5 분기 불가.",
+      "open_requirement": "raw 전체와 active 혼동 금지"
+    },
+    {
+      "number": "9.2",
+      "kind": "theorem",
+      "title": "Summary equality does not classify strict property structure",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-04"
+      ],
+      "audit_status": "EXISTENTIAL_WITNESS_SUPPORTED",
+      "assessment": "8.7 두 zero-bearing 속성·두 입력의 정확한 §9.1 요약 충돌 증인.",
+      "open_requirement": "적절 시그니처에서의 존재, 모든 고정 시그니처 아님"
+    },
+    {
+      "number": "11.1",
+      "kind": "theorem",
+      "title": "Static typed property-closure theorem",
+      "has_explicit_proof": true,
+      "source_refs": [],
+      "risk": [
+        "S-01",
+        "S-02",
+        "S-03",
+        "S-04"
+      ],
+      "audit_status": "GLOBAL_SCOPE_AND_SEMANTICS_OPEN",
+      "assessment": "13항 역참조. (3)(11)(12)의 고정 시그니처 전칭판 반례, (5–10) 조건부 의무.",
+      "open_requirement": "통합 정리 문장과 선행정리 범위 분리"
+    }
+  ],
+  "status": "OPEN",
+  "semantics_selection": "DEFERRED",
+  "source_modified": false,
+  "proof_coverage_note": "Independent mathematical scope audit; 20/20 classification is not 20/20 formally proved."
+}
