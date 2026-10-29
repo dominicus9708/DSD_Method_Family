@@ -1,0 +1,34 @@
+{
+  "audit_id": "PA-P36-20261029-SEMANTIC-A-B-DECISION-AUDIT",
+  "checked": 18,
+  "checks": {
+    "A_canonical_no_surplus": true,
+    "B_can_keep_distinct_raw_presentation": true,
+    "B_surplus_well_typed_example_requires_extra_convention": true,
+    "C1_normalizing_breaks_raw_exact_inverse": true,
+    "C1_raw_left_inverse": true,
+    "C1_raw_right_inverse_on_actual_full": true,
+    "N_forgets_explicit_empty_surplus": true,
+    "N_forgets_extra_value": true,
+    "N_forgets_inactive_unlabelled_extra": true,
+    "N_has_section_by_empty_surplus": true,
+    "N_idempotent": true,
+    "N_not_injective_on_B": true,
+    "availability_vs_explicit_empty_distinct": true,
+    "derived_depends_only_on_active": true,
+    "raw_identity_iso_implies_active": true,
+    "raw_stage3_not_stage3_active": true,
+    "strict_active_iso_not_raw_iso": true,
+    "surplus_sat_independent_of_active_C1": true
+  },
+  "decision": "A = least additional machinery for active-core FPA; B = possible with raw-presentation/core quotient split. Author choice not asserted.",
+  "mathematical_scope": "ZFC arguments in accompanying audit report; this code merely checks finite witness separation.",
+  "passed": 18,
+  "revision": "Deferred; no P27 manuscript or Zenodo edits",
+  "scope": "Inherited carrier h={a,b}, candidate p:(h), delta(p)=empty and candidate q:(h), delta(q)={d}; no tested model declares q. Raw examples are CONDITIONAL on presentation B; all maps here identity. Derived() models only assignment domains and records (not full C1 status).",
+  "source_frozen_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "whole_property_fpa": "OPEN"
+}
