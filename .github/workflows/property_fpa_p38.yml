@@ -1,0 +1,44 @@
+name: Property FPA P38 A-B1-B2 independent stages
+on:
+  push:
+    paths:
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P38_a_b1_b2_stage_strict/**'
+      - '.github/workflows/property_fpa_p38.yml'
+  workflow_dispatch:
+
+jobs:
+  reproduce-p38:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check original P27 bilingual source SHA256 (do not modify source)
+        shell: bash
+        run: |
+          base="DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision"
+          echo "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb  $base/DSD_Property_Axiom_System_EN_P27_REVISED.tex" | sha256sum --check
+          echo "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb  $base/DSD_Property_Axiom_System_KR_P27_REVISED.tex" | sha256sum --check
+      - name: Reproduce P38 59-core evidence with exact JSON comparison
+        shell: bash
+        run: |
+          base="DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P38_a_b1_b2_stage_strict"
+          python "$base/verify_p38_three_semantics.py" > /tmp/p38_replay.json
+          diff -u "$base/P38_EXPECTED_EVIDENCE.json" /tmp/p38_replay.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('/tmp/p38_replay.json').read_text())
+          assert data['passed']==data['total']==16
+          assert data['finite_model_count']==59
+          assert data['finite_ordered_pairs']==3481
+          assert data['tested_carrier_bijections']==1392
+          assert data['core_iso_but_not_raw_iso_pairs']==90
+          assert data['verdict']['FPA']=='OPEN'
+          print('P38 independent finite regression PASS; general FPA remains OPEN')
+          PY
