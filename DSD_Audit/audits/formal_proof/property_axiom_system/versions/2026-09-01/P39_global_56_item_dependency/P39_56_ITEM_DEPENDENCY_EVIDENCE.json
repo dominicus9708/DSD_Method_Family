@@ -1,0 +1,698 @@
+{
+  "audit_id": "PA-P39-20261029-GLOBAL-56-ITEM-DEPENDENCY",
+  "sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "numbered_total": 56,
+  "counts": {
+    "definition": 23,
+    "remark": 7,
+    "theorem": 10,
+    "countermodel": 2,
+    "proposition": 7,
+    "corollary": 3,
+    "construction": 4
+  },
+  "global_labels": 36,
+  "proof_blocks": 17,
+  "direct_missing_references": {
+    "EN": [],
+    "KR": []
+  },
+  "items": [
+    {
+      "n": "2.1",
+      "kind": "definition",
+      "title": "Shared property signature",
+      "label": "def:signature",
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "2.2",
+      "kind": "remark",
+      "title": "Property names do not determine mathematics",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "2.3",
+      "kind": "definition",
+      "title": "Auxiliary carrier supply",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "2.4",
+      "kind": "definition",
+      "title": "Profile availability",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "2.5",
+      "kind": "definition",
+      "title": "Property premodel",
+      "label": "def:premodel",
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-02"
+      ],
+      "finding": "모형의 활성 가족 정확한 정의역 미확정; A/B 후보 유지"
+    },
+    {
+      "n": "2.6",
+      "kind": "definition",
+      "title": "Primitive property core",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-02"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "2.7",
+      "kind": "definition",
+      "title": "Property-stage truncations",
+      "label": "def:property-stages",
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "3.1",
+      "kind": "definition",
+      "title": "Dependency-satisfied region",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "3.2",
+      "kind": "definition",
+      "title": "Assignment domain",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "3.3",
+      "kind": "definition",
+      "title": "Property status",
+      "label": "def:status",
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "3.4",
+      "kind": "definition",
+      "title": "Defined property records",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "3.5",
+      "kind": "remark",
+      "title": "Formation assignments are not property assignments",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "3.6",
+      "kind": "definition",
+      "title": "Primitive reduction",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "3.7",
+      "kind": "theorem",
+      "title": "Completion-reduction inverse laws",
+      "label": "thm:completion-inverse",
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-02",
+        "S-03"
+      ],
+      "finding": "C1 역법칙은 전체 원시자료 정확 보존 전제에 상대적"
+    },
+    {
+      "n": "3.8",
+      "kind": "remark",
+      "title": "No core well-foundedness axiom",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "4.1",
+      "kind": "countermodel",
+      "title": "Primitive Axiom I fails while Primitive Axiom II holds",
+      "label": "cm:pi",
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-04"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "4.2",
+      "kind": "countermodel",
+      "title": "Primitive Axiom II fails while Primitive Axiom I holds",
+      "label": "cm:pii",
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-04"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "4.3",
+      "kind": "theorem",
+      "title": "Mutual non-derivability",
+      "label": "thm:independence",
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-04"
+      ],
+      "finding": "고정 시그니처 전칭 독립성 반례; 증인 시그니처 범위로 한정"
+    },
+    {
+      "n": "4.4",
+      "kind": "proposition",
+      "title": "The primitive axioms are not typing tautologies",
+      "label": null,
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-04"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "4.5",
+      "kind": "proposition",
+      "title": "No hidden converse",
+      "label": null,
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "4.6",
+      "kind": "corollary",
+      "title": "Applicable but undefined status is nonvacuous",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "5.1",
+      "kind": "definition",
+      "title": "Complete core property descriptor",
+      "label": "def:descriptor",
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "완전 기술자의 raw/active 원시좌표 범위 분리 필요"
+    },
+    {
+      "n": "5.2",
+      "kind": "remark",
+      "title": "Undefinedness is structural data",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "5.3",
+      "kind": "definition",
+      "title": "Shared representation signature",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "5.4",
+      "kind": "definition",
+      "title": "Representation package",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "5.5",
+      "kind": "proposition",
+      "title": "Representation forgetting",
+      "label": null,
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "6.1",
+      "kind": "definition",
+      "title": "Forward property map",
+      "label": "def:forward-map",
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "6.2",
+      "kind": "proposition",
+      "title": "Category of property models",
+      "label": null,
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "6.3",
+      "kind": "definition",
+      "title": "Property embedding",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "6.4",
+      "kind": "proposition",
+      "title": "Wide embedding subcategory",
+      "label": null,
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "6.5",
+      "kind": "definition",
+      "title": "Inclusion submodel",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "6.6",
+      "kind": "theorem",
+      "title": "Property-submodel preorder",
+      "label": null,
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "6.7",
+      "kind": "definition",
+      "title": "Strict core property isomorphism",
+      "label": "def:strict-iso",
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "finding": "기존 strict 동형은 활성 좌표 비교; B2 raw 동형과 별개"
+    },
+    {
+      "n": "6.8",
+      "kind": "theorem",
+      "title": "Strict property equivalence is an equivalence relation",
+      "label": "thm:strict-equivalence",
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "finding": "S1–S3로 S4 도출은 활성 구조 범위에 상대적"
+    },
+    {
+      "n": "6.9",
+      "kind": "proposition",
+      "title": "Strict isomorphism preserves completion",
+      "label": null,
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [
+        "def:status"
+      ],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "6.10",
+      "kind": "definition",
+      "title": "Representation-preserving lift",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "6.11",
+      "kind": "theorem",
+      "title": "Representation-inclusive strict equivalence",
+      "label": null,
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "6.12",
+      "kind": "remark",
+      "title": "Abstract versus represented comparison",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "7.1",
+      "kind": "definition",
+      "title": "Stage-comparison sets",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "finding": "I_k 성분식과 raw/active 비교 범위 선택 필요"
+    },
+    {
+      "n": "7.2",
+      "kind": "proposition",
+      "title": "Nestedness",
+      "label": null,
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "finding": "I4=I5는 각 의미론의 일관된 Stage4/5 정의에 상대적"
+    },
+    {
+      "n": "7.3",
+      "kind": "corollary",
+      "title": "Strict comparison at the final primitive stage",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "finding": "I4 비공집합과 strict 동형은 B2 기존 strict에선 거짓"
+    },
+    {
+      "n": "7.4",
+      "kind": "definition",
+      "title": "First branching index",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "7.5",
+      "kind": "theorem",
+      "title": "Branching symmetry and invariance",
+      "label": "thm:branching-invariance",
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "7.6",
+      "kind": "remark",
+      "title": "One failed map does not prove first branching",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-03"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "8.1",
+      "kind": "theorem",
+      "title": "Trivial extension over every Stage-VI formation record",
+      "label": "thm:trivial-extension",
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [],
+      "finding": "현재 직접 차단 요인 없음; 독립 완료 주장 아님"
+    },
+    {
+      "n": "8.2",
+      "kind": "construction",
+      "title": "One-input nontrivial property model",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-04"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "8.3",
+      "kind": "definition",
+      "title": "Finite primitive property data",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-02"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "8.4",
+      "kind": "theorem",
+      "title": "Standard finite realization",
+      "label": "thm:finite-realization",
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-02"
+      ],
+      "finding": "finite inclusion만으로 typed premodel 보장 불가"
+    },
+    {
+      "n": "8.5",
+      "kind": "construction",
+      "title": "Stage-2 declaration branch",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-03",
+        "S-04"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "8.6",
+      "kind": "construction",
+      "title": "Stage-3 applicability branch",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-03",
+        "S-04"
+      ],
+      "finding": "원문 applicability 증인 유효; dependency-only 증인도 별도 구성"
+    },
+    {
+      "n": "8.7",
+      "kind": "construction",
+      "title": "Stage-4 assignment branch",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-03",
+        "S-04"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "8.8",
+      "kind": "corollary",
+      "title": "No independent Stage-5 witness",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-03"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "9.1",
+      "kind": "definition",
+      "title": "Simple finite property summary",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-04"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "9.2",
+      "kind": "theorem",
+      "title": "Summary equality does not classify strict property structure",
+      "label": "thm:compression",
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-03",
+        "S-04"
+      ],
+      "finding": "존재 비분류는 적절한 시그니처 조건 필요"
+    },
+    {
+      "n": "9.3",
+      "kind": "remark",
+      "title": "What the summary loses",
+      "label": null,
+      "has_explicit_immediate_proof": false,
+      "direct_refs": [],
+      "risk": [
+        "S-04"
+      ],
+      "finding": "기존 일반 논증의 적용 범위·전제 확인"
+    },
+    {
+      "n": "11.1",
+      "kind": "theorem",
+      "title": "Static typed property-closure theorem",
+      "label": "thm:main",
+      "has_explicit_immediate_proof": true,
+      "direct_refs": [],
+      "risk": [
+        "S-01",
+        "S-02",
+        "S-03",
+        "S-04"
+      ],
+      "finding": "(3),(11),(12) fixed-signature 강한 전칭판 반례; 전체 의존 종결 OPEN"
+    }
+  ],
+  "independent_axioms": 2,
+  "closure_clauses": 1,
+  "main_theorem_conclusions": 13,
+  "source_edited": false,
+  "whole_fpa": "OPEN",
+  "semantics_choice": "DEFERRED"
+}
