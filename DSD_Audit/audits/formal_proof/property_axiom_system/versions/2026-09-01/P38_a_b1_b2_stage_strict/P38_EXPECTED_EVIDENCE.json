@@ -1,0 +1,41 @@
+{
+  "audit_id": "PA-P38-20261029-A-B1-B2-STAGE-STRICT-GENERAL-SCOPE",
+  "checks": {
+    "A_C1_stage4_equals_stage5": true,
+    "B1_active_stages_equal_normalized_A": true,
+    "B1_core_iso_iff_I4_active": true,
+    "B2_raw_first_branch_invariant_under_raw_iso": true,
+    "B2_raw_first_branch_not_core_iso_invariant": true,
+    "B2_raw_iso_iff_I4_raw_by_definition": true,
+    "B2_raw_iso_implies_original_core_iso": true,
+    "B2_raw_stage3_can_branch_inside_core_iso": true,
+    "B2_raw_stage4_can_branch_inside_core_iso": true,
+    "B2_raw_stage4_equals_stage5": true,
+    "N_idempotent_and_C1_active_invariant": true,
+    "empty_supplied_differs_unavailable": true,
+    "original_core_iso_not_imply_raw_iso": true,
+    "raw_stage1_stage2_equal_active": true,
+    "raw_stage_each_subset_active": true,
+    "surplus_raw_typing_guard_enforced": true
+  },
+  "core_iso_but_not_raw_iso_pairs": 90,
+  "core_iso_raw_first_branch_stage3_pairs": 90,
+  "core_iso_raw_first_branch_stage4_pairs": 0,
+  "finite_model_count": 59,
+  "finite_ordered_pairs": 3481,
+  "frozen_p27_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "passed": 16,
+  "scope": "Finite two-candidate-kind, one optional-sort templates plus two hand-built witnesses; general mathematical proof is separate.",
+  "tested_carrier_bijections": 1392,
+  "total": 16,
+  "verdict": {
+    "A": "CONDITIONAL_GENERAL_PROOF_SUPPORTED",
+    "B1": "ACTIVE_STAGE_PROOF_SUPPORTED",
+    "B2": "RAW_STAGE_PROOF_REQUIRES_NEW_STRICT_RAW",
+    "FPA": "OPEN",
+    "manuscript_edited": false
+  }
+}
