@@ -1,0 +1,69 @@
+{
+  "P27_manuscript_modified": false,
+  "S01_semantics_selected": false,
+  "admissible_primitive_cores_enumerated": 520,
+  "assumption": "Canonical restricted active property coordinates A; one candidate p max, inherited carrier h size 0/1, optional auxiliary u of size missing/empty/singleton, values absent or singleton, zero-bearing optional, one or no prerequisite",
+  "audit_id": "PA-P37-20261029-S02-S04-FIXED-SIGNATURE",
+  "checked_signature_classes": 76,
+  "checks": 380,
+  "criteria": {
+    "branch2": "at least one candidate property kind",
+    "branch3": "at least one candidate property kind with realizable nonempty typed input",
+    "branch4": "at least one candidate kind with realizable nonempty input and nonempty value carrier",
+    "mutual_independence": "exists realizable nonempty typed input and nonempty value carrier with at least one prerequisite",
+    "summary_collision": "available optional auxiliary sort OR an available zero-bearing candidate kind with realizable nonempty input"
+  },
+  "example_signatures": {
+    "branch2": {
+      "aux_sort": false,
+      "h_size": 0,
+      "has_dependency": false,
+      "has_value": false,
+      "profile": [
+        "h"
+      ],
+      "zero_bearing": false
+    },
+    "branch3": {
+      "aux_sort": true,
+      "h_size": 0,
+      "has_dependency": false,
+      "has_value": false,
+      "profile": [
+        "u"
+      ],
+      "zero_bearing": false
+    },
+    "branch4": {
+      "aux_sort": true,
+      "h_size": 0,
+      "has_dependency": false,
+      "has_value": true,
+      "profile": [
+        "u"
+      ],
+      "zero_bearing": false
+    },
+    "mutual_independence": {
+      "aux_sort": true,
+      "h_size": 0,
+      "has_dependency": true,
+      "has_value": true,
+      "profile": [
+        "u"
+      ],
+      "zero_bearing": false
+    },
+    "summary_collision": {
+      "aux_sort": true,
+      "h_size": 0,
+      "has_dependency": false,
+      "has_value": false,
+      "profile": null,
+      "zero_bearing": false
+    }
+  },
+  "typed_premodels_enumerated": 608,
+  "universal_proof_status": "GENERAL_ZFC_ARGUMENT_IN_SEPARATE_REPORT_NOT_ESTABLISHED_BY_FINITE_CHECKS",
+  "whole_FPA": "OPEN"
+}
