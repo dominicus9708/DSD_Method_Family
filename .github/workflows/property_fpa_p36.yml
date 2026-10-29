@@ -1,0 +1,50 @@
+name: Property FPA P36 Frozen Source A-vs-B Semantic Audit
+on:
+  push:
+    paths:
+      - '.github/workflows/property_fpa_p36.yml'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P36_semantics_decision/**'
+  workflow_dispatch:
+jobs:
+  p36:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10','3.12']
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify immutable P27 bilingual manuscript source
+        run: |
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+          root=Path('DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision')
+          files={
+            'DSD_Property_Axiom_System_EN_P27_REVISED.tex':'51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb',
+            'DSD_Property_Axiom_System_KR_P27_REVISED.tex':'a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb',
+          }
+          for name,expected in files.items():
+              sha=hashlib.sha256((root/name).read_bytes()).hexdigest()
+              assert sha==expected,(name,sha,expected)
+              print('FROZEN_P27_SHA256_PASS',name,sha)
+          PY
+      - name: Execute P36 two-semantics independent bounded controls
+        run: |
+          python 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P36_semantics_decision/verify_p36_two_semantics.py' --out "${{ runner.temp }}/p36-live.json"
+      - name: Compare exact expected P36 mathematical findings and boundaries
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          root=Path('DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P36_semantics_decision')
+          expected=json.loads((root/'P36_EXPECTED_EVIDENCE.json').read_text(encoding='utf-8'))
+          live=json.loads((Path(os.environ['RUNNER_TEMP'])/'p36-live.json').read_text(encoding='utf-8'))
+          assert live==expected, 'P36 archived full JSON mismatch'
+          assert live['checked']==live['passed']==18
+          assert live['whole_property_fpa']=='OPEN'
+          print('P36 18/18 PASSED / FULL JSON EXACT / PROPERTY FPA OPEN')
+          PY
