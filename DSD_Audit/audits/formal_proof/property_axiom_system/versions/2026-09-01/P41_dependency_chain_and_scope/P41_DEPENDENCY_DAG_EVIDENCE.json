@@ -1,0 +1,164 @@
+{
+  "audit_id": "PA-P41-20261101-DEPENDENCY-CYCLE-SCOPE",
+  "author": "Kwon Dominicus",
+  "source_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "numbered_source_items": 56,
+  "proof_claims": 20,
+  "edges": 97,
+  "manual_dependency_graph": {
+    "3.7": [
+      "2.5",
+      "2.6",
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "3.6",
+      "C1"
+    ],
+    "4.3": [
+      "2.5",
+      "4.1",
+      "4.2",
+      "PI",
+      "PII"
+    ],
+    "4.4": [
+      "2.5",
+      "4.1",
+      "4.2",
+      "PI",
+      "PII"
+    ],
+    "4.5": [
+      "2.5",
+      "3.1",
+      "3.2",
+      "PI",
+      "PII"
+    ],
+    "4.6": [
+      "4.5",
+      "3.3",
+      "3.7"
+    ],
+    "5.5": [
+      "2.6",
+      "5.3",
+      "5.4",
+      "C1"
+    ],
+    "6.2": [
+      "2.4",
+      "2.5",
+      "6.1"
+    ],
+    "6.4": [
+      "6.1",
+      "6.2",
+      "6.3"
+    ],
+    "6.6": [
+      "6.4",
+      "6.5"
+    ],
+    "6.8": [
+      "6.1",
+      "6.3",
+      "6.7"
+    ],
+    "6.9": [
+      "3.1",
+      "3.2",
+      "3.3",
+      "3.4",
+      "6.8",
+      "C1"
+    ],
+    "6.11": [
+      "5.4",
+      "6.8",
+      "6.10"
+    ],
+    "7.2": [
+      "2.7",
+      "3.7",
+      "7.1",
+      "C1"
+    ],
+    "7.3": [
+      "6.7",
+      "6.8",
+      "7.2"
+    ],
+    "7.5": [
+      "6.8",
+      "7.2",
+      "7.3",
+      "7.4"
+    ],
+    "8.1": [
+      "2.5",
+      "2.6",
+      "3.7"
+    ],
+    "8.4": [
+      "2.5",
+      "2.6",
+      "3.7",
+      "8.3",
+      "PI",
+      "PII",
+      "C1"
+    ],
+    "8.8": [
+      "7.2"
+    ],
+    "9.2": [
+      "6.7",
+      "8.7",
+      "9.1"
+    ],
+    "11.1": [
+      "2.1",
+      "3.7",
+      "4.3",
+      "4.4",
+      "4.6",
+      "5.5",
+      "6.2",
+      "6.4",
+      "6.6",
+      "6.8",
+      "6.11",
+      "7.5",
+      "8.1",
+      "8.4",
+      "8.5",
+      "8.6",
+      "8.7",
+      "8.8",
+      "9.2",
+      "PI",
+      "PII",
+      "C1"
+    ]
+  },
+  "missing_nodes": [],
+  "nonprior_dependency_edges": [],
+  "cycles": [],
+  "source_dangling_label_references": [],
+  "explicit_versus_manual": "Dependencies are auditable expert-reconstructed direct premises, not necessarily literal LaTeX ref commands. Topological ordering is structural evidence only.",
+  "open_scope_conditions": {
+    "S-01": "A/B/B1/B2 undecided; raw preservation and active comparison must not be collapsed",
+    "S-02": "typed finite presentation T independent of inclusion I",
+    "S-03": "I_k comparators and strict isomorphism must share the same raw/active structure",
+    "S-04": "fixed signature universal vs existential witness scope"
+  },
+  "manuscript_modified": false,
+  "FPA": "OPEN",
+  "validation_limit": "No dependency cycle found in mapped 20 proofs, not a complete formal proof of all mathematical inferences."
+}
