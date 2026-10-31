@@ -1,0 +1,21 @@
+name: Property P41 dependency DAG audit
+on:
+  push:
+    paths:
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P41_dependency_chain_and_scope/**'
+      - '.github/workflows/property_fpa_p41.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check P41 source hash and 20-claim dependency DAG
+        run: python DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P41_dependency_chain_and_scope/verify_p41_dependency_dag.py
