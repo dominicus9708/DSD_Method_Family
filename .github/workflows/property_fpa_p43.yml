@@ -1,0 +1,21 @@
+name: Property P43 bilingual source math parity
+on:
+  push:
+    paths:
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P43_bilingual_math_parity_closure_gates/**'
+      - '.github/workflows/property_fpa_p43.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify frozen P27 EN KR structure 56 and 78 display math
+        run: python DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P43_bilingual_math_parity_closure_gates/verify_p43_en_kr_parity.py
