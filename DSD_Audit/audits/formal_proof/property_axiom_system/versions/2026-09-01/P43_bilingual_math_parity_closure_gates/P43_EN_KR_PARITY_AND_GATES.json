@@ -1,0 +1,648 @@
+{
+  "author": "Kwon Dominicus",
+  "audit_id": "PA-P43-20261102-EN-KR-SEMANTIC-PARITY-AND-GATES",
+  "date": "2026-11-02",
+  "frozen_source_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "section_comparison": [
+    {
+      "section": 1,
+      "english": "Introduction",
+      "korean": "서론",
+      "EN_display": 1,
+      "KR_display": 1,
+      "normalized_order_match": true
+    },
+    {
+      "section": 2,
+      "english": "Formation Interface, Signature, and Property Premodels",
+      "korean": "형성 인터페이스, 시그니처 및 속성 예비모형",
+      "EN_display": 13,
+      "KR_display": 13,
+      "normalized_order_match": true
+    },
+    {
+      "section": 3,
+      "english": "Primitive Axioms and Definitional Completion",
+      "korean": "원시 공리와 정의적 완성",
+      "EN_display": 10,
+      "KR_display": 10,
+      "normalized_order_match": true
+    },
+    {
+      "section": 4,
+      "english": "Primitive Independence and Residual Minimality",
+      "korean": "원시 독립성과 잔여 최소성",
+      "EN_display": 12,
+      "KR_display": 12,
+      "normalized_order_match": true
+    },
+    {
+      "section": 5,
+      "english": "Complete Property Descriptors and Optional Representations",
+      "korean": "완전 속성 기술자와 선택적 표현",
+      "EN_display": 3,
+      "KR_display": 3,
+      "normalized_order_match": true
+    },
+    {
+      "section": 6,
+      "english": "Structure-Preserving Maps, Embeddings, and Strict Equivalence",
+      "korean": "구조 보존 사상, 매장 및 엄격한 동치",
+      "EN_display": 11,
+      "KR_display": 11,
+      "normalized_order_match": true
+    },
+    {
+      "section": 7,
+      "english": "Staged Comparison and First Branching",
+      "korean": "단계별 비교와 첫 분기",
+      "EN_display": 6,
+      "KR_display": 6,
+      "normalized_order_match": true
+    },
+    {
+      "section": 8,
+      "english": "Model Existence and Finite Realization",
+      "korean": "모형 존재와 유한 실현",
+      "EN_display": 14,
+      "KR_display": 14,
+      "normalized_order_match": true
+    },
+    {
+      "section": 9,
+      "english": "Compression and Classification Obstructions",
+      "korean": "압축 및 분류 장애",
+      "EN_display": 5,
+      "KR_display": 5,
+      "normalized_order_match": true
+    },
+    {
+      "section": 10,
+      "english": "Relation to the Realized-Axis Specialization and Later DSD Layers",
+      "korean": "실현축 특수화 및 후속 DSD 층과의 관계",
+      "EN_display": 1,
+      "KR_display": 1,
+      "normalized_order_match": true
+    },
+    {
+      "section": 11,
+      "english": "Main Property-Closure Theorem",
+      "korean": "주 속성 폐쇄 정리",
+      "EN_display": 0,
+      "KR_display": 0,
+      "normalized_order_match": true
+    },
+    {
+      "section": 12,
+      "english": "Discussion and Scope",
+      "korean": "논의와 범위",
+      "EN_display": 0,
+      "KR_display": 0,
+      "normalized_order_match": true
+    },
+    {
+      "section": 13,
+      "english": "Conclusion",
+      "korean": "결론",
+      "EN_display": 1,
+      "KR_display": 1,
+      "normalized_order_match": true
+    },
+    {
+      "section": 14,
+      "english": "Typing and Notation",
+      "korean": "유형화와 표기",
+      "EN_display": 0,
+      "KR_display": 0,
+      "normalized_order_match": true
+    },
+    {
+      "section": 15,
+      "english": "Axiom, Definition, and Dependency Map",
+      "korean": "공리, 정의 및 의존성 지도",
+      "EN_display": 0,
+      "KR_display": 0,
+      "normalized_order_match": true
+    },
+    {
+      "section": 16,
+      "english": "Finitely Specified Reconstruction Protocol",
+      "korean": "유한 명세 재구성 절차",
+      "EN_display": 1,
+      "KR_display": 1,
+      "normalized_order_match": true
+    }
+  ],
+  "sections": 16,
+  "subsections": 30,
+  "math_display": 78,
+  "numbered_items": 56,
+  "labels": 36,
+  "proof_environments": 17,
+  "inline_reference_uses": 31,
+  "axioms": 2,
+  "definitional_closure_clauses": 1,
+  "main_theorem_count": {
+    "EN": 13,
+    "KR": 13
+  },
+  "parallel_numbered": [
+    {
+      "number": "2.1",
+      "kind": "definition",
+      "label": "def:signature",
+      "title_EN": "Shared property signature",
+      "title_KR": "공유 속성 시그니처"
+    },
+    {
+      "number": "2.2",
+      "kind": "remark",
+      "label": null,
+      "title_EN": "Property names do not determine mathematics",
+      "title_KR": "속성 이름은 수학을 결정하지 않는다"
+    },
+    {
+      "number": "2.3",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Auxiliary carrier supply",
+      "title_KR": "보조 운반체 공급"
+    },
+    {
+      "number": "2.4",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Profile availability",
+      "title_KR": "프로파일 가용성"
+    },
+    {
+      "number": "2.5",
+      "kind": "definition",
+      "label": "def:premodel",
+      "title_EN": "Property premodel",
+      "title_KR": "속성 예비모형"
+    },
+    {
+      "number": "2.6",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Primitive property core",
+      "title_KR": "원시 속성 핵심"
+    },
+    {
+      "number": "2.7",
+      "kind": "definition",
+      "label": "def:property-stages",
+      "title_EN": "Property-stage truncations",
+      "title_KR": "속성 단계 절단"
+    },
+    {
+      "number": "3.1",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Dependency-satisfied region",
+      "title_KR": "의존성 충족 영역"
+    },
+    {
+      "number": "3.2",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Assignment domain",
+      "title_KR": "할당 정의역"
+    },
+    {
+      "number": "3.3",
+      "kind": "definition",
+      "label": "def:status",
+      "title_EN": "Property status",
+      "title_KR": "속성 상태"
+    },
+    {
+      "number": "3.4",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Defined property records",
+      "title_KR": "정의된 속성 기록"
+    },
+    {
+      "number": "3.5",
+      "kind": "remark",
+      "label": null,
+      "title_EN": "Formation assignments are not property assignments",
+      "title_KR": "형성 할당은 속성 할당이 아니다"
+    },
+    {
+      "number": "3.6",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Primitive reduction",
+      "title_KR": "원시 환원"
+    },
+    {
+      "number": "3.7",
+      "kind": "theorem",
+      "label": "thm:completion-inverse",
+      "title_EN": "Completion-reduction inverse laws",
+      "title_KR": "완성-환원 역법칙"
+    },
+    {
+      "number": "3.8",
+      "kind": "remark",
+      "label": null,
+      "title_EN": "No core well-foundedness axiom",
+      "title_KR": "핵심에는 정초성 공리가 필요하지 않다"
+    },
+    {
+      "number": "4.1",
+      "kind": "countermodel",
+      "label": "cm:pi",
+      "title_EN": "Primitive Axiom I fails while Primitive Axiom II holds",
+      "title_KR": "원시 공리 II는 만족하지만 원시 공리 I은 실패하는 경우"
+    },
+    {
+      "number": "4.2",
+      "kind": "countermodel",
+      "label": "cm:pii",
+      "title_EN": "Primitive Axiom II fails while Primitive Axiom I holds",
+      "title_KR": "원시 공리 I은 만족하지만 원시 공리 II는 실패하는 경우"
+    },
+    {
+      "number": "4.3",
+      "kind": "theorem",
+      "label": "thm:independence",
+      "title_EN": "Mutual non-derivability",
+      "title_KR": "상호 비도출성"
+    },
+    {
+      "number": "4.4",
+      "kind": "proposition",
+      "label": null,
+      "title_EN": "The primitive axioms are not typing tautologies",
+      "title_KR": "원시 공리는 유형화 항진식이 아니다"
+    },
+    {
+      "number": "4.5",
+      "kind": "proposition",
+      "label": null,
+      "title_EN": "No hidden converse",
+      "title_KR": "숨은 역방향 함의는 없다"
+    },
+    {
+      "number": "4.6",
+      "kind": "corollary",
+      "label": null,
+      "title_EN": "Applicable but undefined status is nonvacuous",
+      "title_KR": "적용 가능하지만 미정의인 상태는 공허하지 않다"
+    },
+    {
+      "number": "5.1",
+      "kind": "definition",
+      "label": "def:descriptor",
+      "title_EN": "Complete core property descriptor",
+      "title_KR": "완전 핵심 속성 기술자"
+    },
+    {
+      "number": "5.2",
+      "kind": "remark",
+      "label": null,
+      "title_EN": "Undefinedness is structural data",
+      "title_KR": "미정의성도 구조적 자료이다"
+    },
+    {
+      "number": "5.3",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Shared representation signature",
+      "title_KR": "공유 표현 시그니처"
+    },
+    {
+      "number": "5.4",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Representation package",
+      "title_KR": "표현 패키지"
+    },
+    {
+      "number": "5.5",
+      "kind": "proposition",
+      "label": null,
+      "title_EN": "Representation forgetting",
+      "title_KR": "표현 망각"
+    },
+    {
+      "number": "6.1",
+      "kind": "definition",
+      "label": "def:forward-map",
+      "title_EN": "Forward property map",
+      "title_KR": "순방향 속성 사상"
+    },
+    {
+      "number": "6.2",
+      "kind": "proposition",
+      "label": null,
+      "title_EN": "Category of property models",
+      "title_KR": "속성 모형의 범주"
+    },
+    {
+      "number": "6.3",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Property embedding",
+      "title_KR": "속성 매장"
+    },
+    {
+      "number": "6.4",
+      "kind": "proposition",
+      "label": null,
+      "title_EN": "Wide embedding subcategory",
+      "title_KR": "넓은 매장 부분범주"
+    },
+    {
+      "number": "6.5",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Inclusion submodel",
+      "title_KR": "포함 부분모형"
+    },
+    {
+      "number": "6.6",
+      "kind": "theorem",
+      "label": null,
+      "title_EN": "Property-submodel preorder",
+      "title_KR": "속성 부분모형 준순서"
+    },
+    {
+      "number": "6.7",
+      "kind": "definition",
+      "label": "def:strict-iso",
+      "title_EN": "Strict core property isomorphism",
+      "title_KR": "엄격한 핵심 속성 동형사상"
+    },
+    {
+      "number": "6.8",
+      "kind": "theorem",
+      "label": "thm:strict-equivalence",
+      "title_EN": "Strict property equivalence is an equivalence relation",
+      "title_KR": "엄격한 속성 동치는 동치관계이다"
+    },
+    {
+      "number": "6.9",
+      "kind": "proposition",
+      "label": null,
+      "title_EN": "Strict isomorphism preserves completion",
+      "title_KR": "엄격한 동형사상은 완성을 보존한다"
+    },
+    {
+      "number": "6.10",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Representation-preserving lift",
+      "title_KR": "표현 보존 승격"
+    },
+    {
+      "number": "6.11",
+      "kind": "theorem",
+      "label": null,
+      "title_EN": "Representation-inclusive strict equivalence",
+      "title_KR": "표현 포함 엄격한 동치"
+    },
+    {
+      "number": "6.12",
+      "kind": "remark",
+      "label": null,
+      "title_EN": "Abstract versus represented comparison",
+      "title_KR": "추상 비교와 표현 비교"
+    },
+    {
+      "number": "7.1",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Stage-comparison sets",
+      "title_KR": "단계 비교 집합"
+    },
+    {
+      "number": "7.2",
+      "kind": "proposition",
+      "label": null,
+      "title_EN": "Nestedness",
+      "title_KR": "중첩성"
+    },
+    {
+      "number": "7.3",
+      "kind": "corollary",
+      "label": null,
+      "title_EN": "Strict comparison at the final primitive stage",
+      "title_KR": "마지막 원시 단계에서의 엄격 비교"
+    },
+    {
+      "number": "7.4",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "First branching index",
+      "title_KR": "첫 분기 지수"
+    },
+    {
+      "number": "7.5",
+      "kind": "theorem",
+      "label": "thm:branching-invariance",
+      "title_EN": "Branching symmetry and invariance",
+      "title_KR": "분기의 대칭성과 불변성"
+    },
+    {
+      "number": "7.6",
+      "kind": "remark",
+      "label": null,
+      "title_EN": "One failed map does not prove first branching",
+      "title_KR": "하나의 실패한 사상만으로 첫 분기가 증명되지는 않는다"
+    },
+    {
+      "number": "8.1",
+      "kind": "theorem",
+      "label": "thm:trivial-extension",
+      "title_EN": "Trivial extension over every Stage-VI formation record",
+      "title_KR": "모든 단계 VI 형성 기록 위의 자명 확장"
+    },
+    {
+      "number": "8.2",
+      "kind": "construction",
+      "label": null,
+      "title_EN": "One-input nontrivial property model",
+      "title_KR": "한 입력 비자명 속성 모형"
+    },
+    {
+      "number": "8.3",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Finite primitive property data",
+      "title_KR": "유한 원시 속성 자료"
+    },
+    {
+      "number": "8.4",
+      "kind": "theorem",
+      "label": "thm:finite-realization",
+      "title_EN": "Standard finite realization",
+      "title_KR": "표준 유한 실현"
+    },
+    {
+      "number": "8.5",
+      "kind": "construction",
+      "label": null,
+      "title_EN": "Stage-2 declaration branch",
+      "title_KR": "단계 2 선언 분기"
+    },
+    {
+      "number": "8.6",
+      "kind": "construction",
+      "label": null,
+      "title_EN": "Stage-3 applicability branch",
+      "title_KR": "단계 3 적용 가능성 분기"
+    },
+    {
+      "number": "8.7",
+      "kind": "construction",
+      "label": null,
+      "title_EN": "Stage-4 assignment branch",
+      "title_KR": "단계 4 할당 분기"
+    },
+    {
+      "number": "8.8",
+      "kind": "corollary",
+      "label": null,
+      "title_EN": "No independent Stage-5 witness",
+      "title_KR": "독립적인 단계 5 증인은 없다"
+    },
+    {
+      "number": "9.1",
+      "kind": "definition",
+      "label": null,
+      "title_EN": "Simple finite property summary",
+      "title_KR": "단순 유한 속성 요약"
+    },
+    {
+      "number": "9.2",
+      "kind": "theorem",
+      "label": "thm:compression",
+      "title_EN": "Summary equality does not classify strict property structure",
+      "title_KR": "요약 동일성은 엄격한 속성 구조를 분류하지 못한다"
+    },
+    {
+      "number": "9.3",
+      "kind": "remark",
+      "label": null,
+      "title_EN": "What the summary loses",
+      "title_KR": "요약이 잃는 것"
+    },
+    {
+      "number": "11.1",
+      "kind": "theorem",
+      "label": "thm:main",
+      "title_EN": "Static typed property-closure theorem",
+      "title_KR": "정적 유형화 속성 폐쇄 정리"
+    }
+  ],
+  "macros": [
+    "FVI",
+    "Sin",
+    "Saux",
+    "Sprop",
+    "Pihat",
+    "PiZero",
+    "Dep",
+    "Ap",
+    "DepSat",
+    "Sat",
+    "Dom",
+    "Stat",
+    "PropRec",
+    "CompProp",
+    "RedProp",
+    "Enc",
+    "Pfin"
+  ],
+  "bilingual_high_risk_statement_parity": [
+    {
+      "source": "2.5",
+      "issue": "not required / 요구하지 않는다",
+      "status": "SAME_UNRESOLVED_AMBIGUITY"
+    },
+    {
+      "source": "3.7",
+      "issue": "completion/reduction and raw preservation",
+      "status": "SAME_CONDITIONAL_PREMISE"
+    },
+    {
+      "source": "4.3-4.6",
+      "issue": "fixed witness and generic non-derivability/undefined existence scope",
+      "status": "SAME_EXISTENTIAL_SCOPE_RESTRICTION"
+    },
+    {
+      "source": "6.7-6.9",
+      "issue": "active strict versus B2 raw strict",
+      "status": "SAME_SEMANTIC_CHOICE_OPEN"
+    },
+    {
+      "source": "7.1-7.5",
+      "issue": "I1...I5 strict-comparison conditions visible by stage",
+      "status": "SAME_EXPLICIT_COMPARATOR_REQUIRED"
+    },
+    {
+      "source": "8.4",
+      "issue": "typed compatible finite primitive presentation",
+      "status": "SAME_TYPED_PREMISE_REQUIRED"
+    },
+    {
+      "source": "9.2",
+      "issue": "summary collision witness versus fixed-signature universal",
+      "status": "SAME_EXISTENTIAL_SCOPE_RESTRICTION"
+    },
+    {
+      "source": "11.1",
+      "issue": "Fix FVI and shared signature preceding 13 claims",
+      "status": "SAME_UNIVERSAL_EXISTENTIAL_SCOPE_GAP"
+    }
+  ],
+  "closure_gates": [
+    {
+      "id": "G1",
+      "name": "EN/KR 56 numbered statements, 36 labels, 16 sections and 30 subsections",
+      "status": "CHECKED_STRUCTURE_ONLY"
+    },
+    {
+      "id": "G2",
+      "name": "78 EN/KR display math expressions after punctuation/prose-label normalization",
+      "status": "PASS_EQUIVALENT_FORMULA_SKELETONS"
+    },
+    {
+      "id": "G3",
+      "name": "13 final claims same ordered structural and quantifier-sensitive wording",
+      "status": "TARGETED_BILINGUAL_REVIEW_SUPPORTED_NOT_PROOF"
+    },
+    {
+      "id": "G4",
+      "name": "all bilingual natural-language proof semantics formal equivalence",
+      "status": "NOT_FULLY_CERTIFIED"
+    },
+    {
+      "id": "G5",
+      "name": "A/B1/B2 semantics comparison and final convention",
+      "status": "DEFERRED_UNTIL_WHOLE_AUDIT_REVIEW"
+    },
+    {
+      "id": "G6",
+      "name": "S02 typed finite and S04 quantifier scopes revised into new manuscript",
+      "status": "FROZEN_SOURCE_NOT_REVISED"
+    },
+    {
+      "id": "G7",
+      "name": "post-revision global mathematical proof and external independent validation",
+      "status": "NOT_ESTABLISHED"
+    }
+  ],
+  "final_status": "FULL_FPA_OPEN",
+  "source_modified": false,
+  "semantics_decision": "DEFERRED",
+  "note": "Display normalization discards localized prose within math \\text{...}; manual check of its role required. Formula skeleton matching is not complete translation proof."
+}
