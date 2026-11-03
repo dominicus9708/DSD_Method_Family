@@ -1,0 +1,153 @@
+{
+  "audit_id": "PA-P45-20261103-SEMANTICS-PREDECISION-COMPARISON",
+  "author": "Kwon Dominicus",
+  "date": "2026-11-03",
+  "frozen_P27_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "source_reports": [
+    "P38_a_b1_b2_stage_strict/P38_A_B1_B2_STAGE_STRICT_C1_GENERAL_AUDIT_KR.md",
+    "P44_predecision_readiness/P44_PREDECISION_READINESS_AND_EVIDENCE_AUDIT_KR.md"
+  ],
+  "core_definitions": {
+    "A": "canonical well-typed active primitive family with exact indices",
+    "B1": "typed raw extension retaining extras; Comp_raw preserves raw; isomorphism and stages compare N(raw)",
+    "B2": "typed raw extension retaining extras; stages compare all raw indexed coordinates; uses strengthened raw isomorphism",
+    "N": "restriction of raw primitive families to declared, profile-available active kinds",
+    "i": "canonical inclusion of A as a raw presentation with no surplus primitive coordinates",
+    "identity_scope": "set-sized fixed Stage-VI and shared-signature comparison family; equality of set-coded presentations is distinct from carrier-renaming isomorphism"
+  },
+  "formal_results": [
+    {
+      "id": "R1_SPLIT_RETRACTION",
+      "statement": "N∘i=id_A when i is a canonical raw embedding of every well-typed A core",
+      "proof": "For each active core a, i(a) adds no surplus; restriction N recovers exactly all active coordinates.",
+      "scope": "conditional typed B construction"
+    },
+    {
+      "id": "R2_QUOTIENT",
+      "statement": "B/~_N is bijective with A for ~_N defined by equality of N images",
+      "proof": "Because N is surjective by R1, the induced map [P]↦N(P) is well-defined, injective and surjective.",
+      "scope": "equality of normalized presentations, not general iso-class quotient"
+    },
+    {
+      "id": "R3_FACTOR",
+      "statement": "An observation T:B→Y factors as Tbar∘N iff it is constant on every fiber of N",
+      "proof": "Forward: equal N images imply equal T. Reverse: define Tbar(a)=T(i(a)); P and i(N(P)) lie in the same fiber, hence T(P)=Tbar(N(P)).",
+      "scope": "set-sized fixed family and a canonical section i; all observations are functions"
+    },
+    {
+      "id": "R4_ACTIVE_BLINDNESS",
+      "statement": "Any finite or infinite family of tests factoring through N cannot distinguish two raw presentations in the same N-fiber",
+      "proof": "Each factorized test has equal outputs on P,Q with N(P)=N(Q); apply pointwise to all tests.",
+      "scope": "active-only tests; not true for raw metadata queries"
+    },
+    {
+      "id": "R5_STRICT_REFINEMENT",
+      "statement": "Raw strict isomorphism implies active strict isomorphism, converse may fail",
+      "proof": "Raw preservation implies active substructure preservation; a one-point inherited carrier with differing undeclared Ap raw key supplies counterexample.",
+      "scope": "under typed raw extras and B2 strengthened strict"
+    },
+    {
+      "id": "R6_C1_EXACT",
+      "statement": "Red_raw(Comp_raw(P))=P and Comp_raw(Red_raw(F))=F for full models defined by deterministic C1",
+      "proof": "Comp_raw(P)=(P,Derived(N(P))) retains P; Red_raw projects raw P. Full models are exactly structures where derived=Derived(N(P)).",
+      "scope": "typed raw model; not normalize-then-overwrite"
+    },
+    {
+      "id": "R7_STAGE_COMPARISON",
+      "statement": "I4act=I5act and I4raw=I5raw under respective coherent comparator definitions",
+      "proof": "C1 derived coordinates are functions of active data, preserved by either stage-4 comparator; stage-5 adds no new independent test.",
+      "scope": "I4act corresponds to original strict; I4raw to strengthened raw strict, never mix"
+    }
+  ],
+  "decision_axes": [
+    {
+      "id": "D1",
+      "question": "미선언·프로필 미가용 자료를 수학적 모형 원시좌표로 인정할 것인가?",
+      "A": "아니오; 정규 코어 외부 보존은 별도 설계",
+      "B1": "예, 적법 타입 raw 자료",
+      "B2": "예, 적법 타입 raw 자료",
+      "requires_author_intent": true
+    },
+    {
+      "id": "D2",
+      "question": "엄격 동형의 관찰 대상을 활성 구조에 제한할 것인가?",
+      "A": "활성만 존재",
+      "B1": "활성 비교",
+      "B2": "raw 전체 비교, 강화 동형",
+      "requires_author_intent": true
+    },
+    {
+      "id": "D3",
+      "question": "활성 구조 계산만으로 잉여자료 구별을 평가할 수 있는가?",
+      "A": "비해당",
+      "B1": "불가능(정규화 fiber 소거)",
+      "B2": "raw 관찰 조건이 필요",
+      "requires_author_intent": false
+    },
+    {
+      "id": "D4",
+      "question": "C1 역법칙이 부가 raw 보존과 모순되는가?",
+      "A": "아니오",
+      "B1": "아니오, 전체 raw 보존 시",
+      "B2": "아니오, 전체 raw 보존 시",
+      "requires_author_intent": false
+    },
+    {
+      "id": "D5",
+      "question": "후속 DSD 방법군에서 raw 제시/출처 차이를 모형 안에 요구하는가?",
+      "A": "별도 provenance layer 가능, 미설계",
+      "B1": "원시 보존은 가능하나 strict는 무시",
+      "B2": "raw 비교에 포함",
+      "requires_author_intent": true
+    },
+    {
+      "id": "D6",
+      "question": "최초 분기 지수는 어떤 동형에 대한 불변량이어야 하는가?",
+      "A": "기존 active strict",
+      "B1": "기존 active strict",
+      "B2": "별도 raw strict",
+      "requires_author_intent": true
+    }
+  ],
+  "undecided_contracts": [
+    {
+      "code": "U1",
+      "name": "잉여 raw 가족 정확한 허용 인덱스와 타입; 프로필 미공급 자료 정책",
+      "area": "S-01"
+    },
+    {
+      "code": "U2",
+      "name": "raw 전체 기술자 동일성, 활성 동형과 raw 동형의 구별",
+      "area": "S-01/S-03"
+    },
+    {
+      "code": "U3",
+      "name": "B2의 raw 사상/매장/동형에 대한 합성 및 역의 정의",
+      "area": "S-03"
+    },
+    {
+      "code": "U4",
+      "name": "잠재 raw 데이터를 후속 선언·활성화 시 사용하는 전이 규칙은 정적 P27 범위 밖이며 별도 설계 필요",
+      "area": "FOLLOWUP_NOT_CURRENT_THEOREM"
+    },
+    {
+      "code": "U5",
+      "name": "EN/KR 최종 문장·원고 정리 S-02 및 S-04 의무",
+      "area": "S-02/S-04"
+    }
+  ],
+  "audit_verdict": {
+    "P45_review": "MATHEMATICAL_DISCRIMINATION_CRITERIA_ESTABLISHED",
+    "decision": "DEFERRED",
+    "alternatives_discarded": [],
+    "choice_by_active_only_tests": "IMPOSSIBLE_IN_SAME_N_FIBER",
+    "whole_audit_investigation": "OPEN_UNTIL_AUTHOR_SEMANTICS_AND_POST_DECISION_REVIEW",
+    "P27_manuscripts_edited": false,
+    "full_property_FPA": "OPEN",
+    "external_validation": "NOT_ESTABLISHED",
+    "confidence_limit": "Only conditional set-theoretic proof and finite demonstration; user intent and future DSD data requirements have not been independently proven"
+  }
+}
