@@ -1,0 +1,16 @@
+{
+  "audit_id": "PA-P45-20261103-SEMANTICS-PREDECISION-COMPARISON",
+  "finite_fixture": "fixed inherited singleton h={a}, candidates p,q, p active cases 4, q undeclared raw extras 3x3",
+  "raw_presentations": 36,
+  "active_cores": 4,
+  "raw_variants_per_core": 9,
+  "ordered_pairs": 1296,
+  "equal_normalization_pairs": 324,
+  "raw_distinct_same_core_pairs": 288,
+  "raw_stage3_branch_same_core_pairs": 216,
+  "raw_stage4_branch_same_core_pairs": 72,
+  "raw_stage5_extra_branch_pairs": 0,
+  "comparison_scope": "one-point fixed carrier identity; raw strict = literal raw equality only in this fixture",
+  "fpa": "OPEN",
+  "semantics_selection": "DEFERRED"
+}
