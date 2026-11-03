@@ -1,0 +1,21 @@
+name: Property P45 semantic factorization comparison
+on:
+  push:
+    paths:
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P45_semantics_predecision_comparison/**'
+      - '.github/workflows/property_fpa_p45.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify frozen P27 and P45 typed raw factorization fixture
+        run: python DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P45_semantics_predecision_comparison/verify_p45_semantic_factorization.py
