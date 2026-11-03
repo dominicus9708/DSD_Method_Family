@@ -1,0 +1,21 @@
+name: Property P44 predecision evidence audit
+on:
+  push:
+    paths:
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P44_predecision_readiness/**'
+      - '.github/workflows/property_fpa_p44.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify P44 evidence coverage source hashes and inline math
+        run: python DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P44_predecision_readiness/verify_p44_predecision_readiness.py
