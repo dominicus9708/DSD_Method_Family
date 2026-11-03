@@ -1,0 +1,185 @@
+{
+  "audit_id": "PA-P46-20261104-CHOICE-INVARIANT-BRANCHING-AUDIT",
+  "author": "Kwon Dominicus",
+  "date": "2026-11-04",
+  "P27_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "evidence_sources": [
+    "P45_semantics_predecision_comparison/P45_SEMANTIC_COMPARISON_DECISION_LEDGER.json",
+    "P44_predecision_readiness/P44_PREDECISION_EVIDENCE_LEDGER.json",
+    "P42_consolidated_premises_countermodels_revision_spec/P42_20_PLUS_13_REVISION_LEDGER.json"
+  ],
+  "chosen_semantics": "DEFERRED",
+  "shared_mathematics": [
+    {
+      "id": "C01_PI_PII",
+      "claim": "PI and PII apply to every active declared/profile-available property",
+      "precondition": "well-typed property premodel and active indexing; B extra coordinate axioms not silently introduced",
+      "level": "common_axiom_scope"
+    },
+    {
+      "id": "C02_C1_DETERMINISTIC",
+      "claim": "C1-derived coordinates are deterministic functions of all relevant active primitive data",
+      "precondition": "C1 derivation agrees with normalized active core",
+      "level": "conditional_general_proof"
+    },
+    {
+      "id": "C03_EXACT_INVERSE",
+      "claim": "Completion-reduction preserves full primitive presentation exactly",
+      "precondition": "Comp_A preserves canonical A primitives; Comp_B retains all raw presentation data without hidden normalization",
+      "level": "conditional_general_proof"
+    },
+    {
+      "id": "C04_TYPED_FINITE",
+      "claim": "T+F+I yields unique finite standard completion",
+      "precondition": "compatible well-typed finite primitive presentation and both active inclusion axioms",
+      "level": "conditional_general_proof"
+    },
+    {
+      "id": "C05_STAGES_FOUR_FIVE",
+      "claim": "No independent C1 derived Stage-5 first branch; I4^q=I5^q for q in {active,raw}",
+      "precondition": "the Stage-4 comparator preserves every primitive coordinate used in C1 and Stage 5 adds only determined coordinates",
+      "level": "conditional_general_proof"
+    },
+    {
+      "id": "C06_EXISTS_CANONICAL_WITNESS",
+      "claim": "A-syntax typed local existential witnesses remain embeddable in B1/B2 as no-surplus raw presentations",
+      "precondition": "canonical inclusion i of A into B is admitted; does not imply universal fixed-signature witnesses",
+      "level": "conditional_set_theoretic"
+    },
+    {
+      "id": "C07_FIXED_FORMATION",
+      "claim": "All constructions are relative to fixed Stage-VI formation record; stage numbering not physical time",
+      "precondition": "common fixed FVI and shared signature",
+      "level": "source_scope"
+    }
+  ],
+  "changing_results": [
+    {
+      "id": "V01_PRIMITIVE_ADMISSIBILITY",
+      "claim": "exact family indices/allowed raw coordinates",
+      "A": "active only",
+      "B1": "typed raw extras allowed",
+      "B2": "typed raw extras allowed"
+    },
+    {
+      "id": "V02_DESCRIPTOR_EQUALITY",
+      "claim": "model descriptor retains surplus",
+      "A": "none in core",
+      "B1": "raw preserved but not all compared by active strict",
+      "B2": "raw preserved and strengthened strict compares"
+    },
+    {
+      "id": "V03_STRICT",
+      "claim": "strict iso used to classify",
+      "A": "original active strict",
+      "B1": "original active strict of N(P)",
+      "B2": "strengthened raw strict distinct from original strict"
+    },
+    {
+      "id": "V04_IK",
+      "claim": "meaning of I1-I5",
+      "A": "active stages",
+      "B1": "active stages of N(P)",
+      "B2": "raw stage 3/4 plus C1 derived stage 5"
+    },
+    {
+      "id": "V05_BRANCHING",
+      "claim": "first branch invariant scope",
+      "A": "active strict",
+      "B1": "active strict",
+      "B2": "raw strict"
+    },
+    {
+      "id": "V06_MAIN11",
+      "claim": "main theorem (5)–(9) as stated",
+      "A": "active terms",
+      "B1": "active terms plus raw descriptor distinction",
+      "B2": "raw compare rewrite and active-to-raw implications"
+    }
+  ],
+  "conditional_theorems": [
+    {
+      "id": "T1_COMPARATOR_INCLUSION",
+      "statement": "For all k=1..5 and typed raw P,Q, I_k^raw(P,Q) subseteq I_k^act(P,Q)",
+      "proof": "raw stage 1/2 and active stage 1/2 equal; raw stage 3/4 add matching coordinates and indices; C1 stage5 is deterministic; hence raw constraints strengthen, not weaken, active conditions.",
+      "necessary": "same candidate family; coherent raw comparator includes active constraints"
+    },
+    {
+      "id": "T2_BRANCH_MONOTONICITY",
+      "statement": "With beta^q(P,Q)=min{k in 1..4:I_k^q(P,Q)=empty} and infinity when I4^q nonempty, beta_raw(P,Q)<=beta_act(P,Q)",
+      "proof": "Nested comparison sets and T1 imply whenever an active I_k is empty raw I_k is empty. Hence raw earliest emptiness cannot occur later; active all nonempty gives infinity.",
+      "necessary": "infinity convention is audit extension, not P27 b_prop definition"
+    },
+    {
+      "id": "T3_RAW_CLASS_REFINEMENT",
+      "statement": "Raw strict classes refine active strict classes; induced map B/≅raw -> A/≅act is surjective, not generally injective",
+      "proof": "A raw strict bijection restricts to active; canonical no-surplus section i ensures surjectivity; typed surplus witness distinguishes raw iso classes inside the same normalized active iso class.",
+      "necessary": "fixed set-sized families and all canonical active cores are admitted into B"
+    },
+    {
+      "id": "T4_NO_ONE_NUMBER_EQUIVALENCE",
+      "statement": "A raw first-branch stage is not an invariant of original active strict isomorphism",
+      "proof": "Typed one-point two-presentation example has identical active core and strict act iso, but raw Ap or Xi key difference yields beta_raw 3 or 4 while beta_act=infinity.",
+      "necessary": "B typed surplus hypothetical policy"
+    },
+    {
+      "id": "T5_COMMON_WITHOUT_CHOICE",
+      "statement": "S02 typed finite completeness and S04 witness-vs-universal distinction remain independent of the choice of raw strict comparator",
+      "proof": "C1 construction with T+F+I is active, and counterexamples to universal fixed-signature claims use no-surplus canonical presentations; extended raw fixed-signature witness characterization may differ.",
+      "necessary": "B contains canonical presentations; no blanket extension of A's necessary/sufficient raw-branch signature resource conditions"
+    }
+  ],
+  "finite_expected": {
+    "carriers": "single inherited element a; profile of p and q inherited; p active core four states; q surplus 3 Ap x 3 Xi states",
+    "model_count": 36,
+    "raw_variants_per_active_core": 9,
+    "active_core_count": 4,
+    "ordered_pairs": 1296,
+    "beta_active": {
+      "2": 486,
+      "3": 324,
+      "4": 162,
+      "infinity": 324
+    },
+    "beta_raw": {
+      "2": 486,
+      "3": 648,
+      "4": 126,
+      "infinity": 36
+    },
+    "joint_beta": {
+      "2/2": 486,
+      "3/3": 324,
+      "4/4": 54,
+      "4/3": 108,
+      "infinity/infinity": 36,
+      "infinity/3": 216,
+      "infinity/4": 72
+    },
+    "raw_strict_class_count": 36,
+    "active_strict_class_count": 4,
+    "raw_earlier_than_active_pairs": 396,
+    "active_strict_but_not_raw_strict_pairs": 288
+  },
+  "audit_gates": {
+    "G1_BILINGUAL_SOURCE": "verified_in_prior_regression_not_full_translation_certification",
+    "G2_P29_P45_SCOPE": "recorded conditional general proofs and finite counterexamples",
+    "G3_SHARED_VS_VARIANT": "mapped_with_P46",
+    "G4_SEMANTICS_INTENT": "DEFERRED_AUTHOR_DECISION",
+    "G5_S02_S04_SOURCE": "UNREVISED",
+    "G6_POSTCHOICE_GENERAL_PROOFS": "NOT_EXECUTED",
+    "G7_FINAL_FPA": "OPEN"
+  },
+  "verdict": {
+    "predecision_comparison": "SHARED_AND_BRANCHING_CLAIMS_MAPPED",
+    "review_conclusion": "PREDECISION_MATH_SCOPE_COMPLETE_FOR_TRACKED_S01_TO_S04; NOT_A_CLAIM_OF_ALL_POSSIBLE_MATH_GAPS_CLOSED",
+    "future_decision": "REQUIRES_AUTHOR_SEMANTIC_INTENT",
+    "options_discarded": [],
+    "full_fpa": "OPEN",
+    "source_changed": false,
+    "external_independent_validation": "NOT_ESTABLISHED"
+  }
+}
