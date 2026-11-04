@@ -1,0 +1,322 @@
+{
+  "audit_id": "PA-P47-20261105-PREDECISION-EXIT-AND-TYPED-RAW-NEGATIVE-CONTROLS",
+  "date": "2026-11-05",
+  "author": "Kwon Dominicus",
+  "fixed_source_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "repository": "dominicus9708/DSD_Method_Family",
+  "root": "DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/",
+  "report_manifest": [
+    {
+      "id": "P29",
+      "path": "P29_finite_realization_premise/P29_FPA_SCOPE_AUDIT_KR.md",
+      "role": "typed finite realization premise vs vacuous inclusion"
+    },
+    {
+      "id": "P30",
+      "path": "P30_surplus_semantics_and_comparison/P30_FPA_SURPLUS_AND_STAGE_COMPARISON_KR.md",
+      "role": "source raw/active ambiguity and I_k candidate definitions"
+    },
+    {
+      "id": "P31",
+      "path": "P31_section11_reverse_dependency/P31_SECTION11_REVERSE_DEPENDENCY_AUDIT_KR.md",
+      "role": "thirteen-claim reverse dependency and fixed-signature challenge"
+    },
+    {
+      "id": "P32",
+      "path": "P32_surplus_primitive_semantics/P32_SURPLUS_SEMANTICS_AND_EXACT_C1_INVERSE_AUDIT_KR.md",
+      "role": "exact C1 inverse if raw primitives retained"
+    },
+    {
+      "id": "P33",
+      "path": "P33_explicit_stage_comparison_proof/P33_I1_I5_GENERAL_PROOF_AND_RAW_SCOPE_AUDIT_KR.md",
+      "role": "general active comparison-set proof under declared interpretation"
+    },
+    {
+      "id": "P34",
+      "path": "P34_fixed_signature_quantifier_scope/P34_FIXED_SIGNATURE_QUANTIFIER_AUDIT_KR.md",
+      "role": "existential witnesses vs universal fixed signatures"
+    },
+    {
+      "id": "P35",
+      "path": "P35_integrated_fpa_closure_ledger/P35_FPA_INTEGRATED_CLOSURE_LEDGER_KR.md",
+      "role": "integrated four-obligation ledger"
+    },
+    {
+      "id": "P36",
+      "path": "P36_semantics_decision/P36_SEMANTIC_A_B_MINIMAL_AXIOM_AUDIT_KR.md",
+      "role": "A/B exact preservation and comparison"
+    },
+    {
+      "id": "P37",
+      "path": "P37_s02_s04_fixed_signature/P37_S02_S04_GENERAL_THEOREM_SCOPE_AUDIT_KR.md",
+      "role": "typed T+F+I proof and fixed signature witness conditions"
+    },
+    {
+      "id": "P38",
+      "path": "P38_a_b1_b2_stage_strict/P38_A_B1_B2_STAGE_STRICT_C1_GENERAL_AUDIT_KR.md",
+      "role": "A/B1/B2 strict-vs-raw relation proofs"
+    },
+    {
+      "id": "P39",
+      "path": "P39_global_56_item_dependency/P39_GLOBAL_56_ITEM_DEPENDENCY_AUDIT_KR.md",
+      "role": "mapped 56 numbered items"
+    },
+    {
+      "id": "P40",
+      "path": "P40_20_statement_proof_audit/P40_20_PROOF_CLAIMS_REVERSE_AUDIT_KR.md",
+      "role": "20 mathematical proof obligations"
+    },
+    {
+      "id": "P41",
+      "path": "P41_dependency_chain_and_scope/P41_PROOF_CHAIN_CYCLE_AND_SCOPE_AUDIT_KR.md",
+      "role": "97 directed dependency edges, no mapped cycle"
+    },
+    {
+      "id": "P42",
+      "path": "P42_consolidated_premises_countermodels_revision_spec/P42_CLAIMS_PREMISES_COUNTERMODELS_REVISION_SPEC_KR.md",
+      "role": "20 proofs+13 final claims and S04 local existential boundaries"
+    },
+    {
+      "id": "P43",
+      "path": "P43_bilingual_math_parity_closure_gates/P43_BILINGUAL_MATH_PARITY_AND_FPA_GATES_KR.md",
+      "role": "16 sections, 56 numbered, 78 display equations, translation limits"
+    },
+    {
+      "id": "P44",
+      "path": "P44_predecision_readiness/P44_PREDECISION_READINESS_AND_EVIDENCE_AUDIT_KR.md",
+      "role": "predecision evidence inventory"
+    },
+    {
+      "id": "P45",
+      "path": "P45_semantics_predecision_comparison/P45_SEMANTIC_COMPARISON_MATH_AUDIT_KR.md",
+      "role": "normalization/factorization and comparison intents"
+    },
+    {
+      "id": "P46",
+      "path": "P46_choice_invariants_branching/P46_SHARED_THEOREMS_BRANCH_MONOTONICITY_AUDIT_KR.md",
+      "role": "choice-invariant claims vs raw-stage branching"
+    }
+  ],
+  "source_index": {
+    "numbered": 56,
+    "proof_targets": 20,
+    "main_theorem_subclaims": 13,
+    "dependency_edges": 97,
+    "main_orig_axioms": 2,
+    "definitional_closure_clauses": 1,
+    "section_count": 16,
+    "formula_display_per_language": 78,
+    "formula_inline_per_language": 222,
+    "common_claims": 7,
+    "variant_claims": 6,
+    "conditional_theorems": 5
+  },
+  "negative_control_contract": {
+    "id": "B-TYPED-CHECK-ONLY",
+    "intention": "Do not treat every raw extra as valid; this is a hypothetical B contract, NOT a final interpretation of Def2.5.",
+    "fixed_stage_vi": "one inherited sort h with carrier a, one auxiliary sort u unavailable",
+    "candidate_property_kinds": {
+      "p": {
+        "profile": [
+          "h"
+        ],
+        "value_carrier": [
+          0
+        ],
+        "dependencies": [
+          "d"
+        ],
+        "declared": true
+      },
+      "q": {
+        "profile": [
+          "h"
+        ],
+        "value_carrier": [
+          0
+        ],
+        "dependencies": [],
+        "declared": false
+      },
+      "r": {
+        "profile": [
+          "u"
+        ],
+        "value_carrier": [
+          0
+        ],
+        "dependencies": [],
+        "declared": false
+      }
+    },
+    "active_kind": "p",
+    "extra_kind": "q",
+    "unavailable_kind": "r",
+    "unknown_kind": "outside_signature",
+    "raw_presence_rule": "Indexed partial families distinguish absent key from an explicitly present empty set/map. A default-empty quotient is a different, NOT automatically equivalent, convention.",
+    "must_validate": [
+      "raw_q_empty_applicability_present_is_typed",
+      "raw_q_undefined_assignment_present_is_typed",
+      "raw_r_missing_aux_profile_rejected",
+      "raw_unknown_property_rejected",
+      "active_PI_violation_rejected",
+      "active_PII_violation_rejected",
+      "active_missing_primitive_rejected",
+      "raw_q_can_become_invalid_if_naively_declared",
+      "empty_signature_does_not_force_existence_witness",
+      "normalization_erases_only_optional_extra",
+      "raw_C1_exact_if_preserves_raw",
+      "raw_C1_inverse_fails_if_normalization_overwrites",
+      "same_active_data_raw_key_presence_distinguishes_stage3",
+      "same_active_data_raw_assignment_presence_distinguishes_stage4",
+      "default_empty_coercion_changes_B2_comparison"
+    ]
+  },
+  "proof_obligations": [
+    {
+      "id": "S-01",
+      "status": "CHOICE_DEPENDENT",
+      "source_locations": [
+        "Def2.5",
+        "C1",
+        "Def5.1"
+      ],
+      "postdecision": "exact primitive-index domain, admissible raw sorts and normalization/provenance policy"
+    },
+    {
+      "id": "S-02",
+      "status": "COMMON_SCOPE_PROOF_AVAILABLE_SOURCE_OPEN",
+      "source_locations": [
+        "Th8.4",
+        "Th11.1(10)"
+      ],
+      "postdecision": "insert explicit well-typed compatible finite premodel premise T with F and I"
+    },
+    {
+      "id": "S-03",
+      "status": "S01_DEPENDENT",
+      "source_locations": [
+        "Def6.7",
+        "Def7.1",
+        "Th11.1(9)"
+      ],
+      "postdecision": "define I1..I5 raw/active and matching strict; index presence vs empty value must be specified"
+    },
+    {
+      "id": "S-04",
+      "status": "COMMON_COUNTEREXAMPLES_AND_WITNESSES_SOURCE_OPEN",
+      "source_locations": [
+        "Th4.3",
+        "Pr4.5",
+        "Cor4.6",
+        "Th11.1(3,11,12)"
+      ],
+      "postdecision": "separate fixed-signature structural universals and suitable-signature existential witnesses; preserve local existential scope"
+    }
+  ],
+  "critical_noninferences": [
+    "18 audit reports exist -> all theorems mathematically proven (INVALID)",
+    "CI pass -> arbitrary infinite structures proven (INVALID)",
+    "Original active strict iso -> same raw presentation or raw strict iso (INVALID)",
+    "Raw extra types for unavailable profiles exist automatically (INVALID)",
+    "Raw index absent -> explicitly empty key without an adopted quotient rule (INVALID)",
+    "Canonical no-surplus inclusion is available for every conceivable B rule (INVALID without optional-raw assumption)",
+    "Data retention -> automatic future declaration/activation transition (INVALID without new dynamics)",
+    "S04 fixed signature existence conditions for A -> unchanged B2 raw-only witness conditions (INVALID)",
+    "Comparison strictness -> theoretical correctness or ranking of alternatives (INVALID)",
+    "Predecision scope audit exit -> P27 formal-proof audit CLOSED (INVALID)"
+  ],
+  "decision_paths": [
+    {
+      "id": "A",
+      "needs": [
+        "exact active indexing",
+        "C1 whole active primitive retention",
+        "EN/KR section-level source repair",
+        "FPA re-verification"
+      ],
+      "selected": false
+    },
+    {
+      "id": "B1",
+      "needs": [
+        "typed raw surplus admission and key presence semantics",
+        "Comp_raw preserves raw",
+        "N+descriptor dual levels",
+        "active strict comparator",
+        "EN/KR repair",
+        "FPA re-verification"
+      ],
+      "selected": false
+    },
+    {
+      "id": "B2",
+      "needs": [
+        "all B1 typed raw obligations",
+        "raw morphism/embedding strict iso",
+        "I_k^raw matching strengthened strict",
+        "raw branch invariance",
+        "EN/KR repair",
+        "FPA re-verification"
+      ],
+      "selected": false
+    }
+  ],
+  "exit_gates": [
+    {
+      "id": "X1",
+      "name": "P29–P46 primary reports independently fetched",
+      "status": "DOCUMENT_TRACE_COMPLETE"
+    },
+    {
+      "id": "X2",
+      "name": "56/20/13 claim source map and P41 dependency edges",
+      "status": "LEDGER_STRUCTURE_COMPLETE"
+    },
+    {
+      "id": "X3",
+      "name": "common-vs-choice math separated",
+      "status": "CONDITIONAL_MATH_SCOPE_COMPLETE"
+    },
+    {
+      "id": "X4",
+      "name": "hypothetical typed raw admissibility and negative controls",
+      "status": "NEW_CHECKS_SCHEDULED_IN_P47"
+    },
+    {
+      "id": "X5",
+      "name": "all new general mathematical gaps absent",
+      "status": "NOT_PROVABLE_FROM_FINITE_INVENTORY"
+    },
+    {
+      "id": "X6",
+      "name": "author semantic A/B1/B2 selection",
+      "status": "NOT_PERFORMED_BY_DESIGN"
+    },
+    {
+      "id": "X7",
+      "name": "source P27 and full bilingual semantics revision",
+      "status": "NOT_PERFORMED_FROZEN"
+    },
+    {
+      "id": "X8",
+      "name": "revised-model full FPA closure",
+      "status": "OPEN"
+    }
+  ],
+  "verdict": {
+    "predecision_tracking": "SCOPED_EXIT_READINESS_UNDER_STATED_ASSUMPTIONS",
+    "tracked_obligations": "S01->S03,S02,S04 retained",
+    "new_unconditional_mathematical_inconsistency": "NONE_DEMONSTRATED_IN_SCOPED_NEGATIVE_CONTROLS",
+    "semantic_selection": "DEFERRED",
+    "options_discarded": [],
+    "manuscript_modified": false,
+    "P27_FPA": "OPEN",
+    "independent_formal_proof": "NOT_ESTABLISHED",
+    "bilingual_full_semantics_verified": false,
+    "closure_rule": "No CLOSED status until a semantics is decided, amended EN/KR theorem statements and proof dependencies are independently reaudited."
+  }
+}
