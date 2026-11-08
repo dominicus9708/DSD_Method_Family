@@ -1,0 +1,250 @@
+{
+  "audit_id": "PA-P48-20261109-METHOD-ROLE-SEMANTIC-ADEQUACY",
+  "author": "Kwon Dominicus",
+  "review_date": "2026-11-09",
+  "frozen_P27_sha256": {
+    "EN": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "KR": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "source_provenance": [
+    {
+      "id": "P27",
+      "kind": "frozen_primary_manuscript",
+      "path": "P27_independent_math_revision/DSD_Property_Axiom_System_EN_P27_REVISED.tex",
+      "supports": "static typed property model, active primitive axioms, optional representation signature, strict isomorphism and C1"
+    },
+    {
+      "id": "P47",
+      "kind": "internal_audit",
+      "path": "P47_predecision_exit_and_negative_controls/P47_PREDECISION_EXIT_EVIDENCE_LEDGER.json",
+      "supports": "typed raw conditional extension, absent-vs-empty, no automatic activation, FPA OPEN"
+    },
+    {
+      "id": "P45",
+      "kind": "internal_audit",
+      "path": "P45_semantics_predecision_comparison/P45_SEMANTIC_COMPARISON_DECISION_LEDGER.json",
+      "supports": "N normalization, exact raw preservation, factorization on normalization fibers"
+    },
+    {
+      "id": "P46",
+      "kind": "internal_audit",
+      "path": "P46_choice_invariants_branching/P46_SHARED_VS_BRANCHING_LEDGER.json",
+      "supports": "distinct raw versus active first-branch and strengthened strict"
+    },
+    {
+      "id": "METHODS",
+      "kind": "notion_method_family",
+      "url": "https://app.notion.com/p/3d281f51e7fa80a890b0ec3ee2397c16",
+      "supports": "method family distinguishes analysis, audit, specification, design, etc.; selective Formation/Property/Static Aggregation/Dynamics and domain bridges"
+    },
+    {
+      "id": "PROJECT",
+      "kind": "notion_project_root",
+      "url": "https://app.notion.com/p/3b281f51e7fa812f976eee2ab0eef969",
+      "supports": "general property is axis-independent typed core; axis-specific structures only optional specializations"
+    },
+    {
+      "id": "ANALYSIS",
+      "kind": "notion_method",
+      "url": "https://app.notion.com/p/3bb81f51e7fa81258d0ac502f01b2803",
+      "supports": "analysis separates structural reformulation from audit, comparison and benchmarking"
+    },
+    {
+      "id": "SPEC",
+      "kind": "notion_method",
+      "url": "https://app.notion.com/p/3d281f51e7fa818e9e41f9f4d10bc4c3",
+      "supports": "specification outputs typed requirement/status, absent/undefined/zero distinctions, transitions and lineage duties; not necessarily PAS-native primitives"
+    },
+    {
+      "id": "SPEC_PAUSE",
+      "kind": "notion_operating_decision",
+      "url": "https://app.notion.com/p/3d581f51e7fa8135aa58c4b85b062c3b",
+      "supports": "specification internal constructed-work paused until external cases; do not reactivate method maturity tests on hypothetical PAS examples"
+    },
+    {
+      "id": "DESIGN",
+      "kind": "notion_method",
+      "url": "https://app.notion.com/p/3d281f51e7fa8187a406dfe96228b952",
+      "supports": "forward design uses Formation default and Property only when required; performance and domain validation via external bridges"
+    },
+    {
+      "id": "AUDIT",
+      "kind": "notion_method",
+      "url": "https://app.notion.com/p/3d181f51e7fa81158053ef995f6fb3d4",
+      "supports": "independent audit conclusions and source-evidence discipline; method audit results do not auto-transfer"
+    }
+  ],
+  "semantic_options": [
+    {
+      "id": "A",
+      "core": "active-only canonical well-typed primitive coordinates",
+      "comparison": "active strict",
+      "raw_within_PAS": false,
+      "raw_external_possible": "requires separately defined evidence/provenance container and stable link; not currently PAS theorem",
+      "c1": "exact for canonical active core",
+      "selected": false
+    },
+    {
+      "id": "B1",
+      "core": "active well-typed core plus optional typed raw surplus",
+      "comparison": "active strict on N(P)",
+      "raw_within_PAS": true,
+      "raw_external_possible": "external domain evidence still needs a bridge; raw fields are not automatically an evidence ledger",
+      "c1": "exact only if Comp_raw retains all raw fields",
+      "selected": false
+    },
+    {
+      "id": "B2",
+      "core": "active core plus typed raw surplus",
+      "comparison": "strengthened strict preserving selected raw indices/presence/values",
+      "raw_within_PAS": true,
+      "raw_external_possible": "external evidence and provenance still separate unless explicitly encoded",
+      "c1": "exact only with full raw preservation",
+      "selected": false
+    }
+  ],
+  "method_needs": [
+    {
+      "method": "analysis",
+      "source": "ANALYSIS",
+      "property_role": "optional; active status and typed relations when needed",
+      "raw_requirement": "NOT_ESTABLISHED_AS_PAS_INTERNAL",
+      "constraint": "structural analysis evidence does not automatically count as method audit evidence"
+    },
+    {
+      "method": "audit",
+      "source": "AUDIT",
+      "property_role": "distinguish candidate/admitted/applicable/defined claims",
+      "raw_requirement": "SOURCE_PROVENANCE_MUST_BE_RETAINED_SOMEWHERE; NOT_SHOWN_TO_REQUIRE_PAS_PRIMITIVE",
+      "constraint": "external evidence and independent verification cannot be deduced from PI/PII or C1"
+    },
+    {
+      "method": "specification",
+      "source": "SPEC",
+      "property_role": "typed requirements, absent/undefined/zero/nonapplicable, dependency status",
+      "raw_requirement": "LINEAGE_AND_TRANSITIONS_REQUIRED_AT_METHOD_LEVEL; NOT_PROVEN_TO_BE_RAW_PAS_COORDINATES",
+      "constraint": "internal work paused pending real external cases; don't classify constructed exercises as external validation"
+    },
+    {
+      "method": "design",
+      "source": "DESIGN",
+      "property_role": "conditional typed property of designed candidates, optional if task requires",
+      "raw_requirement": "DESIGN_INPUT_PROVENANCE_MAY_BE_EXTERNAL_LEDGER",
+      "constraint": "future candidate transition & performance require design/interface/domain model"
+    },
+    {
+      "method": "aggregation_dynamics",
+      "source": "METHODS",
+      "property_role": "optional interface where task requires",
+      "raw_requirement": "NOT_ESTABLISHED",
+      "constraint": "static P27 has no automatic activation or transition theorem"
+    }
+  ],
+  "conditional_math": [
+    {
+      "id": "M48-1",
+      "statement": "For a family O of tests T:B->Y_T, active-only representation N is adequate for all O iff each test is constant on every fiber of N.",
+      "preconditions": "set-sized well-typed A,B; N:B->A is surjective with a canonical section i; each T is a function",
+      "proof": "apply P45 factorization separately to each T; uniqueness of Tbar from surjectivity",
+      "verification_scope": "general conditional set-theoretic argument"
+    },
+    {
+      "id": "M48-2",
+      "statement": "The existence of raw preservation in B does not imply that an external evidence field E is determined by a raw presentation.",
+      "preconditions": "an independent external ledger coordinate e with at least two values and no function E(B) specified",
+      "proof": "the pairs (P,e1) and (P,e2) have exactly the same raw P but different e; projection to P cannot recover e",
+      "verification_scope": "external-ledger counterexample, not a claim of an existing DSD requirement"
+    },
+    {
+      "id": "M48-3",
+      "statement": "Raw strict may refine active strict without matching the task-specific observational equivalence; finer alone is not objectively more correct.",
+      "preconditions": "raw strict includes active comparison plus optional typed extra coordinates; active-only observer suite",
+      "proof": "two presentations with same N and distinct raw extras are active observationally equivalent, yet non-raw-isomorphic in index-sensitive B2",
+      "verification_scope": "conditional countermodel and logical distinction, not comparative practical effectiveness"
+    },
+    {
+      "id": "M48-4",
+      "statement": "Neither retention of optional raw fields nor typed inclusion ensures a valid activation transition when declaration/profile availability changes.",
+      "preconditions": "P27 is fixed-signature static; no transition rule given",
+      "proof": "a raw Xi_q may exist without raw Ap_q, while declaring q requires a typed active Ap_q and PI/PII; the naive transition can be ill-typed or axiom-inadmissible",
+      "verification_scope": "single finite countermodel under hypothetical B typing"
+    },
+    {
+      "id": "M48-5",
+      "statement": "If a specific task only observes active PAS content, A and B1 produce identical PAS-level observational results after N, even when raw presentation differs.",
+      "preconditions": "task tests factor through N, no separate provenance criteria queried",
+      "proof": "T(P)=Tbar(N(P)) for all tests by M48-1; cannot infer full historical equality of distinct raw presentations",
+      "verification_scope": "derived from M48-1, not a total equivalence of methods"
+    }
+  ],
+  "decision_boundaries": [
+    {
+      "id": "Q1",
+      "decision": "Should potentially unused raw property coordinates be legally part of a PAS premodel?",
+      "evidence": "P27 Def2.5 'not required' does not settle optional raw extension",
+      "state": "UNDECIDED"
+    },
+    {
+      "id": "Q2",
+      "decision": "Is the aim to preserve original raw presentation or compare it under strict isomorphism?",
+      "evidence": "B1 and B2 differ despite same raw storage",
+      "state": "UNDECIDED"
+    },
+    {
+      "id": "Q3",
+      "decision": "Does the method task need source/lineage evidence, and must it be part of the PAS primitive rather than a separate ledger?",
+      "evidence": "Notion method guidance demands external bridges/provenance and a selective layer, not blanket PAS raw inclusion",
+      "state": "UNRESOLVED_TASK_CONTRACT"
+    },
+    {
+      "id": "Q4",
+      "decision": "Are absent raw indices distinct from explicitly empty raw values?",
+      "evidence": "P47 typed B-only negative control and B2 raw stage3/4 divergence",
+      "state": "UNDECIDED"
+    },
+    {
+      "id": "Q5",
+      "decision": "Are transition/activation duties in PAS static scope?",
+      "evidence": "P27 Stage VI fixed and Notion methods mark Dynamics/transition optional downstream; absent a transition operator",
+      "state": "NOT_DERIVED_FROM_STATIC_P27"
+    },
+    {
+      "id": "Q6",
+      "decision": "Do raw differences define a valid observable for each downstream method?",
+      "evidence": "No external method benchmark demonstrating universal utility for raw strict",
+      "state": "NOT_ESTABLISHED"
+    }
+  ],
+  "finite_fixture": {
+    "core": "declared p with one inherited input a, typed Ap_p={a}, Sat_p,d={a}, Xi_p=empty",
+    "q": "undeclared but profile-available kind q",
+    "pair": "P has no raw q key; Q has Ap_q=empty explicitly",
+    "external_source_labels": [
+      "record-source-A",
+      "record-source-B"
+    ],
+    "expected": {
+      "same_active_normalization": true,
+      "distinct_raw_presentation": true,
+      "raw_stage3_index_sensitive_distinguishes": true,
+      "raw_stage3_default_empty_equates": true,
+      "active_stage_comparison_equates": true,
+      "active_status_observer_equal": true,
+      "raw_presence_observer_differs": true,
+      "external_source_labels_not_recoverable_from_identical_raw": true,
+      "naive_q_promotion_invalid_without_active_Xi_or_Ap": true
+    },
+    "scope": "one elementary fixed-carrier model; no empirical benchmark and no external evaluator"
+  },
+  "verdict": {
+    "source_driven": "No Notion or manuscript source establishes raw surplus as universally required inside PAS for every DSD method",
+    "mathematical": "Task-relative observational adequacy defined by factorization; finer raw strict not automatically the task target",
+    "practical_fit": "CONDITIONAL_BY_TASK_AND_BRIDGE_NOT_RANKED",
+    "selection": "DEFERRED",
+    "options_discarded": [],
+    "P27_source_modified": false,
+    "FPA": "OPEN",
+    "next": "P49 decision-input minimal contract and choice-independent repair plan, without choosing semantics",
+    "claim_limit": "sources show declared methods and selected protocols; cross-domain practical advantage of A/B1/B2 has not been measured or independently verified"
+  }
+}
