@@ -1,0 +1,162 @@
+{
+  "audit_id": "PA-P49-20261109-MIN-CONTRACT-SECTION-READINESS",
+  "date_kst": "2026-11-09",
+  "source": {
+    "edition": "P27 EN/KR frozen",
+    "en_sha256": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "kr_sha256": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb"
+  },
+  "alternatives": [
+    "A",
+    "B1",
+    "B2"
+  ],
+  "selection": "DEFERRED",
+  "contract": [
+    {
+      "id": "K1",
+      "name": "raw_admissibility",
+      "decision": "OPEN",
+      "blocks": [
+        "§2.4",
+        "§5",
+        "S-01"
+      ]
+    },
+    {
+      "id": "K2",
+      "name": "raw_typing_and_key_presence",
+      "decision": "OPEN",
+      "blocks": [
+        "§2.4",
+        "§2.5",
+        "S-01"
+      ]
+    },
+    {
+      "id": "K3",
+      "name": "normalization_and_section",
+      "decision": "CONDITIONAL_B",
+      "blocks": [
+        "§3",
+        "§5"
+      ]
+    },
+    {
+      "id": "K4",
+      "name": "full_descriptor_C1_reduction",
+      "decision": "OPEN",
+      "blocks": [
+        "§3",
+        "§5",
+        "S-03"
+      ]
+    },
+    {
+      "id": "K5",
+      "name": "strict_comparison_semantics",
+      "decision": "OPEN",
+      "blocks": [
+        "§6",
+        "§7",
+        "S-03"
+      ]
+    },
+    {
+      "id": "K6",
+      "name": "comparison_stages_and_branching",
+      "decision": "OPEN",
+      "blocks": [
+        "§7",
+        "§11",
+        "S-03"
+      ]
+    },
+    {
+      "id": "K7",
+      "name": "task_observations_external_provenance_transition",
+      "decision": "TASK_DEPENDENT",
+      "blocks": [
+        "§10",
+        "methods"
+      ]
+    }
+  ],
+  "conditional_claims": [
+    "M49-1",
+    "M49-2",
+    "M49-3",
+    "M49-4"
+  ],
+  "sections": [
+    {
+      "section": "abstract+1",
+      "status": "WORDING_ONLY_AFTER_DECISION"
+    },
+    {
+      "section": "2.1-2.3",
+      "status": "INHERITED_FIXED"
+    },
+    {
+      "section": "2.4-2.5",
+      "status": "SEMANTICS_BLOCKED"
+    },
+    {
+      "section": "3",
+      "status": "PI_PII_COMMON_C1_CONDITIONAL"
+    },
+    {
+      "section": "4",
+      "status": "LOCAL_EXISTENCE_SCOPE_REQUIRED"
+    },
+    {
+      "section": "5",
+      "status": "DESCRIPTOR_SEMANTICS_BLOCKED"
+    },
+    {
+      "section": "6",
+      "status": "ISOMORPHISM_SEMANTICS_BLOCKED"
+    },
+    {
+      "section": "7",
+      "status": "BRANCHING_SEMANTICS_BLOCKED"
+    },
+    {
+      "section": "8",
+      "status": "T_F_I_EXPLICIT"
+    },
+    {
+      "section": "9",
+      "status": "SUMMARY_SCOPE_CONDITIONAL"
+    },
+    {
+      "section": "10",
+      "status": "OPTIONAL_LAYER_SEPARATION"
+    },
+    {
+      "section": "11",
+      "status": "QUANTIFIER_AND_DEPENDENCY_REVIEW"
+    },
+    {
+      "section": "12-13+appendices",
+      "status": "BILINGUAL_PARITY_AFTER_DECISION"
+    }
+  ],
+  "obligations": {
+    "S01": "OPEN",
+    "S02": "OPEN",
+    "S03": "OPEN",
+    "S04": "OPEN"
+  },
+  "provenance": {
+    "previous": "P48",
+    "new_external_validator": "NONE",
+    "new_python_or_ci": "NOT_RUN"
+  },
+  "edits": {
+    "p27_tex": false,
+    "p27_pdf": false,
+    "zenodo": false
+  },
+  "fpa": "OPEN"
+}
