@@ -1,0 +1,130 @@
+{
+  "schema": "dsd.property-audit.p50-a-choice.v1",
+  "date_kst": "2026-11-09",
+  "author": "Kwon Dominicus",
+  "manuscript_semantics": {
+    "choice": "A",
+    "state": "ADOPTED",
+    "definition": "primitive coordinates only for declared kinds with available input profiles",
+    "active_key": "K_A = {kind in Pi_A | its typed input profile is available}",
+    "surplus_raw": "OUTSIDE_A_CORE_NOT_DENIED_AS_EXTERNAL_DATA",
+    "alternatives": {
+      "B1": "RETAINED_UNSELECTED",
+      "B2": "RETAINED_UNSELECTED"
+    }
+  },
+  "audit_policy": {
+    "purpose": [
+      "find errors and omissions",
+      "correct defects",
+      "prevent recurrence"
+    ],
+    "evidence_use": "append audit and tests as traceable evidence to later DSD methods with their own task bridges",
+    "not_axiom": "audit logs are not property axioms or structural primitives",
+    "epistemic_guard": "finite tests do not certify set-theoretic generality or real-world effectiveness"
+  },
+  "source": {
+    "p27_original_unchanged": true,
+    "source_path": "DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P27_independent_math_revision/DSD_Property_Axiom_System_EN_P27_REVISED.tex",
+    "git_blob_sha": "a65cf331417541f63fd655e486e815a0c7d51608",
+    "prior_reported_en_sha256": "51c194ec33f802a2061b68b3521fdb831f0f754a0386fa72f8e89a39efff7bdb",
+    "prior_reported_kr_sha256": "a643ea619f9594142bfc09b9f486c948cf0a85679a3b2a8a43bc731a1e108fbb",
+    "sha256_newly_checked": false
+  },
+  "working": {
+    "file": "DSD_Property_Axiom_System_EN_P50_A_WORKING.tex",
+    "git_blob_sha": "d237c6b4618df4b3952237f4d36d02aca014246a",
+    "count_replacement_sites": 18,
+    "section_groups": [
+      "preamble",
+      "2.4",
+      "2.5",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "11",
+      "12"
+    ],
+    "english_working_only": true
+  },
+  "proof_obligations": {
+    "S-01_to_S-03": {
+      "status": "DRAFT_FIXED_PENDING_INDEPENDENT_PROOF",
+      "impact": "exact primitive coordinates/completion/descriptor/strict/stage comparisons"
+    },
+    "S-02": {
+      "status": "DRAFT_FIXED_PENDING_INDEPENDENT_PROOF",
+      "impact": "typing T, finiteness F, inclusion I plus exact active indexes"
+    },
+    "S-04": {
+      "status": "DRAFT_FIXED_PENDING_INDEPENDENT_PROOF",
+      "impact": "existential witness versus arbitrary fixed-signature universal assertion"
+    }
+  },
+  "verification": {
+    "tool": "independent JS connector-audit checks on fetched source and revision",
+    "static_checks_passed": 17,
+    "static_checks_total": 17,
+    "finite_examples_passed": 8,
+    "finite_examples_total": 8,
+    "finite_examples": [
+      {
+        "name": "valid_active",
+        "expected": "accept",
+        "observed": "accept"
+      },
+      {
+        "name": "active_missing",
+        "expected": "reject",
+        "observed": "reject"
+      },
+      {
+        "name": "undeclared_extra_raw",
+        "expected": "reject",
+        "observed": "reject"
+      },
+      {
+        "name": "unavailable_extra_raw",
+        "expected": "reject",
+        "observed": "reject"
+      },
+      {
+        "name": "active_empty_explicit",
+        "expected": "accept",
+        "observed": "accept"
+      },
+      {
+        "name": "violates_PI",
+        "expected": "reject",
+        "observed": "reject"
+      },
+      {
+        "name": "violates_PII",
+        "expected": "reject",
+        "observed": "reject"
+      },
+      {
+        "name": "undeclared_only",
+        "expected": "accept",
+        "observed": "accept"
+      }
+    ],
+    "latex_compile": "NOT_RUN",
+    "github_actions_ci": "NOT_RUN_P50",
+    "formal_proof_certification": "NOT_DONE",
+    "english_korean_equivalence": "NOT_DONE"
+  },
+  "publication": {
+    "p27_en_kr": "FROZEN",
+    "pdf": "UNCHANGED",
+    "zenodo": "UNCHANGED"
+  },
+  "final_status": "A_SELECTED__WORKING_REVISION__FPA_OPEN",
+  "source_notions": [
+    "https://app.notion.com/p/41281f51e7fa8188bd37d92c11ee5010",
+    "https://app.notion.com/p/41281f51e7fa81269cb1f68cf6e8e426"
+  ]
+}
