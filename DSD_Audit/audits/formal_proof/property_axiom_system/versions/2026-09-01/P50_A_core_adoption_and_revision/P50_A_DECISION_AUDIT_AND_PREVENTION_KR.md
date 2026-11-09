@@ -55,6 +55,6 @@
 
 ## 6. 추적 근거
 - [P49 최소 계약·절별 준비](../P49_minimal_decision_contract_section_readiness/P49_MINIMUM_CONTRACT_AND_SECTION_READINESS_AUDIT_KR.md)
-- [P48 역할 적합성 감사](../P48_method_family_role_fit/P48_METHOD_FAMILY_ROLE_FIT_AUDIT_KR.md) — 실제 경로는 이전 P48 기록에서 확인할 것; 본 항목은 추적용 식별자이며 대상 파일의 현재 실재를 이번 단계에서 재확인하지 않았다.
+- [P48 역할 적합성 감사 — Notion 원문](https://app.notion.com/p/41281f51e7fa81269cb1f68cf6e8e426)
 - [P46 동형 불변량·단조성 감사](../P46_choice_invariants_branching/P46_SHARED_THEOREMS_BRANCH_MONOTONICITY_AUDIT_KR.md)
 - Notion 이전 단계: https://app.notion.com/p/41281f51e7fa8188bd37d92c11ee5010
