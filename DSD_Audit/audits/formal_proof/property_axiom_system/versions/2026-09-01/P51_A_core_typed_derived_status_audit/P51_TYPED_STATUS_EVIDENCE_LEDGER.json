@@ -1,0 +1,154 @@
+{
+  "schema": "dsd.pa.p51.audit.v1",
+  "date_kst": "2026-11-10",
+  "author": "Kwon Dominicus",
+  "semantics": "A_ADOPTED",
+  "manuscript": {
+    "source": "P50_A_core_adoption_and_revision/DSD_Property_Axiom_System_EN_P50_A_WORKING.tex",
+    "source_blob_sha": "d237c6b4618df4b3952237f4d36d02aca014246a",
+    "working": "DSD_Property_Axiom_System_EN_P51_A_WORKING.tex",
+    "working_blob_sha": "12b4d81bed81ab00ac16f7938453f0bb6346f93e",
+    "origin_p27_frozen": true,
+    "p50_retained": true,
+    "english_only": true
+  },
+  "findings": [
+    {
+      "id": "F51-01",
+      "severity": "type_error",
+      "section": "3.3",
+      "issue": "record set ranges over Pi_A although D_{A,varpi} exists only on K_A",
+      "counterexample": "declared but profile unavailable kind belongs Pi_A\\K_A; its D and Xi are undefined",
+      "repair": "quantify over K_A",
+      "status": "WORKING_DRAFT_FIXED"
+    },
+    {
+      "id": "F51-02",
+      "severity": "underdefinition",
+      "sections": [
+        "3.3",
+        "3.4",
+        "5.1",
+        "6.3",
+        "Appendix A"
+      ],
+      "issue": "Stat_{A,varpi} in descriptor had no explicit domain/codomain; kind statuses and input statuses conflated",
+      "repair": "typed derived kind-status and active-input-status functions, six disjoint input cases",
+      "status": "WORKING_DRAFT_FIXED"
+    }
+  ],
+  "changed_locations": [
+    "§3.3 kind-status function",
+    "§3.3 active-input-status function",
+    "§3.3 record kind index",
+    "§3.4 C1",
+    "§3.4 primitive reduction",
+    "§5.1 descriptor",
+    "§6.3 strict preservation",
+    "Appendix A notation"
+  ],
+  "primitive_axioms_added": 0,
+  "thirteen_item_tracking": [
+    {
+      "number": 1,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 2,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 3,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 4,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 5,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 6,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 7,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 8,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 9,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 10,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 11,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 12,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    },
+    {
+      "number": 13,
+      "status": "SOURCE_MAPPED_NOT_FORMALLY_CERTIFIED"
+    }
+  ],
+  "static": {
+    "checks_passed": 7,
+    "checks_total": 7,
+    "environment_balances": {
+      "theorems": 10,
+      "proofs": 17,
+      "primitive_axioms": 2,
+      "definitions": 24,
+      "propositions": 7,
+      "corollaries": 3,
+      "remarks": 7,
+      "countermodels": 2,
+      "constructions": 4
+    },
+    "labels": 37,
+    "references": 32,
+    "undefined_references": 0,
+    "duplicate_labels": 0
+  },
+  "finite": {
+    "carrier_points": 2,
+    "property_kinds": 1,
+    "prerequisites": 1,
+    "values": [
+      0,
+      1
+    ],
+    "valid_models": 36,
+    "ordered_pairs": 1296,
+    "ordered_triples": 46656,
+    "strict_isomorphic_pairs": 66,
+    "first_branch_stage3": 1092,
+    "first_branch_stage4": 138,
+    "stage4_equals_stage5": true,
+    "strict_equivalence_transitive": true,
+    "all_checks_passed": true
+  },
+  "scope_limits": {
+    "not_zfc_proof": true,
+    "not_latex_compile": true,
+    "not_ci": true,
+    "not_external_peer_review": true,
+    "not_bilingual_equivalence": true
+  },
+  "status": "P51_A_TYPED_STATUS_WORKING__FPA_OPEN",
+  "links": {
+    "report": "P51_A_CORE_STATUS_AND_RECORD_TYPE_REAUDIT_KR.md",
+    "notion_predecessor": "https://app.notion.com/p/41381f51e7fa814388eceb50a97f007b"
+  }
+}
