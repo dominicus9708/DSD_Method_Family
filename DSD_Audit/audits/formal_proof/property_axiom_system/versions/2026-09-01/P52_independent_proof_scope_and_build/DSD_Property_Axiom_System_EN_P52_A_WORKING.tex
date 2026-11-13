@@ -400,14 +400,17 @@ For each \(\varpi\in\mathcal K_A\), the \emph{input-status} map
 \mathcal V_{\mathrm{stat}}
 \]
 has a fixed finite status-label carrier
+% ----- P52: Section 3.3, avoid overfull status-label set -----
 \[
-\mathcal V_{\mathrm{stat}}:=
-\{\mathrm{inapplicable},
+\begin{aligned}
+\mathcal V_{\mathrm{stat}}:=\{&
+\mathrm{inapplicable},
 \mathrm{prerequisite\mbox{-}unsatisfied},
-\mathrm{applicable\mbox{-}undefined},
-\mathrm{defined},
+\mathrm{applicable\mbox{-}undefined},\\
+&\mathrm{defined},
 \mathrm{defined\mbox{-}zero},
-\mathrm{defined\mbox{-}nonzero}\}
+\mathrm{defined\mbox{-}nonzero}\}.
+\end{aligned}
 \]
 and is determined by the following mutually exclusive cases:
 \begin{enumerate}[label=(\arabic*)]
