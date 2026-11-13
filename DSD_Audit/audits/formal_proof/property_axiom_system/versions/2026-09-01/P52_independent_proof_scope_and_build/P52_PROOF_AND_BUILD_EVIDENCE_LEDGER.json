@@ -1,0 +1,120 @@
+{
+  "schema": "dsd.pa.p52.quantifier-build-audit.v1",
+  "date_kst": "2026-11-14",
+  "author": "Kwon Dominicus",
+  "choice": {
+    "core": "A",
+    "status": "ADOPTED",
+    "B1": "UNSELECTED_EXTENSION_RETAINED",
+    "B2": "UNSELECTED_EXTENSION_RETAINED"
+  },
+  "source": {
+    "p51_blob": "12b4d81bed81ab00ac16f7938453f0bb6346f93e",
+    "p52_blob": "e62cf8dce31e4a85597d0119dbc1e51e7c96cad5",
+    "p52_path": "DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P52_independent_proof_scope_and_build/DSD_Property_Axiom_System_EN_P52_A_WORKING.tex",
+    "p27_en_kr_frozen": true,
+    "p50_p51_preserved": true,
+    "zenodo_unchanged": true
+  },
+  "edits": [
+    {
+      "id": "F52-01",
+      "type": "quantifier_scope",
+      "sections": [
+        "abstract",
+        "9.1",
+        "11"
+      ],
+      "change": "(3),(11),(12) existential across suitable signatures, not every fixed arbitrary signature; definitional status distinction need not be inhabited",
+      "status": "WORKING_FIXED"
+    },
+    {
+      "id": "F52-02",
+      "type": "latex_layout",
+      "section": "3.3",
+      "change": "reflow six finite status labels with aligned; preserve definitions",
+      "original_overfull_pt": 67.48523,
+      "status": "FIXED_AND_CI_VERIFIED"
+    }
+  ],
+  "s_obligations": [
+    {
+      "id": "S-01",
+      "scope": "A-core primitive index exact",
+      "status": "TARGETED_ARGUMENT_CHECKED; FULL_EXTERNAL_PROOF_OPEN"
+    },
+    {
+      "id": "S-03",
+      "scope": "completion/descriptor/strict/I4=I5 agreement",
+      "status": "TARGETED_ARGUMENT_CHECKED; FULL_EXTERNAL_PROOF_OPEN"
+    },
+    {
+      "id": "S-02",
+      "scope": "typed finite realization T,F,I",
+      "status": "PREMISES_EXPRESSED; FORMAL_VERIFICATION_OPEN"
+    },
+    {
+      "id": "S-04",
+      "scope": "existential witness versus fixed-signature universality",
+      "status": "SCOPE_TEXT_FIXED; FORMAL_VERIFICATION_OPEN"
+    }
+  ],
+  "main_theorem": {
+    "items_total": 13,
+    "source_mapping": "13/13",
+    "not_universal_theorem_certification": true,
+    "existential_items": [
+      3,
+      11,
+      12
+    ],
+    "fixed_background_items": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      13
+    ]
+  },
+  "static_source_audit": {
+    "chars": 73262,
+    "axioms": 2,
+    "definitions": 24,
+    "theorems": 10,
+    "proofs": 17,
+    "labels": 37,
+    "references": 33,
+    "duplicate_labels": 0,
+    "undefined_references": 0,
+    "passed": true
+  },
+  "workflow": {
+    "path": ".github/workflows/property_fpa_p52_latex.yml",
+    "engine": "latexmk -pdf",
+    "os": "ubuntu-latest",
+    "initial_run_id": 43477486366,
+    "initial_result": "SUCCESS_WITH_OVERFULL",
+    "second_run_id": 43477879137,
+    "second_result": "SUCCESS_NO_OVERFULL",
+    "strict_run_id": 43477927478,
+    "strict_result": "SUCCESS",
+    "pdf_pages": 25,
+    "final_undefined_references": 0,
+    "final_undefined_citations": 0,
+    "final_overfull_boxes": 0,
+    "artifact_id": 14064296885,
+    "artifact_name": "P52-A-core-manuscript-build-evidence",
+    "artifact_expiry_utc": "2026-12-13T17:59:32Z",
+    "not_formal_zfc_proof": true
+  },
+  "status": "P52_EN_WORKING_BUILD_PASS__FPA_OPEN",
+  "references": {
+    "report": "DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P52_independent_proof_scope_and_build/P52_QUANTIFIER_PROOF_AND_LATEX_AUDIT_KR.md",
+    "prior_p51_notion": "https://app.notion.com/p/41481f51e7fa81cabee1c3163778ca6b"
+  }
+}
