@@ -3,7 +3,7 @@ name: Property P52 A-core LaTeX compile
 on:
   push:
     paths:
-      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P52_independent_proof_scope_and_build/**'
+      - 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P52_independent_proof_scope_and_build/*.tex'
       - '.github/workflows/property_fpa_p52_latex.yml'
   workflow_dispatch:
 
@@ -33,6 +33,14 @@ jobs:
         run: |
           if grep -Eiq 'LaTeX Warning: There were undefined references|LaTeX Warning: Citation .* undefined|LaTeX Warning: Reference .* undefined' DSD_Property_Axiom_System_EN_P52_A_WORKING.log; then
             echo 'Unresolved references/citations detected in P52 manuscript'
+            exit 1
+          fi
+
+      - name: Check layout overflow warnings
+        working-directory: 'DSD_Audit/audits/formal_proof/property_axiom_system/versions/2026-09-01/P52_independent_proof_scope_and_build'
+        run: |
+          if grep -Eq 'Overfull \\hbox|Overfull \\vbox' DSD_Property_Axiom_System_EN_P52_A_WORKING.log; then
+            echo 'Overfull LaTeX layout warning detected'
             exit 1
           fi
 
